@@ -1,0 +1,109 @@
+/*  from "CSS Secrets" by Lea Verou  */
+
+input[type="radio"], input[type="checkbox"] {
+  position            :  absolute;
+  // display             :  inline;
+  margin-bottom     :  5px;
+
+  clip                :  rect(0,0,0,0);
+}
+
+input + label::before  {
+  content           :  "\a0\a0";
+
+  display           :  inline;
+  width             :  1em;
+  height            :  1em;
+  padding           :  .05em .15em;
+  margin-right      :  1em;
+  margin-bottom     :  15px;
+
+  border            :  1px solid white;
+  /*background        :  #9A8a6F;*/
+  background        :  #5C5C59;
+
+  // line-height       :  0.5em;  
+}
+
+input[type="checkbox"] + label::before  {
+  border-radius     :  .2em;
+}
+
+input[type="radio"] + label::before  {
+  padding           :  .05em .25em;
+  border-radius     :  50%;
+}
+
+input[type="checkbox"]:checked + label::before   {
+  content           :  "\2713";
+  margin-right      :  .96em;
+  padding           :  .1em .2em;
+
+  /*color             :  rgba(234,164,40,1.0);*/
+  /*color             :  rgba(255,255,0,1);*/
+  color             :  #ddd;
+
+  font-weight       :  900;
+  /*border            :  2px solid rgba(255,255,255,0.8);*/
+  /*background        :  #9A8a6F;*/
+  background        :  rgb(30,30,30);
+
+}
+
+input[type="radio"]:checked + label::before  {
+  content           :  '\2022';
+  margin-right      :  .92em;
+
+  /*  to make the background circle look rounder  */
+  padding           :  .1em .3em .22em .4em;
+
+  /*color             :  rgba(234,164,40,1.0);*/
+  /*color             :  rgba(255,255,0,1);*/
+  color             :  #ddd;
+
+  
+  font-weight       :  900;
+  /*border            :  2px solid rgba(255,255,255,0.8);*/
+  background        :  rgb(60,60,60);
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label     {
+  padding           :  6px 7px 6px 6px;
+  margin-left       :  -6px;
+  /*color             :  ;*/
+  border-radius     :  5px;
+  background-color  :  rgb(30,30,30);
+}
+
+input[type="checkbox"]:hover + label:hover,
+input[type="radio"]:hover + label:hover     {
+  padding           :  6px 7px 6px 6px;
+  margin-left       :  -6px;
+  cursor            :  pointer;
+  border-radius     :  5px;
+  background-color  :  rgb(30,30,30);
+}
+
+input[type="checkbox"]:disabled:hover + label:hover,
+input[type="radio"]:disabled:hover + label:hover     {
+  padding           :  6px 7px 6px 6px;
+  margin-left       :  -6px;
+  cursor            :  default;
+  border-radius     :  5px;
+  border            :  none;
+  background-color  :  inherit;
+}
+
+input[type="checkbox"]:disabled + label::before,
+input[type="radio"]:disabled + label::before         {
+  color             :  rgba(200,200,200,0.3);
+  border            :  1px solid rgba(200,200,200,0.4);  
+  background        :  none;
+}
+
+input[type="checkbox"]:disabled + label  {
+  color             :  rgba(200,200,200,0.5);
+  background        :  none;
+  text-shadow       :  none;
+}

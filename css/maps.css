@@ -1,0 +1,305 @@
+#mapsCollection  {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+   /*justify-content: flex-end;*/
+
+  position: relative;
+  left: 0;
+  top: 5px;
+  width: 600px;
+  height: 0;
+  margin: 0;
+  padding: 0;
+   /*scroll-x: auto;*/
+  /*scroll-y: none;*/
+  overflow-x: visible;
+  background: transparent;
+  /*background: slateblue;*/
+  transition: all 1.5s;
+}
+
+.smallBird  {
+  opacity: 0;
+  transform: scale(0.7);
+       -o-transform-origin:  0 50%;
+      -ms-transform-origin:  0 50%;
+     -moz-transform-origin:  0 50%;
+  -webkit-transform-origin:  0 50%;
+          transform-origin:  0 50%;
+
+    /*-webkit-flex: 1 0.00001 auto;
+    flex: 1 0.000001 auto;
+    -webkit-transition: -webkit-flex 250ms linear;
+    transition: flex 250ms linear*/
+  flex: 1;
+  /*transition: flex-grow 1000ms linear, all 1s*/
+
+  transition: all 1s;
+}
+
+.thinify  {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 0;
+  width: 200px;
+  height: 331px;
+
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+.removed {
+    /*Setting this to zero breaks the transition */
+    /*flex-grow: 0.00001;*/
+
+    -webkit-flex: 0.00001 0 auto;
+    flex: 0.00001 0  auto;
+}
+
+.birdName  {
+  position: absolute;
+  top: -11px;
+  left: -10%;
+  width:  100%;
+  /* width: inherit;*/
+  height: auto;
+  padding: 0;
+
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+
+  border-radius: 3px;
+  /*background: #757570;*/
+  background: transparent;
+  /*background: black;*/
+}
+
+#currentMap .birdName {
+  top: -20px;
+   /*width:  calc( 100% - 55px );*/
+}
+
+.birdName > span:last-Child   {  font-style: italic;  }
+
+.birdName.smallBirdText   {
+  transform: scale(1.4);
+  top: -22px;
+  left: 0;
+  height: auto;
+  padding: 5px 0;
+  line-height: 11px;
+}
+
+#currentMap {
+
+  position: absolute;
+  top: 50px;
+  left: 75.72%;
+  height: 455px;
+  width: 275px;
+  margin:  0 0 0 5px;
+  z-index: 10;
+  opacity: 0;
+  transition: all 1s;
+
+  /*transform: scale(1.2);
+
+  -webkit-transition: all 850ms ease-in-out;
+     -moz-transition: all 850ms ease-in-out;
+       -o-transition: all 850ms ease-in-out;
+          transition: all 850ms ease-in-out;*/
+}
+
+#currentMap .deleteMapButton {
+  display: none;
+}
+
+#mapsCollection .saveMapButton {
+  display: none;
+  opacity: 0;
+}
+
+.birdMapInstance  {
+  position: relative;
+  top: 10px;
+  background: transparent;
+  transition: all 1.5s;
+}
+
+#currentBirdMap {
+  background: transparent;
+
+   /*-webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+       -ms-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+           filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );*/
+}
+
+.mapButtons {
+  height: 30px;
+  width: 30px;
+  padding: 3px 0 0 0;
+  cursor: pointer;
+
+  color: white;
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255, 0.5);
+  border-radius:  50%;
+  transition: all 500ms;
+}
+
+.deleteMapButton  {
+  position: absolute;
+  top: 230px;
+  left: 0;
+  font-size: 20px;
+  background: #a32d00;
+}
+
+.saveMapButton  {
+  display: none;
+  position: absolute;
+  top:  240px;
+  left: 0;
+
+  height: 36px;
+  width:  36px;
+  background: #303C3F;
+}
+
+.deleteMapButton:hover, .deleteMapButton:focus {
+  background: #cc0000;
+}
+
+.drawing  {
+  position: relative;
+  text-shadow: none;
+
+    -webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+      -ms-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) )   drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+          filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) )   drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+
+  transition: all 1s;
+}
+
+.drawing.smallBirdDrawing {
+  height: 0;
+}
+
+/*these do nothing when using <object> to embed a svg
+
+#SAMsvg g, #SAMsvg path {
+  fill: #555;
+  transition: fill 1s;
+}
+
+g, path {
+  stroke: #333;
+  stroke-width: 1px;
+}
+
+#SAM g:hover, #SAM path:hover {
+  fill :  goldenrod;
+  stroke: #888;
+}
+
+g.endemic, path.endemic            { fill: #C23BC3;  }
+g.extinct, path.extinct            { fill: #ddd;     }
+g.resident, path.resident          { fill: #3030cc;  }
+g.nonBreeder, path.nonBreeder      { fill: #ff9900;  }
+g.vagrant, path.vagrant            { fill: #ffff00;  }
+g.hypothetical, path.hypothetical  { fill: #33cc66;  }
+g.introduced, path.introduced      { fill: #101010;  }
+g.baseColor, path.baseColor        { fill: #555;     }
+g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
+
+.colorKey {
+  opacity: 0.9;
+  position: absolute;
+  top: 260px;
+  left: 165px;
+  transition: opacity 350ms;
+  /*z-index: -1;*/
+}
+
+.colorKey.smallBirdKey  {
+  left: 175px;
+  top: 240px;
+  /*bottom-margin: -60px;*/
+}
+
+.colorKey ul { position: relative; }
+
+.colorKey ul li {
+  position: relative;
+  width: 100px;
+  /*width: auto;*/
+  font-size: .9em;
+  /*font-weight: bold;*/
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+  list-style-type: none;
+
+  margin-top: 6px;
+}
+
+/* var endemicColor        =  '#C23BC3';
+   var extinctColor        =  '#ddd';
+   var residentColor       =  '#3030cc';
+   var nonBreederColor     =  '#ff9900';
+   var vagrantColor        =  '#ffff00';
+   var hypotheticalColor   =  '#33cc66';
+   var introducedColor     =  '#101010';    */
+
+.colorKey ul li:nth-child(1) {  /* introduced  */
+  color: #101010;
+  text-shadow:  none;
+}
+
+.colorKey ul li:nth-child(2) {  /* hypothetical  */
+  color: #33cc66;
+}
+
+.colorKey ul li:nth-child(3) {  /* nonbreeder    */
+  color: #ff9900;
+  /*background-color: #ff9900;
+  text-shadow:  none;*/
+}
+
+.colorKey ul li:nth-child(4) {  /* vagrant       */
+  color: #ffff00;
+}
+
+.colorKey ul li:nth-child(5) {  /* extinct       */
+  color       :  #ddd;
+}
+
+.colorKey ul li:nth-child(6) {  /* resident      */
+  padding: 0 4px 2px 4px;
+  color: #3030cc;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+  background: #aaa;
+}
+
+.colorKey ul li:nth-child(7) {  /* endemic       */
+  position    :  absolute;
+  top:          0px;
+  left :         -100px;
+  color :        white;
+  padding:       0 0 2px 101px;
+  width   :     200px;
+  background-color: #C23BC3;
+}
+
+/*a[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+}*/

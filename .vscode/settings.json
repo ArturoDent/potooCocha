@@ -1,0 +1,20 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+      // Controls the font size.
+    "editor.fontSize": 18,
+        // Controls if the editor should automatically format the line after typing
+    "editor.formatOnType": true,
+    // Controls whether the editor should render indent guides
+    "editor.renderIndentGuides": true,
+        // When enabled, will open files in a new window instead of reusing an existing instance.
+    "window.openFilesInNewWindow": false,
+
+   // Controls how folders are being reopened after a restart. Select 'none' to never reopen a folder, 'one' to reopen the last folder you worked on or 'all' to reopen all folders of your last session.
+    "window.reopenFolders": "all",
+        // When enabled, will trim trailing whitespace when you save a file.
+    "files.trimTrailingWhitespace": true,
+
+        // When using a vendor-specific prefix make sure to also include all other vendor-specific properties
+    "css.lint.compatibleVendorPrefixes": "true",
+
+}

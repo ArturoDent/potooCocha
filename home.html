@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>potoococha</title>
+
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="cache-control" content="no-cache">
+
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+
+  <style type="text/css">
+    html, body {
+      color: white;
+      background-color: #5C5C59; }
+  </style>
+
+  <link rel="stylesheet" href="css/mainStyles.css" />
+  <link rel="stylesheet" href="css/maps.css" />
+  <link rel="stylesheet" href="css/tooltip.css" />
+  <link rel="stylesheet" href="css/checkRadios.css" />
+  <link rel="stylesheet" href="css/sampleTable.css" />
+  <link rel="stylesheet" href="css/countryMenu.css" />
+  <link rel="stylesheet" href="css/taxonomy.css" />
+  <link rel="stylesheet" href="css/mediaQueries.css" />
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libs/jquery-2.1.4.min.js">\x3C/script>')</script>
+
+  <script src="libs/classList.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="js/SouthAmerica.js"></script>
+  <script src="js/taxonomy.js"></script>
+  <script src="js/birdMapFactory.js"></script>
+
+</head>
+
+<body>
+
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs>
+
+      <symbol id="icon-paper-plane-o" viewBox="0 0 32 32">
+        <title>paper-plane-o</title>
+        <path class="path1" d="M31.5 0.196q0.589 0.429 0.482 1.143l-4.571 27.429q-0.089 0.518-0.571 0.804-0.25 0.143-0.554 0.143-0.196 0-0.429-0.089l-9.411-3.839-5.321 5.839q-0.321 0.375-0.839 0.375-0.25 0-0.411-0.071-0.339-0.125-0.536-0.42t-0.196-0.652v-8.071l-8.429-3.446q-0.661-0.25-0.714-0.982-0.054-0.696 0.571-1.054l29.714-17.143q0.625-0.375 1.214 0.036zM25.393 26.964l3.946-23.625-25.607 14.768 6 2.446 15.411-11.411-8.536 14.232z"></path>
+      </symbol>
+
+      <symbol id="icon-list" viewBox="0 0 24 24">
+        <title>list</title>
+        <path class="path1" d="M6.984 6.984h14.016v2.016h-14.016v-2.016zM6.984 17.016v-2.016h14.016v2.016h-14.016zM6.984 12.984v-1.969h14.016v1.969h-14.016zM3 9v-2.016h2.016v2.016h-2.016zM3 17.016v-2.016h2.016v2.016h-2.016zM3 12.984v-1.969h2.016v1.969h-2.016z"></path>
+      </symbol>
+
+      <symbol id="icon-camera" viewBox="0 0 32 32">
+        <title>camera</title>
+        <path class="path1" d="M27 17.047l-5-2.003v-4.008l5-2.004c0.553 0 1 0.449 1 1.002v6.012c0 0.553-0.447 1.001-1 1.001zM17.5 10.033c-2.485 0-4.5-2.019-4.5-4.509s2.015-4.509 4.5-4.509 4.5 2.019 4.5 4.509c0 2.491-2.015 4.509-4.5 4.509zM8.5 10.033c-2.485 0-4.5-2.019-4.5-4.509s2.015-4.509 4.5-4.509 4.5 2.019 4.5 4.509c0 2.491-2.015 4.509-4.5 4.509zM21 10.033v9.018h-5.582c-0.052 0.832-0.416 1.549-0.957 1.955h0.564l3.989 8.996h-0.994l-1.33-3h-2.66v4.998h-0.997v-4.998h-2.702l-1.351 3h-0.995l4.052-8.996h0.377c-0.541-0.406-0.905-1.123-0.957-1.955h-6.457v-9.018h16zM13.032 21.316c-0.041-0.010-0.079-0.031-0.119-0.045l-2.132 4.732h2.251v-4.687zM14.029 21.244v4.76h2.217l-2.126-4.795c-0.029 0.014-0.059 0.023-0.091 0.035z"></path>
+      </symbol>
+
+      <symbol id="icon-pen" viewBox="0 0 32 32">
+        <title>pen</title>
+        <path class="path1" d="M29.024 6.499l-2.467 2.467-3.523-3.523 2.467-2.467c0.973-0.973 2.551-0.973 3.523 0s0.973 2.55 0 3.523zM27.614 9.317c0.195-0.194 0.511-0.194 0.705 0 0.195 0.195 0.195 0.511 0 0.705l-9.16 9.161c-0.195 0.194-0.511 0.194-0.705 0s-0.194-0.51 0-0.704l5.99-5.99-4.934-4.934 2.114-2.113 4.933 4.933 1.057-1.058zM19.511 8.966l3.523 3.523-14.094 14.094-3.523-3.523 14.094-14.094zM2.246 29.754l2.466-5.989 3.523 3.523-5.989 2.466z"></path>
+      </symbol>
+
+      <symbol id="icon-pin" viewBox="0 0 32 32">
+        <title>pin</title>
+        <path class="path1" d="M18.973 17.802l-7.794-4.5c-0.956-0.553-2.18-0.225-2.732 0.731-0.552 0.957-0.224 2.18 0.732 2.732l7.793 4.5c0.957 0.553 2.18 0.225 2.732-0.732 0.554-0.956 0.226-2.179-0.731-2.731zM12.545 12.936l6.062 3.5 2.062-5.738-4.186-2.416-3.938 4.654zM8.076 27.676l5.799-7.044-2.598-1.5-3.201 8.544zM23.174 7.525l-5.195-3c-0.718-0.414-1.635-0.169-2.049 0.549-0.415 0.718-0.168 1.635 0.549 2.049l5.196 3c0.718 0.414 1.635 0.169 2.049-0.549s0.168-1.635-0.55-2.049z"></path>
+      </symbol>
+
+      <symbol id="icon-female" viewBox="0 0 32 32">
+        <title>female</title>
+       <path class="path1" d="M18.039 18.721v3.293h3.996v3.996h-3.996v3.996h-4.057v-3.996h-3.995v-3.996h3.995v-3.305c-3.435-0.895-5.973-4.009-5.973-7.723 0-4.413 3.578-7.991 7.991-7.991s7.99 3.578 7.99 7.991c0 3.729-2.496 6.852-5.951 7.735zM16 6.991c-2.207 0-3.996 1.788-3.996 3.995 0 2.206 1.789 3.995 3.996 3.995s3.996-1.789 3.996-3.995c0-2.207-1.789-3.995-3.996-3.995z"></path>
+      </symbol>
+
+      <symbol id="icon-file-excel" viewBox="0 0 32 32">
+        <title>file-excel</title>
+        <path class="path1" d="M23.22 12h-4.228l-2.992 4.407-2.992-4.407h-4.228l5.068 7.577-5.718 8.423h7.87v-2.862h-1.567l1.567-2.344 3.481 5.205h4.389l-5.718-8.423 5.068-7.577z"></path>
+        <path class="path2" d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.122-2.5 2.5v27c0 1.378 1.121 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841v0zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268v0zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+      </symbol>
+
+    </defs>
+  </svg>
+
+<header class="smallBanner"><span>Birds <span class="titleBanner_spacer">of</span> South America</span></header>
+
+<div id='mainContent'>
+
+  <header class="titleBanner"><span>Birds <span class="titleBanner_spacer">of</span> South America</span></header>
+
+  <section class="articles">
+
+    <article id="taxonomyArticle">
+
+      <span class="taxInstructionsButton hasTooltip">?
+        <span class="tooltip">Close the search instructions</span>
+      </span>
+
+      <div class="slideUpWrapper panel">
+
+        <div class="taxArticleMain">
+
+          <span class="firstTaxonomyParagraph">the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm" target="_blank">taxonomy</a> of the birds of South America (August 4, 2016).</span><br><br>
+
+          Type part of a word, e.g., "xantho".  You can include spaces, hyphens or apostrophes. <a href="http://www.museum.lsu.edu/%7ERemsen/SACCdiacritical.htm" target="_blank">Accents</a> and capitalization are added for you. You can search family names.<br><br>
+
+          Wildcards:&emsp;&emsp;&emsp;? &nbsp;: any one character.
+          <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;* : any one or more characters.<br><br>
+
+          "e* br" will match "Elaenia brachyptera" or "Empress Brilliant".<br><br>
+
+          <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="120" width="90%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 48 48" preserveAspectRatio="none">
+            <path d="m21.1 8.57 13.1 0.02m0.261-5.37 12.6 0.0271m-43.2 26.8-3.3-0.1m33.8-26.9l0.005 11.8 12.7-0.0221m0.004 5.65-9.35-0.0279v6.42l9.35 0.0163m-9.46-3.09-11.7-0.0066v10.2l21.2-0.0221m-0.0089 6.41-34.7 0.184 0.0117 6.14h34.7m-26.2-27.6-17 0.172 0.0321 24.5 8.33 0.0138m8.7-35.3 0.0205 20.5 4.82-0.0208" stroke="#333" stroke-width="0.5" fill="none"></path>
+          </svg><br><br>
+
+          A selected species may occur on one of the islands
+          covered by the SACC classification but not shown here, such as Aruba.<br><br>
+
+          incertae [sedis] : two "groups" of uncertain classification.
+        </div>
+      </div>
+
+      <form id="searchForm" class='panel'>
+
+        <div>
+          <button type="button" id="taxonomyCountryButton" class="genericButton">Select Country</button>
+          <span class="grayed">
+            <label>search &nbsp; : &nbsp; </label>
+            <input name="searhField" id="searchInput" placeholder="type here ..." size="15" type="text">
+            <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
+          </span>
+        </div>
+
+        <div id="searchSpecials" class="grayed">
+          <span><a>extinct</a> (x)</span>
+          <span><a>endemic</a> (e)</span>
+          <span><a>hypothetical</a> (h)</span>
+          <span><a>incertae</a></span>
+          <span><a>vagrant</a> (v)</span>
+        </div>
+
+      </form>
+    </article>
+
+<!--    resultsFrag =  "<div class='panel results-panel'>";
+        resultsFrag += "  <div id='countrySearch' class='closed'>";
+        resultsFrag += "    <span id='searchTerm'></span>";
+        resultsFrag += "  </div>";
+        resultsFrag += "  <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>";
+        resultsFrag += "</div>";  -->
+
+    <article id="mapsCollection"></article>
+
+<!--  taxFragHTML += "<article id='taxTreeArticle'>"
+      taxFragHTML += "  <div id='treeIntroText'>&nbsp; numFamilies Families, numSpecies species</div>";
+      taxFragHTML += "  <div id='taxPage' class='panel' contenteditable='false'></div>";
+      taxFragHTML += "  <div id='taxPageButtons'>&nbsp;Close all families</div>";
+      taxFragHTML += "</article>";  -->
+
+    <article id="checklistArticle">
+
+      <div class="panel">
+
+        <table id="sampleTable" class="numDays10" spellcheck="false" contenteditable="true">
+          <thead>
+            <tr>
+              <th colspan="3"></th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th class="cds">5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>10</th>
+              <th>11</th>
+              <th>12</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          <tr><td class="familyHidden"></td><td class="cLfc">TINAMOUS</td><td class="cLfs">TINIMIDAE</td><td colspan="12" class="fre"></td></tr>
+
+            <tr>
+              <td class="leftCheckBox"></td><td class="endemical cLc">Gray Tinamou</td><td class="cLs">Tinamous tao</td><td></td>
+              <td></td><td></td><td></td><td class="cds"></td><td></td><td></td><td style="font-size:16px;">‼</td>
+              <td></td><td>∞</td><td></td><td></td>
+            </tr>
+
+            <tr>
+              <td class="leftCheckBox"></td><td class="cLc">Great Tinamou</td><td class="cLs">T. major</td>
+              <td></td><td>2</td><td></td><td style="font-size:14px;"><svg class="icon icon-female"><use xlink:href="#icon-female"></use></svg></td><td class="cds"></td><td></td><td></td><td></td><td></td>
+              <td></td><td></td><td></td>
+            </tr>
+<!-- ♀ -->
+            <tr><td class="familyHidden"></td><td class="cLfc">HUMMINGBIRDS</td><td class="cLfs">TROCHILIDAE</td><td colspan="12" class="fre"></td></tr>
+
+            <tr>
+              <td class="leftCheckBox"></td><td class="lineNumbers cLc">Fiery Topaz</td><td class="cLs">Topaza pyra</td><td></td>
+              <td></td><td style="font-size:20px;">♪</td><td></td><td class="cds"></td><td></td><td style="font-size:16px;">✓</td><td></td><td></td><td></td><td></td><td style="font-size:13px;"><svg class="icon icon-camera"><use xlink:href="#icon-camera"></use></svg></td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <div id="checklistOptions" class='panel'>
+
+        <!-- <input id="startDate" type="date"><label for="startDate">Start Date</label><br><br> -->
+
+        <input id="lineNumbers" type="checkbox"><label for="lineNumbers">Line numbers</label><br><br>
+        <input id="showEndemics" type="checkbox"><label for="showEndemics">Show endemics</label><br><br>
+
+        <input id="leftCheck" type="checkbox"><label for="leftCheck">Left checkbox</label><br><br>
+
+        <input id="italics" type="checkbox"><label for="italics">No italics</label><br><br>
+        <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label>
+
+        <button type="button" id="checklistCountryButton" class="genericButton">Country</button>
+        <button type="button" id="pdfButton" class="genericButton">Checkist
+          <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
+        </button>
+        <button type="button" id="csvButton" class="genericButton">CSV File
+          <svg class="icon icon-file-excel"><use xlink:href="#icon-file-excel"></use></svg>
+        </button>
+
+      </div>
+
+    </article>
+
+    <nav id="numDays"><span id="days"># of Days</span>
+      <a>0</a>
+      <a>1</a>
+      <a>2</a>
+      <a>3</a>
+      <a>4</a>
+      <a>5</a>
+      <a>6</a>
+      <a>7</a>
+      <a>8</a>
+      <a>9</a>
+      <a>10</a>
+      <a>11</a>
+      <a>12</a>
+    </nav>
+
+    <section id="currentMap" externalResourcesRequired="true">
+
+      <div id="currentBird" class="birdMapInstance">
+
+        <div id="currentBirdMap" class="drawing">
+          <object id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" height="440" width="275"></object>
+        </div>
+
+        <div class="mapButtons saveMapButton hasTooltip">
+          <svg class="icon icon-pin"><use xlink:href="#icon-pin"></use></svg>
+          <span class="tooltip">Save this map</span>
+        </div>
+
+        <div class="mapButtons deleteMapButton hasTooltip">X
+          <span class="tooltip">Delete this map</span>
+        </div>
+
+        <div class="colorKey">
+          <ul>
+            <li>introduced</li>
+            <li>hypothetical</li>
+            <li>nonbreeder</li>
+            <li>vagrant</li>
+            <li>extinct</li>
+            <li>resident</li>
+            <li>endemic</li>
+          </ul>
+        </div>
+
+        <div id="currentBirdName" class="birdName"></div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+<!--       <object id="SAM" type="image/svg+xml" data="svg/SouthAmerica.svg" height="329.84px" width="205.31px"></object>
+      <svg class="svg2" viewBox="0 0 742.20437 1212.4465"><use xlink:href="svg/SouthAmerica.svg#svg2" /></svg> -->
+
+</div>
+
+<div class="md-modal" id="countryModal">
+  <div class="country-menu-wrap" contenteditable="false">
+    <nav class="country-menu">
+      <a>Aruba</a>
+      <a>Curaçao</a>
+      <a>Bonaire</a>
+      <a>Trinidad</a>
+      <a>French Guiana</a>
+      <a>Suriname</a>
+      <a>Guyana</a>
+      <a>Venezuela</a>
+      <a>Colombia</a>
+      <a>Ecuador</a>
+      <a>Peru</a>
+      <a>Bolivia</a>
+      <a>Chile</a>
+      <a>Argentina</a>
+      <a>Malvinas</a>
+      <a>Falklands</a>
+      <a>Brazil</a>
+      <a>Uruguay</a>
+      <a>Paraguay</a>
+      <a>South America</a>
+    </nav>
+  </div>
+</div>
+
+<div class="md-overlay"></div>
+
+<footer>
+
+  <span><a href="citations.html" target="_blank">citations</a>*</span>
+
+  <span class="obfuscated_link">
+
+    <script type="text/javascript">
+    //<![CDATA[
+    <!--
+    var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
+    "x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
+    " r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!29{)rt{y+xx=l;=+;" +
+    "lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
+    "\"(2),9\\\"\\\\13\\\\07\\\\03\\\\\\\\25\\\\04\\\\00\\\\\\\\16\\\\05\\\\02\\" +
+    "\\\\\\6K00\\\\\\\\24\\\\0C\\\\WCTAQM36\\\\0=\\\\?B&@77\\\\1u\\\\~l5bO6tf!~e" +
+    "odofisguihD`pDm22\\\\00\\\\01\\\\\\\\27\\\\03\\\\02\\\\\\\\30\\\\05\\\\02\\" +
+    "\\\\\\*U2H02\\\\\\\\26\\\\00\\\\00\\\\\\\\31\\\\0P\\\\16\\\\0R\\\\DO05\\\\0" +
+    "6\\\\00\\\\\\\\14\\\\04\\\\03\\\\\\\\16\\\\04\\\\02\\\\\\\\22\\\\0J\\\\27\\" +
+    "\\04\\\\01\\\\\\\\04\\\\0r\\\\\\\\\\\\=*82\\\"\\\\f(;} ornture;}))++(y)^(iA" +
+    "tdeCoarchx.e(odrChamCro.fngriSt+=;o27=1y%i;+=)y92==(iif){++;i<l;i=0(ior;fth" +
+    "nglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")"                   ;
+    while(x=eval(x));
+    //-->
+    //]]>
+    </script>&nbsp;by potoococha
+    <svg class="icon icon-paper-plane-o"><use xlink:href="#icon-paper-plane-o"></use></svg>
+  </span>
+
+</footer>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="libs/jquery-2.1.4.min.js">\x3C/script>')</script>
+
+<script src="libs/classList.js"></script>
+<script src="js/main.js"></script> -->
+
+<!-- <script src="js/SouthAmerica.js"></script>
+<script src="js/taxonomy.js"></script>
+<script src="js/birdMapFactory.js"></script> -->
+
+</body></html>

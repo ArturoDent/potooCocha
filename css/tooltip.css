@@ -1,0 +1,102 @@
+.tooltip  {
+      // width: 230px;
+      height: 1.2em;
+      // padding: 0 0 6px 0;
+      opacity: 0;
+
+      font-size: 0.7em;
+      color: #77CABD;
+      line-height: 1.1em;
+      text-align: center;
+
+      background: #fff;
+      border-radius: 0 3.2px 3.2px 0;
+      box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+      transition: all 1s ease;  
+}
+
+.taxInstructionsButton .tooltip {
+      position: absolute;
+      top:  5px;
+      left:  40px;
+      width: 22em;
+      opacity: 1;
+      background: #333;
+
+      transform:  rotate(-6deg);
+       -o-transform-origin:  top left;
+      -ms-transform-origin:  top left;
+     -moz-transform-origin:  top left;
+  -webkit-transform-origin:  top left;
+          transform-origin:  top left;
+}
+
+.deleteMapButton .tooltip {
+      position: absolute;
+      top:  -40px;
+      left:  -80px;
+      width: 10em;
+
+      background: #a32d00;
+
+      transform:  rotate(0);
+       -o-transform-origin:  top right;
+      -ms-transform-origin:  top right;
+     -moz-transform-origin:  top right;
+  -webkit-transform-origin:  top right;
+          transform-origin:  top right;
+}
+
+.saveMapButton .tooltip {
+      position: absolute;
+      top:  -60px;
+      left:  -80px;
+      width: 12em;
+      transform:  rotate(0);
+       -o-transform-origin:  top right;
+      -ms-transform-origin:  top right;
+     -moz-transform-origin:  top right;
+  -webkit-transform-origin:  top right;
+          transform-origin:  top right;
+}
+
+.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 0.6em;
+      border-style: solid;
+      border-color: transparent #333 transparent transparent;
+      top: 0px;
+      left: -1.05em;
+}
+
+.saveMapButton .tooltip:after {
+      top: 0;
+      left: 100%;
+      border-color: transparent transparent transparent #404F53;
+}
+
+.deleteMapButton .tooltip:after {
+      top: 0;
+      left: 100%;
+      border-color: transparent transparent transparent #a32d00;
+}
+
+.taxInstructionsButton.hasTooltip:hover .tooltip {
+      left:  30px;
+      // width: 240px;
+      opacity: 1;
+}
+
+.saveMapButton.hasTooltip:hover .tooltip {
+      transform:  rotate(-10deg);
+      background: #404F53;
+      opacity: 1;
+}
+
+.deleteMapButton.hasTooltip:hover .tooltip {
+      transform:  rotate(-10deg);
+      opacity: 1;
+}

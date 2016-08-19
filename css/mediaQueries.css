@@ -1,0 +1,121 @@
+@media screen and (max-width: 1220px)  {
+
+	#currentMap {
+
+	  	left: 65%;
+
+	    transform: scale(0.78);
+
+       -o-transform-origin:  0 50%;
+      -ms-transform-origin:  0 50%;
+     -moz-transform-origin:  0 50%;
+  -webkit-transform-origin:  0 50%;
+          transform-origin:  0 50%;
+	}
+}
+
+@media screen and (max-width: 1024px)  {
+
+	html {
+		font-size: 50%;
+	}
+
+	body { padding: 0 0 5px 15px; }
+
+	.smallBanner {
+		display: block;
+	}
+
+	#mainContent { margin: 16px 0 0 0; }
+
+	.titleBanner {
+		display: none;
+	}
+	.titleBanner_spacer  {
+	  	position:  relative;
+	  	top:  -10px;
+	  	font-size: 1.5rem;
+	}
+  
+	.titleBanner::after {  display: none; text-shadow: 1px 1px 1px rgba(80,80,80,1); }
+
+	article {
+		// min-width: 550px;
+		width: 550px;
+		line-height: 18px;
+		// font-size: 1.2rem;
+	}
+
+	.firstTaxonomyParagraph { color: black; }
+
+	#checklistOptions::before  {
+
+		left: -165px;
+		font-size: 1.4em;
+	}
+
+	#currentMap {
+
+	  	left: 65%;
+
+	    transform: scale(0.78);
+  //      -o-transform-origin:  0 50%;
+  //     -ms-transform-origin:  0 50%;
+  //    -moz-transform-origin:  0 50%;
+  // -webkit-transform-origin:  0 50%;
+  //         transform-origin:  0 50%;
+	}
+
+	#numDays {
+		left: 0;
+		width: calc(100vw - 250px);
+	}
+
+	footer {
+		position: absolute;
+		left: 0;
+		width: 100vw;
+		padding: 0 500px 0 100px;
+  		justify-content: space-between;
+		border-radius: 3px;
+		background: #6d9892;
+	}
+
+	.md-modal {
+		// left: calc(100vw - 17px);
+		width: 155px;
+		transform: translateX(0);
+		transition: all 750ms;
+	}
+
+	.md-show {
+		transform: translateX(-155px);
+	}
+	.country-menu-wrap::before  {
+		left: -43px;
+		width: 43px;
+	}
+	.country-menu a {
+		width  :  122px;
+	}
+	.country-menu a::before {
+		// are these necessary?
+	    background-size: 26px;
+	    width: 26px;
+	    height: 26px;
+		left: -51px;
+		// top: -2px;
+	}
+}
+
+// iPad portrait
+// @media screen and (max-width: 768px)  {
+
+
+// }
+
+// iPhone 6 landscape
+// @media screen and (max-width: 667px)  {
+
+
+// }

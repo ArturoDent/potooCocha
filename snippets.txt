@@ -1,0 +1,101 @@
+<!-- <svg class="icon icon-check-square-o"><use xlink:href="#icon-check-square-o"></use></svg>
+<svg class="icon icon-paper-plane-o"><use xlink:href="#icon-paper-plane-o"></use></svg>
+<svg class="icon icon-server"><use xlink:href="#icon-server"></use></svg>
+<svg class="icon icon-blur_linear"><use xlink:href="#icon-blur_linear"></use></svg>
+<svg class="icon icon-favorite"><use xlink:href="#icon-favorite"></use></svg>
+<svg class="icon icon-favorite_border"><use xlink:href="#icon-favorite_border"></use></svg>
+<svg class="icon icon-get_app"><use xlink:href="#icon-get_app"></use></svg>
+<svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
+<svg class="icon icon-storage"><use xlink:href="#icon-storage"></use></svg>
+<svg class="icon icon-files"><use xlink:href="#icon-files"></use></svg>
+<svg class="icon icon-camera"><use xlink:href="#icon-camera"></use></svg>
+<svg class="icon icon-download"><use xlink:href="#icon-download"></use></svg>
+<svg class="icon icon-stack"><use xlink:href="#icon-stack"></use></svg>
+<svg class="icon icon-pencil"><use xlink:href="#icon-pencil"></use></svg>
+
+<svg class="icon icon-info"><use xlink:href="#icon-info"></use></svg>
+<svg class="icon icon-paperplane"><use xlink:href="#icon-paperplane"></use></svg>
+<svg class="icon icon-globe"><use xlink:href="#icon-globe"></use></svg>
+<svg class="icon icon-clipboard"><use xlink:href="#icon-clipboard"></use></svg>
+<svg class="icon icon-folder-download"><use xlink:href="#icon-folder-download"></use></svg>
+<svg class="icon icon-file-excel"><use xlink:href="#icon-file-excel"></use></svg> -->
+
+function reloadHomePage(evt)  {
+
+  	showSearchInstructions(true);
+
+    checklistCountryButton.innerHTML = "Country";
+    checklistCountryButton.classList.remove("needsAttention");
+    checklistCountryButton.classList.remove("highlight");
+
+    taxonomyCountryButton.innerHTML = "Select Country";
+    taxonomyCountryButton.classList.remove("needsAttention");
+    taxonomyCountryButton.classList.remove("highlight");
+
+    document.querySelector("#searchForm span").classList.add("grayed");
+    document.querySelector("#searchSpecials").classList.add("grayed");
+    searchInput.value = "";
+
+    if (currentChecklistCountry) {
+      currentChecklistCountryElement.classList.remove("checkHighlight");
+      currentChecklistCountry = "";
+    }
+
+    if (currentTaxonomyCountry) {
+      currentTaxonomyCountryElement.classList.remove("taxHighlight");
+      currentTaxonomyCountry = "";
+      taxTreeArticle.parentNode.removeChild(taxTreeArticle);
+      searchResults.parentNode.parentNode.removeChild(searchResults.parentNode);
+      map.style.top       = "0";
+      lastQuery           = "";
+      // lastTaxonomyCountry = "";
+      lastResultsSpecies  = "";
+    }
+
+    pdfButton.classList.remove("highlight");
+    csvButton.classList.remove("highlight");
+
+    clearChecklistOptions();
+    resetNumDays();
+    fillSAMmap();
+    currentMap.querySelector(".saveMapButton").style.display = "none";
+
+    setFooterBannerDimensions();
+}
+
+$("#btnPrint").live("click", function () {
+  
+  var divContents = $("#dvContainer").html();
+  var printWindow = window.open('', '', 'height=400,width=800');
+  printWindow.document.write('<html><head><title>DIV Contents</title>');
+    // css to use
+  printWindow.document.write('</head><body >');
+  printWindow.document.write(divContents);
+  printWindow.document.write('</body></html>');
+  printWindow.document.close();
+  printWindow.print();
+});
+
+.country-menu a.checkHighlight::after  {
+	//content             :  "✓";
+	//background          :  none;
+	position            :  absolute;
+	left                :  -80px;
+	color               :  white;
+ 	content: " ";
+    background: url('../svg-icons/clipboard.svg');
+    background-size: 23px;
+    background-size: contain;
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+
+    -webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -1px -1px 1px rgba(0,0,0,0.3) );
+        -ms-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -1px -1px 1px rgba(0,0,0,0.3) );
+            filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -1px -1px 1px rgba(0,0,0,0.3) );
+
+	position            :  absolute;
+	left                :  -85px;
+	color               :  white;
+	pointer-events      :  none;
+}

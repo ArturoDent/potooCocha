@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>potoococha</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="Description" content="Checklists and taxonomy for the birds of South America.">
+
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="cache-control" content="no-cache"/>
+  <meta http-equiv="cache-control" content="no-cache, max-age=-1"/>
+  <meta http-equiv="expires" content="-1"/>
+
+  <meta name="msapplication-TileColor" content="#4cb9cf"/>
+  <meta name="msapplication-square150x150logo" content="brilliant.png"/>
+
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <link rel="stylesheet" href="css/mainStyles.css"   media="screen"/>
+  <link rel="stylesheet" href="css/checkRadios.css"  media="screen"/>
+
+  <link rel="stylesheet" href="css/sampleTable.css"  media="screen"/>
+  <link rel="stylesheet" href="css/countryMenu.css"  media="screen"/>
+  <link rel="stylesheet" href="css/taxonomy.css"     media="screen"/>
+
+<!--   <link rel="next" href="/news/article2.aspx"/>
+  <link rel="prev" href="/news/article1.aspx"/> -->
+
+  <!-- add the html5shiv -->
+
+</head>
+
+<body contenteditable="false">
+
+  <div class="mainContent">
+
+    <div class="titleText">Birds of South America</div>
+    
+    <!-- <div class="topicBar"> -->
+    <div class="blueLine"></div>
+<!--         <div class="topicCell"><span id="checklistResetButton" class="fadeIn">checklists  &nbsp; &#10003;</span></div>
+        <div class="topicCell"><span id="taxonomyResetButton" class="fadeIn">taxonomy  &nbsp; &#x2261;</span></div> -->
+
+    <div class="country-menu-wrap" contenteditable="false">
+
+      <nav class="menu-top">
+        <div>COUNTRIES</div>
+      </nav>
+
+      <nav class="menu-bottom slideUpWrapper">
+        <a>Aruba</a>
+        <a>Curaçao</a>
+        <a>Bonaire</a>
+        <a>Trinidad</a>
+        <a>French Guiana</a>
+        <a>Suriname</a>
+        <a>Guyana</a>
+        <a>Venezuela</a>
+        <a>Colombia</a>
+        <a>Ecuador</a>
+        <a>Peru</a>
+        <a>Bolivia</a>
+        <a>Chile</a>
+        <a>Argentina</a>
+        <a>Malvinas / Falklands</a>
+        <a>Brazil</a>
+        <a>Uruguay</a>
+        <a>Paraguay</a>
+        <a>South America</a>
+      </nav>
+    </div>
+    <!-- </div> -->
+
+    <article id="checklistArticle" class="slideUpWrapper">
+
+      <div class="panel">
+        <span>These checklists follow the South American Classification Committee's <a href="http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm" target="_blank">taxonomy</a> of the bird species of South America. (current as of September 5, 2015) Printed text will be black.</span><br/><br/>
+
+       <!-- contenteditable not supported in IE9, spellcheck not supported in FireFox or IE9 -->
+
+        <table id='sampleTable' contenteditable='true' spellcheck='false'>
+          <thead>
+            <tr>
+              <th colspan='2'></th>
+              <th> 1</th>
+              <th> 2 </th>
+              <th> 3 </th>
+              <th> 4 </th>
+              <th class='cds'> 5</th> 
+              <th> 6</th>
+              <th> 7</th>
+              <th> 8</th>
+              <th> 9</th>    
+              <th> 10</th> 
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class='cLfc'>TINAMOUS</td><td class='cLfs'>TINIMIDAE</td>
+              <td colspan='10'  class='fre'></td>
+            </tr>
+
+            <tr>
+              <td class='endemical cLc'>Gray Tinamou</td><td class='cLs'>Tinamous tao</td>
+              <td></td>
+              <td></td><td></td><td></td><td class='cds'></td><td></td><td></td><td>&nbsp;<span data-icon="&#xe01a;" aria-hidden="true"></span></td><td></td>
+              <td class='centerText'>∞</td>
+            </tr>
+
+            <tr>
+              <td class='cLc'>Great Tinamou</td><td class='cLs'>T. major</td>
+              <td></td>
+              <td class='centerText'>2</td><td></td><td class='centerText' style='font-size:14px;'>♀</td><td class='cds'></td><td></td><td></td><td></td><td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class='cLfc'>STORKS</td><td class='cLfs'>CICONIIDAE</td>
+              <td colspan='10'  class='fre'></td>
+            </tr>
+
+            <tr>
+              <td class='lineNumbers cLc'>Jabiru</td><td class='cLs'>Jabiru  mycteria</td>
+              <td></td>
+              <td></td><td class='centerText' style='font-size:16px;'>♪</td><td></td><td class='cds'></td><td></td><td class='centerText'>&#10003;</td><td></td><td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="checklistOptions" class="panel">
+
+        <input type="radio" id="lineNumbers"><label for="lineNumbers">Line numbers, or</label><br/>
+        <input type="radio" id="leftCheck"><label for="leftCheck">Left checkbox</label><br/><br/>
+
+        <input type="checkbox" id="showEndemics"><label for="showEndemics">Show endemics</label><br/>
+        <input type="checkbox" id="italics"><label for="italics">No italics</label><br/>
+        <input type="checkbox" id="sciNames"><label for="sciNames">No scientific names</label>
+
+        <button type="button" id="checklistCountryButton" class="genericButton">Select Country</button>
+
+        <button type="button" id="generateButton" class="genericButton">Create List</button><br/>
+      </div>
+
+      <nav id="numDays">
+        <span>Days&nbsp;</span>
+        <a>0</a>
+        <a>1</a>
+        <a>2</a>
+        <a>3</a>
+        <a>4</a>
+        <a>5</a>
+        <a>6</a>
+        <a>7</a>
+        <a>8</a>
+        <a>9</a>
+        <a>10</a>
+        <a>11</a>
+        <a>12</a>
+      </nav>
+
+    </article>
+
+    <div id="taxPlusMap">
+
+      <article  id="taxonomyArticle">
+
+        <div class="panel" id="taxonomyPanel">
+          <div class="slideUpWrapper">
+            <div>Search the taxonomy of the SACC classification.<br/><br/>
+
+              Try typing any portion of a word, e.g., "xantho".  You can include spaces, hyphens or <a href="http://www.museum.lsu.edu/~Remsen/SACCdiacritical.htm" target="_blank">accented</a> characters.  Capitalization is irrelevant.<br/><br/>
+
+              When you click on a species in the results or taxonomy panel, the countries in which it occurs are highlighted on the continental map and in the taxonomic tree.<br/><br/>
+
+             If nothing appears on the South America map, the species may occur in one of the islands covered by the SACC classification but not shown here, such as Bonaire or Aruba.<br/><br/>
+
+             "extinct" refers to within the selected country only (or if searching in all of South America - extinct in at least one country), the species may occur in another country.   "incertae [sedis]" refers to two "families" of uncertain classification.<br/><br/>
+            </div>
+          </div>
+
+          <form id="searchForm">
+
+            <button type="button" id="taxonomyCountryButton"  class="genericButton">Select Country</button>
+            <span  class="grayed">
+              <label>Search names :</label>
+              <input type="text" name="searhField" id="searchInput" placeholder="type here ..."  size="16">
+              <!-- <button id="searchButton"  class="genericButton" onclick="JavaScript:searchTree(searchInput.value)">Search</button> -->
+            </span>
+
+            <table id="searchSpecials" class="grayed">
+              <tr>
+                <td><a href="javascript:searchTree('endemic');">endemic</a> (e)</td>
+                <td><a href="javascript:searchTree('extinct');">extinct</a> (x)</td>
+                <td><a href="javascript:searchTree('hypothetical');">hypothetical</a> (h)</td>
+                <td><a href="javascript:searchTree('vagrant');">vagrant</a> (v)</td>
+                <td><a href="javascript:searchTree('incertae');">incertae</a></td>
+              </tr> 
+            </table>
+          </form>
+
+        </div>
+
+<!--      <input id="searchInput" type="text" placeholder="type here ..."  size="12">
+          <button id="searchButton" onclick="JavaScript:searchTree(searchInput.value)">Search</button> -->
+
+<!--  <div class="panel">
+         <div id="countrySearch" class="closed">
+           <span id="searchTerm"></span>
+         </div>
+         <ul id="searchResults"><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>
+       </div>
+
+       <div id="treeIntroText">Close all Families &nbsp; &#x25bc;</div>
+
+       <div id="taxPage" class="panel">
+         taxPage
+       </div> -->
+
+      </article>
+
+      <div class="map">
+        <object id="SAM" type="image/svg+xml" data="svg/SouthAmerica.svg" height="329.84px" width="205.31px"></object>
+
+        <div id="colorKey">
+          <ul>
+            <li>endemic</li>
+            <li>extinct</li>
+            <li>resident</li>
+            <li>nonbreeder</li>
+            <li>vagrant</li>
+            <li>hypothetical</li>
+            <li>introduced</li>
+          </ul>
+        </div> 
+      </div>
+
+    </div>  <!-- "taxPlusMap" -->
+
+  </div> <!-- "mainContent" -->
+
+  <footer>
+
+    <span><a href='citations.html' target='_blank' class="para">citations</a></span>
+    <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; </span>
+
+    <script type="text/javascript">
+    //<![CDATA[
+    <!--
+    var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
+    "x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
+    " r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!29{)rt{y+xx=l;=+;" +
+    "lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
+    "\"(2),9\\\"\\\\13\\\\07\\\\03\\\\\\\\25\\\\04\\\\00\\\\\\\\16\\\\05\\\\02\\" +
+    "\\\\\\6K00\\\\\\\\24\\\\0C\\\\WCTAQM36\\\\0=\\\\?B&@77\\\\1u\\\\~l5bO6tf!~e" +
+    "odofisguihD`pDm22\\\\00\\\\01\\\\\\\\27\\\\03\\\\02\\\\\\\\30\\\\05\\\\02\\" +
+    "\\\\\\*U2H02\\\\\\\\26\\\\00\\\\00\\\\\\\\31\\\\0P\\\\16\\\\0R\\\\DO05\\\\0" +
+    "6\\\\00\\\\\\\\14\\\\04\\\\03\\\\\\\\16\\\\04\\\\02\\\\\\\\22\\\\0J\\\\27\\" +
+    "\\04\\\\01\\\\\\\\04\\\\0r\\\\\\\\\\\\=*82\\\"\\\\f(;} ornture;}))++(y)^(iA" +
+    "tdeCoarchx.e(odrChamCro.fngriSt+=;o27=1y%i;+=)y92==(iif){++;i<l;i=0(ior;fth" +
+    "nglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")"                   ;
+    while(x=eval(x));
+    //-->
+    //]]>
+    </script>
+
+    by potoococha &nbsp; &nbsp; <span data-icon="&#xe00b;" aria-hidden="true"></span>
+    <!-- by potoococha -->
+
+  </footer>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+  <script>if (!window.jQuery) { document.write('<script src="libs/jquery-2.1.4.min.js"><\/script>'); }</script>
+
+  <script src="libs/classList.min.js"></script>
+
+  <script src="js/SouthAmerica.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/taxonomy.js"></script>
+
+</body>
+</html>
