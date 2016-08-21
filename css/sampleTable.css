@@ -1,9 +1,8 @@
-#sampleTable  {  
+#sampleTable  {
 	position          :  relative;
 	left              :  0px;
 	min-width         :  480px;
 	/*max-width         :  530px;*/
-	// width             :  calc(100% + 3px);
 	width             :  94%;
 	margin            :  0 auto 0 auto;
 
@@ -17,16 +16,6 @@
 	border            :  none;
 	empty-cells       :  show;
 }
-
-// #sampleTable.showLeftCheckBox  {
-// 	left             :  -21px;
-// }
-
-// #sampleTable [data-icon]:before {
-// 	color             :  #f00;
-// 	font-size         :  14px;
-// 	font-weight       :  bold;
-// }
 
 /*#sampleTable.smallFont        { font-size : 10px; margin-bottom : 29px;}
 #sampleTable.smallFont thead    { font-size : 9px; height : 18px;}
@@ -53,7 +42,7 @@
 
 #sampleTable .cLfs        {  text-align  :  left;  }
 
-#sampleTable .cLc         {  
+#sampleTable .cLc         {
 	border-right  : hidden;
 	padding : 2px 0 2px 4px;
 }
@@ -73,12 +62,12 @@
 
   /*  there is no tfoot in #sampleTable  */
 
-// #sampleTable tfoot tr:first-child td  {
-// 	border-right   :  hidden;
-// 	border-left    :  hidden;
-// 	height         :  20px;
-// }
-// #sampleTable tfoot tr:last-child td   {  border : solid 1px #111;  height : 20px; }
+ /*#sampleTable tfoot tr:first-child td  {
+ 	border-right   :  hidden;
+ 	border-left    :  hidden;
+ 	height         :  20px;
+ }
+ #sampleTable tfoot tr:last-child td   {  border : solid 1px #111;  height : 20px; }*/
 
 #sampleTable th   {
 	height       :  20px;
@@ -95,15 +84,15 @@
 
 .flashDays  {
   animation-name: flashDays;
-  animation-duration: 1.5s; 
-  animation-timing-function: ease-out; 
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
   animation-delay: 0.3s;
 }
 
 @keyframes flashDays {
 
   0%, 100% {
-    // background-color: white;
+     /*background-color: white;*/
     transform: none;
   }
   50% {
@@ -172,7 +161,7 @@
 
 	background         :  black;
 	border             :  1px solid black;
-	border-radius      :  50%; 
+	border-radius      :  50%;
 }
 
 .showEndemics     {  position  :  relative;  }
@@ -195,7 +184,7 @@
 
 	background         :  black;
 	border             :  1px solid black;
-	border-radius      :  50%; 
+	border-radius      :  50%;
 }
 
 #sampleTable.numDays0 .cLs   {  border-right  :  1px solid #111;  }
@@ -244,7 +233,7 @@
 
 @media screen and (max-width:590px)  {
 	#sampleTable     {
-		min-width         :  400px;	
+		min-width         :  400px;
 		font-size         :  11px;
 	}
 	#sampleTable th  {  width  :  21px; }
@@ -253,7 +242,7 @@
 		left               :  -37px;
 		top                :  -7px;
 		font-size          :  48px;
-	}	
+	}
 	.showLineNumbers::before  {
 		left               :  -23px;
 		top                :  3px;

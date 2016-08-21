@@ -16,28 +16,21 @@
 }
 
 html {
-  font-size: 62.5%;  // so 1em = 10px (browser default usually 16px)
+  font-size: 62.5%;
+  /*so 1em = 10px (browser default usually 16px)*/
   height: 100%;
   width: 100%;
 }
 
 body {
-  // position: relative;
 
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 
-// overflow: visible;
-
-  // position: relative;
-  // width: 100%;
   width: 600px;
   margin: 0 auto;
 
-  // min-width: 670px;
-  // max-width: 1000px;
-  // margin: 0 auto;
   padding: 0;
 
   font-family: Verdana, Georgia, sans-serif;
@@ -47,9 +40,9 @@ body {
   letter-spacing: 0.04em;
   text-shadow: 1px 1px 2px #222;
 
-  // background: #757570;
+   /*background: #eb5048;*/
   background: #5C5C59;
-  // overflow-x: hidden;
+   /*overflow-x: hidden;*/
 }
 
 a       {  text-decoration: none;  color: inherit;  }
@@ -97,7 +90,7 @@ a:link  {  border-bottom: solid 1px #aaa;  }
   width: 2em;
 }
 
-.icon-file-excel  { 
+.icon-file-excel  {
   top: 2px;
   height: 1.2em;
   width: 2em;
@@ -122,12 +115,9 @@ a:link  {  border-bottom: solid 1px #aaa;  }
 .smallBanner {
   display: none;
   position: absolute;
-  // left: -20px;
   left: 0;
-  // width: 100vw;
   width: 100vw;
 
-  // min-width: 500px;
   padding: 20px 0 93px 11%;
   margin: 0;
 
@@ -145,26 +135,18 @@ a:link  {  border-bottom: solid 1px #aaa;  }
 .titleBanner {
 
   position: relative;
-  // can't have a height set here - breaks chrome
   height: 100%;
   width: 70px;
   margin: 0 auto;
-  // IE11 must have min-width set
+   /*IE11 must have min-width set*/
   min-width: 70px;
   padding: 45px 0 0 0;
 
-  // cursor: pointer;
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 0.1em;
-  // line-height: 2em;
 
-  // border-left: 2px solid #6d9892;
-  // border-top: 2px solid #fff;
   border-right: 4px solid #ddd;
-  // border-top-left-radius: 35px;
-  // border-top-left-radius: 35px;
-  // border-bottom-right-radius: 10px;
   background: #6d9892;
 }
 
@@ -173,20 +155,9 @@ a:link  {  border-bottom: solid 1px #aaa;  }
   display: inline-block;
   position:  relative;
   padding: 0;
-
-  // left: -395px;
   width: 465px;
-
-  left: 0;
-  // width: 800px;
+  left: calc(-50% - 0.5em);
   top: 465px;
-
-  // cursor: pointer;
-  // font-size: 2em;
-  // font-weight: bold;
-  // vertical-align: center;
-  // letter-spacing: 0.1em;
-  // line-height: 2em;
 
   transform: rotate(-90deg);
        -o-transform-origin:  top left;
@@ -209,26 +180,24 @@ a:link  {  border-bottom: solid 1px #aaa;  }
   left: -4px;
   height: 10px;
   width: inherit;
-  // IE11 must have min-width set
+   /*IE11 must have min-width set*/
   min-width: 70px;
   content: '';
   z-index: 10;
 
-  // background: #5C5C59;
   background: #6d9892;
 }
 
 .articles {
   position: relative;
   left: 0;
-  // top: 50px;
   margin-top: 70px;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  // width: 100%;
+   /*width: 100%;*/
   width: 600px;
   overflow: visible;
 }
@@ -239,7 +208,7 @@ section  {
 }
 
 article {
-  // min-width: 550px;
+   /*min-width: 550px;*/
   width: 600px;
   line-height: 22px;
   font-size: 1.4rem;
@@ -259,7 +228,7 @@ article {
   -o-transition: opacity 2s;
   transition: opacity 2s;
 
-  // background-color: #5C5C59;
+   /*background-color: #5C5C59;*/
   border-radius: 3px;
   border: 2px solid #6f8a91;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -339,11 +308,8 @@ article {
 
 #taxTreeArticle {
   /*min-width must be before the flex property*/
-  // min-width: 550px;
-  // flex: auto;
-  // width: 100%;
   padding-top: 20px;
-  margin: 0 0 15px 0; 
+  margin: 0 0 15px 0;
 
   border: none;
   box-shadow:  none;
@@ -501,14 +467,12 @@ footer {
 
   border-right: 4px solid #ddd;
   border-top: 3px solid #bbb;
-  // border-left: 2px solid #6d9892;
   border-bottom: 3px solid #ddd;
 
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 0 5px 0 transparent;
-  // background: #5C5C59;
   background: #6d9892;
 }
 

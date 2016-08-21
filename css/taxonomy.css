@@ -1,15 +1,13 @@
-  
+
   /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 
 .slideUpWrapper  {
-	
+
     pointer-events      :  auto;
     height              :  auto;
     opacity             :  1;
  	border-top-right-radius: 10%;
  	border-top-left-radius: 5px;
- 	// border-bottom-right-radius: 3%;
-	// box-shadow         :  0 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px 1px #fff;
 
     -webkit-transition  :  all 500ms ease-in-out;
 	-moz-transition     :  all 500ms ease-in-out;
@@ -36,7 +34,6 @@
 	border-radius      :  50%;
  	border-bottom-left-radius: 0;
 
-  	// border             :  1px solid #333;
 	box-shadow         :  0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
   	background         :  #5D837D;
 
@@ -48,20 +45,12 @@
 
 .taxInstructionsButton:hover {
   	background         :  #4A6862;
-  	// will-change        :  ;
-  	// box-shadow: 0 0 2px 2px white, 0 0 3px 3px rgba(0, 0, 0, 0.5);
-  	// transform: scale(1.3);;
+  	 /*will-change        :  ;*/
 }
 
 .taxInstructionsButton:hover + div.slideUpWrapper {
-  	// background         :  #91484D;
   	background         :  #5D837D;
-  	// background         :  #404040;
   	border-color: darkgray;
-
-  	// border: none;
-  	// border: 2px solid black;
-	// box-shadow         :  0 0 5px 10px rgba(0,0,0, 0.3);
 
   	will-change        :  height, opacity, border-width;
 }
@@ -71,15 +60,12 @@
 	display           :  flex;
 	flex-direction    :  column;
 	justify-content   :  space-between;
-	align-content       :  center:
-	
+	align-content       :  center;
+
 	position            :  relative;
 	padding             :  0 15px 20px 15px;
-	// text-align          :  center;
 
-	// margin-top          :  7px;
 	border-bottom: 2px solid #6f8a91;
-
 	background          : #353531;
 	box-shadow          : 0 2px 2px #333;
 
@@ -90,11 +76,7 @@
 }
 
 #searchForm > div:first-child  {
-	// opacity             :  1;
-	// position            :  relative;
-	// top                 :  20px;
 	width               :  100%;
-	// padding-left        :  20px;
 	text-align          :  center;
 	margin              :  30px 0 0 0;
 	pointer-events      :  auto;
@@ -105,42 +87,23 @@
 	transition          :  all 2s;
 }
 
-// #searchForm>span  {
-// 	opacity             :  1;
-// 	position            :  relative;
-// 	top                 :  15px;
-// 	margin              :  20px 0 20px 0;
-// 	pointer-events      :  auto;
-
-// 	-webkit-transition  :  all 2s;
-// 	-moz-transition     :  all 2s;
-// 	-o-transition       :  all 2s;
-// 	transition          :  all 2s;
-// }
-
 #searchForm span.grayed  {
 	opacity           :  0.2;
 	pointer-events    :  none;
 }
 
 #taxonomyCountryButton {
-	// margin            :  25px 0 0 0;
-	// position          :  relative;
 	margin-right      :  30px;
-	// left              :  -15px;  
-	// vertical-align    :  middle;
 	line-height       :  20px;
 }
 
 #searchInput  {
-	// position       :  relative;
 	height         :  auto;
-	// left           :  3px;
 	margin         :  0;
 	padding        :  3px 0 4px 0;
 
 	text-align     :  center;
-	color          :  #ddd; 
+	color          :  #ddd;
 	font-size      :  1.2em;
 
 	border         :  1px inset rgba(0,0,0,0.7);
@@ -203,7 +166,6 @@
 
 .panel.results-panel  {
 	position: relative;
-	// top: -36px;
 	height: auto;
 	z-index: 1;
 	border-top: 2px solid #6f8a91;
@@ -224,47 +186,41 @@
 	opacity         :  1;
 
 	color           :  #fff;
-	line-height     :  34px; 
+	line-height     :  34px;
   	letter-spacing  :  0.1em;
 	font-size	    :  1.5rem;
 	text-shadow     :  1px 1px 1px rgba(0,0,0,0.3);
 
-	// border-top      :  4px solid rgba(0,0,0,0.6);
-	// border-bottom   :  4px solid rgba(0,0,0,0.6);
-	// border-top: 2px solid #6f8a91;
-
 	border-left     :  22px solid #5C5C59;
 	border-right    :  22px solid #5C5C59;
 	border-bottom   :  2px solid #6f8a91;
-  	// background      :  #525050;
   	background      :  #6f8a91;
   	box-shadow      :  inset 0 5px 4px -4px rgba(0,0,0,1), inset 0 -5px 4px -4px rgba(0,0,0,0.3);
-  	// box-shadow      :  inset 0 2p 2px rgba(0,0,0,1); 
 }
 
-// #countrySearch::before {
-// 	content: "";
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 1px;
-// 	top: -1px;
-// 	left: 0;
-// 	z-index: 5;
-// 	background-color: transparent;
-// 	box-shadow: 0 3px 5px #111;
-// }
+ /*#countrySearch::before {
+ 	content: "";
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 1px;
+ 	top: -1px;
+ 	left: 0;
+ 	z-index: 5;
+ 	background-color: transparent;
+ 	box-shadow: 0 3px 5px #111;
+ }
 
-// #countrySearch::after {
-// 	content: "";
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 1px;
-// 	top: 35px;
-// 	left: 0;
-// 	z-index: 1;
-// 	background-color: transparent;
-// 	box-shadow: 0 -3px 5px #000;
-// }
+ #countrySearch::after {
+ 	content: "";
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 1px;
+ 	top: 35px;
+ 	left: 0;
+ 	z-index: 1;
+ 	background-color: transparent;
+ 	box-shadow: 0 -3px 5px #000;
+ }*/
 
 #searchResults  {
 	position          :  relative;
@@ -295,7 +251,7 @@
 	transition        :  all 2s;
 }
 
-#searchResults li  {  
+#searchResults li  {
 	list-style-type  :  none;
 	padding          :  0 0 2px 11px;
 	margin           :  1px 0 1px 0;
@@ -403,7 +359,7 @@
 	text-shadow       :  1px 1px 1px rgba(0,0,0,0.3);
 
 	border            : 1px solid #555;
-	border-bottonm     :  none;
+	border-bottom     :  none;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
   	background-color  :  #6f8a91;
@@ -411,7 +367,6 @@
 
 #taxPageButtons  {
 	cursor            :  pointer;
-	// z-index: -1;
 	border-top     :  2px solid #444;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
@@ -420,29 +375,9 @@
 }
 
 #taxPageButtons:hover  {
-	// border-top     :  none;
-	// border-bottom-left-radius: 3px;
-	// border-bottom-right-radius: 3px;
 	box-shadow: 0 3px 5px -5px #000;
   	background-color  :  #5f7a81;
-
 }
-
-// #taxPageButtons::before {
-// 	content: "";
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 1px;
-// 	top: -1px;
-// 	left: 0;
-// 	z-index: 5;
-// 	background-color: transparent;
-// 	box-shadow: 0 3px 5px #000;
-// }
-
-// #treeIntroText:hover  {
-// 	color             :  white;
-// }
 
 /*  -----------------------------   #taxPage panel  ---------------------  */
 
@@ -461,13 +396,12 @@
 	/* resize is completely broken in FF and Chrome */
 	resize             :  none;
 	overflow-x         :  hidden;
-	// overflow-y         :  scroll;
 	overflow-y         :  auto;
 	-webkit-overflow-scrolling  : touch;
 
 	cursor             :  pointer;
-	
-	border-radius      :  10px; 
+
+	border-radius      :  10px;
 	border-top         :  10px solid transparent;
 
 	border-bottom      :  10px solid transparent;
@@ -478,12 +412,12 @@
 
 .birds             {  display   :  none;  }
 
-/* 
+/*
 	position : relative MUST be here for entry.offsetTop to work in taxonomy.js
 	it is the offset distance to the nearest relatively-positioned parent
 */
 
-.birds.open        {  
+.birds.open        {
 	display   :  block;
 	position  : relative;
 }
@@ -496,17 +430,17 @@
 #tree li.family>span:nth-child(1)      { padding  :  0 0 0 20px;  }
 #tree li.familyOpen>span:nth-child(1)  { padding  :  0 0 0 20px;  }
 
-#tree li.familyOpen  { 
+#tree li.familyOpen  {
 	background       :  #6d9892;
 }
 
-#tree li.familyOpen:hover>span:first-child  { 
+#tree li.familyOpen:hover>span:first-child  {
 	padding          :  3px calc(100% - 60px) 4px 20px;
 	border-radius    :  5px;
 	background       :  #6d9892;
 }
 
-#tree .familyOpen  ul  { 
+#tree .familyOpen  ul  {
 	padding          :  1px 0 1px 2px;
 	font-size        :  1.2rem;
 	text-shadow      :  1px 1px 1px rgba(0,0,0,0.6);
@@ -516,7 +450,7 @@
 }
 
 /*target : familyOpen common names only*/
-#tree .familyOpen  ul  li span:first-child{ 
+#tree .familyOpen  ul  li span:first-child{
 	padding          :  1px 0 2px 27px;
 }
 
@@ -605,7 +539,7 @@
 	.fsc  {
 		font-size         :  11px;
 	}
-	.fco  {  
+	.fco  {
 		font-size         :  11px;
 	}
 }
