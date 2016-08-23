@@ -1,3 +1,5 @@
+"use strict";
+
 var leftCheck;
 var sciNames;
 var italics;
@@ -37,14 +39,14 @@ var taxonomyArticle;
 
 // svg4everybody();
 
-$(function() {
+$(function () {
 
   // smallBanner is header[0]
   titleBanner = document.getElementsByTagName("header")[1];
   footer = document.getElementsByTagName("footer")[0];
 
   map   =  document.getElementById("currentMap");
-  taxonomyArticle  =  document.getElementById("taxonomyArticle");
+  taxonomyArticle = document.getElementById("taxonomyArticle");
 
   setFooterBannerDimensions();
   window.onresize = setFooterBannerDimensions;
@@ -101,7 +103,7 @@ $(function() {
 
 //   *******************  end of  $(document).ready(function() ******************************************
 
-function initCurrentMap()  {
+function initCurrentMap() {
 
     prepareSVGstyles("SAMsvg");
 
@@ -363,6 +365,8 @@ function getCSVText(evt)  {
 }
 
 function openChecklistPage()  {
+
+  var vars;
 
 	if (!currentChecklistCountry)  {
     	checklistCountryButton.innerHTML = "Select Country";

@@ -1,24 +1,26 @@
 #mapsCollection  {
-  display: -webkit-flex;
+  /*display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: center;*/
 
    /*justify-content: flex-end;*/
 
   position: relative;
-  left: 0;
+  left: -20%;
   top: 5px;
-  /*width: 600px;*/
+  width: 60vw;
   height: 0;
   margin: 0;
   padding: 0;
+  text-align: center;
+
    /*scroll-x: auto;*/
   /*scroll-y: none;*/
   overflow-x: visible;
+  /*background: #eb5048;*/
   background: transparent;
-  /*background: slateblue;*/
   transition: all 1.5s;
 }
 
@@ -38,13 +40,13 @@
   /*flex: 1;*/
   /*transition: flex-grow 1000ms linear, all 1s*/
 
-  /*transition: all 1s;*/
+  transition: all 1s;
 }
 
 .thinify  {
   display: inline-block;
   position: relative;
-  top: 5px;
+  top: 50px;
   left: 0;
   width: 200px;
   /*height: 331px;*/
@@ -65,7 +67,7 @@
 .birdName  {
   position: absolute;
   top: -11px;
-  left: -10%;
+  /*left: -5%;*/
   /*width:  100%;*/
   /* width: inherit;*/
   height: auto;
@@ -74,7 +76,7 @@
   color: white;
   font-size: 1rem;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
 
   border-radius: 3px;
   /*background: #757570;*/
@@ -96,13 +98,13 @@
   height: auto;
   padding: 5px 0;
   line-height: 11px;
+  color: white;
 }
 
 #currentMap {
-
   position: absolute;
   top: 50px;
-  left: 75.72%;
+  left: 100%;
   height: 455px;
   width: 275px;
   margin:  0 0 0 5px;
@@ -293,6 +295,7 @@ g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
 .colorKey ul li:nth-child(7) {  /* endemic       */
   /*position    :  absolute;*/
   /*top:          0px;*/
+  top: 3px;
   left :         -100px;
   color :        white;
   padding:       0 0 2px 101px;

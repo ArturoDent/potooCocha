@@ -1,3 +1,5 @@
+"use strict";
+
 var deleteMapButton;
 var saveMapButton;
 
@@ -14,11 +16,11 @@ function initMapFactory()  {
   	saveMapButton = document.querySelector(".saveMapButton");
   	saveMapButton.addEventListener ("click", saveCurrentMap);
 
- //  	$.each( $('*'), function() { 
+ //  	$.each( $('*'), function() {
  //    	if( $(this).width() + $(this).position().left > document.documentElement.clientWidth) {
  //    		console.log("document.documentElement.clientWidth = " + document.documentElement.clientWidth);
- //        	console.log("Wide Element: ", $(this), "Width: ", $(this).width(), "Left: ", $(this).position().left); 
- //   		 } 
+ //        	console.log("Wide Element: ", $(this), "Width: ", $(this).width(), "Left: ", $(this).position().left);
+ //   		 }
 	// });
 
 	// $.each($('*'), function() { if ($(this).width() > document.documentElement.clientWidth) { console.log($(this).get(0)); } }).length;
@@ -57,7 +59,7 @@ function saveCurrentMap()  {
 	var thisInstance = currentMap.children[0];
 
 	var dupNode = thisInstance.cloneNode(true);
-	dupNode.classList.remove('birdMapInstance');	
+	dupNode.classList.remove('birdMapInstance');
 	dupNode.classList.add('thinify');
 	dupNode.classList.add('smallBird');
 

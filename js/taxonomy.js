@@ -1,5 +1,7 @@
+"use strict";
+
 var lastQuery;
-var lastSpecies;	
+var lastSpecies;
 
 var species;
 var families;
@@ -25,8 +27,8 @@ var numFamiliesList = { "Argentina":87, "Aruba":48, "Bolivia":78, "Brazil":91, "
                   "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":69,
                   "Uruguay":71, "Venezuela":87, "Bonaire":45, "Falklands":46, "Malvinas":46, "South America": 102};
 
-// South America : 102 families not including 2 incertae "families", 3368 total spp.
-//                 which includes one hypothetical (in one country only) Blasck Turnstone                              
+// South America : 102 families not including 2 incertae "families", 3371 total spp.
+//                 which includes one hypothetical (in one country only) Blasck Turnstone
 
 var currentTaxonomyCountry;
 var currentTaxonomyCountryElement;
@@ -64,7 +66,7 @@ var baseStrokeColor      =  '#6f8a91';
 var selectedFillColor    =  '#eee';
 var selectedStrokeColor  =  '#eee';
 
-$(function() {
+$(function () {
 
   searchSlideUpWrapper               =  document.querySelector("#taxonomyArticle > div.slideUpWrapper");
 
@@ -72,8 +74,7 @@ $(function() {
   searchSlideUpWrapper_height        =  searchSlideUpWrapper.style.height;
 
   searchInstructionsInfo             =  document.querySelector(".taxInstructionsButton");
-  checklistInstructionsInfo          =  document.querySelector(".checklistSlider");
-  // tempSACCholder                     =  document.querySelector("#tempSACCholder");
+  // checklistInstructionsInfo          =  document.querySelector(".checklistSlider");
 
 	searchInput                        =  document.getElementById("searchInput");
   searchSpecials                     =  document.getElementById("searchSpecials");
@@ -85,10 +86,6 @@ $(function() {
   searchInstructionsInfo.addEventListener ("click", showSearchInstructions);
 
   createTaxPageHTML();
-  // window.onresize = checkMapPosition;
-
-  // $("#taxPage").mCustomScrollbar({  live: "on"  });
-  // $("#searchResults").mCustomScrollbar({  live: "on"  });
 });
 
 function showSearchInstructions(state)  {
@@ -125,7 +122,7 @@ function showSearchInstructions(state)  {
     document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Open the search instructions";
   }
 }
- 
+
 function createTaxPageHTML ()  {
 
   resultsFrag =  "<div class='panel results-panel'>";
@@ -151,7 +148,7 @@ function loadCountryTaxonomy(evt)  {
   if (!document.getElementById("taxPage")) {
 
     // will lose eventListeners with innerHTML method, not true with insertAdjacentHTML
-    
+
     taxonomyArticle.insertAdjacentHTML('beforeend', resultsFrag);
     mapsCollection.insertAdjacentHTML('afterend',  taxFragHTML);
 
@@ -167,7 +164,6 @@ function loadCountryTaxonomy(evt)  {
 
 		document.querySelector("#searchForm span").classList.remove("grayed");
     document.querySelector("#searchSpecials").classList.remove("grayed");
-    // document.querySelector(".colorKey").style.opacity = "0.9";
 	}
 
   var taxCountry = (typeof evt === "string") ?  evt : evt.target.innerHTML;
@@ -180,14 +176,10 @@ function loadCountryTaxonomy(evt)  {
   if (lastQuery)   {
     document.getElementById("countrySearch").classList.remove("closed");
     $("#searchTerm").html(taxCountry +  " : '" + lastQuery + "'");
-    // document.querySelector(".results-panel").style.top = "0";
     document.querySelector(".results-panel").style.opacity = "1";
-
-    // ** what would the height be if filled with results?
-    // document.querySelector(".results-panel").style.height = "auto";
   }
 
-  // all samTax calls could be put into one if (taxCountry == "South America")  else 
+  // all samTax calls could be put into one if (taxCountry == "South America")  else
 
   if (taxCountry == "French Guiana") {
 
@@ -197,29 +189,28 @@ function loadCountryTaxonomy(evt)  {
   }
 
   // because Curaçao is accented here but not in filenames
-  else if (taxCountry == "Curaçao") { 
+  else if (taxCountry == "Curaçao") {
 
     $("#taxPage").load("Countries/CuracaoSACC.html #tree", updatetaxArticleQueries);
     $("#searchResults").removeClass("samTax");
     $("#taxPage").removeClass("samTax");
   }
 
-  else if (taxCountry == "South America") { 
+  else if (taxCountry == "South America") {
 
     $("#taxPage").load("Countries/SouthAmericaSACC.html #tree", updatetaxArticleQueries);
 
-    // add class to searchResults and taxPage so can prevent "h","v" and "e" from appearing 
+    // add class to searchResults and taxPage so can prevent "h","v" and "e" from appearing
     $("#searchResults").addClass("samTax");
 
     // so hypotheticals and vagrants aren't selectable if South America is chosen
-    // $("#searchSpecials span:nth-of-type(1)").addClass("notAvailable");
     $("#searchSpecials span:nth-of-type(3)").addClass("notAvailable");
     $("#searchSpecials span:nth-of-type(5)").addClass("notAvailable");
     $("#searchSpecials").addClass("SAM");
 
     $("#taxPage").addClass("samTax");
   }
-  
+
   else if (taxCountry == "Malvinas") {
 
     $("#taxPage").load("Countries/FalklandsSACC.html #tree", updatetaxArticleQueries);
@@ -227,21 +218,16 @@ function loadCountryTaxonomy(evt)  {
     $("#taxPage").removeClass("samTax");
   }
 
-  // else if (taxCountry == "Falklands") {
-
-  //   $("#taxPage").load("Countries/FalklandsSACC.html #tree", updatetaxArticleQueries);
-  //   $("#searchResults").removeClass("samTax");
-  //   $("#taxPage").removeClass("samTax");
-  // }
-
-  else if (taxCountry) { 
+  else if (taxCountry) {
 
     $("#taxPage").load("Countries/" + taxCountry + "SACC.html #tree", updatetaxArticleQueries);
     $("#searchResults").removeClass("samTax");
     $("#taxPage").removeClass("samTax");
   }
-  
-    var jqxhr = $.get("../data/occurrences.txt", function(data) { 
+
+  // update #taxPage slimScroll here ***
+
+    var jqxhr = $.get("../data/occurrences.txt", function(data) {
 
        loadIntoArray(data);})
 
@@ -259,22 +245,20 @@ function loadCountryTaxonomy(evt)  {
     $("#searchSpecials").removeClass("SAM");
   }
 
-  // if (currentTaxonomyCountry && currentTaxonomyCountry != "South America")  selectedCountryStrokeColor(currentTaxonomyCountry, baseStrokeColor);
-  // if (taxCountry != "South America")  selectedCountryStrokeColor(taxCountry, selectedStrokeColor);
-
   // remove space from within "French Guiana", svg id = "FrenchGuiana"
   if (!lastQuery)  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
+    var temp;
     selectedCountryFillColor(temp = taxCountry.replace(" ", ""), selectedFillColor);
   }
 
-  else if (lastQuery == "endemic" || lastQuery == "hypothetical"  || lastQuery == "vagrant" || 
+  else if (lastQuery == "endemic" || lastQuery == "hypothetical"  || lastQuery == "vagrant" ||
       lastQuery == "incertae" || lastQuery == "extinct")  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
     selectedCountryFillColor(temp = taxCountry.replace(" ", ""), selectedFillColor);
-  } 
+  }
 
   currentTaxonomyCountry = taxCountry;
 
@@ -284,23 +268,18 @@ function loadCountryTaxonomy(evt)  {
   currentTaxonomyCountryElement.classList.add("taxHighlight");
   if (currentTaxonomyCountryElement.classList.contains("checkHighlight")) currentTaxonomyCountryElement.classList.add("bothHighlights");
 
-  taxonomyCountryButton.classList.remove("needsAttention");  
+  taxonomyCountryButton.classList.remove("needsAttention");
   taxonomyCountryButton.classList.add("highlight");
 
   document.querySelector("#treeIntroText").innerHTML = taxCountry + " &nbsp; : &nbsp; " + numFamiliesList[taxCountry] + " families, " + numSpeciesList[taxCountry] + " species *";
   map.style.top = searchResults.offsetTop + searchResults.offsetParent.offsetTop - 20 + "px";
   document.querySelector(".colorKey").style.opacity = "0.9";
 
-
   // scroll taxPage to top
   $("#taxPage").animate({scrollTop : 0}, 2000);
-  // $("#taxPage").mCustomScrollbar("scrollTo","top",{ timeout:1000 });
 };
 
-function updatetaxArticleQueries()  { 
-
-    // *** don't do this if click on checklistCountryButton ?
-  // pageScrollTop = document.body.scrollTop;
+function updatetaxArticleQueries()  {
 
 	species = $("#tree li");
 	families = $("#tree .family, #tree .familyOpen");
@@ -318,9 +297,6 @@ function updatetaxArticleQueries()  {
   else  {
       map.style.top = searchResults.offsetTop + searchResults.offsetParent.offsetTop - 20 + "px";
   }
-
-  // $("#taxPage .mCSB_container").html($("#tempSACCholder").html());
-  // $("#taxPage").mCustomScrollbar("update");
 
   document.querySelector("#taxPageButtons").addEventListener("click", closeAllFamilies);
 };
@@ -343,7 +319,6 @@ function getQuery(event)  {
     searchResults.style.height = "55px";
 
     map.style.top = searchResults.offsetTop + searchResults.offsetParent.offsetTop - 20 + "px";
-    // $("#searchResults .mCSB_container").add("<li></li><li> &nbsp; &nbsp; input incorrect</li><li></li>");
     return;
   }
 
@@ -364,11 +339,28 @@ function getQuery(event)  {
 	  text = String.fromCharCode(code);
 	}
 
+// compare searchInput.value to lastQuery,
+// is searchInput.value length greater than lastQuery?
+// are first lastQuery.length characters the same as searchInput.value's first lastQuery.length charcters?
+  // var newQuery = searchInput.value;
+  // var usePreviousMatches = false;
+
+  // if (lastQuery && (newQuery.length > lastQuery.length)) {
+  //   var temp = newQuery.substr(0, lastQuery.length);
+  //   var regExp = new RegExp(temp);
+  //   if (regExp.test(lastQuery)) {
+
+  //     usePreviousMatches = true;
+  //     searchTree(searchInput.value, usePreviousMatches);
+  //     console.log("use matches");
+  //   }
+  // }
+
   // all the same ?
-	if (e.type === "textinput")   {  
-		searchTree(searchInput.value); 
-		e.preventDefault();  
-		return false;    
+	if (e.type === "textinput")   {
+		searchTree(searchInput.value);
+		e.preventDefault();
+		return false;
 	}
 	else if (e.type === "input")             {  searchTree(searchInput.value);  }
 	else if (e.type === "onpropertychange")  {  searchTree(searchInput.value);  }
@@ -376,8 +368,10 @@ function getQuery(event)  {
 
 function getSearchSpecialsQuery(evt)  {
 
+  // <span><a>endemic</a> (e) </span>
   var term = evt.target.textContent.split(" ")[0];
   searchTree(term);
+  // searchTree(term, false);
 }
 
 function escapeRegExp(string) {
@@ -387,6 +381,7 @@ function escapeRegExp(string) {
 
 function searchTree(query2) {
 
+  var query;
   query2 = escapeRegExp(query2);
 
   document.querySelector(".colorKey").style.opacity = "0.9";
@@ -394,14 +389,14 @@ function searchTree(query2) {
   var numFound = 0;
 
   var observer = new MutationObserver(function(mutations) {
- 
+
     searchResults.style.height = "auto";
 
     if (searchResults.scrollHeight >= 300) searchResults.style.height = "300px";
     else {
       searchResults.style.height = searchResults.scrollHeight + "px";
     }
-  });  
+  });
 
   observer.observe(searchResults, { childList: true });
 
@@ -411,30 +406,19 @@ function searchTree(query2) {
     return;
   }
 
-  // *** actual height
-  // document.querySelector(".results-panel").style.height = "auto";
-
   document.getElementById("searchResults").classList.remove("fadeIn");
-  // document.querySelector(".results-panel").style.top = "0";
   document.querySelector(".results-panel").style.opacity = "1";
 
   lastQuery = query2;
 
   if (lastQuery)  {
-
     document.getElementById("countrySearch").classList.remove("closed");
     $("#searchTerm").html(currentTaxonomyCountry + " : '" + lastQuery + "'");
   }
   else {
-
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
-    // $("#searchResults .mCSB_container").add("<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>");
     document.getElementById("searchResults").classList.add("fadeIn");
     document.getElementById("searchResults").style.top = 0;
-
-    // window.setTimeout(setFooterBannerDimensions, 1000);
-    // window.setTimeout(setBannerWidth, 2000);
-    // setBannerWidth();
     return;
   }
 
@@ -445,8 +429,6 @@ function searchTree(query2) {
     families[i].cloned = false;
   }
 
-  // searchResults.innerHTML = "";
-    
     // boolean that search input term was bad or missing
   var warning = false;
 
@@ -454,14 +436,15 @@ function searchTree(query2) {
     lastSpecies.classList.remove("active");
   }
 
+  // reuse matches if true
   var matches = [];
   var j = 0;
   var entry;
   var eClass;
   var sL = species.length;
 
-  if (query2 == "endemic" || query2 == "hypothetical"  || query2 == "vagrant" || 
-      query2 == "incertae" || query2 == "extinct")  { 
+  if (query2 == "endemic" || query2 == "hypothetical"  || query2 == "vagrant" ||
+      query2 == "incertae" || query2 == "extinct")  {
 
     var special;
 
@@ -489,13 +472,8 @@ function searchTree(query2) {
     query2 = query2.replace(/^\s+|\s+$/g, "");
 
         //  wildcards * and ? ::
-
-        // console.log("1 here");
-
     query2 = query2.replace(/\\\*/g, "[a-zA-Z'ñã\\s-]+");
     query2 = query2.replace(/\\\?/g, "[a-zA-Z'ñã\\s-]");
-
-    // console.log("7 query2 = " + query2);
 
       // SACC only uses ñ and São, no other accented characters
     query2 = query2.replace(/n/g, "(n|ñ)");
@@ -510,7 +488,7 @@ function searchTree(query2) {
       // now database can have any number of spaces between genus and species
     query2 = query2.replace(/\s+/g, "\\s+");
 
-    if (query2) { 
+    if (query2) {
       query = query2;
     }
     else {
@@ -520,17 +498,10 @@ function searchTree(query2) {
     }
 
       // bad or missing search term
-    if (warning)  { 
+    if (warning)  {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
-      // $("#searchResults .mCSB_container").add("<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>");
-
       document.getElementById("searchResults").classList.add("fadeIn");
-      // setBannerWidth();
-      // window.setTimeout(setFooterBannerDimensions, 1000);
-      // window.setTimeout(setBannerWidth, 2000);
-
       searchResults.style.height = "55px";
-
 
       return;
     }
@@ -547,7 +518,7 @@ function searchTree(query2) {
       if (entry.firstChild.textContent.match(pattern) || entry.childNodes[1].textContent.match(pattern))
 
       {
-        if (eClass == "family" || eClass == "familyOpen") 
+        if (eClass == "family" || eClass == "familyOpen")
           entry.cloned = true;
 
         var eParPar = entry.parentNode.parentNode;
@@ -565,15 +536,8 @@ function searchTree(query2) {
 
   if (matches.length == 0)  {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
-    // $("#searchResults .mCSB_container").add("<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>");
-
     document.getElementById("searchResults").classList.add("fadeIn");
-    // setBannerWidth();
-    // window.setTimeout(setFooterBannerDimensions, 1000);
-    // window.setTimeout(setBannerWidth, 2000);
-
     searchResults.style.height = "55px";
-
 
     return;
   }
@@ -608,11 +572,11 @@ function searchTree(query2) {
         numFound = z;
       }
     }  // end of family/familyOpen
-  
+
     else if (matchClass == "fsc")  { }
-  
+
     else {
-      matches[k].style.textShadow = "none";
+      matches[k].style.textShadow = "none";  // *** ?
       list += "<li data-i='" +  matches[k].getAttribute("data-i") + "' class='bird'>" + matches[k].innerHTML + "</li>";
       numFound++;
     }
@@ -620,8 +584,7 @@ function searchTree(query2) {
 
   searchResults.innerHTML = list;
 
-  // $("#searchResults .mCSB_container").html(list);
-  // $("#searchResults").mCustomScrollbar("update");
+  // update slimScroll here ***
 
   document.getElementById("searchResults").classList.add("fadeIn");
 
@@ -630,7 +593,7 @@ function searchTree(query2) {
   lastQuery = lastQuery.replace(/\\\*/g, "*");
   lastQuery = lastQuery.replace(/\\\?/g, "?");
 
-  $("#searchTerm").html(currentTaxonomyCountry +  " : '" + lastQuery + "'  [ " + numFound + " species ]");
+  $("#searchTerm").html(currentTaxonomyCountry +  " : '" + lastQuery + "'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]");
 
   return;
 };
@@ -644,7 +607,7 @@ function gotoMatch(e)  {
     lastSpecies.classList.remove("active");
   }
 
-  ev = e || window.event;  // window.event for IE8-
+  var ev = e || window.event;  // window.event for IE8-
   var clicked = ev.target;
   var clickedPar = clicked.parentNode;
   var clickedClass = clicked.className;
@@ -660,7 +623,7 @@ function gotoMatch(e)  {
   }
   else if (clickedClass == "fco")  {
     clicked = clickedPar;
-  }   
+  }
   else if (clickedClass == "fsc")  {
     clicked = clickedPar;
   }
@@ -682,7 +645,7 @@ function gotoMatch(e)  {
 
   var sLen = species.length;
   var entry;
-  var eText = clicked.textContent;  
+  var eText = clicked.textContent;
 
   for (var i = 0; i < sLen; i++ ) {
 
@@ -701,16 +664,13 @@ function gotoMatch(e)  {
         // put highlighted bird at top of taxPage
         // entry.scrollIntoView(true);
       taxPage.scrollTop = family.parentNode.offsetTop + entry.offsetTop - 100;
-      // $("#taxPage").mCustomScrollbar("scrollTo",100,{
-      //   timeout:1000
-      // });
 
       entry.className = "active";
 
       lastSpecies = entry;
       lastIndex = Number(entry.getAttribute("data-i"));
       highlightSAMmap(lastIndex, "currentMap");
-    
+
       if (lastResultsSpecies)  $(lastResultsSpecies).toggleClass("active");
       $(clicked).toggleClass("active");
       lastResultsSpecies = clicked;
@@ -725,25 +685,19 @@ function gotoMatch(e)  {
     else if ((entry.firstChild.textContent + entry.firstChild.nextSibling.textContent) ==  eText ||
               eText  == (entry.firstChild.textContent + " ")  ) {
 
-      var family = entry.children[2];       
+      var family = entry.children[2];
 
       if (family.classList.contains("closed")) {
-        family.classList.add("open"); 
+        family.classList.add("open");
         family.parentNode.className = "familyOpen";
-      } 
-      
+      }
+
       taxPage.scrollTop = entry.offsetTop - 10;
-      // $("#taxPage").mCustomScrollbar("scrollTo",entry.offsetTop - 10,{
-      //   timeout:1000
-      // });
 
       //   // put family at top of taxPage
       //   // entry.scrollIntoView(true);  screws up IE
 
       lastSpecies = family;
-      // fillSAMmap();
-      // *** disable save button here
-      // currentMap.querySelector(".saveMapButton").style.display = "none";
 
       if (lastResultsSpecies)  {
         $(lastResultsSpecies).toggleClass("active");
@@ -773,7 +727,7 @@ function addBirdNameToMap(name)  {
 function toggleFamilyOpen(event)  {
 
 	event.stopPropagation();
-	
+
   // taxPage is not open yet
   if (!numFamilies) return;
 
@@ -815,16 +769,13 @@ function toggleFamilyOpen(event)  {
 
         if (familyTarget.parentNode.clientHeight > taxPageHeight)
           taxPage.scrollTop = familyTarget.parentNode.offsetTop;
-          // $("#taxPage").mCustomScrollbar("scrollTo",familyTarget.parentNode.offsetTop,{ timeout:1000 });
 
-        else 
+        else
           taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
-          // var temp = familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
-          // $("#taxPage").mCustomScrollbar("scrollTo",temp,{ timeout:1000 });
     }
     //  show family and numSpecies in that family
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "  &nbsp; : &nbsp; " + familyTarget.parentNode.children[1].textContent + " has " + familyTarget.children.length + " species";
-  } 
+  }
 
   else if (familyTarget)  {
 
@@ -835,7 +786,6 @@ function toggleFamilyOpen(event)  {
 
     if (reset.length) {
       reset[0].className = "";
-      // clearSAMmap();
     }
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species";
   }
@@ -858,7 +808,7 @@ function toggleFamilyOpen(event)  {
     }
 
     lastSpecies = species.parentNode;
-  
+
     if (lastResultsSpecies)  $(lastResultsSpecies).toggleClass("active");
     lastResultsSpecies = null;
 
@@ -870,17 +820,11 @@ function toggleFamilyOpen(event)  {
   }
 
   map.style.top = taxPage.offsetTop + 40 + "px";
-  // currentMap.querySelector(".colorKey").style.display = "none";
-  // *** disable save map button here ?
-  // currentMap.querySelector(".saveMapButton").style.display = "none";
-
-  // *** familyName and numSpecies set
 };
 
 function closeAllFamilies()  {
 
   map.style.top = taxPage.offsetTop + 40 + "px";
-  // currentMap.querySelector(".colorKey").style.display = "none";
 
   openFamilies = taxPage.querySelectorAll("#tree .familyOpen ul");
   len = openFamilies.length;

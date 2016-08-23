@@ -1,3 +1,4 @@
+"use strict";
 
 function prepareSVGstyles(evt)  {
 
@@ -52,7 +53,7 @@ function setSVGstyles(obj, fillColor, strokeColor)  {
 
     var paths = obj.querySelectorAll("path");
 
-    len = paths.length;
+    var len = paths.length;
 
     for (var i = 0; i < len; i++)  {
     // console.log("paths[i].getElementsByTagNameNS('title')[0].innerHTML = " + paths[i].getElementsByTagNameNS('http://www.w3.org/2000/svg', 'title')[0].innerHTML);
@@ -99,7 +100,7 @@ function newFillColor(obj, newColor) {
     if (newColor == baseColor) {
       obj.style.fill = "#757570";
     }
-    
+
     obj.style.fill = newColor;
   }
 
@@ -109,7 +110,7 @@ function newFillColor(obj, newColor) {
 
     var paths = obj.querySelectorAll("path");
 
-    len = paths.length;
+    var len = paths.length;
 // console.log("len = " + len);
     for (var i = 0; i < len; i++)  {
 
@@ -131,7 +132,7 @@ function selectedCountryFillColor(selectedCountry, color)  {
   var svgDoc = svg.contentDocument;
 
   var cc = svgDoc.getElementById(selectedCountry);
-  
+
   if (cc) {
     fillSAMmap();
     newFillColor(cc,color);
@@ -151,12 +152,12 @@ function selectedCountryStrokeColor(selectedCountry, color)  {
     svg.appendChild(cc);
   }
 
-// d3.selection.prototype.moveToFront = function() { return this.each(function() { this.parentNode.appendChild(this); }); }; 
+// d3.selection.prototype.moveToFront = function() { return this.each(function() { this.parentNode.appendChild(this); }); };
   // this.parentNode.appendChild(this);
 }
 
 function newStrokeColor(obj, newColor) {
-  
+
   if (obj.nodeName === "path") {
     // obj.setAttribute('fill', newColor);
     obj.style.stroke = newColor;
@@ -195,7 +196,7 @@ function highlightSAMmap(index, current) {
   for (var country in countries) {
 
     var cc = svgDoc.getElementById(country); // Aruba, Bonaire, Curacao, Trinidad and Falklands are not in the svg so cc = null
-      
+
     if (!cc) continue;
 
   // SAMgroup.each(function(i, children) {
@@ -210,7 +211,7 @@ function highlightSAMmap(index, current) {
     switch(cList[countries[country]])  {
 
       case "X(e)":
-    
+
         // this.removeClass(this.classes()[0]);
         // this.addClass('endemic');
         newFillColor(cc, endemicColor);
@@ -218,28 +219,28 @@ function highlightSAMmap(index, current) {
         break;
 
       case "X":
-    
+
         // this.removeClass(this.classes()[0]);
         // this.addClass('resident');
         newFillColor(cc, residentColor);
         break;
-      
+
       case "NB":
 
         // this.removeClass(this.classes()[0]);
         // this.addClass('nonBreeder');
         newFillColor(cc, nonBreederColor);
         break
-      
+
       case "V":
-    
+
         // this.removeClass(this.classes()[0]);
         // this.addClass('vagrant');
         newFillColor(cc, vagrantColor);
         break;
-    
+
       case "H":
-    
+
         // this.removeClass(this.classes()[0]);
         // this.addClass('hypothetical');
         newFillColor(cc, hypotheticalColor);
@@ -265,7 +266,7 @@ function highlightSAMmap(index, current) {
         // this.addClass('extinct');
         newFillColor(cc, extinctColor);
         break;
-      
+
       default:
         // this.removeClass(this.classes()[0]);
         newFillColor(cc, baseColor);
