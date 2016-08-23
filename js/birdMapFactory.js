@@ -39,7 +39,7 @@ function deleteMap(evt)  {
 	currentMap.querySelector(".saveMapButton").style.display = "block";
 
 	var len = mapsCollection.children.length;
-	if (len == 0)  {
+	if (len === 0)  {
 
 		mapsCollection.style.height = "0";
 		mapsCollection.style.margin = "0";
@@ -51,7 +51,7 @@ function saveCurrentMap()  {
 
 	var len = mapsCollection.children.length;
 
-	if (len == 5)  return;
+	if (len === 5)  return;
 
 	// clone node, remove ids so not duplicate
 	// reattach eventListeners
@@ -76,7 +76,7 @@ function saveCurrentMap()  {
 
     dupNode.removeAttribute("id");
 
-    if (len == 0)  {
+    if (len === 0)  {
 		mapsCollection.style.height = "260px";
 		mapsCollection.style.margin = "40px 0 30px 0";
 	}

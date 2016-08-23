@@ -159,7 +159,7 @@ function showCountryModal(evt)  {
   document.querySelector("#countryModal").classList.add("md-show");
   document.querySelector("#mainContent").classList.add("modal-shrink");
 
-  if (evt.target.id == "checklistCountryButton") countryModalOpener = "checklistCountryButton";
+  if (evt.target.id === "checklistCountryButton") countryModalOpener = "checklistCountryButton";
   else countryModalOpener = "taxonomyCountryButton";
 }
 
@@ -222,7 +222,7 @@ function toggleSampleTableLineNumbers() {
 // decide which function to call based on which countryButton opened the country menu
 function choseCountry(evt)  {
 
-  if (countryModalOpener == "checklistCountryButton") choseChecklistCountry(evt);
+  if (countryModalOpener === "checklistCountryButton") choseChecklistCountry(evt);
   else loadCountryTaxonomy(evt);
 }
 
@@ -239,19 +239,19 @@ function choseChecklistCountry(evt)  {
     currentChecklistCountryElement.classList.remove("bothHighlights");
   }
 
-	if (selectedCountry == "South America")  {
+	if (selectedCountry === "South America")  {
 		currentChecklistCountry = "SouthAmerica";
 	}
-	else if (selectedCountry == "French Guiana")  {
+	else if (selectedCountry === "French Guiana")  {
 		currentChecklistCountry = "FrenchGuiana";
 	}
-	else if (selectedCountry == "Malvinas")  {
+	else if (selectedCountry === "Malvinas")  {
 		currentChecklistCountry = "Falklands";
 	}
-  else if (selectedCountry == "Malvinas")  {
+  else if (selectedCountry === "Malvinas")  {
     currentChecklistCountry = "Falklands";
   }
-	else if (selectedCountry == "Curaçao")  {
+	else if (selectedCountry === "Curaçao")  {
 		currentChecklistCountry = "Curacao";
 	}
 	else {
@@ -325,18 +325,18 @@ function setNumDays(evt)  {
   $("#sampleTable td:nth-child(8)").removeClass("cds");
   $("#sampleTable th:nth-child(6)").removeClass("cds");
 
-  if (gNumDays == 6 || gNumDays == 7) {
+  if (gNumDays === 6 || gNumDays === 7) {
     $("#sampleTable td:nth-child(6)").addClass("cds");
     $("#sampleTable th:nth-child(4)").addClass("cds");
   }
-  else if (gNumDays == 10) {
+  else if (gNumDays === 10) {
     $("#sampleTable td:nth-child(13)").removeClass("cds");
     $("#sampleTable th:nth-child(11)").removeClass("cds");
 
     $("#sampleTable td:nth-child(8)").addClass("cds");
     $("#sampleTable th:nth-child(6)").addClass("cds");
   }
-  else if (gNumDays != 5) {
+  else if (gNumDays !== 5) {
     $("#sampleTable td:nth-child(8)").addClass("cds");
     $("#sampleTable th:nth-child(6)").addClass("cds");
 
@@ -344,7 +344,7 @@ function setNumDays(evt)  {
     $("#sampleTable th:nth-child(11)").addClass("cds");
   }
 
-  if (gNumDays != 0) {
+  if (gNumDays !== 0) {
     $("#sampleTable th").removeClass('flashDays');
     $("#sampleTable th:nth-child(" + (gNumDays+1) + ")").addClass('flashDays');
   }
@@ -374,8 +374,8 @@ function openChecklistPage()  {
     	return;
   	}
 
-	if (gNumDays == undefined)   gNumDays = 12;
-  if (gStartDate == undefined) gStartDate = 1;
+	if (gNumDays === undefined)   gNumDays = 12;
+  if (gStartDate === undefined) gStartDate = 1;
 
   vars = "?country="       + currentChecklistCountry;
   vars += "&num_days="     + gNumDays;

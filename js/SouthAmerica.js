@@ -4,7 +4,7 @@ function prepareSVGstyles(evt)  {
 
   var svg;
 
-  if (evt.target && evt.target.id == "SAMsvg") {
+  if (evt.target && evt.target.id === "SAMsvg") {
     svg = document.getElementById("SAMsvg");
   }
   else {
@@ -97,7 +97,7 @@ function newFillColor(obj, newColor) {
   // svgElement.style.setProperty("fill-opacity", "0.0", "")
 
   if (obj.nodeName === "path") {
-    if (newColor == baseColor) {
+    if (newColor === baseColor) {
       obj.style.fill = "#757570";
     }
 
@@ -116,7 +116,7 @@ function newFillColor(obj, newColor) {
 
       // paths[i].setAttribute('fill', newColor);
 
-      if (newColor == baseColor) {
+      if (newColor === baseColor) {
         paths[i].style.fill = "#757570";
       }
 
@@ -184,7 +184,7 @@ function highlightSAMmap(index, current) {
 
   var svg;
 
-  if (current == "currentMap") {
+  if (current === "currentMap") {
     svg = currentMap.querySelector("#SAMsvg");
   }
   else {
@@ -274,7 +274,7 @@ function highlightSAMmap(index, current) {
     }
   }
 
-  if ( (current == "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
+  if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
 
   // if ( (current == "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.opacity = "1";  }
 }
