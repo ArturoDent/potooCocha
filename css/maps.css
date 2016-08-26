@@ -1,118 +1,132 @@
 #mapsCollection  {
-  /*display: -webkit-flex;
+    /*display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;*/
+    /*justify-content: flex-end;*/
+    position  :  relative;
+    top  :  5px;
+    left  :  -20%;
 
-   /*justify-content: flex-end;*/
+    width  :  60vw;
+    height  :  0;
+    margin  :  0;
+    padding  :  0;
 
-  position: relative;
-  left: -20%;
-  top: 5px;
-  width: 60vw;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    text-align  :  center;
+    /*scroll-x: auto;*/
+    /*scroll-y: none;*/
 
-   /*scroll-x: auto;*/
-  /*scroll-y: none;*/
-  overflow-x: visible;
-  /*background: #eb5048;*/
-  background: transparent;
-  transition: all 1.5s;
+    overflow-x  :  visible;
+    /*background: #eb5048;*/
+
+    background  :  transparent;
+
+    transition  :  all 1.5s;
 }
 
 .smallBird  {
-  opacity: 0;
-  transform: scale(0.7);
-       -o-transform-origin:  0 50%;
-      -ms-transform-origin:  0 50%;
-     -moz-transform-origin:  0 50%;
-  -webkit-transform-origin:  0 50%;
-          transform-origin:  0 50%;
+    opacity  :  0;
+
+    transform  :  scale(0.7);
+    -webkit-transform-origin  :  0 50%;
+       -moz-transform-origin  :  0 50%;
+        -ms-transform-origin  :  0 50%;
+         -o-transform-origin  :  0 50%;
+            transform-origin  :  0 50%;
 
     /*-webkit-flex: 1 0.00001 auto;
     flex: 1 0.000001 auto;
     -webkit-transition: -webkit-flex 250ms linear;
     transition: flex 250ms linear*/
-  /*flex: 1;*/
-  /*transition: flex-grow 1000ms linear, all 1s*/
+    /*flex: 1;*/
+    /*transition: flex-grow 1000ms linear, all 1s*/
 
-  transition: all 1s;
+    /*transition: all 1s;*/
 }
 
 .thinify  {
-  display: inline-block;
-  position: relative;
-  top: 50px;
-  left: 0;
-  width: 200px;
-  /*height: 331px;*/
+    display  :  inline-block;
+    position  :  relative;
+    top  :  50px;
+    left  :  0;
 
-  margin-right: -30px;
-  margin-top: -50px;
-  margin-bottom: -50px;
+    width  :  200px;
+    margin-top  :  -50px;
+    /*height: 331px;*/
+    margin-right  :  -15px;
+    margin-bottom  :  -50px;
+
+    transition  :  all 1s;
 }
 
 .removed {
     /*Setting this to zero breaks the transition */
     /*flex-grow: 0.00001;*/
-
-    -webkit-flex: 0.00001 0 auto;
-    flex: 0.00001 0  auto;
+    -webkit-flex  :  0.00001 0 auto;
+            flex  :  0.00001 0  auto;
 }
 
 .birdName  {
-  position: absolute;
-  top: -11px;
-  /*left: -5%;*/
-  /*width:  100%;*/
-  /* width: inherit;*/
-  height: auto;
-  padding: 0;
+    position  :  absolute;
+    top  :  -11px;
+    /*left: -5%;*/
+    /*width:  100%;*/
+    /* width: inherit;*/
 
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+    height  :  auto;
+    padding  :  0;
 
-  border-radius: 3px;
-  /*background: #757570;*/
-  background: transparent;
-  /*background: black;*/
+    font-size  :  1.2rem;
+    color  :  white;
+    text-align  :  center;
+    text-shadow  :  rgba(0, 0, 0, 0.5) 1px 1px 1px;
+
+    border-radius  :  3px;
+    /*background: #757570;*/
+    background  :  transparent;
+    /*background: black;*/
 }
 
 #currentMap .birdName {
-  top: -20px;
-   /*width:  calc( 100% - 55px );*/
+    top  :  -20px;
+    /*width:  calc( 100% - 55px );*/
 }
 
-.birdName > span:last-Child   {  font-style: italic;  }
+.birdName > span:last-Child   {
+    font-style  :  italic;
+}
 
 .birdName.smallBirdText   {
-  transform: scale(1.3);
-  top: -22px;
-  left: 0;
-  height: auto;
-  padding: 5px 0;
-  line-height: 11px;
-  color: white;
+    top  :  -22px;
+    left  :  0;
+
+    width  :  calc(100% + 15px);
+    /*height  :  auto;*/
+
+    color  :  white;
+    /*padding: 5px 0;*/
+    line-height  :  15px;
+    text-shadow  :  rgba(0, 0, 0, 1) 1px 1px 1px;
+
+    transform  :  scale(1.2);
 }
 
 #currentMap {
-  position: absolute;
-  top: 50px;
-  left: 100%;
-  height: 455px;
-  width: 275px;
-  margin:  0 0 0 5px;
-  z-index: 10;
-  opacity: 0;
-  transition: all 1s;
+    opacity  :  0;
+    position  :  absolute;
+    top  :  50px;
+    left  :  100%;
+    z-index  :  10;
 
-  /*transform: scale(1.2);
+    width  :  275px;
+    height  :  455px;
+    margin  :  0 0 0 5px;
+
+    transition  :  all 1s;
+
+    /*transform: scale(1.2);
 
   -webkit-transition: all 850ms ease-in-out;
      -moz-transition: all 850ms ease-in-out;
@@ -121,79 +135,87 @@
 }
 
 #currentMap .deleteMapButton {
-  display: none;
+    display  :  none;
 }
 
 #mapsCollection .saveMapButton {
-  display: none;
-  opacity: 0;
+    display  :  none;
+    opacity  :  0;
 }
 
 .birdMapInstance  {
-  position: relative;
-  top: 10px;
-  background: transparent;
-  transition: all 1.5s;
+    position  :  relative;
+    top  :  10px;
+
+    background  :  transparent;
+
+    transition  :  all 1.5s;
 }
 
 #currentBirdMap {
-  background: transparent;
+    background  :  transparent;
 
-   /*-webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+    /*-webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
        -ms-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
            filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );*/
 }
 
 .mapButtons {
-  height: 30px;
-  width: 30px;
-  padding: 3px 0 0 0;
-  cursor: pointer;
+    width  :  30px;
+    height  :  30px;
+    padding  :  3px 0 0 0;
 
-  color: white;
-  text-align: center;
+    color  :  white;
+    text-align  :  center;
 
-  border: 1px solid rgba(255,255,255, 0.5);
-  border-radius:  50%;
-  transition: all 500ms;
+    border  :  1px solid rgba(255,255,255, 0.5);
+    border-radius  :  50%;
+
+    cursor  :  pointer;
+    transition  :  all 500ms;
 }
 
 .deleteMapButton  {
-  position: absolute;
-  top: 230px;
-  left: 0;
-  font-size: 20px;
-  background: #a32d00;
+    position  :  absolute;
+    top  :  230px;
+    left  :  20px;
+
+    font-size  :  20px;
+
+    background  :  #a32d00;
 }
 
 .saveMapButton  {
-  display: none;
-  position: absolute;
-  top:  240px;
-  left: 0;
+    display  :  none;
+    position  :  absolute;
+    top  :  240px;
+    left  :  0;
 
-  height: 36px;
-  width:  36px;
-  background: #303C3F;
+    width  :  36px;
+    height  :  36px;
+
+    background  :  #303c3f;
 }
 
-.deleteMapButton:hover, .deleteMapButton:focus {
-  background: #cc0000;
+.deleteMapButton:hover,
+.deleteMapButton:focus {
+    background  :  #c00;
 }
 
 .drawing  {
-  position: relative;
-  text-shadow: none;
+    position  :  relative;
 
-    -webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
-      -ms-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) )   drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
-          filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) )   drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+    text-shadow  :  none;
 
-  transition: all 1s;
+    -webkit-filter  :  drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+        -ms-filter  :  drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) )   drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+            filter  :  drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) )   drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
+
+    transition  :  all 1s;
 }
 
 .drawing.smallBirdDrawing {
-  height: 0;
+    height  :  0;
 }
 
 /*these do nothing when using <object> to embed a svg
@@ -224,34 +246,39 @@ g.baseColor, path.baseColor        { fill: #555;     }
 g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
 
 .colorKey {
-  opacity: 0.9;
-  position: absolute;
-  top: 260px;
-  left: 165px;
-  transition: opacity 350ms;
-  /*z-index: -1;*/
+    opacity  :  0.9;
+    position  :  absolute;
+    top  :  260px;
+    left  :  165px;
+
+    transition  :  opacity 350ms;
+    /*z-index: -1;*/
 }
 
 .colorKey.smallBirdKey  {
-  left: 175px;
-  top: 240px;
-  /*bottom-margin: -60px;*/
+    top  :  240px;
+    left  :  175px;
+    /*bottom-margin: -60px;*/
 }
 
-.colorKey ul { position: relative; }
+.colorKey ul {
+    position  :  relative;
+}
 
 .colorKey ul li {
-  position: relative;
-  width: 100px;
-  /*width: auto;*/
-  font-size: .9em;
-  /*font-weight: bold;*/
-  letter-spacing: 0.1em;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
-  list-style-type: none;
+    position  :  relative;
 
-  margin-top: 6px;
+    width  :  100px;
+    margin-top  :  6px;
+    /*width: auto;*/
+
+    font-size  :  0.9em;
+    text-align  :  center;
+    /*font-weight: bold;*/
+    letter-spacing  :  0.1em;
+    text-shadow  :  rgba(0, 0, 0, 0.5) 1px 1px 1px;
+
+    list-style-type  :  none;
 }
 
 /* var endemicColor        =  '#C23BC3';
@@ -262,45 +289,57 @@ g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
    var hypotheticalColor   =  '#33cc66';
    var introducedColor     =  '#101010';    */
 
-.colorKey ul li:nth-child(1) {  /* introduced  */
-  color: #101010;
-  text-shadow:  none;
+.colorKey ul li:nth-child(1) {
+    /* introduced  */
+    color  :  #101010;
+    text-shadow  :  none;
 }
 
-.colorKey ul li:nth-child(2) {  /* hypothetical  */
-  color: #33cc66;
+.colorKey ul li:nth-child(2) {
+    /* hypothetical  */
+    color  :  #3c6;
 }
 
-.colorKey ul li:nth-child(3) {  /* nonbreeder    */
-  color: #ff9900;
-  /*background-color: #ff9900;
+.colorKey ul li:nth-child(3) {
+    /* nonbreeder    */
+    color  :  #f90;
+    /*background-color: #ff9900;
   text-shadow:  none;*/
 }
 
-.colorKey ul li:nth-child(4) {  /* vagrant       */
-  color: #ffff00;
+.colorKey ul li:nth-child(4) {
+    /* vagrant       */
+    color  :  #ff0;
 }
 
-.colorKey ul li:nth-child(5) {  /* extinct       */
-  color       :  #ddd;
+.colorKey ul li:nth-child(5) {
+    /* extinct       */
+    color  :  #ddd;
 }
 
-.colorKey ul li:nth-child(6) {  /* resident      */
-  padding: 0 4px 2px 4px;
-  color: #3030cc;
-  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
-  background: #aaa;
+.colorKey ul li:nth-child(6) {
+    /* resident      */
+    padding  :  0 4px 2px 4px;
+
+    color  :  #3030cc;
+    text-shadow  :  rgba(0, 0, 0, 0.3) 1px 1px 1px;
+
+    background  :  #aaa;
 }
 
-.colorKey ul li:nth-child(7) {  /* endemic       */
-  /*position    :  absolute;*/
-  /*top:          0px;*/
-  top: 3px;
-  left :         -100px;
-  color :        white;
-  padding:       0 0 2px 101px;
-  width   :     200px;
-  background-color: #C23BC3;
+.colorKey ul li:nth-child(7) {
+    /* endemic       */
+    /*position    :  absolute;*/
+    /*top:          0px;*/
+    top  :  3px;
+    left  :  -100px;
+
+    width  :  200px;
+    padding  :  0 0 2px 101px;
+
+    color  :  white;
+
+    background-color  :  #c23bc3;
 }
 
 /*a[title]:hover:after {

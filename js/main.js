@@ -42,15 +42,19 @@ var taxonomyArticle;
 $(function () {
 
   // smallBanner is header[0]
-  titleBanner = document.getElementsByTagName("header")[1];
+  // titleBanner = document.getElementsByTagName("header")[1];
+  titleBanner = document.getElementById("bigBanner");
+
   footer = document.getElementsByTagName("footer")[0];
 
   map   =  document.getElementById("currentMap");
   taxonomyArticle = document.getElementById("taxonomyArticle");
 
   setFooterBannerDimensions();
-  window.onresize = setFooterBannerDimensions;
-  window.onresize = initCurrentMap;
+  // window.onresize = setFooterBannerDimensions;
+  // window.onresize = initCurrentMap;
+
+  window.addEventListener('resize', onResizeWindow);
 
   countryModalOverlay                      =  document.querySelector(".md-overlay");
   countryModalOverlay.addEventListener        ("click", closeCountryModal);
@@ -103,9 +107,14 @@ $(function () {
 
 //   *******************  end of  $(document).ready(function() ******************************************
 
+function onResizeWindow(evt) {
+  setFooterBannerDimensions();
+  initCurrentMap();
+}
+
 function initCurrentMap() {
 
-    prepareSVGstyles("SAMsvg");
+  prepareSVGstyles("SAMsvg");
 
     var inner = document.documentElement.clientWidth;
     var bodyRightMargin = document.body.getBoundingClientRect().right;
@@ -128,9 +137,12 @@ function initCurrentMap() {
 
 function setFooterBannerDimensions()  {
 
-  console.log("document.documentElement.clientWidth = " + document.documentElement.clientWidth);
+  // console.log("document.documentElement.clientWidth = " + document.documentElement.clientWidth);
 
+  // var reducedBodyLeftMargin;
   var bodyLeftMargin = document.body.getBoundingClientRect().left;
+  var reducedBodyLeftMargin = bodyLeftMargin;
+  // console.log("bodyLeftMargin = " + bodyLeftMargin);
 
   if (document.documentElement.clientWidth <= 1024) {
     document.getElementsByClassName('articles')[0].style.left = -(0.8 * bodyLeftMargin) + 'px';
@@ -138,9 +150,10 @@ function setFooterBannerDimensions()  {
   }
   else {
     document.getElementsByClassName('articles')[0].style.left = -(0.7 * bodyLeftMargin) + 'px';
+    reducedBodyLeftMargin = 0.7 * bodyLeftMargin;
   }
 
-  var left = 0.87 * bodyLeftMargin;
+  // var left = 0.87 * bodyLeftMargin;
 
   var rightFooterMargin = 0.35 * bodyLeftMargin;
 
@@ -149,8 +162,9 @@ function setFooterBannerDimensions()  {
   footer.style.left  =  -bodyLeftMargin + 'px';
   footer.style.width =  inner - rightFooterMargin + 'px';
 
-  titleBanner.style.left  = -bodyLeftMargin + 'px';
-  titleBanner.style.width = (0.4 * bodyLeftMargin) + 'px';
+  titleBanner.style.left = -bodyLeftMargin + 'px';
+  titleBanner.style.width = (0.4 * reducedBodyLeftMargin) + 'px';
+
   titleBanner.style.lineHeight = parseInt(titleBanner.style.width) - 10 + "px";
 }
 

@@ -1,99 +1,113 @@
 .tooltip  {
-      height: 1.2em;
-      opacity: 0;
+    opacity  :  0;
 
-      font-size: 0.7em;
-      color: #eee;
-      line-height: 1.1em;
-      text-align: center;
+    height  :  1.2em;
 
-      background: #fff;
-      border-radius: 0 3.2px 3.2px 0;
-      box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-      transition: all 1s ease;
+    font-size  :  0.7em;
+    color  :  #eee;
+    line-height  :  1.1em;
+    text-align  :  center;
+
+    border-radius  :  0 3.2px 3.2px 0;
+    background  :  #fff;
+    box-shadow  :  2px 2px 2px rgba(0,0,0,0.2);
+
+    transition  :  all 1s ease;
 }
 
 .taxInstructionsButton .tooltip {
-      position: absolute;
-      top:  5px;
-      left:  40px;
-      width: 22em;
-      opacity: 1;
-      background: #333;
+    opacity  :  1;
+    position  :  absolute;
+    top  :  5px;
+    left  :  40px;
 
-      transform:  rotate(-6deg);
-       -o-transform-origin:  top left;
-      -ms-transform-origin:  top left;
-     -moz-transform-origin:  top left;
-  -webkit-transform-origin:  top left;
-          transform-origin:  top left;
+    width  :  22em;
+
+    background  :  #333;
+
+    transform  :  rotate(-6deg);
+    -webkit-transform-origin  :  top left;
+       -moz-transform-origin  :  top left;
+        -ms-transform-origin  :  top left;
+         -o-transform-origin  :  top left;
+            transform-origin  :  top left;
 }
 
 .deleteMapButton .tooltip {
-      position: absolute;
-      top:  -40px;
-      left:  -80px;
-      width: 12em;
+    position  :  absolute;
+    top  :  -40px;
+    left  :  -80px;
 
-      background: #a32d00;
+    width  :  12em;
 
-      transform:  rotate(0);
-       -o-transform-origin:  top right;
-      -ms-transform-origin:  top right;
-     -moz-transform-origin:  top right;
-  -webkit-transform-origin:  top right;
-          transform-origin:  top right;
+    background  :  #a32d00;
+
+    transform  :  rotate(0);
+    -webkit-transform-origin  :  top right;
+       -moz-transform-origin  :  top right;
+        -ms-transform-origin  :  top right;
+         -o-transform-origin  :  top right;
+            transform-origin  :  top right;
 }
 
 .saveMapButton .tooltip {
-      position: absolute;
-      top:  -60px;
-      left:  -80px;
-      width: 12em;
-      transform:  rotate(0);
-       -o-transform-origin:  top right;
-      -ms-transform-origin:  top right;
-     -moz-transform-origin:  top right;
-  -webkit-transform-origin:  top right;
-          transform-origin:  top right;
+    position  :  absolute;
+    top  :  -60px;
+    left  :  -80px;
+
+    width  :  12em;
+
+    transform  :  rotate(0);
+    -webkit-transform-origin  :  top right;
+       -moz-transform-origin  :  top right;
+        -ms-transform-origin  :  top right;
+         -o-transform-origin  :  top right;
+            transform-origin  :  top right;
 }
 
 .tooltip:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-width: 0.6em;
-      border-style: solid;
-      border-color: transparent #333 transparent transparent;
-      top: 0px;
-      left: -1.05em;
+    content  :  '';
+    position  :  absolute;
+    top  :  0;
+    left  :  -1.05em;
+
+    width  :  0;
+    height  :  0;
+
+    border-width  :  0.6em;
+    border-style  :  solid;
+    border-color  :  transparent #333 transparent transparent;
 }
 
 .saveMapButton .tooltip:after {
-      top: 0;
-      left: 100%;
-      border-color: transparent transparent transparent #404F53;
+    top  :  0;
+    left  :  100%;
+
+    border-color  :  transparent transparent transparent #404f53;
 }
 
 .deleteMapButton .tooltip:after {
-      top: 0;
-      left: 100%;
-      border-color: transparent transparent transparent #a32d00;
+    top  :  0;
+    left  :  100%;
+
+    border-color  :  transparent transparent transparent #a32d00;
 }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip {
-      left:  30px;
-      opacity: 1;
+    opacity  :  1;
+    left  :  30px;
 }
 
 .saveMapButton.hasTooltip:hover .tooltip {
-      transform:  rotate(-10deg);
-      background: #404F53;
-      opacity: 1;
+    opacity  :  1;
+
+    background  :  #404f53;
+
+    transform  :  rotate(-10deg);
 }
 
 .deleteMapButton.hasTooltip:hover .tooltip {
-      transform:  rotate(-10deg);
-      opacity: 1;
+    opacity  :  1;
+
+    transform  :  rotate(-10deg);
 }
