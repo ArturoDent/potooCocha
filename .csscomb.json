@@ -36,20 +36,20 @@
             "opacity",
             "visibility",
             "flex-direction",
+            "flex-wrap",
+            "flex-grow",
             "flex-order",
             "flex-pack",
             "flex-align",
+            "justify-content",
+            "align-self"
+        ],
+        [
             "position",
             "top",
             "left",
             "right",
             "bottom",
-            "z-index"
-        ],
-        [
-            "-webkit-box-sizing",
-            "-moz-box-sizing",
-            "box-sizing",
             "width",
             "min-width",
             "max-width",
@@ -65,7 +65,11 @@
             "padding-top",
             "padding-right",
             "padding-bottom",
-            "padding-left"
+            "padding-left",
+            "-webkit-box-sizing",
+            "-moz-box-sizing",
+            "box-sizing",
+            "z-index"
         ],
         [
             "font",
@@ -121,6 +125,32 @@
             "text-shadow"
         ],
         [
+            "viewbox",
+            "cx",
+            "cy",
+            "dx",
+            "dy",
+            "fx",
+            "fy",
+            "radius",
+            "r",
+            "rx",
+            "ry",
+            "fill",
+            "fill-opacity",
+            "stroke",
+            "stroke-width",
+            "stroke-opacity",
+            "stroke-dasharray",
+            "stroke-dashoffset",
+            "clip",
+            "clip-path",
+            "clip-rule",
+            "mask",
+            "stop-color",
+            "..."
+        ],
+        [
             "float",
             "clear",
             "overflow",
@@ -143,7 +173,6 @@
             "list-style-type",
             "list-style-image"
         ],
-        ["..."],
         [
             "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",
             "-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha",

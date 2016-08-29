@@ -1,6 +1,8 @@
 {
     "env": {
         "browser": true,
+        "node": true,
+        "jquery": true,
         "es6": true
     },
     "extends": "eslint:recommended",
@@ -8,23 +10,39 @@
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
         "linebreak-style": [
             "error",
             "windows"
-        ],
-        "quotes": [
-            "error",
-            "double"
         ],
         "semi": [
             "error",
             "always"
         ],
+        "spaced-comment": ["error", "always", {
+            "line": {
+                 "markers": ["/"],
+                "exceptions": ["-", "+"]
+            },
+            "block": {
+                "markers": ["!"],
+                "exceptions": ["*"],
+                "balanced": true
+            }
+        }],
     "no-console": 0,
-    "eqeqeq": 2
+    "no-undef": "error",
+    "no-unused-vars": "error",
+    "no-shadow": ["error", { "allow": ["i", "j"] }],
+    "block-spacing": ["error", "always"],
+    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
+    "func-call-spacing": ["error", "never"],
+    "indent": ["error", 2],
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "no-trailing-spaces": ["error", { "skipBlankLines": false }],
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "eqeqeq": 2,
+    "no-cond-assign": ["error", "always"],
+    "default-case": "error",
+    "no-fallthrough": ["error", { "commentPattern": "break[\\s\\w]*omitted" }]
     }
 }

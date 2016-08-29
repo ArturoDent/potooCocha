@@ -22,10 +22,10 @@ var numSpeciesList = { "Argentina":999, "Aruba":216, "Bolivia":1381, "Brazil":17
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
-var numFamiliesList = { "Argentina":87, "Aruba":48, "Bolivia":78, "Brazil":91, "Chile":63,
-                  "Colombia":90, "Curaçao":48, "Ecuador":91, "French Guiana":81,
-                  "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":69,
-                  "Uruguay":71, "Venezuela":87, "Bonaire":45, "Falklands":46, "Malvinas":46, "South America": 102};
+var numFamiliesList = { "Argentina":87, "Aruba":50, "Bolivia":78, "Brazil":91, "Chile":65,
+                  "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":81,
+                  "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
+                  "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
 // South America : 102 families not including 2 incertae "families", 3371 total spp.
 //                 which includes one hypothetical (in one country only) Blasck Turnstone
@@ -36,9 +36,9 @@ var currentTaxonomyCountryElement;
 var resultsFrag = "";
 var taxFragHTML = "";
 
-var pageScrollTop;
+// var pageScrollTop;
 var taxPage;
-var searchSpecials;
+// var searchSpecials;
 var searchResults;
 
 var searchInput;
@@ -53,18 +53,9 @@ var searchSlideUpWrapper_height;
 var searchInstructionsInfo;
 var searchInstructionsOpen = true;
 
-var endemicColor         =  '#C23BC3';
-var extinctColor         =  '#ddd';
-var residentColor        =  '#3030cc';
-var nonBreederColor      =  '#ff9900';
-var vagrantColor         =  '#ffff00';
-var hypotheticalColor    =  '#33cc66';
-var introducedColor      =  '#111';
+/* global    selectedCountryFillColor currentMap selectedFillColor  */
+/* global  */
 
-var baseColor            =  '#444';
-var baseStrokeColor      =  '#6f8a91';
-var selectedFillColor    =  '#eee';
-var selectedStrokeColor  =  '#eee';
 
 $(function () {
 
@@ -76,14 +67,14 @@ $(function () {
   searchInstructionsInfo             =  document.querySelector(".taxInstructionsButton");
   // checklistInstructionsInfo          =  document.querySelector(".checklistSlider");
 
-	searchInput                        =  document.getElementById("searchInput");
-  searchSpecials                     =  document.getElementById("searchSpecials");
+  searchInput                        =  document.getElementById("searchInput");
+  // searchSpecials                     =  document.getElementById("searchSpecials");
 
-  $("#searchInput").on                 ("input change click textInput focusin", getQuery);
-  $("#searchInput").one                ("input change click textInput keyup focusin", clearSearchInput);
-  $("#searchSpecials").on              ("click", getSearchSpecialsQuery);
+  $("#searchInput").on("input change click textInput focusin", getQuery);
+  $("#searchInput").one("input change click textInput keyup focusin", clearSearchInput);
+  $("#searchSpecials").on("click", getSearchSpecialsQuery);
 
-  searchInstructionsInfo.addEventListener ("click", showSearchInstructions);
+  searchInstructionsInfo.addEventListener("click", showSearchInstructions);
 
   createTaxPageHTML();
 });
@@ -132,39 +123,42 @@ function createTaxPageHTML ()  {
   resultsFrag += "  <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>";
   resultsFrag += "</div>";
 
-  taxFragHTML = "<article id='taxTreeArticle'>"
+  taxFragHTML = "<article id='taxTreeArticle'>";
   taxFragHTML += "  <div id='treeIntroText'>&nbsp; numFamilies Families, numSpecies species</div>";
   taxFragHTML += "  <div id='taxPage' class='panel' contenteditable='false'></div>";
   taxFragHTML += "  <div id='taxPageButtons'>Close all families</div>";
   taxFragHTML += "</article>";
 }
 
+/* global  taxonomyArticle mapsCollection taxonomyCountryButton */
+
+
 function loadCountryTaxonomy(evt)  {
 
-  pageScrollTop = window.pageYOffset;
+  // pageScrollTop = window.pageYOffset;
 
-  closeCountryModal();
+  window.closeCountryModal();
 
   if (!document.getElementById("taxPage")) {
 
     // will lose eventListeners with innerHTML method, not true with insertAdjacentHTML
 
-    taxonomyArticle.insertAdjacentHTML('beforeend', resultsFrag);
-    mapsCollection.insertAdjacentHTML('afterend',  taxFragHTML);
+    taxonomyArticle.insertAdjacentHTML("beforeend", resultsFrag);
+    mapsCollection.insertAdjacentHTML("afterend",  taxFragHTML);
 
     document.querySelector("#searchForm").style.borderBottom = "1px solid black";
 
     taxPage        =  document.getElementById("taxPage");
     searchResults  =  document.getElementById("searchResults");
 
-    taxPage.addEventListener       ("click", toggleFamilyOpen);
-    searchResults.addEventListener ("click", gotoMatch);
+    taxPage.addEventListener("click", toggleFamilyOpen);
+    searchResults.addEventListener("click", gotoMatch);
 
 	 // show searchresults and taxPage panels first time a taxonomy country is selected
 
-		document.querySelector("#searchForm span").classList.remove("grayed");
+    document.querySelector("#searchForm span").classList.remove("grayed");
     document.querySelector("#searchSpecials").classList.remove("grayed");
-	}
+  }
 
   var taxCountry = (typeof evt === "string") ?  evt : evt.target.innerHTML;
 
@@ -227,17 +221,19 @@ function loadCountryTaxonomy(evt)  {
 
   // update #taxPage slimScroll here ***
 
-    var jqxhr = $.get("../data/occurrences.txt", function(data) {
+  // var jqxhr = $.get("../data/occurrences.txt", function (data) {
+  $.get("../data/occurrences.txt", function (data) {
 
-       loadIntoArray(data);})
+    loadIntoArray(data);
+  })
 
-      .fail(function() { console.log("loadIntoArray error"); })
-      .always(function() {  })
+    .fail(function () { console.log("loadIntoArray error"); })
+    .always(function () { });
 
-      function loadIntoArray(data)  {
+  function loadIntoArray(data)  {
 
-        birds = data.split("\n");
-      };
+    birds = data.split("\n");
+  }
 
   if (currentTaxonomyCountry === "South America" && taxCountry !== "South America")  {
     $("#searchSpecials span:nth-of-type(3)").removeClass("notAvailable");
@@ -249,15 +245,15 @@ function loadCountryTaxonomy(evt)  {
   if (!lastQuery)  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
-    var temp;
-    selectedCountryFillColor(temp = taxCountry.replace(" ", ""), selectedFillColor);
+    // var temp;
+    selectedCountryFillColor(taxCountry.replace(" ", ""), selectedFillColor);
   }
 
   else if (lastQuery === "endemic" || lastQuery === "hypothetical"  || lastQuery === "vagrant" ||
       lastQuery === "incertae" || lastQuery === "extinct")  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
-    selectedCountryFillColor(temp = taxCountry.replace(" ", ""), selectedFillColor);
+    selectedCountryFillColor(taxCountry.replace(" ", ""), selectedFillColor);
   }
 
   currentTaxonomyCountry = taxCountry;
@@ -277,14 +273,14 @@ function loadCountryTaxonomy(evt)  {
 
   // scroll taxPage to top
   $("#taxPage").animate({scrollTop : 0}, 2000);
-};
+}
 
 function updatetaxArticleQueries()  {
 
-	species = $("#tree li");
-	families = $("#tree .family, #tree .familyOpen");
+  species = $("#tree li");
+  families = $("#tree .family, #tree .familyOpen");
 
-	numFamilies = families.length;
+  numFamilies = families.length;
 
   // if user has expanded or shrunk the #taxPage from default 500px preserve user choice
   // var currentTaxPageHeight = (taxPage.clientHeight > 100) ? taxPage.clientHeight + "px" : "500px";
@@ -292,16 +288,16 @@ function updatetaxArticleQueries()  {
 
 	// this restricts opening and closing to only the family names
 	// $("#taxPage .fcommon, #taxPage .fscientific").on("click", toggleFamilyOpen);
-	if (lastQuery) searchTree(lastQuery);
+  if (lastQuery) searchTree(lastQuery);
 
   else  {
-      map.style.top = searchResults.offsetTop + searchResults.offsetParent.offsetTop - 20 + "px";
+    map.style.top = searchResults.offsetTop + searchResults.offsetParent.offsetTop - 20 + "px";
   }
 
   document.querySelector("#taxPageButtons").addEventListener("click", closeAllFamilies);
-};
+}
 
-function clearSearchInput(event)  {
+function clearSearchInput()  {
   searchInput.placeholder = "";
 }
 
@@ -328,16 +324,16 @@ function getQuery(event)  {
     return;
   }
 
-	var e = event || window.event;
+  var e = event || window.event;
   // necessary ? most to end ??
-	var target = e.target || e.srcElement;
-	var text = null;
+  // var target = e.target || e.srcElement;
+  // var text = "";
 
-	if (e.type === "textinput" || e.type === "textInput") text = e.data;
-	else {
-	  var code = e.charCode || e.keyCode;
-	  text = String.fromCharCode(code);
-	}
+  // if (e.type === "textinput" || e.type === "textInput") text = e.data;
+  // else {
+  //   var code = e.charCode || e.keyCode;
+  //   text = String.fromCharCode(code);
+  // }
 
 // compare searchInput.value to lastQuery,
 // is searchInput.value length greater than lastQuery?
@@ -357,14 +353,14 @@ function getQuery(event)  {
   // }
 
   // all the same ?
-	if (e.type === "textinput")   {
-		searchTree(searchInput.value);
-		e.preventDefault();
-		return false;
-	}
-	else if (e.type === "input")             {  searchTree(searchInput.value);  }
+  if (e.type === "textinput")   {
+    searchTree(searchInput.value);
+    e.preventDefault();
+    return false;
+  }
+  else if (e.type === "input")             {  searchTree(searchInput.value);  }
 	else if (e.type === "onpropertychange")  {  searchTree(searchInput.value);  }
-};
+}
 
 function getSearchSpecialsQuery(evt)  {
 
@@ -388,7 +384,7 @@ function searchTree(query2) {
 
   var numFound = 0;
 
-  var observer = new MutationObserver(function(mutations) {
+  var observer = new MutationObserver(function() {
 
     searchResults.style.height = "auto";
 
@@ -449,22 +445,22 @@ function searchTree(query2) {
 
     var special;
 
-    if (query2 === "endemic") special = $('#tree .endemic');
-    else if (query2 === "extinct") special = $('#tree .extinct');
-    else if (query2 === "hypothetical") special = $('#tree .hy');
-    else if (query2 === "vagrant") special = $('#tree .va');
-    else if (query2 === "incertae") special = $('#tree .ince');
+    if (query2 === "endemic") special = $("#tree .endemic");
+    else if (query2 === "extinct") special = $("#tree .extinct");
+    else if (query2 === "hypothetical") special = $("#tree .hy");
+    else if (query2 === "vagrant") special = $("#tree .va");
+    else if (query2 === "incertae") special = $("#tree .ince");
 
 
-    for (var i = 0; i < special.length ; i++ )  {
+    for (var k = 0; k < special.length ; k++ )  {
 
       // check if family has already been cloned
-      if (special[i].parentNode.parentNode.parentNode.cloned !== true) {
+      if (special[k].parentNode.parentNode.parentNode.cloned !== true) {
 
-        matches[j++] = special[i].parentNode.parentNode.parentNode.cloneNode(true);
-        special[i].parentNode.parentNode.parentNode.cloned = true;
+        matches[j++] = special[k].parentNode.parentNode.parentNode.cloneNode(true);
+        special[k].parentNode.parentNode.parentNode.cloned = true;
       }
-      matches[j++] = special[i].parentNode.cloneNode(true);
+      matches[j++] = special[k].parentNode.cloneNode(true);
     }
   }
       // not endemic, extinct, hypothetical, vagrant or incertae
@@ -511,14 +507,13 @@ function searchTree(query2) {
 
       // nodes must be cloned otherwise they are removed from the tree !!
 
-    for (var i = 0; i < sL ; i++ )  {
+    for (i = 0; i < sL ; i++ )  {
 
       entry = species[i];
       eClass = entry.className;
 
-      if (entry.firstChild.textContent.match(pattern) || entry.childNodes[1].textContent.match(pattern))
+      if (entry.firstChild.textContent.match(pattern) || entry.childNodes[1].textContent.match(pattern)) {
 
-      {
         if (eClass === "family" || eClass === "familyOpen")
           entry.cloned = true;
 
@@ -543,7 +538,7 @@ function searchTree(query2) {
     return;
   }
 
-  var k, z;
+  var z;
   var matchClass;
     // if list isn't set to "", it defaults to undefined
   var list = "";
@@ -574,7 +569,7 @@ function searchTree(query2) {
       }
     }  // end of family/familyOpen
 
-    else if (matchClass === "fsc")  { }
+    else if (matchClass === "fsc")  {  /* do nothing */ }
 
     else {
       matches[k].style.textShadow = "none";  // *** ?
@@ -597,7 +592,7 @@ function searchTree(query2) {
   $("#searchTerm").html(currentTaxonomyCountry +  " : '" + lastQuery + "'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]");
 
   return;
-};
+}
 
 // <ul id="searchResults"></ul>
 function gotoMatch(e)  {
@@ -636,7 +631,7 @@ function gotoMatch(e)  {
   }
 
   else if (clickedClass === "bird")  {
-    clicked = clicked;
+    clicked = ev.target;
   }
   else {
     clicked = clickedPar;
@@ -686,11 +681,11 @@ function gotoMatch(e)  {
     else if ((entry.firstChild.textContent + entry.firstChild.nextSibling.textContent) ===  eText ||
               eText  === (entry.firstChild.textContent + " ")  ) {
 
-      var family = entry.children[2];
+      var family2 = entry.children[2];
 
-      if (family.classList.contains("closed")) {
-        family.classList.add("open");
-        family.parentNode.className = "familyOpen";
+      if (family2.classList.contains("closed")) {
+        family2.classList.add("open");
+        family2.parentNode.className = "familyOpen";
       }
 
       taxPage.scrollTop = entry.offsetTop - 10;
@@ -698,7 +693,7 @@ function gotoMatch(e)  {
       //   // put family at top of taxPage
       //   // entry.scrollIntoView(true);  screws up IE
 
-      lastSpecies = family;
+      lastSpecies = family2;
 
       if (lastResultsSpecies)  {
         $(lastResultsSpecies).toggleClass("active");
@@ -725,21 +720,22 @@ function addBirdNameToMap(name)  {
   }
 }
 
+/* global highlightSAMmap */
+
 function toggleFamilyOpen(event)  {
 
-	event.stopPropagation();
+  event.stopPropagation();
 
   // taxPage is not open yet
   if (!numFamilies) return;
 
   document.querySelector(".colorKey").style.opacity = "0.9";
 
-  var familyTarget;
 
   event = event || window.event;  // window.event for IE8-
   var familyTarget;
-  var species      =  event.target;
-  var speciesClass = species.className;
+  var thisSpecies      =  event.target;
+  var speciesClass = thisSpecies.className;
 
   // want species to = <ul class="birds"> to toggle display
   if (speciesClass === "family" || speciesClass === "familyOpen") {
@@ -768,11 +764,11 @@ function toggleFamilyOpen(event)  {
 
         //  will the entire family fit in taxPage ?
 
-        if (familyTarget.parentNode.clientHeight > taxPageHeight)
-          taxPage.scrollTop = familyTarget.parentNode.offsetTop;
+      if (familyTarget.parentNode.clientHeight > taxPageHeight)
+        taxPage.scrollTop = familyTarget.parentNode.offsetTop;
 
-        else
-          taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
+      else
+        taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
     }
     //  show family and numSpecies in that family
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "  &nbsp; : &nbsp; " + familyTarget.parentNode.children[1].textContent + " has " + familyTarget.children.length + " species";
@@ -783,7 +779,7 @@ function toggleFamilyOpen(event)  {
     familyTarget.classList.remove("open");
     familyTarget.parentNode.className = "family";
 
-    var reset = familyTarget.parentNode.querySelectorAll('.active');
+    var reset = familyTarget.parentNode.querySelectorAll(".active");
 
     if (reset.length) {
       reset[0].className = "";
@@ -798,30 +794,30 @@ function toggleFamilyOpen(event)  {
       //    <ul class="span">
       //    <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
 
-    if (species.parentNode.classList.contains("birds")) {
-      species = species.firstChild;
+    if (thisSpecies.parentNode.classList.contains("birds")) {
+      thisSpecies = thisSpecies.firstChild;
     }
 
-    species.parentNode.className = "active";
+    thisSpecies.parentNode.className = "active";
 
     if (lastSpecies && lastSpecies.classList.contains("active")) {
       lastSpecies.classList.remove("active");
     }
 
-    lastSpecies = species.parentNode;
+    lastSpecies = thisSpecies.parentNode;
 
     if (lastResultsSpecies)  $(lastResultsSpecies).toggleClass("active");
     lastResultsSpecies = null;
 
-    addBirdNameToMap(species.parentNode);
-    lastIndex = Number(species.parentNode.getAttribute("data-i"));
+    addBirdNameToMap(thisSpecies.parentNode);
+    lastIndex = Number(thisSpecies.parentNode.getAttribute("data-i"));
     highlightSAMmap(lastIndex, "currentMap");
 
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species *";
   }
 
   map.style.top = taxPage.offsetTop + 40 + "px";
-};
+}
 
 function closeAllFamilies()  {
 

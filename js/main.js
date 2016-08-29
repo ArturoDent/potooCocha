@@ -5,7 +5,6 @@ var sciNames;
 var italics;
 var lineNumbers;
 var showEndemics;
-var sampleTable;
 
 var titleBanner;
 var footer;
@@ -17,13 +16,8 @@ var countryModalOverlay;
 var countryModalOpener;
 
   // these are global vars that the opened checklist window will read
-var gNumDays;
-var gStartDate;
-var gShowEndemics;
-var gLineNumbers;
-var gLeftCheck;
-var gNoSciNames;
-var gItalics;
+var gNumDays;  /* exported gNumDays */
+var gStartDate;  /* exported gStartDate */
 var previousNumDaysClass;
 
 var checklistArticle;
@@ -36,6 +30,7 @@ var taxonomyCountryButton;
 var map;
 var taxonomyArticle;
 
+/* global  initMapFactory prepareSVGstyles loadCountryTaxonomy selectedCountryFillColor currentMap selectedFillColor */
 
 // svg4everybody();
 
@@ -54,50 +49,49 @@ $(function () {
   // window.onresize = setFooterBannerDimensions;
   // window.onresize = initCurrentMap;
 
-  window.addEventListener('resize', onResizeWindow);
+  window.addEventListener("resize", onResizeWindow);
 
   countryModalOverlay                      =  document.querySelector(".md-overlay");
-  countryModalOverlay.addEventListener        ("click", closeCountryModal);
+  countryModalOverlay.addEventListener("click", closeCountryModal);
 
-  document.getElementById("countryModal").addEventListener ("click", closeCountryModal);
+  document.getElementById("countryModal").addEventListener("click", closeCountryModal);
 
   checklistArticle                         =  document.getElementById("checklistArticle");
   checklistCountryButton                   =  document.getElementById("checklistCountryButton");
   taxonomyCountryButton                    =  document.getElementById("taxonomyCountryButton");
 
-	checklistCountryButton.addEventListener     ("click", showCountryModal);
-	taxonomyCountryButton.addEventListener      ("click", showCountryModal);
+  checklistCountryButton.addEventListener("click", showCountryModal);
+  taxonomyCountryButton.addEventListener("click", showCountryModal);
 
   numDaysButton                       =  document.getElementById("numDays");
-  numDaysButton.addEventListener         ("click", setNumDays);
+  numDaysButton.addEventListener("click", setNumDays);
 
   numDaysButton.children.item(11).classList.add("highlight");
   gNumDays = 10;
-   $("#sampleTable").addClass("numDays" + String(gNumDays));
+  $("#sampleTable").addClass("numDays" + String(gNumDays));
   previousNumDaysClass = "numDays" + String(gNumDays);
 
   pdfButton                           =  document.getElementById("pdfButton");
-	pdfButton.addEventListener             ("click", openChecklistPage);
+  pdfButton.addEventListener("click", openChecklistPage);
 
   csvButton                           =  document.getElementById("csvButton");
-  csvButton.addEventListener             ("click", getCSVText);
+  csvButton.addEventListener("click", getCSVText);
 
-	lineNumbers  =  document.getElementById("lineNumbers");
-	leftCheck    =  document.getElementById("leftCheck");
-	showEndemics =  document.getElementById("showEndemics");
-	sciNames     =  document.getElementById("sciNames");
-	italics      =  document.getElementById("italics");
+  lineNumbers  =  document.getElementById("lineNumbers");
+  leftCheck    =  document.getElementById("leftCheck");
+  showEndemics =  document.getElementById("showEndemics");
+  sciNames     =  document.getElementById("sciNames");
+  italics      =  document.getElementById("italics");
 
-	sampleTable  =  document.getElementById("sampleTable");
   previousNumDaysClass = "numDays10";
 
-	$("#lineNumbers").on      ("click", toggleSampleTableLineNumbers);
-	$("#leftCheck").on        ("click", toggleSampleTableLeftChecks);
-	$("#showEndemics").on     ("click", toggleSampleTableShowEndemics);
-	$("#sciNames").on         ("click", toggleSampleTableSciNames);
-	$("#italics").on          ("click", toggleSampleTableItalics);
+  $("#lineNumbers").on("click", toggleSampleTableLineNumbers);
+  $("#leftCheck").on("click", toggleSampleTableLeftChecks);
+  $("#showEndemics").on("click", toggleSampleTableShowEndemics);
+  $("#sciNames").on("click", toggleSampleTableSciNames);
+  $("#italics").on("click", toggleSampleTableItalics);
 
-  $(".country-menu a").on ("click", choseCountry);
+  $(".country-menu a").on("click", choseCountry);
 
   $("#SAMsvg").on("SVGLoad", initCurrentMap);
   // map.querySelector('#SAMsvg').addEventListener('SVGLoad', initCurrentMap);
@@ -107,7 +101,7 @@ $(function () {
 
 //   *******************  end of  $(document).ready(function() ******************************************
 
-function onResizeWindow(evt) {
+function onResizeWindow() {
   setFooterBannerDimensions();
   initCurrentMap();
 }
@@ -116,23 +110,22 @@ function initCurrentMap() {
 
   prepareSVGstyles("SAMsvg");
 
-    var inner = document.documentElement.clientWidth;
-    var bodyRightMargin = document.body.getBoundingClientRect().right;
+  var inner = document.documentElement.clientWidth;
+  var bodyRightMargin = document.body.getBoundingClientRect().right;
 
-    var panelRight = taxonomyArticle.getBoundingClientRect().right;
-    var panelWidth = taxonomyArticle.getBoundingClientRect().width;
+  var panelWidth = taxonomyArticle.getBoundingClientRect().width;
 
-    var left = panelWidth + (inner - bodyRightMargin)/2 - 85;
+  var left = panelWidth + (inner - bodyRightMargin)/2 - 85;
 
-    if (document.documentElement.clientWidth > 1024) {
-      map.style.left = left + "px";
-    }
-    // else map.style.left = left + 20 + "px";
+  if (document.documentElement.clientWidth > 1024) {
+    map.style.left = left + "px";
+  }
+  // else map.style.left = left + 20 + "px";
 
-    else map.style.left = left + (0.25 * map.getBoundingClientRect().width) + "px";
+  else map.style.left = left + (0.25 * map.getBoundingClientRect().width) + "px";
 
 
-    map.style.opacity = "1";
+  map.style.opacity = "1";
 }
 
 function setFooterBannerDimensions()  {
@@ -145,11 +138,11 @@ function setFooterBannerDimensions()  {
   // console.log("bodyLeftMargin = " + bodyLeftMargin);
 
   if (document.documentElement.clientWidth <= 1024) {
-    document.getElementsByClassName('articles')[0].style.left = -(0.8 * bodyLeftMargin) + 'px';
+    document.getElementsByClassName("articles")[0].style.left = -(0.8 * bodyLeftMargin) + "px";
     return;
   }
   else {
-    document.getElementsByClassName('articles')[0].style.left = -(0.7 * bodyLeftMargin) + 'px';
+    document.getElementsByClassName("articles")[0].style.left = -(0.7 * bodyLeftMargin) + "px";
     reducedBodyLeftMargin = 0.7 * bodyLeftMargin;
   }
 
@@ -159,11 +152,11 @@ function setFooterBannerDimensions()  {
 
   var inner = document.documentElement.clientWidth;
 
-  footer.style.left  =  -bodyLeftMargin + 'px';
-  footer.style.width =  inner - rightFooterMargin + 'px';
+  footer.style.left  =  -bodyLeftMargin + "px";
+  footer.style.width =  inner - rightFooterMargin + "px";
 
-  titleBanner.style.left = -bodyLeftMargin + 'px';
-  titleBanner.style.width = (0.4 * reducedBodyLeftMargin) + 'px';
+  titleBanner.style.left = -bodyLeftMargin + "px";
+  titleBanner.style.width = (0.4 * reducedBodyLeftMargin) + "px";
 
   titleBanner.style.lineHeight = parseInt(titleBanner.style.width) - 10 + "px";
 }
@@ -177,47 +170,47 @@ function showCountryModal(evt)  {
   else countryModalOpener = "taxonomyCountryButton";
 }
 
-function closeCountryModal(evt)  {
+function closeCountryModal()  {
 
   document.querySelector("#countryModal").classList.remove("md-show");
   document.querySelector("#mainContent").classList.remove("modal-shrink");
 }
 
-function clearChecklistOptions()  {
+// function clearChecklistOptions()  {
 
-  $("#sampleTable td.endemical").removeClass("showEndemics");
-  showEndemics.checked = false;
+//   $("#sampleTable td.endemical").removeClass("showEndemics");
+//   showEndemics.checked = false;
 
-  $("#sampleTable").removeClass("noScientificNames");
-  sciNames.checked = false;
+//   $("#sampleTable").removeClass("noScientificNames");
+//   sciNames.checked = false;
 
-  $("#sampleTable").removeClass("noItalics");
-  italics.checked = false;
-  italics.disabled = false;
+//   $("#sampleTable").removeClass("noItalics");
+//   italics.checked = false;
+//   italics.disabled = false;
 
-  $("#sampleTable td.lineNumbers").removeClass("showLineNumbers");
-  lineNumbers.checked = false;
+//   $("#sampleTable td.lineNumbers").removeClass("showLineNumbers");
+//   lineNumbers.checked = false;
 
-  $("#sampleTable td.leftCheckBox").removeClass("show");
-  $("#sampleTable td.familyHidden").removeClass("show");
+//   $("#sampleTable td.leftCheckBox").removeClass("show");
+//   $("#sampleTable td.familyHidden").removeClass("show");
 
-  leftCheck.checked = false;
-}
+//   leftCheck.checked = false;
+// }
 
 function toggleSampleTableShowEndemics() {
 
-	$("#sampleTable td.endemical").toggleClass("showEndemics");
+  $("#sampleTable td.endemical").toggleClass("showEndemics");
 }
 
 function toggleSampleTableSciNames()  {
 
-	$("#sampleTable").toggleClass("noScientificNames");
-	italics.disabled = !italics.disabled;
+  $("#sampleTable").toggleClass("noScientificNames");
+  italics.disabled = !italics.disabled;
 }
 
 function toggleSampleTableItalics()  {
 
-	$("#sampleTable").toggleClass("noItalics");
+  $("#sampleTable").toggleClass("noItalics");
 }
 
 // add : if no sci names = both line numbers and left check possible
@@ -246,31 +239,19 @@ function choseChecklistCountry(evt)  {
 
   closeCountryModal();
 
-	var selectedCountry = evt.target.innerHTML;
+  var selectedCountry = evt.target.innerHTML;
 
   if (currentChecklistCountry) {
     currentChecklistCountryElement.classList.remove("checkHighlight");
     currentChecklistCountryElement.classList.remove("bothHighlights");
   }
 
-	if (selectedCountry === "South America")  {
-		currentChecklistCountry = "SouthAmerica";
-	}
-	else if (selectedCountry === "French Guiana")  {
-		currentChecklistCountry = "FrenchGuiana";
-	}
-	else if (selectedCountry === "Malvinas")  {
-		currentChecklistCountry = "Falklands";
-	}
-  else if (selectedCountry === "Malvinas")  {
-    currentChecklistCountry = "Falklands";
-  }
-	else if (selectedCountry === "Curaçao")  {
-		currentChecklistCountry = "Curacao";
-	}
-	else {
-    	currentChecklistCountry = selectedCountry;
-  }
+  if (selectedCountry === "South America")  currentChecklistCountry = "SouthAmerica";
+  else if (selectedCountry === "French Guiana")  currentChecklistCountry = "FrenchGuiana";
+	else if (selectedCountry === "Malvinas")  currentChecklistCountry = "Falklands";
+  else if (selectedCountry === "Malvinas")  currentChecklistCountry = "Falklands";
+	else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
+	else   currentChecklistCountry = selectedCountry;
 
   checklistCountryButton.innerHTML = selectedCountry;
   currentChecklistCountryElement = evt.target;
@@ -295,23 +276,23 @@ function choseChecklistCountry(evt)  {
   map.style.top = checklistArticle.offsetTop + 20 + "px";
 }
 
-function resetNumDays() {
+// function resetNumDays() {
 
-  numDaysButton.children.item(gNumDays).classList.remove("highlight");
-  $("#sampleTable").removeClass("numDays" + String(gNumDays));
+//   numDaysButton.children.item(gNumDays).classList.remove("highlight");
+//   $("#sampleTable").removeClass("numDays" + String(gNumDays));
 
-  numDaysButton.children.item(11).classList.add("highlight");
-  gNumDays = 10;
-  $("#sampleTable").addClass("numDays" + String(gNumDays));
-  previousNumDaysClass = "numDays" + String(gNumDays);
-}
+//   numDaysButton.children.item(11).classList.add("highlight");
+//   gNumDays = 10;
+//   $("#sampleTable").addClass("numDays" + String(gNumDays));
+//   previousNumDaysClass = "numDays" + String(gNumDays);
+// }
 
-function setStartDate (evt)  {
+// function setStartDate (evt)  {
 
-  var start_date = evt.target;
+//   var start_date = evt.target;
 
-  gStartDate = start_date;
-}
+//   gStartDate = start_date;
+// }
 
 function setNumDays(evt)  {
 
@@ -359,18 +340,18 @@ function setNumDays(evt)  {
   }
 
   if (gNumDays !== 0) {
-    $("#sampleTable th").removeClass('flashDays');
-    $("#sampleTable th:nth-child(" + (gNumDays+1) + ")").addClass('flashDays');
+    $("#sampleTable th").removeClass("flashDays");
+    $("#sampleTable th:nth-child(" + (gNumDays+1) + ")").addClass("flashDays");
   }
 }
 
-function getCSVText(evt)  {
+function getCSVText()  {
 
   if (currentChecklistCountry)  {
 
     var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentChecklistCountry + '"></form>');
 
-    $('body').append(form);
+    $("body").append(form);
 
     form.submit();
     form.remove();
@@ -382,13 +363,13 @@ function openChecklistPage()  {
 
   var vars;
 
-	if (!currentChecklistCountry)  {
-    	checklistCountryButton.innerHTML = "Select Country";
-    	checklistCountryButton.classList.add("needsAttention");
-    	return;
-  	}
+  if (!currentChecklistCountry)  {
+    checklistCountryButton.innerHTML = "Select Country";
+    checklistCountryButton.classList.add("needsAttention");
+    return;
+  }
 
-	if (gNumDays === undefined)   gNumDays = 12;
+  if (gNumDays === undefined)   gNumDays = 12;
   if (gStartDate === undefined) gStartDate = 1;
 
   vars = "?country="       + currentChecklistCountry;
@@ -401,5 +382,8 @@ function openChecklistPage()  {
   vars += "&sci_names="    + !sciNames.checked;
   vars += "&italics="      + !italics.checked;
 
-  window.open( '../php/makePDF.php' + vars, '_blank' );
+  // var otherWindow = window.open();
+  // otherWindow.opener = null;
+  // otherWindow.location = url;
+  window.open( "../php/makePDF.php" + vars, "_blank" );
 }

@@ -1,11 +1,12 @@
 *,
 *::before,
 *::after {
+    margin  :  0;
+    padding  :  0;
+
     -webkit-box-sizing  :  border-box;
        -moz-box-sizing  :  border-box;
             box-sizing  :  border-box;
-    margin  :  0;
-    padding  :  0;
 
          -o-user-select  :  none;
     /* or unselectable="on" attribute */
@@ -46,17 +47,17 @@ body {
     /*overflow-x: hidden;*/
 }
 
-a       {color  :  inherit;
-    text-decoration  :  none;
+a   { color  :  inherit; text-decoration  :  none;
 }
+
 a:link  {
     border-bottom  :  solid 1px #aaa;
 }
 
 .icon {
     display  :  inline;
-    position  :  relative;
 
+    position  :  relative;
     width  :  1.3em;
     height  :  1.3em;
 
@@ -71,7 +72,6 @@ a:link  {
 .icon-pen {
     top  :  1px;
     left  :  -15px;
-
     width  :  2.6em;
     height  :  2.6em;
 
@@ -81,7 +81,6 @@ a:link  {
 .icon-pin  {
     top  :  -17px;
     left  :  8px;
-
     width  :  2.5em;
     height  :  2.5em;
 }
@@ -96,13 +95,11 @@ a:link  {
 
 .icon-list  {
     top  :  4px;
-
     width  :  2em;
 }
 
 .icon-file-excel  {
     top  :  2px;
-
     width  :  2em;
     height  :  1.2em;
 }
@@ -114,10 +111,9 @@ a:link  {
 #mainContent {
     display  :  flex;
     flex-direction  :  row;
+    flex-grow  :  1;
 
     overflow  :  visible;
-
-    flex-grow  :  1;
 
     transition  :  transform 750ms;
 }
@@ -128,9 +124,9 @@ a:link  {
 
 .smallBanner {
     display  :  none;
+
     position  :  absolute;
     left  :  0;
-
     width  :  100vw;
     margin  :  0;
     padding  :  20px 0 93px 11%;
@@ -154,7 +150,6 @@ a:link  {
     /*min-width  :  70px;*/
     /*height  :  100%;*/
     /*min-height  :  100%;*/
-
     margin  :  0 auto;
     padding  :  45px 0 0 0;
 
@@ -168,10 +163,10 @@ a:link  {
 
 .titleBanner > span  {
     display  :  inline-block;
+
     position  :  relative;
     top  :  465px;
     /*left  :  calc(-50% - 0.5em);*/
-
     width  :  465px;
     padding  :  0;
 
@@ -192,16 +187,16 @@ a:link  {
 
 .titleBanner::after {
     content  :  '';
+
     position  :  absolute;
     top  :  100%;
     left  :  -4px;
-    z-index  :  10;
-
     width  :  calc(100% + 4px);
     /*width: inherit;*/
     /*IE11 must have min-width set*/
     min-width  :  70px;
     height  :  10px;
+    z-index  :  10;
 
     background  :  #6d9892;
 }
@@ -210,17 +205,16 @@ a:link  {
     display  :  -webkit-flex;
     display  :          flex;
     flex-direction  :  column;
+    flex-wrap  :  nowrap;
+    justify-content  :  space-around;
+
     position  :  relative;
     left  :  0;
     /*width: 100%;*/
-
     width  :  600px;
     margin-top  :  70px;
 
     overflow  :  visible;
-
-    flex-wrap  :  nowrap;
-    justify-content  :  space-around;
 }
 
 section  {
@@ -243,8 +237,8 @@ article {
 
 .panel {
     opacity  :  1;
-    position  :  relative;
 
+    position  :  relative;
     padding  :  0 15px;
 
     pointer-events  :  auto;
@@ -322,10 +316,10 @@ article {
 
 .taxArticleMain::before {
     content  :  'Search';
+
     position  :  relative;
     top  :  -5px;
     left  :  -30px;
-
     margin  :  0 -20px 0 0;
     padding  :  6px 24px 6px 20px;
 
@@ -357,9 +351,8 @@ article {
 
 #checklistArticle {
     position  :  relative;
-    z-index  :  0;
-
     margin  :  60px 0 0 0;
+    z-index  :  0;
 
     overflow  :  visible;
 }
@@ -371,7 +364,6 @@ article {
 #checklistOptions.panel {
     position  :  relative;
     left  :  10%;
-
     width  :  80%;
     margin  :  20px 0 25px 0;
     padding  :  20px 0 20px 40px;
@@ -389,6 +381,7 @@ article {
 
 #checklistOptions::before  {
     content  :  'CHECKLISTS';
+
     position  :  absolute;
     top  :  0;
     left  :  -220px;
@@ -419,7 +412,6 @@ article {
     position  :  absolute;
     right  :  -80px;
     bottom  :  35%;
-
     height  :  34px;
     padding  :  0 6px 7px 8px;
 }
@@ -427,7 +419,6 @@ article {
     position  :  absolute;
     right  :  -78px;
     bottom  :  10%;
-
     height  :  34px;
     padding  :  0 6px 4px 8px;
 }
@@ -435,16 +426,15 @@ article {
 #numDays {
     display  :  flex;
     flex-direction  :  row;
+    justify-content  :  space-around;
+
     position  :  relative;
     left  :  20px;
-    z-index  :  20;
-
     width  :  140%;
     margin  :  10px 0 0 0;
+    z-index  :  20;
 
     color  :  #ddd;
-
-    justify-content  :  space-around;
 
     background  :  transparent;
 }
@@ -457,7 +447,6 @@ article {
 #numDays a {
     position  :  relative;
     top  :  2px;
-
     width  :  45px;
     height  :  42px;
     padding  :  7px 0 0 0;
@@ -508,8 +497,9 @@ footer {
     display  :  -webkit-flex;
     display  :          flex;
     flex-direction  :  row;
-    position  :  relative;
+    justify-content  :  space-around;
 
+    position  :  relative;
     min-width  :  480px;
     height  :  40px;
     margin  :  0;
@@ -520,8 +510,6 @@ footer {
     line-height  :  32px;
     letter-spacing  :  0.2em;
     text-shadow  :  rgba(0, 0, 0, 0.4) 1px 1px 1px;
-
-    justify-content  :  space-around;
 
     border-top  :  3px solid #bbb;
     border-right  :  4px solid #ddd;

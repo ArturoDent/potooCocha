@@ -1,5 +1,21 @@
 "use strict";
 
+var endemicColor         =  "#C23BC3";
+var extinctColor         =  "#ddd";
+var residentColor        =  "#3030cc";
+var nonBreederColor      =  "#ff9900";
+var vagrantColor         =  "#ffff00";
+var hypotheticalColor    =  "#33cc66";
+var introducedColor      =  "#111";
+
+var baseColor            =  "#444";
+var baseStrokeColor      =  "#6f8a91";
+// var selectedFillColor    =  "#eee";
+// var selectedStrokeColor  =  "#eee";
+
+
+/* global   countries birds currentMap */
+
 function prepareSVGstyles(evt)  {
 
   var svg;
@@ -8,21 +24,10 @@ function prepareSVGstyles(evt)  {
     svg = document.getElementById("SAMsvg");
   }
   else {
-     svg = document.getElementById(evt);
+    svg = document.getElementById(evt);
   }
 
   var svgDoc = svg.contentDocument;
-
-  // var titles = svgDoc.querySelectorAll('title');
-  // var len = titles.length;
-
-  // console.log("titles.length = " + len);
-
-  // for (var i = 0; i < len; i++)  {
-
-  //   titles[i].classList.add("svgTooltip");
-  // }
-
 
   for (var country in countries) {
 
@@ -35,18 +40,11 @@ function prepareSVGstyles(evt)  {
   }
 }
 
-function setSVGstyles(obj, fillColor, strokeColor)  {
-  // console.log("in setSVGstyles");
+function setSVGstyles(obj )  {
 
   if (obj.nodeName === "path") {
 
-    // 'http://www.w3.org/2000/svg'
-
-    // console.log("obj.getElementsByTagNameNS('title')[0].innerHTML = " + obj.getElementsByTagNameNS('http://www.w3.org/2000/svg', 'title')[0].innerHTML);
-
-      obj.style.transition = "fill 1s";
-      // <title> is always the firstChild of <path> too
-      // obj.querySelector('title').classList.add("svgTooltip");
+    obj.style.transition = "fill 1s";
   }
 
   else if (obj.parentNode.nodeName === "g")  {
@@ -56,45 +54,31 @@ function setSVGstyles(obj, fillColor, strokeColor)  {
     var len = paths.length;
 
     for (var i = 0; i < len; i++)  {
-    // console.log("paths[i].getElementsByTagNameNS('title')[0].innerHTML = " + paths[i].getElementsByTagNameNS('http://www.w3.org/2000/svg', 'title')[0].innerHTML);
 
       paths[i].style.transition = "fill 1s";
-      // paths[i].querySelector('title').classList.add("svgTooltip");
     }
   }
 }
 
-function fillSAMmap(color)  {
+// function fillSAMmap(color)  {
 
-  if (!color) color = baseColor;
+//   if (!color) color = baseColor;
+//   var svg;
+//   svg = currentMap.querySelector("#SAMsvg");
+//   var svgDoc = svg.contentDocument;
 
-  var svg;
+//   for (var country in countries) {
 
-  svg = currentMap.querySelector("#SAMsvg");
+//     // Aruba, Bonaire, Curacao, Trinidad and Falklands are not in the svg so cc = null
+//     var cc = svgDoc.getElementById(country);
+//     if (!cc) continue;
 
-  var svgDoc = svg.contentDocument;
-
-  // SAMgroup.each(function(i, children) {
-
-  //     this.removeClass(this.classes()[0]);
-  //     this.addClass(baseColor);
-  //  });
-
-  for (var country in countries) {
-
-    // Aruba, Bonaire, Curacao, Trinidad and Falklands are not in the svg so cc = null
-    var cc = svgDoc.getElementById(country);
-    if (!cc) continue;
-
-    newFillColor(cc, color);
-  }
-
-  addBirdNameToMap("");
-}
+//     newFillColor(cc, color);
+//   }
+//   addBirdNameToMap("");
+// }
 
 function newFillColor(obj, newColor) {
-
-  // svgElement.style.setProperty("fill-opacity", "0.0", "")
 
   if (obj.nodeName === "path") {
     if (newColor === baseColor) {
@@ -106,15 +90,10 @@ function newFillColor(obj, newColor) {
 
   else if (obj.parentNode.nodeName === "g")  {
 
-    // if (obj.parentNode.nodeName === "g" )  obj = obj.parentNode;
-
     var paths = obj.querySelectorAll("path");
 
     var len = paths.length;
-// console.log("len = " + len);
     for (var i = 0; i < len; i++)  {
-
-      // paths[i].setAttribute('fill', newColor);
 
       if (newColor === baseColor) {
         paths[i].style.fill = "#757570";
@@ -126,59 +105,53 @@ function newFillColor(obj, newColor) {
   }
 }
 
-function selectedCountryFillColor(selectedCountry, color)  {
+// function selectedCountryFillColor(selectedCountry, color)  {
 
-  var svg = currentMap.querySelector("#SAMsvg");
-  var svgDoc = svg.contentDocument;
+//   var svg = currentMap.querySelector("#SAMsvg");
+//   var svgDoc = svg.contentDocument;
 
-  var cc = svgDoc.getElementById(selectedCountry);
+//   var cc = svgDoc.getElementById(selectedCountry);
 
-  if (cc) {
-    fillSAMmap();
-    newFillColor(cc,color);
-  }
-  else fillSAMmap();
-}
+//   if (cc) {
+//     fillSAMmap();
+//     newFillColor(cc,color);
+//   }
+//   else fillSAMmap();
+// }
 
-function selectedCountryStrokeColor(selectedCountry, color)  {
+// function selectedCountryStrokeColor(selectedCountry, color)  {
 
-  var svg = currentMap.querySelector("#SAMsvg");
-  var svgDoc = svg.contentDocument;
+//   var svg = currentMap.querySelector("#SAMsvg");
+//   var svgDoc = svg.contentDocument;
 
-  var cc = svgDoc.getElementById(selectedCountry);
+//   var cc = svgDoc.getElementById(selectedCountry);
 
-  if (cc) {
-    newStrokeColor(cc,color);
-    svg.appendChild(cc);
-  }
+//   if (cc) {
+//     newStrokeColor(cc,color);
+//     svg.appendChild(cc);
+//   }
 
-// d3.selection.prototype.moveToFront = function() { return this.each(function() { this.parentNode.appendChild(this); }); };
-  // this.parentNode.appendChild(this);
-}
+// }
 
-function newStrokeColor(obj, newColor) {
+// function newStrokeColor(obj, newColor) {
 
-  if (obj.nodeName === "path") {
-    // obj.setAttribute('fill', newColor);
-    obj.style.stroke = newColor;
-  }
+//   if (obj.nodeName === "path") {
+//     obj.style.stroke = newColor;
+//   }
 
-  else if (obj.parentNode.nodeName === "g")  {
+//   else if (obj.parentNode.nodeName === "g")  {
 
-    // if (obj.parentNode.nodeName === "g" )  obj = obj.parentNode;
+//     var paths = obj.querySelectorAll("path");
 
-    var paths = obj.querySelectorAll("path");
+//     var len = paths.length;
+//     for (var i = 0; i < len; i++)  {
 
-    len = paths.length;
-// console.log("len = " + len);
-    for (var i = 0; i < len; i++)  {
+//       paths[i].style.stroke = newColor;
+//     }
+//   }
+// }
 
-      // paths[i].setAttribute('fill', newColor);
-      paths[i].style.stroke = newColor;
-
-    }
-  }
-}
+/* global  mapsCollection saveMapButton */
 
 function highlightSAMmap(index, current) {
 
@@ -190,7 +163,7 @@ function highlightSAMmap(index, current) {
   else {
     svg = document.getElementById(current);
   }
-  var svgDoc = svg.contentDocument;;
+  var svgDoc = svg.contentDocument;
   var cList = birds[index].split("-");
 
   for (var country in countries) {
@@ -210,67 +183,67 @@ function highlightSAMmap(index, current) {
     // switch(cList[countries[ this.id() ]])  {
     switch(cList[countries[country]])  {
 
-      case "X(e)":
+    case "X(e)":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('endemic');
-        newFillColor(cc, endemicColor);
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('endemic');
+      newFillColor(cc, endemicColor);
 
-        break;
+      break;
 
-      case "X":
+    case "X":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('resident');
-        newFillColor(cc, residentColor);
-        break;
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('resident');
+      newFillColor(cc, residentColor);
+      break;
 
-      case "NB":
+    case "NB":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('nonBreeder');
-        newFillColor(cc, nonBreederColor);
-        break
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('nonBreeder');
+      newFillColor(cc, nonBreederColor);
+      break;
 
-      case "V":
+    case "V":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('vagrant');
-        newFillColor(cc, vagrantColor);
-        break;
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('vagrant');
+      newFillColor(cc, vagrantColor);
+      break;
 
-      case "H":
+    case "H":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('hypothetical');
-        newFillColor(cc, hypotheticalColor);
-        break;
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('hypothetical');
+      newFillColor(cc, hypotheticalColor);
+      break;
 
-      case "IN":
+    case "IN":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('introduced');
-        newFillColor(cc, introducedColor);
-        break;
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('introduced');
+      newFillColor(cc, introducedColor);
+      break;
 
-      case "EX" :
+    case "EX" :
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('extinct');
-        newFillColor(cc, extinctColor);
-        break;
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('extinct');
+      newFillColor(cc, extinctColor);
+      break;
 
-      case "EX(e)":
+    case "EX(e)":
 
-        // this.removeClass(this.classes()[0]);
-        // this.addClass('extinct');
-        newFillColor(cc, extinctColor);
-        break;
+      // this.removeClass(this.classes()[0]);
+      // this.addClass('extinct');
+      newFillColor(cc, extinctColor);
+      break;
 
-      default:
-        // this.removeClass(this.classes()[0]);
-        newFillColor(cc, baseColor);
-        // this.addClass('baseColor');
+    default:
+      // this.removeClass(this.classes()[0]);
+      newFillColor(cc, baseColor);
+      // this.addClass('baseColor');
     }
   }
 
