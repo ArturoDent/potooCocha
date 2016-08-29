@@ -9,11 +9,6 @@ var numFamilies;
 
 var birds = [];
 
-var countries  = { "Argentina":0, "Aruba":1, "Bolivia":2, "Brazil":3, "Chile":4,
-                  "Colombia":5, "Curacao":6, "Ecuador":7, "FrenchGuiana":8,
-                  "Guyana":9, "Paraguay":10, "Peru":11, "Suriname":12, "Trinidad":13,
-                  "Uruguay":14, "Venezuela":15, "Bonaire":16, "Falklands":17};
-
 var numSpeciesList = { "Argentina":999, "Aruba":216, "Bolivia":1381, "Brazil":1799, "Chile":475,
                   "Colombia":1838, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
                   "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":724, "Trinidad":468,
@@ -53,7 +48,9 @@ var searchSlideUpWrapper_height;
 var searchInstructionsInfo;
 var searchInstructionsOpen = true;
 
-/* global    selectedCountryFillColor currentMap selectedFillColor  */
+var selectedFillColor    =  "#eee";
+
+/* global    selectedCountryFillColor currentMap   */
 /* global  */
 
 
@@ -219,14 +216,10 @@ function loadCountryTaxonomy(evt)  {
     $("#taxPage").removeClass("samTax");
   }
 
-  // update #taxPage slimScroll here ***
+  // if no birds ***
 
   // var jqxhr = $.get("../data/occurrences.txt", function (data) {
-  $.get("../data/occurrences.txt", function (data) {
-
-    loadIntoArray(data);
-  })
-
+  $.get("../data/occurrences.txt", function (data) { loadIntoArray(data); })
     .fail(function () { console.log("loadIntoArray error"); })
     .always(function () { });
 
@@ -245,8 +238,8 @@ function loadCountryTaxonomy(evt)  {
   if (!lastQuery)  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
-    // var temp;
-    selectedCountryFillColor(taxCountry.replace(" ", ""), selectedFillColor);
+    var temp = taxCountry.replace(" ", "");
+    selectedCountryFillColor(temp, selectedFillColor);
   }
 
   else if (lastQuery === "endemic" || lastQuery === "hypothetical"  || lastQuery === "vagrant" ||

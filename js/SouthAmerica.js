@@ -1,5 +1,11 @@
 "use strict";
 
+var countries  = { "Argentina":0, "Aruba":1, "Bolivia":2, "Brazil":3, "Chile":4,
+                  "Colombia":5, "Curacao":6, "Ecuador":7, "FrenchGuiana":8,
+                  "Guyana":9, "Paraguay":10, "Peru":11, "Suriname":12, "Trinidad":13,
+                  "Uruguay":14, "Venezuela":15, "Bonaire":16, "Falklands":17};
+
+
 var endemicColor         =  "#C23BC3";
 var extinctColor         =  "#ddd";
 var residentColor        =  "#3030cc";
@@ -14,7 +20,7 @@ var baseStrokeColor      =  "#6f8a91";
 // var selectedStrokeColor  =  "#eee";
 
 
-/* global   countries birds currentMap */
+/* global addBirdNameToMap birds currentMap  */
 
 function prepareSVGstyles(evt)  {
 
@@ -60,23 +66,23 @@ function setSVGstyles(obj )  {
   }
 }
 
-// function fillSAMmap(color)  {
+function fillSAMmap(color)  {
 
-//   if (!color) color = baseColor;
-//   var svg;
-//   svg = currentMap.querySelector("#SAMsvg");
-//   var svgDoc = svg.contentDocument;
+  if (!color) color = baseColor;
+  var svg;
+  svg = currentMap.querySelector("#SAMsvg");
+  var svgDoc = svg.contentDocument;
 
-//   for (var country in countries) {
+  for (var country in countries) {
 
-//     // Aruba, Bonaire, Curacao, Trinidad and Falklands are not in the svg so cc = null
-//     var cc = svgDoc.getElementById(country);
-//     if (!cc) continue;
+    // Aruba, Bonaire, Curacao, Trinidad and Falklands are not in the svg so cc = null
+    var cc = svgDoc.getElementById(country);
+    if (!cc) continue;
 
-//     newFillColor(cc, color);
-//   }
-//   addBirdNameToMap("");
-// }
+    newFillColor(cc, color);
+  }
+  addBirdNameToMap("");
+}
 
 function newFillColor(obj, newColor) {
 
@@ -105,19 +111,22 @@ function newFillColor(obj, newColor) {
   }
 }
 
-// function selectedCountryFillColor(selectedCountry, color)  {
+function selectedCountryFillColor(selectedCountry, color)  {
 
-//   var svg = currentMap.querySelector("#SAMsvg");
-//   var svgDoc = svg.contentDocument;
+  var svg = currentMap.querySelector("#SAMsvg");
+  var svgDoc = svg.contentDocument;
 
-//   var cc = svgDoc.getElementById(selectedCountry);
+  var cc = svgDoc.getElementById(selectedCountry);
 
-//   if (cc) {
-//     fillSAMmap();
-//     newFillColor(cc,color);
-//   }
-//   else fillSAMmap();
-// }
+  if (cc) {
+    fillSAMmap();
+    newFillColor(cc, color);
+    // cc.classList.add("grow");
+    // cc.style.transformOrigin  =  "0 0";
+    // cc.style.transform = "scale(1.2)";
+  }
+  else fillSAMmap();
+}
 
 // function selectedCountryStrokeColor(selectedCountry, color)  {
 
