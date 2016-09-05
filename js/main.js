@@ -1,5 +1,6 @@
 "use strict";
 
+var sampleTable;
 var leftCheck;
 var sciNames;
 var italics;
@@ -20,7 +21,6 @@ var gNumDays;  /* exported gNumDays */
 var gStartDate;  /* exported gStartDate */
 var previousNumDaysClass;
 
-var checklistArticle;
 var numDaysButton;
 var checklistCountryButton;
 var pdfButton;
@@ -28,26 +28,22 @@ var csvButton;
 var taxonomyCountryButton;
 
 var map;
-var taxonomyArticle;
+var mapsCollection;
 
 /* global  initMapFactory prepareSVGstyles loadCountryTaxonomy selectedCountryFillColor currentMap selectedFillColor */
 
 // svg4everybody();
 
-$(function () {
+document.addEventListener("DOMContentLoaded", function(){
 
-  // smallBanner is header[0]
-  // titleBanner = document.getElementsByTagName("header")[1];
   titleBanner = document.getElementById("bigBanner");
 
   footer = document.getElementsByTagName("footer")[0];
 
   map   =  document.getElementById("currentMap");
-  taxonomyArticle = document.getElementById("taxonomyArticle");
+  mapsCollection = document.querySelector("#mapsCollection");
 
   setFooterBannerDimensions();
-  // window.onresize = setFooterBannerDimensions;
-  // window.onresize = initCurrentMap;
 
   window.addEventListener("resize", onResizeWindow);
 
@@ -56,7 +52,6 @@ $(function () {
 
   document.getElementById("countryModal").addEventListener("click", closeCountryModal);
 
-  checklistArticle                         =  document.getElementById("checklistArticle");
   checklistCountryButton                   =  document.getElementById("checklistCountryButton");
   taxonomyCountryButton                    =  document.getElementById("taxonomyCountryButton");
 
@@ -68,7 +63,10 @@ $(function () {
 
   numDaysButton.children.item(11).classList.add("highlight");
   gNumDays = 10;
-  $("#sampleTable").addClass("numDays" + String(gNumDays));
+
+  sampleTable = document.getElementById("sampleTable");
+  sampleTable.classList.add("numDays" + String(gNumDays));
+
   previousNumDaysClass = "numDays" + String(gNumDays);
 
   pdfButton                           =  document.getElementById("pdfButton");
@@ -85,21 +83,21 @@ $(function () {
 
   previousNumDaysClass = "numDays10";
 
-  $("#lineNumbers").on("click", toggleSampleTableLineNumbers);
-  $("#leftCheck").on("click", toggleSampleTableLeftChecks);
-  $("#showEndemics").on("click", toggleSampleTableShowEndemics);
-  $("#sciNames").on("click", toggleSampleTableSciNames);
-  $("#italics").on("click", toggleSampleTableItalics);
+  lineNumbers.addEventListener("click", toggleSampleTableLineNumbers);
+  leftCheck.addEventListener("click", toggleSampleTableLeftChecks);
+  showEndemics.addEventListener("click", toggleSampleTableShowEndemics);
+  sciNames.addEventListener("click", toggleSampleTableSciNames);
+  italics.addEventListener("click", toggleSampleTableItalics);
 
-  $(".country-menu a").on("click", choseCountry);
+  [].forEach.call(document.getElementsByClassName("country-menu")[0].getElementsByTagName("a"), function (el) {
+    el.addEventListener("click", choseCountry);
+  });
 
-  $("#SAMsvg").on("SVGLoad", initCurrentMap);
-  // map.querySelector('#SAMsvg').addEventListener('SVGLoad', initCurrentMap);
-
+  document.getElementById("SAMsvg").addEventListener("SVGLoad", initCurrentMap);
   initMapFactory();
 });
 
-//   *******************  end of  $(document).ready(function() ******************************************
+//   *******************  end of  (document).ready(function() ******************************************
 
 function onResizeWindow() {
   setFooterBannerDimensions();
@@ -109,33 +107,13 @@ function onResizeWindow() {
 function initCurrentMap() {
 
   prepareSVGstyles("SAMsvg");
-
-  var inner = document.documentElement.clientWidth;
-  var bodyRightMargin = document.body.getBoundingClientRect().right;
-
-  var panelWidth = taxonomyArticle.getBoundingClientRect().width;
-
-  var left = panelWidth + (inner - bodyRightMargin)/2 - 85;
-
-  if (document.documentElement.clientWidth > 1024) {
-    map.style.left = left + "px";
-  }
-  // else map.style.left = left + 20 + "px";
-
-  else map.style.left = left + (0.25 * map.getBoundingClientRect().width) + "px";
-
-
   map.style.opacity = "1";
 }
 
 function setFooterBannerDimensions()  {
 
-  // console.log("document.documentElement.clientWidth = " + document.documentElement.clientWidth);
-
-  // var reducedBodyLeftMargin;
   var bodyLeftMargin = document.body.getBoundingClientRect().left;
   var reducedBodyLeftMargin = bodyLeftMargin;
-  // console.log("bodyLeftMargin = " + bodyLeftMargin);
 
   if (document.documentElement.clientWidth <= 1024) {
     document.getElementsByClassName("articles")[0].style.left = -(0.8 * bodyLeftMargin) + "px";
@@ -146,10 +124,7 @@ function setFooterBannerDimensions()  {
     reducedBodyLeftMargin = 0.7 * bodyLeftMargin;
   }
 
-  // var left = 0.87 * bodyLeftMargin;
-
   var rightFooterMargin = 0.35 * bodyLeftMargin;
-
   var inner = document.documentElement.clientWidth;
 
   footer.style.left  =  -bodyLeftMargin + "px";
@@ -159,12 +134,16 @@ function setFooterBannerDimensions()  {
   titleBanner.style.width = (0.4 * reducedBodyLeftMargin) + "px";
 
   titleBanner.style.lineHeight = parseInt(titleBanner.style.width) - 10 + "px";
+
+  mapsCollection.style.left = -reducedBodyLeftMargin + "px";
+  mapsCollection.style.width = inner + "px";
 }
 
 function showCountryModal(evt)  {
 
   document.querySelector("#countryModal").classList.add("md-show");
   document.querySelector("#mainContent").classList.add("modal-shrink");
+  map.classList.add("modal-shrink");
 
   if (evt.target.id === "checklistCountryButton") countryModalOpener = "checklistCountryButton";
   else countryModalOpener = "taxonomyCountryButton";
@@ -174,56 +153,41 @@ function closeCountryModal()  {
 
   document.querySelector("#countryModal").classList.remove("md-show");
   document.querySelector("#mainContent").classList.remove("modal-shrink");
+  map.classList.remove("modal-shrink");
 }
-
-// function clearChecklistOptions()  {
-
-//   $("#sampleTable td.endemical").removeClass("showEndemics");
-//   showEndemics.checked = false;
-
-//   $("#sampleTable").removeClass("noScientificNames");
-//   sciNames.checked = false;
-
-//   $("#sampleTable").removeClass("noItalics");
-//   italics.checked = false;
-//   italics.disabled = false;
-
-//   $("#sampleTable td.lineNumbers").removeClass("showLineNumbers");
-//   lineNumbers.checked = false;
-
-//   $("#sampleTable td.leftCheckBox").removeClass("show");
-//   $("#sampleTable td.familyHidden").removeClass("show");
-
-//   leftCheck.checked = false;
-// }
 
 function toggleSampleTableShowEndemics() {
 
-  $("#sampleTable td.endemical").toggleClass("showEndemics");
+  sampleTable.querySelector("td.endemical").classList.toggle("showEndemics");
 }
 
 function toggleSampleTableSciNames()  {
 
-  $("#sampleTable").toggleClass("noScientificNames");
+  sampleTable.classList.toggle("noScientificNames");
   italics.disabled = !italics.disabled;
 }
 
 function toggleSampleTableItalics()  {
 
-  $("#sampleTable").toggleClass("noItalics");
+  sampleTable.classList.toggle("noItalics");
 }
 
 // add : if no sci names = both line numbers and left check possible
 
 function toggleSampleTableLeftChecks() {
 
-  $("#sampleTable td.leftCheckBox").toggleClass("show");
-  $("#sampleTable td.familyHidden").toggleClass("show");
+  [].forEach.call(sampleTable.getElementsByClassName("leftCheckBox"), function (el) {
+    el.classList.toggle("show");
+  });
+
+  [].forEach.call(sampleTable.getElementsByClassName("familyHidden"), function (el) {
+    el.classList.toggle("show");
+  });
 }
 
 function toggleSampleTableLineNumbers() {
 
-  $("#sampleTable td.lineNumbers").toggleClass("showLineNumbers");
+  sampleTable.querySelector("td.lineNumbers").classList.toggle("showLineNumbers");
 }
 
 // decide which function to call based on which countryButton opened the country menu
@@ -258,8 +222,8 @@ function choseChecklistCountry(evt)  {
   currentChecklistCountryElement.classList.add("checkHighlight");
   if (currentChecklistCountryElement.classList.contains("taxHighlight")) currentChecklistCountryElement.classList.add("bothHighlights");
 
-  var buttonDisplace = $("#checklistCountryButton").width();
-  $("#checklistCountryButton").css({"right":-buttonDisplace/2 - 20 + "px"});
+  var buttonDisplace = document.getElementById("checklistCountryButton").getBoundingClientRect().width;
+  document.getElementById("checklistCountryButton").style.right = -buttonDisplace / 2 - 20 + "px";
 
   checklistCountryButton.classList.remove("needsAttention");
   checklistCountryButton.classList.add("highlight");
@@ -273,26 +237,7 @@ function choseChecklistCountry(evt)  {
   currentMap.querySelector(".colorKey").style.opacity = "0";
 
   selectedCountryFillColor(currentChecklistCountry, selectedFillColor);
-  map.style.top = checklistArticle.offsetTop + 20 + "px";
 }
-
-// function resetNumDays() {
-
-//   numDaysButton.children.item(gNumDays).classList.remove("highlight");
-//   $("#sampleTable").removeClass("numDays" + String(gNumDays));
-
-//   numDaysButton.children.item(11).classList.add("highlight");
-//   gNumDays = 10;
-//   $("#sampleTable").addClass("numDays" + String(gNumDays));
-//   previousNumDaysClass = "numDays" + String(gNumDays);
-// }
-
-// function setStartDate (evt)  {
-
-//   var start_date = evt.target;
-
-//   gStartDate = start_date;
-// }
 
 function setNumDays(evt)  {
 
@@ -308,40 +253,69 @@ function setNumDays(evt)  {
   day.classList.add("highlight");
   gNumDays = parseInt(day.innerHTML);
 
-  $("#sampleTable").removeClass(previousNumDaysClass);
-  $("#sampleTable").addClass("numDays" + String(gNumDays));
+  sampleTable.classList.remove(previousNumDaysClass);
+  sampleTable.classList.add("numDays" + String(gNumDays));
+
   previousNumDaysClass = "numDays" + String(gNumDays);
 
   // rules for column double border right vs. number of days
 
-  $("#sampleTable td:nth-child(6)").removeClass("cds");
-  $("#sampleTable th:nth-child(4)").removeClass("cds");
+  [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
+    el.classList.remove("cds");
+  });
 
-  $("#sampleTable td:nth-child(8)").removeClass("cds");
-  $("#sampleTable th:nth-child(6)").removeClass("cds");
+  sampleTable.querySelector("th:nth-child(4)").classList.remove("cds");
+
+  [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
+    el.classList.remove("cds");
+  });
+
+  sampleTable.querySelector("th:nth-child(6)").classList.remove("cds");
 
   if (gNumDays === 6 || gNumDays === 7) {
-    $("#sampleTable td:nth-child(6)").addClass("cds");
-    $("#sampleTable th:nth-child(4)").addClass("cds");
+
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
+      el.classList.add("cds");
+    });
+
+    sampleTable.querySelector("th:nth-child(4)").classList.add("cds");
   }
   else if (gNumDays === 10) {
-    $("#sampleTable td:nth-child(13)").removeClass("cds");
-    $("#sampleTable th:nth-child(11)").removeClass("cds");
 
-    $("#sampleTable td:nth-child(8)").addClass("cds");
-    $("#sampleTable th:nth-child(6)").addClass("cds");
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
+      el.classList.remove("cds");
+    });
+
+    sampleTable.querySelector("th:nth-child(11)").classList.remove("cds");
+
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
+      el.classList.add("cds");
+    });
+
+    sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
   }
   else if (gNumDays !== 5) {
-    $("#sampleTable td:nth-child(8)").addClass("cds");
-    $("#sampleTable th:nth-child(6)").addClass("cds");
 
-    $("#sampleTable td:nth-child(13)").addClass("cds");
-    $("#sampleTable th:nth-child(11)").addClass("cds");
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
+      el.classList.add("cds");
+    });
+
+    sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
+
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
+      el.classList.add("cds");
+    });
+
+    sampleTable.querySelector("th:nth-child(11)").classList.add("cds");
   }
 
   if (gNumDays !== 0) {
-    $("#sampleTable th").removeClass("flashDays");
-    $("#sampleTable th:nth-child(" + (gNumDays+1) + ")").addClass("flashDays");
+
+    [].forEach.call(sampleTable.getElementsByTagName("th"), function (el) {
+      el.classList.remove("flashDays");
+    });
+
+    sampleTable.querySelector("th:nth-child(" + (gNumDays + 1) + ")").classList.add("flashDays");
   }
 }
 
@@ -349,9 +323,13 @@ function getCSVText()  {
 
   if (currentChecklistCountry)  {
 
-    var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentChecklistCountry + '"></form>');
+    // var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentChecklistCountry + '"></form>');
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "../php/sendCSV.php?country=" + currentChecklistCountry + "");
 
-    $("body").append(form);
+    // $("body").append(form);
+    document.body.appendChild(form);
 
     form.submit();
     form.remove();

@@ -29,7 +29,7 @@
   <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="libs/jquery-3.1.0.min.js">\x3C/script>')</script>-->
 
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>-->
 
   <!--<script src="libs/jquery.slimscroll.js"></script>-->
 
@@ -131,7 +131,8 @@
           <button type="button" id="taxonomyCountryButton" class="genericButton">Select Country</button>
           <span class="grayed">
             <label>search &nbsp; : &nbsp; </label>
-            <input name="searhField" id="searchInput" placeholder="type here ..." size="15" type="text">
+            <!--placeholder="xantho ..." -->
+            <input name="searhField" id="searchInput" size="15" type="text">
             <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
           </span>
         </div>
@@ -252,47 +253,46 @@
       <a>12</a>
     </nav>
 
-    <section id="currentMap" externalResourcesRequired="true">
-
-      <div id="currentBird" class="birdMapInstance">
-
-        <div id="currentBirdMap" class="drawing">
-          <object id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" height="440" width="275"></object>
-        </div>
-
-        <div class="mapButtons saveMapButton hasTooltip">
-          <svg class="icon icon-pin"><use xlink:href="#icon-pin"></use></svg>
-          <span class="tooltip">Save this map</span>
-        </div>
-
-        <div class="mapButtons deleteMapButton hasTooltip">X
-          <span class="tooltip">Delete this map</span>
-        </div>
-
-        <div class="colorKey">
-          <ul>
-            <li>introduced</li>
-            <li>hypothetical</li>
-            <li>nonbreeder</li>
-            <li>vagrant</li>
-            <li>extinct</li>
-            <li>resident</li>
-            <li>endemic</li>
-          </ul>
-        </div>
-
-        <div id="currentBirdName" class="birdName"></div>
-
-      </div>
-
-    </section>
-
   </section>
 
 <!--       <object id="SAM" type="image/svg+xml" data="svg/SouthAmerica.svg" height="329.84px" width="205.31px"></object>
       <svg class="svg2" viewBox="0 0 742.20437 1212.4465"><use xlink:href="svg/SouthAmerica.svg#svg2" /></svg> -->
 
 </div>
+
+<section id="currentMap" externalResourcesRequired="true">
+  <div id="currentBird" class="birdMapInstance">
+
+    <div id="currentBirdMap" class="drawing">
+      <object id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" height="440" width="275"></object>
+    </div>
+
+    <div class="mapButtons saveMapButton hasTooltip">
+      <svg class="icon icon-pin"><use xlink:href="#icon-pin"></use></svg>
+      <span class="tooltip">Save this map</span>
+    </div>
+
+    <div class="mapButtons deleteMapButton hasTooltip">X
+      <span class="tooltip">Delete this map</span>
+    </div>
+
+    <div class="colorKey">
+      <ul>
+        <li>introduced</li>
+        <li>hypothetical</li>
+        <li>nonbreeder</li>
+        <li>vagrant</li>
+        <li>extinct</li>
+        <li>resident</li>
+        <li>endemic</li>
+      </ul>
+    </div>
+
+    <div id="currentBirdName" class="birdName"></div>
+
+  </div>
+</section>
+
 
 <div class="md-modal" id="countryModal">
   <div class="country-menu-wrap" contenteditable="false">

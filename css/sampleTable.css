@@ -2,7 +2,6 @@
     position  :  relative;
     left  :  0;
     /*max-width         :  530px;*/
-
     width  :  94%;
     min-width  :  480px;
     margin  :  0 auto 0 auto;
@@ -75,7 +74,7 @@
     width  :  auto;
 }
 
-#sampleTable .cLs         {padding  :  2px 0 2px 0;
+#sampleTable .cLs {  padding  :  2px 0 2px 0;
 
     font-style  :  italic;
 }
@@ -106,15 +105,15 @@
     height  :  20px;
 
     font-weight  :  bold;
-    color  :  black;
-    text-shadow  :  0 0 1px rgba(255,255,255,0.5);
+    /*color  :  black;*/
+    text-shadow  :  0 0 1px rgba(0,0,0,0.5);
 
     border  :  solid 1px #111;
     background-color  :  transparent;
 }
 
 #sampleTable th:not(:first-child)   {
-    background-color  :  #6d9892;
+    background-color  :  #404448;
 }
 
 .flashDays  {
@@ -127,7 +126,8 @@
 @keyframes flashDays {
     0%,
     100% {
-        /*background-color: white;*/
+        color  :  black;
+
         transform  :  none;
     }
     50% {
@@ -138,7 +138,7 @@
 }
 
 #sampleTable th:first-child   {
-    border  :  solid 1px #5c5c59;
+    border  :  solid 1px #404448;
     border-right  :  solid 1px #000;
 }
 
@@ -150,7 +150,7 @@
 }
 
 #sampleTable td.familyHidden   {
-    border  :  solid 1px #5c5c59;
+    border  :  solid 1px #404448;
 }
 
 #sampleTable td.familyHidden.show   {
@@ -201,10 +201,10 @@
 
 .showLineNumbers::before  {
     content  :  '5';
+
     position  :  absolute;
     top  :  3.5px;
     left  :  -22px;
-
     width  :  17px;
     height  :  17px;
 
@@ -227,10 +227,10 @@
 
 .showEndemics::before  {
     content  :  'e';
+
     position  :  absolute;
     top  :  3.5px;
     left  :  -22px;
-
     width  :  17px;
     height  :  17px;
 
@@ -250,7 +250,7 @@
 }
 
 #sampleTable.numDays0   th   {
-    border  :  1px solid #5c5c59;
+    border  :  1px solid #555;
 }
 
 #sampleTable.numDays1   th   {
@@ -384,7 +384,6 @@
     .showLineNumbers::before  {
         top  :  3px;
         left  :  -23px;
-
         width  :  16px;
         height  :  16px;
 
@@ -394,7 +393,6 @@
     .showEndemics::before  {
         top  :  3px;
         left  :  -23px;
-
         width  :  16px;
         height  :  16px;
 
@@ -410,7 +408,6 @@
     .leftCheck.showLineNumbers::after  {
         top  :  -25px;
         left  :  -37px;
-
         height  :  0;
 
         font-size  :  48px;

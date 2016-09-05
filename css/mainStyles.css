@@ -3,7 +3,6 @@
 *::after {
     margin  :  0;
     padding  :  0;
-
     -webkit-box-sizing  :  border-box;
        -moz-box-sizing  :  border-box;
             box-sizing  :  border-box;
@@ -24,6 +23,8 @@ html {
     height  :  100%;
 
     font-size  :  62.5%;
+
+    background  :  #404448;
 }
 
 body {
@@ -42,16 +43,17 @@ body {
     letter-spacing  :  0.04em;
     text-shadow  :  1px 1px 2px #222;
     /*background: #eb5048;*/
+    /*background  :  #5c5c59;*/
 
-    background  :  #5c5c59;
+    background  :  #404448;
+
     /*overflow-x: hidden;*/
 }
 
-a   { color  :  inherit; text-decoration  :  none;
+a   {  color  :  inherit; text-decoration  :  none;
 }
 
-a:link  {
-    border-bottom  :  solid 1px #aaa;
+a:link  {  border-bottom  :  solid 1px #aaa;
 }
 
 .icon {
@@ -158,7 +160,12 @@ a:link  {
     letter-spacing  :  0.1em;
 
     border-right  :  4px solid #ddd;
-    background  :  #6d9892;
+    /*background  :  #6d9892;*/
+    /*background  :  #734802;*/
+    background  :  #404448;
+    /*background  :  #736835;*/
+    /*background  :  #d98805;*/
+    /*background  :  #c97800;*/
 }
 
 .titleBanner > span  {
@@ -198,7 +205,8 @@ a:link  {
     height  :  10px;
     z-index  :  10;
 
-    background  :  #6d9892;
+    background  :  #404448;
+    /*background  :  #736835;*/
 }
 
 .articles {
@@ -243,10 +251,10 @@ article {
 
     pointer-events  :  auto;
 
-    border  :  2px solid #6f8a91;
-    /*background-color: #5C5C59;*/
+    border  :  2px solid #90a4a8;
     border-radius  :  3px;
-    box-shadow  :  1px 1px 2px rgba(0, 0, 0, 0.1);
+    background-color  :  #404448;
+    box-shadow  :  1px 1px 2px rgba(0, 0, 0, 0.2);
 
     -webkit-transition  :  opacity 2s;
        -moz-transition  :  opacity 2s;
@@ -259,7 +267,7 @@ article {
 
     font-size  :  1.2em;
     font-weight  :  bold;
-    color  :  #fff;
+    color  :  #eee;
     line-height  :  16px;
     text-align  :  center;
     letter-spacing  :  0.1em;
@@ -267,7 +275,9 @@ article {
 
     border  :  1px solid #ccc;
     border-radius  :  5px;
-    background-color  :  #5d837d;
+    /*background-color  :  #5d837d;*/
+    background-color  :  rgba(80, 84, 88, 0.8);
+    /*background-color  :  #b87d1e;*/
     box-shadow  :  2px 2px 2px rgba(0, 0, 0, 0.2);
 
     cursor  :  pointer;
@@ -303,6 +313,7 @@ article {
 
 #taxonomyArticle {
     position  :  relative;
+    /*text-shadow  :  1px 1px 1px black;*/
 
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
@@ -311,7 +322,7 @@ article {
 }
 
 .taxArticleMain {
-    padding  :  15px 0; text-shadow  :  1px 1px 2px #444;
+    padding  :  15px 0; text-shadow  :  1px 1px 1px black;
 }
 
 .taxArticleMain::before {
@@ -373,10 +384,10 @@ article {
     letter-spacing  :  0.15em;
     text-shadow  :  1px 1px 1px black;
 
-    border  :  1px solid #6f8a91;
+    border  :  1px solid #607478;
     border-top-left-radius  :  10%;
     border-bottom-right-radius  :  30%;
-    box-shadow  :  2px 2px 2px #6f8a91, 4px 4px 4px rgba(0, 0, 0, 0.3);
+    box-shadow  :  2px 2px 2px #607478, 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 #checklistOptions::before  {
@@ -452,12 +463,12 @@ article {
     padding  :  7px 0 0 0;
 
     font-size  :  1.2em;
-    color  :  #6d9892;
+    color  :  #ccc;
     text-align  :  center;
     text-decoration  :  none;
     text-shadow  :  rgba(0,0,0, 0.5) 1px 1px 1px;
 
-    border  :  3px solid rgba(109,152,146, 0.6);
+    border  :  3px solid #5d837d;
     border-radius  :  50%;
     background  :  #151510;
     box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -470,10 +481,9 @@ article {
 }
 #numDays a:hover,
 #numDays a:focus {
-    color  :  black;
-
+    /*color  :  black;*/
     border  :  3px solid rgba(60,60,60,0.5);
-    background-color  :  #6d9892;
+    background-color  :  #5d837d;
 
     transform  :  scale(1.2);
 }
@@ -482,10 +492,10 @@ article {
     top  :  -18px;
 
     color  :  black;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+    text-shadow  :  1px 1px 1px rgba(255,255,255,0.6);
 
     border  :  3px solid rgba(60,60,60,0.5);
-    background-color  :  #6d9892;
+    background-color  :  #5d837d;
     box-shadow  :  0 0 3px 3px rgba(60,60,60,0.5);
 
     transform  :  scale(1.6);
@@ -517,7 +527,8 @@ footer {
     border-top-right-radius  :  10px;
     border-bottom-right-radius  :  10px;
     border-bottom-left-radius  :  10px;
-    background  :  #6d9892;
+    background  :  #404448;
+    /*background  :  #a58a31;*/
     box-shadow  :  0 5px 0 transparent;
 }
 

@@ -1,46 +1,34 @@
 {
-    "version": "0.2.0",
+    "version": "0.1.0",
     "configurations": [
         {
-            "name": "Launch",
-            "type": "node",
+            "name": "Launch localhost with sourcemaps",
+            "type": "edge",
             "request": "launch",
-            "program": "${workspaceRoot}/app.js",
-            "stopOnEntry": false,
-            "args": [],
-            "cwd": "${workspaceRoot}",
-            "preLaunchTask": null,
-            "runtimeExecutable": null,
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "externalConsole": false,
-            "sourceMaps": false,
-            "outDir": null
+            "url": "http://localhost/home.html",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true
         },
         {
-            "name": "Attach",
-            "type": "node",
-            "request": "attach",
-            "port": 5858,
-            "address": "localhost",
-            "restart": false,
-            "sourceMaps": false,
-            "outDir": null,
-            "localRoot": "${workspaceRoot}",
-            "remoteRoot": null
+            "name": "Launch home.html (without sourcemaps)",
+            "type": "edge",
+            "request": "launch",
+            "file": "${workspaceRoot}/home.html"
         },
         {
-            "name": "Attach to Process",
-            "type": "node",
+            "name": "Attach with sourcemaps",
+            "type": "edge",
             "request": "attach",
-            "processId": "${command.PickProcess}",
-            "port": 5858,
-            "sourceMaps": false,
-            "outDir": null
+            "url": "http://10.0.0.10:8080/home.html", // optional: used to find the right tab running in Edge
+            "port": 9222,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to url with files served from ./out",
+            "type": "edge",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceRoot}/out"
         }
     ]
 }
