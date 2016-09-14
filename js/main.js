@@ -30,11 +30,12 @@ var taxonomyCountryButton;
 var map;
 var mapsCollection;
 
+
 /* global  initMapFactory prepareSVGstyles loadCountryTaxonomy selectedCountryFillColor currentMap selectedFillColor */
 
-// svg4everybody();
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", function(){
+  // document.getElementById("SAMsvg").addEventListener("SVGLoad", initCurrentMap);
 
   titleBanner = document.getElementById("bigBanner");
 
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
     el.addEventListener("click", choseCountry);
   });
 
-  document.getElementById("SAMsvg").addEventListener("SVGLoad", initCurrentMap);
+  // document.getElementById("SAMsvg").addEventListener("SVGLoad", initCurrentMap);
   initMapFactory();
 });
 
@@ -107,6 +108,8 @@ function onResizeWindow() {
 function initCurrentMap() {
 
   prepareSVGstyles("SAMsvg");
+
+  if (!map)  map = document.getElementById("currentMap");
   map.style.opacity = "1";
 }
 
@@ -131,11 +134,16 @@ function setFooterBannerDimensions()  {
   footer.style.width =  inner - rightFooterMargin + "px";
 
   titleBanner.style.left = -bodyLeftMargin + "px";
-  titleBanner.style.width = (0.4 * reducedBodyLeftMargin) + "px";
+  // document.getElementsByClassName("titleText")[0].style.left = (0.2 * reducedBodyLeftMargin) + "px";
+  var title = document.getElementsByClassName("titleText")[0];
+  // console.log(title.getBoundingClientRect().width);
+  title.style.left = (0.31 * reducedBodyLeftMargin) - title.getBoundingClientRect().width + 1 + "px";
 
-  titleBanner.style.lineHeight = parseInt(titleBanner.style.width) - 10 + "px";
+  titleBanner.style.width = (0.3 * reducedBodyLeftMargin) + "px";
 
-  mapsCollection.style.left = -reducedBodyLeftMargin + "px";
+  // titleBanner.style.lineHeight = parseInt(titleBanner.style.width) - 10 + "px";
+
+  mapsCollection.style.left = -bodyLeftMargin + "px";
   mapsCollection.style.width = inner + "px";
 }
 

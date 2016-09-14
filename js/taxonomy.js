@@ -126,9 +126,11 @@ function showSearchInstructions(state)  {
 
     searchSlideUpWrapper.style.height = searchSlideUpWrapper_height;
     searchSlideUpWrapper.style.borderWidth = "2px";
-    searchSlideUpWrapper.style.opacity = "1";
+    // searchSlideUpWrapper.style.opacity = 1;
 
-    searchInstructionsInfo.classList.remove("closed");
+    // searchInstructionsInfo.classList.remove("closed");
+    searchSlideUpWrapper.classList.remove("closeInstructions");
+
     searchInstructionsOpen = true;
 
     document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Close the search instructions";
@@ -136,11 +138,14 @@ function showSearchInstructions(state)  {
 
   else {
 
-    searchSlideUpWrapper.style.height = "0";
-    searchSlideUpWrapper.style.borderWidth = "0";
-    searchSlideUpWrapper.style.opacity = "0";
+    searchSlideUpWrapper.style.height = 0;
+    searchSlideUpWrapper.style.borderWidth = 0;
+    // searchSlideUpWrapper.style.opacity = 0;
 
-    searchInstructionsInfo.classList.add("closed");
+    searchSlideUpWrapper.classList.add("closeInstructions");
+// taxonomyArticle.classList.add("closeInstructions");
+
+    // searchInstructionsInfo.classList.add("closed");
     searchInstructionsOpen = false;
 
     document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Open the search instructions";

@@ -8,7 +8,7 @@ var currentID = 0;
 // var currentMap;
 // var mapsCollection;
 
-/* global  prepareSVGstyles highlightSAMmap  map lastIndex  */
+/* global  prepareSVGstyles highlightSAMmap mapsCollection map lastIndex  */
 
 function initMapFactory()  {
 
@@ -74,8 +74,8 @@ function saveCurrentMap()  {
   dupNode.removeAttribute("id");
 
   if (len === 0)  {
-    mapsCollection.style.height = "260px";
-    mapsCollection.style.margin = "40px 0 30px 0";
+    mapsCollection.style.height = "300px";
+    mapsCollection.style.margin = "30px 0 -35px 0";
   }
   else if (len >= 4)  {
     // currentMap.querySelector(".saveMapButton").style.display = "none";

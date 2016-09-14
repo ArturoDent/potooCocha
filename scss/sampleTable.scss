@@ -1,0 +1,462 @@
+$bgColor  :  #505458;
+
+#sampleTable  {
+    position  :  relative;
+    left  :  0;
+    width  :  94%;
+    min-width  :  480px;
+    margin  :  0 auto 0 auto;
+
+    font-size  :  12px;
+    font-weight  :  bold;
+    color  :  #eee;
+    text-align  :  center;
+    text-shadow  :  1px 1px 1px black;
+
+    empty-cells  :  show;
+    border-collapse  :  collapse;
+
+    border  :  none;
+}
+
+/*#sampleTable.smallFont        { font-size : 10px; margin-bottom : 29px;}
+#sampleTable.smallFont thead    { font-size : 9px; height : 18px;}
+#sampleTable.smallFont td       { padding  :  1px 0 1px 0px; letter-spacing  :  1px; }
+#sampleTable.smallFont td:first-child { padding  :  1px 0 1px 4px; letter-spacing  :  1px; }*/
+
+#sampleTable td   {
+    height  :  25px;
+    padding  :  2px 0 2px 0;
+
+    border  :  solid 1px #111;
+}
+
+#sampleTable thead       {
+    display  :  table-header-group;
+
+    height  :  25px;
+}
+
+#sampleTable tbody       {
+    display  :  table-row-group;
+}
+
+#sampleTable .cLfc,#sampleTable .cLfs  {
+    padding-top  :  10px;
+
+    font-weight  :  bold;
+    text-align  :  left;
+
+    border-right  :  hidden;
+    border-left  :  hidden;
+}
+
+#sampleTable .cLfs        {
+    text-align  :  left;
+}
+
+#sampleTable .cLc         {
+    padding  :  2px 0 2px 4px;
+
+    border-right  :  hidden;
+}
+
+#sampleTable .cLc,#sampleTable .cLs   {
+    text-align  :  left;
+}
+
+#sampleTable .cLc,#sampleTable .cLFc  {
+    width  :  155px;
+}
+
+#sampleTable .cLs,#sampleTable .cLFs  {
+    width  :  auto;
+}
+
+#sampleTable .cLs {  padding  :  2px 0 2px 0;
+
+    font-style  :  italic;
+}
+
+#sampleTable .fre         {
+    border-right  :  hidden;
+}
+
+#sampleTable .cds         {
+    border-right  :  3px double #111;
+}
+
+#sampleTable .rds         {
+    border-bottom  :  3px double #111;
+}
+
+#sampleTable thead         {
+    font-size  :  10px;
+
+    border  :  solid 1px #111;
+}
+
+/*  there is no tfoot in #sampleTable  */
+
+/*#sampleTable tfoot tr:first-child td  {
+ 	border-right   :  hidden;
+ 	border-left    :  hidden;
+ 	height         :  20px;
+ }
+ #sampleTable tfoot tr:last-child td   {  border : solid 1px #111;  height : 20px; }*/
+
+#sampleTable th   {
+    height  :  20px;
+
+    font-weight  :  bold;
+
+/*color  :  black;*/
+    text-shadow  :  0 0 1px rgba(0,0,0,0.5);
+
+    border  :  solid 1px #111;
+    background-color  :  transparent;
+}
+
+#sampleTable th:not(:first-child)   {
+    background-color  :  $bgColor;
+}
+
+.flashDays  {
+    animation-name  :  flashDays;
+    animation-duration  :  1.5s;
+    animation-timing-function  :  ease-out;
+    animation-delay  :  0.3s;
+}
+
+@keyframes flashDays {
+    0%,100% {
+        color  :  black;
+
+        transform  :  none;
+    }
+
+    50% {
+        background-color  :  white;
+
+        transform  :  scale(2);
+    }
+}
+
+#sampleTable th:first-child   {
+    border  :  solid 1px $bgColor;
+    border-right  :  solid 1px #000;
+}
+
+#sampleTable td   {
+    height  :  25px;
+    padding  :  2px 0 2px 0;
+
+    border  :  solid 1px #111;
+}
+
+#sampleTable td.familyHidden   {
+    border  :  solid 1px $bgColor;
+}
+
+#sampleTable td.familyHidden.show   {
+    border-bottom  :  solid 1px #111;
+}
+
+#sampleTable td.leftCheckBox   {
+    border  :  solid 1px #111;
+    border-top  :  transparent;
+    border-bottom  :  transparent;
+    border-left  :  transparent;
+}
+
+#sampleTable td.leftCheckBox.show   {
+    width  :  25px;
+
+    border  :  solid 1px #111;
+}
+
+.centerText  {
+    text-align  :  center;
+}
+
+#sampleTable td.double-separator 	{
+    border-right  :  3px double #111;
+}
+
+.noScientificNames .cLfc                  {
+    letter-spacing  :  0.1em;;
+}
+
+.noScientificNames .cLfs                  {
+    visibility  :  hidden;
+}
+
+#sampleTable.noScientificNames .cLc       {
+    padding  :  2px 5px 2px 5px;
+
+    letter-spacing  :  0.1em;
+}
+
+#sampleTable.noScientificNames .cLs       {
+    opacity  :  0;
+}
+
+#sampleTable.noItalics .cLs               {
+    font-style  :  normal;
+}
+
+.showLineNumbers     {
+    position  :  relative;
+}
+
+.showLineNumbers::before  {
+    content  :  '5';
+
+    position  :  absolute;
+    top  :  3.5px;
+    left  :  -22px;
+    width  :  17px;
+    height  :  17px;
+
+    font-size  :  11px;
+    color  :  #ddd;
+    line-height  :  14px;
+    text-align  :  center;
+    text-shadow  :  rgba(0,0,0,0.3) 1px 1px 1px;
+
+    border  :  1px solid black;
+    border-radius  :  50%;
+    background  :  black;
+}
+
+.showEndemics     {
+    position  :  relative;
+}
+
+/*         order of the next three is important!          */
+
+.showEndemics::before  {
+    content  :  'e';
+
+    position  :  absolute;
+    top  :  3.5px;
+    left  :  -22px;
+    width  :  17px;
+    height  :  17px;
+
+    font-size  :  12px;
+    color  :  #ddd;
+    line-height  :  11px;
+    text-align  :  center;
+    text-shadow  :  rgba(0,0,0,0.3) 1px 1px 1px;
+
+    border  :  1px solid black;
+    border-radius  :  50%;
+    background  :  black;
+}
+
+#sampleTable.numDays0 .cLs   {
+    border-right  :  1px solid #111;
+}
+
+#sampleTable.numDays0   th   {
+    border  :  1px solid #555;
+}
+
+#sampleTable.numDays1   th   {
+    width  :  50px;
+}
+
+#sampleTable.numDays2   th   {
+    width  :  46px;
+}
+
+#sampleTable.numDays3   th   {
+    width  :  42px;
+}
+
+#sampleTable.numDays4   th   {
+    width  :  38px;
+}
+
+#sampleTable.numDays5   th   {
+    width  :  34px;
+}
+
+#sampleTable.numDays6   th   {
+    width  :  32px;
+}
+
+#sampleTable.numDays7   th   {
+    width  :  30px;
+}
+
+#sampleTable.numDays8   th   {
+    width  :  28px;
+}
+
+#sampleTable.numDays9   th   {
+    width  :  26px;
+}
+
+#sampleTable.numDays10  th   {
+    width  :  24px;
+}
+
+#sampleTable.numDays11  th   {
+    width  :  23px;
+}
+
+#sampleTable.numDays12  th   {
+    width  :  22px;
+}
+
+.numDays11 th:nth-child(n+13)   {
+    display  :  none;
+}
+
+.numDays10 th:nth-child(n+12)   {
+    display  :  none;
+}
+
+.numDays9  th:nth-child(n+11)   {
+    display  :  none;
+}
+
+.numDays8  th:nth-child(n+10)   {
+    display  :  none;
+}
+
+.numDays7  th:nth-child(n+9)    {
+    display  :  none;
+}
+
+.numDays6  th:nth-child(n+8)    {
+    display  :  none;
+}
+
+.numDays5  th:nth-child(n+7)    {
+    display  :  none;
+}
+
+.numDays4  th:nth-child(n+6)    {
+    display  :  none;
+}
+
+.numDays3  th:nth-child(n+5)    {
+    display  :  none;
+}
+
+.numDays2  th:nth-child(n+4)    {
+    display  :  none;
+}
+
+.numDays1  th:nth-child(n+3)    {
+    display  :  none;
+}
+
+.numDays0  th:nth-child(n+2)    {
+    display  :  none;
+}
+
+.numDays11 td:nth-child(n+15)   {
+    display  :  none;
+}
+
+.numDays10 td:nth-child(n+14)   {
+    display  :  none;
+}
+
+.numDays9  td:nth-child(n+13)   {
+    display  :  none;
+}
+
+.numDays8  td:nth-child(n+12)   {
+    display  :  none;
+}
+
+.numDays7  td:nth-child(n+11)   {
+    display  :  none;
+}
+
+.numDays6  td:nth-child(n+10)   {
+    display  :  none;
+}
+
+.numDays5  td:nth-child(n+9)    {
+    display  :  none;
+}
+
+.numDays4  td:nth-child(n+8)    {
+    display  :  none;
+}
+
+.numDays3  td:nth-child(n+7)    {
+    display  :  none;
+}
+
+.numDays2  td:nth-child(n+6)    {
+    display  :  none;
+}
+
+.numDays1  td:nth-child(n+5)    {
+    display  :  none;
+}
+
+.numDays0  td:nth-child(n+4)    {
+    display  :  none;
+}
+
+@media screen and (max-width:590px)  {
+    #sampleTable     {
+        min-width  :  400px;
+
+        font-size  :  11px;
+    }
+
+    #sampleTable th  {
+        width  :  21px;
+    }
+
+    .leftCheck::before  {
+        top  :  -7px;
+        left  :  -37px;
+
+        font-size  :  48px;
+    }
+
+    .showLineNumbers::before  {
+        top  :  3px;
+        left  :  -23px;
+        width  :  16px;
+        height  :  16px;
+
+        font-size  :  9px;
+        line-height  :  14px;
+    }
+
+    .showEndemics::before  {
+        top  :  3px;
+        left  :  -23px;
+        width  :  16px;
+        height  :  16px;
+
+        font-size  :  9px;
+        line-height  :  12px;
+    }
+
+    .leftCheck.showEndemics::after  {
+        top  :  -25px;
+        left  :  -37px;
+
+        font-size  :  48px;
+    }
+
+    .leftCheck.showLineNumbers::after  {
+        top  :  -25px;
+        left  :  -37px;
+        height  :  0;
+
+        font-size  :  48px;
+    }
+}
