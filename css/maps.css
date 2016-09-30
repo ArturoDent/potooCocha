@@ -1,22 +1,15 @@
 #mapsCollection  {
     position  :  relative;
     top  :  -25px;
-    /*left  :  -25%;*/
-    left  :  0;
-    /*width  :  70vw;*/
-    /*width  :  auto;*/
+    left  :  -10vw;
+    width : 67vw;
     height  :  0;
     margin  :  0;
     padding  :  0;
 
     text-align  :  center;
-    /*scroll-x: auto;*/
-    /*scroll-y: none;*/
 
     overflow-x  :  visible;
-    /*background  :  #404448;*/
-    /*background  :  transparent;*/
-
     transition  :  all 1.5s;
 }
 
@@ -29,8 +22,6 @@
         -ms-transform-origin  :  0 50%;
          -o-transform-origin  :  0 50%;
             transform-origin  :  0 50%;
-
-    /*transition: all 1s;*/
 }
 
 .thinify  {
@@ -43,17 +34,8 @@
     margin-top  :  -50px;
     margin-right  :  -15px;
     margin-bottom  :  -50px;
-    /*background  :  #404448;*/
 
     transition  :  all 1s;
-}
-
-.removed {
-    -webkit-flex  :  0.00001 0 auto;
-    /*Setting this to zero breaks the transition */
-    /*flex-grow: 0.00001;*/
-        -ms-flex  :  0.00001 0 auto;
-            flex  :  0.00001 0  auto;
 }
 
 .birdName  {
@@ -63,9 +45,8 @@
     padding  :  0;
 
     font-size  :  1.2rem;
-    color  :  white;
+    color  :  black;
     text-align  :  center;
-    text-shadow  :  rgba(0, 0, 0, 0.5) 1px 1px 1px;
 
     border-radius  :  3px;
     background  :  transparent;
@@ -73,7 +54,6 @@
 
 #currentMap .birdName {
     top  :  -20px;
-    /*width:  calc( 100% - 55px );*/
 }
 
 .birdName > span:last-Child   {
@@ -84,13 +64,9 @@
     top  :  -22px;
     left  :  0;
     width  :  calc(100% + 15px);
-    /*height  :  auto;*/
-    /*padding  :  5px 0 0 5px;*/
 
-    color  :  white;
-    /*padding: 5px 0;*/
+    color  :  black;
     line-height  :  15px;
-    text-shadow  :  rgba(0, 0, 0, 1) 1px 1px 1px;
 
     background  :  transparent;
 
@@ -101,9 +77,8 @@
     opacity  :  0;
 
     position  :  fixed;
-    /*top  :  20%;*/
     top  :  calc(50vh - 227px);
-    left  :  67%;
+    left  :  67vw;
     width  :  275px;
     height  :  455px;
     margin  :  0 0 0 5px;
@@ -118,8 +93,7 @@
 }
 
 #currentMap.modal-shrink {
-    /*transform  :  rotateY(70deg);*/
-    transform  :  translateX(-200px);
+    transform  :  translateX(-140px);
 }
 
 #currentMap .deleteMapButton {
@@ -142,10 +116,6 @@
 
 #currentBirdMap {
     background  :  transparent;
-
-    /*-webkit-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
-       -ms-filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );
-           filter: drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -2px -2px 2px rgba(0,0,0,0.3) );*/
 }
 
 .mapButtons {
@@ -195,9 +165,9 @@
 
     text-shadow  :  none;
 
-    -webkit-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
-        -ms-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
-            filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
+    -webkit-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.3) );
+        -ms-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.3) );
+            filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.3) );
 
     transition  :  all 1s;
 }
@@ -205,33 +175,6 @@
 .drawing.smallBirdDrawing {
     height  :  0;
 }
-
-/*these do nothing when using <object> to embed a svg
-
-#SAMsvg g, #SAMsvg path {
-  fill: #555;
-  transition: fill 1s;
-}
-
-g, path {
-  stroke: #333;
-  stroke-width: 1px;
-}
-
-#SAM g:hover, #SAM path:hover {
-  fill :  goldenrod;
-  stroke: #888;
-}
-
-g.endemic, path.endemic            { fill: #C23BC3;  }
-g.extinct, path.extinct            { fill: #ddd;     }
-g.resident, path.resident          { fill: #3030cc;  }
-g.nonBreeder, path.nonBreeder      { fill: #ff9900;  }
-g.vagrant, path.vagrant            { fill: #ffff00;  }
-g.hypothetical, path.hypothetical  { fill: #33cc66;  }
-g.introduced, path.introduced      { fill: #101010;  }
-g.baseColor, path.baseColor        { fill: #555;     }
-g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
 
 .colorKey {
     opacity  :  0.9;
@@ -241,13 +184,6 @@ g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
     left  :  165px;
 
     transition  :  opacity 350ms;
-    /*z-index: -1;*/
-}
-
-.colorKey.smallBirdKey  {
-    top  :  240px;
-    left  :  175px;
-    /*bottom-margin: -60px;*/
 }
 
 .colorKey ul {
@@ -256,15 +192,13 @@ g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
 
 .colorKey ul li {
     position  :  relative;
-    width  :  100px;
-    margin-top  :  6px;
-    /*width: auto;*/
+    width  :  auto;
+    margin-top  :  4px;
 
     font-size  :  0.9em;
     text-align  :  center;
-    /*font-weight: bold;*/
-    letter-spacing  :  0.1em;
-    text-shadow  :  rgba(0, 0, 0, 0.5) 1px 1px 1px;
+    letter-spacing  :  0.2em;
+    text-shadow  :  rgba(0, 0, 0, 0.4) 1px 1px 1px;
 
     list-style-type  :  none;
 }
@@ -285,14 +219,18 @@ g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
 
 .colorKey ul li:nth-child(2) {
     /* hypothetical  */
-    color  :  #3c6;
+    padding : 1px 4px 2px 4px;
+    color  :  white;
+    text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
+    background  :  #23bc56;
 }
 
 .colorKey ul li:nth-child(3) {
     /* nonbreeder    */
-    color  :  #f90;
-    /*background-color: #ff9900;
-  text-shadow:  none;*/
+    padding : 1px 4px 2px 4px;
+    color  :  white;
+    text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
+    background  :  #df7920;
 }
 
 .colorKey ul li:nth-child(4) {
@@ -302,34 +240,18 @@ g.baseStrokeColor, path.baseStrokeColor        { fill: #555;     }*/
 
 .colorKey ul li:nth-child(5) {
     /* extinct       */
-    color  :  #ddd;
+    color  :  #fff;
 }
 
 .colorKey ul li:nth-child(6) {
     /* resident      */
-    padding  :  0 4px 2px 4px;
-
     color  :  #3030cc;
     text-shadow  :  rgba(0, 0, 0, 0.3) 1px 1px 1px;
-
-    background  :  #aaa;
 }
 
 .colorKey ul li:nth-child(7) {
     /* endemic       */
-    /*position    :  absolute;*/
-    /*top:          0px;*/
-    top  :  3px;
-    left  :  -100px;
-    width  :  200px;
-    padding  :  0 0 2px 101px;
-
+    padding  :  0 0 2px 0;
     color  :  white;
-
     background-color  :  #c23bc3;
 }
-
-/*a[title]:hover:after {
-  content: attr(title);
-  position: absolute;
-}*/

@@ -3,7 +3,8 @@
         ".git/**",
         "node_modules/**",
         "bower_components/**",
-        "./css/*.css"
+        "./css/*.css",
+        "./scss/*.scss"
     ],
 
     "remove-empty-rulesets": true,

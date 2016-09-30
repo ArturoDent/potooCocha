@@ -1,4 +1,8 @@
-$bgColor  :  #505458;
+$bgColor  :  #959A93;
+$bannerColor  :  #666;
+$genericButtonColor  :  #A65751;
+$panelColor : #B1B7AE;
+$panelFlyoutColor : #6f8a91;
 
 /*  from "CSS Secrets" by Lea Verou  */
 
@@ -19,15 +23,14 @@ input + label::before  {
     margin-bottom  :  15px;
     padding  :  0.05em 0.15em;
 
-    border  :  1px solid white;
+    // font-size : 1.6rem;
 
-/*background        :  #9A8a6F;*/
-    background  :  $bgColor;
-
-    ;
+    border  :  1px solid currentColor;
+    background  :  $panelColor;
 }
 
 input[type='checkbox'] + label::before  {
+
     border-radius  :  0.2em;
 }
 
@@ -47,12 +50,15 @@ input[type='checkbox']:checked + label::before   {
 
 /*color             :  rgba(234,164,40,1.0);*/
     /*color             :  rgba(255,255,0,1);*/
-    color  :  #ddd;
+    // color  :  #ddd;
+    color : $genericButtonColor;
+
+    border  :  1px solid currentColor;
 
 /*border            :  2px solid rgba(255,255,255,0.8);*/
     /*background        :  #9A8a6F;*/
 
-    background  :  rgb(30,30,30);
+    // background  :  rgb(30,30,30);
 }
 
 input[type='radio']:checked + label::before  {
@@ -65,31 +71,29 @@ input[type='radio']:checked + label::before  {
 
     font-weight  :  900;
 
-/*color             :  rgba(234,164,40,1.0);*/
-    /*color             :  rgba(255,255,0,1);*/
-    color  :  #ddd;
+    color : $genericButtonColor;
+    border  :  1px solid currentColor;
 
-/*border            :  2px solid rgba(255,255,255,0.8);*/
-
-    background  :  $bgColor;
+    background  :  $panelColor;
 }
 
 input[type='checkbox']:checked + label,input[type='radio']:checked + label     {
-    margin-left  :  -6px;
+    margin-left  :  -7px;
     padding  :  6px 7px 6px 6px;
 
-/*color             :  ;*/
+    color : $genericButtonColor;
+    border  :  1px solid currentColor;
 
     border-radius  :  5px;
-    background-color  :  rgb(30,30,30);
 }
 
 input[type='checkbox']:hover + label:hover,input[type='radio']:hover + label:hover     {
-    margin-left  :  -6px;
+    margin-left  :  -7px;
     padding  :  6px 7px 6px 6px;
+    color : $genericButtonColor;
 
+    border : 1px solid $genericButtonColor;
     border-radius  :  5px;
-    background-color  :  rgb(30,30,30);
 
     cursor  :  pointer;
 }
@@ -106,14 +110,14 @@ input[type='checkbox']:disabled:hover + label:hover,input[type='radio']:disabled
 }
 
 input[type='checkbox']:disabled + label::before,input[type='radio']:disabled + label::before         {
-    color  :  rgba(200,200,200,0.3);
+    color  :  rgba(60,60,60,0.3);
 
     border  :  1px solid rgba(200,200,200,0.4);
     background  :  none;
 }
 
 input[type='checkbox']:disabled + label  {
-    color  :  rgba(200,200,200,0.5);
+    color  :  rgba(60,60,60,0.5);
     text-shadow  :  none;
 
     background  :  none;

@@ -17,18 +17,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-
+  width: calc(100vw - 17px);
   height: 100vh;
   margin: 0;
   padding: 0;
   z-index: 10;
   border: none;
-  background: #959A93;
+  background: rgba(40, 40, 40, 0.85);
   transition: opacity 750ms; }
 
 .md-show ~ .md-overlay {
-  opacity: 0.8;
+  opacity: 1;
   visibility: visible; }
 
 .country-menu-wrap {
@@ -38,12 +37,12 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  /*flex-grow           :  1;*/
   justify-content: space-around;
   height: 100vh;
   padding: 8px 0 20px 0;
   align-items: center;
-  background-color: #ddd;
-
+  background-color: #959A93;
   box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.4); }
 
 .country-menu-wrap::before {
@@ -54,21 +53,30 @@
   left: -45px;
   width: 45px;
   height: calc(100vh + 5px);
- }
+  /*background  :  #444;*/ }
 
 .country-menu a {
   position: relative;
   width: 152px;
   padding: 3px 0 5px 12px;
-  color: #313131;
   text-decoration: none;
   overflow: visible;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: transparent;
-  box-shadow: 2px 2px 4px transparent;
-}
+  border-top: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer; }
 
+/*.country-menu a::before {
+  	content: " ";
+     background-image: url(attr(data-url));
+     background-size: 32px;
+     background-size: contain;
+     width: 32px;
+     height: 32px;
+     display: inline-block;
+     	 content: attr(data-url);
+ 	position: absolute;
+ 	left: -30px;
+ }*/
 .country-menu a::before {
   content: ' ';
   display: inline-block;
@@ -78,6 +86,7 @@
   width: 32px;
   height: 32px;
   /*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
+  /*background-size  :  32px;*/
   background-size: contain; }
 
 .country-menu a:nth-child(1)::before {
@@ -142,12 +151,16 @@
 
 .country-menu a.taxHighlight {
   color: white;
-  background-color: #567;
+  text-decoration: none;
+  border-top: 1px solid #567;
+  background-color: #313131;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
 
 .country-menu a.checkHighlight {
   color: white;
-  background-color: #567;
+  text-decoration: none;
+  border-top: 1px solid #567;
+  background-color: #313131;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
 
 .country-menu a.taxHighlight::after {
@@ -170,10 +183,10 @@
 
 .country-menu a:hover, .country-menu a:focus {
   color: white;
-  background-color: #567;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  transition : all 550ms;
-}
+  text-decoration: none;
+  border-top: 1px solid #567;
+  background-color: #313131;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
 
 @media screen and (max-width: 840px) {
   .md-modal {

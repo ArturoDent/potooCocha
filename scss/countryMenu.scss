@@ -1,4 +1,9 @@
-$bgColor  :  #505458;
+$bgColor  :  #959A93;
+$bannerColor  :  #444;
+$genericButtonColor  :  #A65751;
+$panelColor : #B1B7AE;
+$panelFlyoutColor : #6f8a91;
+
 
 .md-modal {
     position  :  fixed;
@@ -41,7 +46,7 @@ $bgColor  :  #505458;
 
 .country-menu-wrap  {
     font-size  :  1em;
-    color  :  white;
+    // color  :  white;
 }
 
 .country-menu {
@@ -55,7 +60,7 @@ $bgColor  :  #505458;
     height  :  100vh;
     padding  :  8px 0 20px 0;
 
-    text-shadow  :  rgba(0, 0, 0, 0.9) 1px 1px 1px;
+    // text-shadow  :  rgba(0, 0, 0, 0.9) 1px 1px 1px;
 
     align-items  :  center;
 
@@ -81,7 +86,7 @@ $bgColor  :  #505458;
     width  :  152px;
     padding  :  3px 0 5px 12px;
 
-    color  :  #ddd;
+    // color  :  #ddd;
     text-decoration  :  none;
 
     overflow  :  visible;
@@ -115,7 +120,7 @@ $bgColor  :  #505458;
     width  :  32px;
     height  :  32px;
 
-    filter  :  brightness(0.7);
+    // filter  :  brightness(0.7);
 
 /*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
     /*background-size  :  32px;*/
@@ -207,7 +212,7 @@ $bgColor  :  #505458;
     position  :  absolute;
     left  :  -70px;
 
-    color  :  white;
+    // color  :  white;
 
     background  :  none;
 }
@@ -218,7 +223,7 @@ $bgColor  :  #505458;
     position  :  absolute;
     left  :  -70px;
 
-    color  :  white;
+    // color  :  white;
 
     background  :  none;
 }
@@ -229,7 +234,7 @@ $bgColor  :  #505458;
     position  :  absolute;
     left  :  -75px;
 
-    color  :  white;
+    // color  :  white;
 
     background  :  none;
 }

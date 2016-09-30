@@ -7,7 +7,8 @@ var italics;
 var lineNumbers;
 var showEndemics;
 
-var titleBanner;
+// var titleBanner;
+// var footer;
 
 var currentChecklistCountry;
 var currentChecklistCountryElement;
@@ -33,10 +34,15 @@ var mapsCollection;
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  titleBanner = document.getElementsByClassName("titleBanner")[0];
+  // titleBanner = document.getElementById("bigBanner");
+
+  // footer = document.getElementsByTagName("footer")[0];
 
   map   =  document.getElementById("currentMap");
   mapsCollection = document.querySelector("#mapsCollection");
+
+  // setFooterBannerDimensions();
+  // setBannerDimensions();
 
   window.addEventListener("resize", onResizeWindow);
 
@@ -86,9 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", choseCountry);
   });
 
-  toggleSampleTableLeftChecks();
-  leftCheck.checked = true;
-
   initMapFactory();
 });
 
@@ -105,6 +108,50 @@ function initCurrentMap() {
 
   if (!map)  map = document.getElementById("currentMap");
   map.style.opacity = "1";
+}
+
+// function setBannerDimensions() {
+
+//   // footer.style.display = "none";
+
+//   // var bodyHeight = document.body.getBoundingClientRect().height;
+//   // console.log("bodyHeight = " + bodyHeight);
+//   // top : 132vh;
+//   // width : 132vh;
+
+//   // titleBanner.style.width = bodyHeight + "px";
+//   // titleBanner.style.top = titleBanner.style.width;
+
+// }
+
+function setFooterBannerDimensions()  {
+
+  var bodyLeftMargin = document.body.getBoundingClientRect().left;
+  var reducedBodyLeftMargin = bodyLeftMargin;
+
+  if (document.documentElement.clientWidth <= 1024) {
+    document.getElementsByClassName("articles")[0].style.left = -(0.8 * bodyLeftMargin) + "px";
+    return;
+  }
+  else {
+    document.getElementsByClassName("articles")[0].style.left = -(0.7 * bodyLeftMargin) + "px";
+    reducedBodyLeftMargin = 0.7 * bodyLeftMargin;
+  }
+
+  var rightFooterMargin = 0.35 * bodyLeftMargin;
+  var inner = document.documentElement.clientWidth;
+
+  footer.style.left  =  -bodyLeftMargin + "px";
+  footer.style.width =  inner - rightFooterMargin + "px";
+
+  titleBanner.style.left = -bodyLeftMargin + "px";
+  var title = document.getElementsByClassName("titleText")[0];
+  title.style.left = (0.27 * reducedBodyLeftMargin) - title.getBoundingClientRect().width + 1 + "px";
+
+  titleBanner.style.width = (0.3 * reducedBodyLeftMargin) + "px";
+
+  mapsCollection.style.left = -bodyLeftMargin + "px";
+  mapsCollection.style.width = inner + "px";
 }
 
 function showCountryModal(evt)  {
@@ -296,6 +343,7 @@ function getCSVText()  {
     form.setAttribute("method", "post");
     form.setAttribute("action", "../php/sendCSV.php?country=" + currentChecklistCountry + "");
 
+    // $("body").append(form);
     document.body.appendChild(form);
 
     form.submit();

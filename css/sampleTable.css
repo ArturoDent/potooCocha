@@ -6,9 +6,7 @@
   margin: 0 auto 0 auto;
   font-size: 12px;
   font-weight: bold;
-  color: #eee;
   text-align: center;
-  text-shadow: 1px 1px 1px black;
   empty-cells: show;
   border-collapse: collapse;
   border: none; }
@@ -80,12 +78,11 @@
   height: 20px;
   font-weight: bold;
   /*color  :  black;*/
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   border: solid 1px #111;
   background-color: transparent; }
 
 #sampleTable th:not(:first-child) {
-  background-color: #505458; }
+  background-color: #B1B7AE; }
 
 .flashDays {
   animation-name: flashDays;
@@ -102,7 +99,7 @@
     transform: scale(2); } }
 
 #sampleTable th:first-child {
-  border: solid 1px #505458;
+  border: solid 1px #B1B7AE;
   border-right: solid 1px #000; }
 
 #sampleTable td {
@@ -111,20 +108,24 @@
   border: solid 1px #111; }
 
 #sampleTable td.familyHidden {
-  border: solid 1px #505458; }
+  border: solid 1px #B1B7AE; }
 
 #sampleTable td.familyHidden.show {
   border-bottom: solid 1px #111; }
 
 #sampleTable td.leftCheckBox {
-  border: solid 1px #111;
-  border-top: transparent;
-  border-bottom: transparent;
-  border-left: transparent; }
+  width : 0;
+  /*border : solid 1px #111;*/
+  /*border-top: transparent;*/
+  /*border-bottom: transparent;*/
+  /*border-left: transparent;*/
+  transition : width 250ms;
+}
 
 #sampleTable td.leftCheckBox.show {
   width: 25px;
-  border: solid 1px #111; }
+  /*border: solid 1px #111;*/
+}
 
 .centerText {
   text-align: center; }
@@ -162,7 +163,6 @@
   color: #ddd;
   line-height: 14px;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
   border: 1px solid black;
   border-radius: 50%;
   background: black; }
@@ -182,7 +182,6 @@
   color: #ddd;
   line-height: 11px;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
   border: 1px solid black;
   border-radius: 50%;
   background: black; }

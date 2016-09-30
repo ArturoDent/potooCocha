@@ -1,43 +1,44 @@
-$bgColor  :  #505458;
-$genericButtonColor  :  #3f4a51;
+$bgColor  :  #959A93;
+$bannerColor  :  transparent;
+$genericButtonColor  :  #A65751;
+$panelColor : #B1B7AE;
+$panelFlyoutColor : rgba(82,104,112,1);
+$birdRolloverColor : #6f8a91;
 
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 
 .slideUpWrapper  {
     opacity  :  1;
 
-// -webkit-transition  :  height 500ms, opacity 600ms;
-    //    -moz-transition  :  height 500ms, opacity 600ms;
-    //      -o-transition  :  height 500ms, opacity 600ms;
-    //         transition  :  height 500ms, opacity 600ms;
-    visibility  :  visible;
-
-// height  :  auto;
-    /*text-shadow  :  1px 1px 2px #222;*/
-
     pointer-events  :  auto;
 
     border-top-left-radius  :  5px;
     border-top-right-radius  :  10%;
 
-    // transition  :  all 750ms;
-
-    // transform  :  scaleY(1);
-    // transform  :  translateY(0);
+    transition  :  color 350ms, height 350ms 250ms, opacity 350ms 450ms, all 350ms 450ms;
 }
 
 .slideUpWrapper.closeInstructions  {
     opacity  :  0;
-    visibility  :  hidden;
-
-// opacity  :  0;
-    // transition  :  opacity 500ms ease-in-out;
-    // transform  :  scaleY(0);
-    // transform  :  translateY(-50%);
+    color : $bgColor;
 
     height  :  0;
+    transform : scale(0.8) translateY(30px);
 
-    transition  :  all 350ms;
+    transition  :  color 350ms, height 350ms 250ms, opacity 350ms 450ms;
+}
+
+.slideUpWrapper.hovering  {
+
+    opacity : 0.7;
+    transform : scale(0.8) translateY(30px);
+    transition : all 750ms;
+}
+
+
+.slideUpWrapper.closeInstructions path {
+    stroke : $bgColor;
+    transition : stroke 350ms 450ms;
 }
 
 .taxInstructionsButton  {
@@ -51,13 +52,12 @@ $genericButtonColor  :  #3f4a51;
 
     font-size  :  1.2em;
     font-weight  :  bold;
-    color  :  white;
+    color  :  #eee;
     text-align  :  center;
-    text-shadow  :  1px 1px 0 #333;
 
     border-radius  :  50%;
     border-bottom-left-radius  :  0;
-    background  :  $genericButtonColor;
+    background  :  $panelFlyoutColor;
     box-shadow  :  0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
 
     cursor  :  pointer;
@@ -68,16 +68,16 @@ $genericButtonColor  :  #3f4a51;
 }
 
 .taxInstructionsButton:hover {
-    background  :  #4a6862;
-    /*will-change        :  ;*/
+    background  :  #444;
 }
 
 .taxInstructionsButton:hover + div.slideUpWrapper {
-    /*text-shadow  :  none;*/
     will-change  :  height, opacity, border-width;
+}
 
-    border-color  :  darkgray;
-    // background  :  $genericButtonColor;
+
+.taxInstructionsButton.instructionsClosed  {
+    left : 100%;
 }
 
 #searchForm  {
@@ -87,14 +87,11 @@ $genericButtonColor  :  #3f4a51;
 
     position  :  relative;
     padding  :  0 15px 20px 15px;
-
-/*text-shadow  :  1px 1px 2px #222;*/
+    margin-top : 10px;
 
     align-content  :  center;
 
-    border-bottom  :  2px solid #6f8a91;
-    background  :  #252525;
-    box-shadow  :  0 2px 2px #222;
+    border-bottom  :  none;
 
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
@@ -117,7 +114,7 @@ $genericButtonColor  :  #3f4a51;
 }
 
 #searchForm span.grayed  {
-    opacity  :  0.2;
+    opacity  :  0.6;
 
     pointer-events  :  none;
 }
@@ -139,11 +136,9 @@ $genericButtonColor  :  #3f4a51;
 
          -o-user-select  :  text;
 
-    border  :  1px inset rgba(0,0,0,0.7);
+    border  :  1px inset rgba(0,0,0,0.3);
     border-radius  :  5px;
-    background  :  #4c4c4c;
-
-/*-webkit-touch-callout  :  default;*/
+    background  :  $bgColor;
 
     -webkit-user-select  :  text;
        -moz-user-select  :  text;
@@ -153,7 +148,6 @@ $genericButtonColor  :  #3f4a51;
 
 #searchInput:focus  {
     outline  :  none;
-
     cursor  :  text;
 }
 
@@ -179,13 +173,11 @@ $genericButtonColor  :  #3f4a51;
     justify-content  :  space-between;
 
     position  :  relative;
-    left  :  -2px;
-    width  :  calc(100% + 5px);
+    left  :  -30px;
+    width  :  calc(100% + 60px);
     margin  :  25px 0 0 0;
-    z-index  :  2;
 
-    font-size  :  1.1rem;
-
+    font-size  :  1.2rem;
     pointer-events  :  auto;
 
     -webkit-transition  :  opacity 500ms;
@@ -195,15 +187,24 @@ $genericButtonColor  :  #3f4a51;
 }
 
 #searchSpecials.grayed  {
-    opacity  :  0.2;
+    opacity  :  0.6;
 
     pointer-events  :  none;
 }
 
 #searchSpecials a  {
-    border-bottom  :  solid 1px #aaa;
+    padding : 2px 10px 4px 10px;
+    color : white;
+    text-shadow : 1px 1px 1px rgba(0,0,0,0.5);
+    border-radius : 2px;
+    background : $genericButtonColor;
 
     cursor  :  pointer;
+    transition : background 350ms;
+}
+
+#searchSpecials a:hover  {
+    background : #333;
 }
 
 #searchSpecials span.notAvailable  {
@@ -223,11 +224,8 @@ $genericButtonColor  :  #3f4a51;
     height  :  auto;
     margin-top  :  0;
     padding-top  :  0;
-    padding-bottom  :  15px;
+    padding-bottom  :  5px;
     z-index  :  1;
-
-    border-top  :  2px solid #6f8a91;
-    box-shadow  :  0 1px 1px  rgba(0, 0, 0, 0.2);
 
     transition  :  opacity 350ms 200ms;
 }
@@ -238,7 +236,6 @@ $genericButtonColor  :  #3f4a51;
     position  :  relative;
     left  :  -18px;
     width  :  calc(100% + 36px);
-    margin  :  0 0 20px 0;
 
     font-size  :  1.5rem;
     font-variant  :  small-caps;
@@ -246,13 +243,11 @@ $genericButtonColor  :  #3f4a51;
     line-height  :  34px;
     text-align  :  center;
     letter-spacing  :  0.1em;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.3);
 
     border-right  :  22px solid $bgColor;
-    border-bottom  :  2px solid #6f8a91;
     border-left  :  22px solid $bgColor;
-    background  :  #6f8a91;
-    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 -6px 5px -5px rgba(0,0,0,0.3);
+    background  :  $panelFlyoutColor;
+    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 -5px 4px -4px rgba(0,0,0,0.3);
 }
 
 #searchResults  {
@@ -260,35 +255,35 @@ $genericButtonColor  :  #3f4a51;
 
     position  :  relative;
     left  :  0;
-    width  :  calc(100% + 25px);
+    width  :  calc(100% + 30px);
     height  :  auto;
-    min-height  :  55px;
+    min-height  :  70px;
     max-height  :  300px;
     margin  :  0 0 0 -15px;
-    padding  :  0 0 0 5px;
+    padding  :  0 0 0 0;
 
     font-size  :  1.2rem;
-    line-height  :  1.27em;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.7);
+    line-height  :  1.15em;
+    border-top  :  10px solid transparent;
+    border-bottom  :  5px solid transparent;
 
+    box-shadow : 0 -1px 0 white;
     -webkit-overflow-scrolling  :  touch;
 
     overflow-x  :  hidden;
     overflow-y  :  auto;
-
     cursor  :  pointer;
     transition  :  height 350ms;
 }
 
 #searchResults.fadeIn  {
     opacity  :  1;
-
     transition  :  all 2s;
 }
 
 #searchResults li  {
     margin  :  1px 0 1px 0;
-    padding  :  0 0 2px 11px;
+    padding  :  0 0 2px 16px;
 
     list-style-type  :  none;
 }
@@ -308,14 +303,9 @@ $genericButtonColor  :  #3f4a51;
     height  :  0;
 }
 
-#searchResults li:hover  {color  :  black;
-    text-shadow  :  none;
-
-    background-color  :  #6d9892;
-}
-
-#searchResults li.active:hover {
-    text-shadow  :  none;
+#searchResults li:hover  {
+    color  :  white;
+    background-color  :  $birdRolloverColor;
 }
 
 #searchResults li:not(.family) span:first-child  {
@@ -323,24 +313,18 @@ $genericButtonColor  :  #3f4a51;
 }
 
 #searchResults li.active  {
-    color  :  black;
-    text-shadow  :  none;
-
-    background-color  :  #6d9892;
+    color  :  white;
+    background-color  :  #444;
 }
 
 .family   {
     padding  :  0 5px 2px 0;
-
     font-size  :  1.3rem;
-    text-shadow  :  black 1px 1px 1px;
 }
 
 .familyOpen {
     padding  :  0 5px 2px 0;
-
     font-size  :  1.3rem;
-    text-shadow  :  black 1px 1px 1px;
 }
 
 #searchResults .family      {
@@ -354,14 +338,12 @@ $genericButtonColor  :  #3f4a51;
 #searchResults span:not(.fsc):last-child  {
     position  :  absolute;
     left  :  53.8%;
-
     font-style  :  italic;
 }
 
 .fsc  {
     position  :  absolute;
     left  :  53.8%;
-
     font-weight  :  bold;
     font-style  :  normal;
 }
@@ -406,7 +388,7 @@ $genericButtonColor  :  #3f4a51;
     font-size  :  1.2rem;
 }
 
-#searchResults .endemic,#searchResults .extinct,#searchResults .hy,#searchResults .va  			{
+#searchResults .endemic,#searchResults .extinct,#searchResults .hy,#searchResults .va  {
     position  :  relative;
     left  :  -7px;
 }
@@ -425,20 +407,23 @@ $genericButtonColor  :  #3f4a51;
     line-height  :  34px;
     text-align  :  center;
     letter-spacing  :  0.1em;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.3);
 
-    border  :  1px solid #555;
-    border-bottom  :  none;
+    border  :  1px solid #bbb;
     border-top-left-radius  :  3px;
     border-top-right-radius  :  3px;
-    background-color  :  #6f8a91;
+    background-color  :  $panelFlyoutColor;
+}
+
+#treeIntroText  {
+    border-bottom  :  none;
+    box-shadow : inset 0 -5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
 }
 
 #taxPageButtons  {
-    border-top  :  2px solid #444;
+    border-top  :  none;
     border-bottom-right-radius  :  3px;
     border-bottom-left-radius  :  3px;
-    box-shadow  :  inset 0 3px 5px -5px #000;
+    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
 
     cursor  :  pointer;
 }
@@ -455,7 +440,6 @@ $genericButtonColor  :  #3f4a51;
     left  :  0;
     width  :  100%;
 
-/*height  :  704px;*/
     height  :  calc(100vh - 122px);
     min-height  :  500px;
     padding  :  7px 0 0 0;
@@ -464,7 +448,6 @@ $genericButtonColor  :  #3f4a51;
 
 /* necessary because 100% padding right would else break line at spaces and hyphens */
     white-space  :  nowrap;
-    text-shadow  :  1px 1px 1px black;
 
     -webkit-overflow-scrolling  :  touch;
 
@@ -474,7 +457,7 @@ $genericButtonColor  :  #3f4a51;
     border-top  :  10px solid transparent;
     border-bottom  :  10px solid transparent;
     border-radius  :  10px;
-    box-shadow  :  0 0 0 2px rgba(0, 0, 0, 0.3);
+    box-shadow  :  0 0 0 1px rgba(0, 0, 0, 0.3);
 
 /* resize is completely broken in FF and Chrome */
 
@@ -497,7 +480,6 @@ $genericButtonColor  :  #3f4a51;
 
 .birds.open        {
     display  :  block;
-
     position  :  relative;
 }
 
@@ -505,28 +487,36 @@ $genericButtonColor  :  #3f4a51;
     padding  :  0 0 2px 0;
 }
 
-#tree .familyOpen  {margin  :  0 0 2px 0;
+#tree .familyOpen  {
+    margin  :  0 0 2px 0;
     padding  :  0 0 0 0;
 }
 
-/*target : family/familyOpen family common name only*/
-#tree li.family > span:nth-child(1)      {
+/*target : family common name only*/
+#tree li.family > span:nth-child(1)  {
     padding  :  0 0 0 20px;
 }
 
+/*target : familyOpen common name only*/
 #tree li.familyOpen > span:nth-child(1)  {
     padding  :  0 0 0 20px;
+    color : white;
+}
+
+/*target : familyOpen sci name only*/
+#tree li.familyOpen > span:nth-child(2)  {
+    color : white;
 }
 
 #tree li.familyOpen  {
-    background  :  #6d9892;
+    background  :  $birdRolloverColor;
 }
 
 #tree li.familyOpen:hover > span:first-child  {
     padding  :  3px calc(100% - 60px) 4px 20px;
 
     border-radius  :  5px;
-    background  :  #6d9892;
+    background  :  $birdRolloverColor;
 }
 
 #tree .familyOpen  ul  {
@@ -534,10 +524,9 @@ $genericButtonColor  :  #3f4a51;
 
     font-size  :  1.2rem;
     line-height  :  1.5em;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
 
-    border  :  2px solid #6d9892;
-    background  :  $bgColor;
+    border-bottom  :  1px solid $birdRolloverColor;
+    background  :  $panelColor;
 }
 
 /*target : familyOpen common names only*/
@@ -556,35 +545,35 @@ $genericButtonColor  :  #3f4a51;
     margin-bottom  :  1px;
 }
 
-#taxPage.samTax .hy:before,#taxPage.samTax .va:before  			{
+#taxPage.samTax .hy:before,#taxPage.samTax .va:before  {
     content  :  '';
 }
 
-#taxPage.samTax .hy,#taxPage.samTax .va  					{
+#taxPage.samTax .hy,#taxPage.samTax .va  {
     position  :  relative;
     left  :  19px;
 }
 
-#searchResults.samTax .hy:before,#searchResults.samTax .va:before  		{
+#searchResults.samTax .hy:before,#searchResults.samTax .va:before  {
     content  :  '';
 }
 
-#searchResults.samTax .hy,#searchResults.samTax .va  				{
+#searchResults.samTax .hy,#searchResults.samTax .va  {
     position  :  relative;
     left  :  0;
 }
 
-#taxPage.samTax li.familyOpen span.hy        {
+#taxPage.samTax li.familyOpen span.hy  {
     position  :  relative;
     left  :  19px;
 }
 
-#taxPage.samTax li.familyOpen span.va        {
+#taxPage.samTax li.familyOpen span.va  {
     position  :  relative;
     left  :  19px;
 }
 
-#taxPage .endemic,#taxPage .extinct,#taxPage .hy,#taxPage .va  			{
+#taxPage .endemic,#taxPage .extinct,#taxPage .hy,#taxPage .va  {
     position  :  relative;
     left  :  -8px;
 }
@@ -594,10 +583,8 @@ $genericButtonColor  :  #3f4a51;
 }
 
 #tree .family:hover {
-    color  :  black;
-    text-shadow  :  rgba(100,100,100,0.3) 1px 1px 1px;
-
-    background-color  :  #6d9892;
+    color  :  white;
+    background-color  :  $birdRolloverColor;
 }
 
 #tree li.familyOpen:hover > ul  {
@@ -605,11 +592,9 @@ $genericButtonColor  :  #3f4a51;
 }
 
 /*    below targets each individual bird */
-#tree li.familyOpen:hover > ul > li:hover,#tree ul li:hover  {
-    color  :  black;
-    text-shadow  :  rgba(100,100,100,0.3) 1px 1px 1px;
-
-    background-color  :  #6d9892;
+#tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover  {
+    color  :  white;
+    background-color  :  $birdRolloverColor;
 }
 
 #tree ul li {
@@ -618,10 +603,8 @@ $genericButtonColor  :  #3f4a51;
 
 /* added by toggleFamilyOpen */
 #tree ul li.active {
-    color  :  black;
-    text-shadow  :  rgba(100,100,100,0.3) 1px 1px 1px;
-
-    background-color  :  #6d9892;
+    color  :  white;
+    background-color  :  #444;
 }
 
 @media screen and (max-width:840px)  {
@@ -646,7 +629,6 @@ $genericButtonColor  :  #3f4a51;
 
     #searchResults  {
         font-size  :  11px;
-        /*color:red;*/
     }
 
     .fsc  {

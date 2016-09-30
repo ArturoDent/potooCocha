@@ -13,6 +13,7 @@ var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
 // var sourcemaps = require("gulp-sourcemaps");
+// var runSequence = require("run-sequence");
 
 
 // Static Server + watching scss/html files
@@ -22,21 +23,29 @@ gulp.task("browsersync", ["sass"], function() {
     server: {
       baseDir: "./",
       index: "home.html"
-    }
+    },
+    ghostMode: false
   });
 
-  gulp.task("scss-watch", ["sass"], function (done) {
-    // browserSync.reload();
-    done();
-  });
+// browserSync : Here you can disable/enable each feature individually
+// ghostMode: {
+//     clicks: true,
+//     forms: true,
+//     scroll: false
+// }
 
-  gulp.watch("./scss/*.scss", ["scss-watch"]);
+// Or switch them all off in one go
+// ghostMode: false
+
+// browser: ["google chrome", "firefox"]
+
+
+  gulp.watch("./scss/*.scss", ["sass"]);
   gulp.watch("./*.html").on("change", browserSync.reload);
   // gulp.watch("./css/*.css").on("change", browserSync.reload);
   gulp.watch("./js/*.js").on("change", browserSync.reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
 gulp.task("sass", function() {
   return gulp.src("./scss/*.scss")
     .pipe(changedInPlace())
@@ -70,7 +79,7 @@ gulp.task("minify-css", function() {
 });
 
 gulp.task("autoprefix", function () {
-  gulp.src("./css/*.css")
+  return gulp.src("./css/*.css")
     .pipe(autoprefixer({
       browsers: ["last 2 versions"],
       cascade: false
@@ -79,7 +88,7 @@ gulp.task("autoprefix", function () {
 });
 
 gulp.task("process css", function () {
-  gulp.src("./css/*.css")
+  return gulp.src("./css/*.css")
 // .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: ["last 2 versions"],

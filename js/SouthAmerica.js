@@ -14,11 +14,8 @@ var vagrantColor         =  "#ffff00";
 var hypotheticalColor    =  "#33cc66";
 var introducedColor      =  "#111";
 
-var baseColor            =  "#404448";
+var baseColor            =  "#959A93";
 var baseStrokeColor      =  "#333";
-// var selectedFillColor    =  "#eee";
-// var selectedStrokeColor  =  "#eee";
-
 
 /* global addBirdNameToMap birds currentMap  */
 
@@ -56,11 +53,9 @@ function setSVGstyles(obj )  {
   else if (obj.parentNode.nodeName === "g")  {
 
     var paths = obj.querySelectorAll("path");
-
     var len = paths.length;
 
     for (var i = 0; i < len; i++)  {
-
       paths[i].style.transition = "fill 1s";
     }
   }
@@ -106,7 +101,6 @@ function newFillColor(obj, newColor) {
       }
 
       paths[i].style.fill = newColor;
-
     }
   }
 }
@@ -121,44 +115,9 @@ function selectedCountryFillColor(selectedCountry, color)  {
   if (cc) {
     fillSAMmap();
     newFillColor(cc, color);
-    // cc.classList.add("grow");
-    // cc.style.transformOrigin  =  "0 0";
-    // cc.style.transform = "scale(1.2)";
   }
   else fillSAMmap();
 }
-
-// function selectedCountryStrokeColor(selectedCountry, color)  {
-
-//   var svg = currentMap.querySelector("#SAMsvg");
-//   var svgDoc = svg.contentDocument;
-
-//   var cc = svgDoc.getElementById(selectedCountry);
-
-//   if (cc) {
-//     newStrokeColor(cc,color);
-//     svg.appendChild(cc);
-//   }
-
-// }
-
-// function newStrokeColor(obj, newColor) {
-
-//   if (obj.nodeName === "path") {
-//     obj.style.stroke = newColor;
-//   }
-
-//   else if (obj.parentNode.nodeName === "g")  {
-
-//     var paths = obj.querySelectorAll("path");
-
-//     var len = paths.length;
-//     for (var i = 0; i < len; i++)  {
-
-//       paths[i].style.stroke = newColor;
-//     }
-//   }
-// }
 
 /* global  mapsCollection saveMapButton */
 
@@ -181,82 +140,52 @@ function highlightSAMmap(index, current) {
 
     if (!cc) continue;
 
-  // SAMgroup.each(function(i, children) {
-
-  //     this.removeClass(this.classes()[0]);
-  //     this.addClass(baseColor);
-  //  });
-
-  // SAMgroup.each(function(i, children) {
-
-    // switch(cList[countries[ this.id() ]])  {
     switch(cList[countries[country]])  {
 
     case "X(e)":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('endemic');
       newFillColor(cc, endemicColor);
-
       break;
 
     case "X":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('resident');
       newFillColor(cc, residentColor);
       break;
 
     case "NB":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('nonBreeder');
       newFillColor(cc, nonBreederColor);
       break;
 
     case "V":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('vagrant');
       newFillColor(cc, vagrantColor);
       break;
 
     case "H":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('hypothetical');
       newFillColor(cc, hypotheticalColor);
       break;
 
     case "IN":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('introduced');
       newFillColor(cc, introducedColor);
       break;
 
     case "EX" :
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('extinct');
       newFillColor(cc, extinctColor);
       break;
 
     case "EX(e)":
 
-      // this.removeClass(this.classes()[0]);
-      // this.addClass('extinct');
       newFillColor(cc, extinctColor);
       break;
 
     default:
-      // this.removeClass(this.classes()[0]);
       newFillColor(cc, baseColor);
-      // this.addClass('baseColor');
     }
   }
 
   if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
-
-  // if ( (current == "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.opacity = "1";  }
 }

@@ -1,4 +1,9 @@
-$bgColor  :  #505458;
+$bgColor  :  #959A93;
+$bannerColor  :  #666;
+$genericButtonColor  :  #A65751;
+$panelColor : #B1B7AE;
+$panelFlyoutColor : #6f8a91;
+
 
 #sampleTable  {
     position  :  relative;
@@ -9,9 +14,9 @@ $bgColor  :  #505458;
 
     font-size  :  12px;
     font-weight  :  bold;
-    color  :  #eee;
+    // color  :  #eee;
     text-align  :  center;
-    text-shadow  :  1px 1px 1px black;
+    // text-shadow  :  1px 1px 1px black;
 
     empty-cells  :  show;
     border-collapse  :  collapse;
@@ -111,14 +116,14 @@ $bgColor  :  #505458;
     font-weight  :  bold;
 
 /*color  :  black;*/
-    text-shadow  :  0 0 1px rgba(0,0,0,0.5);
+    // text-shadow  :  0 0 1px rgba(0,0,0,0.5);
 
     border  :  solid 1px #111;
     background-color  :  transparent;
 }
 
 #sampleTable th:not(:first-child)   {
-    background-color  :  $bgColor;
+    background-color  :  $panelColor;
 }
 
 .flashDays  {
@@ -143,7 +148,7 @@ $bgColor  :  #505458;
 }
 
 #sampleTable th:first-child   {
-    border  :  solid 1px $bgColor;
+    border  :  solid 1px $panelColor;
     border-right  :  solid 1px #000;
 }
 
@@ -155,7 +160,7 @@ $bgColor  :  #505458;
 }
 
 #sampleTable td.familyHidden   {
-    border  :  solid 1px $bgColor;
+    border  :  solid 1px $panelColor;
 }
 
 #sampleTable td.familyHidden.show   {
@@ -222,7 +227,7 @@ $bgColor  :  #505458;
     color  :  #ddd;
     line-height  :  14px;
     text-align  :  center;
-    text-shadow  :  rgba(0,0,0,0.3) 1px 1px 1px;
+    // text-shadow  :  rgba(0,0,0,0.3) 1px 1px 1px;
 
     border  :  1px solid black;
     border-radius  :  50%;
@@ -248,7 +253,7 @@ $bgColor  :  #505458;
     color  :  #ddd;
     line-height  :  11px;
     text-align  :  center;
-    text-shadow  :  rgba(0,0,0,0.3) 1px 1px 1px;
+    // text-shadow  :  rgba(0,0,0,0.3) 1px 1px 1px;
 
     border  :  1px solid black;
     border-radius  :  50%;
