@@ -26,7 +26,7 @@ body {
   font-family: Verdana, Georgia, sans-serif;
   font-size: 1.4em;
   font-weight: 600;
-  color: #414141;
+  color: black;
   letter-spacing: 0.04em;
   background: #959A93; }
 
@@ -141,7 +141,8 @@ a:link {
   letter-spacing: 0.15em;
   text-shadow: 1px 1px 1px #282828;
   border-radius: 5px;
-  background: #526870; }
+  background: #526870;
+  box-shadow: 0 0.7px #313131, -0.7px 0 #313131, 0 -0.3px #fff, 0.3px 0 #fff; }
 
 .titleBanner_spacer {
   position: relative;
@@ -152,7 +153,8 @@ a:link {
 .surroundBanner {
   position: relative;
   height: 3px;
-  background: #526870; }
+  background: #526870;
+  box-shadow: 0 -0.4px #ddd, 0 0.7px #313131; }
 
 .surroundBanner:nth-child(1) {
   top: calc(0.65em);
@@ -162,13 +164,6 @@ a:link {
 .surroundBanner:nth-child(3) {
   top: calc(30px + 0.65em);
   flex: 1 1 auto; }
-
-.bannerKeywords {
-  position: absolute;
-  top: calc(100vh - 5.6rem);
-  left: 10px;
-  font-size: 1.2rem;
-  line-height: 1.5rem; }
 
 .articles {
   display: -webkit-flex;
@@ -198,7 +193,7 @@ article {
   position: relative;
   padding: 0 15px;
   pointer-events: auto;
-  border: 1px solid #fff;
+  border: 1px solid #B1B7AE;
   border-radius: 3px;
   background: #B1B7AE;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -208,17 +203,17 @@ article {
   transition: opacity 2s; }
 
 .genericButton {
-  padding: 5px 8px 5px 8px;
+  padding: 10px 14px;
   font-size: 1.2em;
   font-weight: bold;
   font-variant: small-caps;
-  color: #ddd;
+  color: #fff;
   line-height: 16px;
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #A65751;
   box-shadow: inset 0 0 0 transparent, 2px 2px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -253,13 +248,13 @@ article {
   transition: all 850ms ease-in-out; }
 
 .taxArticleMain {
-  padding: 15px 0; }
+  padding: 30px 0; }
 
 .taxArticleMain .searchWord {
   position: relative;
-  top: -6px;
+  top: -10px;
   left: -30px;
-  margin: 0 -20px 0 0;
+  margin: 0 -15px 0 0;
   padding: 6px 10px 6px 15px;
   color: #fff;
   font-size: 1.7rem;
@@ -269,12 +264,10 @@ article {
   background: #526870;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
 
-#taxonomyArticle a.linkHighlight {
-  padding: 0 4px;
-  background: transparent; }
-
 #taxonomyArticle a.linkHighlight:hover, .genericButton.highlight:focus {
-  background: #eee; }
+  color: white;
+  text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.6);
+  transition: all 350ms; }
 
 #taxTreeArticle {
   margin: 0 0 15px 0;
@@ -307,17 +300,16 @@ article {
   box-shadow: inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 2px black; }
 
 #checklistArticle .panel {
-  padding: 15px 0; }
+  padding: 25px 0; }
 
 #checklistOptions.panel {
   position: relative;
   left: 10%;
   width: 80%;
-  margin: 20px 0 25px 0;
-  padding: 20px 0 20px 25px;
+  margin: 40px 0 25px 0;
+  padding: 30px 0 30px 35px;
   font-size: 1em;
   letter-spacing: 0.15em;
-  border: 1px solid #607478;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 25%;
   box-shadow: 1px 1px 1px #607478; }
@@ -369,7 +361,7 @@ article {
   width: 140%;
   margin: 20px 0 20px 0;
   z-index: 20;
-  color: #ddd;
+  color: #fff;
   background: transparent; }
 
 #days {
@@ -388,6 +380,7 @@ article {
   font-size: 1.2em;
   text-align: center;
   text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: #eee;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -395,20 +388,21 @@ article {
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
   -o-transition: all 400ms;
-  transition: transform 200ms, background 300ms, color 300ms; }
+  transition: background 300ms, color 300ms; }
 
 #numDays a:hover, #numDays a:focus {
   background: #A65751;
-  color: #ddd;
+  color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6); }
 
 #numDays a.highlight {
   top: -18px;
-  color: #ddd;
+  color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   background-color: #A65751;
   box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.4);
   transform: scale(1.6);
+  transition: all 350ms;
   cursor: default; }
 
 /*   -------------------   Footer   ----------------------------   */
@@ -417,35 +411,15 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 30px;
-  margin: 0 0 10px 0;
-  padding: 3px 0 0 0;
-  font-size: 0.7em;
-  font-variant: small-caps;
-  color: #fff;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-shadow: none;
-  border-radius: 5px;
-  background: #526870; }
+  margin: 20px 0 30px 0;
+  background: transparent; }
 
-footer a, footer .obfuscated_link {
-  padding-bottom: 1px;
-  color: inherit;
-  text-decoration: none; }
+footer a {
+  padding: 2px 3px 4px 5px;
+  text-decoration: none;
+  border: solid 1px transparent;
+  border-bottom: solid 1px #333; }
 
-footer .obfuscated_link {
-  margin: 0 0 0 40px; }
-
-footer a:link {
-  border-bottom: solid 1px #bbb; }
-
-footer a:hover, footer .obfuscated_link:hover, footer a:focus, footer .obfuscated_link:focus {
-  text-shadow: black 1px 1px 1px; }
-
-footer [data-icon]::before {
-  position: relative;
-  top: 3px;
-  left: -6px;
-  font-size: 1.2em;
-  border: none; }
+footer a:hover, footer a:focus {
+  border: solid 1px #000;
+  transition: all 350ms; }

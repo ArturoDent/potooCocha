@@ -2,33 +2,40 @@
     "version": "0.1.0",
     "configurations": [
         {
-            "name": "Launch localhost with sourcemaps",
-            "type": "edge",
+            "name": "Chrome : Launch with sourcemaps",
+            "type": "chrome",
             "request": "launch",
-            "url": "http://localhost/home.html",
+            "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
-            "sourceMaps": true
+            "sourceMaps": true,
+            "runtimeArgs": [
+            "--remote-debugging-port=9222"
+            ]
         },
         {
-            "name": "Launch home.html (without sourcemaps)",
-            "type": "edge",
+            "name": "Chrome : Launch without sourcemaps",
+            "type": "chrome",
             "request": "launch",
-            "file": "${workspaceRoot}/home.html"
+            "file": "${workspaceRoot}",
+            "runtimeArgs": [
+            "--remote-debugging-port=9222"
+            ]
         },
         {
-            "name": "Attach with sourcemaps",
-            "type": "edge",
+            "name": "Chrome : Attach with sourcemaps",
+            "type": "chrome",
             "request": "attach",
-            "url": "http://10.0.0.10:8080/home.html", // optional: used to find the right tab running in Edge
             "port": 9222,
-            "sourceMaps": true
+            "sourceMaps": true,
+            "url": "localhost:3000"
         },
         {
-            "name": "Attach to url with files served from ./out",
-            "type": "edge",
+            "name": "Chrome : Attach to url",
+            "type": "chrome",
             "request": "attach",
             "port": 9222,
-            "webRoot": "${workspaceRoot}/out"
+            "url": "localhost:3000/home.html",
+            "webRoot": "${workspaceRoot}"
         }
     ]
 }

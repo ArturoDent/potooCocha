@@ -82,3 +82,4 @@ function saveCurrentMap()  {
     currentID++;
   };
 }
+//# sourceMappingURL=js/sourceMaps/birdMapFactory.js.map

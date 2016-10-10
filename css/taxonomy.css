@@ -58,7 +58,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  padding: 0 15px 20px 15px;
+  padding: 10px 15px 30px 15px;
   margin-top: 10px;
   align-content: center;
   border-bottom: none;
@@ -89,13 +89,15 @@
   height: auto;
   margin: 0;
   padding: 3px 0 4px 0;
-  font-size: 1.2em;
-  color: #ddd;
+  font-size: 1.25em;
+  color: #000;
+  letter-spacing: 0.1em;
   text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   -o-user-select: text;
-  border: 1px inset rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  background: #959A93;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  background: #B1B7AE;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -124,7 +126,7 @@
   position: relative;
   left: -30px;
   width: calc(100% + 60px);
-  margin: 25px 0 0 0;
+  margin: 40px 0 15px 0;
   font-size: 1.2rem;
   pointer-events: auto;
   -webkit-transition: opacity 500ms;
@@ -170,6 +172,7 @@
   position: relative;
   left: -18px;
   width: calc(100% + 36px);
+  padding: 15px 0;
   font-size: 1.5rem;
   font-variant: small-caps;
   color: #fff;
@@ -188,9 +191,9 @@
   width: calc(100% + 30px);
   height: auto;
   min-height: 70px;
-  max-height: 300px;
+  max-height: 330px;
   margin: 0 0 0 -15px;
-  padding: 0 0 0 0;
+  padding: 15px 0;
   font-size: 1.2rem;
   line-height: 1.15em;
   border-top: 10px solid transparent;

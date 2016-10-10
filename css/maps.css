@@ -192,19 +192,19 @@
 
 .colorKey ul li {
     position  :  relative;
-    width  :  auto;
+    /*width  :  auto;*/
     margin-top  :  4px;
 
     font-size  :  0.9em;
     text-align  :  center;
-    letter-spacing  :  0.2em;
+    letter-spacing  :  0.1em;
     text-shadow  :  rgba(0, 0, 0, 0.4) 1px 1px 1px;
 
     list-style-type  :  none;
 }
 
 /* var endemicColor        =  '#C23BC3';
-   var extinctColor        =  '#ddd';
+   var extinctColor        =  '#fff';
    var residentColor       =  '#3030cc';
    var nonBreederColor     =  '#ff9900';
    var vagrantColor        =  '#ffff00';
@@ -219,16 +219,18 @@
 
 .colorKey ul li:nth-child(2) {
     /* hypothetical  */
-    padding : 1px 4px 2px 4px;
+    padding : 1px 8px 2px 8px;
     color  :  white;
     text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
+    /*text-shadow: none;*/
     background  :  #23bc56;
 }
 
 .colorKey ul li:nth-child(3) {
     /* nonbreeder    */
-    padding : 1px 4px 2px 4px;
+    padding : 1px 8px 2px 8px;
     color  :  white;
+    /*text-shadow: none;*/
     text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
     background  :  #df7920;
 }

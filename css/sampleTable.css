@@ -114,18 +114,14 @@
   border-bottom: solid 1px #111; }
 
 #sampleTable td.leftCheckBox {
-  width : 0;
-  /*border : solid 1px #111;*/
-  /*border-top: transparent;*/
-  /*border-bottom: transparent;*/
-  /*border-left: transparent;*/
-  transition : width 250ms;
-}
+  border: solid 1px #111;
+  border-top: transparent;
+  border-bottom: transparent;
+  border-left: transparent; }
 
 #sampleTable td.leftCheckBox.show {
   width: 25px;
-  /*border: solid 1px #111;*/
-}
+  border: solid 1px #111; }
 
 .centerText {
   text-align: center; }

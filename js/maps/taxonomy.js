@@ -794,3 +794,4 @@ function closeAllFamilies()  {
   // **** reset families and species of country
   document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species *";
 }
+//# sourceMappingURL=js/sourceMaps/taxonomy.js.map

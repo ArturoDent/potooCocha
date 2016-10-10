@@ -192,3 +192,4 @@ function highlightSAMmap(index, current) {
 
   if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
 }
+//# sourceMappingURL=js/sourceMaps/SouthAmerica.js.map

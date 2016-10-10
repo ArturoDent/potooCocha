@@ -4,20 +4,19 @@
 // });
 
 var gulp = require("gulp");
-var changedInPlace = require("gulp-changed-in-place");
 var browserSync = require("browser-sync").create();
 var sass = require("gulp-sass");
-var uglify = require("gulp-uglify");
+// var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
-var rename = require("gulp-rename");
+// var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
-// var sourcemaps = require("gulp-sourcemaps");
-// var runSequence = require("run-sequence");
+var sourcemaps = require("gulp-sourcemaps");
+var cached = require("gulp-cached");
+var remember = require("gulp-remember");
 
 
-// Static Server + watching scss/html files
-gulp.task("browsersync", ["sass"], function() {
+function serve (done) {
 
   browserSync.init({
     server: {
@@ -26,49 +25,54 @@ gulp.task("browsersync", ["sass"], function() {
     },
     ghostMode: false
   });
+  done();
+}
 
-// browserSync : Here you can disable/enable each feature individually
-// ghostMode: {
-//     clicks: true,
-//     forms: true,
-//     scroll: false
-// }
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
-// Or switch them all off in one go
-// ghostMode: false
+var paths = {
+  styles: {
+    src: "./scss/*.scss",
+    dest: "./css"
+  },
+  scripts: {
+    src: "./js/*.js",
+    dest: "./js"
+  }
+};
 
-// browser: ["google chrome", "firefox"]
-
-
-  gulp.watch("./scss/*.scss", ["sass"]);
+function watch() {
+  gulp.watch(paths.scripts.src, gulp.series(processJS, reload));
+  gulp.watch(paths.styles.src,  gulp.series(sass2css,  reload));
   gulp.watch("./*.html").on("change", browserSync.reload);
-  // gulp.watch("./css/*.css").on("change", browserSync.reload);
-  gulp.watch("./js/*.js").on("change", browserSync.reload);
-});
+}
 
-gulp.task("sass", function() {
+var build = gulp.series(serve, watch);
+
+gulp.task("sync", build);
+
+function sass2css() {
   return gulp.src("./scss/*.scss")
-    .pipe(changedInPlace())
+    .pipe(cached("removing scss cached"))
+    // .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./css"))
-    .pipe(browserSync.stream());
-});
+    // .pipe(sourcemaps.write("./css/sourceMaps"))
+    .pipe(gulp.dest("./css"));
+}
 
-// gulp.task("js", function () {
-//   gulp.src("./js/*.js")
-//    .pipe(uglify())
-//    .pipe(concat("all.js"))
-//    .pipe(gulp.dest("./js"));
-// });
-
-gulp.task("process js", function() {
+function processJS() {
   return gulp.src("./js/*.js")
-    .pipe(concat("concat.js"))
-    .pipe(gulp.dest("./concats/"))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(uglify())
-    .pipe(gulp.dest("./minified/"));
-});
+    .pipe(sourcemaps.init())
+    // .pipe(concat("concat.js"))
+    // .pipe(gulp.dest("./concats/"))
+    // .pipe(rename({ suffix: ".min" }))
+    // .pipe(uglify())
+    .pipe(sourcemaps.write("./js/sourceMaps/"))
+    .pipe(gulp.dest("./js/maps/"));
+}
 
 gulp.task("minify-css", function() {
   return gulp.src("./src/*.css")
@@ -102,4 +106,4 @@ gulp.task("process css", function () {
 
 
 
-// gulp.task("default", ["serve"]);
+// gulp.task("default", gulp.series("browsersync", function () { }));
