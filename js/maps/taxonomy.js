@@ -657,7 +657,7 @@ function gotoMatch(e) {
         family2.parentNode.className = "familyOpen";
       }
 
-      taxPage.scrollTop = entry.offsetTop - 10;
+      taxPage.scrollTop = entry.offsetTop;
       //    put family at top of taxPage
       //   entry.scrollIntoView(true);  screws up IE
 
