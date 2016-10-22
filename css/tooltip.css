@@ -1,10 +1,10 @@
 .tooltip  {
     opacity  :  0;
 
-    height  :  1.2em;
+    height  :  1.8rem;
 
-    font-size  :  0.7em;
-    color  :  #eee;
+    font-size  :  1.4rem;
+    color  :  #fff;
     line-height  :  1.1em;
     text-align  :  center;
 
@@ -18,11 +18,17 @@
     opacity  :  1;
     position  :  absolute;
     top  :  5px;
-    left  :  40px;
+    left  :  76px;
+    height  :  2.4rem;
 
-    width  :  22em;
+    padding : 2px 0 1px 0;
 
-    background  :  #333;
+    width  :  30rem;
+
+    background  :  transparent;
+    border : 1px solid black;
+
+    /*box-shadow  :  0 0 2px 1px rgba(0,0,0,1);*/
 
     transform  :  rotate(-5deg);
     -webkit-transform-origin  :  top left;
@@ -35,7 +41,7 @@
 .deleteMapButton .tooltip {
     position  :  absolute;
     top  :  -40px;
-    left  :  -80px;
+    left  :  -100px;
 
     width  :  12em;
 
@@ -52,7 +58,7 @@
 .saveMapButton .tooltip {
     position  :  absolute;
     top  :  -60px;
-    left  :  -80px;
+    left  :  -130px;
 
     width  :  12em;
 
@@ -68,14 +74,24 @@
     content  :  '';
     position  :  absolute;
     top  :  0;
-    left  :  -1.05em;
+    /*left  :  -1.05em;*/
 
-    width  :  0;
-    height  :  0;
+    /*width  :  0;*/
 
     border-width  :  0.6em;
     border-style  :  solid;
-    border-color  :  transparent #333 transparent transparent;
+    /*border-color  :  transparent #333 transparent transparent;*/
+}
+
+.taxInstructionsButton .tooltip:after {
+    top  : -0.05em;
+    left  :  -1.75em;
+    /*height  :  inherit;*/
+    border-width  :  0.85em;
+
+    border-color  :  transparent #000 transparent transparent;
+
+    /*border-color  :  transparent transparent transparent #000;*/
 }
 
 .saveMapButton .tooltip:after {

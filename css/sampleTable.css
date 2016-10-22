@@ -3,8 +3,8 @@
   left: 0;
   width: 94%;
   min-width: 480px;
-  margin: 0 auto 0 auto;
-  font-size: 12px;
+  margin: 0 auto 10px auto;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
   empty-cells: show;
@@ -16,13 +16,13 @@
 #sampleTable.smallFont td       { padding  :  1px 0 1px 0px; letter-spacing  :  1px; }
 #sampleTable.smallFont td:first-child { padding  :  1px 0 1px 4px; letter-spacing  :  1px; }*/
 #sampleTable td {
-  height: 25px;
-  padding: 2px 0 2px 0;
-  border: solid 1px #111; }
+  height: 30px;
+  padding: 2px 2px 2px 2px;
+  border: solid 1px #000; }
 
 #sampleTable thead {
   display: table-header-group;
-  height: 25px; }
+  height: 27px; }
 
 #sampleTable tbody {
   display: table-row-group; }
@@ -45,7 +45,7 @@
   text-align: left; }
 
 #sampleTable .cLc, #sampleTable .cLFc {
-  width: 155px; }
+  width: 200px; }
 
 #sampleTable .cLs, #sampleTable .cLFs {
   width: auto; }
@@ -58,14 +58,14 @@
   border-right: hidden; }
 
 #sampleTable .cds {
-  border-right: 3px double #111; }
+  border-right: 3px double #000; }
 
 #sampleTable .rds {
-  border-bottom: 3px double #111; }
+  border-bottom: 3px double #000; }
 
 #sampleTable thead {
-  font-size: 10px;
-  border: solid 1px #111; }
+  font-size: 1.2rem;
+  border: solid 1px #000; }
 
 /*  there is no tfoot in #sampleTable  */
 /*#sampleTable tfoot tr:first-child td  {
@@ -73,16 +73,17 @@
  	border-left    :  hidden;
  	height         :  20px;
  }
- #sampleTable tfoot tr:last-child td   {  border : solid 1px #111;  height : 20px; }*/
+ #sampleTable tfoot tr:last-child td   {  border : solid 1px #000;  height : 20px; }*/
 #sampleTable th {
   height: 20px;
+  padding: 0 2px;
   font-weight: bold;
   /*color  :  black;*/
-  border: solid 1px #111;
+  border: solid 1px #000;
   background-color: transparent; }
 
 #sampleTable th:not(:first-child) {
-  background-color: #B1B7AE; }
+  background-color: #545550; }
 
 .flashDays {
   animation-name: flashDays;
@@ -98,36 +99,30 @@
     background-color: white;
     transform: scale(2); } }
 
-#sampleTable th:first-child {
-  border: solid 1px #B1B7AE;
-  border-right: solid 1px #000; }
-
-#sampleTable td {
-  height: 25px;
-  padding: 2px 0 2px 0;
-  border: solid 1px #111; }
-
 #sampleTable td.familyHidden {
-  border: solid 1px #B1B7AE; }
+  border: solid 1px #545550; }
 
 #sampleTable td.familyHidden.show {
-  border-bottom: solid 1px #111; }
+  border-bottom: solid 1px #000; }
 
 #sampleTable td.leftCheckBox {
-  border: solid 1px #111;
+  width: 0;
+  border: solid 1px #000;
   border-top: transparent;
   border-bottom: transparent;
-  border-left: transparent; }
+  border-left: transparent;
+  transition: width 350ms; }
 
 #sampleTable td.leftCheckBox.show {
-  width: 25px;
-  border: solid 1px #111; }
+  width: 30px;
+  border: solid 1px #000;
+  transition: width 350ms; }
 
 .centerText {
   text-align: center; }
 
 #sampleTable td.double-separator {
-  border-right: 3px double #111; }
+  border-right: 3px double #000; }
 
 .noScientificNames .cLfc {
   letter-spacing: 0.1em; }
@@ -151,11 +146,11 @@
 .showLineNumbers::before {
   content: '5';
   position: absolute;
-  top: 3.5px;
-  left: -22px;
+  top: 6px;
+  left: -24px;
   width: 17px;
   height: 17px;
-  font-size: 11px;
+  font-size: 1.1rem;
   color: #ddd;
   line-height: 14px;
   text-align: center;
@@ -170,11 +165,11 @@
 .showEndemics::before {
   content: 'e';
   position: absolute;
-  top: 3.5px;
-  left: -22px;
+  top: 6px;
+  left: -24px;
   width: 17px;
   height: 17px;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #ddd;
   line-height: 11px;
   text-align: center;
@@ -183,46 +178,47 @@
   background: black; }
 
 #sampleTable.numDays0 .cLs {
-  border-right: 1px solid #111; }
+  border-right: 1px solid #000; }
 
 #sampleTable.numDays0 th {
-  border: 1px solid #555; }
+  width: 0;
+  border: 1px solid transparent; }
 
 #sampleTable.numDays1 th {
-  width: 50px; }
+  width: 60px; }
 
 #sampleTable.numDays2 th {
-  width: 46px; }
+  width: 54px; }
 
 #sampleTable.numDays3 th {
-  width: 42px; }
+  width: 50px; }
 
 #sampleTable.numDays4 th {
-  width: 38px; }
+  width: 44px; }
 
 #sampleTable.numDays5 th {
-  width: 34px; }
+  width: 40px; }
 
 #sampleTable.numDays6 th {
-  width: 32px; }
+  width: 36px; }
 
 #sampleTable.numDays7 th {
-  width: 30px; }
+  width: 34px; }
 
 #sampleTable.numDays8 th {
-  width: 28px; }
+  width: 32px; }
 
 #sampleTable.numDays9 th {
-  width: 26px; }
+  width: 30px; }
 
 #sampleTable.numDays10 th {
-  width: 24px; }
+  width: 28px; }
 
 #sampleTable.numDays11 th {
-  width: 23px; }
+  width: 26px; }
 
 #sampleTable.numDays12 th {
-  width: 22px; }
+  width: 24px; }
 
 .numDays11 th:nth-child(n+13) {
   display: none; }
@@ -257,8 +253,10 @@
 .numDays1 th:nth-child(n+3) {
   display: none; }
 
-.numDays0 th:nth-child(n+2) {
-  display: none; }
+.numDays0 th {
+  display: none;
+  width: 0;
+  border: 1px solid transparent; }
 
 .numDays11 td:nth-child(n+15) {
   display: none; }
@@ -296,10 +294,17 @@
 .numDays0 td:nth-child(n+4) {
   display: none; }
 
+#sampleTable th:first-child {
+  border: solid 1px #545550;
+  border-right: solid 1px #000; }
+
+.numDays0 tr.topBorderDissappear {
+  border-top: hidden; }
+
 @media screen and (max-width: 590px) {
   #sampleTable {
     min-width: 400px;
-    font-size: 11px; }
+    font-size: 1.1rem; }
   #sampleTable th {
     width: 21px; }
   .leftCheck::before {

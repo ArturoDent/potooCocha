@@ -1,42 +1,32 @@
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 .slideUpWrapper {
-  opacity: 1;
   pointer-events: auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 10%;
-  transition: color 350ms, height 350ms 250ms, opacity 350ms 450ms, all 350ms 450ms; }
+  overflow-y: hidden;
+  transition: all 350ms; }
 
 .slideUpWrapper.closeInstructions {
-  opacity: 0;
-  color: #959A93;
-  height: 0;
   transform: scale(0.8) translateY(30px);
-  transition: color 350ms, height 350ms 250ms, opacity 350ms 450ms; }
+  transition: all 350ms; }
 
 .slideUpWrapper.hovering {
   opacity: 0.7;
   transform: scale(0.8) translateY(30px);
   transition: all 750ms; }
 
-.slideUpWrapper.closeInstructions path {
-  stroke: #959A93;
-  transition: stroke 350ms 450ms; }
-
 .taxInstructionsButton {
   position: absolute;
-  top: -18px;
-  left: calc(100% - 18px);
-  width: 30px;
-  height: 30px;
-  padding: 0.14em 0 0 0;
+  top: -25px;
+  right: -41px;
+  width: 50px;
+  height: 50px;
+  padding: 0.4em 0 0 0;
   z-index: 2;
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: bold;
-  color: #eee;
+  color: #fff;
   text-align: center;
   border-radius: 50%;
-  border-bottom-left-radius: 0;
-  background: #526870;
+  background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
   cursor: pointer;
   -webkit-transition: all 850ms ease-in-out;
@@ -45,13 +35,10 @@
   transition: all 850ms ease-in-out; }
 
 .taxInstructionsButton:hover {
-  background: #444; }
+  background: #252525; }
 
 .taxInstructionsButton:hover + div.slideUpWrapper {
-  will-change: height, opacity, border-width; }
-
-.taxInstructionsButton.instructionsClosed {
-  left: 100%; }
+  will-change: height, opacity; }
 
 #searchForm {
   display: flex;
@@ -89,15 +76,14 @@
   height: auto;
   margin: 0;
   padding: 3px 0 4px 0;
-  font-size: 1.25em;
-  color: #000;
+  font-size: 1.8rem;
+  color: white;
   letter-spacing: 0.1em;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  -o-user-select: text;
   border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 3px;
-  background: #B1B7AE;
+  background: #545550;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -127,7 +113,7 @@
   left: -30px;
   width: calc(100% + 60px);
   margin: 40px 0 15px 0;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   pointer-events: auto;
   -webkit-transition: opacity 500ms;
   -moz-transition: opacity 500ms;
@@ -161,44 +147,41 @@
   opacity: 0;
   position: relative;
   height: auto;
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 5px;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
   z-index: 1;
   transition: opacity 350ms 200ms; }
 
 #countrySearch {
   opacity: 1;
   position: relative;
-  left: -18px;
-  width: calc(100% + 36px);
+  left: -28px;
+  width: calc(100% + 56px);
   padding: 15px 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-variant: small-caps;
   color: #fff;
   line-height: 34px;
   text-align: center;
   letter-spacing: 0.1em;
-  border-right: 22px solid #959A93;
-  border-left: 22px solid #959A93;
+  border-right: 22px solid #5a5b56;
+  border-left: 22px solid #5a5b56;
   background: #526870;
   box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3); }
 
 #searchResults {
   opacity: 0;
   position: relative;
-  left: 0;
-  width: calc(100% + 30px);
+  left: -24px;
+  width: calc(100% + 48px);
   height: auto;
-  min-height: 70px;
   max-height: 330px;
-  margin: 0 0 0 -15px;
-  padding: 15px 0;
-  font-size: 1.2rem;
+  padding: 0;
+  font-size: 1.6rem;
   line-height: 1.15em;
   border-top: 10px solid transparent;
   border-bottom: 5px solid transparent;
-  box-shadow: 0 -1px 0 white;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.35);
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
@@ -210,9 +193,11 @@
   transition: all 2s; }
 
 #searchResults li {
-  margin: 1px 0 1px 0;
   padding: 0 0 2px 16px;
   list-style-type: none; }
+
+#searchResults li.bird {
+  font-size: 1.5rem; }
 
 .noselect {
   -webkit-touch-callout: none;
@@ -227,22 +212,22 @@
 
 #searchResults li:hover {
   color: white;
-  background-color: #6f8a91; }
+  background-color: #000; }
 
 #searchResults li:not(.family) span:first-child {
   padding: 3px 0 3px 16px; }
 
 #searchResults li.active {
   color: white;
-  background-color: #444; }
+  background-color: #000; }
 
 .family {
   padding: 0 5px 2px 0;
-  font-size: 1.3rem; }
+  font-size: 1.6rem; }
 
 .familyOpen {
   padding: 0 5px 2px 0;
-  font-size: 1.3rem; }
+  font-size: 1.6rem; }
 
 #searchResults .family {
   margin: 5px 0 0 0; }
@@ -268,57 +253,31 @@
   content: 'e';
   position: relative;
   left: -9px;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 .extinct:before {
   content: 'x';
   position: relative;
   left: -9px;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 .hy:before {
   content: 'h';
   position: relative;
   left: -9px;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 .va:before {
   content: 'v';
   position: relative;
   left: -9px;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 #searchResults .endemic, #searchResults .extinct, #searchResults .hy, #searchResults .va {
   position: relative;
   left: -7px; }
 
-#treeIntroText, #taxPageButtons {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: calc(100% - 40px);
-  height: 36px;
-  margin: 0 auto 0 auto;
-  font-size: 1.5rem;
-  font-variant: small-caps;
-  color: #fff;
-  line-height: 34px;
-  text-align: center;
-  letter-spacing: 0.1em;
-  border: 1px solid #bbb;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background-color: #526870; }
-
-#treeIntroText {
-  border-bottom: none;
-  box-shadow: inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 2px black; }
-
 #taxPageButtons {
-  border-top: none;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 2px black;
   cursor: pointer; }
 
 #taxPageButtons:hover {
@@ -332,17 +291,16 @@
   width: 100%;
   height: calc(100vh - 122px);
   min-height: 500px;
-  padding: 7px 0 0 0;
-  font-size: 1.2rem;
+  padding: 12px 0 5px 0;
+  font-size: 1.6rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
   border-radius: 10px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
   /* resize is completely broken in FF and Chrome */
   resize: none;
   cursor: pointer; }
@@ -365,36 +323,31 @@
   padding: 0 0 2px 0; }
 
 #tree .familyOpen {
-  margin: 0 0 2px 0;
-  padding: 0 0 0 0; }
+  margin: 0 0 2px 0; }
 
 /*target : family common name only*/
 #tree li.family > span:nth-child(1) {
-  padding: 0 0 0 20px; }
+  padding: 0 0 0 15px; }
 
 /*target : familyOpen common name only*/
 #tree li.familyOpen > span:nth-child(1) {
-  padding: 0 0 0 20px;
-  color: white; }
+  padding: 0 0 0 15px; }
 
 /*target : familyOpen sci name only*/
-#tree li.familyOpen > span:nth-child(2) {
-  color: white; }
-
 #tree li.familyOpen {
-  background: #6f8a91; }
+  background: #000; }
 
 #tree li.familyOpen:hover > span:first-child {
-  padding: 3px calc(100% - 60px) 4px 20px;
+  padding: 1px calc(100% - 60px) 4px 15px;
   border-radius: 5px;
-  background: #6f8a91; }
+  background: #000; }
 
 #tree .familyOpen ul {
-  padding: 0 0 0 1px;
-  font-size: 1.2rem;
-  line-height: 1.5em;
-  border-bottom: 1px solid #6f8a91;
-  background: #B1B7AE; }
+  margin-bottom: 3px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #000;
+  background: #2a4048; }
 
 /*target : familyOpen common names only*/
 #tree .familyOpen ul li span:first-child {
@@ -407,7 +360,7 @@
   padding: 0 0 3px 0; }
 
 #tree .familyOpen .birds li:last-child {
-  margin-bottom: 1px; }
+  margin-bottom: 2px; }
 
 #taxPage.samTax .hy:before, #taxPage.samTax .va:before {
   content: ''; }
@@ -440,15 +393,12 @@
 
 #tree .family:hover {
   color: white;
-  background-color: #6f8a91; }
-
-#tree li.familyOpen:hover > ul {
-  border-radius: 5px; }
+  background-color: #000; }
 
 /*    below targets each individual bird */
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover {
   color: white;
-  background-color: #6f8a91; }
+  background-color: #000; }
 
 #tree ul li {
   margin: 1px 0 1px 0; }
@@ -456,7 +406,7 @@
 /* added by toggleFamilyOpen */
 #tree ul li.active {
   color: white;
-  background-color: #444; }
+  background-color: #000; }
 
 @media screen and (max-width: 840px) {
   #treeIntroText {

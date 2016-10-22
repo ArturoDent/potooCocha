@@ -1,101 +1,86 @@
-$bgColor  :  #959A93;
-$bannerColor  :  #444;
-$genericButtonColor  :  #A65751;
-$panelColor : #B1B7AE;
-$panelFlyoutColor : #6f8a91;
+// $bgColor  :  #959A93;
+$bgColor  :  rgb(90,91,86);
 
+$bannerColor  :  transparent;
+$genericButtonColor  :  #A65751;
+// $panelColor : #B1B7AE;
+// $panelColor : rgb(97,98,93);
+$panelColor : rgb(84,85,80);
+
+// $panelFlyoutColor : rgba(82,104,112,1);
+// $panelFlyoutColor : rgba(84,106,114,1);
+$panelFlyoutColor : rgba(82,104,112,1);
+
+
+$birdRolloverColor : #6f8a91;
 
 .md-modal {
-    position  :  fixed;
-    top  :  0;
-    left  :  100%;
-    width  :  180px;
-    z-index  :  2000;
-
-    transition  :  all 750ms;
-    transform  :  translateX(0);
-}
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 230px;
+  z-index: 2000;
+  transition: all 750ms;
+  transform: translateX(0); }
 
 .md-show {
-    transform  :  translateX(-180px);
-}
+  transform: translateX(-230px); }
 
 .md-overlay {
-    opacity  :  0;
-    visibility  :  hidden;
-
-    position  :  fixed;
-    top  :  0;
-    left  :  0;
-    width  :  calc(100vw - 17px);
-    height  :  100vh;
-    margin  :  0;
-    padding  :  0;
-    z-index  :  10;
-
-    border  :  none;
-    background  :  rgba(40,40,40,0.85);
-
-    transition  :  opacity 750ms;
-}
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 17px);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  border: none;
+  background: rgba(90,91,86, 0.65);
+  transition: opacity 750ms; }
 
 .md-show ~ .md-overlay {
-    opacity  :  1;
-    visibility  :  visible;
-}
+  opacity: 1;
+  visibility: visible; }
 
-.country-menu-wrap  {
-    font-size  :  1em;
-    // color  :  white;
-}
+.country-menu-wrap {
+  font-size: 1.8rem; }
 
 .country-menu {
-    display  :  flex;
-    flex-direction  :  column;
-    flex-wrap  :  nowrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /*flex-grow           :  1;*/
+  justify-content: space-around;
+  height: 100vh;
+  padding: 8px 10px 20px 0;
+  align-items: center;
+  // background-color: $panelColor;
+  background-color: rgb(74,75,70);
 
-/*flex-grow           :  1;*/
-    justify-content  :  space-around;
+  box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.25); }
 
-    height  :  100vh;
-    padding  :  8px 0 20px 0;
-
-    // text-shadow  :  rgba(0, 0, 0, 0.9) 1px 1px 1px;
-
-    align-items  :  center;
-
-    background-color  :  $bgColor;
-    box-shadow  :  inset 6px 0 8px rgba(0,0,0,0.4);
-}
-
-.country-menu-wrap::before  {
-    content  :  '';
-    display  :  inline-block;
-
-    position  :  absolute;
-    top  :  -5px;
-    left  :  -45px;
-    width  :  45px;
-    height  :  calc(100vh + 5px);
-
-    /*background  :  #444;*/
-}
+.country-menu-wrap::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: -45px;
+  width: 45px;
+  height: calc(100vh + 5px);
+  /*background  :  #444;*/ }
 
 .country-menu a {
-    position  :  relative;
-    width  :  152px;
-    padding  :  3px 0 5px 12px;
-
-    // color  :  #ddd;
-    text-decoration  :  none;
-
-    overflow  :  visible;
-
-    border-top  :  1px solid transparent;
-    border-radius  :  10px;
-
-    cursor  :  pointer;
-}
+  position: relative;
+  width: 192px;
+  padding: 3px 0 5px 12px;
+  text-decoration: none;
+  overflow: visible;
+  border-top: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer; }
 
 /*.country-menu a::before {
   	content: " ";
@@ -109,150 +94,119 @@ $panelFlyoutColor : #6f8a91;
  	position: absolute;
  	left: -30px;
  }*/
-
 .country-menu a::before {
-    content  :  ' ';
-    display  :  inline-block;
+  content: ' ';
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: -54px;
+  width: 36px;
+  height: 36px;
+  /*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
+  /*background-size  :  32px;*/
+  background-size: contain; }
 
-    position  :  absolute;
-    top  :  -2px;
-    left  :  -52px;
-    width  :  32px;
-    height  :  32px;
+.country-menu a:nth-child(1)::before {
+  background-image: url("../flags/32/Aruba.png"); }
 
-    // filter  :  brightness(0.7);
+.country-menu a:nth-child(2)::before {
+  background-image: url("../flags/32/Curacao.png"); }
 
-/*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
-    /*background-size  :  32px;*/
+.country-menu a:nth-child(3)::before {
+  background-image: url("../flags/32/Bonaire.png"); }
 
-    background-size  :  contain;
-}
+.country-menu a:nth-child(4)::before {
+  background-image: url("../flags/32/Trinidad-and-tobago.png"); }
 
-.country-menu a:nth-child(1)::before  {  background-image  :  url('../flags/32/Aruba.png');
-}
+.country-menu a:nth-child(5)::before {
+  background-image: url("../flags/32/French-Southern.png"); }
 
-.country-menu a:nth-child(2)::before  {  background-image  :  url('../flags/32/Curacao.png');
-}
+.country-menu a:nth-child(6)::before {
+  background-image: url("../flags/32/Suriname.png"); }
 
-.country-menu a:nth-child(3)::before  {  background-image  :  url('../flags/32/Bonaire.png');
-}
+.country-menu a:nth-child(7)::before {
+  background-image: url("../flags/32/Guyana.png"); }
 
-.country-menu a:nth-child(4)::before  {  background-image  :  url('../flags/32/Trinidad-and-tobago.png');
-}
+.country-menu a:nth-child(8)::before {
+  background-image: url("../flags/32/Venezuela.png"); }
 
-.country-menu a:nth-child(5)::before  {  background-image  :  url('../flags/32/French-Southern.png');
-}
+.country-menu a:nth-child(9)::before {
+  background-image: url("../flags/32/Colombia.png"); }
 
-.country-menu a:nth-child(6)::before  {  background-image  :  url('../flags/32/Suriname.png');
-}
+.country-menu a:nth-child(10)::before {
+  background-image: url("../flags/32/Ecuador.png"); }
 
-.country-menu a:nth-child(7)::before  {  background-image  :  url('../flags/32/Guyana.png');
-}
+.country-menu a:nth-child(11)::before {
+  background-image: url("../flags/32/Peru.png"); }
 
-.country-menu a:nth-child(8)::before  {  background-image  :  url('../flags/32/Venezuela.png');
-}
+.country-menu a:nth-child(12)::before {
+  background-image: url("../flags/32/Bolivia.png"); }
 
-.country-menu a:nth-child(9)::before  {  background-image  :  url('../flags/32/Colombia.png');
-}
+.country-menu a:nth-child(13)::before {
+  background-image: url("../flags/32/Chile.png"); }
 
-.country-menu a:nth-child(10)::before {  background-image  :  url('../flags/32/Ecuador.png');
-}
+.country-menu a:nth-child(14)::before {
+  background-image: url("../flags/32/Argentina.png"); }
 
-.country-menu a:nth-child(11)::before {  background-image  :  url('../flags/32/Peru.png');
-}
+.country-menu a:nth-child(15)::before {
+  background-image: url("../flags/32/Falkland-islands.png"); }
 
-.country-menu a:nth-child(12)::before {  background-image  :  url('../flags/32/Bolivia.png');
-}
+/*.country-menu a:nth-child(16)::before {
+  background-image: url("../flags/32/Falkland-islands.png"); }*/
 
-.country-menu a:nth-child(13)::before {  background-image  :  url('../flags/32/Chile.png');
-}
+.country-menu a:nth-child(16)::before {
+  background-image: url("../flags/32/Brazil.png"); }
 
-.country-menu a:nth-child(14)::before {  background-image  :  url('../flags/32/Argentina.png');
-}
+.country-menu a:nth-child(17)::before {
+  background-image: url("../flags/32/Uruguay.png"); }
 
-.country-menu a:nth-child(15)::before {  background-image  :  url('../flags/32/Falkland-islands.png');
-}
+.country-menu a:nth-child(18)::before {
+  background-image: url("../flags/32/Paraguay.png"); }
 
-.country-menu a:nth-child(16)::before {  background-image  :  url('../flags/32/Falkland-islands.png');
-}
+.country-menu a:nth-child(19)::before {
+  background-image: url("../flags/32/South-America-min.png"); }
 
-.country-menu a:nth-child(17)::before {  background-image  :  url('../flags/32/Brazil.png');
-}
+.country-menu a.taxHighlight {
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #567;
+  background-color: #313131;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
 
-.country-menu a:nth-child(18)::before {  background-image  :  url('../flags/32/Uruguay.png');
-}
+.country-menu a.checkHighlight {
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #567;
+  background-color: #313131;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
 
-.country-menu a:nth-child(19)::before {  background-image  :  url('../flags/32/Paraguay.png');
-}
+.country-menu a.taxHighlight::after {
+  content: '✓';
+  position: absolute;
+  left: -73px;
+  background: none; }
 
-.country-menu a:nth-child(20)::before {  background-image  :  url('../flags/32/South-America-min.png');
-}
+.country-menu a.checkHighlight::after {
+  content: '✓';
+  position: absolute;
+  left: -73px;
+  background: none; }
 
-.country-menu a.taxHighlight  {
-    color  :  white;
-    text-decoration  :  none;
+.country-menu a.bothHighlights::after {
+  content: '✓✓';
+  position: absolute;
+  left: -86px;
+  background: none; }
 
-    border-top  :  1px solid #567;
-    background-color  :  #313131;
-    box-shadow  :  2px 2px 4px rgba(0,0,0,0.3);
-}
+.country-menu a:hover, .country-menu a:focus {
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #567;
+  background-color: #222;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
 
-.country-menu a.checkHighlight  {
-    color  :  white;
-    text-decoration  :  none;
-
-    border-top  :  1px solid #567;
-    background-color  :  #313131;
-    box-shadow  :  2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.country-menu a.taxHighlight::after  {
-    content  :  '✓';
-
-    position  :  absolute;
-    left  :  -70px;
-
-    // color  :  white;
-
-    background  :  none;
-}
-
-.country-menu a.checkHighlight::after  {
-    content  :  '✓';
-
-    position  :  absolute;
-    left  :  -70px;
-
-    // color  :  white;
-
-    background  :  none;
-}
-
-.country-menu a.bothHighlights::after  {
-    content  :  '✓✓';
-
-    position  :  absolute;
-    left  :  -75px;
-
-    // color  :  white;
-
-    background  :  none;
-}
-
-.country-menu a:hover,.country-menu a:focus {
-    color  :  white;
-    text-decoration  :  none;
-
-    border-top  :  1px solid #567;
-    background-color  :  #313131;
-    box-shadow  :  2px 2px 4px rgba(0,0,0,0.3);
-}
-
-@media screen and (max-width:840px)  {
-    .md-modal {
-        top  :  0;
-        left  :  0;
-
-        transform  :  translateX(0) translateY(0);
-    }
-}
+// @media screen and (max-width: 840px) {
+//   .md-modal {
+//     top: 0;
+//     left: 0;
+//     transform: translateX(0) translateY(0); } }

@@ -5,9 +5,11 @@
             "name": "Chrome : Launch with sourcemaps",
             "type": "chrome",
             "request": "launch",
+            // "preLaunchTask": "sync",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
+            "outDir": "dest",
             "runtimeArgs": [
             "--remote-debugging-port=9222"
             ]
@@ -27,14 +29,15 @@
             "request": "attach",
             "port": 9222,
             "sourceMaps": true,
-            "url": "localhost:3000"
+            "outDir": "dest",
+            "url": "http://localhost:3000"
         },
         {
             "name": "Chrome : Attach to url",
             "type": "chrome",
             "request": "attach",
             "port": 9222,
-            "url": "localhost:3000/home.html",
+            "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}"
         }
     ]

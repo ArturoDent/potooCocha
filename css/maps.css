@@ -16,7 +16,7 @@
 .smallBird  {
     opacity  :  0;
 
-    transform  :  scale(0.7);
+    transform  :  scale(0.8);
     -webkit-transform-origin  :  0 50%;
        -moz-transform-origin  :  0 50%;
         -ms-transform-origin  :  0 50%;
@@ -30,7 +30,7 @@
     position  :  relative;
     top  :  75px;
     left  :  0;
-    width  :  200px;
+    width  :  240px;
     margin-top  :  -50px;
     margin-right  :  -15px;
     margin-bottom  :  -50px;
@@ -41,19 +41,21 @@
 .birdName  {
     position  :  absolute;
     top  :  -11px;
+    left : -70px;
     height  :  auto;
+    width : calc(100% + 60px);
     padding  :  0;
 
-    font-size  :  1.2rem;
-    color  :  black;
+    font-size  :  1.6rem;
+    /*color  :  black;*/
     text-align  :  center;
 
     border-radius  :  3px;
-    background  :  transparent;
+    /*background  :  transparent;*/
 }
 
 #currentMap .birdName {
-    top  :  -20px;
+    top  :  -90px;
 }
 
 .birdName > span:last-Child   {
@@ -61,26 +63,26 @@
 }
 
 .birdName.smallBirdText   {
-    top  :  -22px;
-    left  :  0;
-    width  :  calc(100% + 15px);
+    top  :  -27px;
+    left  :  -20px;
+    width  :  calc(100% + 40px);
 
-    color  :  black;
+    /*color  :  black;*/
     line-height  :  15px;
 
-    background  :  transparent;
+    /*background  :  transparent;*/
 
-    transform  :  scale(1.2);
+    transform  :  scale(1);
 }
 
 #currentMap {
     opacity  :  0;
 
     position  :  fixed;
-    top  :  calc(50vh - 227px);
+    top  :  calc(50vh - 210px);
     left  :  67vw;
-    width  :  275px;
-    height  :  455px;
+    /*width  :  325px;
+    height  :  520px;*/
     margin  :  0 0 0 5px;
     z-index  :  10;
 
@@ -115,6 +117,7 @@
 }
 
 #currentBirdMap {
+    transform : scale(1.3);
     background  :  transparent;
 }
 
@@ -148,7 +151,7 @@
 
     position  :  absolute;
     top  :  240px;
-    left  :  0;
+    left  :  -30px;
     width  :  36px;
     height  :  36px;
 
@@ -165,9 +168,9 @@
 
     text-shadow  :  none;
 
-    -webkit-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.3) );
-        -ms-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.3) );
-            filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.3) );
+    -webkit-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
+        -ms-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
+            filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
 
     transition  :  all 1s;
 }
@@ -180,8 +183,8 @@
     opacity  :  0.9;
 
     position  :  absolute;
-    top  :  260px;
-    left  :  165px;
+    top  :  280px;
+    left  :  170px;
 
     transition  :  opacity 350ms;
 }
@@ -193,9 +196,9 @@
 .colorKey ul li {
     position  :  relative;
     /*width  :  auto;*/
-    margin-top  :  4px;
+    margin-top  :  8px;
 
-    font-size  :  0.9em;
+    font-size  :  1.6rem;
     text-align  :  center;
     letter-spacing  :  0.1em;
     text-shadow  :  rgba(0, 0, 0, 0.4) 1px 1px 1px;
@@ -219,20 +222,20 @@
 
 .colorKey ul li:nth-child(2) {
     /* hypothetical  */
-    padding : 1px 8px 2px 8px;
-    color  :  white;
+    /*padding : 1px 8px 2px 8px;*/
+    color  :  #23bc56;
     text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
     /*text-shadow: none;*/
-    background  :  #23bc56;
+    /*background  :  #23bc56;*/
 }
 
 .colorKey ul li:nth-child(3) {
     /* nonbreeder    */
-    padding : 1px 8px 2px 8px;
-    color  :  white;
+    /*padding : 1px 8px 2px 8px;*/
+    color  :  #df7920;
     /*text-shadow: none;*/
     text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
-    background  :  #df7920;
+    /*background  :  #df7920;*/
 }
 
 .colorKey ul li:nth-child(4) {
@@ -248,7 +251,7 @@
 .colorKey ul li:nth-child(6) {
     /* resident      */
     color  :  #3030cc;
-    text-shadow  :  rgba(0, 0, 0, 0.3) 1px 1px 1px;
+    /*text-shadow  :  rgba(255,255,255, 1) 1px 1px 1px;*/
 }
 
 .colorKey ul li:nth-child(7) {

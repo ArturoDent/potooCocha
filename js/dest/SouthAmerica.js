@@ -13,9 +13,9 @@ var nonBreederColor      =  "#ff9900";
 var vagrantColor         =  "#ffff00";
 var hypotheticalColor    =  "#33cc66";
 var introducedColor      =  "#111";
+var baseColor            =  "#444740";
 
-var baseColor            =  "#959A93";
-var baseStrokeColor      =  "#333";
+var baseStrokeColor      =  "#8a8b86";
 
 /* global addBirdNameToMap birds currentMap  */
 
@@ -192,4 +192,57 @@ function highlightSAMmap(index, current) {
 
   if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
 }
-//# sourceMappingURL=js/sourceMaps/SouthAmerica.js.map
+// # sourceMappingURL=maps/SouthAmerica.js.map
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map
+
+//# sourceMappingURL=maps/SouthAmerica.js.map

@@ -221,3 +221,5 @@ function saveCurrentMap()  {
 //# sourceMappingURL=maps/birdMapFactory.js.map
 
 //# sourceMappingURL=maps/birdMapFactory.js.map
+
+//# sourceMappingURL=maps/birdMapFactory.js.map

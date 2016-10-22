@@ -32,6 +32,9 @@
 ,STORM-PETRELS,HYDROBATIDAE
 ,Wilson's Storm-Petrel,Oceanites oceanicus
 
+,TROPICBIRDS,PHAETHONTIDAE
+,Red-billed Tropicbird,Phaethon aethereus
+
 ,STORKS,CICONIIDAE
 ,Wood Stork,Mycteria americana
 
@@ -134,6 +137,9 @@
 ,Willet,T. semipalmata
 ,Lesser Yellowlegs,T. flavipes
 
+,JACANAS,JACANIDAE
+,Wattled Jacana,Jacana jacana
+
 ,SKUAS,STERCORARIIDAE
 ,Pomarine Jaeger,Stercorarius pomarinus
 ,Parasitic Jaeger,S. parasiticus
@@ -172,6 +178,7 @@
 
 ,CUCKOOS,CUCULIDAE
 ,Greater Ani,Crotophaga major
+,Smooth-billed Ani,C. ani
 ,Groove-billed Ani,C. sulcirostris
 ,Yellow-billed Cuckoo,Coccyzus americanus
 ,Mangrove Cuckoo,C. minor
@@ -211,11 +218,11 @@
 
 ,PARROTS,PSITTACIDAE
 ,Brown-throated Parakeet,Eupsittula pertinax
-,Chestnut-fronted Macaw,Ara severus
 
 ,TYRANT FLYCATCHERS,TYRANNIDAE
 ,Caribbean Elaenia,Elaenia martinica
 ,Small-billed Elaenia,E. parvirostris
+,Mouse-colored Tyrannulet,Phaeomyias murina
 ,Northern Scrub-Flycatcher,Sublegatus arenarum
 ,Eastern Wood-Pewee,Contopus virens
 ,Vermilion Flycatcher,Pyrocephalus rubinus
@@ -228,7 +235,8 @@
 ,Brown-crested Flycatcher,M. tyrannulus
 
 ,VIREOS,VIREONIDAE
-,Philadelphia Vireo,Vireo philadelphicus
+,Yellow-throated Vireo,Vireo flavifrons
+,Philadelphia Vireo,V. philadelphicus
 ,Red-eyed Vireo,V. olivaceus
 ,Black-whiskered Vireo,V. altiloquus
 
@@ -246,6 +254,7 @@
 
 ,THRUSHES,TURDIDAE
 ,Veery,Catharus fuscescens
+,Wood Thrush,Hylocichla mustelina
 
 ,MOCKINGBIRDS,MIMIDAE
 ,Tropical Mockingbird,Mimus gilvus
@@ -276,8 +285,7 @@
 ,Prothonotary Warbler,Protonotaria citrea
 ,Tennessee Warbler,Leiothlypis peregrina
 ,Connecticut Warbler,Oporornis agilis
-,Mourning Warbler,Geothlypis philadelphia
-,Kentucky Warbler,G. formosa
+,Kentucky Warbler,Geothlypis formosa
 ,Common Yellowthroat,G. trichas
 ,Hooded Warbler,Setophaga citrina
 ,American Redstart,S. ruticilla
@@ -300,8 +308,8 @@
 ,Baltimore Oriole,I. galbula
 ,Yellow Oriole,I. nigrogularis
 ,Oriole Blackbird,Gymnomystax mexicanus
-,Bronzed Cowbird,Molothrus aeneus
-,Shiny Cowbird,M. bonariensis
+,Yellow-hooded Blackbird,Chrysomus icterocephalus
+,Shiny Cowbird,Molothrus bonariensis
 ,Carib Grackle,Quiscalus lugubris
 ,Great-tailed Grackle,Q. mexicanus
 ,Bobolink,Dolichonyx oryzivorus

@@ -25,6 +25,8 @@ SHEARWATERS,PROCELLARIIDAE
 ,,Audubon's Shearwater,Puffinus lherminieri
 STORM-PETRELS,HYDROBATIDAE
 ,,Wilson's Storm-Petrel,Oceanites oceanicus
+TROPICBIRDS,PHAETHONTIDAE
+,,Red-billed Tropicbird,Phaethon aethereus
 STORKS,CICONIIDAE
 ,,Wood Stork,Mycteria americana
 FRIGATEBIRDS,FREGATIDAE
@@ -111,6 +113,8 @@ SANDPIPERS,SCOLOPACIDAE
 20,,Greater Yellowlegs,T. melanoleuca
 ,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
+JACANAS,JACANIDAE
+,,Wattled Jacana,Jacana jacana
 SKUAS,STERCORARIIDAE
 ,,Pomarine Jaeger,Stercorarius pomarinus
 ,,Parasitic Jaeger,S. parasiticus
@@ -145,6 +149,7 @@ PIGEONS,COLUMBIDAE
 ,,Common Ground Dove,Columbina passerina
 CUCKOOS,CUCULIDAE
 ,,Greater Ani,Crotophaga major
+,,Smooth-billed Ani,C. ani
 ,,Groove-billed Ani,C. sulcirostris
 ,,Yellow-billed Cuckoo,Coccyzus americanus
 ,,Mangrove Cuckoo,C. minor
@@ -175,22 +180,23 @@ FALCONS,FALCONIDAE
 ,,Peregrine Falcon,F. peregrinus
 PARROTS,PSITTACIDAE
 ,,Brown-throated Parakeet,Eupsittula pertinax
-,,Chestnut-fronted Macaw,Ara severus
 TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Caribbean Elaenia,Elaenia martinica
 ,,Small-billed Elaenia,E. parvirostris
+,,Mouse-colored Tyrannulet,Phaeomyias murina
 ,,Northern Scrub-Flycatcher,Sublegatus arenarum
-,,Eastern Wood-Pewee,Contopus virens
-5,,Vermilion Flycatcher,Pyrocephalus rubinus
+5,,Eastern Wood-Pewee,Contopus virens
+,,Vermilion Flycatcher,Pyrocephalus rubinus
 ,,Cattle Tyrant,Machetornis rixosa
 ,,Tropical Kingbird,Tyrannus melancholicus
 ,,Fork-tailed Flycatcher,T. savana
-,,Eastern Kingbird,T. tyrannus
-10,,Gray Kingbird,T. dominicensis
+10,,Eastern Kingbird,T. tyrannus
+,,Gray Kingbird,T. dominicensis
 ,,Swainson's Flycatcher,Myiarchus swainsoni
 ,,Brown-crested Flycatcher,M. tyrannulus
 VIREOS,VIREONIDAE
-,,Philadelphia Vireo,Vireo philadelphicus
+,,Yellow-throated Vireo,Vireo flavifrons
+,,Philadelphia Vireo,V. philadelphicus
 ,,Red-eyed Vireo,V. olivaceus
 ,,Black-whiskered Vireo,V. altiloquus
 SWALLOWS,HIRUNDINIDAE
@@ -205,6 +211,7 @@ WAXWINGS,BOMBYCILLIDAE
 ,,Cedar Waxwing,Bombycilla cedrorum
 THRUSHES,TURDIDAE
 ,,Veery,Catharus fuscescens
+,,Wood Thrush,Hylocichla mustelina
 MOCKINGBIRDS,MIMIDAE
 ,,Tropical Mockingbird,Mimus gilvus
 STARLINGS,STURNIDAE
@@ -229,19 +236,18 @@ WOOD-WARBLERS,PARULIDAE
 ,,Prothonotary Warbler,Protonotaria citrea
 ,,Tennessee Warbler,Leiothlypis peregrina
 ,,Connecticut Warbler,Oporornis agilis
-,,Mourning Warbler,Geothlypis philadelphia
-10,,Kentucky Warbler,G. formosa
-,,Common Yellowthroat,G. trichas
+,,Kentucky Warbler,Geothlypis formosa
+10,,Common Yellowthroat,G. trichas
 ,,Hooded Warbler,Setophaga citrina
 ,,American Redstart,S. ruticilla
 ,,Cape May Warbler,S. tigrina
-15,,Northern Parula,S. americana
-,,Magnolia Warbler,S. magnolia
+,,Northern Parula,S. americana
+15,,Magnolia Warbler,S. magnolia
 ,,Bay-breasted Warbler,S. castanea
 ,,Blackburnian Warbler,S. fusca
 ,,Yellow Warbler,S. petechia
-20,,Chestnut-sided Warbler,S. pensylvanica
-,,Blackpoll Warbler,S. striata
+,,Chestnut-sided Warbler,S. pensylvanica
+20,,Blackpoll Warbler,S. striata
 ,,Black-throated Blue Warbler,S. caerulescens
 ,,Palm Warbler,S. palmarum
 ,,Yellow-rumped Warbler,S. coronata
@@ -252,8 +258,8 @@ BLACKBIRDS,ICTERIDAE
 ,,Baltimore Oriole,I. galbula
 ,,Yellow Oriole,I. nigrogularis
 ,,Oriole Blackbird,Gymnomystax mexicanus
-5,,Bronzed Cowbird,Molothrus aeneus
-,,Shiny Cowbird,M. bonariensis
+5,,Yellow-hooded Blackbird,Chrysomus icterocephalus
+,,Shiny Cowbird,Molothrus bonariensis
 ,,Carib Grackle,Quiscalus lugubris
 ,,Great-tailed Grackle,Q. mexicanus
 ,,Bobolink,Dolichonyx oryzivorus

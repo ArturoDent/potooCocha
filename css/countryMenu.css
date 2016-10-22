@@ -3,13 +3,13 @@
   position: fixed;
   top: 0;
   left: 100%;
-  width: 180px;
+  width: 230px;
   z-index: 2000;
   transition: all 750ms;
   transform: translateX(0); }
 
 .md-show {
-  transform: translateX(-180px); }
+  transform: translateX(-230px); }
 
 .md-overlay {
   opacity: 0;
@@ -23,8 +23,7 @@
   padding: 0;
   z-index: 10;
   border: none;
-  /*background: rgba(40, 40, 40, 0.85);*/
-  background: rgba(149,154,147, 0.8);
+  background: rgba(90, 91, 86, 0.65);
   transition: opacity 750ms; }
 
 .md-show ~ .md-overlay {
@@ -32,7 +31,7 @@
   visibility: visible; }
 
 .country-menu-wrap {
-  font-size: 1em; }
+  font-size: 1.8rem; }
 
 .country-menu {
   display: flex;
@@ -41,10 +40,10 @@
   /*flex-grow           :  1;*/
   justify-content: space-around;
   height: 100vh;
-  padding: 8px 0 20px 0;
+  padding: 8px 10px 20px 0;
   align-items: center;
-  background-color: #959A93;
-  box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.4); }
+  background-color: #4a4b46;
+  box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.25); }
 
 .country-menu-wrap::before {
   content: '';
@@ -58,7 +57,7 @@
 
 .country-menu a {
   position: relative;
-  width: 152px;
+  width: 192px;
   padding: 3px 0 5px 12px;
   text-decoration: none;
   overflow: visible;
@@ -83,9 +82,9 @@
   display: inline-block;
   position: absolute;
   top: -2px;
-  left: -52px;
-  width: 32px;
-  height: 32px;
+  left: -54px;
+  width: 36px;
+  height: 36px;
   /*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
   /*background-size  :  32px;*/
   background-size: contain; }
@@ -137,7 +136,6 @@
 
 /*.country-menu a:nth-child(16)::before {
   background-image: url("../flags/32/Falkland-islands.png"); }*/
-
 .country-menu a:nth-child(16)::before {
   background-image: url("../flags/32/Brazil.png"); }
 
@@ -167,30 +165,24 @@
 .country-menu a.taxHighlight::after {
   content: '✓';
   position: absolute;
-  left: -70px;
+  left: -73px;
   background: none; }
 
 .country-menu a.checkHighlight::after {
   content: '✓';
   position: absolute;
-  left: -70px;
+  left: -73px;
   background: none; }
 
 .country-menu a.bothHighlights::after {
   content: '✓✓';
   position: absolute;
-  left: -75px;
+  left: -86px;
   background: none; }
 
 .country-menu a:hover, .country-menu a:focus {
   color: white;
   text-decoration: none;
   border-top: 1px solid #567;
-  background-color: #313131;
+  background-color: #222;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
-
-@media screen and (max-width: 840px) {
-  .md-modal {
-    top: 0;
-    left: 0;
-    transform: translateX(0) translateY(0); } }

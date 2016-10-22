@@ -9,6 +9,7 @@ var showEndemics;
 
 var currentChecklistCountry;
 var currentChecklistCountryElement;
+var checklistAuthorsPanel;
 
 var countryModalOverlay;
 var countryModalOpener;
@@ -26,10 +27,11 @@ var taxonomyCountryButton;
 var map;
 
 
-/* global  prepareSVGstyles loadCountryTaxonomy selectedCountryFillColor currentMap selectedFillColor */
+
+/* global  prepareSVGstyles loadCountryTaxonomy selectedCountryFillColor getAjax currentMap selectedFillColor */
 
 document.addEventListener("DOMContentLoaded", function () {
-
+  console.log("herer");
   map   =  document.getElementById("currentMap");
 
   window.addEventListener("resize", onResizeWindow);
@@ -76,6 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
   sciNames.addEventListener("click", toggleSampleTableSciNames);
   italics.addEventListener("click", toggleSampleTableItalics);
 
+  checklistAuthorsPanel = document.getElementById("checklistAuthorsPanel");
+
   [].forEach.call(document.getElementsByClassName("country-menu")[0].getElementsByTagName("a"), function (el) {
     el.addEventListener("click", choseCountry);
   });
@@ -101,7 +105,7 @@ function initCurrentMap() {
 function showCountryModal(evt)  {
 
   document.querySelector("#countryModal").classList.add("md-show");
-  document.querySelector("#mainContent").classList.add("modal-shrink");
+  // document.querySelector("#mainContent").classList.add("modal-shrink");
   map.classList.add("modal-shrink");
 
   if (evt.target.id === "checklistCountryButton") countryModalOpener = "checklistCountryButton";
@@ -111,7 +115,7 @@ function showCountryModal(evt)  {
 function closeCountryModal()  {
 
   document.querySelector("#countryModal").classList.remove("md-show");
-  document.querySelector("#mainContent").classList.remove("modal-shrink");
+  // document.querySelector("#mainContent").classList.remove("modal-shrink");
   map.classList.remove("modal-shrink");
 }
 
@@ -171,10 +175,10 @@ function choseChecklistCountry(evt)  {
 
   if (selectedCountry === "South America")  currentChecklistCountry = "SouthAmerica";
   else if (selectedCountry === "French Guiana")  currentChecklistCountry = "FrenchGuiana";
-	else if (selectedCountry === "Falklands/Malv.")  currentChecklistCountry = "Falklands";
+  else if (selectedCountry === "Falklands/Malv.")  currentChecklistCountry = "Falklands";
   // else if (selectedCountry === "Malvinas")  currentChecklistCountry = "Falklands";
-	else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
-	else   currentChecklistCountry = selectedCountry;
+  else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
+  else   currentChecklistCountry = selectedCountry;
 
   checklistCountryButton.innerHTML = selectedCountry;
   if (selectedCountry === "Falklands/Malv.")  checklistCountryButton.innerHTML = "Falklands";
@@ -197,6 +201,22 @@ function choseChecklistCountry(evt)  {
   currentMap.querySelector(".colorKey").style.opacity = "0";
 
   selectedCountryFillColor(currentChecklistCountry, selectedFillColor);
+
+  getAjax("Authors/" + currentChecklistCountry + ".txt", setChecklistAuthors);
+}
+
+// ^(.*\\.) \\d\\d\\d\\d\\..*(Version.*$)
+function setChecklistAuthors(data) {
+
+  if (currentChecklistCountry === "SouthAmerica") {
+    checklistAuthorsPanel.innerHTML = "<a href='citations.html' target='_blank'>citations</a>";
+    checklistAuthorsPanel.classList.add("show");
+    return;
+  }
+
+  var authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
+  checklistAuthorsPanel.innerHTML = authors;
+  checklistAuthorsPanel.classList.add("show");
 }
 
 function setNumDays(evt)  {
@@ -321,4 +341,4 @@ function openChecklistPage()  {
 
   window.open( "../php/makePDF.php" + vars, "_blank" );
 }
-//# sourceMappingURL=js/sourceMaps/main.js.map
+//# sourceMappingURL=maps/main.js.map

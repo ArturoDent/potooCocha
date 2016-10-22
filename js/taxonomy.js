@@ -9,7 +9,7 @@ var numFamilies;
 
 var birds = [];
 
-var numSpeciesList = { "Argentina":999, "Aruba":216, "Bolivia":1381, "Brazil":1799, "Chile":475,
+var numSpeciesList = { "Argentina":999, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
                   "Colombia":1838, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
                   "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":724, "Trinidad":468,
                   "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3371};
@@ -17,7 +17,7 @@ var numSpeciesList = { "Argentina":999, "Aruba":216, "Bolivia":1381, "Brazil":17
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
-var numFamiliesList = { "Argentina":87, "Aruba":50, "Bolivia":78, "Brazil":91, "Chile":65,
+var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":65,
                   "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":81,
                   "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
                   "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
@@ -123,7 +123,7 @@ function showSearchInstructions(state)  {
 
     searchSlideUpWrapper.style.height = searchSlideUpWrapper_height;
     searchSlideUpWrapper.classList.remove("closeInstructions");
-    taxInstructionsButton.classList.remove("instructionsClosed");
+    // taxInstructionsButton.classList.remove("instructionsClosed");
 
     searchInstructionsOpen = true;
 
@@ -134,7 +134,7 @@ function showSearchInstructions(state)  {
 
     searchSlideUpWrapper.style.height = 0;
     searchSlideUpWrapper.classList.add("closeInstructions");
-    taxInstructionsButton.classList.add("instructionsClosed");
+    // taxInstructionsButton.classList.add("instructionsClosed");
 
     searchInstructionsOpen = false;
 
@@ -152,9 +152,9 @@ function createTaxPageHTML ()  {
   resultsFrag += "</div>";
 
   taxFragHTML = "<article id='taxTreeArticle'>";
-  taxFragHTML += "  <div id='treeIntroText'>&nbsp; numFamilies Families, numSpecies species</div>";
+  taxFragHTML += "  <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>";
   taxFragHTML += "  <div id='taxPage' class='panel' contenteditable='false'></div>";
-  taxFragHTML += "  <div id='taxPageButtons'>Close all families</div>";
+  taxFragHTML += "  <div id='taxPageButtons' class='flyoutPanel bottomFlyoutPanel'>Close all families</div>";
   taxFragHTML += "</article>";
 }
 
@@ -192,7 +192,7 @@ function loadCountryTaxonomy(evt)  {
 
   if (lastQuery)   {
     document.getElementById("countrySearch").classList.remove("closed");
-    document.getElementById("searchTerm").innerHTML = taxCountry + " : '" + lastQuery;
+    document.getElementById("searchTerm").innerHTML = taxCountry + " : '" + lastQuery + "'";
     document.querySelector(".results-panel").style.opacity = "1";
   }
 
@@ -365,9 +365,9 @@ function searchTree(query2) {
 
     searchResults.style.height = "auto";
 
-    if (searchResults.scrollHeight >= 300) searchResults.style.height = "300px";
+    if (searchResults.scrollHeight >= 300) searchResults.style.height = "315px";
     else {
-      searchResults.style.height = searchResults.scrollHeight + "px";
+      searchResults.style.height = searchResults.scrollHeight + 15 + "px";
     }
   });
 
@@ -387,9 +387,9 @@ function searchTree(query2) {
   if (lastQuery)  {
     document.getElementById("countrySearch").classList.remove("closed");
     if (currentTaxonomyCountry === "Falklands")  {
-      document.getElementById("searchTerm").innerHTML = "Falklands/Malvinas" + " : '" + lastQuery;
+      document.getElementById("searchTerm").innerHTML = "Falklands/Malvinas" + " : '" + lastQuery + "'";
     }
-    else document.getElementById("searchTerm").innerHTML = currentTaxonomyCountry + " : '" + lastQuery;
+    else document.getElementById("searchTerm").innerHTML = currentTaxonomyCountry + " : '" + lastQuery + "'";
   }
   else {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
@@ -763,8 +763,10 @@ function toggleFamilyOpen(event)  {
 
     thisSpecies.parentNode.className = "active";
 
-    if (lastSpecies && lastSpecies.classList.contains("active")) {
-      lastSpecies.classList.remove("active");
+    if (thisSpecies.parentNode != lastSpecies) {
+      if (lastSpecies && lastSpecies.classList.contains("active")) {
+        lastSpecies.classList.remove("active");
+      }
     }
 
     lastSpecies = thisSpecies.parentNode;
@@ -794,3 +796,4 @@ function closeAllFamilies()  {
   // **** reset families and species of country
   document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species *";
 }
+// # sourceMappingURL=maps/taxonomy.js.map

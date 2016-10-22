@@ -1,11 +1,20 @@
-$bgColor  :  #959A93;
+// $bgColor  :  #959A93;
+$bgColor  :  rgb(90,91,86);
 
 $bannerColor  :  transparent;
 $genericButtonColor  :  #A65751;
-$panelColor : #B1B7AE;
+// $panelColor : #B1B7AE;
+// $panelColor : rgb(97,98,93);
+// $panelColor : rgb(84,85,80);
+$panelColor : rgb(74,75,70);
 
+// $panelFlyoutColor : rgba(82,104,112,1);
+// $panelFlyoutColor : rgba(84,106,114,1);
+// $panelFlyoutColor : rgba(94,116,124,1);
 $panelFlyoutColor : rgba(82,104,112,1);
-$birdRolloverColor : #6f8a91;
+
+
+$birdRolloverColor : #000;
 
 *,*::before,*::after {
     margin  :  0;
@@ -27,8 +36,8 @@ $birdRolloverColor : #6f8a91;
 
 html {
     width  :  100%;
-    /*so 1em = 10px (browser default usually 16px)*/
     height  :  100%;
+    /*so 1em = 10px (browser default usually 16px)*/
     font-size  :  62.5%;
     background  :  $bgColor;
 }
@@ -39,12 +48,12 @@ body {
     margin  :  0 auto;
 
     font-family  :  Verdana, Georgia, sans-serif;
-    font-size  :  1.4em;
+    font-size  :  1.6rem;
     font-weight  :  600;
     // color  :  #414141;
-    color : black;
+    color : white;
     letter-spacing  :  0.04em;
-    // text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 
     background  :  $bgColor;
 }
@@ -53,7 +62,7 @@ a   {  color  :  inherit;
     text-decoration  :  none;
 }
 
-a:link  {  border-bottom  :  solid 1px currentColor;
+a:link  {  border-bottom  :  solid 1px #bbb;
 }
 
 .icon {
@@ -72,7 +81,7 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 }
 
 .icon-pen {
-    top  :  1px;
+    top  :  -5px;
     left  :  -15px;
     width  :  2.6em;
     height  :  2.6em;
@@ -87,10 +96,10 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 
 .icon-female {
     top  :  3px;
-    fill : #444;
-    -webkit-filter  :  drop-shadow( 2px 2px 2px transparent ) drop-shadow( -1px -1px 1px transparent );
-        -ms-filter  :  drop-shadow( 2px 2px 2px transparent ) drop-shadow( -1px -1px 1px transparent );
-            filter  :  drop-shadow( 2px 2px 2px transparent ) drop-shadow( -1px -1px 1px transparent );
+    fill : ddd;
+    -webkit-filter  :  drop-shadow( 2px 2px 2px 0.3 ) drop-shadow( -1px -1px 1px 0.3 );
+        -ms-filter  :  drop-shadow( 2px 2px 2px 0.3 ) drop-shadow( -1px -1px 1px 0.3 );
+            filter  :  drop-shadow( 2px 2px 2px 0.3 ) drop-shadow( -1px -1px 1px 0.3 );
 }
 
 .icon-camera  {
@@ -98,12 +107,12 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 }
 
 .icon-list  {
-    top  :  4px;
+    top  :  6px;
     width  :  2em;
 }
 
 .icon-file-excel  {
-    top  :  2px;
+    top  :  4px;
     width  :  2em;
     height  :  1.2em;
 }
@@ -124,7 +133,7 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 }
 
 #mainContent.modal-shrink {
-    transform  :  translateX(-120px);
+    transform  :  translateX(-100px);
 }
 
 .smallBanner {
@@ -136,7 +145,7 @@ a:link  {  border-bottom  :  solid 1px currentColor;
     margin  :  0;
     padding  :  20px 0 93px 11%;
 
-    font-size  :  2.5em;
+    font-size  :  2.5rem;
     font-weight  :  bold;
     color  :  black;
     letter-spacing  :  0.15em;
@@ -172,35 +181,43 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 }
 
 .titleText  {
-    flex : 1 1 220px;
-    padding  :  15px 0 15px 0;
+    flex : 1 1 330px;
+    padding  :  12px 0 15px 0;
 
-    font-size  :  1.3em;
+    font-size  :  2.7rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     color  :  #fff;
     text-align  :  center;
-    letter-spacing  :  0.15em;
+    letter-spacing  :  0.04em;
     text-shadow  :  1px 1px 1px rgba(40,40,40,1);
+    border : 1px solid rgba(255,255,255,1);
 
+    // border : 1px solid rgba(82,104,112,1);
     border-radius  :  5px;
-    background  :  $panelFlyoutColor;
-    box-shadow: 0 0.7px #313131, -0.7px 0 #313131, 0 -0.3px #fff, 0.3px 0 #fff;
+
+    background  :  rgba(82,104,112,1);
+    // box-shadow: 0 0.7px #313131, -0.7px 0 #313131, 0 -0.3px #fff, 0.3px 0 #fff;
+    box-shadow: inset 0 0 7px 0 #333;
 }
 
 .titleBanner_spacer  {
     position  :  relative;
     top  :  -7px;
 
-    font-size  :  1.1rem;
+    font-size  :  1.5rem;
     font-variant  :  normal;
 }
 
 .surroundBanner  {
     position : relative;
     height : 3px;
-    background : $panelFlyoutColor;
-    box-shadow: 0 -0.4px #ddd, 0 0.7px #313131;
+    // border : 1px solid rgba(82,104,112,1);
+    // border : 1px solid rgba(255,255,255,1);
+
+    border-radius: 50%;
+    background : rgba(255,255,255,1);
+    box-shadow: 0 -1px #222, 0 1px #222;
 }
 
 .surroundBanner:nth-child(1)  {
@@ -210,7 +227,7 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 }
 
 .surroundBanner:nth-child(3)  {
-    top : calc(30px + 0.65em);
+    top : calc(32px + 0.65em);
     flex : 1 1 auto;
 }
 
@@ -223,7 +240,7 @@ a:link  {  border-bottom  :  solid 1px currentColor;
 
     position  :  relative;
     left  :  0;
-    width  :  600px;
+    width  :  695px;
     margin-top  :  70px;
 
     overflow  :  visible;
@@ -236,9 +253,9 @@ section  {
 }
 
 article {
-    width  :  600px;
+    // width  :  695px;
 
-    font-size  :  1.4rem;
+    // font-size  :  1.4rem;
     line-height  :  22px;
 
     border-radius  :  3px;
@@ -250,11 +267,12 @@ article {
     opacity  :  1;
 
     position  :  relative;
-    padding  :  0 15px;
+    padding  :  0 25px;
 
     pointer-events  :  auto;
+    overflow  :  visible;
 
-    border  :  1px solid #B1B7AE;
+    border  :  1px solid rgba(255,255,255,0.25);
     border-radius  :  3px;
     background  :  $panelColor;
     box-shadow  :  1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -265,10 +283,42 @@ article {
             transition  :  opacity 2s;
 }
 
+.flyoutPanel  {
+    width  :  calc(100% - 40px);
+    height  :  42px;
+    margin  :  0 auto 0 auto;
+
+    font-size  :  1.8rem;
+    font-variant  :  small-caps;
+    color  :  #fff;
+    line-height  :  34px;
+    text-align  :  center;
+    letter-spacing  :  0.1em;
+
+    border  :  1px solid rgba(255,255,255,0.25);
+    background-color  :  $panelFlyoutColor;
+}
+
+.topFlyoutPanel  {
+    padding-bottom  :  4px;
+    border-bottom  :  none;
+    border-top-left-radius  :  3px;
+    border-top-right-radius  :  3px;
+    box-shadow : inset 0 -5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
+}
+
+.bottomFlyoutPanel  {
+    padding-top :  3px;
+    border-top  :  none;
+    border-bottom-right-radius  :  3px;
+    border-bottom-left-radius  :  3px;
+    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
+}
+
 .genericButton {
     padding  :  10px 14px;
 
-    font-size  :  1.2em;
+    font-size  :  1.8rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
 
@@ -292,7 +342,7 @@ article {
 
 .genericButton:hover,.genericButton:focus {
     text-shadow  :  1px 1px 1px black;
-    box-shadow  :  inset 140px 0 5px 5px #333, 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow  :  inset 185px 0 5px 5px #333, 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .genericButton.needsAttention {
@@ -323,22 +373,26 @@ article {
 }
 
 .taxArticleMain {
-    padding  :  30px 0;
+    padding  :  10px 0 30px 0;
+    line-height: 28px;
 }
 
 .taxArticleMain .searchWord {
     position  :  relative;
-    top  :  -10px;
-    left  :  -30px;
-    margin  :  0 -15px 0 0;
-    padding  :  6px 10px 6px 15px;
+    top  :  -20px;
+    width : calc(100% + 50px);
+    // width : 100%;
+    left  :  -25px;
+    // margin  :  0 10px 20px 0;
+    padding  :  21px 25px 16px 25px;
 
-    color : #fff;
-    font-size : 1.7rem;
-    letter-spacing  :  0.2em;
-    text-shadow  :  1px 1px 1px rgba(40,40,40,1);
+    // color : #fff;
+    font-size : 1.6rem;
+    text-align: center;
+    // letter-spacing  :  0.2em;
+    // text-shadow  :  1px 1px 1px rgba(40,40,40,1);
 
-    border-radius  :  3px;
+    // border-radius  :  5px;
     background  :  rgba(82,104,112,1);
     box-shadow : 1px 1px 1px rgba(0,0,0,0.5);
 }
@@ -349,11 +403,16 @@ article {
     // background  :  transparent;
 // }
 
-#taxonomyArticle a.linkHighlight:hover,.genericButton.highlight:focus {
-    // background  :  #eee;
-    color : white;
-    text-shadow  :  1px 1px 2px rgba(40,40,40,0.6);
 
+#taxonomyArticle a.linkHighlight {
+    padding : 3px 5px 0 6px;
+}
+
+#taxonomyArticle a.linkHighlight:hover {
+    // background  :  #eee;
+    // color : black;
+    background : $genericButtonColor;
+    // text-shadow  :  none;
     transition: all 350ms;
 }
 
@@ -369,44 +428,49 @@ article {
     position  :  relative;
     margin  :  100px 0 0 0;
     z-index  :  0;
+    // text-align  :  center;
 
     overflow  :  visible;
 }
 
-.checklistIntro {
-    width  :  calc(100% - 40px);
-    height  :  36px;
-    margin  :  0 auto 0 auto;
-    padding-bottom  :  5px;
-
-    font-size  :  1.5rem;
-    font-variant  :  small-caps;
-    color  :  #fff;
-    line-height  :  34px;
+#checklistAuthorsPanel  {
+    opacity : 0;
+    height : 0;
+    margin : 0 5px;
+    padding : 7px 5px 5px 5px;
+    font-variant: small-caps;
+    font-size  :  1.4rem;
     text-align  :  center;
-    letter-spacing  :  0.1em;
+    line-height  :  20px;
+    background : #333;
+    transition : all 350ms;
+}
 
-    border  :  1px solid #bbb;
-    border-bottom  :  none;
-    border-top-left-radius  :  3px;
-    border-top-right-radius  :  3px;
-    background-color  :  $panelFlyoutColor;
-    box-shadow : inset 0 -5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
+#checklistAuthorsPanel.show  {
+    opacity : 1;
+    height : auto;
+    margin : 30px 5px 0 5px;
 }
 
 #checklistArticle .panel  {
-    padding  :  25px 0;
+    padding  :  25px 0 0 0;
 }
 
 #checklistOptions.panel {
     position  :  relative;
     left  :  10%;
     width  :  80%;
-    margin  :  40px 0 25px 0;
+    margin  :  60px 0 25px 0;
     padding  :  30px 0 30px 35px;
 
-    font-size  :  1em;
+    font-size  :  1.7rem;
+    // color : black;
+    // text-align  :  left;
+
     letter-spacing  :  0.15em;
+    // text-shadow: none;
+// background : #B1B7AE;
+// background : #333;
 
     // border  :  1px solid #607478;
     border-top-left-radius  :  10%;
@@ -417,13 +481,15 @@ article {
 .checklistTitle  {
     position  :  absolute;
     top  :  20px;
-    left  :  -240px;
+    left  :  -255px;
     z-index  :  2;
 
-    font-size  :  1.6em;
+    font-size  :  2.3rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  $genericButtonColor;
+    // color  :  $genericButtonColor;
+    color  :  white;
+
     text-shadow : 1px 1px 1px rgba(255,255,255,0.2);
     letter-spacing  :  0.2em;
 
@@ -448,7 +514,7 @@ article {
     right  :  -80px;
     bottom  :  35%;
     height  :  34px;
-    padding  :  0 6px 7px 8px;
+    padding  :  0 16px 12px 18px;
 }
 
 #csvButton {
@@ -456,7 +522,7 @@ article {
     right  :  -78px;
     bottom  :  10%;
     height  :  34px;
-    padding  :  0 6px 4px 8px;
+    padding  :  0 16px 8px 18px;
 }
 
 #numDays {
@@ -466,7 +532,7 @@ article {
 
     position  :  relative;
     left  :  20px;
-    width  :  140%;
+    width  :  150%;
     margin  :  20px 0 20px 0;
     z-index  :  20;
 
@@ -479,23 +545,26 @@ article {
     position  :  relative;
     top  :  12px;
 
-    color  :  #313131;
+    font-size  :  2rem;
+    color  :  #000;
     letter-spacing  :  0.15em;
+    text-shadow: none;
 }
 
 #numDays a {
     position  :  relative;
     top  :  2px;
-    width  :  45px;
-    height  :  42px;
-    padding  :  9px 0 0 0;
+    width  :  50px;
+    height  :  50px;
+    padding  :  8px 0 0 0;
 
     color : #313131;
-    font-size  :  1.2em;
+    font-size  :  2.2rem;
     text-align  :  center;
     text-decoration  :  none;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 
+    // slightly randomize the variuos border-radii ala cicada principle ?***
     border-radius  :  50%;
     background  :  #eee;
     box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -504,13 +573,15 @@ article {
     -webkit-transition  :  all 400ms;
        -moz-transition  :  all 400ms;
          -o-transition  :  all 400ms;
-            transition  :  background 300ms, color 300ms;
+            transition  :  all 300ms;
 }
 
 #numDays a:hover,#numDays a:focus {
-    background  :  $genericButtonColor;
     color : #fff;
     text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+    border-top-right-radius  :  10%;
+    background  :  $genericButtonColor;
+    box-shadow  :  0 0 1px 1px rgba(255,255,255,0.4);
 }
 
 #numDays a.highlight {
@@ -519,8 +590,9 @@ article {
     color  :  #fff;
     text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
 
+    border-top-right-radius  :  10%;
     background-color  :  $genericButtonColor;
-    box-shadow  :  0 0 3px 3px rgba(255,255,255,0.4);
+    box-shadow  :  0 0 2px 2px rgba(255,255,255,0.4);
 
     transform  :  scale(1.6);
     transition : all 350ms;
@@ -551,7 +623,8 @@ footer {
 
     // border-radius : 5px;
     // background  :  $panelFlyoutColor;
-    background  :  transparent;
+
+    // background  :  transparent;
 }
 
 
@@ -559,7 +632,7 @@ footer a  {
     padding : 2px 3px 4px 5px;
     text-decoration  :  none;
     border : solid 1px transparent;
-    border-bottom  :  solid 1px #333;
+    border-bottom  :  solid 1px #bbb;
 }
 
 // footer .obfuscated_link {
@@ -574,6 +647,6 @@ footer a  {
 footer a:hover, footer a:focus {
     // text-shadow  :  rgba(0, 0, 0, 1) 1px 1px 1px;
     // border-bottom  :  solid 1px #fff;
-    border  :  solid 1px #000;
+    border  :  solid 1px #bbb;
     transition: all 350ms;
 }

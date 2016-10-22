@@ -18,7 +18,7 @@
             "error",
             "always"
         ],
-        "spaced-comment": ["error", "always", {
+        "spaced-comment": ["off", "always", {
             "line": {
                  "markers": ["/"],
                 "exceptions": ["-", "+"]
@@ -31,7 +31,7 @@
         }],
     "no-console": 0,
     "no-undef": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": "warn",
     "no-shadow": ["error", { "allow": ["i", "j"] }],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],

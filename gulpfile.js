@@ -13,10 +13,10 @@ var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
 var sourcemaps = require("gulp-sourcemaps");
 var cached = require("gulp-cached");
-var remember = require("gulp-remember");
+// var remember = require("gulp-remember");
 
 
-function serve (done) {
+function serve(done) {
 
   browserSync.init({
     server: {
@@ -46,7 +46,7 @@ var paths = {
 
 function watch() {
   gulp.watch(paths.scripts.src, gulp.series(processJS, reload));
-  gulp.watch(paths.styles.src,  gulp.series(sass2css,  reload));
+  gulp.watch(paths.styles.src, gulp.series(sass2css, reload));
   gulp.watch("./*.html").on("change", browserSync.reload);
 }
 
@@ -70,16 +70,16 @@ function processJS() {
     // .pipe(gulp.dest("./concats/"))
     // .pipe(rename({ suffix: ".min" }))
     // .pipe(uglify())
-    .pipe(sourcemaps.write("./js/sourceMaps/"))
-    .pipe(gulp.dest("./js/maps/"));
+    .pipe(sourcemaps.write("./maps"))
+    .pipe(gulp.dest("./js/dest/"));
 }
 
-gulp.task("minify-css", function() {
+gulp.task("minify-css", function () {
   return gulp.src("./src/*.css")
-        // .pipe(sourcemaps.init())
-        .pipe(cleanCSS())
-        // .pipe(sourcemaps.write())
-        .pipe(gulp.dest("minified"));
+    // .pipe(sourcemaps.init())
+    .pipe(cleanCSS())
+    // .pipe(sourcemaps.write())
+    .pipe(gulp.dest("minified"));
 });
 
 gulp.task("autoprefix", function () {
@@ -93,14 +93,14 @@ gulp.task("autoprefix", function () {
 
 gulp.task("process css", function () {
   return gulp.src("./css/*.css")
-// .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: ["last 2 versions"],
       cascade: false
     }))
     .pipe(cleanCSS())
     .pipe(concat("concat.css"))
-// .pipe(sourcemaps.write("."))
+    // .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("concats"));
 });
 
