@@ -26,12 +26,10 @@ var taxonomyCountryButton;
 
 var map;
 
-
-
 /* global  prepareSVGstyles loadCountryTaxonomy selectedCountryFillColor getAjax currentMap selectedFillColor */
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("herer");
+  console.log("window.width = " + window.innerWidth);
   map   =  document.getElementById("currentMap");
 
   window.addEventListener("resize", onResizeWindow);
@@ -86,12 +84,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   toggleSampleTableLeftChecks();
   leftCheck.checked = true;
+
+  // only set for smaller widths, here and in onResizeWindow()
+  if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
 });
 
 //   *******************  end of  (document).ready(function() ******************************************
 
 function onResizeWindow() {
   initCurrentMap();
+
+  if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
+  else window.removeEventListener("scroll", checkWindowScroll);
+
+  // check for mapCollection height
+  var mapsCollection = document.querySelector("#mapsCollection");
+  var len = mapsCollection.children.length;
+
+  if (len > 0) {
+
+    if (window.innerWidth > 1680) mapsCollection.style.height = "350px";
+    else if (window.innerWidth >= 1600) mapsCollection.style.height = "300px";
+    else if (window.innerWidth >= 1165) mapsCollection.style.height = "270px";
+    else mapsCollection.style.height = "235px";
+  }
+
+  console.log("Resize: window.width = " + window.innerWidth);
+}
+
+function checkWindowScroll() {
+
+  // console.log("in scroll");
+  var docElement = document.documentElement;
+  var winElement = window;
+
+  if ((docElement.scrollHeight - winElement.innerHeight) <= winElement.pageYOffset) {
+    // console.log("bottom");
+    document.getElementById("currentMap").style.opacity = 0;
+  }
+  else document.getElementById("currentMap").style.opacity = 1;
 }
 
 function initCurrentMap() {
@@ -341,4 +372,4 @@ function openChecklistPage()  {
 
   window.open( "../php/makePDF.php" + vars, "_blank" );
 }
-//# sourceMappingURL=maps/main.js.map
+//# sourceMappingURL=../sourcemaps/main.js.map

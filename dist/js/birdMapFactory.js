@@ -88,3 +88,4 @@ function saveCurrentMap()  {
   };
 }
 // # sourceMappingURL=maps/birdMapFactory.js.map
+//# sourceMappingURL=../sourcemaps/birdMapFactory.js.map

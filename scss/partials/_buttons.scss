@@ -1,0 +1,47 @@
+.genericButton {
+    padding  :  10px 14px;
+
+    font-size  :  1.8rem;
+    font-weight  :  bold;
+    font-variant  :  small-caps;
+
+    color  :  #fff;
+    line-height  :  16px;
+    text-align  :  center;
+    letter-spacing  :  0.15em;
+    text-shadow  :  0 1px 1px rgba(0,0,0, 0.5);
+
+    border  :  1px solid #ccc;
+    border-radius  :  4px;
+    background-color  :  $genericButtonColor;
+    box-shadow  :  inset 0 0 0 transparent, 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+    cursor  :  pointer;
+    -webkit-transition  :  all 650ms;
+       -moz-transition  :  all 650ms;
+         -o-transition  :  all 650ms;
+            transition  :  all 650ms;
+}
+
+.genericButton:hover,.genericButton:focus {
+    text-shadow  :  1px 1px 1px black;
+    box-shadow  :  inset 185px 0 5px 5px #333, 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.genericButton.needsAttention {
+    letter-spacing  :  0.3em;
+
+    border  :  1px solid white;
+    background-color  :  #222;
+    box-shadow  :  0 0 0 2px #6d9892, 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.genericButton.highlight {
+    background-color  :  #252525;
+}
+
+.genericButton.highlight:hover,.genericButton.highlight:focus {
+    letter-spacing  :  0.3em;
+    border  :  1px solid rgba(255,255,255,0.8);
+    box-shadow  :  inset 170px 0 5px 5px $genericButtonColor, 2px 2px 2px rgba(0, 0, 0, 0.2);
+}

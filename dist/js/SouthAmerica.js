@@ -245,4 +245,4 @@ function highlightSAMmap(index, current) {
 
 //# sourceMappingURL=maps/SouthAmerica.js.map
 
-//# sourceMappingURL=maps/SouthAmerica.js.map
+//# sourceMappingURL=../sourcemaps/SouthAmerica.js.map

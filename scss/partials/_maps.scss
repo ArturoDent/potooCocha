@@ -6,9 +6,7 @@
     height  :  0;
     margin  :  0;
     padding  :  0;
-
     text-align  :  center;
-
     overflow-x  :  visible;
     transition  :  all 1.5s;
 }
@@ -47,11 +45,8 @@
     padding  :  0;
 
     font-size  :  1.6rem;
-    /*color  :  black;*/
     text-align  :  center;
-
     border-radius  :  3px;
-    /*background  :  transparent;*/
 }
 
 #currentMap .birdName {
@@ -67,11 +62,7 @@
     left  :  -20px;
     width  :  calc(100% + 40px);
 
-    /*color  :  black;*/
     line-height  :  15px;
-
-    /*background  :  transparent;*/
-
     transform  :  scale(1);
 }
 
@@ -80,9 +71,7 @@
 
     position  :  fixed;
     top  :  calc(50vh - 210px);
-    left  :  67vw;
-    /*width  :  325px;
-    height  :  520px;*/
+    left  :  68vw;
     margin  :  0 0 0 5px;
     z-index  :  10;
 
@@ -112,7 +101,6 @@
     top  :  10px;
 
     background  :  transparent;
-
     transition  :  all 1.5s;
 }
 
@@ -139,10 +127,10 @@
 .deleteMapButton  {
     position  :  absolute;
     top  :  230px;
-    left  :  20px;
+    left  :  10px;
+    padding  :  0 0 0 0;
 
     font-size  :  20px;
-
     background  :  #a32d00;
 }
 
@@ -195,7 +183,6 @@
 
 .colorKey ul li {
     position  :  relative;
-    /*width  :  auto;*/
     margin-top  :  8px;
 
     font-size  :  1.6rem;
@@ -206,14 +193,6 @@
     list-style-type  :  none;
 }
 
-/* var endemicColor        =  '#C23BC3';
-   var extinctColor        =  '#fff';
-   var residentColor       =  '#3030cc';
-   var nonBreederColor     =  '#ff9900';
-   var vagrantColor        =  '#ffff00';
-   var hypotheticalColor   =  '#33cc66';
-   var introducedColor     =  '#101010';    */
-
 .colorKey ul li:nth-child(1) {
     /* introduced  */
     color  :  #000;
@@ -222,20 +201,14 @@
 
 .colorKey ul li:nth-child(2) {
     /* hypothetical  */
-    /*padding : 1px 8px 2px 8px;*/
     color  :  #23bc56;
     text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
-    /*text-shadow: none;*/
-    /*background  :  #23bc56;*/
 }
 
 .colorKey ul li:nth-child(3) {
     /* nonbreeder    */
-    /*padding : 1px 8px 2px 8px;*/
     color  :  #df7920;
-    /*text-shadow: none;*/
     text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
-    /*background  :  #df7920;*/
 }
 
 .colorKey ul li:nth-child(4) {
@@ -251,7 +224,6 @@
 .colorKey ul li:nth-child(6) {
     /* resident      */
     color  :  #3030cc;
-    /*text-shadow  :  rgba(255,255,255, 1) 1px 1px 1px;*/
 }
 
 .colorKey ul li:nth-child(7) {

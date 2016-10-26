@@ -1,0 +1,176 @@
+#checklistArticle {
+    position  :  relative;
+    margin  :  100px 0 0 0;
+    z-index  :  0;
+    // text-align  :  center;
+
+    overflow  :  visible;
+}
+
+#checklistAuthorsPanel  {
+    opacity : 0;
+    height : 0;
+    margin : 0 5px;
+    padding : 7px 5px 5px 5px;
+    font-variant: small-caps;
+    font-size  :  1.4rem;
+    text-align  :  center;
+    line-height  :  20px;
+    background : #333;
+    transition : all 350ms;
+}
+
+#checklistAuthorsPanel.show  {
+    opacity : 1;
+    height : auto;
+    margin : 30px 5px 0 5px;
+}
+
+#checklistArticle .panel  {
+    padding  :  25px 0 0 0;
+}
+
+#checklistOptions.panel {
+    position  :  relative;
+    left  :  10%;
+    width  :  80%;
+    margin  :  60px 0 25px 0;
+    padding  :  30px 0 30px 35px;
+
+    font-size  :  1.7rem;
+    // color : black;
+    // text-align  :  left;
+
+    letter-spacing  :  0.15em;
+    // text-shadow: none;
+// background : #B1B7AE;
+// background : #333;
+
+    // border  :  1px solid #607478;
+    border-top-left-radius  :  10%;
+    border-bottom-right-radius  :  25%;
+    box-shadow  :  1px 1px 1px #607478;
+}
+
+.checklistTitle  {
+    position  :  absolute;
+    top  :  20px;
+    left  :  -255px;
+    z-index  :  2;
+
+    font-size  :  2.3rem;
+    font-weight  :  bold;
+    font-variant  :  small-caps;
+    // color  :  $genericButtonColor;
+    color  :  white;
+
+    text-shadow : 1px 1px 1px rgba(255,255,255,0.2);
+    letter-spacing  :  0.2em;
+
+    transform  :  rotate(-86deg);
+    -webkit-transform-origin  :  top right;
+       -moz-transform-origin  :  top right;
+        -ms-transform-origin  :  top right;
+         -o-transform-origin  :  top right;
+            transform-origin  :  top right;
+}
+
+#checklistCountryButton {
+    position  :  absolute;
+    top  :  13%;
+    right  :  -50px;
+
+    line-height  :  20px;
+}
+
+#pdfButton {
+    position  :  absolute;
+    right  :  -80px;
+    bottom  :  35%;
+    height  :  34px;
+    padding  :  0 16px 10px 18px;
+    text-align  :  center;
+}
+
+#csvButton {
+    position  :  absolute;
+    right  :  -78px;
+    bottom  :  10%;
+    height  :  34px;
+    padding  :  0 16px 0 18px;
+    line-height : 32px;
+}
+
+#numDays {
+    display  :  flex;
+    flex-direction  :  row;
+    justify-content  :  space-around;
+
+    position  :  relative;
+    left  :  15px;
+    width  :  150%;
+    margin  :  20px 0 20px 0;
+    z-index  :  20;
+
+    color  :  #fff;
+
+    background  :  transparent;
+}
+
+#days {
+    position  :  relative;
+    top  :  12px;
+
+    font-size  :  1.8rem;
+    color  :  #000;
+    letter-spacing  :  0.1em;
+    text-shadow: none;
+}
+
+#numDays a {
+    position  :  relative;
+    top  :  2px;
+    width  :  50px;
+    height  :  50px;
+    padding  :  8px 0 0 0;
+
+    color : #313131;
+    font-size  :  2.2rem;
+    text-align  :  center;
+    text-decoration  :  none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+
+    // slightly randomize the variuos border-radii ala cicada principle ?***
+    border-radius  :  50%;
+    background  :  #eee;
+    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.1);
+
+    cursor  :  pointer;
+    -webkit-transition  :  all 400ms;
+       -moz-transition  :  all 400ms;
+         -o-transition  :  all 400ms;
+            transition  :  all 300ms;
+}
+
+#numDays a:hover,#numDays a:focus {
+    color : #fff;
+    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+    border-top-right-radius  :  10%;
+    background  :  $genericButtonColor;
+    box-shadow  :  0 0 1px 1px rgba(255,255,255,0.4);
+}
+
+#numDays a.highlight {
+    top  :  -18px;
+
+    color  :  #fff;
+    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+
+    border-top-right-radius  :  10%;
+    background-color  :  $genericButtonColor;
+    box-shadow  :  0 0 2px 2px rgba(255,255,255,0.4);
+
+    transform  :  scale(1.6);
+    transition : all 350ms;
+    cursor : default;
+}
