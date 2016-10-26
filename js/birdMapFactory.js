@@ -61,8 +61,13 @@ function saveCurrentMap()  {
 
   dupNode.removeAttribute("id");
 
-  if (len === 0)  {
-    mapsCollection.style.height = "350px";
+  if (len === 0) {
+
+    if (window.innerWidth > 1680) mapsCollection.style.height = "350px";
+    else if (window.innerWidth >= 1600) mapsCollection.style.height = "300px";
+    else if (window.innerWidth >= 1165) mapsCollection.style.height = "270px";
+    else mapsCollection.style.height = "235px";
+
     mapsCollection.style.margin = "30px 0 -35px 0";
     // mapsCollection.style.left = -10vw;
   }
@@ -83,141 +88,3 @@ function saveCurrentMap()  {
   };
 }
 // # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-// # sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map
-
-//# sourceMappingURL=maps/birdMapFactory.js.map

@@ -9,7 +9,7 @@
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
-            "outDir": "dest",
+            // "outDir": "dist/js",
             "runtimeArgs": [
             "--remote-debugging-port=9222"
             ]

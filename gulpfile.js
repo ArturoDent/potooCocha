@@ -35,12 +35,12 @@ function reload(done) {
 
 var paths = {
   styles: {
-    src: "./scss/*.scss",
-    dest: "./css"
+    src: "./scss/**/*.scss",
+    dest: "./dist/css"
   },
   scripts: {
-    src: "./js/*.js",
-    dest: "./js"
+    src: "./js/**/*.js",
+    dest: "./dist/js"
   }
 };
 
@@ -50,36 +50,37 @@ function watch() {
   gulp.watch("./*.html").on("change", browserSync.reload);
 }
 
-var build = gulp.series(serve, watch);
+var build = gulp.series(sass2css, processJS, serve, watch);
 
 gulp.task("sync", build);
 
 function sass2css() {
-  return gulp.src("./scss/*.scss")
-    .pipe(cached("removing scss cached"))
-    // .pipe(sourcemaps.init())
+  return gulp.src(paths.styles.src)
+    // .pipe(cached("removing scss cached"))
+    .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    // .pipe(sourcemaps.write("./css/sourceMaps"))
-    .pipe(gulp.dest("./css"));
+    .pipe(sourcemaps.write("../sourcemaps"))
+    .pipe(gulp.dest(paths.styles.dest));
 }
 
 function processJS() {
-  return gulp.src("./js/*.js")
+  return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
     // .pipe(concat("concat.js"))
     // .pipe(gulp.dest("./concats/"))
     // .pipe(rename({ suffix: ".min" }))
     // .pipe(uglify())
-    .pipe(sourcemaps.write("./maps"))
-    .pipe(gulp.dest("./js/dest/"));
+    // .pipe(sourcemaps.write("./sourceMaps"))
+    .pipe(sourcemaps.write("../sourcemaps"))
+    .pipe(gulp.dest(paths.scripts.dest));
 }
 
 gulp.task("minify-css", function () {
-  return gulp.src("./src/*.css")
-    // .pipe(sourcemaps.init())
+  return gulp.src(paths.styles.dest)
+    .pipe(sourcemaps.init())
     .pipe(cleanCSS())
-    // .pipe(sourcemaps.write())
-    .pipe(gulp.dest("minified"));
+    .pipe(sourcemaps.write("./sourceMaps"))
+    .pipe(gulp.dest(paths.styles.dest + "/minified"));
 });
 
 gulp.task("autoprefix", function () {
@@ -103,7 +104,5 @@ gulp.task("process css", function () {
     // .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("concats"));
 });
-
-
 
 // gulp.task("default", gulp.series("browsersync", function () { }));

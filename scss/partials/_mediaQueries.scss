@@ -1,0 +1,326 @@
+@media screen and (max-width: 1680px)  {
+    .smallBird  {
+        transform  :  scale(0.7);
+    }
+    .thinify  {
+        margin-right  :  -35px;
+    }
+}
+
+@media screen and (max-width: 1600px)  {
+    .smallBird  {
+        transform  :  scale(0.6);
+    }
+    .thinify  {
+        margin-right  :  -45px;
+    }
+}
+
+@media screen and (max-width: 1460px)  {
+    .thinify  {
+        margin-right  :  -55px;
+    }
+}
+
+@media screen and (max-width: 1380px)  {
+    .thinify  {
+        margin-right  :  -60px;
+    }
+}
+
+@media screen and (max-width: 1344px)  {
+    .thinify  {
+        margin-right  :  -65px;
+    }
+}
+
+@media screen and (max-width: 1370px)  {
+
+    #currentBirdMap {
+        transform : scale(1);
+    }
+    #currentMap.modal-shrink {
+        transform  :  translateX(-40px);
+    }
+    #currentMap .birdName {
+        top  :  -30px;
+        font-size : 1.4rem;
+    }
+    .saveMapButton  {
+        top  :  240px;
+        left  :  10px;
+        width  :  26px;
+        height  :  26px;
+    }
+    .saveMapButton .tooltip {
+        top  :  -50px;
+        left  :  -130px;
+    }
+    .icon-pin  {
+        top  :  -27px;
+        left  :  2px;
+    }
+    .colorKey {
+        top  :  250px;
+        left  :  140px;
+        transform : scale(0.8);
+    }
+    #mapsCollection  {
+        left  :  -3vw;
+        width : 72vw;
+    }
+    .thinify  {
+        margin-right  :  -72px;
+    }
+    #numDays {
+        left  :  0;
+        width  :  130%;
+    }
+}
+
+@media screen and (max-width: 1305px)  {
+
+    html {
+        font-size  :  60%;
+    }
+
+    .smallBanner {
+        display  :  block;
+        position  :  absolute;
+        left  :  0;
+        width  :  100vw;
+        padding  :  20px 0 93px 0;
+
+        font-size  :  3.5rem;
+        font-weight  :  bold;
+        color  :  black;
+        letter-spacing  :  0.15em;
+        text-shadow  :  1px 1px 2px #444;
+
+        background  :  #6d9892;
+        cursor  :  pointer;
+    }
+
+    .smallBanner > span {
+        display : block;
+        position : relative;
+        left : 17vw;
+        width : auto;
+        margin  :  0 auto;
+    }
+
+    .titleBanner {
+        display  :  none;
+    }
+    .titleBanner_spacer  {
+        position  :  relative;
+        top  :  -10px;
+        font-size  :  2rem;
+    }
+
+    #mainContent {
+        left : 6vw;
+    }
+
+    .articles {
+        margin  :  100px 0 0 0;
+    }
+
+    #checklistOptions::before  {
+        left  :  -165px;
+        font-size  :  1.4em;
+    }
+
+    #numDays {
+        left  :  0;
+    }
+}
+
+@media screen and (max-width:1200px)  {
+    .smallBanner > span {
+        left : 10vw;
+    }
+    #mainContent {
+        left : 3vw;
+    }
+    #numDays {
+        left  :  -30px;
+        width  :  120%;
+    }
+    #numDays a {
+        // top  :  2px;
+        width  :  40px;
+        height  :  40px;
+        padding  :  7px 0 0 0;
+        font-size  :  2rem;
+    }
+    #numDays a.highlight {
+        top  :  -10px;
+        transform  :  scale(1.4);
+    }
+    .country-menu a::before {
+        display: none;
+    }
+    .country-menu a.taxHighlight::after {
+        display : none;
+    }
+    .country-menu a.checkHighlight::after {
+        display : none;
+    }
+    .country-menu a.bothHighlights::after {
+        display : none;
+    }
+}
+
+@media screen and (max-width:1165px)  {
+    html {
+        font-size  :  55%;
+    }
+    .smallBanner > span {
+        left : 8vw;
+    }
+    #mainContent {
+        left : 2vw;
+    }
+     #currentBirdMap {
+        transform : scale(0.8);
+    }
+    // .birdName  {
+    //     font-size  :  1.4rem;
+    // }
+    #currentMap .birdName {
+        top  :  20px;
+        font-size  :  1.2rem;
+    }
+    .colorKey {
+        top  :  270px;
+        left  :  125px;
+        transform : scale(0.9);
+    }
+    .colorKey ul li {
+        margin-top  :  5px;
+    }
+    .saveMapButton  {
+        left  :  20px;
+    }
+    .saveMapButton .tooltip {
+        top  :  -50px;
+        left  :  -110px;
+    }
+    #mapsCollection  {
+        left  :  -1vw;
+        width : 75vw;
+    }
+
+    .smallBird  {
+        transform  :  scale(0.5);
+    }
+    .thinify  {
+        margin-right  :  -95px;
+    }
+
+    .articles {
+        width  :  595px;
+    }
+    .checklistTitle  {
+        top  :  20px;
+        left  :  -200px;
+        font-size  :  2.1rem;
+    }
+}
+
+@media screen and (max-width:968px)  {
+    .thinify  {
+        margin-right  :  -115px;
+    }
+}
+
+@media screen and (max-width:840px)  {
+
+    #treeIntroText  {
+        left  :  -6px;
+        width  :  calc(100% + 12px);
+        height  :  36px;
+        margin  :  20px auto 20px auto;
+
+        font-size  :  16px;
+
+        border  :  2px solid rgba(106, 136, 157,1);
+    }
+
+    .family   {
+        font-size  :  11px;
+    }
+
+    .familyOpen {
+        font-size  :  11px;
+    }
+
+    #searchResults  {
+        font-size  :  11px;
+    }
+
+    .fsc  {
+        font-size  :  11px;
+    }
+
+    .fco  {
+        font-size  :  11px;
+    }
+}
+
+
+@media screen and (max-width: 590px) {
+
+  #sampleTable {
+    min-width: 400px;
+    font-size: 1.1rem; }
+
+  #sampleTable th {
+    width: 21px; }
+
+  .leftCheck::before {
+    top: -7px;
+    left: -37px;
+    font-size: 48px; }
+
+  .showLineNumbers::before {
+    top: 3px;
+    left: -23px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    line-height: 14px; }
+
+  .showEndemics::before {
+    top: 3px;
+    left: -23px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    line-height: 12px; }
+
+  .leftCheck.showEndemics::after {
+    top: -25px;
+    left: -37px;
+    font-size: 48px; }
+
+  .leftCheck.showLineNumbers::after {
+    top: -25px;
+    left: -37px;
+    height: 0;
+    font-size: 48px; }
+}
+
+
+/*iPad portrait*/
+/*@media screen and (max-width: 768px)  {*/
+
+
+/*}*/
+
+/*iPhone 6 landscape*/
+/*@media screen and (max-width: 667px)  {*/
+
+
+/*}*/

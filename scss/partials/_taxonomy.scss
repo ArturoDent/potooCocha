@@ -1,41 +1,13 @@
-// $bgColor  :  #959A93;
-$bgColor  :  rgb(90,91,86);
-
-$bannerColor  :  transparent;
-$genericButtonColor  :  #A65751;
-// $panelColor : #B1B7AE;
-// $panelColor : rgb(97,98,93);
-$panelColor : rgb(84,85,80);
-
-// $panelFlyoutColor : rgba(82,104,112,1);
-// $panelFlyoutColor : rgba(84,106,114,1);
-$panelFlyoutColor : rgba(82,104,112,1);
-
-$familyOpenColor : rgba(42,64,72,1);
-$birdRolloverColor : #000;
-
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 
 .slideUpWrapper  {
-    // opacity  :  1;
-
     pointer-events  :  auto;
-    // overflow-x: visible;
     overflow-y: hidden;
-    // border-top-left-radius  :  5px;
-    // border-top-right-radius  :  5%;
-
     transition  :  all 350ms;
 }
 
 .slideUpWrapper.closeInstructions  {
-    // opacity  :  0;
-    // color : $bgColor;
-
-    // height  :  0;
     transform : scale(0.8) translateY(30px);
-
-    // transition  :  color 350ms, height 350ms 250ms, opacity 350ms 450ms;
     transition  :  all 350ms;
 }
 
@@ -45,15 +17,8 @@ $birdRolloverColor : #000;
     transition : all 750ms;
 }
 
-// .slideUpWrapper.closeInstructions path {
-//     stroke : $bgColor;
-//     transition : stroke 350ms 450ms;
-// }
-
 .taxInstructionsButton  {
     position  :  absolute;
-    // top  :  -22px;
-    // left  :  calc(100% - 16px);
     top : -25px;
     right : -41px;
 
@@ -68,16 +33,14 @@ $birdRolloverColor : #000;
     text-align  :  center;
 
     border-radius  :  50%;
-    // background  :  $panelFlyoutColor;
     background  :  rgba(0,0,0,0.2);
-
     box-shadow  :  0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
 
     cursor  :  pointer;
-    -webkit-transition  :  all 850ms ease-in-out;
-       -moz-transition  :  all 850ms ease-in-out;
-         -o-transition  :  all 850ms ease-in-out;
-            transition  :  all 850ms ease-in-out;
+    -webkit-transition  :  all 350ms ease-in-out 500ms;
+       -moz-transition  :  all 350ms ease-in-out 500ms;
+         -o-transition  :  all 350ms ease-in-out 500ms;
+            transition  :  all 350ms ease-in-out 500ms;
 }
 
 .taxInstructionsButton:hover {
@@ -87,11 +50,6 @@ $birdRolloverColor : #000;
 .taxInstructionsButton:hover + div.slideUpWrapper {
     will-change  :  height, opacity;
 }
-
-// .taxInstructionsButton.instructionsClosed  {
-//     top : -28px;
-//     left : 100%;
-// }
 
 #searchForm  {
     display  :  flex;
@@ -117,7 +75,6 @@ $birdRolloverColor : #000;
     margin  :  30px 0 0 0;
 
     text-align  :  center;
-
     pointer-events  :  auto;
 
     -webkit-transition  :  all 2s;
@@ -128,13 +85,11 @@ $birdRolloverColor : #000;
 
 #searchForm span.grayed  {
     opacity  :  0.6;
-
     pointer-events  :  none;
 }
 
 #taxonomyCountryButton {
     margin-right  :  30px;
-
     line-height  :  20px;
 }
 
@@ -151,7 +106,6 @@ $birdRolloverColor : #000;
 
     border  :  1px solid rgba(0,0,0,0.8);
     border-radius  :  3px;
-    // background  :  $bgColor;
     background  :  $panelColor;
 
     -webkit-user-select  :  text;
@@ -193,7 +147,7 @@ $birdRolloverColor : #000;
 
     font-size  :  1.6rem;
     pointer-events  :  auto;
-// background : white;
+
     -webkit-transition  :  opacity 500ms;
        -moz-transition  :  opacity 500ms;
          -o-transition  :  opacity 500ms;
@@ -202,7 +156,6 @@ $birdRolloverColor : #000;
 
 #searchSpecials.grayed  {
     opacity  :  0.6;
-
     pointer-events  :  none;
 }
 
@@ -237,11 +190,8 @@ $birdRolloverColor : #000;
     position  :  relative;
     height  :  auto;
     margin  :  0 0 15px 0;
-    // padding-top  :  0;
     padding-bottom  :  10px;
     z-index  :  1;
-
-    // border : 1px solid white;
     transition  :  opacity 350ms 200ms;
 }
 
@@ -273,9 +223,7 @@ $birdRolloverColor : #000;
     left  :  -24px;
     width  :  calc(100% + 48px);
     height  :  auto;
-    // min-height  :  110px;
     max-height  :  330px;
-    // margin  :  0 0 0 -18px;
     padding  :  0;
 
     font-size  :  1.6rem;
@@ -298,9 +246,7 @@ $birdRolloverColor : #000;
 }
 
 #searchResults li  {
-    // margin  :  1px 0 1px 0;
     padding  :  0 0 2px 16px;
-
     list-style-type  :  none;
 }
 
@@ -310,7 +256,6 @@ $birdRolloverColor : #000;
 
 .noselect {
     -webkit-touch-callout  :  none;
-
     -webkit-user-select  :  none;
        -moz-user-select  :  none;
         -ms-user-select  :  none;
@@ -319,7 +264,6 @@ $birdRolloverColor : #000;
 
 #countrySearch.closed  {
     opacity  :  0;
-
     height  :  0;
 }
 
@@ -334,16 +278,16 @@ $birdRolloverColor : #000;
 
 #searchResults li.active  {
     color  :  white;
-    background-color  :  #000;
+    background-color  :  $birdActiveColor;
 }
 
 .family   {
-    padding  :  0 5px 2px 0;
+    padding  :  0 0 2px 0;
     font-size  :  1.6rem;
 }
 
 .familyOpen {
-    padding  :  0 5px 2px 0;
+    padding  :  0 0 2px 0;
     font-size  :  1.6rem;
 }
 
@@ -377,7 +321,6 @@ $birdRolloverColor : #000;
 
     position  :  relative;
     left  :  -9px;
-
     font-size  :  1.4rem;
 }
 
@@ -386,7 +329,6 @@ $birdRolloverColor : #000;
 
     position  :  relative;
     left  :  -9px;
-
     font-size  :  1.4rem;
 }
 
@@ -395,7 +337,6 @@ $birdRolloverColor : #000;
 
     position  :  relative;
     left  :  -9px;
-
     font-size  :  1.4rem;
 }
 
@@ -404,7 +345,6 @@ $birdRolloverColor : #000;
 
     position  :  relative;
     left  :  -9px;
-
     font-size  :  1.4rem;
 }
 
@@ -446,10 +386,8 @@ $birdRolloverColor : #000;
     border-top  :  15px solid transparent;
     border-bottom  :  15px solid transparent;
     border-radius  :  10px;
-    // box-shadow  :  0 0 0 1px rgba(0, 0, 0, 0.3);
 
 /* resize is completely broken in FF and Chrome */
-
     resize  :  none;
     cursor  :  pointer;
 }
@@ -466,20 +404,19 @@ $birdRolloverColor : #000;
 	position : relative MUST be here for entry.offsetTop to work in taxonomy.js
 	it is the offset distance to the nearest relatively-positioned parent
 */
-
 .birds.open        {
     display  :  block;
     position  :  relative;
 }
 
 #tree .family      {
-    padding  :  0 0 2px 0;
+    padding  :  3px 0 5px 0;
 }
 
-#tree .familyOpen  {
-    margin  :  0 0 2px 0;
-    // padding  :  0 0 0 0;
-}
+// #tree .familyOpen  {
+//     color : black;
+//     text-shadow : none;
+// }
 
 /*target : family common name only*/
 #tree li.family > span:nth-child(1)  {
@@ -489,52 +426,50 @@ $birdRolloverColor : #000;
 /*target : familyOpen common name only*/
 #tree li.familyOpen > span:nth-child(1)  {
     padding  :  0 0 0 15px;
-    // color : white;
 }
 
 /*target : familyOpen sci name only*/
-#tree li.familyOpen > span:nth-child(2)  {
-    // color : white;
-}
+// #tree li.familyOpen > span:nth-child(2)  {
+// }
 
 #tree li.familyOpen  {
+    padding-top : 3px;
     background  :  $birdRolloverColor;
 }
 
 #tree li.familyOpen:hover > span:first-child  {
-    padding  :  1px calc(100% - 60px) 4px 15px;
+    // padding  :  1px calc(100% - 60px) 4px 15px;
+    padding  :  1px 0 0 15px;
 
     border-radius  :  5px;
     background  :  $birdRolloverColor;
 }
 
 #tree .familyOpen  ul  {
-    // padding  :  0 0 0 1px;
-    margin-bottom : 3px;
-
+    margin-top : 5px;
+    margin-bottom : -1px;
+    padding : 5px 0 10px 0;
     font-size  :  1.5rem;
     line-height  :  2rem;
-    // border-top  :  1px solid $birdRolloverColor;
-
-    border-bottom  :  1px solid $birdRolloverColor;
+    // border-bottom  :  1px solid transparent;
     background  :  $familyOpenColor;
 }
 
 /*target : familyOpen common names only*/
 #tree .familyOpen  ul  li span:first-child {
-    padding  :  1px 0 2px 27px;
+    padding  :  1px 0 0 27px;
 }
 
 /*target : familyOpen sci names only*/
 #tree .familyOpen .birds li span:last-child  {
     position  :  absolute;
     left  :  calc( 53% + 10px);
-    padding  :  0 0 3px 0;
+    // padding  :  0 0 3px 0;
 }
 
 
 #tree .familyOpen .birds li:last-child  {
-    margin-bottom  :  2px;
+    margin-bottom  :  0;
 }
 
 #taxPage.samTax .hy:before,#taxPage.samTax .va:before  {
@@ -579,9 +514,8 @@ $birdRolloverColor : #000;
     background-color  :  $birdRolloverColor;
 }
 
-#tree li.familyOpen:hover > ul  {
-    // border-radius  :  5px;
-}
+// #tree li.familyOpen:hover > ul  {
+// }
 
 /*    below targets each individual bird */
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover  {
@@ -590,44 +524,12 @@ $birdRolloverColor : #000;
 }
 
 #tree ul li {
+    padding : 1px 0 3px 0;
     margin  :  1px 0 1px 0;
 }
 
 /* added by toggleFamilyOpen */
 #tree ul li.active {
     color  :  white;
-    background-color  :  #000;
-}
-
-@media screen and (max-width:840px)  {
-    #treeIntroText  {
-        left  :  -6px;
-        width  :  calc(100% + 12px);
-        height  :  36px;
-        margin  :  20px auto 20px auto;
-
-        font-size  :  16px;
-
-        border  :  2px solid rgba(106, 136, 157,1);
-    }
-
-    .family   {
-        font-size  :  11px;
-    }
-
-    .familyOpen {
-        font-size  :  11px;
-    }
-
-    #searchResults  {
-        font-size  :  11px;
-    }
-
-    .fsc  {
-        font-size  :  11px;
-    }
-
-    .fco  {
-        font-size  :  11px;
-    }
+    background-color  :  $birdActiveColor;
 }

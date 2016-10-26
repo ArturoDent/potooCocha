@@ -1,0 +1,60 @@
+#taxonomyArticle {
+    position  :  relative;
+
+    -webkit-transition  :  all 850ms ease-in-out;
+       -moz-transition  :  all 850ms ease-in-out;
+         -o-transition  :  all 850ms ease-in-out;
+            transition  :  all 850ms ease-in-out;
+}
+
+.taxArticleMain {
+    padding  :  10px 0 30px 0;
+    line-height: 28px;
+}
+
+.taxArticleMain .searchWord {
+    position  :  relative;
+    top  :  -20px;
+    width : calc(100% + 50px);
+    // width : 100%;
+    left  :  -25px;
+    // margin  :  0 10px 20px 0;
+    padding  :  21px 25px 16px 25px;
+
+    // color : #fff;
+    font-size : 1.6rem;
+    text-align: center;
+    // letter-spacing  :  0.2em;
+    // text-shadow  :  1px 1px 1px rgba(40,40,40,1);
+
+    // border-radius  :  5px;
+    background  :  rgba(82,104,112,1);
+    box-shadow : 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+// #taxonomyArticle a.linkHighlight {
+    // padding  :  0 4px;
+    // border-radius: 15px;
+    // background  :  transparent;
+// }
+
+
+#taxonomyArticle a.linkHighlight {
+    padding : 3px 5px 0 6px;
+}
+
+#taxonomyArticle a.linkHighlight:hover {
+    // background  :  #eee;
+    // color : black;
+    background : $genericButtonColor;
+    // text-shadow  :  none;
+    transition: all 350ms;
+}
+
+#taxTreeArticle {
+    margin  :  0 0 15px 0;
+    padding-top  :  20px;
+
+    border  :  none;
+    box-shadow  :  none;
+}

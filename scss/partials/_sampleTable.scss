@@ -15,6 +15,7 @@
 #sampleTable.smallFont thead    { font-size : 9px; height : 18px;}
 #sampleTable.smallFont td       { padding  :  1px 0 1px 0px; letter-spacing  :  1px; }
 #sampleTable.smallFont td:first-child { padding  :  1px 0 1px 4px; letter-spacing  :  1px; }*/
+
 #sampleTable td {
   height: 30px;
   padding: 2px 2px 2px 2px;
@@ -74,16 +75,16 @@
  	height         :  20px;
  }
  #sampleTable tfoot tr:last-child td   {  border : solid 1px #000;  height : 20px; }*/
+
 #sampleTable th {
   height: 20px;
   padding: 0 2px;
   font-weight: bold;
-  /*color  :  black;*/
   border: solid 1px #000;
   background-color: transparent; }
 
 #sampleTable th:not(:first-child) {
-  background-color: #545550; }
+  background-color: $panelColor; }
 
 .flashDays {
   animation-name: flashDays;
@@ -100,7 +101,7 @@
     transform: scale(2); } }
 
 #sampleTable td.familyHidden {
-  border: solid 1px #545550; }
+  border: solid 1px $panelColor; }
 
 #sampleTable td.familyHidden.show {
   border-bottom: solid 1px #000; }
@@ -146,36 +147,41 @@
 .showLineNumbers::before {
   content: '5';
   position: absolute;
-  top: 6px;
+  top: 3px;
   left: -24px;
-  width: 17px;
-  height: 17px;
-  font-size: 1.1rem;
-  color: #ddd;
-  line-height: 14px;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 50%;
-  background: black; }
+  // width: 17px;
+  // height: 17px;
+  font-size: 1.2rem;
+  text-shadow: none;
+  // color: $genericButtonColor;
+  // line-height: 14px;
+  // text-align: center;
+  // border: 1px solid black;
+  // border-radius: 50%;
+  // background: black;
+  }
 
 .showEndemics {
   position: relative; }
 
 /*         order of the next three is important!          */
 .showEndemics::before {
-  content: 'e';
+  content: 'E';
   position: absolute;
-  top: 6px;
+  top: 3px;
   left: -24px;
-  width: 17px;
-  height: 17px;
-  font-size: 1.2rem;
-  color: #ddd;
-  line-height: 11px;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 50%;
-  background: black; }
+  // width: 17px;
+  // height: 17px;
+  font-size: 1.3rem;
+  text-shadow: none;
+
+  // color: $genericButtonColor;
+  // line-height: 11px;
+  // text-align: center;
+  // border: 1px solid black;
+  // border-radius: 50%;
+  // background: black;
+  }
 
 #sampleTable.numDays0 .cLs {
   border-right: 1px solid #000; }
@@ -255,7 +261,7 @@
 
 .numDays0 th {
   display: none;
-  width: 0;
+  width : 0;
   border: 1px solid transparent; }
 
 .numDays11 td:nth-child(n+15) {
@@ -295,42 +301,8 @@
   display: none; }
 
 #sampleTable th:first-child {
-  border: solid 1px #545550;
+  border: solid 1px $panelColor;
   border-right: solid 1px #000; }
 
 .numDays0 tr.topBorderDissappear {
-  border-top: hidden; }
-
-@media screen and (max-width: 590px) {
-  #sampleTable {
-    min-width: 400px;
-    font-size: 1.1rem; }
-  #sampleTable th {
-    width: 21px; }
-  .leftCheck::before {
-    top: -7px;
-    left: -37px;
-    font-size: 48px; }
-  .showLineNumbers::before {
-    top: 3px;
-    left: -23px;
-    width: 16px;
-    height: 16px;
-    font-size: 9px;
-    line-height: 14px; }
-  .showEndemics::before {
-    top: 3px;
-    left: -23px;
-    width: 16px;
-    height: 16px;
-    font-size: 9px;
-    line-height: 12px; }
-  .leftCheck.showEndemics::after {
-    top: -25px;
-    left: -37px;
-    font-size: 48px; }
-  .leftCheck.showLineNumbers::after {
-    top: -25px;
-    left: -37px;
-    height: 0;
-    font-size: 48px; } }
+  border-top : hidden; }

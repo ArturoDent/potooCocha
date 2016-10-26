@@ -12,7 +12,7 @@ var birds = [];
 var numSpeciesList = { "Argentina":999, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
                   "Colombia":1838, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
                   "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":724, "Trinidad":468,
-                  "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3371};
+                  "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3376};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
@@ -763,7 +763,7 @@ function toggleFamilyOpen(event)  {
 
     thisSpecies.parentNode.className = "active";
 
-    if (thisSpecies.parentNode != lastSpecies) {
+    if (thisSpecies.parentNode !== lastSpecies) {
       if (lastSpecies && lastSpecies.classList.contains("active")) {
         lastSpecies.classList.remove("active");
       }
