@@ -4,7 +4,7 @@
   width: 94%;
   min-width: 480px;
   margin: 0 auto 10px auto;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
   empty-cells: show;
@@ -65,7 +65,7 @@
   border-bottom: 3px double #000; }
 
 #sampleTable thead {
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   border: solid 1px #000; }
 
 /*  there is no tfoot in #sampleTable  */
@@ -151,7 +151,7 @@
   left: -24px;
   // width: 17px;
   // height: 17px;
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   text-shadow: none;
   // color: $genericButtonColor;
   // line-height: 14px;
@@ -172,7 +172,7 @@
   left: -24px;
   // width: 17px;
   // height: 17px;
-  font-size: 1.3rem;
+  font-size: 0.7rem;
   text-shadow: none;
 
   // color: $genericButtonColor;

@@ -44,7 +44,7 @@
     width : calc(100% + 60px);
     padding  :  0;
 
-    font-size  :  1.6rem;
+    font-size  :  1rem;
     text-align  :  center;
     border-radius  :  3px;
 }
@@ -156,9 +156,9 @@
 
     text-shadow  :  none;
 
-    -webkit-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
-        -ms-filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
-            filter  :  drop-shadow( 0 0 3px rgba(0,0,0,0.5) );
+    -webkit-filter  :  drop-shadow( 0 0 10px rgba(0,0,0,0.3) );
+        -ms-filter  :  drop-shadow( 0 0 10px rgba(0,0,0,0.3) );
+            filter  :  drop-shadow( 0 0 10px rgba(0,0,0,0.3) );
 
     transition  :  all 1s;
 }
@@ -183,9 +183,9 @@
 
 .colorKey ul li {
     position  :  relative;
-    margin-top  :  8px;
+    margin-top  :  4px;
 
-    font-size  :  1.6rem;
+    font-size  :  0.8rem;
     text-align  :  center;
     letter-spacing  :  0.1em;
     text-shadow  :  rgba(0, 0, 0, 0.4) 1px 1px 1px;

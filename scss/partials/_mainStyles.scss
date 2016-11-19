@@ -2,17 +2,16 @@ html {
     width  :  100%;
     height  :  100%;
     /*so 1em = 10px (browser default usually 16px)*/
-    font-size  :  62.5%;
+    font-size  :  16px;
     background  :  $bgColor;
 }
 
 body {
     width  :  100vw;
     min-height  :  100vh;
-    // margin  :  0 auto;
 
     font-family  :  Verdana, Georgia, sans-serif;
-    font-size  :  1.6rem;
+    font-size  :  1rem;
     font-weight  :  600;
     color : white;
     letter-spacing  :  0.04em;
@@ -25,7 +24,7 @@ a   {  color  :  inherit;
     text-decoration  :  none;
 }
 
-a:link  {  border-bottom  :  solid 1px #bbb;
+a:link  {  border-bottom  :  solid 1px #fff;
 }
 
 #mainContent {
@@ -33,6 +32,7 @@ a:link  {  border-bottom  :  solid 1px #bbb;
     flex-direction  :  column;
     position : relative;
     left : 15vw;
+    width : 80vw;
 
     overflow  :  visible;
     transition  :  transform 750ms;
@@ -73,25 +73,27 @@ a:link  {  border-bottom  :  solid 1px #bbb;
     flex : 1 1 330px;
     padding  :  12px 0 15px 0;
 
-    font-size  :  2.7rem;
+    font-size  :  1.5rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     color  :  #fff;
     text-align  :  center;
-    letter-spacing  :  0.04em;
-    text-shadow  :  1px 1px 1px rgba(40,40,40,1);
+    letter-spacing  :  0.1em;
+    text-shadow  :  -1px 1px 1px rgba(0,0,0,1);
 
-    border : 1px solid rgba(255,255,255,1);
+    border : 1px solid rgba(255,255,255,0.5);
     border-radius  :  5px;
-    background  :  rgba(82,104,112,1);
-    box-shadow: inset 0 0 7px 0 #333;
+    background  :  $searchHeaderColor;
+    // box-shadow: inset 0 0 7px 0 #333;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+
 }
 
 .titleBanner_spacer  {
     position  :  relative;
     top  :  -7px;
 
-    font-size  :  1.5rem;
+    font-size  :  1rem;
     font-variant  :  normal;
 }
 
@@ -100,8 +102,8 @@ a:link  {  border-bottom  :  solid 1px #bbb;
     height : 3px;
 
     border-radius: 50%;
-    background : rgba(255,255,255,1);
-    box-shadow: 0 -1px #222, 0 1px #222;
+    background : rgba(255,255,255,0.2);
+    box-shadow: 0 -1px rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2);
 }
 
 .surroundBanner:nth-child(1)  {
@@ -124,36 +126,42 @@ a:link  {  border-bottom  :  solid 1px #bbb;
 
     position  :  relative;
     left  :  0;
-    width  :  695px;
+    // width : 695px;
+    // 695/1920 = 36.2%
+    width : 36vw;
+    /*min-width  :  695px;*/
+    max-width : 695px;
     margin-top  :  70px;
+    line-height  :  28px;
 
     overflow  :  visible;
 }
 
 section  {
     position  :  relative;
-    overflow  :  visible;
+    /*overflow  :  visible;*/
 }
 
 article {
-    line-height  :  22px;
+    /*line-height  :  22px;*/
     border-radius  :  3px;
     transition  :  all 500ms;
 }
 
 .panel {
-    opacity  :  1;
+    /*opacity  :  1;*/
 
     position  :  relative;
     padding  :  0 25px;
 
     pointer-events  :  auto;
-    overflow  :  visible;
+    /*overflow  :  visible;*/
 
     border  :  1px solid rgba(255,255,255,0.25);
     border-radius  :  3px;
     background  :  $panelColor;
-    box-shadow  :  1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+
 
     -webkit-transition  :  opacity 2s;
        -moz-transition  :  opacity 2s;
@@ -166,7 +174,7 @@ article {
     height  :  42px;
     margin  :  0 auto 0 auto;
 
-    font-size  :  1.8rem;
+    font-size  :  1rem;
     font-variant  :  small-caps;
     color  :  #fff;
     line-height  :  34px;
@@ -182,7 +190,7 @@ article {
     border-bottom  :  none;
     border-top-left-radius  :  3px;
     border-top-right-radius  :  3px;
-    box-shadow : inset 0 -5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
+    box-shadow : inset 0 -5px 4px -4px rgba(0,0,0,0.3), inset 0 0 1px rgba(0,0,0,0.5);
 }
 
 .bottomFlyoutPanel  {
@@ -190,7 +198,7 @@ article {
     border-top  :  none;
     border-bottom-right-radius  :  3px;
     border-bottom-left-radius  :  3px;
-    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,1);
+    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 0 1px rgba(0,0,0,0.5);
 }
 
 /*   -------------------   Footer   ----------------------------   */

@@ -5,6 +5,8 @@
 
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
+var reload = browserSync.reload;
+
 var sass = require("gulp-sass");
 // var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
@@ -12,7 +14,7 @@ var concat = require("gulp-concat");
 var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
 var sourcemaps = require("gulp-sourcemaps");
-var cached = require("gulp-cached");
+// var cached = require("gulp-cached");
 // var remember = require("gulp-remember");
 
 
@@ -28,10 +30,15 @@ function serve(done) {
   done();
 }
 
-function reload(done) {
-  browserSync.reload();
-  done();
-}
+// function reload(done) {
+//   browserSync.reload();
+//   done();
+// }
+
+// function stream(done) {
+//   browserSync.stream();
+//   done();
+// }
 
 var paths = {
   styles: {
@@ -45,9 +52,9 @@ var paths = {
 };
 
 function watch() {
-  gulp.watch(paths.scripts.src, gulp.series(processJS, reload));
-  gulp.watch(paths.styles.src, gulp.series(sass2css, reload));
-  gulp.watch("./*.html").on("change", browserSync.reload);
+  gulp.watch(paths.scripts.src, gulp.series(processJS));
+  gulp.watch(paths.styles.src, gulp.series(sass2css));
+  gulp.watch("./*.html").on("change", reload);
 }
 
 var build = gulp.series(sass2css, processJS, serve, watch);
@@ -60,7 +67,8 @@ function sass2css() {
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(sourcemaps.write("../sourcemaps"))
-    .pipe(gulp.dest(paths.styles.dest));
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(reload({ stream:true }));
 }
 
 function processJS() {
@@ -72,7 +80,8 @@ function processJS() {
     // .pipe(uglify())
     // .pipe(sourcemaps.write("./sourceMaps"))
     .pipe(sourcemaps.write("../sourcemaps"))
-    .pipe(gulp.dest(paths.scripts.dest));
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(reload({ stream:true }));
 }
 
 gulp.task("minify-css", function () {

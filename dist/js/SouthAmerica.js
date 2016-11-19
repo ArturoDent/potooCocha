@@ -13,7 +13,7 @@ var nonBreederColor      =  "#ff9900";
 var vagrantColor         =  "#ffff00";
 var hypotheticalColor    =  "#33cc66";
 var introducedColor      =  "#111";
-var baseColor            =  "#444740";
+var baseColor            =  "#545750";
 
 var baseStrokeColor      =  "#8a8b86";
 

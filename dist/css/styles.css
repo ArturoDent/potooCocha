@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*$searchHeaderColor : darken( $bgColor, 8.5% );*/
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -14,10 +15,10 @@
   user-select: none; }
 
 .icon {
-  display: inline;
+  /*display  :  inline;*/
   position: relative;
-  width: 1.3em;
-  height: 1.3em;
+  width: 1rem;
+  height: 1rem;
   fill: #ddd;
   -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3)) drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0.3));
   -ms-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3)) drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0.3));
@@ -28,8 +29,8 @@
 .icon-pen {
   top: -5px;
   left: -15px;
-  width: 2.6em;
-  height: 2.6em; }
+  width: 2rem;
+  height: 2rem; }
 
 .icon-pin {
   top: -22px;
@@ -48,7 +49,7 @@
   top: 3px; }
 
 .icon-list {
-  top: 5px;
+  top: 2px;
   width: 2em; }
 
 .icon-file-excel {
@@ -60,7 +61,7 @@
 
 .genericButton {
   padding: 10px 14px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   font-variant: small-caps;
   color: #fff;
@@ -80,7 +81,7 @@
 
 .genericButton:hover, .genericButton:focus {
   text-shadow: 1px 1px 1px black;
-  box-shadow: inset 185px 0 5px 5px #333, 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset 185px 0 5px 15px #333, 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .genericButton.needsAttention {
   letter-spacing: 0.3em;
@@ -89,43 +90,45 @@
   box-shadow: 0 0 0 2px #6d9892, 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .genericButton.highlight {
-  background-color: #252525; }
+  /*background-color  :  #252525;*/
+  background-color: #61625c; }
 
 .genericButton.highlight:hover, .genericButton.highlight:focus {
   letter-spacing: 0.3em;
   border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: inset 170px 0 5px 5px #A65751, 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset -185px 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 html {
   width: 100%;
   height: 100%;
   /*so 1em = 10px (browser default usually 16px)*/
-  font-size: 62.5%;
-  background: #5a5b56; }
+  font-size: 16px;
+  background: #545550; }
 
 body {
   width: 100vw;
   min-height: 100vh;
   font-family: Verdana, Georgia, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   letter-spacing: 0.04em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  background: #5a5b56; }
+  background: #545550; }
 
 a {
   color: inherit;
   text-decoration: none; }
 
 a:link {
-  border-bottom: solid 1px #bbb; }
+  border-bottom: solid 1px #fff; }
 
 #mainContent {
   display: flex;
   flex-direction: column;
   position: relative;
   left: 15vw;
+  width: 80vw;
   overflow: visible;
   transition: transform 750ms; }
 
@@ -158,30 +161,30 @@ a:link {
 .titleText {
   flex: 1 1 330px;
   padding: 12px 0 15px 0;
-  font-size: 2.7rem;
+  font-size: 1.5rem;
   font-weight: bold;
   font-variant: small-caps;
   color: #fff;
   text-align: center;
-  letter-spacing: 0.04em;
-  text-shadow: 1px 1px 1px #282828;
-  border: 1px solid white;
+  letter-spacing: 0.1em;
+  text-shadow: -1px 1px 1px black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
-  background: #526870;
-  box-shadow: inset 0 0 7px 0 #333; }
+  background: #61625c;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
 
 .titleBanner_spacer {
   position: relative;
   top: -7px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-variant: normal; }
 
 .surroundBanner {
   position: relative;
   height: 3px;
   border-radius: 50%;
-  background: white;
-  box-shadow: 0 -1px #222, 0 1px #222; }
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -1px rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2); }
 
 .surroundBanner:nth-child(1) {
   top: calc(0.65em);
@@ -200,29 +203,32 @@ a:link {
   justify-content: space-around;
   position: relative;
   left: 0;
-  width: 695px;
+  width: 36vw;
+  /*min-width  :  695px;*/
+  max-width: 695px;
   margin-top: 70px;
+  line-height: 28px;
   overflow: visible; }
 
 section {
   position: relative;
-  overflow: visible; }
+  /*overflow  :  visible;*/ }
 
 article {
-  line-height: 22px;
+  /*line-height  :  22px;*/
   border-radius: 3px;
   transition: all 500ms; }
 
 .panel {
-  opacity: 1;
+  /*opacity  :  1;*/
   position: relative;
   padding: 0 25px;
   pointer-events: auto;
-  overflow: visible;
+  /*overflow  :  visible;*/
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 3px;
-  background: #4a4b46;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  background: #545550;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 2s;
   -moz-transition: opacity 2s;
   -o-transition: opacity 2s;
@@ -232,7 +238,7 @@ article {
   width: calc(100% - 40px);
   height: 42px;
   margin: 0 auto 0 auto;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-variant: small-caps;
   color: #fff;
   line-height: 34px;
@@ -246,14 +252,14 @@ article {
   border-bottom: none;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  box-shadow: inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 2px black; }
+  box-shadow: inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 1px rgba(0, 0, 0, 0.5); }
 
 .bottomFlyoutPanel {
   padding-top: 3px;
   border-top: none;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 2px black; }
+  box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 1px rgba(0, 0, 0, 0.5); }
 
 /*   -------------------   Footer   ----------------------------   */
 footer {
@@ -312,7 +318,7 @@ footer a:hover, footer a:focus {
   height: auto;
   width: calc(100% + 60px);
   padding: 0;
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-align: center;
   border-radius: 3px; }
 
@@ -398,9 +404,9 @@ footer a:hover, footer a:focus {
 .drawing {
   position: relative;
   text-shadow: none;
-  -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
-  -ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  -ms-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
   transition: all 1s; }
 
 .drawing.smallBirdDrawing {
@@ -418,8 +424,8 @@ footer a:hover, footer a:focus {
 
 .colorKey ul li {
   position: relative;
-  margin-top: 8px;
-  font-size: 1.6rem;
+  margin-top: 4px;
+  font-size: 0.8rem;
   text-align: center;
   letter-spacing: 0.1em;
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
@@ -470,38 +476,44 @@ footer a:hover, footer a:focus {
   margin: 0 5px;
   padding: 7px 5px 5px 5px;
   font-variant: small-caps;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   text-align: center;
   line-height: 20px;
-  background: #333;
+  background: #526870;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   transition: all 350ms; }
 
 #checklistAuthorsPanel.show {
   opacity: 1;
   height: auto;
-  margin: 30px 5px 0 5px; }
+  margin: 30px 0 0 0; }
 
 #checklistArticle .panel {
   padding: 25px 0 0 0; }
 
 #checklistOptions.panel {
+  /*display  :  flex;
+    flex-direction  :  column;
+    justify-content  :  space-around;*/
   position: relative;
   left: 10%;
   width: 80%;
-  margin: 60px 0 25px 0;
-  padding: 30px 0 30px 35px;
-  font-size: 1.7rem;
+  /*height : 400px;*/
+  margin: 50px 0 20px 0;
+  /*padding  :  30px 0 30px 35px;*/
+  padding: 10px 0 10px 45px;
+  font-size: 1rem;
+  line-height: 40px;
   letter-spacing: 0.15em;
   border-top-left-radius: 10%;
-  border-bottom-right-radius: 25%;
-  box-shadow: 1px 1px 1px #607478; }
+  border-bottom-right-radius: 25%; }
 
 .checklistTitle {
   position: absolute;
   top: 20px;
-  left: -255px;
+  left: -225px;
   z-index: 2;
-  font-size: 2.3rem;
+  font-size: 1.3rem;
   font-weight: bold;
   font-variant: small-caps;
   color: white;
@@ -516,25 +528,40 @@ footer a:hover, footer a:focus {
 
 #checklistCountryButton {
   position: absolute;
-  top: 13%;
-  right: -50px;
+  top: 15%;
+  right: -30%;
+  padding: 10px 30px 10px 0;
+  min-width: 300px;
+  text-align: right;
+  /*right : 0;*/
+  /*height : 32px;*/
   line-height: 20px; }
+
+#checklistCountryButton.highlight:hover, #checklistCountryButton.highlight:focus {
+  letter-spacing: 0.3em;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset -265px 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 #pdfButton {
   position: absolute;
-  right: -80px;
+  right: -30%;
+  /*left : 70%;*/
   bottom: 35%;
-  height: 34px;
-  padding: 0 16px 10px 18px;
-  text-align: center; }
+  height: 32px;
+  min-width: 200px;
+  padding: 0 0 2px 18px;
+  /*text-align  :  right;*/ }
 
 #csvButton {
   position: absolute;
-  right: -78px;
-  bottom: 10%;
-  height: 34px;
-  padding: 0 16px 0 18px;
-  line-height: 32px; }
+  /*right  :  -78px;*/
+  right: -30%;
+  bottom: 15%;
+  height: 32px;
+  min-width: 200px;
+  padding: 0 16px 2px 18px;
+  /*line-height : 32px;*/
+  /*text-align  :  right;*/ }
 
 #numDays {
   display: flex;
@@ -542,7 +569,7 @@ footer a:hover, footer a:focus {
   justify-content: space-around;
   position: relative;
   left: 15px;
-  width: 150%;
+  width: 140%;
   margin: 20px 0 20px 0;
   z-index: 20;
   color: #fff;
@@ -551,19 +578,19 @@ footer a:hover, footer a:focus {
 #days {
   position: relative;
   top: 12px;
-  font-size: 1.8rem;
-  color: #000;
+  font-size: 1rem;
+  /*color  :  #000;*/
   letter-spacing: 0.1em;
   text-shadow: none; }
 
 #numDays a {
   position: relative;
   top: 2px;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   padding: 8px 0 0 0;
   color: #313131;
-  font-size: 2.2rem;
+  font-size: 1.1rem;
   text-align: center;
   text-decoration: none;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -584,7 +611,7 @@ footer a:hover, footer a:focus {
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.4); }
 
 #numDays a.highlight {
-  top: -18px;
+  top: -15px;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   border-top-right-radius: 10%;
@@ -597,24 +624,25 @@ footer a:hover, footer a:focus {
 /*  from "CSS Secrets" by Lea Verou  */
 input[type='checkbox'] {
   position: absolute;
-  margin-bottom: 5px;
+  /*margin-bottom  :  35px;*/
   clip: rect(0, 0, 0, 0); }
 
 input + label::before {
   content: '\a0\a0';
-  display: inline;
-  width: 1em;
-  height: 1em;
+  /*display  :  inline;*/
+  /*width  :  1em;
+    height  :  1em;*/
   margin-right: 1em;
-  margin-bottom: 15px;
+  /*margin-bottom  :  15px;*/
   padding: 6px 7px 6px 7px; }
 
 input[type='checkbox'] + label::before {
-  border-radius: 0.2em; }
+  border-radius: 0.2em;
+  /*margin-bottom  :  25px;*/ }
 
 input[type='checkbox']:checked + label::before {
   content: '\2713';
-  margin-right: 10px;
+  margin-right: 9px;
   padding: 6px 15px 6px 7px;
   font-weight: 900; }
 
@@ -655,7 +683,7 @@ input[type='checkbox']:disabled + label {
   width: 94%;
   min-width: 480px;
   margin: 0 auto 10px auto;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
   empty-cells: show;
@@ -715,7 +743,7 @@ input[type='checkbox']:disabled + label {
   border-bottom: 3px double #000; }
 
 #sampleTable thead {
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   border: solid 1px #000; }
 
 /*  there is no tfoot in #sampleTable  */
@@ -733,7 +761,7 @@ input[type='checkbox']:disabled + label {
   background-color: transparent; }
 
 #sampleTable th:not(:first-child) {
-  background-color: #4a4b46; }
+  background-color: #545550; }
 
 .flashDays {
   animation-name: flashDays;
@@ -750,7 +778,7 @@ input[type='checkbox']:disabled + label {
     transform: scale(2); } }
 
 #sampleTable td.familyHidden {
-  border: solid 1px #4a4b46; }
+  border: solid 1px #545550; }
 
 #sampleTable td.familyHidden.show {
   border-bottom: solid 1px #000; }
@@ -798,7 +826,7 @@ input[type='checkbox']:disabled + label {
   position: absolute;
   top: 3px;
   left: -24px;
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   text-shadow: none; }
 
 .showEndemics {
@@ -810,7 +838,7 @@ input[type='checkbox']:disabled + label {
   position: absolute;
   top: 3px;
   left: -24px;
-  font-size: 1.3rem;
+  font-size: 0.7rem;
   text-shadow: none; }
 
 #sampleTable.numDays0 .cLs {
@@ -931,7 +959,7 @@ input[type='checkbox']:disabled + label {
   display: none; }
 
 #sampleTable th:first-child {
-  border: solid 1px #4a4b46;
+  border: solid 1px #545550;
   border-right: solid 1px #000; }
 
 .numDays0 tr.topBorderDissappear {
@@ -941,13 +969,13 @@ input[type='checkbox']:disabled + label {
   position: fixed;
   top: 0;
   left: 100%;
-  width: 230px;
+  width: 210px;
   z-index: 2000;
   transition: all 750ms;
   transform: translateX(0); }
 
 .md-show {
-  transform: translateX(-230px); }
+  transform: translateX(-210px); }
 
 .md-overlay {
   opacity: 0;
@@ -955,7 +983,7 @@ input[type='checkbox']:disabled + label {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100vw - 17px);
+  width: calc(100vw - 35px);
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -969,7 +997,7 @@ input[type='checkbox']:disabled + label {
   visibility: visible; }
 
 .country-menu-wrap {
-  font-size: 1.8rem; }
+  font-size: 1rem; }
 
 .country-menu {
   display: flex;
@@ -979,8 +1007,9 @@ input[type='checkbox']:disabled + label {
   height: 100vh;
   padding: 8px 10px 20px 0;
   align-items: center;
-  background-color: #4a4b46;
-  box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.25); }
+  background-color: #545550;
+  border-left: 1px inset white;
+  box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.25), -2px 0 2px rgba(0, 0, 0, 0.25); }
 
 .country-menu-wrap::before {
   content: '';
@@ -993,7 +1022,8 @@ input[type='checkbox']:disabled + label {
 
 .country-menu a {
   position: relative;
-  width: 192px;
+  /*left : 20px;*/
+  width: 185px;
   padding: 3px 0 5px 12px;
   text-decoration: none;
   overflow: visible;
@@ -1009,14 +1039,13 @@ input[type='checkbox']:disabled + label {
   transition: all 450ms; }
 
 .country-menu a::before {
-  content: ' ';
+  content: '';
   display: inline-block;
   position: absolute;
   top: -2px;
   left: -54px;
-  width: 36px;
-  height: 36px;
-  /*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
+  width: 32px;
+  height: 32px;
   background-size: contain; }
 
 .country-menu a:nth-child(1)::before {
@@ -1119,7 +1148,7 @@ input[type='checkbox']:disabled + label {
 
 .taxArticleMain {
   padding: 10px 0 30px 0;
-  line-height: 28px; }
+  /*line-height: 28px;*/ }
 
 .taxArticleMain .searchWord {
   position: relative;
@@ -1127,13 +1156,17 @@ input[type='checkbox']:disabled + label {
   width: calc(100% + 50px);
   left: -25px;
   padding: 21px 25px 16px 25px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-align: center;
-  background: #526870;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  /*background  :  $panelFlyoutColor;*/
+  background: #61625c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
 
 #taxonomyArticle a.linkHighlight {
-  padding: 3px 5px 0 6px; }
+  padding: 3px 5px 2px 6px;
+  border-bottom: solid 1px #ccc;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.3); }
 
 #taxonomyArticle a.linkHighlight:hover {
   background: #A65751;
@@ -1149,11 +1182,11 @@ input[type='checkbox']:disabled + label {
 .slideUpWrapper {
   pointer-events: auto;
   overflow-y: hidden;
-  transition: all 350ms; }
+  transform: scale(1) translateY(0);
+  transition: all 250ms; }
 
 .slideUpWrapper.closeInstructions {
-  transform: scale(0.8) translateY(30px);
-  transition: all 350ms; }
+  transform: scale(0.8) translateY(30px); }
 
 .slideUpWrapper.hovering {
   opacity: 0.7;
@@ -1168,7 +1201,7 @@ input[type='checkbox']:disabled + label {
   height: 50px;
   padding: 0.4em 0 0 0;
   z-index: 2;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #fff;
   text-align: center;
@@ -1183,9 +1216,6 @@ input[type='checkbox']:disabled + label {
 
 .taxInstructionsButton:hover {
   background: #252525; }
-
-.taxInstructionsButton:hover + div.slideUpWrapper {
-  will-change: height, opacity; }
 
 #searchForm {
   display: flex;
@@ -1223,14 +1253,14 @@ input[type='checkbox']:disabled + label {
   height: auto;
   margin: 0;
   padding: 3px 0 4px 0;
-  font-size: 1.8rem;
+  font-size: 1rem;
   color: white;
   letter-spacing: 0.1em;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 3px;
-  background: #4a4b46;
+  background: #545550;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -1260,7 +1290,7 @@ input[type='checkbox']:disabled + label {
   left: -30px;
   width: calc(100% + 60px);
   margin: 40px 0 15px 0;
-  font-size: 1.6rem;
+  font-size: 0.9rem;
   pointer-events: auto;
   -webkit-transition: opacity 500ms;
   -moz-transition: opacity 500ms;
@@ -1305,14 +1335,14 @@ input[type='checkbox']:disabled + label {
   left: -28px;
   width: calc(100% + 56px);
   padding: 15px 0;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-variant: small-caps;
   color: #fff;
   line-height: 34px;
   text-align: center;
   letter-spacing: 0.1em;
-  border-right: 22px solid #5a5b56;
-  border-left: 22px solid #5a5b56;
+  border-right: 22px solid #545550;
+  border-left: 22px solid #545550;
   background: #526870;
   box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3); }
 
@@ -1324,7 +1354,7 @@ input[type='checkbox']:disabled + label {
   height: auto;
   max-height: 330px;
   padding: 0;
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.15em;
   border-top: 10px solid transparent;
   border-bottom: 5px solid transparent;
@@ -1344,7 +1374,7 @@ input[type='checkbox']:disabled + label {
   list-style-type: none; }
 
 #searchResults li.bird {
-  font-size: 1.5rem; }
+  font-size: 0.9rem; }
 
 .noselect {
   -webkit-touch-callout: none;
@@ -1370,11 +1400,11 @@ input[type='checkbox']:disabled + label {
 
 .family {
   padding: 0 0 2px 0;
-  font-size: 1.6rem; }
+  font-size: 1rem; }
 
 .familyOpen {
   padding: 0 0 2px 0;
-  font-size: 1.6rem; }
+  font-size: 1rem; }
 
 #searchResults .family {
   margin: 5px 0 0 0; }
@@ -1400,25 +1430,25 @@ input[type='checkbox']:disabled + label {
   content: 'e';
   position: relative;
   left: -9px;
-  font-size: 1.4rem; }
+  font-size: 0.8rem; }
 
 .extinct:before {
   content: 'x';
   position: relative;
   left: -9px;
-  font-size: 1.4rem; }
+  font-size: 0.8rem; }
 
 .hy:before {
   content: 'h';
   position: relative;
   left: -9px;
-  font-size: 1.4rem; }
+  font-size: 0.8rem; }
 
 .va:before {
   content: 'v';
   position: relative;
   left: -9px;
-  font-size: 1.4rem; }
+  font-size: 0.8rem; }
 
 #searchResults .endemic, #searchResults .extinct, #searchResults .hy, #searchResults .va {
   position: relative;
@@ -1439,7 +1469,7 @@ input[type='checkbox']:disabled + label {
   height: calc(100vh - 122px);
   min-height: 500px;
   padding: 12px 0 5px 0;
-  font-size: 1.6rem;
+  font-size: 1rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -1467,7 +1497,7 @@ input[type='checkbox']:disabled + label {
   position: relative; }
 
 #tree .family {
-  padding: 3px 0 5px 0; }
+  padding: 1px 0 3px 0; }
 
 /*target : family common name only*/
 #tree li.family > span:nth-child(1) {
@@ -1479,7 +1509,7 @@ input[type='checkbox']:disabled + label {
 
 /*target : familyOpen sci name only*/
 #tree li.familyOpen {
-  padding-top: 3px;
+  padding-top: 1px;
   background: #333; }
 
 #tree li.familyOpen:hover > span:first-child {
@@ -1488,12 +1518,12 @@ input[type='checkbox']:disabled + label {
   background: #333; }
 
 #tree .familyOpen ul {
-  margin-top: 5px;
+  margin-top: 3px;
   margin-bottom: -1px;
   padding: 5px 0 10px 0;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  background: #526870; }
+  font-size: 0.9rem;
+  line-height: 1rem;
+  background: #61625c; }
 
 /*target : familyOpen common names only*/
 #tree .familyOpen ul li span:first-child {
@@ -1556,9 +1586,9 @@ input[type='checkbox']:disabled + label {
 
 .tooltip {
   opacity: 0;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   color: #fff;
-  line-height: 1.1em;
+  line-height: 1.2rem;
   text-align: center;
   border-radius: 0 3.2px 3.2px 0;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -1568,10 +1598,10 @@ input[type='checkbox']:disabled + label {
   opacity: 1;
   position: absolute;
   top: 5px;
-  left: 70px;
-  height: 2.4rem;
-  padding: 2px 0 1px 0;
-  width: 30rem;
+  left: 65px;
+  height: 1.3rem;
+  padding: 0 0 2px 0;
+  width: 18rem;
   background: transparent;
   border: 1px solid black;
   box-shadow: inset 0 0 0 transparent;
@@ -1588,7 +1618,7 @@ input[type='checkbox']:disabled + label {
   left: -57px;
   width: 6em;
   padding: 0 0 3px 0;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   background: #a32d00;
   transform: rotate(0);
@@ -1710,15 +1740,16 @@ input[type='checkbox']:disabled + label {
     width: 130%; } }
 
 @media screen and (max-width: 1305px) {
-  html {
-    font-size: 60%; }
+  /*html {
+        font-size  :  60%;
+    }*/
   .smallBanner {
     display: block;
     position: absolute;
     left: 0;
     width: 100vw;
     padding: 20px 0 93px 0;
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: black;
     letter-spacing: 0.15em;
@@ -1736,11 +1767,12 @@ input[type='checkbox']:disabled + label {
   .titleBanner_spacer {
     position: relative;
     top: -10px;
-    font-size: 2rem; }
+    font-size: 1.4rem; }
   #mainContent {
-    left: 6vw; }
+    left: 4vw; }
   .articles {
-    margin: 100px 0 0 0; }
+    margin: 100px 0 0 0;
+    width: 54vw; }
   #checklistOptions::before {
     left: -165px;
     font-size: 1.4em; }
@@ -1748,18 +1780,26 @@ input[type='checkbox']:disabled + label {
     left: 0; } }
 
 @media screen and (max-width: 1200px) {
+  html {
+    font-size: 15px; }
   .smallBanner > span {
-    left: 10vw; }
-  #mainContent {
-    left: 3vw; }
+    left: 12vw; }
+  .articles {
+    line-height: 22px; }
+  #checklistOptions.panel {
+    margin: 30px 0 15px 0;
+    line-height: 30px; }
+  input[type='checkbox'] {
+    margin: 0; }
   #numDays {
     left: -30px;
-    width: 120%; }
+    width: 120%;
+    margin: 10px 0 10px 0; }
   #numDays a {
     width: 40px;
     height: 40px;
     padding: 7px 0 0 0;
-    font-size: 2rem; }
+    font-size: 1rem; }
   #numDays a.highlight {
     top: -10px;
     transform: scale(1.4); }
@@ -1774,19 +1814,21 @@ input[type='checkbox']:disabled + label {
 
 @media screen and (max-width: 1165px) {
   html {
-    font-size: 55%; }
-  .smallBanner > span {
-    left: 8vw; }
-  #mainContent {
-    left: 2vw; }
+    font-size: 14px; }
+  /*.smallBanner > span {
+        left : 10vw;
+    }*/
+  /*#mainContent {
+        left : 2vw;
+    }*/
   #currentBirdMap {
-    transform: scale(0.8); }
+    transform: scale(0.9); }
   #currentMap .birdName {
     top: 20px;
     font-size: 1.2rem; }
   .colorKey {
     top: 270px;
-    left: 125px;
+    left: 165px;
     transform: scale(0.9); }
   .colorKey ul li {
     margin-top: 5px; }
@@ -1806,12 +1848,45 @@ input[type='checkbox']:disabled + label {
     width: 595px; }
   .checklistTitle {
     top: 20px;
-    left: -200px;
-    font-size: 2.1rem; } }
+    left: -235px;
+    font-size: 1.5rem; } }
 
 @media screen and (max-width: 968px) {
   .thinify {
     margin-right: -115px; } }
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 12px; }
+  /*.smallBanner > span {
+        left : 10vw;
+    }*/
+  #mainContent {
+    left: 2vw; }
+  .articles {
+    margin: 80px 0 0 0;
+    width: 520px;
+    /*width : 54vw;*/ }
+  #currentBirdMap {
+    transform: scale(0.85); }
+  .colorKey {
+    /*top  :  270px;*/
+    left: 145px;
+    /*transform : scale(0.9);*/ }
+  .checklistTitle {
+    left: -188px;
+    font-size: 1.4rem; }
+  #numDays {
+    left: 0;
+    width: 120%; }
+  #numDays a {
+    width: 35px;
+    height: 35px;
+    /*padding  :  7px 0 0 0;*/
+    /*font-size  :  1rem;*/ }
+  #numDays a.highlight {
+    top: -6px;
+    transform: scale(1.3); } }
 
 @media screen and (max-width: 840px) {
   #treeIntroText {
@@ -1831,6 +1906,26 @@ input[type='checkbox']:disabled + label {
     font-size: 11px; }
   .fco {
     font-size: 11px; } }
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 11px; }
+  /*.smallBanner > span {
+        left : 10vw;
+    }*/
+  .articles {
+    margin: 80px 0 0 0;
+    width: 480px; }
+  #currentBirdMap {
+    transform: scale(0.8); }
+  .colorKey {
+    left: 135px; }
+  .checklistTitle {
+    left: -168px; } }
+
+@media screen and (max-width: 610px) {
+  #numDays {
+    width: 110%; } }
 
 @media screen and (max-width: 590px) {
   #sampleTable {

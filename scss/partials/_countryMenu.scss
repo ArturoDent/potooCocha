@@ -2,13 +2,13 @@
   position: fixed;
   top: 0;
   left: 100%;
-  width: 230px;
+  width: 210px;
   z-index: 2000;
   transition: all 750ms;
   transform: translateX(0); }
 
 .md-show {
-  transform: translateX(-230px); }
+  transform: translateX(-210px); }
 
 .md-overlay {
   opacity: 0;
@@ -16,7 +16,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100vw - 17px);
+  width: calc(100vw - 35px);
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@
   visibility: visible; }
 
 .country-menu-wrap {
-  font-size: 1.8rem; }
+  font-size: 1rem; }
 
 .country-menu {
   display: flex;
@@ -40,9 +40,13 @@
   height: 100vh;
   padding: 8px 10px 20px 0;
   align-items: center;
-  background-color: rgb(74,75,70);
+  background-color: $bgColor;
+  border-left : 1px inset white;
 
-  box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.25); }
+  // box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.25);
+  box-shadow: inset -5px 0 5px rgba(0,0,0,0.25), -2px 0 2px rgba(0,0,0,0.25);
+
+}
 
 .country-menu-wrap::before {
   content: '';
@@ -55,7 +59,8 @@
 
 .country-menu a {
   position: relative;
-  width: 192px;
+  /*left : 20px;*/
+  width: 185px;
   padding: 3px 0 5px 12px;
   text-decoration: none;
   overflow: visible;
@@ -66,24 +71,23 @@
   transition : all 450ms; }
 
 .country-menu a:hover, .country-menu a:focus {
-  // color: white;
-  // text-decoration: none;
   border-top: 1px solid #666;
   background-color: #222;
-  // box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   transition : all 450ms;
 }
 
 .country-menu a::before {
-  content: ' ';
+  content: '';
   display: inline-block;
   position: absolute;
   top: -2px;
   left: -54px;
-  width: 36px;
-  height: 36px;
-  /*filter  :  grayscale(90%) contrast(150%) brightness(0.6);*/
-  background-size: contain; }
+  width: 32px;
+  height: 32px;
+  // filter  :  grayscale(100%) contrast(150%) brightness(1);
+  background-size: contain;
+
+}
 
 .country-menu a:nth-child(1)::before {
   background-image: url("../../../flags/32/Aruba.png"); }

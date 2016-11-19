@@ -10,7 +10,7 @@ var numFamilies;
 var birds = [];
 
 var numSpeciesList = { "Argentina":999, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
-                  "Colombia":1838, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
+                  "Colombia":1846, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
                   "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":724, "Trinidad":468,
                   "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3376};
 
@@ -54,6 +54,7 @@ var selectedFillColor    =  "#eee";
 document.addEventListener("DOMContentLoaded", function(){
 
   taxonomyArticle = document.getElementById("taxonomyArticle");
+  console.log("taxonomyArticle.width = " + taxonomyArticle.getBoundingClientRect().width);
 
   searchSlideUpWrapper               =  document.querySelector("#taxonomyArticle > div.slideUpWrapper");
 

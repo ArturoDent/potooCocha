@@ -62,6 +62,7 @@ E,Chestnut-winged Chachalaca,O. garrula
 ,Rufous-headed Chachalaca,O. erythroptera
 E,Colombian Chachalaca,O. columbiana
 ,Speckled Chachalaca,O. guttata
+,Variable Chachalaca,O. motmot
 ,Nocturnal Curassow,Nothocrax urumutum
 ,Great Curassow,Crax rubra
 E,Blue-billed Curassow,C. alberti
@@ -246,6 +247,7 @@ E,Gorgeted Wood-Quail,O. strophium
 ,Variable Hawk,G. polyosoma
 ,Black-chested Buzzard-Eagle,G. melanoleucus
 ,White Hawk,Pseudastur albicollis
+,Gray-backed Hawk,P. occidentalis
 ,Semiplumbeous Hawk,Leucopternis semiplumbeus
 ,Black-faced Hawk,L. melanops
 ,Gray-lined Hawk,Buteo nitidus
@@ -288,7 +290,7 @@ E,Gorgeted Wood-Quail,O. strophium
 ,Spotted Rail,Pardirallus maculatus
 ,Blackish Rail,P. nigricans
 ,Common Gallinule,Gallinula galeata
-,Purple Gallinule,Porphyrio martinicus
+,Purple Gallinule,Porphyrio martinica
 ,Azure Gallinule,P. flavirostris
 ,American Coot,Fulica americana
 ,Slate-colored Coot,F. ardesiaca
@@ -372,6 +374,7 @@ E,Gorgeted Wood-Quail,O. strophium
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Sabine's Gull,Xema sabini
 ,Andean Gull,Chroicocephalus serranus
+,Gray-hooded Gull,C. cirrocephalus
 ,Black-headed Gull,C. ridibundus
 ,Little Gull,Hydrocoloeus minutus
 ,Gray Gull,Leucophaeus modestus
@@ -379,6 +382,7 @@ E,Gorgeted Wood-Quail,O. strophium
 ,Franklin's Gull,L. pipixcan
 ,Belcher's Gull,Larus belcheri
 ,Ring-billed Gull,L. delawarensis
+,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Herring Gull,L. argentatus
 ,Brown Noddy,Anous stolidus
@@ -422,7 +426,7 @@ E,Gorgeted Wood-Quail,O. strophium
 ,Violaceous Quail-Dove,G. violacea
 ,Olive-backed Quail-Dove,Leptotrygon veraguensis
 ,White-tipped Dove,Leptotila verreauxi
-,Gray-chested Dove,L. cassini
+,Gray-chested Dove,L. cassinii
 E,Tolima Dove,L. conoveri
 ,Gray-headed Dove,L. plumbeiceps
 ,Gray-fronted Dove,L. rufaxilla
@@ -777,6 +781,7 @@ E,Sapphire-bellied Hummingbird,L. lilliae
 E,Sooty-capped Puffbird,B. noanamae
 ,Collared Puffbird,B. capensis
 ,Barred Puffbird,Nystalus radiatus
+,Western Striolated-Puffbird,N. obamai
 ,Russet-throated Puffbird,Hypnelus ruficollis
 ,White-chested Puffbird,Malacoptila fusca
 ,White-whiskered Puffbird,M. panamensis
@@ -865,6 +870,7 @@ E,Beautiful Woodpecker,M. pulcher
 ,Ringed Woodpecker,C. torquatus
 ,Scale-breasted Woodpecker,C. grammicus
 ,Cream-colored Woodpecker,C. flavus
+,Rufous-headed Woodpecker,C. spectabilis
 ,Chestnut Woodpecker,C. elegans
 ,Lineated Woodpecker,Dryocopus lineatus
 ,Powerful Woodpecker,Campephilus pollens
@@ -967,6 +973,7 @@ E,Brown-breasted Parakeet,P. calliptera
 ,Plain-winged Antshrike,T. schistaceus
 ,Mouse-colored Antshrike,T. murinus
 ,Black Antshrike,T. nigriceps
+,Cocha Antshrike,T. praecox
 ,Castelnau's Antshrike,T. cryptoleucus
 ,Blackish-gray Antshrike,T. nigrocinereus
 ,Northern Slaty-Antshrike,T. punctatus
@@ -1220,6 +1227,7 @@ E,Santa Marta Foliage-gleaner,C. rufipectus
 ,Orange-fronted Plushcrown,Metopothrix aurantiaca
 ,Double-banded Graytail,Xenerpestes minlosi
 ,Spectacled Prickletail,Siptornis striaticollis
+,Orinoco Softtail,Thripophaga cherriei
 ,Rusty-backed Spinetail,Cranioleuca vulpina
 ,Crested Spinetail,C. subcristata
 ,Red-faced Spinetail,C. erythrops
@@ -1324,6 +1332,7 @@ E,Antioquia Bristle-Tyrant,P. lanyoni
 ,Stripe-necked Tody-Tyrant,H. striaticollis
 ,Pearly-vented Tody-Tyrant,H. margaritaceiventer
 ,Black-throated Tody-Tyrant,H. granadensis
+,Buff-throated Tody-Tyrant,H. rufigularis
 ,Rufous-crowned Tody-Flycatcher,Poecilotriccus ruficeps
 ,Black-and-white Tody-Flycatcher,P. capitalis
 ,Rusty-fronted Tody-Flycatcher,P. latirostris
@@ -1344,6 +1353,7 @@ E,Antioquia Bristle-Tyrant,P. lanyoni
 ,Yellow-margined Flycatcher,T. assimilis
 ,Gray-crowned Flycatcher,T. poliocephalus
 ,Yellow-breasted Flycatcher,T. flaviventris
+,Cinnamon Manakin-Tyrant,Neopipo cinnamomea
 ,Cinnamon-crested Spadebill,Platyrinchus saturatus
 ,White-throated Spadebill,P. mystaceus
 ,Golden-crowned Spadebill,P. coronatus
@@ -1358,7 +1368,6 @@ E,Antioquia Bristle-Tyrant,P. lanyoni
 ,Sulphur-rumped Flycatcher,M. barbatus
 ,Black-tailed Flycatcher,M. atricaudus
 ,Ruddy-tailed Flycatcher,Terenotriccus erythrurus
-,Cinnamon Manakin-Tyrant,Neopipo cinnamomea
 ,Cinnamon Flycatcher,Pyrrhomyias cinnamomeus
 ,Cliff Flycatcher,Hirundinea ferruginea
 ,Handsome Flycatcher,Nephelomyias pulcher
@@ -1467,6 +1476,7 @@ E,Apical Flycatcher,M. apicalis
 ,Andean Cock-of-the-rock,R. peruvianus
 ,Gray-tailed Piha,Snowornis subalaris
 ,Olivaceous Piha,S. cryptolophus
+,Crimson Fruitcrow,Haematoderus militaris
 ,Purple-throated Fruitcrow,Querula purpurata
 ,Red-ruffed Fruitcrow,Pyroderus scutatus
 ,Amazonian Umbrellabird,Cephalopterus ornatus
@@ -1682,6 +1692,7 @@ E,Munchique Wood-Wren,H. negreti
 ,Red-capped Cardinal,P. gularis
 ,Black-faced Tanager,Schistochlamys melanopis
 ,Magpie Tanager,Cissopis leverianus
+,Black-and-white Tanager,Conothraupis speculigera
 ,White-capped Tanager,Sericossypha albocristata
 ,Hooded Tanager,Nemosia pileata
 ,Rufous-crested Tanager,Creurgops verticalis
@@ -1746,6 +1757,7 @@ E,Multicolored Tanager,C. nitidissima
 ,Rufous-throated Tanager,T. rufigula
 ,Speckled Tanager,T. guttata
 ,Yellow-bellied Tanager,T. xanthogastra
+,Spotted Tanager,T. punctata
 ,Blue-and-black Tanager,T. vassorii
 ,Beryl-spangled Tanager,T. nigroviridis
 ,Metallic-green Tanager,T. labradorides

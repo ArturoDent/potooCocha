@@ -217,8 +217,8 @@ function choseChecklistCountry(evt)  {
   currentChecklistCountryElement.classList.add("checkHighlight");
   if (currentChecklistCountryElement.classList.contains("taxHighlight")) currentChecklistCountryElement.classList.add("bothHighlights");
 
-  var buttonDisplace = document.getElementById("checklistCountryButton").getBoundingClientRect().width;
-  document.getElementById("checklistCountryButton").style.right = -buttonDisplace / 2 - 20 + "px";
+  // var buttonDisplace = document.getElementById("checklistCountryButton").getBoundingClientRect().width;
+  // document.getElementById("checklistCountryButton").style.right = -buttonDisplace / 2 - 20 + "px";
 
   checklistCountryButton.classList.remove("needsAttention");
   checklistCountryButton.classList.add("highlight");

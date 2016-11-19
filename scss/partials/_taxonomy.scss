@@ -3,12 +3,14 @@
 .slideUpWrapper  {
     pointer-events  :  auto;
     overflow-y: hidden;
-    transition  :  all 350ms;
+    transform : scale(1) translateY(0);
+
+    transition  :  all 250ms;
 }
 
 .slideUpWrapper.closeInstructions  {
     transform : scale(0.8) translateY(30px);
-    transition  :  all 350ms;
+    // transition  :  all 250ms;
 }
 
 .slideUpWrapper.hovering  {
@@ -27,7 +29,7 @@
     padding  :  0.4em 0 0 0;
     z-index  :  2;
 
-    font-size  :  1.6em;
+    font-size  :  1.6rem;
     font-weight  :  bold;
     color  :  #fff;
     text-align  :  center;
@@ -47,9 +49,9 @@
     background  :  #252525;
 }
 
-.taxInstructionsButton:hover + div.slideUpWrapper {
-    will-change  :  height, opacity;
-}
+// .taxInstructionsButton:hover + div.slideUpWrapper {
+//     will-change  :  height, opacity;
+// }
 
 #searchForm  {
     display  :  flex;
@@ -98,7 +100,7 @@
     margin  :  0;
     padding  :  3px 0 4px 0;
 
-    font-size  :  1.8rem;
+    font-size  :  1rem;
     color  :  white;
     letter-spacing: 0.1em;
     text-align  :  center;
@@ -145,7 +147,7 @@
     width  :  calc(100% + 60px);
     margin  :  40px 0 15px 0;
 
-    font-size  :  1.6rem;
+    font-size  :  0.9rem;
     pointer-events  :  auto;
 
     -webkit-transition  :  opacity 500ms;
@@ -203,7 +205,7 @@
     width  :  calc(100% + 56px);
     padding : 15px 0;
 
-    font-size  :  1.8rem;
+    font-size  :  1.1rem;
     font-variant  :  small-caps;
     color  :  #fff;
     line-height  :  34px;
@@ -226,7 +228,7 @@
     max-height  :  330px;
     padding  :  0;
 
-    font-size  :  1.6rem;
+    font-size  :  1rem;
     line-height  :  1.15em;
     border-top  :  10px solid transparent;
     border-bottom  :  5px solid transparent;
@@ -251,7 +253,7 @@
 }
 
 #searchResults li.bird {
-    font-size : 1.5rem;
+    font-size : 0.9rem;
 }
 
 .noselect {
@@ -283,12 +285,12 @@
 
 .family   {
     padding  :  0 0 2px 0;
-    font-size  :  1.6rem;
+    font-size  :  1rem;
 }
 
 .familyOpen {
     padding  :  0 0 2px 0;
-    font-size  :  1.6rem;
+    font-size  :  1rem;
 }
 
 #searchResults .family      {
@@ -321,7 +323,7 @@
 
     position  :  relative;
     left  :  -9px;
-    font-size  :  1.4rem;
+    font-size  :  0.8rem;
 }
 
 .extinct:before  {
@@ -329,7 +331,7 @@
 
     position  :  relative;
     left  :  -9px;
-    font-size  :  1.4rem;
+    font-size  :  0.8rem;
 }
 
 .hy:before  {
@@ -337,7 +339,7 @@
 
     position  :  relative;
     left  :  -9px;
-    font-size  :  1.4rem;
+    font-size  :  0.8rem;
 }
 
 .va:before  {
@@ -345,7 +347,7 @@
 
     position  :  relative;
     left  :  -9px;
-    font-size  :  1.4rem;
+    font-size  :  0.8rem;
 }
 
 #searchResults .endemic,#searchResults .extinct,#searchResults .hy,#searchResults .va  {
@@ -373,7 +375,7 @@
     min-height  :  500px;
     padding  :  12px 0 5px 0;
 
-    font-size  :  1.6rem;
+    font-size  :  1rem;
 
 /* necessary because 100% padding right would else break line at spaces and hyphens */
     white-space  :  nowrap;
@@ -410,7 +412,7 @@
 }
 
 #tree .family      {
-    padding  :  3px 0 5px 0;
+    padding  :  1px 0 3px 0;
 }
 
 // #tree .familyOpen  {
@@ -433,7 +435,7 @@
 // }
 
 #tree li.familyOpen  {
-    padding-top : 3px;
+    padding-top : 1px;
     background  :  $birdRolloverColor;
 }
 
@@ -446,11 +448,11 @@
 }
 
 #tree .familyOpen  ul  {
-    margin-top : 5px;
+    margin-top : 3px;
     margin-bottom : -1px;
     padding : 5px 0 10px 0;
-    font-size  :  1.5rem;
-    line-height  :  2rem;
+    font-size  :  0.9rem;
+    line-height  :  1rem;
     // border-bottom  :  1px solid transparent;
     background  :  $familyOpenColor;
 }
