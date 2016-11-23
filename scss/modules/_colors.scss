@@ -8,7 +8,9 @@ $searchHeaderColor : lighten($bgColor, 5%);
 $genericButtonColor  :  #A65751;
 $genericButtonHighlightColor : $searchHeaderColor;
 
-$panelFlyoutColor : rgba(82,104,112,1);
+/*$panelFlyoutColor : rgba(82,104,112,1);*/
+$panelFlyoutColor : lighten($bgColor, 5%);
+
 $familyOpenColor : $searchHeaderColor;
 
 $birdRolloverColor : #333;

@@ -13,67 +13,40 @@
 ,Lesser Scaup,A. affinis
 ,Masked Duck,Nomonyx dominicus
 
+,FLAMINGOS,PHOENICOPTERIDAE
+,American Flamingo,Phoenicopterus ruber
+
 ,GREBES,PODICIPEDIDAE
 ,Least Grebe,Tachybaptus dominicus
 ,Pied-billed Grebe,Podilymbus podiceps
 
-,FLAMINGOS,PHOENICOPTERIDAE
-,American Flamingo,Phoenicopterus ruber
+,PIGEONS,COLUMBIDAE
+,Rock Pigeon,Columba livia
+,Scaly-naped Pigeon,Patagioenas squamosa
+,Bare-eyed Pigeon,P. corensis
+,White-tipped Dove,Leptotila verreauxi
+,Eared Dove,Zenaida auriculata
+,Common Ground Dove,Columbina passerina
+,Ruddy Ground Dove,C. talpacoti
 
-,SHEARWATERS,PROCELLARIIDAE
-,Black-capped Petrel,Pterodroma hasitata
-,Great Shearwater,Ardenna gravis
-,Manx Shearwater,Puffinus puffinus
-,Audubon's Shearwater,P. lherminieri
+,CUCKOOS,CUCULIDAE
+,Groove-billed Ani,Crotophaga sulcirostris
+,Yellow-billed Cuckoo,Coccyzus americanus
+,Mangrove Cuckoo,C. minor
+,Gray-capped Cuckoo,C. lansbergi
 
-,STORM-PETRELS,HYDROBATIDAE
-,Wilson's Storm-Petrel,Oceanites oceanicus
-,Leach's Storm-Petrel,Oceanodroma leucorhoa
+,NIGHTJARS,CAPRIMULGIDAE
+,Lesser Nighthawk,Chordeiles acutipennis
+,Common Nighthawk,C. minor
+,White-tailed Nightjar,Hydropsalis cayennensis
+,Chuck-will's-widow,Antrostomus carolinensis
 
-,TROPICBIRDS,PHAETHONTIDAE
-,Red-billed Tropicbird,Phaethon aethereus
-,White-tailed Tropicbird,P. lepturus
+,SWIFTS,APODIDAE
+,Chimney Swift,Chaetura pelagica
 
-,FRIGATEBIRDS,FREGATIDAE
-,Magnificent Frigatebird,Fregata magnificens
-
-,BOOBIES,SULIDAE
-,Masked Booby,Sula dactylatra
-,Red-footed Booby,S. sula
-,Brown Booby,S. leucogaster
-
-,CORMORANTS,PHALACROCORACIDAE
-,Neotropic Cormorant,Phalacrocorax brasilianus
-
-,PELICANS,PELECANIDAE
-,Brown Pelican,Pelecanus occidentalis
-
-,HERONS,ARDEIDAE
-,Boat-billed Heron,Cochlearius cochlearius
-,Black-crowned Night-Heron,Nycticorax nycticorax
-,Yellow-crowned Night-Heron,Nyctanassa violacea
-,Green Heron,Butorides virescens
-,Striated Heron,B. striata
-,Cattle Egret,Bubulcus ibis
-,Great Blue Heron,Ardea herodias
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
-,Tricolored Heron,Egretta tricolor
-,Reddish Egret,E. rufescens
-,Snowy Egret,E. thula
-,Little Blue Heron,E. caerulea
-
-,IBISES,THRESKIORNITHIDAE
-,Glossy Ibis,Plegadis falcinellus
-,Roseate Spoonbill,Platalea ajaja
-
-,OSPREY,PANDIONIDAE
-,Osprey,Pandion haliaetus
-
-,HAWKS,ACCIPITRIDAE
-,Swallow-tailed Kite,Elanoides forficatus
-,Long-winged Harrier,Circus buffoni
-,White-tailed Hawk,Geranoaetus albicaudatus
+,HUMMINGBIRDS,TROCHILIDAE
+,Ruby-topaz Hummingbird,Chrysolampis mosquitus
+,Blue-tailed Emerald,Chlorostilbon mellisugus
 
 ,RAILS,RALLIDAE
 ,Sora,Porzana carolina
@@ -157,39 +130,66 @@
 ,SKIMMERS,RYNCHOPIDAE
 ,Black Skimmer,Rynchops niger
 
-,PIGEONS,COLUMBIDAE
-,Rock Pigeon,Columba livia
-,Scaly-naped Pigeon,Patagioenas squamosa
-,Bare-eyed Pigeon,P. corensis
-,White-tipped Dove,Leptotila verreauxi
-,Eared Dove,Zenaida auriculata
-,Common Ground Dove,Columbina passerina
-,Ruddy Ground Dove,C. talpacoti
+,TROPICBIRDS,PHAETHONTIDAE
+,Red-billed Tropicbird,Phaethon aethereus
+,White-tailed Tropicbird,P. lepturus
 
-,CUCKOOS,CUCULIDAE
-,Groove-billed Ani,Crotophaga sulcirostris
-,Yellow-billed Cuckoo,Coccyzus americanus
-,Mangrove Cuckoo,C. minor
-,Gray-capped Cuckoo,C. lansbergi
+,SHEARWATERS,PROCELLARIIDAE
+,Black-capped Petrel,Pterodroma hasitata
+,Great Shearwater,Ardenna gravis
+,Manx Shearwater,Puffinus puffinus
+,Audubon's Shearwater,P. lherminieri
+
+,STORM-PETRELS,HYDROBATIDAE
+,Wilson's Storm-Petrel,Oceanites oceanicus
+,Leach's Storm-Petrel,Oceanodroma leucorhoa
+
+,FRIGATEBIRDS,FREGATIDAE
+,Magnificent Frigatebird,Fregata magnificens
+
+,BOOBIES,SULIDAE
+,Masked Booby,Sula dactylatra
+,Red-footed Booby,S. sula
+,Brown Booby,S. leucogaster
+
+,CORMORANTS,PHALACROCORACIDAE
+,Neotropic Cormorant,Phalacrocorax brasilianus
+
+,PELICANS,PELECANIDAE
+,Brown Pelican,Pelecanus occidentalis
+
+,HERONS,ARDEIDAE
+,Boat-billed Heron,Cochlearius cochlearius
+,Black-crowned Night-Heron,Nycticorax nycticorax
+,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Green Heron,Butorides virescens
+,Striated Heron,B. striata
+,Cattle Egret,Bubulcus ibis
+,Great Blue Heron,Ardea herodias
+,Great Egret,A. alba
+,Whistling Heron,Syrigma sibilatrix
+,Tricolored Heron,Egretta tricolor
+,Reddish Egret,E. rufescens
+,Snowy Egret,E. thula
+,Little Blue Heron,E. caerulea
+
+,IBISES,THRESKIORNITHIDAE
+,Glossy Ibis,Plegadis falcinellus
+,Roseate Spoonbill,Platalea ajaja
+
+,OSPREY,PANDIONIDAE
+,Osprey,Pandion haliaetus
+
+,HAWKS,ACCIPITRIDAE
+,Swallow-tailed Kite,Elanoides forficatus
+,Long-winged Harrier,Circus buffoni
+,White-tailed Hawk,Geranoaetus albicaudatus
 
 ,BARN OWLS,TYTONIDAE
 ,Barn Owl,Tyto alba
 
 ,OWLS,STRIGIDAE
 ,Burrowing Owl,Athene cunicularia
-
-,NIGHTJARS,CAPRIMULGIDAE
-,Lesser Nighthawk,Chordeiles acutipennis
-,Common Nighthawk,C. minor
-,White-tailed Nightjar,Hydropsalis cayennensis
-,Chuck-will's-widow,Antrostomus carolinensis
-
-,SWIFTS,APODIDAE
-,Chimney Swift,Chaetura pelagica
-
-,HUMMINGBIRDS,TROCHILIDAE
-,Ruby-topaz Hummingbird,Chrysolampis mosquitus
-,Blue-tailed Emerald,Chlorostilbon mellisugus
 
 ,KINGFISHERS,ALCEDINIDAE
 ,Belted Kingfisher,Megaceryle alcyon

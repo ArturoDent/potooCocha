@@ -16,6 +16,7 @@ var cleanCSS = require("gulp-clean-css");
 var sourcemaps = require("gulp-sourcemaps");
 // var cached = require("gulp-cached");
 // var remember = require("gulp-remember");
+// var stripdebug = require("gulp-strip-debug");
 
 
 function serve(done) {
@@ -52,34 +53,47 @@ var paths = {
 };
 
 function watch() {
-  gulp.watch(paths.scripts.src, gulp.series(processJS));
+  gulp.watch(paths.scripts.src, gulp.series(reloadJS));
   gulp.watch(paths.styles.src, gulp.series(sass2css));
   gulp.watch("./*.html").on("change", reload);
 }
 
-var build = gulp.series(sass2css, processJS, serve, watch);
+gulp.task("sync", gulp.series(sass2css, reloadJS, serve, watch));
+// var dev = gulp.series(sass2css, reloadJS, serve, watch);
 
-gulp.task("sync", build);
+gulp.task("serve:watch", gulp.series(serve, watch));
+
+// gulp.task("build", gulp.series(sass2css, processJS, editHTML));
+// editHTML : strip browserSync, make dist/js links
 
 function sass2css() {
   return gulp.src(paths.styles.src)
     // .pipe(cached("removing scss cached"))
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(sourcemaps.write("../sourcemaps"))
+    // .pipe(sourcemaps.write("../sourcemaps"))
     .pipe(gulp.dest(paths.styles.dest))
+    .pipe(reload({ stream:true }));
+}
+
+function reloadJS() {
+  return gulp.src(paths.scripts.src)
+    // .pipe(sourcemaps.init())
+    // .pipe(concat("concat.js"))
+    // .pipe(gulp.dest("./concats/"))
+    // .pipe(rename({ suffix: ".min" }))
+    // .pipe(uglify())
+    // .pipe(sourcemaps.write("../sourcemaps"))
+    // .pipe(gulp.dest(paths.scripts.dest))
     .pipe(reload({ stream:true }));
 }
 
 function processJS() {
   return gulp.src(paths.scripts.src)
-    .pipe(sourcemaps.init())
     // .pipe(concat("concat.js"))
     // .pipe(gulp.dest("./concats/"))
     // .pipe(rename({ suffix: ".min" }))
     // .pipe(uglify())
-    // .pipe(sourcemaps.write("./sourceMaps"))
-    .pipe(sourcemaps.write("../sourcemaps"))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(reload({ stream:true }));
 }

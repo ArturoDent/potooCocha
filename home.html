@@ -123,7 +123,7 @@
 
         <div class="taxArticleMain">
 
-          <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm" target="_blank">taxonomy</a> of the birds of South America (November 18, 2016).</div>
+          <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm" target="_blank">taxonomy</a> of the birds of South America (November 21, 2016).</div>
 
           Type part of a word, e.g., "xantho". <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCdiacritical.htm" target="_blank">Accents</a> and capitalization are added for you. You can search family names.<br><br>
 
@@ -182,11 +182,11 @@
       <form id="searchForm" class='panel'>
 
         <div>
-          <button type="button" id="taxonomyCountryButton" class="genericButton">Select Country</button>
+          <span type="button" id="taxonomyCountryButton" class="genericButton">Select Country</span>
           <span class="grayed">
             <label>search &nbsp;: &nbsp; </label>
             <!--placeholder="xantho ..." -->
-            <input name="searhField" id="searchInput" size="15" type="text">
+            <input name="searchField" id="searchInput" size="15" type="text">
             <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
           </span>
         </div>
@@ -288,13 +288,13 @@
         <input id="italics" type="checkbox"><label for="italics">No italics</label><br>
         <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label>
 
-        <button type="button" id="checklistCountryButton" class="genericButton">Country</button>
-        <button type="button" id="pdfButton" class="genericButton">Checklist
+        <span type="button" id="checklistCountryButton" class="genericButton">country</span>
+        <span type="button" id="pdfButton" class="genericButton">checklist
           <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
-        </button>
-        <button type="button" id="csvButton" class="genericButton">csv File
+        </span>
+        <span type="button" id="csvButton" class="genericButton">csv file
           <svg class="icon icon-file-excel"><use xlink:href="#icon-file-excel"></use></svg>
-        </button>
+        </span>
 
       </div>
 
@@ -386,12 +386,18 @@
 
 <div class="md-overlay"></div>
 
-<script src="dist/js/main.js"></script>
-<!--<script src="libs/classList.js"></script>-->
-
-<script src="dist/js/SouthAmerica.js"></script>
+<!--<script src="dist/js/main.js"></script>-->
+<!--<script src="dist/js/SouthAmerica.js"></script>
 <script src="dist/js/taxonomy.js"></script>
 <script src="dist/js/birdMapFactory.js"></script>
+<script src="dist/js/main.js"></script>-->
+
+<!--<script src="libs/classList.js"></script>-->
+
+<script src="js/main.js"></script>
+<script src="js/SouthAmerica.js"></script>
+<script src="js/taxonomy.js"></script>
+<script src="js/birdMapFactory.js"></script>
 
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.15.0.js'><\/script>".replace("HOST", location.hostname));

@@ -22,7 +22,7 @@ var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "
                   "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
                   "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
-// South America : 102 families not including 2 incertae "families", 3371 total spp.
+// South America : 102 families not including 2 incertae "families", 3376 total spp.
 //                 which includes one hypothetical (in one country only) Blasck Turnstone
 
 var currentTaxonomyCountry;
@@ -180,7 +180,7 @@ function loadCountryTaxonomy(evt)  {
 
 	 // show searchresults and taxPage panels first time a taxonomy country is selected
 
-    document.querySelector("#searchForm span").classList.remove("grayed");
+    document.querySelector("#searchForm span.grayed").classList.remove("grayed");
     searchSpecials.classList.remove("grayed");
   }
 
@@ -797,4 +797,3 @@ function closeAllFamilies()  {
   // **** reset families and species of country
   document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species *";
 }
-// # sourceMappingURL=maps/taxonomy.js.map

@@ -3,19 +3,21 @@
     "configurations": [
         {
             "name": "Chrome : Launch with sourcemaps",
+            // works with or without preLaunchTask
+            // must start/F1 twice however if using preLaunch task
             "type": "chrome",
             "request": "launch",
-            // "preLaunchTask": "sync",
+            // "preLaunchTask": "serve:watch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
-            "sourceMaps": true,
-            // "outDir": "dist/js",
+            "sourceMaps": false,
             "runtimeArgs": [
             "--remote-debugging-port=9222"
             ]
         },
         {
             "name": "Chrome : Launch without sourcemaps",
+            // doesn't work'
             "type": "chrome",
             "request": "launch",
             "file": "${workspaceRoot}",
@@ -25,15 +27,16 @@
         },
         {
             "name": "Chrome : Attach with sourcemaps",
+            // doesn't work'
             "type": "chrome",
             "request": "attach",
             "port": 9222,
             "sourceMaps": true,
-            "outDir": "dest",
             "url": "http://localhost:3000"
         },
         {
             "name": "Chrome : Attach to url",
+            // doesn't work'
             "type": "chrome",
             "request": "attach",
             "port": 9222,

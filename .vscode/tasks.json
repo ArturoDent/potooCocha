@@ -11,7 +11,7 @@
     "isShellCommand": true,
     "tasks": [
         {
-            "taskName": "sync",
+            "taskName": "serve:watch",
             "isBuildCommand": false,
             "showOutput": "always",
             "isWatching": false

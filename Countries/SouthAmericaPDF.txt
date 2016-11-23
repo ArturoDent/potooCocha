@@ -162,6 +162,11 @@ NEW WORLD QUAILS,ODONTOPHORIDAE
 PHEASANTS,PHASIANIDAE
 ,,Ring-necked Pheasant,Phasianus colchicus
 ,,Silver Pheasant,Lophura  nycthemera
+FLAMINGOS,PHOENICOPTERIDAE
+,,Chilean Flamingo,Phoenicopterus chilensis
+,,American Flamingo,P. ruber
+,,Andean Flamingo,Phoenicoparrus andinus
+,,James's Flamingo,P. jamesi
 GREBES,PODICIPEDIDAE
 ,,White-tufted Grebe,Rollandia rolland
 ,,Titicaca Grebe,R. microptera
@@ -172,448 +177,6 @@ GREBES,PODICIPEDIDAE
 ,,Silvery Grebe,P. occipitalis
 ,endemic,Junin Grebe,P. taczanowskii
 ,,Hooded Grebe,P. gallardoi
-FLAMINGOS,PHOENICOPTERIDAE
-,,Chilean Flamingo,Phoenicopterus chilensis
-,,American Flamingo,P. ruber
-,,Andean Flamingo,Phoenicoparrus andinus
-,,James's Flamingo,P. jamesi
-PENGUINS,SPHENISCIDAE
-,,King Penguin,Aptenodytes patagonicus
-,,Emperor Penguin,A. forsteri
-,,Gentoo Penguin,Pygoscelis papua
-,,Chinstrap Penguin,P. antarcticus
-5,,Little Penguin,Eudyptula minor
-,,Humboldt Penguin,Spheniscus humboldti
-,endemic,Galapagos Penguin,S. mendiculus
-,,Magellanic Penguin,S. magellanicus
-,,Erect-crested Penguin,Eudyptes sclateri
-10,,Macaroni Penguin,E. chrysolophus
-,,Tristan Penguin,E. moseleyi
-,,Rockhopper Penguin,E. chrysocome
-,,Snares Penguin,E. robustus
-ALBATROSSES,DIOMEDEIDAE
-,,Waved Albatross,Phoebastria irrorata
-,,Royal Albatross,Diomedea epomophora
-,,Wandering Albatross,D. exulans
-,,Sooty Albatross,Phoebetria fusca
-5,,Light-mantled Albatross,P. palpebrata
-,,Yellow-nosed Albatross,Thalassarche chlororhynchos
-,,Black-browed Albatross,T. melanophris
-,,Gray-headed Albatross,T. chrysostoma
-,,Buller's Albatross,T. bulleri
-10,,White-capped Albatross,T. cauta
-,,Salvin's Albatross,T. salvini
-,,Chatham Albatross,T. eremita
-SHEARWATERS,PROCELLARIIDAE
-,,Southern Giant-Petrel,Macronectes giganteus
-,,Northern Giant-Petrel,M. halli
-,,Southern Fulmar,Fulmarus glacialoides
-,,Antarctic Petrel,Thalassoica antarctica
-5,,Cape Petrel,Daption capense
-,,Snow Petrel,Pagodroma nivea
-,,Kerguelen Petrel,Aphrodroma brevirostris
-,,Gould's Petrel,Pterodroma leucoptera
-,,Great-winged Petrel,P. macroptera
-10,,Soft-plumaged Petrel,P. mollis
-,,Black-capped Petrel,P. hasitata
-,,Atlantic Petrel,P. incerta
-,,White-headed Petrel,P. lessonii
-,,Cook's Petrel,P. cookii
-15,,Black-winged Petrel,P. nigripennis
-,,Masatierra Petrel,P. defilippiana
-,,Stejneger's Petrel,P. longirostris
-,,Kermadec Petrel,P. neglecta
-,,Trindade Petrel,P. arminjoniana
-20,,Mottled Petrel,P. inexpectata
-,,Galapagos Petrel,P. phaeopygia
-,,Juan Fernandez Petrel,P. externa
-,,Fea's Petrel,P. feae
-,,Blue Petrel,Halobaena caerulea
-25,,Fairy Prion,Pachyptila turtur
-,,Broad-billed Prion,P. vittata
-,,Antarctic Prion,P. desolata
-,,Slender-billed Prion,P. belcheri
-,,Bulwer's Petrel,Bulweria bulwerii
-30,,Gray Petrel,Procellaria cinerea
-,,White-chinned Petrel,P. aequinoctialis
-,,Spectacled Petrel,P. conspicillata
-,,Parkinson's Petrel,P. parkinsoni
-,,Westland Petrel,P. westlandica
-35,,Cory's Shearwater,Calonectris diomedea
-,,Cape Verde Shearwater,C. edwardsii
-,,Wedge-tailed Shearwater,Ardenna pacifica
-,,Buller's Shearwater,A. bulleri
-,,Short-tailed Shearwater,A. tenuirostris
-40,,Sooty Shearwater,A. grisea
-,,Great Shearwater,A. gravis
-,,Pink-footed Shearwater,A. creatopus
-,,Flesh-footed Shearwater,A. carneipes
-,,Manx Shearwater,Puffinus puffinus
-45,endemic,Galapagos Shearwater,P. subalaris
-,,Little Shearwater,P. assimilis
-,,Audubon's Shearwater,P. lherminieri
-,,Peruvian Diving-Petrel,Pelecanoides garnotii
-,,Common Diving-Petrel,P. urinatrix
-,,South Georgia Diving-Petrel,P. georgicus
-,,Magellanic Diving-Petrel,P. magellani
-STORM-PETRELS,HYDROBATIDAE
-,,White-bellied Storm-Petrel,Fregetta grallaria
-,,Black-bellied Storm-Petrel,F. tropica
-,,Wilson's Storm-Petrel,Oceanites oceanicus
-,,Elliot's Storm-Petrel,O. gracilis
-5,,Gray-backed Storm-Petrel,Garrodia nereis
-,,White-faced Storm-Petrel,Pelagodroma marina
-,,Least Storm-Petrel,Oceanodroma microsoma
-,,Wedge-rumped Storm-Petrel,O. tethys
-,,Band-rumped Storm-Petrel,O. castro
-10,,Leach's Storm-Petrel,O. leucorhoa
-,,Markham's Storm-Petrel,O. markhami
-,,Ringed Storm-Petrel,O. hornbyi
-,,Black Storm-Petrel,O. melania
-TROPICBIRDS,PHAETHONTIDAE
-,,Red-billed Tropicbird,Phaethon aethereus
-,,Red-tailed Tropicbird,P. rubricauda
-,,White-tailed Tropicbird,P. lepturus
-STORKS,CICONIIDAE
-,,Maguari Stork,Ciconia maguari
-,,Jabiru,Jabiru mycteria
-,,Wood Stork,Mycteria americana
-FRIGATEBIRDS,FREGATIDAE
-,,Lesser Frigatebird,Fregata ariel
-,,Magnificent Frigatebird,F. magnificens
-,,Great Frigatebird,F. minor
-BOOBIES,SULIDAE
-,,Cape Gannet,Morus capensis
-,,Australasian Gannet,M. serrator
-,,Blue-footed Booby,Sula nebouxii
-,,Peruvian Booby,S. variegata
-5,,Masked Booby,S. dactylatra
-,,Nazca Booby,S. granti
-,,Red-footed Booby,S. sula
-,,Brown Booby,S. leucogaster
-CORMORANTS,PHALACROCORACIDAE
-,,Red-legged Cormorant,Phalacrocorax gaimardi
-,endemic,Flightless Cormorant,P. harrisi
-,,Neotropic Cormorant,P. brasilianus
-,,Magellanic Cormorant,P. magellanicus
-,,Guanay Cormorant,P. bougainvillii
-,,Imperial Cormorant,P. atriceps
-ANHINGAS,ANHINGIDAE
-,,Anhinga,Anhinga anhinga
-PELICANS,PELECANIDAE
-,,Brown Pelican,Pelecanus occidentalis
-,,Peruvian Pelican,P. thagus
-HERONS,ARDEIDAE
-,,Rufescent Tiger-Heron,Tigrisoma lineatum
-,,Fasciated Tiger-Heron,T. fasciatum
-,,Bare-throated Tiger-Heron,T. mexicanum
-,,Agami Heron,Agamia agami
-5,,Boat-billed Heron,Cochlearius cochlearius
-,,Zigzag Heron,Zebrilus undulatus
-,,Pinnated Bittern,Botaurus pinnatus
-,,Least Bittern,Ixobrychus exilis
-,,Stripe-backed Bittern,I. involucris
-10,,Black-crowned Night-Heron,Nycticorax nycticorax
-,,Yellow-crowned Night-Heron,Nyctanassa violacea
-,,Green Heron,Butorides virescens
-,,Striated Heron,B. striata
-,,Squacco Heron,Ardeola ralloides
-15,,Cattle Egret,Bubulcus ibis
-,,Gray Heron,Ardea cinerea
-,,Great Blue Heron,A. herodias
-,,Cocoi Heron,A. cocoi
-,,Purple Heron,A. purpurea
-20,,Great Egret,A. alba
-,,Whistling Heron,Syrigma sibilatrix
-,,Capped Heron,Pilherodius pileatus
-,,Tricolored Heron,Egretta tricolor
-,,Reddish Egret,E. rufescens
-25,,Western Reef-Heron,E. gularis
-,,Little Egret,E. garzetta
-,,Snowy Egret,E. thula
-,,Little Blue Heron,E. caerulea
-IBISES,THRESKIORNITHIDAE
-,,White Ibis,Eudocimus albus
-,,Scarlet Ibis,E. ruber
-,,Glossy Ibis,Plegadis falcinellus
-,,White-faced Ibis,P. chihi
-5,,Puna Ibis,P. ridgwayi
-,,Sharp-tailed Ibis,Cercibis oxycerca
-,,Green Ibis,Mesembrinibis cayennensis
-,,Bare-faced Ibis,Phimosus infuscatus
-,,Plumbeous Ibis,Theristicus caerulescens
-10,,Buff-necked Ibis,T. caudatus
-,,Black-faced Ibis,T. melanopis
-,,Eurasian Spoonbill,Platalea leucorodia
-,,Roseate Spoonbill,P. ajaja
-NEW WORLD VULTURES,CATHARTIDAE
-,,Turkey Vulture,Cathartes aura
-,,Lesser Yellow-headed Vulture,C. burrovianus
-,,Greater Yellow-headed Vulture,C. melambrotus
-,,Black Vulture,Coragyps atratus
-,,King Vulture,Sarcoramphus papa
-,,Andean Condor,Vultur gryphus
-OSPREY,PANDIONIDAE
-,,Osprey,Pandion haliaetus
-HAWKS,ACCIPITRIDAE
-,,White-tailed Kite,Elanus leucurus
-,,Pearl Kite,Gampsonyx swainsonii
-,,Hook-billed Kite,Chondrohierax uncinatus
-,,Gray-headed Kite,Leptodon cayanensis
-5,endemic,White-collared Kite,L. forbesi
-,,Swallow-tailed Kite,Elanoides forficatus
-,,Crested Eagle,Morphnus guianensis
-,,Harpy Eagle,Harpia harpyja
-,,Black Hawk-Eagle,Spizaetus tyrannus
-10,,Black-and-white Hawk-Eagle,S. melanoleucus
-,,Ornate Hawk-Eagle,S. ornatus
-,,Black-and-chestnut Eagle,S. isidori
-,,Black-collared Hawk,Busarellus nigricollis
-,,Snail Kite,Rostrhamus sociabilis
-15,,Slender-billed Kite,Helicolestes hamatus
-,,Double-toothed Kite,Harpagus bidentatus
-,,Rufous-thighed Kite,H. diodon
-,,Mississippi Kite,Ictinia mississippiensis
-,,Plumbeous Kite,I. plumbea
-20,,Northern Harrier,Circus cyaneus
-,,Long-winged Harrier,C. buffoni
-,,Gray-bellied Hawk,Accipiter poliogaster
-,,Tiny Hawk,A. superciliosus
-,,Semicollared Hawk,A. collaris
-,,Sharp-shinned Hawk,A. striatus
-,,Cooper's Hawk,A. cooperii
-,,Bicolored Hawk,A. bicolor
-,,Black Kite,Milvus migrans
-,,Crane Hawk,Geranospiza caerulescens
-,,Plumbeous Hawk,Cryptoleucopteryx plumbea
-,,Slate-colored Hawk,Buteogallus schistaceus
-,,Common Black Hawk,B. anthracinus
-,,Rufous Crab Hawk,B. aequinoctialis
-,,Savanna Hawk,B. meridionalis
-,endemic,White-necked Hawk,B. lacernulatus
-,,Great Black Hawk,B. urubitinga
-,,Solitary Eagle,B. solitarius
-,,Barred Hawk,Morphnarchus princeps
-,,Roadside Hawk,Rupornis magnirostris
-,,Harris's Hawk,Parabuteo unicinctus
-,,White-rumped Hawk,P. leucorrhous
-,,White-tailed Hawk,Geranoaetus albicaudatus
-,,Variable Hawk,G. polyosoma
-,,Black-chested Buzzard-Eagle,G. melanoleucus
-,,White Hawk,Pseudastur albicollis
-,,Gray-backed Hawk,P. occidentalis
-,,Semiplumbeous Hawk,Leucopternis semiplumbeus
-,,Black-faced Hawk,L. melanops
-,,White-browed Hawk,L. kuhli
-,,Gray-lined Hawk,Buteo nitidus
-,,Broad-winged Hawk,B. platypterus
-,,White-throated Hawk,B. albigula
-,,Short-tailed Hawk,B. brachyurus
-,,Swainson's Hawk,B. swainsoni
-,endemic,Galapagos Hawk,B. galapagoensis
-,,Zone-tailed Hawk,B. albonotatus
-,,Rufous-tailed Hawk,B. ventralis
-LIMPKIN,ARAMIDAE
-,,Limpkin,Aramus guarauna
-TRUMPETERS,PSOPHIIDAE
-,,Gray-winged Trumpeter,Psophia crepitans
-,,Pale-winged Trumpeter,P. leucoptera
-,endemic,Dark-winged Trumpeter,P. viridis
-RAILS,RALLIDAE
-,,Speckled Rail,Coturnicops notatus
-,,Ocellated Crake,Micropygia schomburgkii
-,,Mangrove Rail,Rallus longirostris
-,endemic,Plain-flanked Rail,R. wetmorei
-5,,Virginia Rail,R. limicola
-,,Bogota Rail,R. semiplumbeus
-,,Austral Rail,R. antarcticus
-,,Giant Wood-Rail,Aramides ypecaha
-,,Brown Wood-Rail,A. wolfi
-10,,Little Wood-Rail,A. mangle
-,,Gray-necked Wood-Rail,A. cajaneus
-,,Rufous-necked Wood-Rail,A. axillaris
-,,Red-winged Wood-Rail,A. calopterus
-,,Slaty-breasted Wood-Rail,A. saracura
-15,,Uniform Crake,Amaurolimnas concolor
-,,Chestnut-headed Crake,Anurolimnas castaneiceps
-,,Russet-crowned Crake,A. viridis
-,,Black-banded Crake,A. fasciatus
-,endemic,Rusty-flanked Crake,Laterallus levraudi
-20,,Rufous-sided Crake,L. melanophaius
-,,White-throated Crake,L. albigularis
-,,Gray-breasted Crake,L. exilis
-,endemic,Galapagos Rail,L. spilonota
-,,Black Rail,L. jamaicensis
-25,,Red-and-white Crake,L. leucopyrrhus
-,,Rufous-faced Crake,L. xenopterus
-,,Corn Crake,Crex crex
-,,Yellow-breasted Crake,Porzana flaviventer
-,,Dot-winged Crake,P. spiloptera
-30,,Sora,P. carolina
-,,Spot-flanked Gallinule,Porphyriops melanops
-,,Colombian Crake,Mustelirallus colombianus
-,,Paint-billed Crake,M. erythrops
-,,Spotted Rail,Pardirallus maculatus
-,,Blackish Rail,P. nigricans
-,,Plumbeous Rail,P. sanguinolentus
-,,Common Gallinule,Gallinula galeata
-,,Lesser Moorhen,G. angulata
-,,Purple Gallinule,Porphyrio martinica
-,,Azure Gallinule,P. flavirostris
-,,Red-gartered Coot,Fulica armillata
-,,Red-fronted Coot,F. rufifrons
-,,Giant Coot,F. gigantea
-,,Horned Coot,F. cornuta
-,,Slate-colored Coot,F. ardesiaca
-,,White-winged Coot,F. leucoptera
-FINFOOTS,HELIORNITHIDAE
-,,Sungrebe,Heliornis fulica
-SUNBITTERN,EURYPYGIDAE
-,,Sunbittern,Eurypyga helias
-PLOVERS,CHARADRIIDAE
-,,American Golden-Plover,Pluvialis dominica
-,,Pacific Golden-Plover,P. fulva
-,,Black-bellied Plover,P. squatarola
-,,Tawny-throated Dotterel,Oreopholus ruficollis
-5,,Pied Lapwing,Vanellus cayanus
-,,Southern Lapwing,V. chilensis
-,,Andean Lapwing,V. resplendens
-,,Semipalmated Plover,Charadrius semipalmatus
-,,Piping Plover,C. melodus
-10,,Wilson's Plover,C. wilsonia
-,,Killdeer,C. vociferus
-,,Snowy Plover,C. nivosus
-,,Collared Plover,C. collaris
-,,Puna Plover,C. alticola
-15,,Two-banded Plover,C. falklandicus
-,,Rufous-chested Dotterel,C. modestus
-,,Diademed Sandpiper-Plover,Phegornis mitchellii
-OYSTERCATCHERS,HAEMATOPODIDAE
-,,American Oystercatcher,Haematopus palliatus
-,,Blackish Oystercatcher,H. ater
-,,Magellanic Oystercatcher,H. leucopodus
-AVOCETS and STILTS,RECURVIROSTRIDAE
-,,Black-necked Stilt,Himantopus mexicanus
-,,American Avocet,Recurvirostra americana
-,,Andean Avocet,R. andina
-THICK-KNEES,BURHINIDAE
-,,Double-striped Thick-knee,Burhinus bistriatus
-,,Peruvian Thick-knee,B. superciliaris
-SHEATHBILLS,CHIONIDAE
-,,Snowy Sheathbill,Chionis albus
-MAGELLANIC PLOVER,PLUVIANELLIDAE
-,,Magellanic Plover,Pluvianellus socialis
-SANDPIPERS,SCOLOPACIDAE
-,,Upland Sandpiper,Bartramia longicauda
-,,Whimbrel,Numenius phaeopus
-,,Long-billed Curlew,N. americanus
-,,Bar-tailed Godwit,Limosa lapponica
-,,Black-tailed Godwit,L. limosa
-,,Hudsonian Godwit,L. haemastica
-,,Marbled Godwit,L. fedoa
-,,Ruddy Turnstone,Arenaria interpres
-,,Black Turnstone,A. melanocephala
-,,Red Knot,Calidris canutus
-,,Surfbird,C. virgata
-,,Ruff,C. pugnax
-,,Stilt Sandpiper,C. himantopus
-,,Curlew Sandpiper,C. ferruginea
-,,Sanderling,C. alba
-,,Dunlin,C. alpina
-,,Baird's Sandpiper,C. bairdii
-,,Least Sandpiper,C. minutilla
-,,White-rumped Sandpiper,C. fuscicollis
-,,Buff-breasted Sandpiper,C. subruficollis
-,,Pectoral Sandpiper,C. melanotos
-,,Semipalmated Sandpiper,C. pusilla
-,,Western Sandpiper,C. mauri
-,,Short-billed Dowitcher,Limnodromus griseus
-,,Long-billed Dowitcher,L. scolopaceus
-,,Imperial Snipe,Gallinago imperialis
-,,Jameson's Snipe,G. jamesoni
-,,Noble Snipe,G. nobilis
-,,Giant Snipe,G. undulata
-,,Wilson's Snipe,G. delicata
-,,South American Snipe,G. paraguaiae
-,,Puna Snipe,G. andina
-,,Wilson's Phalarope,Phalaropus tricolor
-,,Red-necked Phalarope,P. lobatus
-,,Red Phalarope,P. fulicarius
-,,Terek Sandpiper,Xenus cinereus
-,,Spotted Sandpiper,Actitis macularius
-,,Solitary Sandpiper,Tringa solitaria
-,,Wandering Tattler,T. incana
-,,Greater Yellowlegs,T. melanoleuca
-,,Willet,T. semipalmata
-,,Lesser Yellowlegs,T. flavipes
-,,Wood Sandpiper,T. glareola
-SEEDSNIPES,THINOCORIDAE
-,,Rufous-bellied Seedsnipe,Attagis gayi
-,,White-bellied Seedsnipe,A. malouinus
-,,Gray-breasted Seedsnipe,Thinocorus orbignyianus
-,,Least Seedsnipe,T. rumicivorus
-JACANAS,JACANIDAE
-,,Wattled Jacana,Jacana jacana
-PAINTED-SNIPE,ROSTRATULIDAE
-,,South American Painted-snipe,Nycticryphes semicollaris
-SKUAS,STERCORARIIDAE
-,,Great Skua,Stercorarius skua
-,,Chilean Skua,S. chilensis
-,,South Polar Skua,S. maccormicki
-,,Brown Skua,S. antarcticus
-5,,Pomarine Jaeger,S. pomarinus
-,,Parasitic Jaeger,S. parasiticus
-,,Long-tailed Jaeger,S. longicaudus
-GULLS,LARIDAE
-,,Swallow-tailed Gull,Creagrus furcatus
-,,Black-legged Kittiwake,Rissa tridactyla
-,,Sabine's Gull,Xema sabini
-,,Bonaparte's Gull,Chroicocephalus philadelphia
-5,,Andean Gull,C. serranus
-,,Brown-hooded Gull,C. maculipennis
-,,Gray-hooded Gull,C. cirrocephalus
-,,Black-headed Gull,C. ridibundus
-,,Little Gull,Hydrocoloeus minutus
-10,,Dolphin Gull,Leucophaeus scoresbii
-,,Gray Gull,L. modestus
-,,Laughing Gull,L. atricilla
-,,Franklin's Gull,L. pipixcan
-,endemic,Lava Gull,L. fuliginosus
-15,,Belcher's Gull,Larus belcheri
-,,Olrog's Gull,L. atlanticus
-,,Ring-billed Gull,L. delawarensis
-,,California Gull,L. californicus
-,,Great Black-backed Gull,L. marinus
-20,,Kelp Gull,L. dominicanus
-,,Lesser Black-backed Gull,L. fuscus
-,,Herring Gull,L. argentatus
-,,Brown Noddy,Anous stolidus
-,,Black Noddy,A. minutus
-25,,Gray Noddy,Procelsterna albivitta
-,,White Tern,Gygis alba
-,,Sooty Tern,Onychoprion fuscatus
-,,Bridled Tern,O. anaethetus
-,,Least Tern,Sternula antillarum
-30,,Yellow-billed Tern,S. superciliaris
-,,Peruvian Tern,S. lorata
-,,Large-billed Tern,Phaetusa simplex
-,,Gull-billed Tern,Gelochelidon nilotica
-,,Caspian Tern,Hydroprogne caspia
-35,,Inca Tern,Larosterna inca
-,,Black Tern,Chlidonias niger
-,,White-winged Tern,C. leucopterus
-,,Common Tern,Sterna hirundo
-,,Roseate Tern,S. dougallii
-40,,Arctic Tern,S. paradisaea
-,,South American Tern,S. hirundinacea
-,,Antarctic Tern,S. vittata
-,,Forster's Tern,S. forsteri
-,,Snowy-crowned Tern,S. trudeaui
-45,,Elegant Tern,Thalasseus elegans
-,,Sandwich Tern,T. sandvicensis
-,,Royal Tern,T. maximus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 PIGEONS,COLUMBIDAE
 ,,Rock Pigeon,Columba livia
 ,,White-crowned Pigeon,Patagioenas leucocephala
@@ -666,8 +229,6 @@ PIGEONS,COLUMBIDAE
 ,,Black-winged Ground Dove,M. melanoptera
 ,,Golden-spotted Ground Dove,M. aymara
 ,,Long-tailed Ground Dove,Uropelia campestris
-HOATZIN,OPISTHOCOMIDAE
-,,Hoatzin,Opisthocomus hoazin
 CUCKOOS,CUCULIDAE
 ,,Guira Cuckoo,Guira guira
 ,,Greater Ani,Crotophaga major
@@ -692,52 +253,6 @@ CUCKOOS,CUCULIDAE
 ,,Mangrove Cuckoo,C. minor
 ,,Black-billed Cuckoo,C. erythropthalmus
 ,,Gray-capped Cuckoo,C. lansbergi
-BARN OWLS,TYTONIDAE
-,,Barn Owl,Tyto alba
-OWLS,STRIGIDAE
-,,Tropical Screech-Owl,Megascops choliba
-,,Peruvian Screech-Owl,M. roboratus
-,endemic,Koepcke's Screech-Owl,M. koepckeae
-,,Bare-shanked Screech-Owl,M. clarkii
-5,,Colombian Screech-Owl,M. colombianus
-,,Rufescent Screech-Owl,M. ingens
-,,Cinnamon Screech-Owl,M. petersoni
-,,Cloud-forest Screech-Owl,M. marshalli
-,,Tawny-bellied Screech-Owl,M. watsonii
-10,,Vermiculated Screech-Owl,M. guatemalae
-,,Montane Forest Screech-Owl,M. hoyi
-,,Black-capped Screech-Owl,M. atricapilla
-,,Long-tufted Screech-Owl,M. sanctaecatarinae
-,,White-throated Screech-Owl,M. albogularis
-15,,Crested Owl,Lophostrix cristata
-,,Spectacled Owl,Pulsatrix perspicillata
-,,Tawny-browed Owl,P. koeniswaldiana
-,,Band-bellied Owl,P. melanota
-,,Great Horned Owl,Bubo virginianus
-20,,Rusty-barred Owl,Strix hylophila
-,,Chaco Owl,S. chacoensis
-,,Rufous-legged Owl,S. rufipes
-,,Mottled Owl,Ciccaba virgata
-,,Black-and-white Owl,C. nigrolineata
-25,,Black-banded Owl,C. huhula
-,,Rufous-banded Owl,C. albitarsis
-,,Cloud-forest Pygmy-Owl,Glaucidium nubicola
-,,Andean Pygmy-Owl,G. jardinii
-,,Yungas Pygmy-Owl,G. bolivianum
-30,,Subtropical Pygmy-Owl,G. parkeri
-,,Central American Pygmy-Owl,G. griseiceps
-,,Amazonian Pygmy-Owl,G. hardyi
-,endemic,Pernambuco Pygmy-Owl,G. mooreorum
-,endemic,Least Pygmy-Owl,G. minutissimum
-35,,Ferruginous Pygmy-Owl,G. brasilianum
-,,Peruvian Pygmy-Owl,G. peruanum
-,,Austral Pygmy-Owl,G. nana
-,endemic,Long-whiskered Owlet,Xenoglaux loweryi
-,,Burrowing Owl,Athene cunicularia
-40,,Buff-fronted Owl,Aegolius harrisii
-,,Striped Owl,Asio clamator
-,,Stygian Owl,A. stygius
-,,Short-eared Owl,A. flammeus
 OILBIRD,STEATORNITHIDAE
 ,,Oilbird,Steatornis caripensis
 POTOOS,NYCTIBIIDAE
@@ -1068,6 +583,491 @@ HUMMINGBIRDS,TROCHILIDAE
 ,,Gilded Hummingbird,H. chrysura
 ,,Humboldt's Sapphire,H. humboldtii
 ,,Blue-headed Sapphire,H. grayi
+HOATZIN,OPISTHOCOMIDAE
+,,Hoatzin,Opisthocomus hoazin
+LIMPKIN,ARAMIDAE
+,,Limpkin,Aramus guarauna
+TRUMPETERS,PSOPHIIDAE
+,,Gray-winged Trumpeter,Psophia crepitans
+,,Pale-winged Trumpeter,P. leucoptera
+,endemic,Dark-winged Trumpeter,P. viridis
+RAILS,RALLIDAE
+,,Speckled Rail,Coturnicops notatus
+,,Ocellated Crake,Micropygia schomburgkii
+,,Mangrove Rail,Rallus longirostris
+,endemic,Plain-flanked Rail,R. wetmorei
+5,,Virginia Rail,R. limicola
+,,Bogota Rail,R. semiplumbeus
+,,Austral Rail,R. antarcticus
+,,Giant Wood-Rail,Aramides ypecaha
+,,Brown Wood-Rail,A. wolfi
+10,,Little Wood-Rail,A. mangle
+,,Gray-necked Wood-Rail,A. cajaneus
+,,Rufous-necked Wood-Rail,A. axillaris
+,,Red-winged Wood-Rail,A. calopterus
+,,Slaty-breasted Wood-Rail,A. saracura
+15,,Uniform Crake,Amaurolimnas concolor
+,,Chestnut-headed Crake,Anurolimnas castaneiceps
+,,Russet-crowned Crake,A. viridis
+,,Black-banded Crake,A. fasciatus
+,endemic,Rusty-flanked Crake,Laterallus levraudi
+20,,Rufous-sided Crake,L. melanophaius
+,,White-throated Crake,L. albigularis
+,,Gray-breasted Crake,L. exilis
+,endemic,Galapagos Rail,L. spilonota
+,,Black Rail,L. jamaicensis
+25,,Red-and-white Crake,L. leucopyrrhus
+,,Rufous-faced Crake,L. xenopterus
+,,Corn Crake,Crex crex
+,,Yellow-breasted Crake,Porzana flaviventer
+,,Dot-winged Crake,P. spiloptera
+30,,Sora,P. carolina
+,,Spot-flanked Gallinule,Porphyriops melanops
+,,Colombian Crake,Mustelirallus colombianus
+,,Paint-billed Crake,M. erythrops
+,,Spotted Rail,Pardirallus maculatus
+,,Blackish Rail,P. nigricans
+,,Plumbeous Rail,P. sanguinolentus
+,,Common Gallinule,Gallinula galeata
+,,Lesser Moorhen,G. angulata
+,,Purple Gallinule,Porphyrio martinica
+,,Azure Gallinule,P. flavirostris
+,,Red-gartered Coot,Fulica armillata
+,,Red-fronted Coot,F. rufifrons
+,,Giant Coot,F. gigantea
+,,Horned Coot,F. cornuta
+,,Slate-colored Coot,F. ardesiaca
+,,White-winged Coot,F. leucoptera
+FINFOOTS,HELIORNITHIDAE
+,,Sungrebe,Heliornis fulica
+PLOVERS,CHARADRIIDAE
+,,American Golden-Plover,Pluvialis dominica
+,,Pacific Golden-Plover,P. fulva
+,,Black-bellied Plover,P. squatarola
+,,Tawny-throated Dotterel,Oreopholus ruficollis
+5,,Pied Lapwing,Vanellus cayanus
+,,Southern Lapwing,V. chilensis
+,,Andean Lapwing,V. resplendens
+,,Semipalmated Plover,Charadrius semipalmatus
+,,Piping Plover,C. melodus
+10,,Wilson's Plover,C. wilsonia
+,,Killdeer,C. vociferus
+,,Snowy Plover,C. nivosus
+,,Collared Plover,C. collaris
+,,Puna Plover,C. alticola
+15,,Two-banded Plover,C. falklandicus
+,,Rufous-chested Dotterel,C. modestus
+,,Diademed Sandpiper-Plover,Phegornis mitchellii
+OYSTERCATCHERS,HAEMATOPODIDAE
+,,American Oystercatcher,Haematopus palliatus
+,,Blackish Oystercatcher,H. ater
+,,Magellanic Oystercatcher,H. leucopodus
+AVOCETS and STILTS,RECURVIROSTRIDAE
+,,Black-necked Stilt,Himantopus mexicanus
+,,American Avocet,Recurvirostra americana
+,,Andean Avocet,R. andina
+THICK-KNEES,BURHINIDAE
+,,Double-striped Thick-knee,Burhinus bistriatus
+,,Peruvian Thick-knee,B. superciliaris
+SHEATHBILLS,CHIONIDAE
+,,Snowy Sheathbill,Chionis albus
+MAGELLANIC PLOVER,PLUVIANELLIDAE
+,,Magellanic Plover,Pluvianellus socialis
+SANDPIPERS,SCOLOPACIDAE
+,,Upland Sandpiper,Bartramia longicauda
+,,Whimbrel,Numenius phaeopus
+,,Long-billed Curlew,N. americanus
+,,Bar-tailed Godwit,Limosa lapponica
+,,Black-tailed Godwit,L. limosa
+,,Hudsonian Godwit,L. haemastica
+,,Marbled Godwit,L. fedoa
+,,Ruddy Turnstone,Arenaria interpres
+,,Black Turnstone,A. melanocephala
+,,Red Knot,Calidris canutus
+,,Surfbird,C. virgata
+,,Ruff,C. pugnax
+,,Stilt Sandpiper,C. himantopus
+,,Curlew Sandpiper,C. ferruginea
+,,Sanderling,C. alba
+,,Dunlin,C. alpina
+,,Baird's Sandpiper,C. bairdii
+,,Least Sandpiper,C. minutilla
+,,White-rumped Sandpiper,C. fuscicollis
+,,Buff-breasted Sandpiper,C. subruficollis
+,,Pectoral Sandpiper,C. melanotos
+,,Semipalmated Sandpiper,C. pusilla
+,,Western Sandpiper,C. mauri
+,,Short-billed Dowitcher,Limnodromus griseus
+,,Long-billed Dowitcher,L. scolopaceus
+,,Imperial Snipe,Gallinago imperialis
+,,Jameson's Snipe,G. jamesoni
+,,Noble Snipe,G. nobilis
+,,Giant Snipe,G. undulata
+,,Wilson's Snipe,G. delicata
+,,South American Snipe,G. paraguaiae
+,,Puna Snipe,G. andina
+,,Wilson's Phalarope,Phalaropus tricolor
+,,Red-necked Phalarope,P. lobatus
+,,Red Phalarope,P. fulicarius
+,,Terek Sandpiper,Xenus cinereus
+,,Spotted Sandpiper,Actitis macularius
+,,Solitary Sandpiper,Tringa solitaria
+,,Wandering Tattler,T. incana
+,,Greater Yellowlegs,T. melanoleuca
+,,Willet,T. semipalmata
+,,Lesser Yellowlegs,T. flavipes
+,,Wood Sandpiper,T. glareola
+SEEDSNIPES,THINOCORIDAE
+,,Rufous-bellied Seedsnipe,Attagis gayi
+,,White-bellied Seedsnipe,A. malouinus
+,,Gray-breasted Seedsnipe,Thinocorus orbignyianus
+,,Least Seedsnipe,T. rumicivorus
+JACANAS,JACANIDAE
+,,Wattled Jacana,Jacana jacana
+PAINTED-SNIPE,ROSTRATULIDAE
+,,South American Painted-snipe,Nycticryphes semicollaris
+SKUAS,STERCORARIIDAE
+,,Great Skua,Stercorarius skua
+,,Chilean Skua,S. chilensis
+,,South Polar Skua,S. maccormicki
+,,Brown Skua,S. antarcticus
+5,,Pomarine Jaeger,S. pomarinus
+,,Parasitic Jaeger,S. parasiticus
+,,Long-tailed Jaeger,S. longicaudus
+GULLS,LARIDAE
+,,Swallow-tailed Gull,Creagrus furcatus
+,,Black-legged Kittiwake,Rissa tridactyla
+,,Sabine's Gull,Xema sabini
+,,Bonaparte's Gull,Chroicocephalus philadelphia
+5,,Andean Gull,C. serranus
+,,Brown-hooded Gull,C. maculipennis
+,,Gray-hooded Gull,C. cirrocephalus
+,,Black-headed Gull,C. ridibundus
+,,Little Gull,Hydrocoloeus minutus
+10,,Dolphin Gull,Leucophaeus scoresbii
+,,Gray Gull,L. modestus
+,,Laughing Gull,L. atricilla
+,,Franklin's Gull,L. pipixcan
+,endemic,Lava Gull,L. fuliginosus
+15,,Belcher's Gull,Larus belcheri
+,,Olrog's Gull,L. atlanticus
+,,Ring-billed Gull,L. delawarensis
+,,California Gull,L. californicus
+,,Great Black-backed Gull,L. marinus
+20,,Kelp Gull,L. dominicanus
+,,Lesser Black-backed Gull,L. fuscus
+,,Herring Gull,L. argentatus
+,,Brown Noddy,Anous stolidus
+,,Black Noddy,A. minutus
+25,,Gray Noddy,Procelsterna albivitta
+,,White Tern,Gygis alba
+,,Sooty Tern,Onychoprion fuscatus
+,,Bridled Tern,O. anaethetus
+,,Least Tern,Sternula antillarum
+30,,Yellow-billed Tern,S. superciliaris
+,,Peruvian Tern,S. lorata
+,,Large-billed Tern,Phaetusa simplex
+,,Gull-billed Tern,Gelochelidon nilotica
+,,Caspian Tern,Hydroprogne caspia
+35,,Inca Tern,Larosterna inca
+,,Black Tern,Chlidonias niger
+,,White-winged Tern,C. leucopterus
+,,Common Tern,Sterna hirundo
+,,Roseate Tern,S. dougallii
+40,,Arctic Tern,S. paradisaea
+,,South American Tern,S. hirundinacea
+,,Antarctic Tern,S. vittata
+,,Forster's Tern,S. forsteri
+,,Snowy-crowned Tern,S. trudeaui
+45,,Elegant Tern,Thalasseus elegans
+,,Sandwich Tern,T. sandvicensis
+,,Royal Tern,T. maximus
+SKIMMERS,RYNCHOPIDAE
+,,Black Skimmer,Rynchops niger
+SUNBITTERN,EURYPYGIDAE
+,,Sunbittern,Eurypyga helias
+TROPICBIRDS,PHAETHONTIDAE
+,,Red-billed Tropicbird,Phaethon aethereus
+,,Red-tailed Tropicbird,P. rubricauda
+,,White-tailed Tropicbird,P. lepturus
+PENGUINS,SPHENISCIDAE
+,,King Penguin,Aptenodytes patagonicus
+,,Emperor Penguin,A. forsteri
+,,Gentoo Penguin,Pygoscelis papua
+,,Chinstrap Penguin,P. antarcticus
+5,,Little Penguin,Eudyptula minor
+,,Humboldt Penguin,Spheniscus humboldti
+,endemic,Galapagos Penguin,S. mendiculus
+,,Magellanic Penguin,S. magellanicus
+,,Erect-crested Penguin,Eudyptes sclateri
+10,,Macaroni Penguin,E. chrysolophus
+,,Tristan Penguin,E. moseleyi
+,,Rockhopper Penguin,E. chrysocome
+,,Snares Penguin,E. robustus
+ALBATROSSES,DIOMEDEIDAE
+,,Waved Albatross,Phoebastria irrorata
+,,Royal Albatross,Diomedea epomophora
+,,Wandering Albatross,D. exulans
+,,Sooty Albatross,Phoebetria fusca
+5,,Light-mantled Albatross,P. palpebrata
+,,Yellow-nosed Albatross,Thalassarche chlororhynchos
+,,Black-browed Albatross,T. melanophris
+,,Gray-headed Albatross,T. chrysostoma
+,,Buller's Albatross,T. bulleri
+10,,White-capped Albatross,T. cauta
+,,Salvin's Albatross,T. salvini
+,,Chatham Albatross,T. eremita
+SHEARWATERS,PROCELLARIIDAE
+,,Southern Giant-Petrel,Macronectes giganteus
+,,Northern Giant-Petrel,M. halli
+,,Southern Fulmar,Fulmarus glacialoides
+,,Antarctic Petrel,Thalassoica antarctica
+5,,Cape Petrel,Daption capense
+,,Snow Petrel,Pagodroma nivea
+,,Kerguelen Petrel,Aphrodroma brevirostris
+,,Gould's Petrel,Pterodroma leucoptera
+,,Great-winged Petrel,P. macroptera
+10,,Soft-plumaged Petrel,P. mollis
+,,Black-capped Petrel,P. hasitata
+,,Atlantic Petrel,P. incerta
+,,White-headed Petrel,P. lessonii
+,,Cook's Petrel,P. cookii
+15,,Black-winged Petrel,P. nigripennis
+,,Masatierra Petrel,P. defilippiana
+,,Stejneger's Petrel,P. longirostris
+,,Kermadec Petrel,P. neglecta
+,,Trindade Petrel,P. arminjoniana
+20,,Mottled Petrel,P. inexpectata
+,,Galapagos Petrel,P. phaeopygia
+,,Juan Fernandez Petrel,P. externa
+,,Fea's Petrel,P. feae
+,,Blue Petrel,Halobaena caerulea
+25,,Fairy Prion,Pachyptila turtur
+,,Broad-billed Prion,P. vittata
+,,Antarctic Prion,P. desolata
+,,Slender-billed Prion,P. belcheri
+,,Bulwer's Petrel,Bulweria bulwerii
+30,,Gray Petrel,Procellaria cinerea
+,,White-chinned Petrel,P. aequinoctialis
+,,Spectacled Petrel,P. conspicillata
+,,Parkinson's Petrel,P. parkinsoni
+,,Westland Petrel,P. westlandica
+35,,Cory's Shearwater,Calonectris diomedea
+,,Cape Verde Shearwater,C. edwardsii
+,,Wedge-tailed Shearwater,Ardenna pacifica
+,,Buller's Shearwater,A. bulleri
+,,Short-tailed Shearwater,A. tenuirostris
+40,,Sooty Shearwater,A. grisea
+,,Great Shearwater,A. gravis
+,,Pink-footed Shearwater,A. creatopus
+,,Flesh-footed Shearwater,A. carneipes
+,,Manx Shearwater,Puffinus puffinus
+45,endemic,Galapagos Shearwater,P. subalaris
+,,Little Shearwater,P. assimilis
+,,Audubon's Shearwater,P. lherminieri
+,,Peruvian Diving-Petrel,Pelecanoides garnotii
+,,Common Diving-Petrel,P. urinatrix
+,,South Georgia Diving-Petrel,P. georgicus
+,,Magellanic Diving-Petrel,P. magellani
+STORM-PETRELS,HYDROBATIDAE
+,,White-bellied Storm-Petrel,Fregetta grallaria
+,,Black-bellied Storm-Petrel,F. tropica
+,,Wilson's Storm-Petrel,Oceanites oceanicus
+,,Elliot's Storm-Petrel,O. gracilis
+5,,Gray-backed Storm-Petrel,Garrodia nereis
+,,White-faced Storm-Petrel,Pelagodroma marina
+,,Least Storm-Petrel,Oceanodroma microsoma
+,,Wedge-rumped Storm-Petrel,O. tethys
+,,Band-rumped Storm-Petrel,O. castro
+10,,Leach's Storm-Petrel,O. leucorhoa
+,,Markham's Storm-Petrel,O. markhami
+,,Ringed Storm-Petrel,O. hornbyi
+,,Black Storm-Petrel,O. melania
+STORKS,CICONIIDAE
+,,Maguari Stork,Ciconia maguari
+,,Jabiru,Jabiru mycteria
+,,Wood Stork,Mycteria americana
+FRIGATEBIRDS,FREGATIDAE
+,,Lesser Frigatebird,Fregata ariel
+,,Magnificent Frigatebird,F. magnificens
+,,Great Frigatebird,F. minor
+BOOBIES,SULIDAE
+,,Cape Gannet,Morus capensis
+,,Australasian Gannet,M. serrator
+,,Blue-footed Booby,Sula nebouxii
+,,Peruvian Booby,S. variegata
+5,,Masked Booby,S. dactylatra
+,,Nazca Booby,S. granti
+,,Red-footed Booby,S. sula
+,,Brown Booby,S. leucogaster
+CORMORANTS,PHALACROCORACIDAE
+,,Red-legged Cormorant,Phalacrocorax gaimardi
+,endemic,Flightless Cormorant,P. harrisi
+,,Neotropic Cormorant,P. brasilianus
+,,Magellanic Cormorant,P. magellanicus
+,,Guanay Cormorant,P. bougainvillii
+,,Imperial Cormorant,P. atriceps
+ANHINGAS,ANHINGIDAE
+,,Anhinga,Anhinga anhinga
+PELICANS,PELECANIDAE
+,,Brown Pelican,Pelecanus occidentalis
+,,Peruvian Pelican,P. thagus
+HERONS,ARDEIDAE
+,,Rufescent Tiger-Heron,Tigrisoma lineatum
+,,Fasciated Tiger-Heron,T. fasciatum
+,,Bare-throated Tiger-Heron,T. mexicanum
+,,Agami Heron,Agamia agami
+5,,Boat-billed Heron,Cochlearius cochlearius
+,,Zigzag Heron,Zebrilus undulatus
+,,Pinnated Bittern,Botaurus pinnatus
+,,Least Bittern,Ixobrychus exilis
+,,Stripe-backed Bittern,I. involucris
+10,,Black-crowned Night-Heron,Nycticorax nycticorax
+,,Yellow-crowned Night-Heron,Nyctanassa violacea
+,,Green Heron,Butorides virescens
+,,Striated Heron,B. striata
+,,Squacco Heron,Ardeola ralloides
+15,,Cattle Egret,Bubulcus ibis
+,,Gray Heron,Ardea cinerea
+,,Great Blue Heron,A. herodias
+,,Cocoi Heron,A. cocoi
+,,Purple Heron,A. purpurea
+20,,Great Egret,A. alba
+,,Whistling Heron,Syrigma sibilatrix
+,,Capped Heron,Pilherodius pileatus
+,,Tricolored Heron,Egretta tricolor
+,,Reddish Egret,E. rufescens
+25,,Western Reef-Heron,E. gularis
+,,Little Egret,E. garzetta
+,,Snowy Egret,E. thula
+,,Little Blue Heron,E. caerulea
+IBISES,THRESKIORNITHIDAE
+,,White Ibis,Eudocimus albus
+,,Scarlet Ibis,E. ruber
+,,Glossy Ibis,Plegadis falcinellus
+,,White-faced Ibis,P. chihi
+5,,Puna Ibis,P. ridgwayi
+,,Sharp-tailed Ibis,Cercibis oxycerca
+,,Green Ibis,Mesembrinibis cayennensis
+,,Bare-faced Ibis,Phimosus infuscatus
+,,Plumbeous Ibis,Theristicus caerulescens
+10,,Buff-necked Ibis,T. caudatus
+,,Black-faced Ibis,T. melanopis
+,,Eurasian Spoonbill,Platalea leucorodia
+,,Roseate Spoonbill,P. ajaja
+NEW WORLD VULTURES,CATHARTIDAE
+,,Turkey Vulture,Cathartes aura
+,,Lesser Yellow-headed Vulture,C. burrovianus
+,,Greater Yellow-headed Vulture,C. melambrotus
+,,Black Vulture,Coragyps atratus
+,,King Vulture,Sarcoramphus papa
+,,Andean Condor,Vultur gryphus
+OSPREY,PANDIONIDAE
+,,Osprey,Pandion haliaetus
+HAWKS,ACCIPITRIDAE
+,,White-tailed Kite,Elanus leucurus
+,,Pearl Kite,Gampsonyx swainsonii
+,,Hook-billed Kite,Chondrohierax uncinatus
+,,Gray-headed Kite,Leptodon cayanensis
+5,endemic,White-collared Kite,L. forbesi
+,,Swallow-tailed Kite,Elanoides forficatus
+,,Crested Eagle,Morphnus guianensis
+,,Harpy Eagle,Harpia harpyja
+,,Black Hawk-Eagle,Spizaetus tyrannus
+10,,Black-and-white Hawk-Eagle,S. melanoleucus
+,,Ornate Hawk-Eagle,S. ornatus
+,,Black-and-chestnut Eagle,S. isidori
+,,Black-collared Hawk,Busarellus nigricollis
+,,Snail Kite,Rostrhamus sociabilis
+15,,Slender-billed Kite,Helicolestes hamatus
+,,Double-toothed Kite,Harpagus bidentatus
+,,Rufous-thighed Kite,H. diodon
+,,Mississippi Kite,Ictinia mississippiensis
+,,Plumbeous Kite,I. plumbea
+20,,Northern Harrier,Circus cyaneus
+,,Long-winged Harrier,C. buffoni
+,,Gray-bellied Hawk,Accipiter poliogaster
+,,Tiny Hawk,A. superciliosus
+,,Semicollared Hawk,A. collaris
+,,Sharp-shinned Hawk,A. striatus
+,,Cooper's Hawk,A. cooperii
+,,Bicolored Hawk,A. bicolor
+,,Black Kite,Milvus migrans
+,,Crane Hawk,Geranospiza caerulescens
+,,Plumbeous Hawk,Cryptoleucopteryx plumbea
+,,Slate-colored Hawk,Buteogallus schistaceus
+,,Common Black Hawk,B. anthracinus
+,,Rufous Crab Hawk,B. aequinoctialis
+,,Savanna Hawk,B. meridionalis
+,endemic,White-necked Hawk,B. lacernulatus
+,,Great Black Hawk,B. urubitinga
+,,Solitary Eagle,B. solitarius
+,,Barred Hawk,Morphnarchus princeps
+,,Roadside Hawk,Rupornis magnirostris
+,,Harris's Hawk,Parabuteo unicinctus
+,,White-rumped Hawk,P. leucorrhous
+,,White-tailed Hawk,Geranoaetus albicaudatus
+,,Variable Hawk,G. polyosoma
+,,Black-chested Buzzard-Eagle,G. melanoleucus
+,,White Hawk,Pseudastur albicollis
+,,Gray-backed Hawk,P. occidentalis
+,,Semiplumbeous Hawk,Leucopternis semiplumbeus
+,,Black-faced Hawk,L. melanops
+,,White-browed Hawk,L. kuhli
+,,Gray-lined Hawk,Buteo nitidus
+,,Broad-winged Hawk,B. platypterus
+,,White-throated Hawk,B. albigula
+,,Short-tailed Hawk,B. brachyurus
+,,Swainson's Hawk,B. swainsoni
+,endemic,Galapagos Hawk,B. galapagoensis
+,,Zone-tailed Hawk,B. albonotatus
+,,Rufous-tailed Hawk,B. ventralis
+BARN OWLS,TYTONIDAE
+,,Barn Owl,Tyto alba
+OWLS,STRIGIDAE
+,,Tropical Screech-Owl,Megascops choliba
+,,Peruvian Screech-Owl,M. roboratus
+,endemic,Koepcke's Screech-Owl,M. koepckeae
+,,Bare-shanked Screech-Owl,M. clarkii
+5,,Colombian Screech-Owl,M. colombianus
+,,Rufescent Screech-Owl,M. ingens
+,,Cinnamon Screech-Owl,M. petersoni
+,,Cloud-forest Screech-Owl,M. marshalli
+,,Tawny-bellied Screech-Owl,M. watsonii
+10,,Vermiculated Screech-Owl,M. guatemalae
+,,Montane Forest Screech-Owl,M. hoyi
+,,Black-capped Screech-Owl,M. atricapilla
+,,Long-tufted Screech-Owl,M. sanctaecatarinae
+,,White-throated Screech-Owl,M. albogularis
+15,,Crested Owl,Lophostrix cristata
+,,Spectacled Owl,Pulsatrix perspicillata
+,,Tawny-browed Owl,P. koeniswaldiana
+,,Band-bellied Owl,P. melanota
+,,Great Horned Owl,Bubo virginianus
+20,,Rusty-barred Owl,Strix hylophila
+,,Chaco Owl,S. chacoensis
+,,Rufous-legged Owl,S. rufipes
+,,Mottled Owl,Ciccaba virgata
+,,Black-and-white Owl,C. nigrolineata
+25,,Black-banded Owl,C. huhula
+,,Rufous-banded Owl,C. albitarsis
+,,Cloud-forest Pygmy-Owl,Glaucidium nubicola
+,,Andean Pygmy-Owl,G. jardinii
+,,Yungas Pygmy-Owl,G. bolivianum
+30,,Subtropical Pygmy-Owl,G. parkeri
+,,Central American Pygmy-Owl,G. griseiceps
+,,Amazonian Pygmy-Owl,G. hardyi
+,endemic,Pernambuco Pygmy-Owl,G. mooreorum
+,endemic,Least Pygmy-Owl,G. minutissimum
+35,,Ferruginous Pygmy-Owl,G. brasilianum
+,,Peruvian Pygmy-Owl,G. peruanum
+,,Austral Pygmy-Owl,G. nana
+,endemic,Long-whiskered Owlet,Xenoglaux loweryi
+,,Burrowing Owl,Athene cunicularia
+40,,Buff-fronted Owl,Aegolius harrisii
+,,Striped Owl,Asio clamator
+,,Stygian Owl,A. stygius
+,,Short-eared Owl,A. flammeus
 TROGONS,TROGONIDAE
 ,,Pavonine Quetzal,Pharomachrus pavoninus
 ,,Golden-headed Quetzal,P. auriceps
@@ -3267,7 +3267,7 @@ CARDINAL GROSBEAKS,CARDINALIDAE
 ,endemic,Carrizal Seedeater,A. carrizalensis
 ,,Blackish-blue Seedeater,A. moesta
 25,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
-,,Blue-black Grosbeak,Cyanocompsa cyanoides
+,,Blue-black Grosbeak,C. cyanoides
 ,,Ultramarine Grosbeak,C. brissonii
 ,,Blue Grosbeak,Passerina caerulea
 ,,Indigo Bunting,P. cyanea
