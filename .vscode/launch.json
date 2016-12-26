@@ -10,7 +10,13 @@
             // "preLaunchTask": "serve:watch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
-            "sourceMaps": false,
+            "sourceMaps": true,
+            // sourceMapPathOverrides because gulp sets source incorrectly according to extension readme
+            // "sourceMapPathOverrides": {
+            //      "/source/*": "${workspaceRoot}/js/sourcemaps/*"
+            // },
+
+            // "diagnosticLogging": true,
             "runtimeArgs": [
             "--remote-debugging-port=9222"
             ]
@@ -45,3 +51,15 @@
         }
     ]
 }
+
+    // {
+    //         "name": "Chrome",
+    //         "type": "chrome",
+    //         "request": "launch",
+    //         "port": 9222,
+    //         "url": "http://localhost:8080",
+    //         "webRoot": "${workspaceRoot}",
+    //         "diagnosticLogging": true,
+    //         "sourceMaps": true,
+    //         "userDataDir": "${workspaceRoot}/.vscode/chrome"
+    //     }

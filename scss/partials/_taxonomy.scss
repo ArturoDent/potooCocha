@@ -64,7 +64,7 @@
 
     align-content  :  center;
 
-    border-bottom  :  none;
+    // border-bottom  :  none;
 
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
@@ -381,7 +381,7 @@
 /* necessary because 100% padding right would else break line at spaces and hyphens */
     white-space  :  nowrap;
 
-    -webkit-overflow-scrolling  :  touch;
+    // -webkit-overflow-scrolling  :  touch;
 
     overflow-x  :  hidden;
     overflow-y  :  auto;
@@ -391,7 +391,7 @@
     border-radius  :  10px;
 
 /* resize is completely broken in FF and Chrome */
-    resize  :  none;
+    // resize  :  none;
     cursor  :  pointer;
 }
 
@@ -414,6 +414,7 @@
 
 #tree .family      {
     padding  :  1px 0 3px 0;
+    font-size  :  1rem;
 }
 
 // #tree .familyOpen  {

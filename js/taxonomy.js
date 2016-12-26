@@ -11,7 +11,7 @@ var birds = [];
 
 var numSpeciesList = { "Argentina":999, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
                   "Colombia":1846, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
-                  "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":724, "Trinidad":468,
+                  "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":727, "Trinidad":468,
                   "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3376};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
@@ -182,6 +182,18 @@ function loadCountryTaxonomy(evt)  {
 
     document.querySelector("#searchForm span.grayed").classList.remove("grayed");
     searchSpecials.classList.remove("grayed");
+
+    taxPage.style.webkitTransform = "scale(1)";
+    searchResults.style.webkitTransform = "scale(1)";
+    taxPage.WebkitTransform = "rotateZ(0deg)";
+
+    // $("#site").css("z-index", "5");
+
+    taxPage.style.zIndex = 5;
+
+    taxPage.style.display="none";
+    taxPage.offsetHeight; // no need to store this anywhere, the reference is enough
+    taxPage.style.display="block";
   }
 
   var taxCountry = (typeof evt === "string") ?  evt : evt.target.innerHTML;
@@ -780,6 +792,8 @@ function toggleFamilyOpen(event)  {
 
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species *";
   }
+
+  taxPage.style.zIndex = 5;
 }
 
 function closeAllFamilies()  {

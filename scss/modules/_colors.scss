@@ -1,14 +1,13 @@
 $bgColor  :  rgb(84,85,80);
+
 $bannerColor  :  transparent;
 
 $panelColor : $bgColor;
-/*$searchHeaderColor : darken( $bgColor, 8.5% );*/
 $searchHeaderColor : lighten($bgColor, 5%);
 
 $genericButtonColor  :  #A65751;
 $genericButtonHighlightColor : $searchHeaderColor;
 
-/*$panelFlyoutColor : rgba(82,104,112,1);*/
 $panelFlyoutColor : lighten($bgColor, 5%);
 
 $familyOpenColor : $searchHeaderColor;

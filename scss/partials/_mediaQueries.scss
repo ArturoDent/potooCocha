@@ -1,3 +1,35 @@
+@media screen and (max-width:1750px)  {
+    html {
+        font-size  :  15px;
+    }
+    .genericButton {
+            font-size  :  1.1rem;
+    }
+    #checklistCountryButton {
+        min-width : 200px;
+    }
+    #pdfButton {
+        // height  :  30px;
+        padding  :  4px 0 0 10px;
+
+        min-width : 160px;
+        text-align: center;
+    }
+
+    #csvButton {
+        // height  :  30px;
+        padding  :  4px 4px 0 10px;
+
+        min-width : 160px;
+        text-align: center;
+    }
+    .icon-file-excel  {
+        // top  :  1px;
+        // height  :  0.92em;
+        left  :  10px;
+    }
+}
+
 @media screen and (max-width: 1680px)  {
     .smallBird  {
         transform  :  scale(0.7);
@@ -80,9 +112,9 @@
 
 @media screen and (max-width: 1305px)  {
 
-    /*html {
-        font-size  :  60%;
-    }*/
+    html {
+        font-size  :  13px;
+    }
 
     .smallBanner {
         display  :  block;
@@ -138,9 +170,9 @@
 }
 
 @media screen and (max-width:1200px)  {
-    html {
-        font-size  :  15px;
-    }
+    // html {
+    //     font-size  :  15px;
+    // }
     .smallBanner > span {
         left : 12vw;
     }
@@ -184,9 +216,9 @@
 }
 
 @media screen and (max-width:1165px)  {
-    html {
-        font-size  :  14px;
-    }
+    // html {
+    //     font-size  :  14px;
+    // }
     /*.smallBanner > span {
         left : 10vw;
     }*/

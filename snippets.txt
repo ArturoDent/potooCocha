@@ -64,7 +64,7 @@ function reloadHomePage(evt)  {
 }
 
 $("#btnPrint").live("click", function () {
-  
+
   var divContents = $("#dvContainer").html();
   var printWindow = window.open('', '', 'height=400,width=800');
   printWindow.document.write('<html><head><title>DIV Contents</title>');
@@ -99,3 +99,18 @@ $("#btnPrint").live("click", function () {
 	color               :  white;
 	pointer-events      :  none;
 }
+
+var counterModule = (function() {
+	var counter = 0;
+
+	return {
+		incrementCounter: function () {
+			return counter++;
+		},
+		resetCounter: function () {
+			console.log("counter value prior to reset: " + counter );
+			counter = 0;
+		}
+	};
+
+}());

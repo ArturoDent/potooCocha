@@ -1,26 +1,23 @@
-
-// gulp.task("default", ["scss"], function () {
-//   gulp.watch("*.scss", ["scss"]);
-// });
-
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;
 
 var sass = require("gulp-sass");
-// var uglify = require("gulp-uglify");
+    // minify js files
+var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
-// var rename = require("gulp-rename");
+var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
 var sourcemaps = require("gulp-sourcemaps");
 // var cached = require("gulp-cached");
 // var remember = require("gulp-remember");
-// var stripdebug = require("gulp-strip-debug");
-
+var stripComments = require("gulp-strip-comments");
+var stripdebug = require("gulp-strip-debug");
+var modifyHTMLlinks = require("gulp-processhtml");
+var addVersionString = require("gulp-version-number");
 
 function serve(done) {
-
   browserSync.init({
     server: {
       baseDir: "./",
@@ -31,101 +28,128 @@ function serve(done) {
   done();
 }
 
-// function reload(done) {
-//   browserSync.reload();
-//   done();
-// }
-
-// function stream(done) {
-//   browserSync.stream();
-//   done();
-// }
+function serveTest(done) {
+  browserSync.init({
+    server: {
+      baseDir: "test",
+      index: "home.html"
+    },
+    ghostMode: false
+  });
+  done();
+}
 
 var paths = {
-  styles: {
+  html: {
+    src: "home.html",
+    test: "./test",
+    final: "."
+  },
+  sass: {
     src: "./scss/**/*.scss",
     dest: "./dist/css"
   },
-  scripts: {
+  css: {
+    src: "./dist/css/styles.css",
+    test: "./test",
+    final: "./css"
+  },
+  js: {
     src: "./js/**/*.js",
-    dest: "./dist/js"
+    dest: "./test/js",
+    test: "./test",
+    final: "./js"
   }
 };
 
 function watch() {
-  gulp.watch(paths.scripts.src, gulp.series(reloadJS));
-  gulp.watch(paths.styles.src, gulp.series(sass2css));
+  gulp.watch(paths.js.src, gulp.series(reloadJS));
+  gulp.watch(paths.sass.src, gulp.series(sass2css));
   gulp.watch("./*.html").on("change", reload);
 }
 
-gulp.task("sync", gulp.series(sass2css, reloadJS, serve, watch));
-// var dev = gulp.series(sass2css, reloadJS, serve, watch);
-
-gulp.task("serve:watch", gulp.series(serve, watch));
-
-// gulp.task("build", gulp.series(sass2css, processJS, editHTML));
-// editHTML : strip browserSync, make dist/js links
-
 function sass2css() {
-  return gulp.src(paths.styles.src)
-    // .pipe(cached("removing scss cached"))
-    // .pipe(sourcemaps.init())
+  return gulp.src(paths.sass.src)
     .pipe(sass().on("error", sass.logError))
-    // .pipe(sourcemaps.write("../sourcemaps"))
-    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(gulp.dest(paths.sass.dest))
     .pipe(reload({ stream:true }));
 }
 
 function reloadJS() {
-  return gulp.src(paths.scripts.src)
-    // .pipe(sourcemaps.init())
-    // .pipe(concat("concat.js"))
-    // .pipe(gulp.dest("./concats/"))
-    // .pipe(rename({ suffix: ".min" }))
-    // .pipe(uglify())
-    // .pipe(sourcemaps.write("../sourcemaps"))
-    // .pipe(gulp.dest(paths.scripts.dest))
+  return gulp.src(paths.js.src)
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write("../sourcemaps", {includeContent:false,sourceRoot:"/js"}))
+    .pipe(gulp.dest(paths.js.dest))
     .pipe(reload({ stream:true }));
 }
+
+const scriptOrder = [
+  "./js/main.js",
+  "./js/SouthAmerica.js",
+  "./js/taxonomy.js",
+  "./js/birdMapFactory.js"
+];
 
 function processJS() {
-  return gulp.src(paths.scripts.src)
-    // .pipe(concat("concat.js"))
-    // .pipe(gulp.dest("./concats/"))
-    // .pipe(rename({ suffix: ".min" }))
-    // .pipe(uglify())
-    .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(reload({ stream:true }));
+  return gulp.src(scriptOrder)
+    .pipe(stripdebug())
+    .pipe(stripComments())
+    .pipe(concat("app.js"))
+    .pipe(rename({
+      basename: "app",
+      suffix: ".min",
+      extname: ".js"
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js.test));
 }
 
-gulp.task("minify-css", function () {
-  return gulp.src(paths.styles.dest)
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write("./sourceMaps"))
-    .pipe(gulp.dest(paths.styles.dest + "/minified"));
-});
+const stripOptions = {
+  trim: true,
+  // <!--[if true] will not be removed with safe = true
+  safe: true
+};
 
-gulp.task("autoprefix", function () {
-  return gulp.src("./css/*.css")
+const versionConfig = {
+  "value": "%DT%",
+  "append": {
+    "key": "v",
+    "to": ["css", "js"],
+  },
+};
+
+function processHTML()  {
+  return gulp.src(paths.html.src)
+
+      // modifyHTMLlinks: remove browserSync script link
+      // update css/js links to .min.css or .min.js
+    .pipe(modifyHTMLlinks())
+
+    .pipe(stripComments.html(stripOptions))
+
+      // add ?v=dateTime stamp to css and js links
+    .pipe(addVersionString(versionConfig))
+
+    // .pipe(rename("index.html))   ???
+    .pipe(gulp.dest(paths.html.test));
+}
+
+function processCSS()  {
+  return gulp.src(paths.css.src)
     .pipe(autoprefixer({
       browsers: ["last 2 versions"],
       cascade: false
     }))
-    .pipe(gulp.dest("prefixed"));
-});
-
-gulp.task("process css", function () {
-  return gulp.src("./css/*.css")
-    // .pipe(sourcemaps.init())
-    .pipe(autoprefixer({
-      browsers: ["last 2 versions"],
-      cascade: false
-    }))
     .pipe(cleanCSS())
-    .pipe(concat("concat.css"))
-    // .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("concats"));
-});
+    // .pipe(concat("concat.css"))
+    .pipe(rename("styles.min.css"))
+    .pipe(gulp.dest(paths.css.test));
+}
 
-// gulp.task("default", gulp.series("browsersync", function () { }));
+gulp.task("sync", gulp.series(sass2css, reloadJS, serve, watch));
+
+gulp.task("serve:watch", gulp.series(serve, watch));
+gulp.task("serve:deploy", gulp.series(serveTest));
+
+gulp.task("production", gulp.series(processJS));
+gulp.task("deploy:final", gulp.series(processHTML, processCSS, processJS));

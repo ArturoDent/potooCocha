@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/*$searchHeaderColor : darken( $bgColor, 8.5% );*/
-/*$panelFlyoutColor : rgba(82,104,112,1);*/
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -93,6 +91,7 @@
 
 .genericButton.highlight {
   /*background-color  :  #252525;*/
+  border: 1px solid #888;
   background-color: #61625c; }
 
 .genericButton.highlight:hover, .genericButton.highlight:focus {
@@ -163,7 +162,7 @@ a:link {
 .titleText {
   flex: 1 1 330px;
   padding: 12px 0 15px 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   font-variant: small-caps;
   color: #fff;
@@ -1157,7 +1156,7 @@ input[type='checkbox']:disabled + label {
   top: -20px;
   width: calc(100% + 50px);
   left: -25px;
-  padding: 21px 25px 16px 25px;
+  padding: 21px 20px 16px 20px;
   font-size: 1rem;
   text-align: center;
   /*background  :  $panelFlyoutColor;*/
@@ -1227,7 +1226,6 @@ input[type='checkbox']:disabled + label {
   padding: 10px 15px 30px 15px;
   margin-top: 10px;
   align-content: center;
-  border-bottom: none;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
   -o-transition: all 850ms ease-in-out;
@@ -1475,14 +1473,12 @@ input[type='checkbox']:disabled + label {
   font-size: 1rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-radius: 10px;
   /* resize is completely broken in FF and Chrome */
-  resize: none;
   cursor: pointer; }
 
 #tree ul {
@@ -1500,7 +1496,8 @@ input[type='checkbox']:disabled + label {
   position: relative; }
 
 #tree .family {
-  padding: 1px 0 3px 0; }
+  padding: 1px 0 3px 0;
+  font-size: 1rem; }
 
 /*target : family common name only*/
 #tree li.family > span:nth-child(1) {
@@ -1686,6 +1683,24 @@ input[type='checkbox']:disabled + label {
   opacity: 1;
   transform: rotate(-10deg); }
 
+@media screen and (max-width: 1750px) {
+  html {
+    font-size: 15px; }
+  .genericButton {
+    font-size: 1.1rem; }
+  #checklistCountryButton {
+    min-width: 200px; }
+  #pdfButton {
+    padding: 4px 0 0 10px;
+    min-width: 160px;
+    text-align: center; }
+  #csvButton {
+    padding: 4px 4px 0 10px;
+    min-width: 160px;
+    text-align: center; }
+  .icon-file-excel {
+    left: 10px; } }
+
 @media screen and (max-width: 1680px) {
   .smallBird {
     transform: scale(0.7); }
@@ -1743,9 +1758,8 @@ input[type='checkbox']:disabled + label {
     width: 130%; } }
 
 @media screen and (max-width: 1305px) {
-  /*html {
-        font-size  :  60%;
-    }*/
+  html {
+    font-size: 13px; }
   .smallBanner {
     display: block;
     position: absolute;
@@ -1783,8 +1797,6 @@ input[type='checkbox']:disabled + label {
     left: 0; } }
 
 @media screen and (max-width: 1200px) {
-  html {
-    font-size: 15px; }
   .smallBanner > span {
     left: 12vw; }
   .articles {
@@ -1816,8 +1828,6 @@ input[type='checkbox']:disabled + label {
     display: none; } }
 
 @media screen and (max-width: 1165px) {
-  html {
-    font-size: 14px; }
   /*.smallBanner > span {
         left : 10vw;
     }*/
