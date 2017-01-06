@@ -283,8 +283,8 @@ footer a:hover, footer a:focus {
 #mapsCollection {
   position: relative;
   top: -25px;
-  left: -10vw;
-  width: 67vw;
+  left: -3.5vw;
+  width: 55vw;
   height: 0;
   margin: 0;
   padding: 0;
@@ -308,7 +308,7 @@ footer a:hover, footer a:focus {
   left: 0;
   width: 240px;
   margin-top: -50px;
-  margin-right: -15px;
+  margin-right: 15px;
   margin-bottom: -50px;
   transition: all 1s; }
 
@@ -385,9 +385,9 @@ footer a:hover, footer a:focus {
   position: absolute;
   top: 230px;
   left: 10px;
-  padding: 0 0 0 0;
-  font-size: 20px;
-  background: #a32d00; }
+  font-size: 30px;
+  color: #d32d00;
+  border: none; }
 
 .saveMapButton {
   display: none;
@@ -396,11 +396,7 @@ footer a:hover, footer a:focus {
   left: -30px;
   width: 36px;
   height: 36px;
-  background: #303c3f; }
-
-.deleteMapButton:hover,
-.deleteMapButton:focus {
-  background: #c00; }
+  background: transparent; }
 
 .drawing {
   position: relative;
@@ -467,7 +463,7 @@ footer a:hover, footer a:focus {
 
 #checklistArticle {
   position: relative;
-  margin: 100px 0 0 0;
+  margin: 300px 0 50px 0;
   z-index: 0;
   overflow: visible; }
 
@@ -571,7 +567,7 @@ footer a:hover, footer a:focus {
   position: relative;
   left: 15px;
   width: 140%;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 110px 0;
   z-index: 20;
   color: #fff;
   background: transparent; }

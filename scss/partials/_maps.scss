@@ -1,12 +1,16 @@
 #mapsCollection  {
     position  :  relative;
     top  :  -25px;
-    left  :  -10vw;
-    width : 67vw;
+    left  :  -3.5vw;
+    width : 55vw;
+    // width : 100vw;
+
     height  :  0;
     margin  :  0;
     padding  :  0;
     text-align  :  center;
+    // background-color: white;
+
     overflow-x  :  visible;
     transition  :  all 1.5s;
 }
@@ -30,7 +34,7 @@
     left  :  0;
     width  :  240px;
     margin-top  :  -50px;
-    margin-right  :  -15px;
+    margin-right  :  15px;
     margin-bottom  :  -50px;
 
     transition  :  all 1s;
@@ -128,10 +132,12 @@
     position  :  absolute;
     top  :  230px;
     left  :  10px;
-    padding  :  0 0 0 0;
+    // padding  :  0 0 7px 0;
 
-    font-size  :  20px;
-    background  :  #a32d00;
+    font-size  :  30px;
+    color : #d32d00;
+    border : none;
+    // background  :  #a32d00;
 }
 
 .saveMapButton  {
@@ -143,13 +149,13 @@
     width  :  36px;
     height  :  36px;
 
-    background  :  #303c3f;
+    background  :  transparent;
 }
 
-.deleteMapButton:hover,
-.deleteMapButton:focus {
-    background  :  #c00;
-}
+// .deleteMapButton:hover,
+// .deleteMapButton:focus {
+//     background  :  #000;
+// }
 
 .drawing  {
     position  :  relative;

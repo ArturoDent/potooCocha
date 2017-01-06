@@ -36,7 +36,7 @@ function saveCurrentMap()  {
 
   var len = mapsCollection.children.length;
 
-  if (len === 5)  return;
+  if (len === 4)  return;
 
 	// clone node, remove ids so not duplicate
 	// reattach eventListeners
@@ -69,9 +69,9 @@ function saveCurrentMap()  {
     else mapsCollection.style.height = "235px";
 
     mapsCollection.style.margin = "30px 0 -35px 0";
-    // mapsCollection.style.left = -10vw;
+    // currentMap.style.top = "10vh";
   }
-  else if (len >= 4)  {
+  else if (len === 3)  {
     map.querySelector(".saveMapButton").style.display = "none";
   }
 
@@ -79,6 +79,8 @@ function saveCurrentMap()  {
 
   deleteMapButton = dupNode.querySelector(".deleteMapButton");
   deleteMapButton.addEventListener("click", deleteMap);
+
+
 
   document.getElementById("thin" + currentID).onload = function () {
     prepareSVGstyles("thin" + currentID);

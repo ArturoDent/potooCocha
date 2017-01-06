@@ -9,7 +9,7 @@ var numFamilies;
 
 var birds = [];
 
-var numSpeciesList = { "Argentina":999, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
+var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
                   "Colombia":1846, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
                   "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":727, "Trinidad":468,
                   "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3376};

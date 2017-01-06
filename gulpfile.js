@@ -47,6 +47,7 @@ var paths = {
   },
   sass: {
     src: "./scss/**/*.scss",
+    stylesFile: "./scss/styles.scss",
     dest: "./dist/css"
   },
   css: {
@@ -69,7 +70,7 @@ function watch() {
 }
 
 function sass2css() {
-  return gulp.src(paths.sass.src)
+  return gulp.src(paths.sass.stylesFile)
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(paths.sass.dest))
     .pipe(reload({ stream:true }));
