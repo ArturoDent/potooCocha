@@ -40,7 +40,7 @@
   height: 100vh;
   padding: 8px 10px 20px 0;
   align-items: center;
-  background-color: $bgColor;
+  background-color: darken($bgColor, 5%);
   border-left : 1px inset white;
 
   // box-shadow: inset 6px 0 8px rgba(0, 0, 0, 0.25);
@@ -85,69 +85,88 @@
   width: 32px;
   height: 32px;
   // filter  :  grayscale(100%) contrast(150%) brightness(1);
-  background-size: contain;
 
+  background-size: contain;
 }
 
-.country-menu a:nth-child(1)::before {
-  background-image: url("../../../flags/32/Aruba.png"); }
+.country-menu a:nth-child(n)::before {
+  top : -11px;
+  // left: -63px;
+  left: -73px;
+
+  padding: 9px;
+  width : 50px;
+  height: 50px;
+
+  background-image: url("../../../flags/32/South-America-min.png");
+
+  background-position: center;
+  background-origin: padding-box;
+  background-color: $bgColor;
+  border-radius : 50%;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+   }
 
 .country-menu a:nth-child(2)::before {
-  background-image: url("../../../flags/32/Curacao.png"); }
+  background-image: url("../../../flags/32/Aruba.png"); }
 
 .country-menu a:nth-child(3)::before {
-  background-image: url("../../../flags/32/Bonaire.png"); }
+  background-image: url("../../../flags/32/Curacao.png"); }
 
 .country-menu a:nth-child(4)::before {
-  background-image: url("../../../flags/32/Trinidad-and-tobago.png"); }
+  background-image: url("../../../flags/32/Bonaire.png"); }
 
 .country-menu a:nth-child(5)::before {
-  background-image: url("../../../flags/32/French-Southern.png"); }
+  background-image: url("../../../flags/32/Trinidad-and-tobago.png"); }
 
 .country-menu a:nth-child(6)::before {
-  background-image: url("../../../flags/32/Suriname.png"); }
+  background-image: url("../../../flags/32/French-Southern.png"); }
 
 .country-menu a:nth-child(7)::before {
-  background-image: url("../../../flags/32/Guyana.png"); }
+  background-image: url("../../../flags/32/Suriname.png"); }
 
 .country-menu a:nth-child(8)::before {
-  background-image: url("../../../flags/32/Venezuela.png"); }
+  background-image: url("../../../flags/32/Guyana.png"); }
 
 .country-menu a:nth-child(9)::before {
-  background-image: url("../../../flags/32/Colombia.png"); }
+  background-image: url("../../../flags/32/Venezuela.png"); }
 
 .country-menu a:nth-child(10)::before {
-  background-image: url("../../../flags/32/Ecuador.png"); }
+  background-image: url("../../../flags/32/Colombia.png"); }
 
 .country-menu a:nth-child(11)::before {
-  background-image: url("../../../flags/32/Peru.png"); }
+  background-image: url("../../../flags/32/Ecuador.png"); }
 
 .country-menu a:nth-child(12)::before {
-  background-image: url("../../../flags/32/Bolivia.png"); }
+  background-image: url("../../../flags/32/Peru.png"); }
 
 .country-menu a:nth-child(13)::before {
-  background-image: url("../../../flags/32/Chile.png"); }
+  background-image: url("../../../flags/32/Bolivia.png"); }
 
 .country-menu a:nth-child(14)::before {
-  background-image: url("../../../flags/32/Argentina.png"); }
+  background-image: url("../../../flags/32/Chile.png"); }
 
 .country-menu a:nth-child(15)::before {
+  background-image: url("../../../flags/32/Argentina.png"); }
+
+.country-menu a:nth-child(16)::before {
   background-image: url("../../../flags/32/Falkland-islands.png"); }
 
 /*.country-menu a:nth-child(16)::before {
   background-image: url("../../../flags/32/Falkland-islands.png"); }*/
 
-.country-menu a:nth-child(16)::before {
+.country-menu a:nth-child(17)::before {
   background-image: url("../../../flags/32/Brazil.png"); }
 
-.country-menu a:nth-child(17)::before {
+.country-menu a:nth-child(18)::before {
   background-image: url("../../../flags/32/Uruguay.png"); }
 
-.country-menu a:nth-child(18)::before {
+.country-menu a:nth-child(19)::before {
   background-image: url("../../../flags/32/Paraguay.png"); }
 
-.country-menu a:nth-child(19)::before {
-  background-image: url("../../../flags/32/South-America-min.png"); }
+// .country-menu a:nth-child(19)::before {
+//   background-image: url("../../../flags/32/South-America-min.png"); }
 
 .country-menu a.taxHighlight {
   color: white;
@@ -166,17 +185,17 @@
 .country-menu a.taxHighlight::after {
   content: '✓';
   position: absolute;
-  left: -76px;
+  left: -86px;
   background: none; }
 
 .country-menu a.checkHighlight::after {
   content: '✓';
   position: absolute;
-  left: -76px;
+  left: -86px;
   background: none; }
 
 .country-menu a.bothHighlights::after {
   content: '✓✓';
   position: absolute;
-  left: -89px;
+  left: -99px;
   background: none; }

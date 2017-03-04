@@ -3,7 +3,6 @@ RHEAS,RHEIDAE
 TINAMOUS,TINAMIDAE
 ,,Ornate Tinamou,Nothoprocta ornata
 ,endemic,Chilean Tinamou,N. perdicaria
-,,Andean Tinamou,N. pentlandii
 ,,Elegant Crested-Tinamou,Eudromia elegans
 ,,Puna Tinamou,Tinamotis pentlandii
 ,,Patagonian Tinamou,T. ingoufi
@@ -32,8 +31,7 @@ DUCKS,ANATIDAE
 ,,Blue-winged Teal,A. discors
 ,,Cinnamon Teal,A. cyanoptera
 ,,Red Shoveler,A. platalea
-25,,Southern Pochard,Netta erythrophthalma
-,,Rosy-billed Pochard,N. peposaca
+25,,Rosy-billed Pochard,Netta peposaca
 ,,Black-headed Duck,Heteronetta atricapilla
 ,,Ruddy Duck,Oxyura jamaicensis
 ,,Lake Duck,O. vittata
@@ -53,21 +51,25 @@ GREBES,PODICIPEDIDAE
 ,,Hooded Grebe,P. gallardoi
 PIGEONS,COLUMBIDAE
 ,,Rock Pigeon,Columba livia
-,,Spot-winged Pigeon,Patagioenas maculosa
+,,Picazuro Pigeon,Patagioenas picazuro
+,,Spot-winged Pigeon,P. maculosa
 ,,Chilean Pigeon,P. araucana
-,,West Peruvian Dove,Zenaida meloda
-5,,Eared Dove,Z. auriculata
+5,,West Peruvian Dove,Zenaida meloda
+,,Eared Dove,Z. auriculata
 ,,Ruddy Ground Dove,Columbina talpacoti
 ,,Picui Ground Dove,C. picui
 ,,Croaking Ground Dove,C. cruziana
-,,Bare-faced Ground Dove,Metriopelia ceciliae
+10,,Bare-faced Ground Dove,Metriopelia ceciliae
 ,,Black-winged Ground Dove,M. melanoptera
 ,,Golden-spotted Ground Dove,M. aymara
 CUCKOOS,CUCULIDAE
 ,,Groove-billed Ani,Crotophaga sulcirostris
 ,,Dark-billed Cuckoo,Coccyzus melacoryphus
+,,Yellow-billed Cuckoo,C. americanus
 OILBIRD,STEATORNITHIDAE
 ,,Oilbird,Steatornis caripensis
+POTOOS,NYCTIBIIDAE
+,,Common Potoo,Nyctibius griseus
 NIGHTJARS,CAPRIMULGIDAE
 ,,Lesser Nighthawk,Chordeiles acutipennis
 ,,Common Nighthawk,C. minor
@@ -132,12 +134,14 @@ MAGELLANIC PLOVER,PLUVIANELLIDAE
 SANDPIPERS,SCOLOPACIDAE
 ,,Upland Sandpiper,Bartramia longicauda
 ,,Whimbrel,Numenius phaeopus
-,,Hudsonian Godwit,Limosa haemastica
+,,Bar-tailed Godwit,Limosa lapponica
+,,Hudsonian Godwit,L. haemastica
 ,,Marbled Godwit,L. fedoa
 ,,Ruddy Turnstone,Arenaria interpres
 ,,Red Knot,Calidris canutus
 ,,Surfbird,C. virgata
 ,,Stilt Sandpiper,C. himantopus
+,,Curlew Sandpiper,C. ferruginea
 ,,Sanderling,C. alba
 ,,Baird's Sandpiper,C. bairdii
 ,,Least Sandpiper,C. minutilla
@@ -178,19 +182,19 @@ SKUAS,STERCORARIIDAE
 GULLS,LARIDAE
 ,,Swallow-tailed Gull,Creagrus furcatus
 ,,Sabine's Gull,Xema sabini
-,,Andean Gull,Chroicocephalus serranus
-,,Brown-hooded Gull,C. maculipennis
-5,,Gray-hooded Gull,C. cirrocephalus
+,,Bonaparte's Gull,Chroicocephalus philadelphia
+,,Andean Gull,C. serranus
+5,,Brown-hooded Gull,C. maculipennis
+,,Gray-hooded Gull,C. cirrocephalus
 ,,Dolphin Gull,Leucophaeus scoresbii
 ,,Gray Gull,L. modestus
 ,,Laughing Gull,L. atricilla
-,,Franklin's Gull,L. pipixcan
-10,,Belcher's Gull,Larus belcheri
+10,,Franklin's Gull,L. pipixcan
+,,Belcher's Gull,Larus belcheri
 ,,Kelp Gull,L. dominicanus
 ,,Herring Gull,L. argentatus
 ,,Brown Noddy,Anous stolidus
-,,Gray Noddy,Procelsterna albivitta
-15,,White Tern,Gygis alba
+15,,Gray Noddy,Procelsterna albivitta
 ,,Sooty Tern,Onychoprion fuscatus
 ,,Bridled Tern,O. anaethetus
 ,,Least Tern,Sternula antillarum
@@ -202,6 +206,7 @@ GULLS,LARIDAE
 ,,Common Tern,Sterna hirundo
 25,,Arctic Tern,S. paradisaea
 ,,South American Tern,S. hirundinacea
+,,Antarctic Tern,S. vittata
 ,,Snowy-crowned Tern,S. trudeaui
 ,,Elegant Tern,Thalasseus elegans
 ,,Sandwich Tern,T. sandvicensis
@@ -242,29 +247,30 @@ SHEARWATERS,PROCELLARIIDAE
 5,,Cape Petrel,Daption capense
 ,,Kerguelen Petrel,Aphrodroma brevirostris
 ,,Gould's Petrel,Pterodroma leucoptera
+,,Great-winged Petrel,P. macroptera
 ,,Soft-plumaged Petrel,P. mollis
-,,White-headed Petrel,P. lessonii
-10,,Cook's Petrel,P. cookii
+10,,White-headed Petrel,P. lessonii
+,,Cook's Petrel,P. cookii
 ,,Black-winged Petrel,P. nigripennis
 ,,Masatierra Petrel,P. defilippiana
 ,,Stejneger's Petrel,P. longirostris
-,,Kermadec Petrel,P. neglecta
-15,,Mottled Petrel,P. inexpectata
+15,,Kermadec Petrel,P. neglecta
+,,Mottled Petrel,P. inexpectata
 ,,Juan Fernandez Petrel,P. externa
 ,,Blue Petrel,Halobaena caerulea
 ,,Broad-billed Prion,Pachyptila vittata
-,,Antarctic Prion,P. desolata
-20,,Slender-billed Prion,P. belcheri
+20,,Antarctic Prion,P. desolata
+,,Slender-billed Prion,P. belcheri
 ,,Gray Petrel,Procellaria cinerea
 ,,White-chinned Petrel,P. aequinoctialis
 ,,Parkinson's Petrel,P. parkinsoni
-,,Westland Petrel,P. westlandica
-25,,Buller's Shearwater,Ardenna bulleri
+25,,Westland Petrel,P. westlandica
+,,Buller's Shearwater,Ardenna bulleri
 ,,Sooty Shearwater,A. grisea
 ,,Great Shearwater,A. gravis
 ,,Pink-footed Shearwater,A. creatopus
-,,Flesh-footed Shearwater,A. carneipes
-30,,Manx Shearwater,Puffinus puffinus
+30,,Flesh-footed Shearwater,A. carneipes
+,,Manx Shearwater,Puffinus puffinus
 ,,Little Shearwater,P. assimilis
 ,,Peruvian Diving-Petrel,Pelecanoides garnotii
 ,,Common Diving-Petrel,P. urinatrix
@@ -288,7 +294,6 @@ BOOBIES,SULIDAE
 ,,Blue-footed Booby,Sula nebouxii
 ,,Peruvian Booby,S. variegata
 ,,Masked Booby,S. dactylatra
-,,Brown Booby,S. leucogaster
 CORMORANTS,PHALACROCORACIDAE
 ,,Red-legged Cormorant,Phalacrocorax gaimardi
 ,,Neotropic Cormorant,P. brasilianus
@@ -376,41 +381,40 @@ TAPACULOS,RHINOCRYPTIDAE
 ,,Magellanic Tapaculo,Scytalopus magellanicus
 ,endemic,Dusky Tapaculo,S. fuscus
 OVENBIRDS,FURNARIIDAE
-,,Slender-billed Miner,Geositta tenuirostris
-,,Common Miner,G. cunicularia
+,,Common Miner,Geositta cunicularia
 ,,Puna Miner,G. punensis
 ,,Rufous-banded Miner,G. rufipennis
-5,,Grayish Miner,G. maritima
-,,Short-billed Miner,G. antarctica
+,,Grayish Miner,G. maritima
+5,,Short-billed Miner,G. antarctica
 ,,Creamy-rumped Miner,G. isabellina
 ,,White-throated Treerunner,Pygarrhichas albogularis
 ,,Rock Earthcreeper,Ochetorhynchus andaecola
-10,,Straight-billed Earthcreeper,O. ruficaudus
-,,Band-tailed Earthcreeper,O. phoenicurus
+,,Straight-billed Earthcreeper,O. ruficaudus
+10,,Band-tailed Earthcreeper,O. phoenicurus
 ,endemic,Crag Chilia,O. melanurus
 ,,Wren-like Rushbird,Phleocryptes melanops
 ,,Patagonian Forest Earthcreeper,Upucerthia saturatior
-15,,Scale-throated Earthcreeper,U. dumetaria
-,,White-throated Earthcreeper,U. albigula
+,,Scale-throated Earthcreeper,U. dumetaria
+15,,White-throated Earthcreeper,U. albigula
 ,,Buff-breasted Earthcreeper,U. validirostris
 ,,Buff-winged Cinclodes,Cinclodes fuscus
 ,,Blackish Cinclodes,C. antarcticus
-20,,Cream-winged Cinclodes,C. albiventris
-,,Gray-flanked Cinclodes,C. oustaleti
+,,Cream-winged Cinclodes,C. albiventris
+20,,Gray-flanked Cinclodes,C. oustaleti
 ,,White-winged Cinclodes,C. atacamensis
 ,,Dark-bellied Cinclodes,C. patagonicus
 ,endemic,Seaside Cinclodes,C. nigrofumosus
-25,,Thorn-tailed Rayadito,Aphrastura spinicauda
-,endemic,Masafuera Rayadito,A. masafuerae
+,,Thorn-tailed Rayadito,Aphrastura spinicauda
+25,endemic,Masafuera Rayadito,A. masafuerae
 ,,Des Murs's Wiretail,Sylviorthorhynchus desmursii
 ,,Plain-mantled Tit-Spinetail,Leptasthenura aegithaloides
 ,,Streaked Tit-Spinetail,L. striata
-30,,Creamy-breasted Canastero,Asthenes dorbignyi
-,,Austral Canastero,A. anthoides
+,,Creamy-breasted Canastero,Asthenes dorbignyi
+30,,Austral Canastero,A. anthoides
 ,,Cordilleran Canastero,A. modesta
 ,,Sharp-billed Canastero,A. pyrrholeuca
 ,,Canyon Canastero,A. pudibunda
-,,Dusky-tailed Canastero,Pseudasthenes humicola
+,endemic,Dusky-tailed Canastero,Pseudasthenes humicola
 TYRANT FLYCATCHERS,TYRANNIDAE
 ,,White-crested Elaenia,Elaenia albiceps
 ,,Pied-crested Tit-Tyrant,Anairetes reguloides
@@ -442,16 +446,17 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Great Shrike-Tyrant,A. lividus
 ,,Gray-bellied Shrike-Tyrant,A. micropterus
 30,,Fire-eyed Diucon,Xolmis pyrope
+,,Black-crowned Monjita,X. coronatus
 ,,Rufous-webbed Bush-Tyrant,Polioxolmis rufipennis
 ,,Chocolate-vented Tyrant,Neoxolmis rufiventris
 ,,d'Orbigny's Chat-Tyrant,Ochthoeca oenanthoides
-,,White-browed Chat-Tyrant,O. leucophrys
-35,,Patagonian Tyrant,Colorhamphus parvirostris
+35,,White-browed Chat-Tyrant,O. leucophrys
+,,Patagonian Tyrant,Colorhamphus parvirostris
 ,,Short-tailed Field Tyrant,Muscigralla brevicauda
 ,,Great Kiskadee,Pitangus sulphuratus
 ,,Sulphur-bellied Flycatcher,Myiodynastes luteiventris
-,,Streaked Flycatcher,M. maculatus
-40,,Crowned Slaty Flycatcher,Empidonomus aurantioatrocristatus
+40,,Streaked Flycatcher,M. maculatus
+,,Crowned Slaty Flycatcher,Empidonomus aurantioatrocristatus
 ,,Tropical Kingbird,Tyrannus melancholicus
 ,,Fork-tailed Flycatcher,T. savana
 ,,Eastern Kingbird,T. tyrannus
@@ -481,7 +486,8 @@ THRUSHES,TURDIDAE
 ,,Creamy-bellied Thrush,T. amaurochalinus
 ,,Chiguanco Thrush,T. chiguanco
 MOCKINGBIRDS,MIMIDAE
-,,Chilean Mockingbird,Mimus thenca
+,,Long-tailed Mockingbird,Mimus longicaudatus
+,,Chilean Mockingbird,M. thenca
 ,,Patagonian Mockingbird,M. patagonicus
 ,,White-banded Mockingbird,M. triurus
 PIPITS and WAGTAILS,MOTACILLIDAE
@@ -490,34 +496,38 @@ PIPITS and WAGTAILS,MOTACILLIDAE
 ,,Hellmayr's Pipit,A. hellmayri
 TANAGERS,THRAUPIDAE
 ,,Blue-and-yellow Tanager,Pipraeidea bonariensis
+,,Swallow Tanager,Tersina viridis
 ,,Cinereous Conebill,Conirostrum cinereum
 ,,Tamarugo Conebill,C. tamarugense
-,,Giant Conebill,Oreomanes fraseri
-5,,Black-throated Flowerpiercer,Diglossa brunneiventris
+5,,Giant Conebill,Oreomanes fraseri
+,,Black-throated Flowerpiercer,Diglossa brunneiventris
 ,,Black-hooded Sierra-Finch,Phrygilus atriceps
 ,,Gray-hooded Sierra-Finch,P. gayi
 ,,Patagonian Sierra-Finch,P. patagonicus
-,,Mourning Sierra-Finch,P. fruticeti
-10,,Plumbeous Sierra-Finch,P. unicolor
+10,,Mourning Sierra-Finch,P. fruticeti
+,,Plumbeous Sierra-Finch,P. unicolor
 ,,Red-backed Sierra-Finch,P. dorsalis
 ,,White-throated Sierra-Finch,P. erythronotus
 ,,Ash-breasted Sierra-Finch,P. plebejus
-,,Band-tailed Sierra-Finch,P. alaudinus
-15,,White-winged Diuca-Finch,Diuca speculifera
+15,,Band-tailed Sierra-Finch,P. alaudinus
+,,White-winged Diuca-Finch,Diuca speculifera
 ,,Common Diuca-Finch,D. diuca
 ,,White-bridled Finch,Melanodera melanodera
 ,,Yellow-bridled Finch,M. xanthogramma
-,,Slender-billed Finch,Xenospingus concolor
-20,,Puna Yellow-Finch,Sicalis lutea
+20,,Slender-billed Finch,Xenospingus concolor
+,,Puna Yellow-Finch,Sicalis lutea
 ,,Bright-rumped Yellow-Finch,S. uropygialis
 ,,Greater Yellow-Finch,S. auriventris
 ,,Greenish Yellow-Finch,S. olivascens
-,,Patagonian Yellow-Finch,S. lebruni
-25,,Saffron Finch,S. flaveola
+25,,Patagonian Yellow-Finch,S. lebruni
+,,Saffron Finch,S. flaveola
 ,,Grassland Yellow-Finch,S. luteola
+,,Raimondi's Yellow-Finch,S. raimondii
 ,,Golden-billed Saltator,Saltator aurantiirostris
-,,Blue-black Grassquit,Volatinia jacarina
-,,Chestnut-throated Seedeater,Sporophila telasco
+30,,Blue-black Grassquit,Volatinia jacarina
+,,Lined Seedeater,Sporophila lineola
+,,Chestnut-throated Seedeater,S. telasco
+,,Double-collared Seedeater,S. caerulescens
 ,,Band-tailed Seedeater,Catamenia analis
 SPARROWS,EMBERIZIDAE
 ,,Rufous-collared Sparrow,Zonotrichia capensis
@@ -529,15 +539,16 @@ WOOD-WARBLERS,PARULIDAE
 ,,Tennessee Warbler,Leiothlypis peregrina
 ,,American Redstart,Setophaga ruticilla
 ,,Blackburnian Warbler,S. fusca
-,,Blackpoll Warbler,S. striata
+5,,Blackpoll Warbler,S. striata
+,,Black-throated Green Warbler,S. virens
 ,,Canada Warbler,Cardellina  canadensis
 BLACKBIRDS,ICTERIDAE
 ,,Baltimore Oriole,Icterus galbula
 ,,Austral Blackbird,Curaeus curaeus
 ,,Yellow-winged Blackbird,Agelasticus thilius
-,,Chestnut-capped Blackbird,Chrysomus ruficapillus
-5,,Grayish Baywing,Agelaioides badius
-,,Shiny Cowbird,Molothrus bonariensis
+,,Grayish Baywing,Agelaioides badius
+5,,Screaming Cowbird,Molothrus rufoaxillaris
+,,Shiny Cowbird,M. bonariensis
 ,,Bobolink,Dolichonyx oryzivorus
 ,,White-browed Meadowlark,Sturnella superciliaris
 ,,Peruvian Meadowlark,S. bellicosa

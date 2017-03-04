@@ -14,7 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
   mapsCollection = document.querySelector("#mapsCollection");
 });
 
-function deleteMap()  {
+function revealMapsCollection(evt) {
+
+  // if mapsCollection.classList.contains("open") mapsCollection.classList.remove("open");
+  // else mapsCollection.classList.add("open");
+
+  // if (evt.type !== "mouseenter") {
+  //   mapsCollection.classList.remove("open");
+  //   map.classList.remove("shiftUp");
+  // }
+  // else {
+  mapsCollection.classList.toggle("open");
+  // console.log(mapsCollection.getBoundingClientRect().height);
+  // mapsCollection.style.transform = "translateY(-" +  parseInt(mapsCollection.getBoundingClientRect().height) + "px)";
+
+  map.classList.toggle("shiftUp");
+  // }
+}
+
+function deleteMap(evt)  {
+
+  evt.stopPropagation();
 
   var birdInstance = this.parentNode;
 
@@ -25,10 +45,14 @@ function deleteMap()  {
   map.querySelector(".saveMapButton").style.display = "block";
 
   var len = mapsCollection.children.length;
-  if (len === 0)  {
+  if (len === 1)  {
 
-    mapsCollection.style.height = "0";
-    mapsCollection.style.margin = "0";
+    mapsCollection.classList.remove("namesOnlySeen");
+    mapsCollection.removeEventListener("click", revealMapsCollection);
+    // mapsCollection.removeEventListener("mouseenter", revealMapsCollection);
+
+    mapsCollection.classList.toggle("open");
+    map.classList.toggle("shiftUp");
   }
 }
 
@@ -36,7 +60,7 @@ function saveCurrentMap()  {
 
   var len = mapsCollection.children.length;
 
-  if (len === 4)  return;
+  if (len === 6)  return;
 
 	// clone node, remove ids so not duplicate
 	// reattach eventListeners
@@ -61,17 +85,12 @@ function saveCurrentMap()  {
 
   dupNode.removeAttribute("id");
 
-  if (len === 0) {
-
-    if (window.innerWidth > 1680) mapsCollection.style.height = "350px";
-    else if (window.innerWidth >= 1600) mapsCollection.style.height = "300px";
-    else if (window.innerWidth >= 1165) mapsCollection.style.height = "270px";
-    else mapsCollection.style.height = "235px";
-
-    mapsCollection.style.margin = "30px 0 -35px 0";
-    // currentMap.style.top = "10vh";
+  if (len === 1) {
+    mapsCollection.addEventListener("click", revealMapsCollection);
+    mapsCollection.classList.add("namesOnlySeen");
+    // mapsCollection.addEventListener("mouseenter", revealMapsCollection);
   }
-  else if (len === 3)  {
+  else if (len === 5)  {
     map.querySelector(".saveMapButton").style.display = "none";
   }
 
@@ -79,8 +98,6 @@ function saveCurrentMap()  {
 
   deleteMapButton = dupNode.querySelector(".deleteMapButton");
   deleteMapButton.addEventListener("click", deleteMap);
-
-
 
   document.getElementById("thin" + currentID).onload = function () {
     prepareSVGstyles("thin" + currentID);
