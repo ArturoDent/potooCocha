@@ -15,7 +15,8 @@ var hypotheticalColor    =  "#33cc66";
 var introducedColor      =  "#111";
 var baseColor            =  "#545750";
 
-var baseStrokeColor      =  "#8a8b86";
+// var baseStrokeColor      =  "#8a8b86";
+var baseStrokeColor      =  "#222";
 
 /* global addBirdNameToMap birds currentMap  */
 
@@ -121,6 +122,51 @@ function selectedCountryFillColor(selectedCountry, color)  {
   else fillSAMmap();
 }
 
+function newStrokeColor(obj, newColor) {
+
+  console.log("newStrokeColor");
+
+
+  if (obj.nodeName === "path") {
+    // if (newColor === baseColor) {
+    obj.style.stroke = "#fff";
+    // }
+
+    // obj.style.fill = newColor;
+  }
+
+  else if (obj.parentNode.nodeName === "g")  {
+
+    var paths = obj.querySelectorAll("path");
+
+    var len = paths.length;
+    for (var i = 0; i < len; i++)  {
+
+      // if (newColor === baseColor) {
+      paths[i].style.stroke = "#fff";
+      // }
+
+      // paths[i].style.fill = newColor;
+    }
+  }
+}
+
+function selectedCountryStrokeColor(selectedCountry, color) {
+
+  console.log("selectedCountryStrokeColor");
+
+  var svg = currentMap.querySelector("#SAMsvg");
+  var svgDoc = svg.contentDocument;
+
+  var cc = svgDoc.getElementById(selectedCountry);
+
+  if (cc) {
+    // fillSAMmap();
+    newStrokeColor(cc, color);
+  }
+  // else fillSAMmap();
+}
+
 /* global  mapsCollection saveMapButton */
 
 function highlightSAMmap(index, current) {
@@ -192,57 +238,5 @@ function highlightSAMmap(index, current) {
 
   if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
 }
-// # sourceMappingURL=maps/SouthAmerica.js.map
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
-
-//# sourceMappingURL=maps/SouthAmerica.js.map
 
 //# sourceMappingURL=../sourcemaps/SouthAmerica.js.map

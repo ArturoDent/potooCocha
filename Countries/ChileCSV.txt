@@ -5,7 +5,6 @@
 ,TINAMOUS,TINAMIDAE
 ,Ornate Tinamou,Nothoprocta ornata
 E,Chilean Tinamou,N. perdicaria
-,Andean Tinamou,N. pentlandii
 ,Elegant Crested-Tinamou,Eudromia elegans
 ,Puna Tinamou,Tinamotis pentlandii
 ,Patagonian Tinamou,T. ingoufi
@@ -35,8 +34,7 @@ E,Chilean Tinamou,N. perdicaria
 ,Blue-winged Teal,A. discors
 ,Cinnamon Teal,A. cyanoptera
 ,Red Shoveler,A. platalea
-,Southern Pochard,Netta erythrophthalma
-,Rosy-billed Pochard,N. peposaca
+,Rosy-billed Pochard,Netta peposaca
 ,Black-headed Duck,Heteronetta atricapilla
 ,Ruddy Duck,Oxyura jamaicensis
 ,Lake Duck,O. vittata
@@ -61,7 +59,8 @@ E,Chilean Tinamou,N. perdicaria
 
 ,PIGEONS,COLUMBIDAE
 ,Rock Pigeon,Columba livia
-,Spot-winged Pigeon,Patagioenas maculosa
+,Picazuro Pigeon,Patagioenas picazuro
+,Spot-winged Pigeon,P. maculosa
 ,Chilean Pigeon,P. araucana
 ,West Peruvian Dove,Zenaida meloda
 ,Eared Dove,Z. auriculata
@@ -75,9 +74,13 @@ E,Chilean Tinamou,N. perdicaria
 ,CUCKOOS,CUCULIDAE
 ,Groove-billed Ani,Crotophaga sulcirostris
 ,Dark-billed Cuckoo,Coccyzus melacoryphus
+,Yellow-billed Cuckoo,C. americanus
 
 ,OILBIRD,STEATORNITHIDAE
 ,Oilbird,Steatornis caripensis
+
+,POTOOS,NYCTIBIIDAE
+,Common Potoo,Nyctibius griseus
 
 ,NIGHTJARS,CAPRIMULGIDAE
 ,Lesser Nighthawk,Chordeiles acutipennis
@@ -153,12 +156,14 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,SANDPIPERS,SCOLOPACIDAE
 ,Upland Sandpiper,Bartramia longicauda
 ,Whimbrel,Numenius phaeopus
-,Hudsonian Godwit,Limosa haemastica
+,Bar-tailed Godwit,Limosa lapponica
+,Hudsonian Godwit,L. haemastica
 ,Marbled Godwit,L. fedoa
 ,Ruddy Turnstone,Arenaria interpres
 ,Red Knot,Calidris canutus
 ,Surfbird,C. virgata
 ,Stilt Sandpiper,C. himantopus
+,Curlew Sandpiper,C. ferruginea
 ,Sanderling,C. alba
 ,Baird's Sandpiper,C. bairdii
 ,Least Sandpiper,C. minutilla
@@ -204,7 +209,8 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,GULLS,LARIDAE
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Sabine's Gull,Xema sabini
-,Andean Gull,Chroicocephalus serranus
+,Bonaparte's Gull,Chroicocephalus philadelphia
+,Andean Gull,C. serranus
 ,Brown-hooded Gull,C. maculipennis
 ,Gray-hooded Gull,C. cirrocephalus
 ,Dolphin Gull,Leucophaeus scoresbii
@@ -216,7 +222,6 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Herring Gull,L. argentatus
 ,Brown Noddy,Anous stolidus
 ,Gray Noddy,Procelsterna albivitta
-,White Tern,Gygis alba
 ,Sooty Tern,Onychoprion fuscatus
 ,Bridled Tern,O. anaethetus
 ,Least Tern,Sternula antillarum
@@ -228,6 +233,7 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Common Tern,Sterna hirundo
 ,Arctic Tern,S. paradisaea
 ,South American Tern,S. hirundinacea
+,Antarctic Tern,S. vittata
 ,Snowy-crowned Tern,S. trudeaui
 ,Elegant Tern,Thalasseus elegans
 ,Sandwich Tern,T. sandvicensis
@@ -273,6 +279,7 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Cape Petrel,Daption capense
 ,Kerguelen Petrel,Aphrodroma brevirostris
 ,Gould's Petrel,Pterodroma leucoptera
+,Great-winged Petrel,P. macroptera
 ,Soft-plumaged Petrel,P. mollis
 ,White-headed Petrel,P. lessonii
 ,Cook's Petrel,P. cookii
@@ -323,7 +330,6 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Blue-footed Booby,Sula nebouxii
 ,Peruvian Booby,S. variegata
 ,Masked Booby,S. dactylatra
-,Brown Booby,S. leucogaster
 
 ,CORMORANTS,PHALACROCORACIDAE
 ,Red-legged Cormorant,Phalacrocorax gaimardi
@@ -426,8 +432,7 @@ E,White-throated Tapaculo,Scelorchilus albicollis
 E,Dusky Tapaculo,S. fuscus
 
 ,OVENBIRDS,FURNARIIDAE
-,Slender-billed Miner,Geositta tenuirostris
-,Common Miner,G. cunicularia
+,Common Miner,Geositta cunicularia
 ,Puna Miner,G. punensis
 ,Rufous-banded Miner,G. rufipennis
 ,Grayish Miner,G. maritima
@@ -460,7 +465,7 @@ E,Masafuera Rayadito,A. masafuerae
 ,Cordilleran Canastero,A. modesta
 ,Sharp-billed Canastero,A. pyrrholeuca
 ,Canyon Canastero,A. pudibunda
-,Dusky-tailed Canastero,Pseudasthenes humicola
+E,Dusky-tailed Canastero,Pseudasthenes humicola
 
 ,TYRANT FLYCATCHERS,TYRANNIDAE
 ,White-crested Elaenia,Elaenia albiceps
@@ -493,6 +498,7 @@ E,Juan Fernandez Tit-Tyrant,A. fernandezianus
 ,Great Shrike-Tyrant,A. lividus
 ,Gray-bellied Shrike-Tyrant,A. micropterus
 ,Fire-eyed Diucon,Xolmis pyrope
+,Black-crowned Monjita,X. coronatus
 ,Rufous-webbed Bush-Tyrant,Polioxolmis rufipennis
 ,Chocolate-vented Tyrant,Neoxolmis rufiventris
 ,d'Orbigny's Chat-Tyrant,Ochthoeca oenanthoides
@@ -538,7 +544,8 @@ E,Juan Fernandez Tit-Tyrant,A. fernandezianus
 ,Chiguanco Thrush,T. chiguanco
 
 ,MOCKINGBIRDS,MIMIDAE
-,Chilean Mockingbird,Mimus thenca
+,Long-tailed Mockingbird,Mimus longicaudatus
+,Chilean Mockingbird,M. thenca
 ,Patagonian Mockingbird,M. patagonicus
 ,White-banded Mockingbird,M. triurus
 
@@ -549,6 +556,7 @@ E,Juan Fernandez Tit-Tyrant,A. fernandezianus
 
 ,TANAGERS,THRAUPIDAE
 ,Blue-and-yellow Tanager,Pipraeidea bonariensis
+,Swallow Tanager,Tersina viridis
 ,Cinereous Conebill,Conirostrum cinereum
 ,Tamarugo Conebill,C. tamarugense
 ,Giant Conebill,Oreomanes fraseri
@@ -574,9 +582,12 @@ E,Juan Fernandez Tit-Tyrant,A. fernandezianus
 ,Patagonian Yellow-Finch,S. lebruni
 ,Saffron Finch,S. flaveola
 ,Grassland Yellow-Finch,S. luteola
+,Raimondi's Yellow-Finch,S. raimondii
 ,Golden-billed Saltator,Saltator aurantiirostris
 ,Blue-black Grassquit,Volatinia jacarina
-,Chestnut-throated Seedeater,Sporophila telasco
+,Lined Seedeater,Sporophila lineola
+,Chestnut-throated Seedeater,S. telasco
+,Double-collared Seedeater,S. caerulescens
 ,Band-tailed Seedeater,Catamenia analis
 
 ,SPARROWS,EMBERIZIDAE
@@ -592,15 +603,16 @@ E,Juan Fernandez Tit-Tyrant,A. fernandezianus
 ,American Redstart,Setophaga ruticilla
 ,Blackburnian Warbler,S. fusca
 ,Blackpoll Warbler,S. striata
+,Black-throated Green Warbler,S. virens
 ,Canada Warbler,Cardellina  canadensis
 
 ,BLACKBIRDS,ICTERIDAE
 ,Baltimore Oriole,Icterus galbula
 ,Austral Blackbird,Curaeus curaeus
 ,Yellow-winged Blackbird,Agelasticus thilius
-,Chestnut-capped Blackbird,Chrysomus ruficapillus
 ,Grayish Baywing,Agelaioides badius
-,Shiny Cowbird,Molothrus bonariensis
+,Screaming Cowbird,Molothrus rufoaxillaris
+,Shiny Cowbird,M. bonariensis
 ,Bobolink,Dolichonyx oryzivorus
 ,White-browed Meadowlark,Sturnella superciliaris
 ,Peruvian Meadowlark,S. bellicosa

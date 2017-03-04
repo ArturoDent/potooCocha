@@ -1,6 +1,6 @@
 #checklistArticle {
     position  :  relative;
-    margin  :  300px 0 50px 0;
+    margin  :  150px 0 50px 0;
     z-index  :  0;
     // text-align  :  center;
 
@@ -62,8 +62,8 @@
 
 .checklistTitle  {
     position  :  absolute;
-    top  :  20px;
-    left  :  -225px;
+    top  :  10px;
+    left  :  -245px;
     z-index  :  2;
 
     font-size  :  1.3rem;
@@ -105,18 +105,15 @@
 #pdfButton {
     position  :  absolute;
     right  :  -30%;
-    /*left : 70%;*/
     bottom  :  35%;
     height  :  30px;
     min-width : 190px;
 
     padding  :  5px 0 0 18px;
-    /*text-align  :  right;*/
 }
 
 #csvButton {
     position  :  absolute;
-    /*right  :  -78px;*/
     right : -30%;
 
     bottom  :  15%;
@@ -124,9 +121,6 @@
     min-width : 190px;
 
     padding  :  4px 16px 0 18px;
-    /*line-height : 32px;*/
-    /*text-align  :  right;*/
-
 }
 
 #numDays {
@@ -138,7 +132,7 @@
     left  :  15px;
     width  :  140%;
     margin  :  20px 0 110px 0;
-    z-index  :  20;
+    // z-index  :  20;
 
     color  :  #fff;
 

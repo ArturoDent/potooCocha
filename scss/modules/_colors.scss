@@ -3,14 +3,15 @@ $bgColor  :  rgb(84,85,80);
 $bannerColor  :  transparent;
 
 $panelColor : $bgColor;
-$searchHeaderColor : lighten($bgColor, 5%);
+$searchHeaderColor : lighten($bgColor, 8%);
 
 $genericButtonColor  :  #A65751;
+
 $genericButtonHighlightColor : $searchHeaderColor;
 
-$panelFlyoutColor : lighten($bgColor, 5%);
+$panelFlyoutColor : lighten($bgColor, 8%);
 
 $familyOpenColor : $searchHeaderColor;
 
-$birdRolloverColor : #333;
+$birdRolloverColor : #A65751;
 $birdActiveColor : #A65751;
