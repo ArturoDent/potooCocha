@@ -137,7 +137,7 @@ function showCountryModal(evt)  {
 
   document.querySelector("#countryModal").classList.add("md-show");
   // document.querySelector("#mainContent").classList.add("modal-shrink");
-  map.classList.add("modal-left");
+  map.classList.add("modal-shrink");
 
   if (evt.target.id === "checklistCountryButton") countryModalOpener = "checklistCountryButton";
   else countryModalOpener = "taxonomyCountryButton";
@@ -147,7 +147,7 @@ function closeCountryModal()  {
 
   document.querySelector("#countryModal").classList.remove("md-show");
   // document.querySelector("#mainContent").classList.remove("modal-shrink");
-  map.classList.remove("modal-left");
+  map.classList.remove("modal-shrink");
 }
 
 function toggleSampleTableShowEndemics() {

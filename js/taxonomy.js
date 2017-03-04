@@ -9,21 +9,21 @@ var numFamilies;
 
 var birds = [];
 
-var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":495,
+var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":475,
                   "Colombia":1846, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
-                  "Guyana":783, "Paraguay":694, "Peru":1792, "Suriname":727, "Trinidad":468,
+                  "Guyana":783, "Paraguay":694, "Peru":1780, "Suriname":727, "Trinidad":468,
                   "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3376};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
-var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":66,
+var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":65,
                   "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":81,
-                  "Guyana":78, "Paraguay":72, "Peru":89, "Suriname":80, "Trinidad":70,
+                  "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
                   "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
 // South America : 102 families not including 2 incertae "families", 3376 total spp.
-//                 which includes one hypothetical (in one country only) Black Turnstone
+//                 which includes one hypothetical (in one country only) Blasck Turnstone
 
 var currentTaxonomyCountry;
 var currentTaxonomyCountryElement;
@@ -49,7 +49,7 @@ var searchInstructionsOpen = true;
 
 var selectedFillColor    =  "#eee";
 
-/* global    selectedCountryFillColor selectedCountryStrokeColor currentMap   */
+/* global    selectedCountryFillColor currentMap   */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -59,8 +59,6 @@ document.addEventListener("DOMContentLoaded", function(){
   searchSlideUpWrapper               =  document.querySelector("#taxonomyArticle > div.slideUpWrapper");
 
   searchSlideUpWrapper.style.height  =  searchSlideUpWrapper.clientHeight + "px";
-  // searchSlideUpWrapper.style.maxHeight  =  searchSlideUpWrapper.clientHeight + "px";
-
   searchSlideUpWrapper_height        =  searchSlideUpWrapper.style.height;
 
   taxInstructionsButton              =  document.querySelector(".taxInstructionsButton");
@@ -137,7 +135,7 @@ function showSearchInstructions(state)  {
 
     searchSlideUpWrapper.style.height = 0;
     searchSlideUpWrapper.classList.add("closeInstructions");
-    taxInstructionsButton.classList.add("instructionsClosed");
+    // taxInstructionsButton.classList.add("instructionsClosed");
 
     searchInstructionsOpen = false;
 
@@ -151,7 +149,6 @@ function createTaxPageHTML ()  {
   resultsFrag += "  <div id='countrySearch' class='closed'>";
   resultsFrag += "    <span id='searchTerm'></span>";
   resultsFrag += "  </div>";
-
   resultsFrag += "  <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>";
   resultsFrag += "</div>";
 
@@ -270,7 +267,6 @@ function loadCountryTaxonomy(evt)  {
     currentMap.querySelector(".saveMapButton").style.display = "none";
     var temp = taxCountry.replace(" ", "");
     selectedCountryFillColor(temp, selectedFillColor);
-    // selectedCountryStrokeColor(temp, selectedFillColor);
   }
 
   else if (lastQuery === "endemic" || lastQuery === "hypothetical"  || lastQuery === "vagrant" ||
@@ -278,7 +274,6 @@ function loadCountryTaxonomy(evt)  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
     selectedCountryFillColor(taxCountry.replace(" ", ""), selectedFillColor);
-    // selectedCountryStrokeColor(temp, selectedFillColor);
   }
 
   currentTaxonomyCountry = taxCountry;

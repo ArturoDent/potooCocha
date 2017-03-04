@@ -34,8 +34,8 @@
 .icon-pin {
   top: -22px;
   left: 8px;
-  width: 3em;
-  height: 3em; }
+  width: 2.5em;
+  height: 2.5em; }
 
 .icon-female {
   top: 3px;
@@ -92,7 +92,7 @@
 .genericButton.highlight {
   /*background-color  :  #252525;*/
   border: 1px solid #888;
-  background-color: #696a64; }
+  background-color: #61625c; }
 
 .genericButton.highlight:hover, .genericButton.highlight:focus {
   letter-spacing: 0.3em;
@@ -105,9 +105,6 @@ html {
   /*so 1em = 10px (browser default usually 16px)*/
   font-size: 16px;
   background: #545550; }
-
-:host /deep/ .image-img {
-  height: 60pt; }
 
 body {
   width: 100vw;
@@ -131,8 +128,7 @@ a:link {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 8vh;
-  left: 10vw;
+  left: 15vw;
   width: 80vw;
   overflow: visible;
   transition: transform 750ms; }
@@ -140,16 +136,23 @@ a:link {
 #mainContent.modal-shrink {
   transform: translateX(-100px); }
 
+.smallBanner {
+  display: none; }
+
 .titleBanner {
-  position: absolute;
+  position: fixed;
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  top: 0;
-  width: 100vw;
+  top: 100vh;
+  left: 2vw;
+  width: 100vh;
   overflow: visible;
+  /*IE11 must have min-width set*/
+  /*min-width  :  70px;*/
   margin: 0 auto;
+  transform: rotate(-90deg);
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -157,9 +160,8 @@ a:link {
   transform-origin: top left; }
 
 .titleText {
-  flex: 1 1 230px;
-  height: 40px;
-  padding: 5px 0 0 0;
+  flex: 1 1 330px;
+  padding: 12px 0 15px 0;
   font-size: 1.4rem;
   font-weight: bold;
   font-variant: small-caps;
@@ -168,29 +170,31 @@ a:link {
   letter-spacing: 0.1em;
   text-shadow: -1px 1px 1px black;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-top: none;
-  background: #333;
+  border-radius: 5px;
+  background: #61625c;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
 
 .titleBanner_spacer {
   position: relative;
-  top: -5px;
+  top: -7px;
   font-size: 1rem;
   font-variant: normal; }
 
 .surroundBanner {
   position: relative;
-  height: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: #333;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 -1px rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2); }
 
 .surroundBanner:nth-child(1) {
-  flex: 1 1 auto; }
+  top: calc(0.65em);
+  flex: 1 1 auto;
+  flex-grow: 3; }
 
 .surroundBanner:nth-child(3) {
-  flex: 1 1 auto;
-  flex-grow: 4; }
+  top: calc(32px + 0.65em);
+  flex: 1 1 auto; }
 
 .articles {
   display: -webkit-flex;
@@ -203,12 +207,13 @@ a:link {
   width: 36vw;
   /*min-width  :  695px;*/
   max-width: 695px;
-  margin-top: 45px;
+  margin-top: 70px;
   line-height: 28px;
   overflow: visible; }
 
 section {
-  position: relative; }
+  position: relative;
+  /*overflow  :  visible;*/ }
 
 article {
   /*line-height  :  22px;*/
@@ -220,6 +225,7 @@ article {
   position: relative;
   padding: 0 25px;
   pointer-events: auto;
+  /*overflow  :  visible;*/
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 3px;
   background: #545550;
@@ -240,7 +246,7 @@ article {
   text-align: center;
   letter-spacing: 0.1em;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  background-color: #696a64; }
+  background-color: #61625c; }
 
 .topFlyoutPanel {
   padding-bottom: 4px;
@@ -262,7 +268,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 0 15px 0; }
+  margin: 20px 0 30px 0; }
 
 footer a {
   padding: 2px 3px 4px 5px;
@@ -275,33 +281,16 @@ footer a:hover, footer a:focus {
   transition: all 350ms; }
 
 #mapsCollection {
-  position: fixed;
-  top: 100vh;
-  left: 0;
-  width: 100vw;
-  height: 365px;
+  position: relative;
+  top: -25px;
+  left: -3.5vw;
+  width: 55vw;
+  height: 0;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #474844;
-  cursor: pointer;
-  z-index: 10;
-  transform: scale(0.1);
-  transition: transform 1.2s; }
-
-#mapsHeader {
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: #333; }
-
-#mapsCollection.namesOnlySeen {
-  transform: translateY(-60px) scale(1); }
-
-#mapsCollection.open {
-  transform: translateY(-365px); }
+  overflow-x: visible;
+  transition: all 1.5s; }
 
 .smallBird {
   opacity: 0;
@@ -315,18 +304,20 @@ footer a:hover, footer a:focus {
 .thinify {
   display: inline-block;
   position: relative;
-  top: -13px;
+  top: 75px;
   left: 0;
-  width: 305px;
+  width: 240px;
   margin-top: -50px;
-  margin-bottom: -50px; }
+  margin-right: 15px;
+  margin-bottom: -50px;
+  transition: all 1s; }
 
 .birdName {
   position: absolute;
   top: -11px;
-  left: -75px;
+  left: -70px;
   height: auto;
-  width: calc(100% + 70px);
+  width: calc(100% + 60px);
   padding: 0;
   font-size: 1rem;
   text-align: center;
@@ -339,37 +330,28 @@ footer a:hover, footer a:focus {
   font-style: italic; }
 
 .birdName.smallBirdText {
-  top: -39px;
-  left: -55px;
+  top: -27px;
+  left: -20px;
   width: calc(100% + 40px);
-  padding: 8px 0 0 0;
-  height: 62px;
-  line-height: 20px;
-  transform: scale(1);
-  border-radius: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.5); }
-
-.smallBird:nth-child(2) .birdName.smallBirdText {
-  border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  line-height: 15px;
+  transform: scale(1); }
 
 #currentMap {
   opacity: 0;
   position: fixed;
   top: calc(50vh - 210px);
-  left: 65vw;
+  left: 68vw;
   margin: 0 0 0 5px;
-  transition: opacity 300ms, transform 800ms 350ms;
+  z-index: 10;
+  transition: all 1s;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   transform-origin: 0 0; }
 
-#currentMap.shiftUp {
-  transform: translateY(-135px); }
-
-#currentMap.modal-left {
-  transform: translateX(-70px); }
+#currentMap.modal-shrink {
+  transform: translateX(-140px); }
 
 #currentMap .deleteMapButton {
   display: none; }
@@ -381,10 +363,11 @@ footer a:hover, footer a:focus {
 .birdMapInstance {
   position: relative;
   top: 10px;
-  background: transparent; }
+  background: transparent;
+  transition: all 1.5s; }
 
 #currentBirdMap {
-  transform: scale(1.25);
+  transform: scale(1.3);
   background: transparent; }
 
 .mapButtons {
@@ -393,13 +376,15 @@ footer a:hover, footer a:focus {
   padding: 3px 0 0 0;
   color: white;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
   cursor: pointer;
   transition: all 500ms; }
 
 .deleteMapButton {
   position: absolute;
-  top: 20px;
-  left: -10%;
+  top: 230px;
+  left: 10px;
   font-size: 30px;
   color: #d32d00;
   border: none; }
@@ -409,6 +394,8 @@ footer a:hover, footer a:focus {
   position: absolute;
   top: 240px;
   left: -30px;
+  width: 36px;
+  height: 36px;
   background: transparent; }
 
 .drawing {
@@ -416,7 +403,11 @@ footer a:hover, footer a:focus {
   text-shadow: none;
   -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
   -ms-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3)); }
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+  transition: all 1s; }
+
+.drawing.smallBirdDrawing {
+  height: 0; }
 
 .colorKey {
   opacity: 0.9;
@@ -472,7 +463,7 @@ footer a:hover, footer a:focus {
 
 #checklistArticle {
   position: relative;
-  margin: 150px 0 50px 0;
+  margin: 300px 0 50px 0;
   z-index: 0;
   overflow: visible; }
 
@@ -485,7 +476,7 @@ footer a:hover, footer a:focus {
   font-size: 0.8rem;
   text-align: center;
   line-height: 20px;
-  background: #696a64;
+  background: #61625c;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   transition: all 350ms; }
 
@@ -516,8 +507,8 @@ footer a:hover, footer a:focus {
 
 .checklistTitle {
   position: absolute;
-  top: 10px;
-  left: -245px;
+  top: 20px;
+  left: -225px;
   z-index: 2;
   font-size: 1.3rem;
   font-weight: bold;
@@ -551,18 +542,23 @@ footer a:hover, footer a:focus {
 #pdfButton {
   position: absolute;
   right: -30%;
+  /*left : 70%;*/
   bottom: 35%;
   height: 30px;
   min-width: 190px;
-  padding: 5px 0 0 18px; }
+  padding: 5px 0 0 18px;
+  /*text-align  :  right;*/ }
 
 #csvButton {
   position: absolute;
+  /*right  :  -78px;*/
   right: -30%;
   bottom: 15%;
   height: 30px;
   min-width: 190px;
-  padding: 4px 16px 0 18px; }
+  padding: 4px 16px 0 18px;
+  /*line-height : 32px;*/
+  /*text-align  :  right;*/ }
 
 #numDays {
   display: flex;
@@ -572,6 +568,7 @@ footer a:hover, footer a:focus {
   left: 15px;
   width: 140%;
   margin: 20px 0 110px 0;
+  z-index: 20;
   color: #fff;
   background: transparent; }
 
@@ -1007,7 +1004,7 @@ input[type='checkbox']:disabled + label {
   height: 100vh;
   padding: 8px 10px 20px 0;
   align-items: center;
-  background-color: #474844;
+  background-color: #545550;
   border-left: 1px inset white;
   box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.25), -2px 0 2px rgba(0, 0, 0, 0.25); }
 
@@ -1048,75 +1045,64 @@ input[type='checkbox']:disabled + label {
   height: 32px;
   background-size: contain; }
 
-.country-menu a:nth-child(n)::before {
-  top: -11px;
-  left: -73px;
-  padding: 9px;
-  width: 50px;
-  height: 50px;
-  background-image: url("../../../flags/32/South-America-min.png");
-  background-position: center;
-  background-origin: padding-box;
-  background-color: #545550;
-  border-radius: 50%;
-  background-size: 32px 32px;
-  background-repeat: no-repeat; }
-
-.country-menu a:nth-child(2)::before {
+.country-menu a:nth-child(1)::before {
   background-image: url("../../../flags/32/Aruba.png"); }
 
-.country-menu a:nth-child(3)::before {
+.country-menu a:nth-child(2)::before {
   background-image: url("../../../flags/32/Curacao.png"); }
 
-.country-menu a:nth-child(4)::before {
+.country-menu a:nth-child(3)::before {
   background-image: url("../../../flags/32/Bonaire.png"); }
 
-.country-menu a:nth-child(5)::before {
+.country-menu a:nth-child(4)::before {
   background-image: url("../../../flags/32/Trinidad-and-tobago.png"); }
 
-.country-menu a:nth-child(6)::before {
+.country-menu a:nth-child(5)::before {
   background-image: url("../../../flags/32/French-Southern.png"); }
 
-.country-menu a:nth-child(7)::before {
+.country-menu a:nth-child(6)::before {
   background-image: url("../../../flags/32/Suriname.png"); }
 
-.country-menu a:nth-child(8)::before {
+.country-menu a:nth-child(7)::before {
   background-image: url("../../../flags/32/Guyana.png"); }
 
-.country-menu a:nth-child(9)::before {
+.country-menu a:nth-child(8)::before {
   background-image: url("../../../flags/32/Venezuela.png"); }
 
-.country-menu a:nth-child(10)::before {
+.country-menu a:nth-child(9)::before {
   background-image: url("../../../flags/32/Colombia.png"); }
 
-.country-menu a:nth-child(11)::before {
+.country-menu a:nth-child(10)::before {
   background-image: url("../../../flags/32/Ecuador.png"); }
 
-.country-menu a:nth-child(12)::before {
+.country-menu a:nth-child(11)::before {
   background-image: url("../../../flags/32/Peru.png"); }
 
-.country-menu a:nth-child(13)::before {
+.country-menu a:nth-child(12)::before {
   background-image: url("../../../flags/32/Bolivia.png"); }
 
-.country-menu a:nth-child(14)::before {
+.country-menu a:nth-child(13)::before {
   background-image: url("../../../flags/32/Chile.png"); }
 
-.country-menu a:nth-child(15)::before {
+.country-menu a:nth-child(14)::before {
   background-image: url("../../../flags/32/Argentina.png"); }
 
-.country-menu a:nth-child(16)::before {
+.country-menu a:nth-child(15)::before {
   background-image: url("../../../flags/32/Falkland-islands.png"); }
 
 /*.country-menu a:nth-child(16)::before {
   background-image: url("../../../flags/32/Falkland-islands.png"); }*/
-.country-menu a:nth-child(17)::before {
+.country-menu a:nth-child(16)::before {
   background-image: url("../../../flags/32/Brazil.png"); }
 
-.country-menu a:nth-child(18)::before {
+.country-menu a:nth-child(17)::before {
   background-image: url("../../../flags/32/Uruguay.png"); }
 
-.country-menu a:nth-child(19)::before {
+.country-menu a:nth-child(18)::before {
   background-image: url("../../../flags/32/Paraguay.png"); }
+
+.country-menu a:nth-child(19)::before {
+  background-image: url("../../../flags/32/South-America-min.png"); }
 
 .country-menu a.taxHighlight {
   color: white;
@@ -1135,19 +1121,19 @@ input[type='checkbox']:disabled + label {
 .country-menu a.taxHighlight::after {
   content: '✓';
   position: absolute;
-  left: -86px;
+  left: -76px;
   background: none; }
 
 .country-menu a.checkHighlight::after {
   content: '✓';
   position: absolute;
-  left: -86px;
+  left: -76px;
   background: none; }
 
 .country-menu a.bothHighlights::after {
   content: '✓✓';
   position: absolute;
-  left: -99px;
+  left: -89px;
   background: none; }
 
 #taxonomyArticle {
@@ -1170,7 +1156,7 @@ input[type='checkbox']:disabled + label {
   font-size: 1rem;
   text-align: center;
   /*background  :  $panelFlyoutColor;*/
-  background: #696a64;
+  background: #61625c;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
 
@@ -1187,19 +1173,17 @@ input[type='checkbox']:disabled + label {
   margin: 0 0 15px 0;
   padding-top: 20px;
   border: none;
-  box-shadow: none;
-  overflow-x: visible !important; }
+  box-shadow: none; }
 
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 .slideUpWrapper {
   pointer-events: auto;
   overflow-y: hidden;
-  transform-origin: top;
-  transform: translateY(0) scaleY(1);
+  transform: scale(1) translateY(0);
   transition: all 250ms; }
 
 .slideUpWrapper.closeInstructions {
-  transform: translateY(30px) scaleY(0); }
+  transform: scale(0.8) translateY(30px); }
 
 .slideUpWrapper.hovering {
   opacity: 0.7;
@@ -1208,8 +1192,8 @@ input[type='checkbox']:disabled + label {
 
 .taxInstructionsButton {
   position: absolute;
-  top: -40px;
-  right: -5%;
+  top: -25px;
+  right: -41px;
   width: 50px;
   height: 50px;
   padding: 0.4em 0 0 0;
@@ -1222,18 +1206,13 @@ input[type='checkbox']:disabled + label {
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
   cursor: pointer;
-  -webkit-transition: all 850ms ease-in-out 500ms;
-  -moz-transition: all 850ms ease-in-out 500ms;
-  -o-transition: all 850ms ease-in-out 500ms;
-  transition: all 850ms ease-in-out 500ms; }
+  -webkit-transition: all 350ms ease-in-out 500ms;
+  -moz-transition: all 350ms ease-in-out 500ms;
+  -o-transition: all 350ms ease-in-out 500ms;
+  transition: all 350ms ease-in-out 500ms; }
 
 .taxInstructionsButton:hover {
   background: #252525; }
-
-.taxInstructionsButton.instructionsClosed {
-  right: 90%;
-  top: -30px;
-  background: rgba(0, 0, 0, 0.5); }
 
 #searchForm {
   display: flex;
@@ -1342,7 +1321,7 @@ input[type='checkbox']:disabled + label {
   opacity: 0;
   position: relative;
   height: auto;
-  margin: 0 0 45px 0;
+  margin: 0 0 15px 0;
   padding-bottom: 10px;
   z-index: 1;
   transition: opacity 350ms 200ms; }
@@ -1361,7 +1340,7 @@ input[type='checkbox']:disabled + label {
   letter-spacing: 0.1em;
   border-right: 22px solid #545550;
   border-left: 22px solid #545550;
-  background: #696a64;
+  background: #61625c;
   box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3); }
 
 #searchResults {
@@ -1378,7 +1357,7 @@ input[type='checkbox']:disabled + label {
   border-bottom: 5px solid transparent;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.35);
   -webkit-overflow-scrolling: touch;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: auto;
   cursor: pointer;
   transition: height 350ms; }
@@ -1388,7 +1367,6 @@ input[type='checkbox']:disabled + label {
   transition: all 2s; }
 
 #searchResults li {
-  position: relative;
   padding: 0 0 2px 16px;
   list-style-type: none; }
 
@@ -1408,14 +1386,14 @@ input[type='checkbox']:disabled + label {
 
 #searchResults li:hover {
   color: white;
-  background-color: #A65751; }
+  background-color: #333; }
 
 #searchResults li:not(.family) span:first-child {
   padding: 3px 0 3px 16px; }
 
 #searchResults li.active {
-  background-color: #333;
-  outline: 1px solid black; }
+  color: white;
+  background-color: #A65751; }
 
 .family {
   padding: 0 0 2px 0;
@@ -1433,7 +1411,8 @@ input[type='checkbox']:disabled + label {
 
 #searchResults span:not(.fsc):last-child {
   position: absolute;
-  left: 53.8%; }
+  left: 53.8%;
+  font-style: italic; }
 
 .fsc {
   position: absolute;
@@ -1490,9 +1469,8 @@ input[type='checkbox']:disabled + label {
   font-size: 1rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
   white-space: nowrap;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: auto;
-  z-index: -10;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-radius: 10px;
@@ -1528,12 +1506,12 @@ input[type='checkbox']:disabled + label {
 /*target : familyOpen sci name only*/
 #tree li.familyOpen {
   padding-top: 1px;
-  background: #A65751; }
+  background: #333; }
 
 #tree li.familyOpen:hover > span:first-child {
   padding: 1px 0 0 15px;
   border-radius: 5px;
-  background: #A65751; }
+  background: #333; }
 
 #tree .familyOpen ul {
   margin-top: 3px;
@@ -1541,7 +1519,7 @@ input[type='checkbox']:disabled + label {
   padding: 5px 0 10px 0;
   font-size: 0.9rem;
   line-height: 1rem;
-  background: #696a64; }
+  background: #61625c; }
 
 /*target : familyOpen common names only*/
 #tree .familyOpen ul li span:first-child {
@@ -1586,12 +1564,12 @@ input[type='checkbox']:disabled + label {
 
 #tree .family:hover {
   color: white;
-  background-color: #A65751; }
+  background-color: #333; }
 
 /*    below targets each individual bird */
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover {
   color: white;
-  background-color: #A65751; }
+  background-color: #333; }
 
 #tree ul li {
   padding: 1px 0 3px 0;
@@ -1599,16 +1577,8 @@ input[type='checkbox']:disabled + label {
 
 /* added by toggleFamilyOpen */
 #tree ul li.active {
-  position: relative;
-  background-color: #333;
-  outline: 1px solid black; }
-
-#tree ul li.active::before {
-  position: absolute;
-  left: -20px;
-  content: '-->';
   color: white;
-  z-index: 20; }
+  background-color: #A65751; }
 
 .tooltip {
   opacity: 0;
@@ -1616,8 +1586,7 @@ input[type='checkbox']:disabled + label {
   color: #fff;
   line-height: 1.2rem;
   text-align: center;
-  z-index: 100;
-  border-radius: 0;
+  border-radius: 0 3.2px 3.2px 0;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 500ms ease; }
 
@@ -1628,11 +1597,11 @@ input[type='checkbox']:disabled + label {
   left: 65px;
   height: 1.3rem;
   padding: 0 0 2px 0;
-  width: 15.5rem;
+  width: 18rem;
   background: transparent;
   border: 1px solid black;
   box-shadow: inset 0 0 0 transparent;
-  transform: rotate(-4deg);
+  transform: rotate(-5deg);
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -1642,7 +1611,7 @@ input[type='checkbox']:disabled + label {
 .deleteMapButton .tooltip {
   position: absolute;
   top: -40px;
-  left: -65px;
+  left: -57px;
   width: 6em;
   padding: 0 0 3px 0;
   font-size: 0.9rem;
@@ -1686,16 +1655,16 @@ input[type='checkbox']:disabled + label {
 .saveMapButton .tooltip:after {
   top: 0;
   left: 100%;
-  border-width: 0.93em;
+  border-width: 0.7em;
   border-color: transparent transparent transparent #fff; }
 
 .deleteMapButton .tooltip:after {
   top: 0;
   left: 100%;
-  border-width: 0.78em;
   border-color: transparent transparent transparent #a32d00; }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip {
+  transform: rotate(-9deg);
   box-shadow: inset -300px 3px 3px black, inset 0 -3px 3px black; }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip:after {
@@ -1732,17 +1701,13 @@ input[type='checkbox']:disabled + label {
   .smallBird {
     transform: scale(0.7); }
   .thinify {
-    margin-right: -35px; }
-  #mapsCollection.open {
-    transform: translateY(-255.5px); } }
+    margin-right: -35px; } }
 
 @media screen and (max-width: 1600px) {
   .smallBird {
     transform: scale(0.6); }
   .thinify {
-    margin-right: -45px; }
-  #mapsCollection.open {
-    transform: translateY(-219px); } }
+    margin-right: -45px; } }
 
 @media screen and (max-width: 1460px) {
   .thinify {
@@ -1759,13 +1724,10 @@ input[type='checkbox']:disabled + label {
 @media screen and (max-width: 1370px) {
   #currentBirdMap {
     transform: scale(1); }
-  #currentMap {
-    top: calc(45vh - 210px);
-    left: 70vw; }
   #currentMap.modal-shrink {
     transform: translateX(-40px); }
   #currentMap .birdName {
-    top: -50px;
+    top: -30px;
     font-size: 1.4rem; }
   .saveMapButton {
     top: 240px;
@@ -1782,6 +1744,9 @@ input[type='checkbox']:disabled + label {
     top: 250px;
     left: 140px;
     transform: scale(0.8); }
+  #mapsCollection {
+    left: -3vw;
+    width: 72vw; }
   .thinify {
     margin-right: -72px; }
   #numDays {
@@ -1791,14 +1756,36 @@ input[type='checkbox']:disabled + label {
 @media screen and (max-width: 1305px) {
   html {
     font-size: 13px; }
+  .smallBanner {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    padding: 20px 0 93px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.15em;
+    text-shadow: 1px 1px 2px #444;
+    background: #6d9892;
+    cursor: pointer; }
+  .smallBanner > span {
+    display: block;
+    position: relative;
+    left: 17vw;
+    width: auto;
+    margin: 0 auto; }
+  .titleBanner {
+    display: none; }
+  .titleBanner_spacer {
+    position: relative;
+    top: -10px;
+    font-size: 1.4rem; }
   #mainContent {
     left: 4vw; }
   .articles {
-    margin-top: 20px;
+    margin: 100px 0 0 0;
     width: 54vw; }
-  .birdName.smallBirdText {
-    top: -39px;
-    height: 59px; }
   #checklistOptions::before {
     left: -165px;
     font-size: 1.4em; }
@@ -1806,34 +1793,19 @@ input[type='checkbox']:disabled + label {
     left: 0; } }
 
 @media screen and (max-width: 1200px) {
-  .titleText {
-    padding: 11px 0 0 0; }
+  .smallBanner > span {
+    left: 12vw; }
   .articles {
     line-height: 22px; }
   #checklistOptions.panel {
-    width: 70%;
     margin: 30px 0 15px 0;
-    padding: 10px 0 10px 20px;
     line-height: 30px; }
-  #checklistCountryButton {
-    padding: 3px 0 4px 0;
-    min-width: 190px;
-    text-align: center;
-    line-height: 20px; }
-  #pdfButton {
-    height: 26px;
-    min-width: 160px;
-    padding: 3px 0 0 18px; }
-  #csvButton {
-    height: 26px;
-    min-width: 160px;
-    padding: 2px 16px 0 18px; }
   input[type='checkbox'] {
     margin: 0; }
   #numDays {
     left: -30px;
-    width: 140%;
-    margin: 10px 0 90px 0; }
+    width: 120%;
+    margin: 10px 0 10px 0; }
   #numDays a {
     width: 40px;
     height: 40px;
@@ -1852,10 +1824,16 @@ input[type='checkbox']:disabled + label {
     display: none; } }
 
 @media screen and (max-width: 1165px) {
+  /*.smallBanner > span {
+        left : 10vw;
+    }*/
+  /*#mainContent {
+        left : 2vw;
+    }*/
   #currentBirdMap {
     transform: scale(0.9); }
   #currentMap .birdName {
-    top: -10px;
+    top: 20px;
     font-size: 1.2rem; }
   .colorKey {
     top: 270px;
@@ -1868,56 +1846,42 @@ input[type='checkbox']:disabled + label {
   .saveMapButton .tooltip {
     top: -50px;
     left: -110px; }
-  #currentMap.shiftUp {
-    transform: translateY(-25px); }
-  #mapsHeader {
-    height: 30px; }
-  #mapsCollection.namesOnlySeen {
-    transform: translateY(-30px) scale(1); }
-  #mapsCollection.open {
-    transform: translateY(-215px); }
+  #mapsCollection {
+    left: -1vw;
+    width: 75vw; }
   .smallBird {
     transform: scale(0.5); }
   .thinify {
-    top: -71px;
-    margin-right: -125px; }
+    margin-right: -95px; }
   .articles {
     width: 595px; }
-  .taxInstructionsButton {
-    top: -30px;
-    right: -4%;
-    width: 40px;
-    height: 40px;
-    padding: 0.4em 0 0 0; }
   .checklistTitle {
     top: 20px;
     left: -235px;
     font-size: 1.5rem; } }
 
 @media screen and (max-width: 968px) {
-  #currentMap {
-    left: 66vw; }
-  .saveMapButton {
-    left: 30px; }
-  #currentMap .birdName {
-    top: 20px; }
   .thinify {
-    margin-right: -115px; }
-  .saveMapButton .tooltip {
-    top: -70px;
-    left: -55px; } }
+    margin-right: -115px; } }
 
 @media screen and (max-width: 950px) {
   html {
     font-size: 12px; }
+  /*.smallBanner > span {
+        left : 10vw;
+    }*/
   #mainContent {
     left: 2vw; }
   .articles {
-    width: 520px; }
+    margin: 80px 0 0 0;
+    width: 520px;
+    /*width : 54vw;*/ }
   #currentBirdMap {
     transform: scale(0.85); }
   .colorKey {
-    left: 145px; }
+    /*top  :  270px;*/
+    left: 145px;
+    /*transform : scale(0.9);*/ }
   .checklistTitle {
     left: -188px;
     font-size: 1.4rem; }
@@ -1926,7 +1890,9 @@ input[type='checkbox']:disabled + label {
     width: 120%; }
   #numDays a {
     width: 35px;
-    height: 35px; }
+    height: 35px;
+    /*padding  :  7px 0 0 0;*/
+    /*font-size  :  1rem;*/ }
   #numDays a.highlight {
     top: -6px;
     transform: scale(1.3); } }
@@ -1953,7 +1919,11 @@ input[type='checkbox']:disabled + label {
 @media screen and (max-width: 800px) {
   html {
     font-size: 11px; }
+  /*.smallBanner > span {
+        left : 10vw;
+    }*/
   .articles {
+    margin: 80px 0 0 0;
     width: 480px; }
   #currentBirdMap {
     transform: scale(0.8); }

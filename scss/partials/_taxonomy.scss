@@ -1,22 +1,15 @@
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 
 .slideUpWrapper  {
-    // max-height : 600px;
     pointer-events  :  auto;
     overflow-y: hidden;
-
-    transform-origin: top;
-    // transform : scale(1) translateY(0);
-    transform : translateY(0) scaleY(1);
+    transform : scale(1) translateY(0);
 
     transition  :  all 250ms;
 }
 
 .slideUpWrapper.closeInstructions  {
-    // max-height: 0;
-    // transform : scale(0.8) translateY(30px);
-    transform : translateY(30px) scaleY(0);
-
+    transform : scale(0.8) translateY(30px);
     // transition  :  all 250ms;
 }
 
@@ -28,8 +21,8 @@
 
 .taxInstructionsButton  {
     position  :  absolute;
-    top : -40px;
-    right : -5%;
+    top : -25px;
+    right : -41px;
 
     width  :  50px;
     height  :  50px;
@@ -46,20 +39,14 @@
     box-shadow  :  0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
 
     cursor  :  pointer;
-    -webkit-transition  :  all 850ms ease-in-out 500ms;
-       -moz-transition  :  all 850ms ease-in-out 500ms;
-         -o-transition  :  all 850ms ease-in-out 500ms;
-            transition  :  all 850ms ease-in-out 500ms;
+    -webkit-transition  :  all 350ms ease-in-out 500ms;
+       -moz-transition  :  all 350ms ease-in-out 500ms;
+         -o-transition  :  all 350ms ease-in-out 500ms;
+            transition  :  all 350ms ease-in-out 500ms;
 }
 
 .taxInstructionsButton:hover {
     background  :  #252525;
-}
-
-.taxInstructionsButton.instructionsClosed {
-    right : 90%;
-    top : -30px;
-    background  :  rgba(0,0,0,0.5);
 }
 
 // .taxInstructionsButton:hover + div.slideUpWrapper {
@@ -205,11 +192,8 @@
 
     position  :  relative;
     height  :  auto;
-    margin  :  0 0 45px 0;
+    margin  :  0 0 15px 0;
     padding-bottom  :  10px;
-    // overflow-y: auto;
-    // overflow-x  :  visible;
-
     z-index  :  1;
     transition  :  opacity 350ms 200ms;
 }
@@ -253,7 +237,7 @@
     box-shadow : 0 -1px 0 rgba(255,255,255,0.35);
     -webkit-overflow-scrolling  :  touch;
 
-    overflow-x  :  visible;
+    overflow-x  :  hidden;
     overflow-y  :  auto;
     cursor  :  pointer;
     transition  :  height 350ms;
@@ -264,13 +248,7 @@
     transition  :  all 2s;
 }
 
-// #ulWrap  {
-    // overflow-y: auto;
-    // overflow-x  :  visible;
-// }
-
 #searchResults li  {
-    position : relative;
     padding  :  0 0 2px 16px;
     list-style-type  :  none;
 }
@@ -302,25 +280,9 @@
 }
 
 #searchResults li.active  {
-    // color  :  white;
-    // background-color  :  $birdActiveColor;
-    background-color : #333;
-    outline : 1px solid black;
+    color  :  white;
+    background-color  :  $birdActiveColor;
 }
-
-// #searchResults li.active::before  {
-//     position : absolute;
-//     left : -10vw;
-//     // left : calc(-100% + -25px);
-//     content : '';
-//     color : white;
-
-//     background-color : #333;
-//     height : 50%;
-//     top : 25%;
-//     width : 10vw;
-// }
-
 
 .family   {
     padding  :  0 0 2px 0;
@@ -343,7 +305,7 @@
 #searchResults span:not(.fsc):last-child  {
     position  :  absolute;
     left  :  53.8%;
-    // font-style  :  italic;
+    font-style  :  italic;
 }
 
 .fsc  {
@@ -421,9 +383,9 @@
 
     // -webkit-overflow-scrolling  :  touch;
 
-    overflow-x  :  visible;
+    overflow-x  :  hidden;
     overflow-y  :  auto;
-    z-index : -10;
+
     border-top  :  15px solid transparent;
     border-bottom  :  15px solid transparent;
     border-radius  :  10px;
@@ -572,18 +534,6 @@
 
 /* added by toggleFamilyOpen */
 #tree ul li.active {
-    position : relative;
-    // color  :  white;
-    // background-color  :  $birdActiveColor;
-    background-color : #333;
-    outline : 1px solid black;
-}
-
-#tree ul li.active::before {
-     position : absolute;
-    left : -20px;
-    // left : calc(-100% + -25px);
-    content : '-->';
-    color : white;
-    z-index : 20;
+    color  :  white;
+    background-color  :  $birdActiveColor;
 }

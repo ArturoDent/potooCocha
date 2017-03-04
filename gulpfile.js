@@ -131,7 +131,7 @@ function processHTML()  {
       // add ?v=dateTime stamp to css and js links
     .pipe(addVersionString(versionConfig))
 
-    // .pipe(rename("index.html"))   ???
+    // .pipe(rename("index.html))   ???
     .pipe(gulp.dest(paths.html.test));
 }
 
