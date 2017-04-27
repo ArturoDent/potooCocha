@@ -8,23 +8,33 @@
 }
 
 #checklistAuthorsPanel  {
-    opacity : 0;
-    height : 0;
-    margin : 0 5px;
-    padding : 7px 5px 5px 5px;
+    position: absolute;
+    // top: calc(100% - 52px);
+    transform: translateY(-52px);
+    // opacity : 0;
+    height : auto;
+    // width: 150%;
+    // max-height: 52px;
+    margin : 0 10px 0 10px;
+    padding : 7px 10px 8px 20px;
     font-variant: small-caps;
     font-size  :  0.8rem;
     text-align  :  center;
     line-height  :  20px;
-    background : $panelFlyoutColor;
-    border-top : 1px solid rgba(255,255,255,0.25);
-    transition : all 350ms;
+    background-color : $panelFlyoutColor;
+    // border-top : 1px solid rgba(255,255,255,0.25);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    // border-radius: 5px;
+    transition : transform 650ms;
+    z-index: -1;
 }
 
 #checklistAuthorsPanel.show  {
-    opacity : 1;
-    height : auto;
-    margin : 30px 0 0 0;
+    // opacity : 1;
+    transform: translateY(0);
+    // height : auto;
+    // margin : 0 0 0 0;
 }
 
 #checklistArticle .panel  {
@@ -40,7 +50,7 @@
     left  :  10%;
     width  :  80%;
     /*height : 400px;*/
-    margin  :  50px 0 20px 0;
+    margin  :  100px 0 20px 0;
     /*padding  :  30px 0 30px 35px;*/
     padding  :  10px 0 10px 45px;
 
@@ -51,8 +61,8 @@
 
     letter-spacing  :  0.15em;
     // text-shadow: none;
-// background : #B1B7AE;
-// background : #333;
+// background-color : #B1B7AE;
+// background-color : #333;
 
     // border  :  1px solid #607478;
     border-top-left-radius  :  10%;
@@ -72,8 +82,12 @@
     // color  :  $genericButtonColor;
     color  :  white;
 
-    text-shadow : 1px 1px 1px rgba(255,255,255,0.2);
+    text-shadow : 0 1px 1px rgba(0,0,0,0.9);
     letter-spacing  :  0.2em;
+
+        //  -webkit-filter  :  drop-shadow( 0 0 4px rgba(0,0,0,0.8) );
+        // -ms-filter  :  drop-shadow( 0 0 4px rgba(0,0,0,0.8) );
+        //     filter  :  drop-shadow( 0 0 4px 2px rgba(0,0,0,0.8) );
 
     transform  :  rotate(-86deg);
     -webkit-transform-origin  :  top right;
@@ -120,7 +134,7 @@
     height  :  30px;
     min-width : 190px;
 
-    padding  :  4px 16px 0 18px;
+    padding  :  4px 0 0 18px;
 }
 
 #numDays {
@@ -136,7 +150,7 @@
 
     color  :  #fff;
 
-    background  :  transparent;
+    background-color  :  transparent;
 }
 
 #days {
@@ -154,7 +168,7 @@
     top  :  2px;
     width  :  44px;
     height  :  44px;
-    padding  :  8px 0 0 0;
+    padding  :  6px 0 0 0;
 
     color : #313131;
     font-size  :  1.1rem;
@@ -164,8 +178,13 @@
 
     // slightly randomize the variuos border-radii ala cicada principle ?***
     border-radius  :  50%;
-    background  :  #eee;
-    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.1);
+    background-color  :  #eee;
+    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0,0,0,1);
+
+    //    -webkit-filter  :  drop-shadow( 4px 0 4px rgba(255,255,255,0.2) ) drop-shadow( -4px 0 4px rgba(0,0,0,0.4) );
+    //     -ms-filter  :  drop-shadow( 4px 0 4px rgba(255,255,255,0.2) ) drop-shadow( -4px 0 4px rgba(0,0,0,0.4) );
+    //         filter  :  drop-shadow( 0 0 4px rgba(0,0,0,0.4) );
+
 
     cursor  :  pointer;
     -webkit-transition  :  all 400ms;
@@ -178,21 +197,23 @@
     color : #fff;
     text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
     border-top-right-radius  :  10%;
-    background  :  $genericButtonColor;
-    box-shadow  :  0 0 1px 1px rgba(255,255,255,0.4);
+    background-color  :  $genericButtonColor;
+    // box-shadow  :  0 0 1px 1px rgba(255,255,255,0.4);
 }
 
 #numDays a.highlight {
     top  :  -15px;
 
     color  :  #fff;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+    // text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
 
     border-top-right-radius  :  10%;
     background-color  :  $genericButtonColor;
-    box-shadow  :  0 0 2px 2px rgba(255,255,255,0.4);
+    // box-shadow  :  0 0 2px 2px rgba(255,255,255,0.4);
 
-    transform  :  scale(1.6);
-    transition : all 350ms;
+    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3);
+
+    transform  :  scale(1.3);
+    transition : all 550ms;
     cursor : default;
 }

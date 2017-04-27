@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -35,7 +34,10 @@
   top: -22px;
   left: 8px;
   width: 3em;
-  height: 3em; }
+  height: 3em;
+  fill: #c6c7c4;
+  stroke: #333;
+  stroke-width: 0.25px; }
 
 .icon-female {
   top: 3px;
@@ -54,7 +56,7 @@
 .icon-file-excel {
   top: 1px;
   height: 0.92em;
-  left: 17px; }
+  left: 7px; }
 
 .icon-paper-plane-o {
   top: 1px; }
@@ -92,7 +94,7 @@
 .genericButton.highlight {
   /*background-color  :  #252525;*/
   border: 1px solid #888;
-  background-color: #696a64; }
+  background-color: #42433f; }
 
 .genericButton.highlight:hover, .genericButton.highlight:focus {
   letter-spacing: 0.3em;
@@ -104,10 +106,7 @@ html {
   height: 100%;
   /*so 1em = 10px (browser default usually 16px)*/
   font-size: 16px;
-  background: #545550; }
-
-:host /deep/ .image-img {
-  height: 60pt; }
+  background-color: #545550; }
 
 body {
   width: 100vw;
@@ -118,7 +117,8 @@ body {
   color: white;
   letter-spacing: 0.04em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  background: #545550; }
+  background-color: #545550;
+  overflow-x: hidden; }
 
 a {
   color: inherit;
@@ -133,8 +133,7 @@ a:link {
   position: relative;
   top: 8vh;
   left: 10vw;
-  width: 80vw;
-  overflow: visible;
+  width: calc(80vw - 30px);
   transition: transform 750ms; }
 
 #mainContent.modal-shrink {
@@ -147,8 +146,8 @@ a:link {
   flex-direction: row;
   justify-content: space-around;
   top: 0;
+  left: 0;
   width: 100vw;
-  overflow: visible;
   margin: 0 auto;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
@@ -157,19 +156,18 @@ a:link {
   transform-origin: top left; }
 
 .titleText {
-  flex: 1 1 230px;
-  height: 40px;
-  padding: 5px 0 0 0;
+  flex: 1 1 auto;
+  height: 45px;
+  padding: 12px 0 0 0;
   font-size: 1.4rem;
   font-weight: bold;
   font-variant: small-caps;
   color: #fff;
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-shadow: -1px 1px 1px black;
-  border: 1px solid rgba(255, 255, 255, 0.5);
   border-top: none;
-  background: #333;
+  background-color: #333333;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); }
 
 .titleBanner_spacer {
@@ -180,17 +178,20 @@ a:link {
 
 .surroundBanner {
   position: relative;
-  height: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  height: 45px;
   background-color: #333;
   box-shadow: 0 -1px rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.2); }
 
 .surroundBanner:nth-child(1) {
-  flex: 1 1 auto; }
+  flex: 1 1 auto;
+  background-color: #333333; }
 
 .surroundBanner:nth-child(3) {
   flex: 1 1 auto;
-  flex-grow: 4; }
+  flex-grow: 5;
+  background: -moz-linear-gradient(left, #333333 0%, rgba(51, 51, 51, 0) 100%);
+  background: -webkit-linear-gradient(left, #333333 0%, rgba(51, 51, 51, 0) 100%);
+  background: linear-gradient(to right, #333333 0%, rgba(51, 51, 51, 0) 100%); }
 
 .articles {
   display: -webkit-flex;
@@ -222,7 +223,7 @@ article {
   pointer-events: auto;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 3px;
-  background: #545550;
+  background-color: #545550;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 2s;
   -moz-transition: opacity 2s;
@@ -230,9 +231,9 @@ article {
   transition: opacity 2s; }
 
 .flyoutPanel {
-  width: calc(100% - 40px);
+  position: relative;
+  top: 0;
   height: 42px;
-  margin: 0 auto 0 auto;
   font-size: 1rem;
   font-variant: small-caps;
   color: #fff;
@@ -240,21 +241,35 @@ article {
   text-align: center;
   letter-spacing: 0.1em;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  background-color: #696a64; }
+  background-color: #42433f; }
 
 .topFlyoutPanel {
   padding-bottom: 4px;
   border-bottom: none;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  box-shadow: inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 1px rgba(0, 0, 0, 0.5); }
+  box-shadow: inset 0 -1px 1px -1px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(0, 0, 0, 0.2);
+  left: calc(10vw + 20px);
+  width: calc(100% - 10vw - 40px); }
+
+#checklistArticle .topFlyoutPanel {
+  position: absolute;
+  top: -40px;
+  left: 123px;
+  width: calc(100% - 100px);
+  height: 142px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 80px; }
 
 .bottomFlyoutPanel {
   padding-top: 3px;
   border-top: none;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 0 1px rgba(0, 0, 0, 0.5); }
+  box-shadow: inset 0 1px 1px -1px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(0, 0, 0, 0.2);
+  left: calc(10vw + 20px);
+  top: 33px;
+  width: calc(100% - 10vw - 40px); }
 
 /*   -------------------   Footer   ----------------------------   */
 footer {
@@ -275,33 +290,58 @@ footer a:hover, footer a:focus {
   transition: all 350ms; }
 
 #mapsCollection {
+  display: flex;
+  justify-content: center;
   position: fixed;
-  top: 100vh;
+  top: 95vh;
   left: 0;
   width: 100vw;
   height: 365px;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #474844;
+  background-color: #111;
   cursor: pointer;
   z-index: 10;
   transform: scale(0.1);
-  transition: transform 1.2s; }
+  transition: all 1.2s; }
 
 #mapsHeader {
+  position: absolute;
   top: 0;
   left: 0;
   height: 50px;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: #333; }
+  background-color: #333333; }
 
 #mapsCollection.namesOnlySeen {
-  transform: translateY(-60px) scale(1); }
+  top: 100vh;
+  transform: translateY(-50px) scale(1); }
 
 #mapsCollection.open {
-  transform: translateY(-365px); }
+  transform: translateY(-350px); }
+
+#deleteAllMapsButton {
+  position: absolute;
+  left: 0;
+  top: 290%;
+  height: auto;
+  padding: 2px 15px 3px 45px;
+  font-size: 0.75em;
+  line-height: 1.45em;
+  cursor: pointer;
+  background-color: #a32d00;
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5); }
+
+#deleteAllMapsButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-width: 0.9em;
+  border-style: solid;
+  border-color: transparent transparent transparent #a32d00; }
 
 .smallBird {
   opacity: 0;
@@ -313,13 +353,15 @@ footer a:hover, footer a:focus {
   transform-origin: 0 50%; }
 
 .thinify {
-  display: inline-block;
+  flex-grow: 0;
+  flex-basis: 305px;
   position: relative;
-  top: -13px;
-  left: 0;
-  width: 305px;
+  top: 37px;
   margin-top: -50px;
   margin-bottom: -50px; }
+
+.smallBird .drawing {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3)); }
 
 .birdName {
   position: absolute;
@@ -339,7 +381,7 @@ footer a:hover, footer a:focus {
   font-style: italic; }
 
 .birdName.smallBirdText {
-  top: -39px;
+  top: -40px;
   left: -55px;
   width: calc(100% + 40px);
   padding: 8px 0 0 0;
@@ -347,7 +389,12 @@ footer a:hover, footer a:focus {
   line-height: 20px;
   transform: scale(1);
   border-radius: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.5); }
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: #aaa;
+  transition: background-color 1500ms; }
+
+.birdName.smallBirdText.highlightName {
+  background-color: transparent; }
 
 .smallBird:nth-child(2) .birdName.smallBirdText {
   border-left: 1px solid rgba(255, 255, 255, 0.5); }
@@ -358,7 +405,7 @@ footer a:hover, footer a:focus {
   top: calc(50vh - 210px);
   left: 65vw;
   margin: 0 0 0 5px;
-  transition: opacity 300ms, transform 800ms 350ms;
+  transition: opacity 300ms, transform 900ms 300ms;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -381,11 +428,11 @@ footer a:hover, footer a:focus {
 .birdMapInstance {
   position: relative;
   top: 10px;
-  background: transparent; }
+  background-color: transparent; }
 
 #currentBirdMap {
   transform: scale(1.25);
-  background: transparent; }
+  background-color: transparent; }
 
 .mapButtons {
   width: 30px;
@@ -398,25 +445,32 @@ footer a:hover, footer a:focus {
 
 .deleteMapButton {
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: -10%;
-  font-size: 30px;
-  color: #d32d00;
-  border: none; }
+  height: auto;
+  width: auto;
+  padding: 0 6px 6px 6px;
+  font-size: 22px;
+  line-height: 22px;
+  color: #fff;
+  text-shadow: none;
+  background-color: #d32d00;
+  border: none;
+  border-radius: 50%; }
 
 .saveMapButton {
   display: none;
   position: absolute;
   top: 240px;
   left: -30px;
-  background: transparent; }
+  background-color: transparent; }
 
 .drawing {
   position: relative;
   text-shadow: none;
-  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
-  -ms-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3)); }
+  -webkit-filter: drop-shadow(4px 0 4px rgba(255, 255, 255, 0.2)) drop-shadow(-4px 0 4px rgba(0, 0, 0, 0.4));
+  -ms-filter: drop-shadow(4px 0 4px rgba(255, 255, 255, 0.2)) drop-shadow(-4px 0 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(-4px 0 4px rgba(0, 0, 0, 0.3)) drop-shadow(4px 0 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 8px rgba(0, 0, 0, 0.3)); }
 
 .colorKey {
   opacity: 0.9;
@@ -431,10 +485,11 @@ footer a:hover, footer a:focus {
 .colorKey ul li {
   position: relative;
   margin-top: 4px;
+  padding: 0 10px 0 30px;
   font-size: 0.8rem;
   text-align: center;
-  letter-spacing: 0.1em;
-  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  letter-spacing: 0.15em;
+  text-shadow: black 1px 1px 1px;
   list-style-type: none; }
 
 .colorKey ul li:nth-child(1) {
@@ -444,25 +499,27 @@ footer a:hover, footer a:focus {
 
 .colorKey ul li:nth-child(2) {
   /* hypothetical  */
-  color: #23bc56;
-  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 1px; }
+  color: #009933; }
 
 .colorKey ul li:nth-child(3) {
   /* nonbreeder    */
-  color: #df7920;
-  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 1px; }
+  padding: 0 0 2px 0;
+  color: white;
+  background-color: #bf5900; }
 
 .colorKey ul li:nth-child(4) {
   /* vagrant       */
-  color: #ff0; }
+  color: #afaf10; }
 
 .colorKey ul li:nth-child(5) {
   /* extinct       */
-  color: #fff; }
+  color: #eee; }
 
 .colorKey ul li:nth-child(6) {
   /* resident      */
-  color: #3030cc; }
+  padding: 0 0 2px 0;
+  color: white;
+  background-color: #3030cc; }
 
 .colorKey ul li:nth-child(7) {
   /* endemic       */
@@ -477,22 +534,23 @@ footer a:hover, footer a:focus {
   overflow: visible; }
 
 #checklistAuthorsPanel {
-  opacity: 0;
-  height: 0;
-  margin: 0 5px;
-  padding: 7px 5px 5px 5px;
+  position: absolute;
+  transform: translateY(-52px);
+  height: auto;
+  margin: 0 10px 0 10px;
+  padding: 7px 10px 8px 20px;
   font-variant: small-caps;
   font-size: 0.8rem;
   text-align: center;
   line-height: 20px;
-  background: #696a64;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  transition: all 350ms; }
+  background-color: #42433f;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: transform 650ms;
+  z-index: -1; }
 
 #checklistAuthorsPanel.show {
-  opacity: 1;
-  height: auto;
-  margin: 30px 0 0 0; }
+  transform: translateY(0); }
 
 #checklistArticle .panel {
   padding: 25px 0 0 0; }
@@ -505,7 +563,7 @@ footer a:hover, footer a:focus {
   left: 10%;
   width: 80%;
   /*height : 400px;*/
-  margin: 50px 0 20px 0;
+  margin: 100px 0 20px 0;
   /*padding  :  30px 0 30px 35px;*/
   padding: 10px 0 10px 45px;
   font-size: 1rem;
@@ -523,7 +581,7 @@ footer a:hover, footer a:focus {
   font-weight: bold;
   font-variant: small-caps;
   color: white;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
   letter-spacing: 0.2em;
   transform: rotate(-86deg);
   -webkit-transform-origin: top right;
@@ -562,7 +620,7 @@ footer a:hover, footer a:focus {
   bottom: 15%;
   height: 30px;
   min-width: 190px;
-  padding: 4px 16px 0 18px; }
+  padding: 4px 0 0 18px; }
 
 #numDays {
   display: flex;
@@ -573,7 +631,7 @@ footer a:hover, footer a:focus {
   width: 140%;
   margin: 20px 0 110px 0;
   color: #fff;
-  background: transparent; }
+  background-color: transparent; }
 
 #days {
   position: relative;
@@ -588,15 +646,15 @@ footer a:hover, footer a:focus {
   top: 2px;
   width: 44px;
   height: 44px;
-  padding: 8px 0 0 0;
+  padding: 6px 0 0 0;
   color: #313131;
   font-size: 1.1rem;
   text-align: center;
   text-decoration: none;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background: #eee;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #eee;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3), inset 0 0 10px black;
   cursor: pointer;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
@@ -607,18 +665,16 @@ footer a:hover, footer a:focus {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   border-top-right-radius: 10%;
-  background: #A65751;
-  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.4); }
+  background-color: #A65751; }
 
 #numDays a.highlight {
   top: -15px;
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   border-top-right-radius: 10%;
   background-color: #A65751;
-  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.4);
-  transform: scale(1.6);
-  transition: all 350ms;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3);
+  transform: scale(1.3);
+  transition: all 550ms;
   cursor: default; }
 
 /*  from "CSS Secrets" by Lea Verou  */
@@ -649,13 +705,13 @@ input[type='checkbox']:checked + label::before {
 input[type='checkbox']:checked + label {
   margin-left: -7px;
   padding: 6px 15px 6px 7px;
-  background: #A65751;
+  background-color: #A65751;
   border-radius: 5px; }
 
 input[type='checkbox']:hover + label:hover {
   margin-left: -7px;
   padding: 6px 15px 6px 7px;
-  background: #A65751;
+  background-color: #A65751;
   border-radius: 5px;
   cursor: pointer;
   transition: all 350ms; }
@@ -671,18 +727,18 @@ input[type='checkbox']:disabled:hover + label:hover {
 input[type='checkbox']:disabled + label::before {
   color: rgba(255, 255, 255, 0.4);
   border: none;
-  background: none; }
+  background-color: none; }
 
 input[type='checkbox']:disabled + label {
   color: rgba(255, 255, 255, 0.4);
-  background: none; }
+  background-color: none; }
 
 #sampleTable {
   position: relative;
   left: 0;
   width: 94%;
   min-width: 480px;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 25px auto;
   font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
@@ -765,17 +821,17 @@ input[type='checkbox']:disabled + label {
 
 .flashDays {
   animation-name: flashDays;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
-  animation-delay: 0.3s; }
+  animation-delay: 0.2s; }
 
 @keyframes flashDays {
-  0%, 100% {
-    color: black;
-    transform: none; }
+  0% {
+    background-color: #A65751; }
   50% {
-    background-color: white;
-    transform: scale(2); } }
+    transform: scale(1.1); }
+  100% {
+    background-color: #A65751; } }
 
 #sampleTable td.familyHidden {
   border: solid 1px #545550; }
@@ -989,7 +1045,7 @@ input[type='checkbox']:disabled + label {
   padding: 0;
   z-index: 10;
   border: none;
-  background: rgba(90, 91, 86, 0.65);
+  background-color: rgba(90, 91, 86, 0.65);
   transition: opacity 750ms; }
 
 .md-show ~ .md-overlay {
@@ -1005,10 +1061,9 @@ input[type='checkbox']:disabled + label {
   flex-wrap: nowrap;
   justify-content: space-around;
   height: 100vh;
-  padding: 8px 10px 20px 0;
+  padding: 8px 0 20px 0;
   align-items: center;
-  background-color: #474844;
-  border-left: 1px inset white;
+  background-color: #393a3e;
   box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.25), -2px 0 2px rgba(0, 0, 0, 0.25); }
 
 .country-menu-wrap::before {
@@ -1016,51 +1071,56 @@ input[type='checkbox']:disabled + label {
   display: inline-block;
   position: absolute;
   top: -5px;
-  left: -45px;
-  width: 45px;
-  height: calc(100vh + 5px); }
+  left: -28px;
+  width: 28px;
+  height: calc(100vh + 5px);
+  background: -webkit-linear-gradient(left, rgba(51, 51, 51, 0) 0%, #333333 100%);
+  background: -moz-linear-gradient(left, rgba(51, 51, 51, 0) 0%, #333333 100%);
+  background: -o-linear-gradient(left, rgba(51, 51, 51, 0) 0%, #333333 100%);
+  background: linear-gradient(to right, rgba(51, 51, 51, 0) 0%, #333333 100%); }
 
 .country-menu a {
   position: relative;
-  /*left : 20px;*/
-  width: 185px;
-  padding: 3px 0 5px 12px;
+  left: -48px;
+  width: 285px;
+  padding: 3px 0 5px 100px;
   text-decoration: none;
   overflow: visible;
   background-color: transparent;
   border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   border-radius: 10px;
-  cursor: pointer;
-  transition: all 450ms; }
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transform: translateX(0);
+  transition: all 850ms 650ms ease-out;
+  cursor: pointer; }
 
 .country-menu a:hover, .country-menu a:focus {
-  border-top: 1px solid #666;
-  background-color: #222;
-  transition: all 450ms; }
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #999;
+  background-color: #696a64;
+  transition: all 550ms; }
 
 .country-menu a::before {
   content: '';
   display: inline-block;
   position: absolute;
-  top: -2px;
-  left: -54px;
-  width: 32px;
-  height: 32px;
-  background-size: contain; }
-
-.country-menu a:nth-child(n)::before {
   top: -11px;
-  left: -73px;
+  left: 20px;
   padding: 9px;
   width: 50px;
   height: 50px;
-  background-image: url("../../../flags/32/South-America-min.png");
+  border-radius: 50%;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   background-position: center;
   background-origin: padding-box;
   background-color: #545550;
-  border-radius: 50%;
   background-size: 32px 32px;
   background-repeat: no-repeat; }
+
+.country-menu a:nth-child(1)::before {
+  background-image: url("../../../flags/32/South-America-min.png"); }
 
 .country-menu a:nth-child(2)::before {
   background-image: url("../../../flags/32/Aruba.png"); }
@@ -1118,40 +1178,26 @@ input[type='checkbox']:disabled + label {
 .country-menu a:nth-child(19)::before {
   background-image: url("../../../flags/32/Paraguay.png"); }
 
-.country-menu a.taxHighlight {
+.country-menu a.taxHighlight,
+.country-menu a.checkHighlight,
+.country-menu a.bothHighlights {
+  padding: 3px 0 5px 85px;
   color: white;
-  text-decoration: none;
-  border-top: 1px solid #555;
-  background-color: #222;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+  border-top: 1px solid #666;
+  background-color: #A65751;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  transform: translateX(-25px); }
 
-.country-menu a.checkHighlight {
-  color: white;
-  text-decoration: none;
-  border-top: 1px solid #555;
-  background-color: #222;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
-
-.country-menu a.taxHighlight::after {
-  content: '✓';
-  position: absolute;
-  left: -86px;
-  background: none; }
-
-.country-menu a.checkHighlight::after {
-  content: '✓';
-  position: absolute;
-  left: -86px;
-  background: none; }
-
-.country-menu a.bothHighlights::after {
-  content: '✓✓';
-  position: absolute;
-  left: -99px;
-  background: none; }
+.country-menu a.taxHighlight::before,
+.country-menu a.checkHighlight::before,
+.country-menu a.bothHighlights::before {
+  border-right: 1px solid transparent;
+  box-shadow: 2px 1px transparent; }
 
 #taxonomyArticle {
   position: relative;
+  border: none;
+  box-shadow: none;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
   -o-transition: all 850ms ease-in-out;
@@ -1169,26 +1215,19 @@ input[type='checkbox']:disabled + label {
   padding: 21px 20px 16px 20px;
   font-size: 1rem;
   text-align: center;
-  /*background  :  $panelFlyoutColor;*/
-  background: #696a64;
+  /*background-color  :  $panelFlyoutColor;*/
+  background-color: #3f403c;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
 
 #taxonomyArticle a.linkHighlight {
-  padding: 3px 5px 2px 6px;
+  padding: 3px 4px 2px 4px;
   border-bottom: solid 1px #ccc;
   box-shadow: 0 1px rgba(0, 0, 0, 0.3); }
 
 #taxonomyArticle a.linkHighlight:hover {
-  background: #A65751;
+  background-color: #A65751;
   transition: all 350ms; }
-
-#taxTreeArticle {
-  margin: 0 0 15px 0;
-  padding-top: 20px;
-  border: none;
-  box-shadow: none;
-  overflow-x: visible !important; }
 
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 .slideUpWrapper {
@@ -1210,17 +1249,18 @@ input[type='checkbox']:disabled + label {
   position: absolute;
   top: -40px;
   right: -5%;
-  width: 50px;
-  height: 50px;
-  padding: 0.4em 0 0 0;
+  width: 46px;
+  height: 46px;
+  padding: 0.3em 0 0 0;
   z-index: 2;
   font-size: 1.6rem;
   font-weight: bold;
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 1px #fff;
+  background-color: #0b0b0b;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 0 1px #fff;
+  z-index: 2;
   cursor: pointer;
   -webkit-transition: all 850ms ease-in-out 500ms;
   -moz-transition: all 850ms ease-in-out 500ms;
@@ -1228,12 +1268,12 @@ input[type='checkbox']:disabled + label {
   transition: all 850ms ease-in-out 500ms; }
 
 .taxInstructionsButton:hover {
-  background: #252525; }
+  background-color: #252525; }
 
 .taxInstructionsButton.instructionsClosed {
   right: 90%;
   top: -30px;
-  background: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 #searchForm {
   display: flex;
@@ -1243,6 +1283,7 @@ input[type='checkbox']:disabled + label {
   padding: 10px 15px 30px 15px;
   margin-top: 10px;
   align-content: center;
+  z-index: 1;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
   -o-transition: all 850ms ease-in-out;
@@ -1278,7 +1319,7 @@ input[type='checkbox']:disabled + label {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 3px;
-  background: #545550;
+  background-color: #545550;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -1324,12 +1365,12 @@ input[type='checkbox']:disabled + label {
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
-  background: #A65751;
+  background-color: #A65751;
   cursor: pointer;
-  transition: background 350ms; }
+  transition: background-color 350ms; }
 
 #searchSpecials a:hover {
-  background: #333; }
+  background-color: #333; }
 
 #searchSpecials span.notAvailable {
   display: none; }
@@ -1341,11 +1382,20 @@ input[type='checkbox']:disabled + label {
 .panel.results-panel {
   opacity: 0;
   position: relative;
-  height: auto;
+  height: 0;
+  width: calc(100% + 10vw);
+  left: -10vw;
   margin: 0 0 45px 0;
   padding-bottom: 10px;
-  z-index: 1;
-  transition: opacity 350ms 200ms; }
+  border: none;
+  box-shadow: none;
+  transform: translateY(-80px);
+  transition: all 1000ms; }
+
+.panel.results-panel.translateDown {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0); }
 
 #countrySearch {
   opacity: 1;
@@ -1353,6 +1403,8 @@ input[type='checkbox']:disabled + label {
   left: -28px;
   width: calc(100% + 56px);
   padding: 15px 0;
+  left: 10vw;
+  width: calc(100% - 10vw);
   font-size: 1.1rem;
   font-variant: small-caps;
   color: #fff;
@@ -1361,8 +1413,10 @@ input[type='checkbox']:disabled + label {
   letter-spacing: 0.1em;
   border-right: 22px solid #545550;
   border-left: 22px solid #545550;
-  background: #696a64;
-  box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3); }
+  background-color: #42433f;
+  box-shadow: inset 0 5px 4px -4px rgba(0, 0, 0, 0.3), inset 0 -5px 4px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  border: none; }
 
 #searchResults {
   opacity: 0;
@@ -1371,26 +1425,39 @@ input[type='checkbox']:disabled + label {
   width: calc(100% + 48px);
   height: auto;
   max-height: 330px;
-  padding: 0;
+  padding: 0 0 0 10vw;
   font-size: 1rem;
   line-height: 1.15em;
+  border: none;
   border-top: 10px solid transparent;
   border-bottom: 5px solid transparent;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.35);
   -webkit-overflow-scrolling: touch;
-  overflow-x: visible;
   overflow-y: auto;
-  cursor: pointer;
-  transition: height 350ms; }
+  transition: height 350ms;
+  box-shadow: none; }
 
 #searchResults.fadeIn {
   opacity: 1;
   transition: all 2s; }
 
+#fakeResultsBox {
+  position: absolute;
+  top: 64px;
+  height: calc(100% - 64px);
+  width: calc(100% - 10vw);
+  left: 10vw;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  pointer-events: none; }
+
 #searchResults li {
   position: relative;
   padding: 0 0 2px 16px;
-  list-style-type: none; }
+  list-style-type: none;
+  cursor: pointer; }
 
 #searchResults li.bird {
   font-size: 0.9rem; }
@@ -1414,8 +1481,17 @@ input[type='checkbox']:disabled + label {
   padding: 3px 0 3px 16px; }
 
 #searchResults li.active {
-  background-color: #333;
-  outline: 1px solid black; }
+  background-color: #393a3e; }
+
+#searchResults li.active::before {
+  position: absolute;
+  left: -10vw;
+  content: '';
+  background-color: #393a3e;
+  height: 100%;
+  width: 10vw;
+  border: 10px solid #393a3e;
+  border-left: 1vw solid #A65751; }
 
 .family {
   padding: 0 0 2px 0;
@@ -1444,25 +1520,25 @@ input[type='checkbox']:disabled + label {
 .fco {
   font-weight: bold; }
 
-.endemic:before {
+.endemic::before {
   content: 'e';
   position: relative;
   left: -9px;
   font-size: 0.8rem; }
 
-.extinct:before {
+.extinct::before {
   content: 'x';
   position: relative;
   left: -9px;
   font-size: 0.8rem; }
 
-.hy:before {
+.hy::before {
   content: 'h';
   position: relative;
   left: -9px;
   font-size: 0.8rem; }
 
-.va:before {
+.va::before {
   content: 'v';
   position: relative;
   left: -9px;
@@ -1471,6 +1547,25 @@ input[type='checkbox']:disabled + label {
 #searchResults .endemic, #searchResults .extinct, #searchResults .hy, #searchResults .va {
   position: relative;
   left: -7px; }
+
+/*  -----------------------------   #taxTreeArticle  ---------------------  */
+#taxTreeArticle {
+  opacity: 0;
+  position: relative;
+  height: 0;
+  margin: 0 0 15px 0;
+  padding-top: 20px;
+  border: none;
+  box-shadow: none;
+  transform: translateY(-25vh);
+  transition: all 2000ms;
+  width: calc(100% + 10vw);
+  left: -10vw; }
+
+#taxTreeArticle.expand {
+  transform: translateY(0);
+  height: calc(100vh - 38px);
+  opacity: 1; }
 
 #taxPageButtons {
   cursor: pointer; }
@@ -1483,27 +1578,46 @@ input[type='checkbox']:disabled + label {
 #taxPage {
   position: relative;
   left: 0;
+  top: 15px;
   width: 100%;
-  height: calc(100vh - 122px);
-  min-height: 500px;
-  padding: 12px 0 5px 0;
+  height: calc(100vh - 262px);
+  padding: 12px 0 50px 10vw;
   font-size: 1rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
   white-space: nowrap;
-  overflow-x: visible;
   overflow-y: auto;
-  z-index: -10;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-radius: 10px;
-  /* resize is completely broken in FF and Chrome */
-  cursor: pointer; }
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  /* resize is completely broken in FF and Chrome */ }
 
-#tree ul {
+#fakeTaxPageBox {
+  position: absolute;
+  top: 64px;
+  height: calc(100% - 195px);
+  width: calc(100% - 10vw);
+  left: 10vw;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 10; }
+
+#tree * {
   list-style-type: none; }
 
 .birds {
   display: none; }
+
+#tree .fsc {
+  position: absolute;
+  left: 64.5%;
+  font-weight: bold;
+  font-style: normal; }
 
 /*
 	position : relative MUST be here for entry.offsetTop to work in taxonomy.js
@@ -1514,8 +1628,9 @@ input[type='checkbox']:disabled + label {
   position: relative; }
 
 #tree .family {
-  padding: 1px 0 3px 0;
-  font-size: 1rem; }
+  padding: 0 0 2px 0;
+  font-size: 1rem;
+  cursor: pointer; }
 
 /*target : family common name only*/
 #tree li.family > span:nth-child(1) {
@@ -1527,21 +1642,22 @@ input[type='checkbox']:disabled + label {
 
 /*target : familyOpen sci name only*/
 #tree li.familyOpen {
-  padding-top: 1px;
-  background: #A65751; }
+  padding-top: 0;
+  background-color: #A65751;
+  cursor: pointer; }
 
 #tree li.familyOpen:hover > span:first-child {
   padding: 1px 0 0 15px;
-  border-radius: 5px;
-  background: #A65751; }
+  background-color: #A65751; }
 
 #tree .familyOpen ul {
-  margin-top: 3px;
-  margin-bottom: -1px;
-  padding: 5px 0 10px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
   font-size: 0.9rem;
   line-height: 1rem;
-  background: #696a64; }
+  border-left: 1px solid #A65751;
+  background-color: #545550; }
 
 /*target : familyOpen common names only*/
 #tree .familyOpen ul li span:first-child {
@@ -1588,27 +1704,55 @@ input[type='checkbox']:disabled + label {
   color: white;
   background-color: #A65751; }
 
+#tree .family:hover::before, #tree .familyOpen:hover::before {
+  position: relative;
+  top: 1px;
+  left: -10px;
+  margin-right: -5px;
+  content: '';
+  height: 100%;
+  border-left: 5px solid #A65751; }
+
 /*    below targets each individual bird */
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover {
-  color: white;
-  background-color: #A65751; }
+  padding: 1px 0 3px 0;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  background-color: #A65751;
+  transition: background-color 450ms; }
+
+#tree ul > li:hover::before {
+  position: relative;
+  top: 1px;
+  left: -10px;
+  margin-right: -5px;
+  content: '';
+  height: 100%;
+  width: 0;
+  border-left: 5px solid #A65751; }
 
 #tree ul li {
-  padding: 1px 0 3px 0;
-  margin: 1px 0 1px 0; }
+  padding: 2px 0 4px 0; }
 
 /* added by toggleFamilyOpen */
 #tree ul li.active {
   position: relative;
-  background-color: #333;
-  outline: 1px solid black; }
+  background-color: #393a3e; }
 
 #tree ul li.active::before {
   position: absolute;
-  left: -20px;
-  content: '-->';
-  color: white;
-  z-index: 20; }
+  top: 0;
+  left: -10vw;
+  content: '';
+  background-color: #393a3e;
+  height: 100%;
+  width: 10vw;
+  border-right: 0 solid #A65751;
+  border-left: 1vw solid #A65751;
+  transition: border-right 450ms, border-left 450ms 450ms; }
+
+#tree ul li.active:hover::before {
+  border-right: 9vw solid #A65751; }
 
 .tooltip {
   opacity: 0;
@@ -1629,10 +1773,9 @@ input[type='checkbox']:disabled + label {
   height: 1.3rem;
   padding: 0 0 2px 0;
   width: 15.5rem;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid black;
   box-shadow: inset 0 0 0 transparent;
-  transform: rotate(-4deg);
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -1641,13 +1784,13 @@ input[type='checkbox']:disabled + label {
 
 .deleteMapButton .tooltip {
   position: absolute;
-  top: -40px;
-  left: -65px;
+  top: 160px;
+  left: -20px;
   width: 6em;
   padding: 0 0 3px 0;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
-  background: #a32d00;
+  background-color: #a32d00;
   transform: rotate(0);
   -webkit-transform-origin: top right;
   -moz-transform-origin: top right;
@@ -1661,7 +1804,7 @@ input[type='checkbox']:disabled + label {
   left: -115px;
   width: 12em;
   padding: 2px 0 3px 0;
-  background: transparent;
+  background-color: transparent;
   transform: rotate(0);
   -webkit-transform-origin: top right;
   -moz-transform-origin: top right;
@@ -1703,7 +1846,7 @@ input[type='checkbox']:disabled + label {
 
 .saveMapButton.hasTooltip:hover .tooltip {
   opacity: 1;
-  background: #000;
+  background-color: #000;
   transform: rotate(-10deg); }
 
 .deleteMapButton.hasTooltip:hover .tooltip {

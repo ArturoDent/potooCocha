@@ -28,6 +28,7 @@ function serve(done) {
   done();
 }
 
+
 function serveTest(done) {
   browserSync.init({
     server: {
@@ -109,6 +110,7 @@ const stripOptions = {
   trim: true,
   // <!--[if true] will not be removed with safe = true
   safe: true
+  // ignore:///<!\[CDATA\[(\n*.*\n*){20}\s*//\]\]>/g
 };
 
 const versionConfig = {
@@ -130,8 +132,6 @@ function processHTML()  {
 
       // add ?v=dateTime stamp to css and js links
     .pipe(addVersionString(versionConfig))
-
-    // .pipe(rename("index.html"))   ???
     .pipe(gulp.dest(paths.html.test));
 }
 
@@ -153,4 +153,5 @@ gulp.task("serve:watch", gulp.series(serve, watch));
 gulp.task("serve:deploy", gulp.series(serveTest));
 
 gulp.task("production", gulp.series(processJS));
+
 gulp.task("deploy:final", gulp.series(processHTML, processCSS, processJS));

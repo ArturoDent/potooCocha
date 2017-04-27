@@ -3,15 +3,26 @@ $bgColor  :  rgb(84,85,80);
 $bannerColor  :  transparent;
 
 $panelColor : $bgColor;
-$searchHeaderColor : lighten($bgColor, 8%);
+$searchHeaderColor : darken($bgColor, 8%);
 
 $genericButtonColor  :  #A65751;
 
-$genericButtonHighlightColor : $searchHeaderColor;
+$genericButtonHighlightColor : darken($bgColor, 7%);
 
-$panelFlyoutColor : lighten($bgColor, 8%);
+$panelFlyoutColor : darken($bgColor, 7%);
+// $panelFlyoutColor : lighten($bgColor, 8%);
 
-$familyOpenColor : $searchHeaderColor;
+// $familyOpenColor : $searchHeaderColor;
+$familyOpenColor : $bgColor;
 
 $birdRolloverColor : #A65751;
-$birdActiveColor : #A65751;
+$birdActiveColor : rgb(57, 58, 62);
+
+$bannerColors : #333333;
+
+$titleBannerColor : $bannerColors;
+$leftBannerColor  : $bannerColors;
+$rightBannerColor : $bannerColors;
+
+$countryMenuColor       : rgb(57, 58, 62);
+$countryMenuBeforeColor : rgb(57, 58, 62);

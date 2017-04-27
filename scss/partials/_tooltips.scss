@@ -22,10 +22,10 @@
     padding : 0 0 2px 0;
     width  :  15.5rem;
 
-    background  :  transparent;
+    background-color  :  transparent;
     border : 1px solid black;
     box-shadow  :  inset 0 0 0 transparent;
-    transform  :  rotate(-4deg);
+    // transform  :  rotate(-4deg);
     -webkit-transform-origin  :  top left;
        -moz-transform-origin  :  top left;
         -ms-transform-origin  :  top left;
@@ -35,13 +35,13 @@
 
 .deleteMapButton .tooltip {
     position  :  absolute;
-    top  :  -40px;
-    left  :  -65px;
+    top  :  160px;
+    left  :  -20px;
     width  :  6em;
     padding : 0 0 3px 0;
     font-size  :  0.9rem;
     letter-spacing : 0.1em;
-    background  :  #a32d00;
+    background-color  :  #a32d00;
 
     transform  :  rotate(0);
     -webkit-transform-origin  :  top right;
@@ -58,7 +58,7 @@
     width  :  12em;
     padding : 2px 0 3px 0;
 
-    background  :  transparent;
+    background-color  :  transparent;
 
     transform  :  rotate(0);
     -webkit-transform-origin  :  top right;
@@ -111,7 +111,7 @@
 
 .saveMapButton.hasTooltip:hover .tooltip {
     opacity  :  1;
-    background  :  #000;
+    background-color  :  #000;
     transform  :  rotate(-10deg);
 }
 

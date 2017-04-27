@@ -110,12 +110,12 @@
 
         <div class="taxArticleMain">
 
-          <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm" target="_blank">taxonomy</a> of the birds of South America (January 21, 2017).</div>
+          <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm" target="_blank">taxonomy</a> of the birds of South America (April 22, 2017).</div>
 
           Type part of a word, e.g., "xantho". <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCdiacritical.htm" target="_blank">Accents</a> and capitalization are added for you. You can search family names.<br><br>
 
           Wildcards:&emsp;&emsp;&emsp;? &nbsp;: any one character.
-          <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;* : any one or more characters.<br><br>
+          <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*&nbsp; : any one or more characters.<br><br>
 
           "e* br" will match "Elaenia brachyptera" or "Empress Brilliant".<br><br>
 
@@ -192,22 +192,21 @@
       </form>
     </article>
 
-<!--    resultsFrag =  "<div class='panel results-panel'>";
-        resultsFrag += "  <div id='countrySearch' class='closed'>";
-        resultsFrag += "    <span id='searchTerm'></span>";
-        resultsFrag += "  </div>";
-        resultsFrag += "  <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>";
-        resultsFrag += "</div>";  -->
+    <div class='panel results-panel'>
+      <div id='countrySearch' class='closed'>
+        <span id='searchTerm'></span>
+      </div>
 
-    <article id="mapsCollection">
-      <div id="mapsHeader"></div>
+      <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>
+      <div id='fakeResultsBox'></div>
+    </div>
+
+    <article id='taxTreeArticle'>
+      <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>
+      <div id='taxPage' class='panel' contenteditable='false'></div>
+      <div id='fakeTaxPageBox'></div>
+      <div id='taxPageButtons' class='flyoutPanel bottomFlyoutPanel'>&nbsp;Close all Families</div>
     </article>
-
-<!--  taxFragHTML += "<article id='taxTreeArticle'>"
-      taxFragHTML += "  <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>";
-      taxFragHTML += "  <div id='taxPage' class='panel' contenteditable='false'></div>";
-      taxFragHTML += "  <div id='taxPageButtons' class='flyoutPanel bottomFlyoutPanel'>&nbsp;Close all families</div>";
-      taxFragHTML += "</article>";  -->
 
     <article id="checklistArticle">
 
@@ -281,11 +280,13 @@
         <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label>
 
         <span type="button" id="checklistCountryButton" class="genericButton">country</span>
+
         <span type="button" id="pdfButton" class="genericButton">checklist
           <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
         </span>
-        <span type="button" id="csvButton" class="genericButton">csv file
-          <svg class="icon icon-file-excel"><use xlink:href="#icon-file-excel"></use></svg>
+
+        <span type="button" id="csvButton" class="genericButton">c,s,v file
+          <!--<svg class="icon icon-file-excel"><use xlink:href="#icon-file-excel"></use></svg>-->
         </span>
 
       </div>
@@ -349,6 +350,13 @@
 </section>
 
 
+<article id='mapsCollection'>
+  <div id='mapsHeader'>
+    <span id='deleteAllMapsButton'>Delete all Maps</span>
+  </div>
+</article>
+
+
 <div class="md-modal" id="countryModal">
   <div class="country-menu-wrap" contenteditable="false">
     <nav class="country-menu">
@@ -379,16 +387,15 @@
 <div class="md-overlay"></div>
 
 <!-- build:js js/app.min.js -->
-<!--<script src="dist/js/main.js?v=1"></script>
-<script src="dist/js/SouthAmerica.js?v=1"></script>
-<script src="dist/js/taxonomy.js?v=1"></script>
-<script src="dist/js/birdMapFactory.js?v=1"></script>-->
+<script src="js/main.js"></script>
 <!-- /build -->
 
-<script src="js/main.js"></script>
 <script src="js/SouthAmerica.js"></script>
+
+<!-- build:remove -->
 <script src="js/taxonomy.js"></script>
 <script src="js/birdMapFactory.js"></script>
+<!-- /build -->
 
 <!-- build:remove -->
 <script id="__bs_script__">//<![CDATA[

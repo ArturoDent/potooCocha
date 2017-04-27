@@ -8,20 +8,28 @@ var countries  = { "Argentina":0, "Aruba":1, "Bolivia":2, "Brazil":3, "Chile":4,
 
 var endemicColor         =  "#C23BC3";
 var extinctColor         =  "#ddd";
-var residentColor        =  "#3030cc";
-var nonBreederColor      =  "#ff9900";
-var vagrantColor         =  "#ffff00";
-var hypotheticalColor    =  "#33cc66";
-var introducedColor      =  "#111";
-var baseColor            =  "#545750";
+// var residentColor = "#3030cc";
+var residentColor        =  "#4040dc";
 
-// var baseStrokeColor      =  "#8a8b86";
-var baseStrokeColor      =  "#222";
+
+// var nonBreederColor = "#ff9900";
+var nonBreederColor      =  "#bf5900";
+
+// var vagrantColor         =  "#ffff00";
+var vagrantColor         =  "#8f8f10";
+
+// var hypotheticalColor    =  "#33cc66";
+var hypotheticalColor    =  "#007913";
+
+var introducedColor      =  "#111";
+
+var baseColor            =  "#545750";
+var baseStrokeColor      =  "#fff";
 
 /* global addBirdNameToMap birds currentMap  */
 
 function prepareSVGstyles(evt)  {
-
+  console.log("prepareSVGstyles");
   var svg;
 
   if (evt.target && evt.target.id === "SAMsvg") {
@@ -44,11 +52,13 @@ function prepareSVGstyles(evt)  {
   }
 }
 
-function setSVGstyles(obj )  {
+function setSVGstyles(obj, bColor, sColor )  {
+  console.log("setSVGstyles");
 
   if (obj.nodeName === "path") {
 
-    obj.style.transition = "fill 1s";
+    obj.style.transition = "fill 1s, stroke 1s 1.5s";
+    // obj.style.stroke = sColor;
     // obj.style.filter = "blur(20px)";
   }
 
@@ -59,7 +69,8 @@ function setSVGstyles(obj )  {
     var len = paths.length;
 
     for (var i = 0; i < len; i++)  {
-      paths[i].style.transition = "fill 1s";
+      paths[i].style.transition = "fill 1s, stroke 1s 1.5s";
+      // paths[i].style.stroke = sColor;
     }
   }
 }
@@ -78,6 +89,7 @@ function fillSAMmap(color)  {
     if (!cc) continue;
 
     newFillColor(cc, color);
+    newStrokeColor(cc, baseStrokeColor);
   }
   addBirdNameToMap("");
 }
@@ -129,7 +141,7 @@ function newStrokeColor(obj, newColor) {
 
   if (obj.nodeName === "path") {
     // if (newColor === baseColor) {
-    obj.style.stroke = "#fff";
+    obj.style.stroke = newColor;
     // }
 
     // obj.style.fill = newColor;
@@ -143,7 +155,7 @@ function newStrokeColor(obj, newColor) {
     for (var i = 0; i < len; i++)  {
 
       // if (newColor === baseColor) {
-      paths[i].style.stroke = "#fff";
+      paths[i].style.stroke = newColor;
       // }
 
       // paths[i].style.fill = newColor;
@@ -234,6 +246,7 @@ function highlightSAMmap(index, current) {
     default:
       newFillColor(cc, baseColor);
     }
+    if (current !== "currentMap")  newStrokeColor(cc, "#fff");
   }
 
   if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }

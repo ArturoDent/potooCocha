@@ -1,6 +1,10 @@
 #mapsCollection  {
+
+    display: flex;
+    justify-content: center;
+
     position  :  fixed;
-    top : 100vh;
+    top : 95vh;
     left  :  0;
     width : 100vw;
     height  :  365px;
@@ -9,29 +13,70 @@
     padding  :  0;
     text-align  :  center;
 
-    background-color: darken($bgColor, 5%);
+    // background-color: darken($bgColor, 5%);
+    // background-color: lighten($bgColor, 10%);
+    background-color : #111;
     cursor: pointer;
     z-index : 10;
     transform : scale(0.1);
-    transition  :  transform 1.2s;
+    transition  :  all 1.2s;
 }
 
 #mapsHeader  {
-    // position : relative;
+    position : absolute;
     top : 0;
     left : 0;
     height : 50px;
     width : 100%;
     border-top : 1px solid rgba(255,255,255,0.5);
-    background-color: #333;
+    background-color: $titleBannerColor;
 }
 
+// #mapsHeader::before  {
+//     position: absolute;
+//     content: '';
+//     top: -100vh;
+//     left: 0;
+//     width: 100%;
+//     height: calc(100vh - 50px);
+//     background-color: rgba(0,0,0,0.5);
+//     opacity : 0.5;
+// }
+
 #mapsCollection.namesOnlySeen  {
-    transform : translateY(-60px) scale(1);
+    top : 100vh;
+    transform : translateY(-50px) scale(1);
 }
 
 #mapsCollection.open  {
-    transform : translateY(-365px);
+    transform : translateY(-350px);
+}
+
+#deleteAllMapsButton  {
+    // display: inline;
+    position: absolute;
+    left : 0;
+    top: 290%;
+    height: auto;
+    padding: 2px 15px 3px 45px;
+
+    font-size: 0.75em;
+    line-height: 1.45em;
+
+    cursor: pointer;
+    background-color  :  #a32d00;
+    box-shadow  :  -2px 2px 2px rgba(0,0,0,0.5);
+}
+
+#deleteAllMapsButton::after  {
+    content  :  '';
+    position  :  absolute;
+    top  :  0;
+    left  :  100%;
+
+    border-width  :  0.9em;
+    border-style  :  solid;
+    border-color  :  transparent transparent transparent #a32d00;
 }
 
 .smallBird  {
@@ -46,14 +91,20 @@
 }
 
 .thinify  {
-    display  :  inline-block;
+    // display  :  inline-block;
+    flex-grow: 0;
+    flex-basis: 305px;
     position  :  relative;
-    top  :  -13px;
+    top  :  37px;
 
-    left  :  0;
-    width  :  305px;
+    // left  :  0;
+    // width  :  305px;
     margin-top  :  -50px;
     margin-bottom  :  -50px;
+}
+
+.smallBird .drawing  {
+    filter  :  drop-shadow( 0 0 4px rgba(255,255,255,0.3) );
 }
 
 .birdName  {
@@ -78,7 +129,7 @@
 }
 
 .birdName.smallBirdText   {
-    top  :  -39px;
+    top  :  -40px;
     left  :  -55px;
     width  :  calc(100% + 40px);
     padding : 8px 0 0 0;
@@ -88,6 +139,12 @@
     transform  :  scale(1);
     border-radius  :  0;
     border-right : 1px solid rgba(255,255,255,0.5);
+    background-color: #aaa;
+    transition: background-color 1500ms;
+}
+
+.birdName.smallBirdText.highlightName   {
+    background-color: transparent;
 }
 
 .smallBird:nth-child(2) .birdName.smallBirdText  {
@@ -102,7 +159,7 @@
     left  :  65vw;
     margin  :  0 0 0 5px;
 
-    transition  :  opacity 300ms, transform 800ms 350ms;
+    transition  :  opacity 300ms, transform 900ms 300ms;
     -webkit-transform-origin  :  0 0;
        -moz-transform-origin  :  0 0;
         -ms-transform-origin  :  0 0;
@@ -131,12 +188,12 @@
     position  :  relative;
     top  :  10px;
 
-    background  :  transparent;
+    background-color  :  transparent;
 }
 
 #currentBirdMap {
     transform : scale(1.25);
-    background  :  transparent;
+    background-color  :  transparent;
 }
 
 .mapButtons {
@@ -153,12 +210,22 @@
 
 .deleteMapButton  {
     position  :  absolute;
-    top  :  20px;
+    top  :  25px;
     left  :  -10%;
+    height: auto;
+    width: auto;
+    padding: 0 6px 6px 6px;
 
-    font-size  :  30px;
-    color : #d32d00;
+    font-size  :  22px;
+    line-height: 22px;
+    // color : #d32d00;
+    color : #fff;
+
+    // text-shadow: 1px 1px 1px 6px rgba(255,255,255,0.5);
+    text-shadow: none;
+    background-color: #d32d00;
     border : none;
+    border-radius: 50%;
 }
 
 .saveMapButton  {
@@ -166,22 +233,22 @@
     position  :  absolute;
     top  :  240px;
     left  :  -30px;
-    background  :  transparent;
+    background-color  :  transparent;
 }
 
 // .deleteMapButton:hover,
 // .deleteMapButton:focus {
-//     background  :  #000;
+//     background-color  :  #000;
 // }
 
 .drawing  {
     position  :  relative;
-
     text-shadow  :  none;
+    -webkit-filter  :  drop-shadow( 4px 0 4px rgba(255,255,255,0.2) ) drop-shadow( -4px 0 4px rgba(0,0,0,0.4) );
+        -ms-filter  :  drop-shadow( 4px 0 4px rgba(255,255,255,0.2) ) drop-shadow( -4px 0 4px rgba(0,0,0,0.4) );
+            filter  :  drop-shadow( -4px 0 4px rgba(0,0,0,0.3) ) drop-shadow( 4px 0 4px rgba(0,0,0,0.3) ) drop-shadow( 0 0 8px rgba(0,0,0,0.3) );
+            // filter  :  drop-shadow( 0 0 8px rgba(0,0,0,0.4) );
 
-    -webkit-filter  :  drop-shadow( 0 0 10px rgba(0,0,0,0.3) );
-        -ms-filter  :  drop-shadow( 0 0 10px rgba(0,0,0,0.3) );
-            filter  :  drop-shadow( 0 0 10px rgba(0,0,0,0.3) );
 }
 
 // .drawing.smallBirdDrawing {
@@ -205,46 +272,50 @@
 .colorKey ul li {
     position  :  relative;
     margin-top  :  4px;
+    padding  :  0 10px 0 30px;
 
     font-size  :  0.8rem;
     text-align  :  center;
-    letter-spacing  :  0.1em;
-    text-shadow  :  rgba(0, 0, 0, 0.4) 1px 1px 1px;
-
+    letter-spacing  :  0.15em;
+    text-shadow  :  rgba(0,0,0, 1) 1px 1px 1px;
     list-style-type  :  none;
 }
 
 .colorKey ul li:nth-child(1) {
     /* introduced  */
     color  :  #000;
-    text-shadow  :  none;
+    text-shadow: none;
 }
 
 .colorKey ul li:nth-child(2) {
     /* hypothetical  */
-    color  :  #23bc56;
-    text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
+    color  :  #009933;
 }
 
 .colorKey ul li:nth-child(3) {
     /* nonbreeder    */
-    color  :  #df7920;
-    text-shadow  :  rgba(0,0,0, 0.7) 1px 1px 1px;
+    // color  :  #df7920;
+    padding  :  0 0 2px 0;
+    color: white;
+    background-color: #bf5900;
 }
 
 .colorKey ul li:nth-child(4) {
     /* vagrant       */
-    color  :  #ff0;
+    color  :  #afaf10;
 }
 
 .colorKey ul li:nth-child(5) {
     /* extinct       */
-    color  :  #fff;
+    color  :  #eee;
+
 }
 
 .colorKey ul li:nth-child(6) {
     /* resident      */
-    color  :  #3030cc;
+    padding  :  0 0 2px 0;
+    color  :  white;
+    background-color  :  #3030cc;
 }
 
 .colorKey ul li:nth-child(7) {

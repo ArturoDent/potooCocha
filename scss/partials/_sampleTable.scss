@@ -3,7 +3,8 @@
   left: 0;
   width: 94%;
   min-width: 480px;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 25px auto;
+  // padding: 0 0 10px 0;
   font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
@@ -88,17 +89,25 @@
 
 .flashDays {
   animation-name: flashDays;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
-  animation-delay: 0.3s; }
+  animation-delay: 0.2s;
+}
 
 @keyframes flashDays {
-  0%, 100% {
-    color: black;
-    transform: none; }
+  0% {
+    // color: black;
+    // transform: none;
+    background-color: $birdRolloverColor;
+  }
   50% {
-    background-color: white;
-    transform: scale(2); } }
+    // background-color: white;
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: $birdRolloverColor;
+  }
+}
 
 #sampleTable td.familyHidden {
   border: solid 1px $panelColor; }
@@ -158,7 +167,7 @@
   // text-align: center;
   // border: 1px solid black;
   // border-radius: 50%;
-  // background: black;
+  // background-color: black;
   }
 
 .showEndemics {
@@ -180,7 +189,7 @@
   // text-align: center;
   // border: 1px solid black;
   // border-radius: 50%;
-  // background: black;
+  // background-color: black;
   }
 
 #sampleTable.numDays0 .cLs {

@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleSampleTableLeftChecks();
   leftCheck.checked = true;
 
+  // initCurrentMap();
+
   // only set for smaller widths, here and in onResizeWindow()
   if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
 });

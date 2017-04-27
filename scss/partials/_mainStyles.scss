@@ -3,11 +3,7 @@ html {
     height  :  100%;
     /*so 1em = 10px (browser default usually 16px)*/
     font-size  :  16px;
-    background  :  $bgColor;
-}
-
-:host /deep/ .image-img {
-    height: 60pt;
+    background-color  :  $bgColor;
 }
 
 body {
@@ -21,7 +17,8 @@ body {
     letter-spacing  :  0.04em;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 
-    background  :  $bgColor;
+    background-color  :  $bgColor;
+    overflow-x : hidden;
 }
 
 a   {  color  :  inherit;
@@ -37,9 +34,9 @@ a:link  {  border-bottom  :  solid 1px #fff;
     position : relative;
     top : 8vh;
     left : 10vw;
-    width : 80vw;
-// padding-left : 50px;
-    overflow  :  visible;
+    width : calc(80vw - 30px);
+
+    // overflow  :  visible;
     transition  :  transform 750ms;
 }
 
@@ -59,8 +56,9 @@ a:link  {  border-bottom  :  solid 1px #fff;
     justify-content  :  space-around;
 
     top : 0;
+    left : 0;
     width : 100vw;
-    overflow : visible;
+    // overflow : visible;
     margin  :  0 auto;
 
     -webkit-transform-origin  :  top left;
@@ -71,23 +69,23 @@ a:link  {  border-bottom  :  solid 1px #fff;
 }
 
 .titleText  {
-    flex : 1 1 230px;
-    height : 40px;
-    padding  :  5px 0 0 0;
+    flex : 1 1 auto;
+    height : 45px;
+    padding  :  12px 0 0 0;
 
     font-size  :  1.4rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     color  :  #fff;
     text-align  :  center;
-    letter-spacing  :  0.1em;
+    letter-spacing  :  0.15em;
     text-shadow  :  -1px 1px 1px rgba(0,0,0,1);
 
-    border : 1px solid rgba(255,255,255,0.5);
+    // border : 1px solid rgba(255,255,255,0.5);
     border-top : none;
     // border-radius  :  5px;
-    // background  :  $searchHeaderColor;
-    background  :  #333;
+    // background-color  :  $searchHeaderColor;
+    background-color  :  $titleBannerColor;
 
     // box-shadow: inset 0 0 7px 0 #333;
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
@@ -104,11 +102,11 @@ a:link  {  border-bottom  :  solid 1px #fff;
 
 .surroundBanner  {
     position : relative;
-    height : 40px;
+    height : 45px;
     // height : 900px;
 
     // border-radius: 5%;
-    border-bottom : 1px solid rgba(255,255,255,0.5);
+    // border-bottom : 1px solid rgba(255,255,255,0.5);
 
     background-color : #333;
     box-shadow: 0 -1px rgba(0,0,0,0.2), 0 1px rgba(0,0,0,0.2);
@@ -117,6 +115,7 @@ a:link  {  border-bottom  :  solid 1px #fff;
 .surroundBanner:nth-child(1)  {
     // top : 8px;
     flex : 1 1 auto;
+    background-color : $leftBannerColor;
     // flex-grow : 1;
     // border-top-left-radius: 50%;
     // border-bottom-left-radius: 50%;
@@ -125,7 +124,13 @@ a:link  {  border-bottom  :  solid 1px #fff;
 .surroundBanner:nth-child(3)  {
     // top : 8px;
     flex : 1 1 auto;
-    flex-grow : 4;
+    flex-grow : 5;
+    // background-color : $rightBannerColor;
+
+    background: -moz-linear-gradient(left, rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
+    background: linear-gradient(to right, rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
+
     // border-top-right-radius: 50%;
     // border-bottom-right-radius: 50%;
 
@@ -173,7 +178,7 @@ article {
 
     border  :  1px solid rgba(255,255,255,0.25);
     border-radius  :  3px;
-    background  :  $panelColor;
+    background-color  :  $panelColor;
     box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
 
 
@@ -184,9 +189,11 @@ article {
 }
 
 .flyoutPanel  {
-    width  :  calc(100% - 40px);
+position: relative;
+top : 0;
+    // width  :  calc(100% - 40px);
     height  :  42px;
-    margin  :  0 auto 0 auto;
+    // margin  :  0 auto 0 auto;
 
     font-size  :  1rem;
     font-variant  :  small-caps;
@@ -204,7 +211,21 @@ article {
     border-bottom  :  none;
     border-top-left-radius  :  3px;
     border-top-right-radius  :  3px;
-    box-shadow : inset 0 -5px 4px -4px rgba(0,0,0,0.3), inset 0 0 1px rgba(0,0,0,0.5);
+    box-shadow : inset 0 -1px 1px -1px rgba(0,0,0,0.2), inset 0 0 1px rgba(0,0,0,0.2);
+
+left : calc(10vw + 20px);
+width : calc(100% - 10vw - 40px);
+}
+
+#checklistArticle .topFlyoutPanel  {
+    position: absolute;
+    top: -40px;
+    left : 123px;
+    width : calc(100% - 100px);
+    height  :  142px;
+    border-top-right-radius  :  20px;
+
+    border-bottom-right-radius  :  80px;
 }
 
 .bottomFlyoutPanel  {
@@ -212,7 +233,12 @@ article {
     border-top  :  none;
     border-bottom-right-radius  :  3px;
     border-bottom-left-radius  :  3px;
-    box-shadow  :  inset 0 5px 4px -4px rgba(0,0,0,0.3), inset 0 0 1px rgba(0,0,0,0.5);
+
+    box-shadow  :  inset 0 1px 1px -1px rgba(0,0,0,0.2), inset 0 0 1px rgba(0,0,0,0.2);
+
+left : calc(10vw + 20px);
+top : 33px;
+width : calc(100% - 10vw - 40px);
 }
 
 /*   -------------------   Footer   ----------------------------   */

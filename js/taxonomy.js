@@ -9,28 +9,31 @@ var numFamilies;
 
 var birds = [];
 
-var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":495,
-                  "Colombia":1846, "Curaçao":218, "Ecuador":1620, "French Guiana":665,
-                  "Guyana":783, "Paraguay":694, "Peru":1792, "Suriname":727, "Trinidad":468,
-                  "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3376};
+var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":496,
+                  "Colombia":1847, "Curaçao":218, "Ecuador":1620, "French Guiana":697,
+                  "Guyana":783, "Paraguay":694, "Peru":1792, "Suriname":728, "Trinidad":468,
+                  "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3379};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
 var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":66,
-                  "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":81,
-                  "Guyana":78, "Paraguay":72, "Peru":89, "Suriname":80, "Trinidad":70,
+                  "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":82,
+                  "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
                   "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
 // South America : 102 families not including 2 incertae "families", 3376 total spp.
 //                 which includes one hypothetical (in one country only) Black Turnstone
+//                 class='fco'>(?!INCERTAE).*?  --> finds number of families not including INCERTAE in ..SACC.html
+
 
 var currentTaxonomyCountry;
 var currentTaxonomyCountryElement;
 
 var taxonomyArticle;
-var resultsFrag = "";
-var taxFragHTML = "";
+// var resultsFrag = "";
+// var taxFragHTML = "";
+var taxTreeArticleOpen = false;
 
 var taxPage;
 var searchSpecials;
@@ -49,18 +52,14 @@ var searchInstructionsOpen = true;
 
 var selectedFillColor    =  "#eee";
 
-/* global    selectedCountryFillColor selectedCountryStrokeColor currentMap   */
+/* global    selectedCountryFillColor currentMap   */
 
 document.addEventListener("DOMContentLoaded", function(){
 
   taxonomyArticle = document.getElementById("taxonomyArticle");
-  console.log("taxonomyArticle.width = " + taxonomyArticle.getBoundingClientRect().width);
 
   searchSlideUpWrapper               =  document.querySelector("#taxonomyArticle > div.slideUpWrapper");
-
   searchSlideUpWrapper.style.height  =  searchSlideUpWrapper.clientHeight + "px";
-  // searchSlideUpWrapper.style.maxHeight  =  searchSlideUpWrapper.clientHeight + "px";
-
   searchSlideUpWrapper_height        =  searchSlideUpWrapper.style.height;
 
   taxInstructionsButton              =  document.querySelector(".taxInstructionsButton");
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // focus, blur  ***
 
-  createTaxPageHTML();
+  // createTaxPageHTML();
   getAjax("../data/occurrences.txt", function (data) { loadIntoArray(data); });
 });
 
@@ -145,59 +144,80 @@ function showSearchInstructions(state)  {
   }
 }
 
-function createTaxPageHTML ()  {
+// function createTaxPageHTML ()  {
 
-  resultsFrag =  "<div class='panel results-panel'>";
-  resultsFrag += "  <div id='countrySearch' class='closed'>";
-  resultsFrag += "    <span id='searchTerm'></span>";
-  resultsFrag += "  </div>";
+//   resultsFrag =  "<div class='panel results-panel'>";
+//   resultsFrag += "  <div id='countrySearch' class='closed'>";
+//   resultsFrag += "    <span id='searchTerm'></span>";
+//   resultsFrag += "  </div>";
 
-  resultsFrag += "  <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>";
-  resultsFrag += "</div>";
+//   resultsFrag += "  <ul id='searchResults' contenteditable='false'><li> &nbsp; &nbsp; search results will appear here...</li><li></li><li></li></ul>";
+//   resultsFrag += "</div>";
 
-  taxFragHTML = "<article id='taxTreeArticle'>";
-  taxFragHTML += "  <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>";
-  taxFragHTML += "  <div id='taxPage' class='panel' contenteditable='false'></div>";
-  taxFragHTML += "  <div id='taxPageButtons' class='flyoutPanel bottomFlyoutPanel'>Close all families</div>";
-  taxFragHTML += "</article>";
-}
+//   taxFragHTML = "<article id='taxTreeArticle'>";
+//   taxFragHTML += "  <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>";
+//   taxFragHTML += "  <div id='taxPage' class='panel' contenteditable='false'></div>";
+//   taxFragHTML += "  <div id='taxPageButtons' class='flyoutPanel bottomFlyoutPanel'>Close all families</div>";
+//   taxFragHTML += "</article>";
+// }
 
-/* global  mapsCollection taxonomyCountryButton */
+/* global  mapsCollection taxonomyCountryButton prepareSVGstyles*/
 
 function loadCountryTaxonomy(evt)  {
 
   window.closeCountryModal();
 
-  if (!document.getElementById("taxPage")) {
+  // if (!document.getElementById("taxPage")) {
 
-    // will lose eventListeners with innerHTML method, not true with insertAdjacentHTML
+  //   // will lose eventListeners with innerHTML method, not true with insertAdjacentHTML
 
-    taxonomyArticle.insertAdjacentHTML("beforeend", resultsFrag);
-    mapsCollection.insertAdjacentHTML("afterend",  taxFragHTML);
+  //   taxonomyArticle.insertAdjacentHTML("beforeend", resultsFrag);
+  //   mapsCollection.insertAdjacentHTML("afterend",  taxFragHTML);
 
-    taxPage        =  document.getElementById("taxPage");
-    searchResults  =  document.getElementById("searchResults");
+  //   taxPage        =  document.getElementById("taxPage");
+  //   searchResults  =  document.getElementById("searchResults");
 
-    taxPage.addEventListener("click", toggleFamilyOpen);
-    searchResults.addEventListener("click", gotoMatch);
+  //   taxPage.addEventListener("click", toggleFamilyOpen);
+  //   searchResults.addEventListener("click", gotoMatch);
 
-	 // show searchresults and taxPage panels first time a taxonomy country is selected
+	//  // show searchresults and taxPage panels first time a taxonomy country is selected
 
+  //   document.querySelector("#searchForm span.grayed").classList.remove("grayed");
+  //   searchSpecials.classList.remove("grayed");
+
+  //   taxPage.style.webkitTransform = "scale(1)";
+  //   searchResults.style.webkitTransform = "scale(1)";
+  //   taxPage.WebkitTransform = "rotateZ(0deg)";
+
+  //   taxPage.style.zIndex = 5;
+
+  //   taxPage.style.display="none";
+  //   taxPage.offsetHeight; // no need to store this anywhere, the reference is enough (force a redraw?)
+  //   taxPage.style.display="block";
+  // }
+
+  taxPage        =  document.getElementById("taxPage");
+  searchResults  =  document.getElementById("searchResults");
+
+  taxPage.addEventListener("click", toggleFamilyOpen);
+  searchResults.addEventListener("click", gotoMatch);
+
+  if (searchSpecials.classList.contains("grayed")) {
     document.querySelector("#searchForm span.grayed").classList.remove("grayed");
     searchSpecials.classList.remove("grayed");
-
-    taxPage.style.webkitTransform = "scale(1)";
-    searchResults.style.webkitTransform = "scale(1)";
-    taxPage.WebkitTransform = "rotateZ(0deg)";
-
-    // $("#site").css("z-index", "5");
-
-    taxPage.style.zIndex = 5;
-
-    taxPage.style.display="none";
-    taxPage.offsetHeight; // no need to store this anywhere, the reference is enough
-    taxPage.style.display="block";
+    // prepareSVGstyles("SAMsvg");
   }
+
+  // trying to force a redraw because of iPhone
+  taxPage.style.webkitTransform = "scale(1)";
+  searchResults.style.webkitTransform = "scale(1)";
+  taxPage.WebkitTransform = "rotateZ(0deg)";
+
+  taxPage.style.zIndex = 5;
+
+  taxPage.style.display="none";
+  taxPage.offsetHeight; // no need to store this anywhere, the reference is enough (force a redraw?)
+  taxPage.style.display="block";
 
   var taxCountry = (typeof evt === "string") ?  evt : evt.target.innerHTML;
 
@@ -310,6 +330,10 @@ function updatetaxArticleQueries(data) {
   // <ul id='tree'>
   taxPage.innerHTML = data;
 
+  var taxPageWrapper = document.getElementById("taxTreeArticle");
+  if (!taxTreeArticleOpen) taxPageWrapper.classList.add("expand");
+  else taxTreeArticleOpen = true;
+
   species = document.getElementById("tree").getElementsByTagName("li");
   families = taxPage.querySelectorAll("#tree .familyOpen, #tree .family");
   numFamilies = families.length;
@@ -339,6 +363,8 @@ function getQuery(event)  {
   if ( badIndex !== -1) {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
     searchResults.style.height = "55px";
+    searchResults.classList.add("fadeIn");
+    document.querySelector(".results-panel").classList.add("translateDown");
     return;
   }
 
@@ -398,7 +424,8 @@ function searchTree(query2) {
   }
 
   document.getElementById("searchResults").classList.remove("fadeIn");
-  document.querySelector(".results-panel").style.opacity = "1";
+  // document.querySelector(".results-panel").style.opacity = "1";
+  document.querySelector(".results-panel").classList.add("translateDown");
 
   lastQuery = query2;
 
@@ -645,6 +672,7 @@ function gotoMatch(e) {
         familyTemp.classList.add("open");
         familyTemp.parentNode.className = "familyOpen";
       }
+
         // put highlighted bird at top of taxPage
         // entry.scrollIntoView(true);
       taxPage.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
@@ -676,6 +704,8 @@ function gotoMatch(e) {
       }
 
       taxPage.scrollTop = entry.offsetTop;
+
+      // family clicked on in searchResults
       //    put family at top of taxPage
       //   entry.scrollIntoView(true);  screws up IE
 
@@ -705,8 +735,12 @@ function addBirdNameToMap(name)  {
 
 /* global highlightSAMmap */
 
-function toggleFamilyOpen(event)  {
+function toggleFamilyOpen(event) {
+  console.log("toggleFamilyOpen");
+  console.dir(event.target);
   event.stopPropagation();
+
+  if (event.target.id === "taxPage") return;
 
   // taxPage is not open yet
   if (!numFamilies) return;
@@ -756,7 +790,7 @@ function toggleFamilyOpen(event)  {
   }
 
   else if (familyTarget)  {
-
+    console.log("3");
     familyTarget.classList.remove("open");
     familyTarget.parentNode.className = "family";
 
@@ -768,8 +802,8 @@ function toggleFamilyOpen(event)  {
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species";
   }
     //   clicked on a species in the taxTree
-  if (!familyTarget)  {
-
+  if (!familyTarget) {
+    console.log("4");
       // clicked in between common and scientific names in an open family, i.e., the LI element, not a DIV/SPAN
 
       //    <ul class="span">
@@ -782,16 +816,21 @@ function toggleFamilyOpen(event)  {
     thisSpecies.parentNode.className = "active";
 
     if (thisSpecies.parentNode !== lastSpecies) {
+     console.log("4a");
+
       if (lastSpecies && lastSpecies.classList.contains("active")) {
+        console.log("4ai");
         lastSpecies.classList.remove("active");
       }
     }
+     console.log("5");
 
     lastSpecies = thisSpecies.parentNode;
     if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
     lastResultsSpecies = null;
 
     addBirdNameToMap(thisSpecies.parentNode);
+
     lastIndex = Number(thisSpecies.parentNode.getAttribute("data-i"));
     highlightSAMmap(lastIndex, "currentMap");
 

@@ -21,7 +21,8 @@
 ,White-cheeked Pintail,A. bahamensis
 ,Blue-winged Teal,A. discors
 ,Northern Shoveler,A. clypeata
-,Lesser Scaup,Aythya affinis
+,Ring-necked Duck,Aythya collaris
+,Lesser Scaup,A. affinis
 ,Masked Duck,Nomonyx dominicus
 
 ,GUANS,CRACIDAE
@@ -69,6 +70,9 @@
 ,Pearly-breasted Cuckoo,C. euleri
 ,Mangrove Cuckoo,C. minor
 
+,OILBIRD,STEATORNITHIDAE
+,Oilbird,Steatornis caripensis
+
 ,POTOOS,NYCTIBIIDAE
 ,Great Potoo,Nyctibius grandis
 ,Long-tailed Potoo,N. aethereus
@@ -90,12 +94,13 @@ E,Cayenne Nightjar,Setopagis maculosa
 
 ,SWIFTS,APODIDAE
 ,White-chinned Swift,Cypseloides cryptus
+,Black Swift,C. niger
 ,White-collared Swift,Streptoprocne zonaris
 ,Band-rumped Swift,Chaetura spinicaudus
-,Chimney Swift,C. pelagica
 ,Chapman's Swift,C. chapmani
 ,Sick's Swift,C. meridionalis
 ,Short-tailed Swift,C. brachyura
+,White-tipped Swift,Aeronautes montivagus
 ,Fork-tailed Palm-Swift,Tachornis squamata
 ,Lesser Swallow-tailed Swift,Panyptila cayennensis
 
@@ -106,6 +111,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Sooty Barbthroat,Threnetes niger
 ,Little Hermit,Phaethornis longuemareus
 ,Reddish Hermit,P. ruber
+,Sooty-capped Hermit,P. augusti
 ,Straight-billed Hermit,P. bourcieri
 ,Long-tailed Hermit,P. superciliosus
 ,Great-billed Hermit,P. malaris
@@ -146,6 +152,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Mangrove Rail,Rallus longirostris
 ,Little Wood-Rail,Aramides mangle
 ,Gray-necked Wood-Rail,A. cajaneus
+,Rufous-necked Wood-Rail,A. axillaris
 ,Uniform Crake,Amaurolimnas concolor
 ,Russet-crowned Crake,Anurolimnas viridis
 ,Rufous-sided Crake,Laterallus melanophaius
@@ -163,14 +170,12 @@ E,Cayenne Nightjar,Setopagis maculosa
 
 ,PLOVERS,CHARADRIIDAE
 ,American Golden-Plover,Pluvialis dominica
-,Pacific Golden-Plover,P. fulva
 ,Black-bellied Plover,P. squatarola
 ,Pied Lapwing,Vanellus cayanus
 ,Southern Lapwing,V. chilensis
 ,Semipalmated Plover,Charadrius semipalmatus
 ,Wilson's Plover,C. wilsonia
 ,Killdeer,C. vociferus
-,Snowy Plover,C. nivosus
 ,Collared Plover,C. collaris
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
@@ -188,7 +193,9 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Red Knot,Calidris canutus
 ,Ruff,C. pugnax
 ,Stilt Sandpiper,C. himantopus
+,Curlew Sandpiper,C. ferruginea
 ,Sanderling,C. alba
+,Dunlin,C. alpina
 ,Least Sandpiper,C. minutilla
 ,White-rumped Sandpiper,C. fuscicollis
 ,Buff-breasted Sandpiper,C. subruficollis
@@ -198,7 +205,6 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Short-billed Dowitcher,Limnodromus griseus
 ,Long-billed Dowitcher,L. scolopaceus
 ,Giant Snipe,Gallinago undulata
-,Wilson's Snipe,G. delicata
 ,South American Snipe,G. paraguaiae
 ,Terek Sandpiper,Xenus cinereus
 ,Spotted Sandpiper,Actitis macularius
@@ -231,14 +237,18 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Herring Gull,L. argentatus
 ,Brown Noddy,Anous stolidus
 ,Sooty Tern,Onychoprion fuscatus
+,Bridled Tern,O. anaethetus
 ,Least Tern,Sternula antillarum
 ,Yellow-billed Tern,S. superciliaris
 ,Large-billed Tern,Phaetusa simplex
 ,Gull-billed Tern,Gelochelidon nilotica
 ,Black Tern,Chlidonias niger
+,White-winged Tern,C. leucopterus
 ,Common Tern,Sterna hirundo
 ,Roseate Tern,S. dougallii
-,Sandwich Tern,Thalasseus sandvicensis
+,Arctic Tern,S. paradisaea
+,Elegant Tern,Thalasseus elegans
+,Sandwich Tern,T. sandvicensis
 ,Royal Tern,T. maximus
 
 ,SKIMMERS,RYNCHOPIDAE
@@ -257,13 +267,15 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Fea's Petrel,Pterodroma feae
 ,Bulwer's Petrel,Bulweria bulwerii
 ,Cory's Shearwater,Calonectris diomedea
-,Great Shearwater,Ardenna gravis
+,Sooty Shearwater,Ardenna grisea
+,Great Shearwater,A. gravis
 ,Manx Shearwater,Puffinus puffinus
 ,Audubon's Shearwater,P. lherminieri
 
 ,STORM-PETRELS,HYDROBATIDAE
 ,Wilson's Storm-Petrel,Oceanites oceanicus
-,Leach's Storm-Petrel,Oceanodroma leucorhoa
+,Band-rumped Storm-Petrel,Oceanodroma castro
+,Leach's Storm-Petrel,O. leucorhoa
 
 ,STORKS,CICONIIDAE
 ,Maguari Stork,Ciconia maguari
@@ -275,6 +287,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 
 ,BOOBIES,SULIDAE
 ,Masked Booby,Sula dactylatra
+,Red-footed Booby,S. sula
 ,Brown Booby,S. leucogaster
 
 ,CORMORANTS,PHALACROCORACIDAE
@@ -311,7 +324,6 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,White Ibis,Eudocimus albus
 ,Scarlet Ibis,E. ruber
 ,Green Ibis,Mesembrinibis cayennensis
-,Buff-necked Ibis,Theristicus caudatus
 ,Roseate Spoonbill,Platalea ajaja
 
 ,NEW WORLD VULTURES,CATHARTIDAE
@@ -374,7 +386,6 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Amazonian Pygmy-Owl,Glaucidium hardyi
 ,Burrowing Owl,Athene cunicularia
 ,Striped Owl,Asio clamator
-,Stygian Owl,A. stygius
 ,Short-eared Owl,A. flammeus
 
 ,TROGONS,TROGONIDAE
@@ -420,7 +431,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Toco Toucan,Ramphastos toco
 ,White-throated Toucan,R. tucanus
 ,Channel-billed Toucan,R. vitellinus
-,Chestnut-tipped Toucanet,Aulacorhynchus derbianus
+,Tepui Toucanet,Aulacorhynchus whitelianus
 ,Guianan Toucanet,Selenidera piperivora
 ,Green Aracari,Pteroglossus viridis
 ,Black-necked Aracari,P. aracari
@@ -455,7 +466,6 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Black Caracara,Daptrius ater
 ,Yellow-headed Caracara,Milvago chimachima
 ,Eurasian Kestrel,Falco tinnunculus
-,American Kestrel,F. sparverius
 ,Merlin,F. columbarius
 ,Bat Falcon,F. rufigularis
 ,Orange-breasted Falcon,F. deiroleucus
@@ -465,13 +475,13 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,PARROTS,PSITTACIDAE
 ,Lilac-tailed Parrotlet,Touit batavicus
 ,Sapphire-rumped Parrotlet,T. purpuratus
-,Golden-winged Parakeet,Brotogeris chrysoptera
+,Canary-winged Parakeet,Brotogeris versicolurus
+,Golden-winged Parakeet,B. chrysoptera
 ,Caica Parrot,Pyrilia caica
 ,Dusky Parrot,Pionus fuscus
 ,Blue-headed Parrot,P. menstruus
 ,Short-tailed Parrot,Graydidascalus brachyurus
 ,Blue-cheeked Parrot,Amazona dufresniana
-,Yellow-crowned Parrot,A. ochrocephala
 ,Mealy Parrot,A. farinosa
 ,Orange-winged Parrot,A. amazonica
 ,Green-rumped Parrotlet,Forpus passerinus
@@ -523,7 +533,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Black-chinned Antbird,Hypocnemoides melanopogon
 ,Silvered Antbird,Sclateria naevia
 ,Black-headed Antbird,Percnostola rufifrons
-,Roraiman Antbird,Myrmelastes saturatus
+,Spot-winged Antbird,Myrmelastes leucostigma
 ,Ferruginous-backed Antbird,Myrmoderus ferrugineus
 ,Black-throated Antbird,Myrmophylax atrothorax
 ,Wing-banded Antbird,Myrmornis torquata
@@ -558,7 +568,6 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Amazonian Barred-Woodcreeper,Dendrocolaptes certhia
 ,Black-banded Woodcreeper,D. picumnus
 ,Red-billed Woodcreeper,Hylexetastes perrotii
-,Strong-billed Woodcreeper,Xiphocolaptes promeropirhynchus
 ,Striped Woodcreeper,Xiphorhynchus obsoletus
 ,Chestnut-rumped Woodcreeper,X. pardalotus
 ,Buff-throated Woodcreeper,X. guttatus
@@ -573,7 +582,8 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
 ,Rufous-tailed Foliage-gleaner,Anabacerthia ruficaudata
 ,Ruddy Foliage-gleaner,Clibanornis rubiginosus
-,Buff-throated Foliage-gleaner,Automolus ochrolaemus
+,Chestnut-crowned Foliage-gleaner,Automolus rufipileatus
+,Buff-throated Foliage-gleaner,A. ochrolaemus
 ,Olive-backed Foliage-gleaner,A. infuscatus
 ,Speckled Spinetail,Cranioleuca gutturata
 ,Yellow-chinned Spinetail,Certhiaxis cinnamomeus
@@ -598,6 +608,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Mouse-colored Tyrannulet,Phaeomyias murina
 ,Yellow Tyrannulet,Capsiempis flaveola
 ,Bearded Tachuri,Polystictus pectoralis
+,Crested Doradito,Pseudocolopteryx sclateri
 ,Ringed Antpipit,Corythopis torquatus
 ,Guianan Tyrannulet,Zimmerius acer
 ,Olive-green Tyrannulet,Phylloscartes virescens
@@ -641,6 +652,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Long-tailed Tyrant,Colonia colonus
 ,Piratic Flycatcher,Legatus leucophaius
 ,Rusty-margined Flycatcher,Myiozetetes cayanensis
+,Social Flycatcher,M. similis
 ,Dusky-chested Flycatcher,M. luteiventris
 ,Great Kiskadee,Pitangus sulphuratus
 ,Lesser Kiskadee,P. lictor
@@ -650,11 +662,13 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Sulphury Flycatcher,Tyrannopsis sulphurea
 ,Variegated Flycatcher,Empidonomus varius
 ,Crowned Slaty Flycatcher,E. aurantioatrocristatus
-,Tropical Kingbird,Tyrannus melancholicus
+,White-throated Kingbird,Tyrannus albogularis
+,Tropical Kingbird,T. melancholicus
 ,Fork-tailed Flycatcher,T. savana
 ,Eastern Kingbird,T. tyrannus
 ,Gray Kingbird,T. dominicensis
 ,Grayish Mourner,Rhytipterna simplex
+,Pale-bellied Mourner,R. immunda
 ,Todd's Sirystes,Sirystes subcanescens
 ,Dusky-capped Flycatcher,Myiarchus tuberculifer
 ,Short-crested Flycatcher,M. ferox
@@ -770,44 +784,28 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Yellowish Pipit,Anthus lutescens
 
 ,TANAGERS,THRAUPIDAE
-,Red-capped Cardinal,Paroaria gularis
-,Black-faced Tanager,Schistochlamys melanopis
-,Black-and-white Tanager,Conothraupis speculigera
-,Red-billed Pied Tanager,Lamprospiza melanoleuca
+,Blue-backed Tanager,Cyanicterus cyanicterus
 ,Hooded Tanager,Nemosia pileata
+,Green Honeycreeper,Chlorophanes spiza
+,Guira Tanager,Hemithraupis guira
+,Yellow-backed Tanager,H. flavicollis
+,Bicolored Conebill,Conirostrum bicolor
+,Chestnut-vented Conebill,C. speciosum
+,Blue-black Grassquit,Volatinia jacarina
+,Black-and-white Tanager,Conothraupis speculigera
 ,Flame-crested Tanager,Tachyphonus cristatus
 ,Fulvous-crested Tanager,T. surinamus
 ,White-shouldered Tanager,T. luctuosus
 ,White-lined Tanager,T. rufus
 ,Red-shouldered Tanager,T. phoenicius
-,Fulvous Shrike-Tanager,Lanio fulvus
+,Pileated Finch,Coryphospingus pileatus
 ,Silver-beaked Tanager,Ramphocelus carbo
-,Blue-backed Tanager,Cyanicterus cyanicterus
-,Blue-gray Tanager,Thraupis episcopus
-,Palm Tanager,T. palmarum
-,Burnished-buff Tanager,Tangara cayana
-,Dotted Tanager,T. varia
-,Speckled Tanager,T. guttata
-,Spotted Tanager,T. punctata
-,Turquoise Tanager,T. mexicana
-,Paradise Tanager,T. chilensis
-,Opal-rumped Tanager,T. velia
-,Bay-headed Tanager,T. gyrola
+,Fulvous Shrike-Tanager,Lanio fulvus
+,Purple Honeycreeper,Cyanerpes caeruleus
+,Red-legged Honeycreeper,C. cyaneus
 ,Swallow Tanager,Tersina viridis
 ,Black-faced Dacnis,Dacnis lineata
 ,Blue Dacnis,D. cayana
-,Purple Honeycreeper,Cyanerpes caeruleus
-,Red-legged Honeycreeper,C. cyaneus
-,Green Honeycreeper,Chlorophanes spiza
-,Guira Tanager,Hemithraupis guira
-,Yellow-backed Tanager,H. flavicollis
-,Chestnut-vented Conebill,Conirostrum speciosum
-,Bicolored Conebill,C. bicolor
-,Wedge-tailed Grass-Finch,Emberizoides herbicola
-,Buff-throated Saltator,Saltator maximus
-,Grayish Saltator,S. coerulescens
-,Slate-colored Grosbeak,S. grossus
-,Blue-black Grassquit,Volatinia jacarina
 ,Lesson's Seedeater,Sporophila bouvronides
 ,Lined Seedeater,S. lineola
 ,Chestnut-bellied Seedeater,S. castaneiventris
@@ -818,8 +816,24 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Yellow-bellied Seedeater,S. nigricollis
 ,Slate-colored Seedeater,S. schistacea
 ,Plumbeous Seedeater,S. plumbea
-,Pileated Finch,Coryphospingus pileatus
+,Buff-throated Saltator,Saltator maximus
+,Grayish Saltator,S. coerulescens
+,Slate-colored Grosbeak,S. grossus
+,Wedge-tailed Grass-Finch,Emberizoides herbicola
 ,Bananaquit,Coereba flaveola
+,Red-capped Cardinal,Paroaria gularis
+,Black-faced Tanager,Schistochlamys melanopis
+,Burnished-buff Tanager,Tangara cayana
+,Turquoise Tanager,T. mexicana
+,Paradise Tanager,T. chilensis
+,Opal-rumped Tanager,T. velia
+,Bay-headed Tanager,T. gyrola
+,Blue-gray Tanager,Thraupis episcopus
+,Palm Tanager,T. palmarum
+,Dotted Tanager,Ixothraupis varia
+,Speckled Tanager,I. guttata
+,Spotted Tanager,I. punctata
+,Red-billed Pied Tanager,Lamprospiza melanoleuca
 
 ,SPARROWS,EMBERIZIDAE
 ,Grassland Sparrow,Ammodramus humeralis
@@ -835,9 +849,11 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Yellow-green Grosbeak,Caryothraustes canadensis
 ,Red-and-black Grosbeak,Periporphyrus erythromelas
 ,Blue-black Grosbeak,Cyanoloxia cyanoides
+,Dickcissel,Spiza americana
 
 ,WOOD-WARBLERS,PARULIDAE
 ,Northern Waterthrush,Parkesia noveboracensis
+,Prothonotary Warbler,Protonotaria citrea
 ,Masked Yellowthroat,Geothlypis aequinoctialis
 ,American Redstart,Setophaga ruticilla
 ,Tropical Parula,S. pitiayumi
