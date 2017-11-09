@@ -2,4 +2,15 @@
 {
     // Controls if the editor will scroll beyond the last line
   "editor.scrollBeyondLastLine": false,
+
+  "files.exclude": {
+    // "**/": true,
+    // "js/": false,
+    // "{**/, !js/}" : true,
+    // "**/!{js}/": false,
+    "node_modules/": true,
+    "typings/": true
+  }
+
 }
+

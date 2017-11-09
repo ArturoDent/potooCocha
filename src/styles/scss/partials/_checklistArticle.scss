@@ -1,0 +1,219 @@
+#checklistArticle {
+    position  :  relative;
+    margin  :  15ch 0 0 0;
+    order : 4;
+
+    // align-self: flex-end;
+    overflow  :  visible;
+}
+
+#checklistAuthorsPanel  {
+    position: absolute;
+    opacity: 0;
+    height : auto;
+    // margin : 0 10px 0 10px;
+    // padding : 7px 10px 8px 20px;
+
+    margin : 0 1ch;
+    padding : 0.7ch 1ch 0.8ch 2ch;
+
+    font-variant: small-caps;
+    font-size  :  0.8rem;
+    text-align  :  center;
+    line-height  :  1rem;
+    color: $panelFlyoutFontColor;
+    background-color : $panelFlyoutColor;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    // transition : transform 550ms 400ms;
+    // transform: translateY(-52px);
+    transition : opacity 550ms 400ms;
+
+    // z-index: -1;
+}
+
+#checklistAuthorsPanel.show  {
+    // transform: translateY(0px);
+    opacity: 1;
+
+    // z-index: 0;
+}
+
+#checklistAuthorsPanel.hide  {
+    // transform: translateY(-52px);
+    opacity: 0;
+    transition : opacity 450ms;
+
+    // z-index: -1;
+    // transition : transform 450ms;
+}
+
+#checklistArticle .panel  {
+    padding  :  2.5ch 0 0 0;
+}
+
+#checklistOptions.panel {
+    /*display  :  flex;
+    flex-direction  :  column;
+    justify-content  :  space-around;*/
+
+    position  :  relative;
+    left  :  10%;
+    width  :  80%;
+    // margin  :  70px 0 70px 0;
+    // padding  :  10px 0 10px 45px;
+    margin  :  7ch 0;
+    padding  :  1ch 0 1ch 3ch;
+
+    font-size  :  1rem;
+    line-height : 2.4rem;
+    letter-spacing  :  0.15em;
+
+    border-top-left-radius  :  10%;
+    border-bottom-right-radius  :  25%;
+}
+
+                                     // "Checklists"
+.checklistTitle  {
+    position  :  absolute;
+    // top  :  10px;
+    // left  :  -245px;
+    top  :  1ch;
+    left  :  -44%;
+    z-index  :  2;
+
+    font-size  :  1.25rem;
+    font-weight  :  bold;
+    font-variant  :  small-caps;
+    color  :  white;
+
+    text-shadow : 0 0 3px rgba(0,0,0,1);
+    letter-spacing  :  0.2em;
+
+    transform  :  rotate(-86deg);
+    -webkit-transform-origin  :  top right;
+       -moz-transform-origin  :  top right;
+        -ms-transform-origin  :  top right;
+         -o-transform-origin  :  top right;
+            transform-origin  :  top right;
+}
+
+#checklistCountryButton {
+    position  :  absolute;
+    top  :  15%;
+    right  :  -30%;
+    // padding :  4px 30px 6px 0;
+    // min-width : 260px;
+    // padding :  0.4ch 3ch 0.6ch 0;
+    // padding : 0.8ch 2ch 1ch 0;
+    // padding : 0.6ch 2ch 1ch 0;
+    padding : 0 2ch 0.1ch 0;
+
+    width : 20ch;
+    z-index: 1;
+
+    text-align: right;
+    // line-height  :  20px;
+}
+
+#checklistCountryButton.highlight:hover, #checklistCountryButton.highlight:focus {
+    box-shadow  :  inset -185px 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#pdfButton {
+    position  :  absolute;
+    right  :  -30%;
+    bottom  :  37%;
+
+    // height  :  2.5ch;
+    width : 15ch;
+    // padding  :  0.4ch 0 0 1.8ch;
+    padding : 0 0 0.1ch 0;
+
+}
+
+#csvButton {
+    position  :  absolute;
+    right : -30%;
+    bottom  :  15%;
+    // height  :  2.5ch;
+    width : 15ch;
+    // padding  :  0.4ch 0 0 1.8ch;
+    padding : 0 0 0.1ch 0;
+}
+
+#numDays {
+    display  :  flex;
+    flex-direction  :  row;
+    justify-content  :  space-around;
+
+    position  :  relative;
+    // left  :  15px;
+    left  :  1.5ch;
+    width  :  140%;
+    margin  :  0 0 80px 0;
+
+    color  :  #fff;
+
+    background-color  :  transparent;
+}
+
+#days {
+    position  :  relative;
+    top  :  6px;
+
+    font-size  :  1rem;
+    letter-spacing  :  0.1em;
+    text-shadow: none;
+}
+
+#numDays a {
+    position  :  relative;
+    // top  :  2px;
+    // width  :  44px;
+    // height  :  44px;
+    width  :  4.4ch;
+    height  :  4.4ch;
+
+    padding  :  1ch 0 0 0;
+
+    color : #454647;
+    font-size  :  1.1rem;
+    text-align  :  center;
+    text-decoration  :  none;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+
+    // slightly randomize the variuos border-radii ala cicada principle ?***
+    border-radius  :  50%;
+    background-color  :  #eee;
+    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3), inset 0 0 7px rgba(0,0,0,0.5);
+
+    cursor  :  pointer;
+    -webkit-transition  :  all 400ms;
+       -moz-transition  :  all 400ms;
+         -o-transition  :  all 400ms;
+            transition  :  all 300ms;
+}
+
+#numDays a:hover,#numDays a:focus {
+    color : #fff;
+    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+    border-top-right-radius  :  10%;
+    background-color  :  $genericButtonColor;
+}
+
+#numDays a.highlight {
+    top  :  -15px;
+
+    color  :  #fff;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top-right-radius  :  10%;
+    background-color  :  $genericButtonColor;
+
+    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3);
+
+    transform  :  scale(1.3);
+    transition : all 550ms;
+    cursor : default;
+}

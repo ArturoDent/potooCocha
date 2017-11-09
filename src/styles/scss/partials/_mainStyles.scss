@@ -1,0 +1,216 @@
+html {
+    width  :  100%;
+    height  :  100%;
+    /*so 1em = 10px (browser default usually 16px)*/
+    font-size  :  16px;
+    // line-height : calc(28 / 1rem);
+    background-color  :  $bgColor;
+}
+
+body {
+    width  :  100vw;
+    min-height  :  100vh;
+
+    font-family  :  Verdana, Georgia, sans-serif;
+    font-size  :  1rem;
+    font-weight  :  600;
+    color : white;
+    text-shadow : 0  1px rgba(0,0,0,0.5);
+    letter-spacing  :  0.04em;
+
+    background-color  :  $bgColor;
+    overflow-x : hidden;
+}
+
+body::after {
+    content:" ";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+
+    border-top: 1px solid $bodyBorderColor;
+    border-right: 1px solid $bodyBorderColor;
+    border-bottom: 2px solid $bodyBorderColor;
+    border-left: 1px solid $bodyBorderColor;
+    pointer-events: none;
+}
+
+a   {  color  :  inherit;   text-decoration  :  none;  }
+
+a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
+
+#mainContent {
+    position : relative;
+    top : 20vh;
+    left : 10vw;
+
+    transition  :  transform 750ms;
+}
+
+#mainContent.modal-shrink {
+    transform  :  translateX(-100px);
+}
+
+.titleBanner {
+    position  :  absolute;
+
+    top : 0;
+    left : 0;
+    width : 100vw;
+    height: auto;
+    padding: 0.8ch 0 0.8ch 20vw;
+    // z-index: 1;
+
+    font-size  :  2.8rem;
+    font-weight  :  bold;
+    font-variant  :  small-caps;
+    color  :  $titleTextFontColor;
+    letter-spacing  :  0.2em;
+
+    background-color  :  $titleBannerColor;
+    box-shadow: 0 1px 2px rgba(0,0,0, 0.5);
+
+// background: rgb(90,90,90);
+// background: -moz-linear-gradient(left, rgba(90,90,90,0) 5%, rgba(60,60,60,1) 30%, rgba(60,60,60,1) 35%, rgba(90,90,90,0) 90%);
+// background: -webkit-linear-gradient(left, rgba(90,90,90,0) 5%,rgba(60,60,60,1) 30%,rgba(60,60,60,1) 35%,rgba(90,90,90,0) 90%);
+// background: linear-gradient(to right, rgba(90,90,90,0) 5%,rgba(60,60,60,1) 30%,rgba(60,60,60,1) 35%,rgba(90,90,90,0) 90%);
+}
+
+.titleBanner_spacer  {
+    position  :  relative;
+    top  :  -13px;
+    left : -3px;
+
+    letter-spacing  :  0.1em;
+    color : $panelFlyoutFontColor;
+    font-size  :  1.3rem;
+    font-variant  :  normal;
+    // poor support 2017-08
+    // text-decoration: underline  $panelFlyoutFontColor;
+    border-bottom: 4px double $panelFlyoutFontColor;
+}
+
+.articles {
+    display  :  -webkit-flex;
+    display  :          flex;
+    flex-direction  :  column;
+    flex-wrap  :  nowrap;
+
+    position  :  relative;
+    left  :  0;
+    width : 60ch;
+    max-width : 60ch;
+    margin-top  :  4.5ch;
+
+    overflow  :  visible;
+}
+
+section  {
+    position  :  relative;
+}
+
+article {
+    border-radius  :  3px;
+    transition  :  all 500ms;
+}
+
+.panel {
+    position  :  relative;
+    padding  :  0  1ch 0 4ch;
+
+    pointer-events  :  auto;
+
+    border  :  1px solid rgba(255,255,255,0.15);
+    border-radius  :  3px;
+    background-color  :  $panelColor;
+    box-shadow: 0 0 2px rgba(0,0,0,0.7);
+
+    -webkit-transition  :  opacity 2s;
+       -moz-transition  :  opacity 2s;
+         -o-transition  :  opacity 2s;
+            transition  :  opacity 2s;
+}
+
+.flyoutPanel  {
+    position: relative;
+    top : 0;
+    height : 4.2ch;
+    margin : 0;
+    padding : 1ch 0 0 0;
+
+    font-size  :  1rem;
+    font-variant  :  small-caps;
+    color  :  $panelFlyoutFontColor;
+    text-shadow : 1px 1px rgba(0,0,0,1);
+    text-align  :  center;
+    letter-spacing  :  0.1em;
+
+    border  :  1px solid rgba(255,255,255,0.25);
+    background-color  :  $panelFlyoutColor;
+}
+
+.topFlyoutPanel  {
+    margin: 0 0 2ch 0;
+    top: 1ch;
+    left : 2ch;
+    width : calc(100% - 4ch);
+
+    border-top  :  1px solid rgba(0,0,0,0.25);
+    border-radius: 5px;
+    box-shadow : inset 0 -1px 1px -1px rgba(0,0,0,0.2), inset 0 0 1px rgba(0,0,0,0.2);
+}
+
+#checklistArticle .topFlyoutPanel  {
+    position: absolute;
+    top: -3.8ch;
+    left : 8ch;
+    min-width : calc(100% - 80px);
+    height  :  10ch;
+    padding : 0.7ch 0 0 0;
+
+    letter-spacing: 0;
+
+    border-radius : 20px;
+    border-top-right-radius  :  20px;
+    border-bottom-right-radius  :  20px;
+}
+
+.bottomFlyoutPanel  {
+    margin: 0 0 0 0;
+    top : 0;
+    left : 2ch;
+    width : calc(100% - 4ch);
+
+    border-top  :  1px solid rgba(0,0,0,0.25);
+    border-radius: 5px;
+    box-shadow  :  inset 0 1px 1px -1px rgba(0,0,0,0.2), inset 0 0 1px rgba(0,0,0,0.2);
+}
+
+/*   -------------------   Footer   ----------------------------   */
+
+footer {
+    display  :  -webkit-flex;
+    display  :  -ms-flex;
+    display  :          flex;
+
+    -webkit-flex-direction  :  row;
+    -ms-flex-direction  :  row;
+    flex-direction  :  row;
+
+    justify-content  :  space-around;
+    margin  :  3ch 0 1ch 0;
+}
+
+footer a  {
+    padding : 1px 3px 2px 5px;
+    text-decoration  :  none;
+    border : solid 1px transparent;
+    border-bottom  :  solid 1px #bbb;
+}
+
+footer a:hover, footer a:focus {
+    border  :  solid 1px #bbb;
+    transition: all 350ms;
+}

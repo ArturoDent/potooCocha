@@ -1,0 +1,325 @@
+#mapsCollection  {
+    display: flex;
+    justify-content: center;
+
+    position  :  fixed;
+    top : 95vh;
+    left  :  0;
+    width : 100vw;
+    height  :  355px;
+
+    margin  :  0;
+    padding  :  0;
+    text-align  :  center;
+
+    background-color: $titleBannerColor;
+    cursor: pointer;
+    z-index : 10;
+    transform : scale(0.1);
+    transition  :  transform 1.2s;
+}
+
+#mapsHeader  {
+    position : absolute;
+    top : 0;
+    left : 0;
+    height : 3.2rem;
+    width : 100%;
+    padding: 0;
+    border-top : 1px solid rgba(255,255,255,0.5);
+    background-color : darken($titleBannerColor, 5%);
+}
+
+#mapsCollection.namesOnlySeen  {
+    top : 100vh;
+    transform : translateY(-3.2rem) scale(1);
+}
+
+#mapsCollection.open  {
+    transform : translateY(-355px);
+}
+
+#deleteAllMapsButton  {
+    position: absolute;
+    left : 0;
+    top: 290%;
+    height: auto;
+    // padding: 2px 15px 3px 45px;
+    padding: 2px 2ch 3px 6ch;
+
+
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    // line-height: 1.45em;
+
+    cursor: pointer;
+    background-color  :  #a32d00;
+    box-shadow  :  -2px 2px 2px rgba(0,0,0,0.5);
+
+    transform: scale(0.95);
+
+     -webkit-transform-origin  :  0 50%;
+        -moz-transform-origin  :  0 50%;
+         -ms-transform-origin  :  0 50%;
+          -o-transform-origin  :  0 50%;
+             transform-origin  :  0 50%;
+
+    transition: transform 450ms;
+}
+
+#deleteAllMapsButton::after  {
+    content  :  '';
+    position  :  absolute;
+    top  :  0;
+    left  :  100%;
+
+    border-width  :  0.9em;
+    border-style  :  solid;
+    border-color  :  transparent transparent transparent #a32d00;
+}
+
+#deleteAllMapsButton:hover  {
+    transform: scale(1, 1);
+}
+
+.smallBird  {
+    opacity  :  0;
+
+    transform  :  scale(0.75);
+    -webkit-transform-origin  :  0 50%;
+       -moz-transform-origin  :  0 50%;
+        -ms-transform-origin  :  0 50%;
+         -o-transform-origin  :  0 50%;
+            transform-origin  :  0 50%;
+}
+
+.thinify  {
+    flex-grow: 0;
+    flex-basis: 305px;
+    position  :  relative;
+    top  :  -15px;
+    left : 3%;
+
+    // margin-top  :  -50px;
+    // margin-bottom  :  -50px;
+    margin-left : -1.5%
+    // margin-left : -;
+}
+
+.smallBird .drawing  {
+    -webkit-filter : drop-shadow( -6px 0 6px rgba(0,0,0,0.3) ) drop-shadow( 6px 0 6px rgba(0,0,0,0.3) );
+    -ms-filter : drop-shadow( -6px 0 6px rgba(0,0,0,0.3) ) drop-shadow( 6px 0 6px rgba(0,0,0,0.3) );
+    filter  :  drop-shadow( -6px 0 6px rgba(0,0,0,0.3) ) drop-shadow( 6px 0 6px rgba(0,0,0,0.3) );
+}
+
+.birdName  {
+    position  :  absolute;
+    left : -75px;
+    height  :  auto;
+    width : calc(100% + 70px);
+    padding  :  0;
+
+    font-size  :  0.95rem;
+    text-align  :  center;
+}
+
+#currentMap .birdName {
+    // top  :  -95px;
+    top  :  -4%;
+
+    line-height  :  1.3rem;
+}
+
+.birdName > span:last-Child   {
+    font-style  :  italic;
+}
+
+.birdName.smallBirdText   {
+    // top  :  -55px;
+    // left  :  -55px;
+
+    top  :  -2.4rem;
+    left  :  -26%;
+
+    width  :  calc(100% + 40px);
+    height : 4.1rem;
+    padding : 0.6rem 0.2rem 0 0.2rem;
+    // height : 62px;
+
+    font-size: 1rem;
+    line-height  : 1.3rem;
+    // background-color: #2E2D2D;
+    // border-top : 1px solid rgba(255,255,255,0.5);
+}
+
+// .smallBird:nth-child(2) .birdName.smallBirdText  {
+//     border-left : 1px solid rgba(255,255,255,0.5);
+// }
+
+#currentMap {
+    opacity  :  0;
+
+    position  :  fixed;
+    top  :  calc(50vh - 265px);
+    left  :  65vw;
+    margin  :  0 0 0 5px;
+
+    transform : scale(1);
+    transition  : transform 900ms 250ms;
+    -webkit-transform-origin  :  0 0;
+       -moz-transform-origin  :  0 0;
+        -ms-transform-origin  :  0 0;
+         -o-transform-origin  :  0 0;
+            transform-origin  :  0 0;
+}
+
+#currentMap.shiftUp  {
+    transform: translateY(-155px);
+}
+
+// #currentMap.modal-left {
+//     transform  :  translateX(-70px);
+// }
+
+// #currentMap.shiftUp.modal-left {
+//     transform  :  translateX(-70px) translateY(-145px);
+// }
+
+#currentMap .deleteMapButton {
+    display  :  none;
+}
+
+#mapsCollection .saveMapButton {
+    display  :  none;
+    opacity  :  0;
+}
+
+.birdMapInstance  {
+    position  :  relative;
+    top  :  10px;
+    background-color  :  transparent;
+}
+
+#currentBirdMap {
+    // transform : scale(2);
+    background-color  :  transparent;
+}
+
+.mapButtons {
+    width  :  30px;
+    height  :  30px;
+    padding  :  3px 0 0 0;
+
+    color  :  white;
+    text-align  :  center;
+
+    cursor  :  pointer;
+    transition  :  all 500ms;
+}
+
+.deleteMapButton  {
+    position  :  absolute;
+    top  :  45px;
+    left  :  -10%;
+    height: auto;
+    width: auto;
+    // padding: 0 7px 6px 5px;
+
+    // font-size  :  22px;
+    // color : #ccc;
+
+    // text-shadow: none;
+    // background-color: #d32d00;
+    // border : none;
+    // border-radius: 50%;
+}
+
+.saveMapButton  {
+    display  :  none;
+    position  :  absolute;
+    top  :  42%;
+    left  :  -45%;
+    background-color  :  transparent;
+}
+
+.drawing  {
+    position  :  relative;
+    text-shadow  :  none;
+    -webkit-filter  :  drop-shadow( -2px 0 2px rgba(0,0,0,0.8) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.6) );
+        -ms-filter  :  drop-shadow( -2px 0 2px rgba(0,0,0,0.8) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.6) );
+            filter  :  drop-shadow( -2px 0 2px rgba(0,0,0,0.8) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.6) );
+}
+
+.drawing.active  {
+    -webkit-filter : drop-shadow( -3px 0 3px rgba(0,0,0,0.3) ) drop-shadow( 3px 0 3px rgba(0,0,0,0.3) );
+    -ms-filter : drop-shadow( -3px 0 3px rgba(0,0,0,0.3) ) drop-shadow( 3px 0 3px rgba(0,0,0,0.3) );
+    filter  :  drop-shadow( -3px 0 3px rgba(0,0,0,0.3) ) drop-shadow( 3px 0 3px rgba(0,0,0,0.3) );
+}
+
+.colorKey {
+    opacity  :  0.2;
+
+    position  :  absolute;
+    // top  :  270px;
+    // left  :  220px;
+    top  :  65%;
+    left  :  78%;
+    transition  :  opacity 350ms;
+}
+
+.colorKey ul {
+    position  :  relative;
+}
+
+.colorKey ul li {
+    position  :  relative;
+    // margin-top  :  5px;
+    margin-top  :  0.5ch;
+
+    padding  :  0 0 2px 0;
+
+    font-size  :  0.75rem;
+    text-align  :  center;
+    letter-spacing  :  0.15em;
+    text-shadow  :  rgba(0,0,0,0.5) 1px 1px 1px;
+    list-style-type  :  none;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.colorKey ul li:nth-child(1) {    /* introduced  */
+    margin-top: 0;
+    padding  :  2px 1px 2px 1px;
+    background-color: #222;
+}
+
+.colorKey ul li:nth-child(2) {    /* hypothetical  */
+    margin-top  :  4px;
+    padding  : 0 12px 2px 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background-color: #005903;
+}
+
+.colorKey ul li:nth-child(3) {    /* extinct       */
+    background-color: #f33;
+}
+
+.colorKey ul li:nth-child(4) {    /* vagrant       */
+    color: black;
+    text-shadow: none;
+    background-color  :  gold;
+}
+
+.colorKey ul li:nth-child(5) {    /* nonbreeder    */
+    color: #fff;
+    // text-shadow: none;
+    background-color: #B66405;
+}
+
+.colorKey ul li:nth-child(6) {    /* resident      */
+    background-color  :  #00838f;
+}
+
+.colorKey ul li:nth-child(7) {    /* endemic       */
+    background-color  :  #c23bc3;
+}

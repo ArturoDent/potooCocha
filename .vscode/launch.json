@@ -1,6 +1,15 @@
 {
     "version": "0.1.0",
     "configurations": [
+// {
+//     "type": "node",
+//     "request": "launch",
+//     "name": "Gulp sync",
+//     "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+//     "args": [
+//         "sync"
+//     ]
+// },
         {
             "name": "Chrome : Launch with sourcemaps",
             // works with or without preLaunchTask
@@ -13,9 +22,8 @@
             "sourceMaps": true,
             // sourceMapPathOverrides because gulp sets source incorrectly according to extension readme
             // "sourceMapPathOverrides": {
-            //      "/source/*": "${workspaceRoot}/js/sourcemaps/*"
+            //     "/src/js/*": "${workspaceRoot}/src/js/*"
             // },
-
             // "diagnosticLogging": true,
             "runtimeArgs": [
             "--remote-debugging-port=9222"
@@ -51,15 +59,3 @@
         }
     ]
 }
-
-    // {
-    //         "name": "Chrome",
-    //         "type": "chrome",
-    //         "request": "launch",
-    //         "port": 9222,
-    //         "url": "http://localhost:8080",
-    //         "webRoot": "${workspaceRoot}",
-    //         "diagnosticLogging": true,
-    //         "sourceMaps": true,
-    //         "userDataDir": "${workspaceRoot}/.vscode/chrome"
-    //     }

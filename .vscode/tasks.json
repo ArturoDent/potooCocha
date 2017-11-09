@@ -6,7 +6,9 @@
             "taskName": "Start server and process files",
             "command": "gulp",
             "args": ["sync"],
-            "isShellCommand": true,
+            "type": "shell",
+
+            // "isShellCommand": true,
             "options": {
                 "cwd": "${workspaceRoot}"
             }
@@ -26,3 +28,4 @@
         // }
     ]
 }
+
