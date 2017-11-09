@@ -23,20 +23,20 @@ var introducedColor      =  "#222";
 var baseColor            =  "​#5e5e5e";
 var baseStrokeColor      =  "#bbb";
 
-/* global addBirdNameToMap birds currentMap  */
+/* global addBirdNameToMap birds currentMap */
 
+// eslint-disable-next-line
 function initCurrentMap() {
 
   prepareSVGstyles("SAMsvg");
-
-  // if (!map)  map = document.getElementById("currentMap");
 
   map = document.getElementById("currentMap");
   map.style.opacity = "1";
 }
 
+// eslint-disable-next-line
 function prepareSVGstyles(evt)  {
-  // console.log("prepareSVGstyles");
+
   var svg;
 
   if (evt.target && evt.target.id === "SAMsvg") {
@@ -54,12 +54,12 @@ function prepareSVGstyles(evt)  {
 
     if (!cc) continue;
 
-    setSVGstyles(cc, baseColor, baseStrokeColor);
+    setSVGstyles(cc);
   }
 }
 
-function setSVGstyles(obj, bColor, sColor )  {
-  // console.log("setSVGstyles");
+// eslint-disable-next-line
+function setSVGstyles(obj )  {
 
   if (obj.nodeName === "path"  || obj.nodeName === "circle") {
 
@@ -122,7 +122,7 @@ function newFillColor(obj, newColor) {
     }
   }
 }
-
+// eslint-disable-next-line
 function selectedCountryFillColor(selectedCountry, color)  {
 
   var svg = currentMap.querySelector("#SAMsvg");
@@ -156,24 +156,22 @@ function newStrokeColor(obj, newColor) {
   }
 }
 
-function selectedCountryStrokeColor(selectedCountry, color) {
+// function selectedCountryStrokeColor(selectedCountry, color) {
 
-  console.log("selectedCountryStrokeColor");
+//   console.log("selectedCountryStrokeColor");
 
-  var svg = currentMap.querySelector("#SAMsvg");
-  var svgDoc = svg.contentDocument;
+//   var svg = currentMap.querySelector("#SAMsvg");
+//   var svgDoc = svg.contentDocument;
 
-  var cc = svgDoc.getElementById(selectedCountry);
+//   var cc = svgDoc.getElementById(selectedCountry);
 
-  if (cc) {
-    // fillSAMmap();
-    newStrokeColor(cc, color);
-  }
-  // else fillSAMmap();
-}
+//   if (cc) {
+//     newStrokeColor(cc, color);
+//   }
+// }
 
-/* global  mapsCollection saveMapButton */
-
+/* global  mapsCollection saveMapButton  */
+// eslint-disable-next-line
 function highlightSAMmap(index, current) {
   // console.log("in highlightSAMmap, index = " + index);
   var svg;
