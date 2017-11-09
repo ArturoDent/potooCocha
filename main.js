@@ -7,7 +7,7 @@ var italics;
 var lineNumbers;
 var showEndemics;
 
-var birds;
+// var birds;
 
 //#region
 
@@ -34,7 +34,7 @@ var taxonomyCountryButton;
 
 // var map;
 
-/* global  map prepareSVGstyles loadCountryTaxonomy currentTaxonomyCountry selectedCountryFillColor getAjax currentMap selectedFillColor fillSAMmap baseColor */
+/* global  map  loadCountryTaxonomy  selectedCountryFillColor getAjax currentMap selectedFillColor fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("window.width = " + window.innerWidth);
@@ -202,7 +202,6 @@ function choseCountry(evt) {
 
 function choseChecklistCountry(evt) {
 
-  var target;
   var selectedCountry;
 
   var pageScrollTop = document.body.scrollTop;

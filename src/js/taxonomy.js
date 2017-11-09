@@ -7,7 +7,8 @@ var species;
 var families;
 var numFamilies;
 
-var birds = [];
+// eslint-disable-next-line
+var birds;
 
 var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":496,
                   "Colombia":1847, "Curaçao":218, "Ecuador":1620, "French Guiana":697,
@@ -30,7 +31,7 @@ var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "
 var currentTaxonomyCountry;
 var currentTaxonomyCountryElement;
 
-var taxonomyArticle;
+// var taxonomyArticle;
 var taxTreeArticleOpen = false;
 
 var taxPage;
@@ -53,11 +54,11 @@ var searchInstructionsOpen = true;
 
 var selectedFillColor    =  "#fff";
 
-/* global    fillSAMmap SimpleBar selectedCountryFillColor currentMap   */
+/* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap   */
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  taxonomyArticle = document.getElementById("taxonomyArticle");
+  // taxonomyArticle = document.getElementById("taxonomyArticle");
 
   searchSlideUpWrapper               =  document.querySelector("#taxonomyArticle > div.slideUpWrapper");
   searchSlideUpWrapper.style.height  =  searchSlideUpWrapper.clientHeight + "px";
@@ -144,8 +145,8 @@ function showSearchInstructions(state)  {
   }
 }
 
-/* global  mapsCollection taxonomyCountryButton prepareSVGstyles*/
-
+/* global taxonomyCountryButton  */
+// eslint-disable-next-line
 function loadCountryTaxonomy(evt) {
 
   var taxCountry;
