@@ -301,7 +301,7 @@
 }
 
 .colorKey ul li:nth-child(3) {    /* extinct       */
-    background-color: #f33;
+    background-color: rgb(218, 35, 35);
 }
 
 .colorKey ul li:nth-child(4) {    /* vagrant       */
@@ -313,7 +313,7 @@
 .colorKey ul li:nth-child(5) {    /* nonbreeder    */
     color: #fff;
     // text-shadow: none;
-    background-color: #B66405;
+    background-color: rgb(169, 92, 5);
 }
 
 .colorKey ul li:nth-child(6) {    /* resident      */
@@ -321,5 +321,5 @@
 }
 
 .colorKey ul li:nth-child(7) {    /* endemic       */
-    background-color  :  #c23bc3;
+    background-color  :  #a433a5;
 }

@@ -52,7 +52,7 @@ var searchSlideUpWrapper;
 var taxInstructionsButton;
 var searchInstructionsOpen = true;
 
-var selectedFillColor    =  "#fff";
+var selectedFillColor = "#fff";
 
 /* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap   */
 
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   taxInstructionsButton = document.querySelector(".taxInstructionsButton");
   searchInput                        =  document.getElementById("searchInput");
-  searchSpecials                     =  document.getElementById("searchSpecials");
+  searchSpecials = document.getElementById("searchSpecials");
 
   searchInput.addEventListener("input", getQuery);
   searchInput.addEventListener("change", getQuery);
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function(){
   getAjax("../data/occurrences.txt", function (data) { loadIntoArray(data); });
 });
 
-function loadIntoArray(data)  {
+function loadIntoArray(data) {
   birds = data.split("\n");
 }
 
@@ -171,18 +171,23 @@ function loadCountryTaxonomy(evt) {
 
   // taxCountry = (typeof evt === "string") ? evt : evt.target.innerHTML;
 
+  taxCountry = evt.target.innerText;
+
   if (evt.target.tagName === "A") {
     currentTaxonomyCountryElement = evt.target;
-    taxCountry = evt.target.children[1].innerHTML;
+    // taxCountry = evt.target.children[1].innerHTML;
   }
   else if (evt.target.tagName === "SPAN") {
     currentTaxonomyCountryElement = evt.target.parentNode;
-    taxCountry = evt.target.innerHTML;
+    // taxCountry = evt.target.innerHTML;
   }
   else {  //  evt.target.tagName === "IMG")
     currentTaxonomyCountryElement = evt.target.parentNode;
-    taxCountry = evt.target.nextElementSibling.innerHTML;
+    taxCountry = evt.target.nextElementSibling.innerText;
   }
+
+  // could probably replace first two options above with evt.target.innerText, not clicking on image tho
+  // console.log("innerText = " + evt.target.innerText);
 
   if (lastQuery)   {
     document.getElementById("countrySearch").classList.remove("closed");
@@ -278,24 +283,10 @@ function loadCountryTaxonomy(evt) {
   animateScrollTop(taxPage);
 }
 
-//   HACK :     (sdfsdf)  sdfsdfsdf
-
-//   TODO :          (sdfsdfsdf)
-
-//   TODO : (sdfsdfsdfsdfsdf sdf)
-
-//   TODO:       sdfsdfsdfsdfsdf
-
-//   FIXME : (sdf)
-
 function updatetaxArticleQueries(data) {
 
   // <ul id='tree'>
   taxPage.innerHTML = data;
-
-  // var taxPageWrapper = document.getElementById("taxTreeArticle");
-  // if (!taxTreeArticleOpen) taxPageWrapper.classList.add("expand");
-
 
   var taxPanel = document.querySelector(".tax-panel");
 
@@ -332,7 +323,8 @@ function clearSearchInput()  {
   //                             keyup removed
 function getQuery(event)  {
 
-  var badIndex = searchInput.value.search(/[^a-zñã'\s\*\?-]/i);
+  // var badIndex = searchInput.value.search(/[^a-zñã'\s\*\?-]/i);
+  var badIndex = searchInput.value.search(/[^a-zñã'\s-]/i);
 
   if ( badIndex !== -1) {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
@@ -519,6 +511,8 @@ function searchTree(query2) {
     }
 
     var pattern = new RegExp(query, "i");
+
+      // consider using array.filter(function()) in the future
 
       // nodes must be cloned otherwise they are removed from the tree !!
 

@@ -19,6 +19,7 @@
             // "preLaunchTask": "serve:watch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
+
             "sourceMaps": true,
             // sourceMapPathOverrides because gulp sets source incorrectly according to extension readme
             // "sourceMapPathOverrides": {

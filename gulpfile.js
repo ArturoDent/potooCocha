@@ -106,7 +106,7 @@ function moveJStoTemp() {
 const scriptOrder = [
   "./temp/js/simplebar.js",
   "./temp/js/main.js",
-  "./js/SouthAmerica.js",
+  "./temp/js/SouthAmerica.js",
   "./temp/js/taxonomy.js",
   "./temp/js/birdMapFactory.js"
 ];
@@ -144,13 +144,13 @@ const versionConfig = {
 function processHTML()  {
   return gulp.src(paths.html.src)
 
-      // modifyHTMLlinks: remove browserSync script link
-      // update css/js links to .min.css or .min.js
+  // modifyHTMLlinks: remove browserSync script link
+  // update css/js links to .min.css or .min.js
     .pipe(modifyHTMLlinks())
 
     .pipe(stripComments.html(stripOptions))
 
-      // add ?v=dateTime stamp to css and js links
+  // add ?v=dateTime stamp to css and js links
     .pipe(addVersionString(versionConfig))
     .pipe(gulp.dest(paths.html.deploy));
 }
@@ -175,8 +175,8 @@ function copySVG() {
 
 function processImages() {
   return gulp.src(paths.flags.src)
-  .pipe(imageMin())
-  .pipe(gulp.dest(paths.flags.deploy));
+    .pipe(imageMin())
+    .pipe(gulp.dest(paths.flags.deploy));
 }
 
 function copyFLAGS() {
@@ -184,7 +184,6 @@ function copyFLAGS() {
     .pipe(newer(paths.flags.deploy))
     .pipe(gulp.dest(paths.flags.deploy));
 }
-
 
 // gulp.task("ftp:experimental", function() {
 //   var conn = ftp.create( {
@@ -222,4 +221,4 @@ gulp.task("serve:deploy", gulp.series(serveTest));
 
 gulp.task("production", gulp.series(processJS));
 
-gulp.task("deploy:final", gulp.series(processHTML, processCSS, processJS, copySVG,  copyFLAGS ));
+gulp.task("deploy:final", gulp.series(processHTML, processCSS, moveJStoTemp, processJS, copySVG, copyFLAGS ));

@@ -3,29 +3,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "Start server and process files",
+            "label": "Start server and process files",
             "command": "gulp",
-            "args": ["sync"],
+            "args": [
+                "sync"
+            ],
             "type": "shell",
-
-            // "isShellCommand": true,
             "options": {
                 "cwd": "${workspaceRoot}"
             }
         }
-        // {
-        //     "taskName": "second task",
-        //     "command": "gulp",
-        //     "args": ["production"],
-        //     "isShellCommand": true,
-        //     "options": {
-        //         "cwd": "${workspaceRoot}"
-        //     }
-        // },
-        // {
-        //     "taskName": "New Build",
-        //     "dependsOn": ["Start server and process files", "production"]
-        // }
     ]
 }
 
