@@ -13,6 +13,8 @@
     text-align  :  center;
 
     background-color: $titleBannerColor;
+    box-shadow  :  0 -3px 3px rgba(0,0,0,0.3);
+
     cursor: pointer;
     z-index : 10;
     transform : scale(0.1);
@@ -26,8 +28,11 @@
     height : 3.2rem;
     width : 100%;
     padding: 0;
-    border-top : 1px solid rgba(255,255,255,0.5);
+
+    border-top : 1px solid $genericButtonColor;
+    border-bottom : 1px solid $genericButtonColor;
     background-color : darken($titleBannerColor, 5%);
+    // box-shadow :  inset 0 -1px 1px $genericButtonColor
 }
 
 #mapsCollection.namesOnlySeen  {
@@ -85,7 +90,7 @@
 .smallBird  {
     opacity  :  0;
 
-    transform  :  scale(0.75);
+    transform  :  scale(0.75) translateY(-21px);
     -webkit-transform-origin  :  0 50%;
        -moz-transform-origin  :  0 50%;
         -ms-transform-origin  :  0 50%;
@@ -97,7 +102,7 @@
     flex-grow: 0;
     flex-basis: 305px;
     position  :  relative;
-    top  :  -15px;
+    // top  :  -15px;
     left : 3%;
 
     // margin-top  :  -50px;
@@ -160,7 +165,7 @@
     opacity  :  0;
 
     position  :  fixed;
-    top  :  calc(50vh - 265px);
+    top  :  calc(50vh - 205px);
     left  :  65vw;
     margin  :  0 0 0 5px;
 
@@ -174,7 +179,7 @@
 }
 
 #currentMap.shiftUp  {
-    transform: translateY(-155px);
+    transform: translateY(-215px);
 }
 
 // #currentMap.modal-left {
@@ -245,9 +250,9 @@
 .drawing  {
     position  :  relative;
     text-shadow  :  none;
-    -webkit-filter  :  drop-shadow( -2px 0 2px rgba(0,0,0,0.8) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.6) );
-        -ms-filter  :  drop-shadow( -2px 0 2px rgba(0,0,0,0.8) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.6) );
-            filter  :  drop-shadow( -2px 0 2px rgba(0,0,0,0.8) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.6) );
+    -webkit-filter  :  drop-shadow( -1px 0 0 rgba(255,255,255,0.3) ) drop-shadow( -2px 0 0 rgba(0,0,0,0.5) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.4) );
+        -ms-filter  :  drop-shadow( -1px 0 0 rgba(255,255,255,0.3) ) drop-shadow( -2px 0 0 rgba(0,0,0,0.5) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.4) );
+            filter  :  drop-shadow( -1px 0 0 rgba(255,255,255,0.3) ) drop-shadow( -2px 0 0 rgba(0,0,0,0.5) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.4) );
 }
 
 .drawing.active  {
@@ -274,52 +279,76 @@
 .colorKey ul li {
     position  :  relative;
     // margin-top  :  5px;
-    margin-top  :  0.5ch;
+    margin-top  :  0.8ch;
 
-    padding  :  0 0 2px 0;
+    // padding  :  1px 1px 2px 1px;
+    padding  : 1px 5px 2px 10px;
+
 
     font-size  :  0.75rem;
     text-align  :  center;
     letter-spacing  :  0.15em;
     text-shadow  :  rgba(0,0,0,0.5) 1px 1px 1px;
     list-style-type  :  none;
-    border-top: 1px solid rgba(255,255,255,0.5);
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    // border-top: 1px solid rgba(255,255,255,0.5);
+    // border-bottom: 1px solid rgba(0,0,0,0.5);
+    background-color: darken($bgColor, 3%);
+    // box-shadow: 0 0 1px #111;
 }
 
 .colorKey ul li:nth-child(1) {    /* introduced  */
     margin-top: 0;
-    padding  :  2px 1px 2px 1px;
-    background-color: #222;
+    // padding  :  2px 1px 2px 1px;
+    // border-top: 1px solid #000;
+    // border-bottom: 1px solid #000;
+    border-left: 18px solid #000;
+    // border-right: 1px solid #000;
+    // box-shadow: 0 0 1px #000;
+
+    // background-color: #222;
 }
 
 .colorKey ul li:nth-child(2) {    /* hypothetical  */
     margin-top  :  4px;
-    padding  : 0 12px 2px 12px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    background-color: #005903;
+    // border-top: 1px solid #005903;
+    // border-bottom: 1px solid #005903;
+    border-left: 18px solid #005903;
+    // border-right: 1px solid #005903;
 }
 
 .colorKey ul li:nth-child(3) {    /* extinct       */
-    background-color: rgb(218, 35, 35);
+    // border-top: 1px solid rgb(218, 35, 35);
+    // border-bottom: 1px solid rgb(218, 35, 35);
+    border-left: 18px solid rgb(218, 35, 35);
+    // border-right: 1px solid rgb(218, 35, 35);
 }
 
 .colorKey ul li:nth-child(4) {    /* vagrant       */
-    color: black;
-    text-shadow: none;
-    background-color  :  gold;
+    // border-top: 1px solid gold;
+    // border-bottom: 1px solid gold;
+    border-left: 18px solid gold;
+    // border-right: 1px solid gold;
 }
 
 .colorKey ul li:nth-child(5) {    /* nonbreeder    */
-    color: #fff;
-    // text-shadow: none;
-    background-color: rgb(169, 92, 5);
+    // border-top: 1px solid rgb(169, 92, 5);
+    // border-bottom: 1px solid rgb(169, 92, 5);
+    border-left: 18px solid rgb(169, 92, 5);
+    // border-right: 1px solid rgb(169, 92, 5);
 }
 
 .colorKey ul li:nth-child(6) {    /* resident      */
-    background-color  :  #00838f;
+    // background-color  :  #00838f;
+    // border-top: 1px solid #00838f;
+    // border-bottom: 1px solid #00838f;
+    border-left: 18px solid #00838f;
+    // border-right: 1px solid #00838f;
 }
 
 .colorKey ul li:nth-child(7) {    /* endemic       */
-    background-color  :  #a433a5;
+    // background-color  :  #a433a5;
+    // border-top: 1px solid #a433a5;
+    // border-bottom: 1px solid #a433a5;
+    border-left: 18px solid #a433a5;
+    // border-right: 1px solid #a433a5;
 }

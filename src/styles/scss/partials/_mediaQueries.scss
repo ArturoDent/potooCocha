@@ -22,6 +22,30 @@
         padding  :  0.2rem 0 0 0;
         // font-size  :  1.4rem;
     }
+    .taxInstructionsButton.hasTooltip:hover .tooltip {
+        box-shadow : inset -180px 0 2px $turquoiseHighlightColor, 0 0 15px  $turquoiseHighlightColor;
+    }
+    #closeResultsPanelButton  {
+        // top: 0;
+        padding: 0.4rem 0 0 0;
+    }
+    // #checklistArticle .panel  {
+    //     padding  :  2.5ch 2% 0 2%;
+    // }
+    // #sampleTable {
+    //     left: -2%;
+    //     width: 98%;
+    // }
+    #sampleTable td.leftCheckBox.show {
+        width: 35px;
+    }
+    .showLineNumbers::before {
+        left: -16px;
+    }
+    .showEndemics::before {
+        top: 9px;
+        left: -16px;
+    }
     .checklistTitle  {
         font-size  :  1.2rem;
     }
@@ -32,7 +56,7 @@
         transform : scale(0.85);
     }
      #currentMap.shiftUp  {
-        transform: translateY(-120px);
+        transform: translateY(-175px);
     }
     #currentMap .birdName {
         // top  :  -26px;
@@ -60,15 +84,15 @@
         transform : translateY(-280px);
     }
     .smallBird  {
-        transform  :  scale(0.65);
+        transform  :  scale(0.6);
     }
     .thinify  {
-        top  :  -17px;
+        top  :  -37px;
         left: 5%;
         margin-left : -70px;
     }
     .birdName.smallBirdText   {
-        top  :  -3.6rem;
+        top  :  -2rem;
         // left  :  -16%;
 
         // width  :  calc(100% + 40px);
@@ -77,24 +101,24 @@
         font-size: 1.15rem;
     }
     .colorKey {
-        top  :  55%;
+        top  :  60%;
         left  :  74%;
     }
-    .country-menu {
-        padding: 0 15px;
-    }
-    .country-menu a {
-        left : -30px;
-        width: 230px;
-        padding: 0 0 0 35px;
-    }
-    .country-menu img {
-        top: -5px;
-        left: -24px;
-        padding: 4px;
-        height: 36px;
-        width:36px;
-    }
+    // .country-menu {
+    //     padding: 0 15px;
+    // }
+    // .country-menu a {
+    //     left : -30px;
+    //     width: 230px;
+    //     padding: 0 0 0 35px;
+    // }
+    // .country-menu img {
+    //     top: -5px;
+    //     left: -24px;
+    //     padding: 4px;
+    //     height: 36px;
+    //     width:36px;
+    // }
 }
 
 @media screen and (max-width: 1371px)  {
@@ -115,12 +139,12 @@
         left: 8%;
         margin-left : -85px;
     }
-    .country-menu img {
-        top: -5px;
-        left: -21px;
-        padding: 4px;
-        height: 32px;
-        width:32px;
-    }
+    // .country-menu img {
+    //     top: -5px;
+    //     left: -21px;
+    //     padding: 4px;
+    //     height: 32px;
+    //     width:32px;
+    // }
 
 }

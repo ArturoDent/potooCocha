@@ -11,8 +11,21 @@
             "type": "shell",
             "options": {
                 "cwd": "${workspaceRoot}"
-            }
+            },
+            // "dependsOn": "Echo"
         }
+
+        // {
+        //     "taskName": "Echo",
+        //     "command": "echo",
+        //     "args": ["Hi", "there!"],
+        //     "isShellCommand": true,
+        //     "isBackground": true,
+        //     "echoCommand": true,
+        //     "showOutput": "always",
+        //     "isBuildCommand": false
+        // }
+
     ]
 }
 

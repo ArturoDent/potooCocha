@@ -3,9 +3,9 @@
 var map;
 
 var countries  = { "Argentina":0, "Aruba":1, "Bolivia":2, "Brazil":3, "Chile":4,
-                  "Colombia":5, "Curaçao":6, "Ecuador":7, "FrenchGuiana":8,
-                  "Guyana":9, "Paraguay":10, "Peru":11, "Suriname":12, "Trinidad":13,
-                  "Uruguay":14, "Venezuela":15, "Bonaire":16, "Falklands":17};
+  "Colombia":5, "Curaçao":6, "Ecuador":7, "FrenchGuiana":8,
+  "Guyana":9, "Paraguay":10, "Peru":11, "Suriname":12, "Trinidad":13,
+  "Uruguay":14, "Venezuela":15, "Bonaire":16, "Falklands":17 };
 
 
 var endemicColor         =  "#C23BC3";
@@ -20,7 +20,7 @@ var hypotheticalColor    =  "#005903";
 // var hypotheticalColor    =  "#007913";
 var introducedColor      =  "#222";
 
-var baseColor            =  "​#5e5e5e";
+var baseColor            =  "​#444";
 var baseStrokeColor      =  "#bbb";
 
 /* global addBirdNameToMap birds currentMap */
@@ -102,7 +102,7 @@ function newFillColor(obj, newColor) {
 
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
     if (newColor === baseColor) {
-      obj.style.fill = "#5e5e5e";
+      obj.style.fill = "#444";
     }
     obj.style.fill = newColor;
   }
@@ -115,7 +115,7 @@ function newFillColor(obj, newColor) {
     for (var i = 0; i < len; i++)  {
 
       if (newColor === baseColor) {
-        paths[i].style.fill = "#5e5e5e";
+        paths[i].style.fill = "#444";
       }
 
       paths[i].style.fill = newColor;

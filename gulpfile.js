@@ -28,9 +28,9 @@ function serve(done) {
   browserSync.init({
     server: {
       baseDir: "./",
-      // directory: true,
-      index: "home.html"
+      index: "home.html",
     },
+    // open: false,
     ghostMode: false
   });
   done();

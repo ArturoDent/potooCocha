@@ -31,7 +31,6 @@ var pdfButton;
 var csvButton;
 var taxonomyCountryButton;
 
-
 // var map;
 
 /* global  map  loadCountryTaxonomy  selectedCountryFillColor getAjax currentMap selectedFillColor fillSAMmap  */
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", choseCountry);
   });
 
-  toggleSampleTableLeftChecks();
+  // toggleSampleTableLeftChecks();
   leftCheck.checked = true;
 
   countryModal = document.getElementById("countryModal");
@@ -194,7 +193,8 @@ function toggleSampleTableLineNumbers() {
 // decide which function to call based on which countryButton opened the country menu
 function choseCountry(evt) {
 
-  if (!currentChecklistCountry && !parseInt) map.getElementsByClassName("drawing")[0].classList.add("active");
+  // if (!currentChecklistCountry && !parseInt) map.getElementsByClassName("drawing")[0].classList.add("active");
+  if (!currentChecklistCountry) map.getElementsByClassName("drawing")[0].classList.add("active");
 
   if (countryModalOpener === "checklistCountryButton") choseChecklistCountry(evt);
   else loadCountryTaxonomy(evt);
@@ -213,18 +213,20 @@ function choseChecklistCountry(evt) {
     currentChecklistCountryElement.classList.remove("bothHighlights");
   }
 
+  selectedCountry = evt.target.innerText;
+
   if (evt.target.tagName === "A") {
     currentChecklistCountryElement = evt.target;
-    selectedCountry = evt.target.children[1].innerHTML;
+    // selectedCountry = evt.target.children[1].innerHTML;
   }
   else if (evt.target.tagName === "SPAN") {
     currentChecklistCountryElement = evt.target.parentNode;
-    selectedCountry = evt.target.innerHTML;
+    // selectedCountry = evt.target.innerHTML;
   }
-  else {  //  evt.target.tagName === "IMG")
-    currentChecklistCountryElement = evt.target.parentNode;
-    selectedCountry = evt.target.nextElementSibling.innerHTML;
-  }
+  // else {  //  evt.target.tagName === "IMG")
+  //   currentChecklistCountryElement = evt.target.parentNode;
+  //   selectedCountry = evt.target.nextElementSibling.innerHTML;
+  // }
 
   if (selectedCountry === "South America")  currentChecklistCountry = "SouthAmerica";
   else if (selectedCountry === "French Guiana")  currentChecklistCountry = "FrenchGuiana";
@@ -293,17 +295,23 @@ function setNumDays(evt)  {
 
   // rules for column double border right vs. number of days
 
-  [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
+  [].forEach.call(sampleTable.querySelectorAll("td"), function (el) {
     el.classList.remove("cds");
   });
 
-  sampleTable.querySelector("th:nth-child(4)").classList.remove("cds");
+  sampleTable.querySelectorAll("th").classList.remove("cds");
 
-  [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
-    el.classList.remove("cds");
-  });
+  // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
+  //   el.classList.remove("cds");
+  // });
 
-  sampleTable.querySelector("th:nth-child(6)").classList.remove("cds");
+  // sampleTable.querySelector("th:nth-child(4)").classList.remove("cds");
+
+  // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
+  //   el.classList.remove("cds");
+  // });
+
+  // sampleTable.querySelector("th:nth-child(6)").classList.remove("cds");
 
   if (gNumDays === 6 || gNumDays === 7) {
 
@@ -311,15 +319,23 @@ function setNumDays(evt)  {
       el.classList.add("cds");
     });
 
-    sampleTable.querySelector("th:nth-child(4)").classList.add("cds");
+    sampleTable.querySelector("th:nth-child(3)").classList.add("cds");
   }
-  else if (gNumDays === 10) {
+  else if (gNumDays === 8) {
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
-      el.classList.remove("cds");
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(7)"), function (el) {
+      el.classList.add("cds");
     });
 
-    sampleTable.querySelector("th:nth-child(11)").classList.remove("cds");
+    sampleTable.querySelector("th:nth-child(3)").classList.add("cds");
+  }
+  else if (gNumDays >= 9) {
+
+    // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
+    //   el.classList.remove("cds");
+    // });
+
+    // sampleTable.querySelector("th:nth-child(11)").classList.remove("cds");
 
     [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
       el.classList.add("cds");
@@ -327,20 +343,20 @@ function setNumDays(evt)  {
 
     sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
   }
-  else if (gNumDays !== 5) {
+  // else if (gNumDays !== 5) {
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
-      el.classList.add("cds");
-    });
+  //   [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
+  //     el.classList.add("cds");
+  //   });
 
-    sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
+  //   sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
-      el.classList.add("cds");
-    });
+  //   [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
+  //     el.classList.add("cds");
+  //   });
 
-    sampleTable.querySelector("th:nth-child(11)").classList.add("cds");
-  }
+  //   sampleTable.querySelector("th:nth-child(11)").classList.add("cds");
+  // }
 
   if (gNumDays !== 0) {
 

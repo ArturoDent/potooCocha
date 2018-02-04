@@ -30,10 +30,12 @@ body::after {
     height: 100%;
     top:0;
 
-    border-top: 1px solid $bodyBorderColor;
-    border-right: 1px solid $bodyBorderColor;
-    border-bottom: 2px solid $bodyBorderColor;
-    border-left: 1px solid $bodyBorderColor;
+    // border-top: 1px solid $bodyBorderColor;
+    // border-right: 1px solid $bodyBorderColor;
+    // border-bottom: 1px solid $bodyBorderColor;
+    // border-left: 1px solid $bodyBorderColor;
+
+    border: 1px solid $bodyBorderColor;
     pointer-events: none;
 }
 
@@ -60,16 +62,17 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
     left : 0;
     width : 100vw;
     height: auto;
-    padding: 0.8ch 0 0.8ch 20vw;
-    // z-index: 1;
+    padding: 1ch 0 0.8ch 0;
 
+    text-align: center;
     font-size  :  2.8rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     color  :  $titleTextFontColor;
     letter-spacing  :  0.2em;
 
-    background-color  :  $titleBannerColor;
+    // background-color  :  $titleBannerColor;
+    background-color  :  $bgColor;
     box-shadow: 0 1px 2px rgba(0,0,0, 0.5);
 
 // background: rgb(90,90,90);
@@ -84,12 +87,17 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
     left : -3px;
 
     letter-spacing  :  0.1em;
-    color : $panelFlyoutFontColor;
+    // color : $turquoiseHighlightColor;
+    // color : $countryMenuHighlightColor;
+    color : #df6757;
     font-size  :  1.3rem;
     font-variant  :  normal;
+    text-shadow : 0  1px rgba(0,0,0,0.8);
+
     // poor support 2017-08
-    // text-decoration: underline  $panelFlyoutFontColor;
-    border-bottom: 4px double $panelFlyoutFontColor;
+    // text-decoration: underline  $;
+    // border-bottom: 4px double $turquoiseHighlightColor;
+    border-bottom: 4px double #df6757;
 }
 
 .articles {

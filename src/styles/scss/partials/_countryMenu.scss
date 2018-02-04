@@ -8,7 +8,7 @@
 }
 
 .menu-show {
-  transform: translateX(-210px);
+  transform: translateX(-235px);
 }
 
 .md-overlay {
@@ -67,9 +67,9 @@
 
   justify-content: space-around;
   height: 100vh;
-  padding: 10px 15px;
+  padding: 10px 15px 10px 0;
 
-  align-items: center;
+  // align-items: center;
   font-size: 1rem;
   // background-color: $countryMenuColor;
 
@@ -79,13 +79,44 @@
   background: linear-gradient(to right, $countryMenuColor 0%, $bgColor 100%);
 }
 
-.country-menu a {
+// <nav class="country-menu" contenteditable="false">
+//       <div><a>South America</a><span><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></span></div>
+//       <div><a>Aruba</a><span><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></span></div>
+
+// .country-menu div.countryitem
+.countryItem {
+  // width: 250px;
+
+  display  :  -webkit-flex;
+  display  :  -ms-flex;
+  display  :  flex;
+
+  -webkit-flex-direction  :  row;
+  -ms-flex-direction  :  row;
+  flex-direction  :  row;
+
+  -webkit-flex-wrap  :  nowrap;
+  -ms-flex-wrap  :  nowrap;
+  flex-wrap  :  nowrap;
+
+  // justify-content: space-around;
+
+  align-items: center;
+
+  // top : -12px;
+  // left: 0;
+  letter-spacing: 1.5px;
+}
+
+.countryItem a {
   position: relative;
-  width: 270px;
-  left : -30px;
+  width: 210px;
+  left : -15px;
   // height: 32px;
+
   height: 1.9rem;
-  padding: 0 0 0 35px;
+  // line-height: 1.7rem;
+  padding: 3px 0 0 35px;
 
   text-decoration: none;
   text-shadow : 0  1px rgba(0,0,0,1);
@@ -94,12 +125,13 @@
 
   // border: 1px solid transparent;
   border-top: 1px solid transparent;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  // border-bottom: 3px solid transparent;
+  // border-top-right-radius: 10px;
+  // border-bottom-right-radius: 10px;
 
-  transform: translateX(0);
-  transition: all 350ms ease-out;
+  border-radius: 10px;
+
+  // transform: translateX(0);
+  // transition: all 350ms ease-out;
   cursor: pointer;
 }
 
@@ -117,29 +149,48 @@
   transition : all 350ms;
 }
 
-.country-menu img {
-  position : absolute;
-  top: -6px;
-  left: -32px;
-  padding: 5px;
-  height: 42px;
-  width:42px;
+// .country-menu div.flag
+.flag  {
+  position: relative;
+  top: 1px;
+  left: -25px;
+  padding: 3px;
+  // margin-left: 0px;
+  // height: 50px;
+  // width:50px;
 
   border-radius : 50%;
 
   background-position: center;
   background-origin: padding-box;
   background-color: $bgColor;
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
+  // background-size: 50px 50px;
+  // background-repeat: no-repeat;
+
 }
 
-.country-menu span {
-  position : relative;
-  top : 3px;
-  left: 0;
-  letter-spacing: 1.5px;
+.country-menu img {
+  // display: inline;
+  // position : absolute;
+  // top: -6px;
+  // left: 0px;
+  // padding: 5px;
+  // margin-left: 50px;
+  height: 26px;
+  width:26px;
+
+  // border-radius : 50%;
+
+  // background-position: center;
+  // background-origin: padding-box;
+  // background-color: $bgColor;
+  background-color: transparent;
+
+  // background-size: 50px 50px;
+  // background-repeat: no-repeat;
 }
+
+
 
 .country-menu a.taxHighlight,
 .country-menu a.checkHighlight,

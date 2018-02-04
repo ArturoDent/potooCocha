@@ -184,7 +184,7 @@ position: relative;
 }
 
 #searchSpecials  {
-display  :  flex;
+    display  :  flex;
     flex-direction  :  column;
     justify-content  :  space-between;
     align-items: flex-start;
@@ -216,8 +216,8 @@ display  :  flex;
 
     color : white;
     text-shadow : 1px 1px 1px rgba(0,0,0,0.5);
-    border : 1px solid rgba(255,255,255,0.4);
-    border-bottom : 1px solid rgba(0,0,0,0.2);
+    border : 1px solid rgba(255,255,255,0.2);
+    // border-bottom : 1px solid rgba(0,0,0,0.2);
     border-radius : 2px;
 
     background-color : $genericButtonColor;
@@ -227,10 +227,13 @@ display  :  flex;
     transition : all 350ms;
 }
 
-#searchSpecials {}
-
 #searchSpecials a:hover  {
-    background-color : #333;
+    color: white;
+    border : 1px solid #666;
+
+    background-color : #222;
+    box-shadow : 0 0 2px rgba(0,0,0,1);
+
 }
 
 #searchSpecials.SAM span.searchSpecialWrapper {
@@ -296,6 +299,32 @@ display  :  flex;
     background-color: $panelColor;
 }
 
+#closeResultsPanelButton  {
+    position: relative;
+    left: 100%;
+    // top: 0;
+    padding: 0.25rem 0 0 0;
+    width: 30px;
+    height: 30px;
+
+    text-align: center;
+    // line-height: 30px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    background-color: $panelColor;
+    box-shadow: 0 0 0 8px $bgColor, -10px 0 1px rgba(255,255,255,0.25), -9px 0 0 2px rgba(0,0,0,0.2);
+
+    z-index: 2;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#closeResultsPanelButton:hover  {
+    background-color: black;
+}
+
+
 #countrySearch  {
     opacity  :  1;
 
@@ -356,6 +385,11 @@ display  :  flex;
 }
 
 #searchResults.fadeIn  {
+    opacity  :  1;
+    transition  :  all 2s;
+}
+
+.results-panels .fadeIn  {
     opacity  :  1;
     transition  :  all 2s;
 }
@@ -747,7 +781,7 @@ to {
 
 /*    below targets each individual bird */
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover  {
-    padding : 2px 0 4px 0;
+    padding : 2px 0 2px 0;
     background-color  :  $birdRolloverColor;
     border-top : 1px solid darken($birdRolloverColor, 10%);
     border-bottom : 1px solid darken($birdRolloverColor, 10%);
@@ -765,7 +799,8 @@ to {
 
 
 #tree ul li {
-    padding : 2px 0 4px 0;
+    padding : 2px 0 2px 0;
+    // colrgb(25, 21, 21)red;
     border: none;
     border-top : 1px solid transparent;
     border-bottom : 1px solid transparent;

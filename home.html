@@ -86,13 +86,12 @@
         <path class="path2" d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.122-2.5 2.5v27c0 1.378 1.121 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841v0zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268v0zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
       </symbol>
 
-      <symbol id="icon-delete" viewBox="0 -1 32 35">
+      <symbol id="icon-delete" viewBox="0 0 42 42">
         <title>delete</title>
-        <g id="layer1" transform="translate(-0.35387349,-43.282764)">
-          <circle id="icon-delete-circle" cx="16.710701" cy="59.547863" r="15.892858"></circle>
-          <text style="font-size:32px;line-height:25px;font-family:sans-serif;;text-anchor:start;fill:#ddd;fill-opacity:1;stroke:none;stroke-width:1px;stroke-opacity:1"
-            x="4.7" y="71" id="text1376">
-            <tspan id="tspan1374" x="4.7" y="71">X</tspan>
+        <g id="layer1">
+          <circle id="icon-delete-circle" cx="21" cy="21" r="20"></circle>
+          <text style="font-size:32px;line-height:25px;font-family:sans-serif;text-anchor:start;fill:#ddd;fill-opacity:1;">
+            <tspan id="tspan1374" x="10" y="31">X</tspan>
           </text>
         </g>
       </symbol>
@@ -109,6 +108,7 @@
 
       <article class='panel results-panel'>
         <div id='fakeResultsBox'>
+            <div id="closeResultsPanelButton">X</div>
           <div id='countrySearch' class='closed'>
             <span id='searchTerm'></span>
           </div>
@@ -131,7 +131,7 @@
       <article id="taxonomyArticle">
 
         <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
-            target="_blank" rel="noopener">taxonomy</a> of the birds of South America (December 1, 2017).</div>
+            target="_blank" rel="noopener">taxonomy</a> of the birds of South America (January 20, 2018).</div>
 
         <span class="taxInstructionsButton hasTooltip">?
         <span class="tooltip">Close instructions</span>
@@ -249,14 +249,14 @@
             <tbody>
 
               <tr class="topBorderDisappear">
-                <td class="familyHidden"></td>
+                <td class="familyHidden show"></td>
                 <td class="cLfc">TINAMOUS</td>
                 <td class="cLfs">TINIMIDAE</td>
                 <td colspan="12" class="fre"></td>
               </tr>
 
               <tr>
-                <td class="leftCheckBox"></td>
+                <td class="leftCheckBox show"></td>
                 <td class="endemical cLc">Gray Tinamou</td>
                 <td class="cLs">Tinamous tao</td>
                 <td></td>
@@ -274,7 +274,7 @@
               </tr>
 
               <tr>
-                <td class="leftCheckBox"></td>
+                <td class="leftCheckBox show"></td>
                 <td class="cLc">Great Tinamou</td>
                 <td class="cLs">T. major</td>
                 <td></td>
@@ -295,23 +295,23 @@
                 <td></td>
               </tr>
               <tr>
-                <td class="familyHidden"></td>
+                <td class="familyHidden show"></td>
                 <td class="cLfc">HUMMINGBIRDS</td>
                 <td class="cLfs">TROCHILIDAE</td>
                 <td colspan="12" class="fre"></td>
               </tr>
 
               <tr>
-                <td class="leftCheckBox"></td>
+                <td class="leftCheckBox show"></td>
                 <td class="lineNumbers cLc">Fiery Topaz</td>
                 <td class="cLs">Topaza pyra</td>
                 <td></td>
                 <td></td>
-                <td style="font-size:20px;">♪</td>
+                <td style="font-size:20px; padding: 0 0 3px 0;">♪</td>
                 <td></td>
                 <td class="cds"></td>
                 <td></td>
-                <td style="font-size:16px;">✓</td>
+                <td style="font-size:16px; padding: 0 0 2px 0;">✓</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -423,26 +423,26 @@
 
   <div class="md-modal" id="countryModal">
     <nav class="country-menu" contenteditable="false">
-      <a><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"><span>South America</span></a>
-      <a><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"><span>Aruba</span></a>
-      <a><img src="../../../flags/32/Curacao.png"  alt="Flag of Curacao"><span>Curaçao</span></a>
-      <a><img src="../../../flags/32/Bonaire.png"  alt="Flag of Bonaire"><span>Bonaire</span></a>
-      <a><img src="../../../flags/32/Trinidad-and-tobago.png"  alt="Flag of Trinidad and Tobago"><span>Trinidad</span></a>
-      <a><img src="../../../flags/32/French-Southern.png"  alt="Flag of French Guiana"><span>French Guiana</span></a>
-      <a><img src="../../../flags/32/Suriname.png"  alt="Flag of Suriname"><span>Suriname</span></a>
-      <a><img src="../../../flags/32/Guyana.png"  alt="Flag of Guyana"><span>Guyana</span></a>
-      <a><img src="../../../flags/32/Venezuela.png"  alt="Flag of Venezuela"><span>Venezuela</span></a>
-      <a><img src="../../../flags/32/Colombia.png"  alt="Flag of Colombia"><span>Colombia</span></a>
-      <a><img src="../../../flags/32/Ecuador.png"  alt="Flag of Ecuador"><span>Ecuador</span></a>
-      <a><img src="../../../flags/32/Peru.png"  alt="Flag of Peru"><span>Peru</span></a>
-      <a><img src="../../../flags/32/Bolivia.png"  alt="Flag of Bolivia"><span>Bolivia</span></a>
-      <a><img src="../../../flags/32/Chile.png"  alt="Flag of Chile"><span>Chile</span></a>
-      <a><img src="../../../flags/32/Argentina.png"  alt="Flag of Argentina"><span>Argentina</span></a>
-      <!--<a>Malvinas</a>-->
-      <a><img src="../../../flags/32/Falkland-islands.png"  alt="Flag of British Falkland Islands"><span>Falklands</span></a>
-      <a><img src="../../../flags/32/Brazil.png"  alt="Flag of Brazil"><span>Brazil</span></a>
-      <a><img src="../../../flags/32/Uruguay.png"  alt="Flag of Uruguay"><span>Uruguay</span></a>
-      <a><img src="../../../flags/32/Paraguay.png"  alt="Flag of Paraguay"><span>Paraguay</span></a>
+      <div class="countryItem"><a>South America</a><div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div></div>
+      <div class="countryItem"><a>Aruba</a><div class="flag"><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></div></div>
+      <div class="countryItem"><a>Curaçao</a><div class="flag"><img src="../../../flags/32/Curacao.png"  alt="Flag of Curacao"></div></div>
+      <div class="countryItem"><a>Bonaire</a><div class="flag"><img src="../../../flags/32/Bonaire.png"  alt="Flag of Bonaire"></div></div>
+      <div class="countryItem"><a>Trinidad</a><div class="flag"><img src="../../../flags/32/Trinidad-and-tobago.png"  alt="Flag of Trinidad and Tobago"></div></div>
+      <div class="countryItem"><a>French Guiana</a><div class="flag"><img src="../../../flags/32/French-Southern.png"  alt="Flag of French Guiana"></div></div>
+      <div class="countryItem"><a>Suriname</a><div class="flag"><img src="../../../flags/32/Suriname.png"  alt="Flag of Suriname"></div></div>
+      <div class="countryItem"><a>Guyana</a><div class="flag"><img src="../../../flags/32/Guyana.png"  alt="Flag of Guyana"></div></div>
+      <div class="countryItem"><a>Venezuela</a><div class="flag"><img src="../../../flags/32/Venezuela.png"  alt="Flag of Venezuela"></div></div>
+      <div class="countryItem"><a>Colombia</a><div class="flag"><img src="../../../flags/32/Colombia.png"  alt="Flag of Colombia"></div></div>
+      <div class="countryItem"><a>Ecuador</a><div class="flag"><img src="../../../flags/32/Ecuador.png"  alt="Flag of Ecuador"></div></div>
+      <div class="countryItem"><a>Peru</a><div class="flag"><img src="../../../flags/32/Peru.png"  alt="Flag of Peru"></div></div>
+      <div class="countryItem"><a>Bolivia</a><div class="flag"><img src="../../../flags/32/Bolivia.png"  alt="Flag of Bolivia"></div></div>
+      <div class="countryItem"><a>Chile</a><div class="flag"><img src="../../../flags/32/Chile.png"  alt="Flag of Chile"></div></div>
+      <div class="countryItem"><a>Argentina</a><div class="flag"><img src="../../../flags/32/Argentina.png"  alt="Flag of Argentina"></div></div>
+      <!--Malvin<a>as-->
+      <div class="countryItem"><a>Falklands</a><div class="flag"><img src="../../../flags/32/Falkland-islands.png"  alt="Flag of British Falkland Islands"></div></div>
+      <div class="countryItem"><a>Brazil</a><div class="flag"><img src="../../../flags/32/Brazil.png"  alt="Flag of Brazil"></div></div>
+      <div class="countryItem"><a>Uruguay</a><div class="flag"><img src="../../../flags/32/Uruguay.png"  alt="Flag of Uruguay"></div></div>
+      <div class="countryItem"><a>Paraguay</a><div class="flag"><img src="../../../flags/32/Paraguay.png"  alt="Flag of Paraguay"></div></div>
     </nav>
   </div>
 

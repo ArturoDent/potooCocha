@@ -1,22 +1,27 @@
 {
     "version": "0.1.0",
+    "compounds": [
+        {
+            "name": "Start server and chrome debugger",
+            "configurations": ["Gulp sync", "Chrome : Launch with sourcemaps" ]
+        }
+    ],
     "configurations": [
-// {
-//     "type": "node",
-//     "request": "launch",
-//     "name": "Gulp sync",
-//     "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
-//     "args": [
-//         "sync"
-//     ]
-// },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Gulp sync",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "args": [
+                "sync"
+            ]
+        },
         {
             "name": "Chrome : Launch with sourcemaps",
             // works with or without preLaunchTask
-            // must start/F1 twice however if using preLaunch task
             "type": "chrome",
             "request": "launch",
-            // "preLaunchTask": "serve:watch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
 

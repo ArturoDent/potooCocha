@@ -11,17 +11,17 @@ var numFamilies;
 var birds;
 
 var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1381, "Brazil":1799, "Chile":496,
-                  "Colombia":1847, "Curaçao":218, "Ecuador":1620, "French Guiana":697,
-                  "Guyana":783, "Paraguay":694, "Peru":1792, "Suriname":728, "Trinidad":468,
-                  "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3379};
+  "Colombia":1847, "Curaçao":218, "Ecuador":1620, "French Guiana":697,
+  "Guyana":783, "Paraguay":694, "Peru":1792, "Suriname":728, "Trinidad":468,
+  "Uruguay":444, "Venezuela":1382, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3379};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
 var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":66,
-                  "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":82,
-                  "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
-                  "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
+  "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":82,
+  "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
+  "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
 // South America : 102 families not including 2 incertae "families", 3376 total spp.
 //                 which includes one hypothetical (in one country only) Black Turnstone
@@ -36,11 +36,13 @@ var taxTreeArticleOpen = false;
 
 var taxPage;
 var searchSpecials;
+var resultsPanel;
 var searchResults;
 
 var simpleBarResults;
 var simpleBarTaxPage;
 
+var closeResultsPanelButton;
 var searchInput;
 
 var lastResultsSpecies;
@@ -65,7 +67,9 @@ document.addEventListener("DOMContentLoaded", function(){
   // searchSlideUpWrapper_height        =  searchSlideUpWrapper.style.height;
 
   taxInstructionsButton = document.querySelector(".taxInstructionsButton");
-  searchInput                        =  document.getElementById("searchInput");
+  closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
+  closeResultsPanelButton.addEventListener("click", closeSearchResultsPanel);
+  searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
 
   searchInput.addEventListener("input", getQuery);
@@ -87,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   taxPage        =  document.getElementById("taxPage");
   searchResults = document.getElementById("searchResults");
+  resultsPanel = document.querySelector(".results-panel");
 
   searchResults.addEventListener("click", gotoMatch);
   taxPage.addEventListener("click", toggleFamilyOpen);
@@ -181,10 +186,10 @@ function loadCountryTaxonomy(evt) {
     currentTaxonomyCountryElement = evt.target.parentNode;
     // taxCountry = evt.target.innerHTML;
   }
-  else {  //  evt.target.tagName === "IMG")
-    currentTaxonomyCountryElement = evt.target.parentNode;
-    taxCountry = evt.target.nextElementSibling.innerText;
-  }
+  // else {  //  evt.target.tagName === "IMG")
+  //   currentTaxonomyCountryElement = evt.target.parentNode;
+  //   taxCountry = evt.target.nextElementSibling.innerText;
+  // }
 
   // could probably replace first two options above with evt.target.innerText, not clicking on image tho
   // console.log("innerText = " + evt.target.innerText);
@@ -283,6 +288,12 @@ function loadCountryTaxonomy(evt) {
   animateScrollTop(taxPage);
 }
 
+function closeSearchResultsPanel(evt) {
+
+  searchResults.classList.remove("fadeIn");
+  resultsPanel.classList.remove("translateDown");
+}
+
 function updatetaxArticleQueries(data) {
 
   // <ul id='tree'>
@@ -298,8 +309,8 @@ function updatetaxArticleQueries(data) {
   families = taxPage.querySelectorAll("#tree .familyOpen, #tree .family");
   numFamilies = families.length;
 
-	// this restricts opening and closing to only the family names
-	// _("#taxPage .fco, #taxPage .fsc").on("click", toggleFamilyOpen);
+	 // this restricts opening and closing to only the family names
+	 // _("#taxPage .fco, #taxPage .fsc").on("click", toggleFamilyOpen);
   if (lastQuery) searchTree(lastQuery);
   document.querySelector("#taxPageButtons").addEventListener("click", closeAllFamilies);
 
@@ -318,9 +329,9 @@ function clearSearchInput()  {
   searchInput.removeEventListener("focusin", clearSearchInput);
 }
 
-  //  Caller :
-  //     _("#searchInput").on ("input change click textInput focusin", getQuery);
-  //                             keyup removed
+//  Caller :
+//     _("#searchInput").on ("input change click textInput focusin", getQuery);
+//                             keyup removed
 function getQuery(event)  {
 
   // var badIndex = searchInput.value.search(/[^a-zñã'\s\*\?-]/i);
@@ -330,7 +341,7 @@ function getQuery(event)  {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
     // searchResults.style.height = "55px";
     searchResults.classList.add("fadeIn");
-    document.querySelector(".results-panel").classList.add("translateDown");
+    resultsPanel.classList.add("translateDown");
     resetSearchResultsHeight();
     return;
   }
@@ -349,7 +360,7 @@ function getQuery(event)  {
     return false;
   }
   else if (e.type === "input")             {  searchTree(searchInput.value);  }
-	else if (e.type === "onpropertychange")  {  searchTree(searchInput.value);  }
+  else if (e.type === "onpropertychange")  {  searchTree(searchInput.value);  }
 }
 
 function getSearchSpecialsQuery(evt)  {
@@ -406,8 +417,10 @@ function searchTree(query2) {
     return;
   }
 
-  document.getElementById("searchResults").classList.remove("fadeIn");
-  document.querySelector(".results-panel").classList.add("translateDown");
+  if (!resultsPanel.classList.contains("translateDown")) {
+    searchResults.classList.add("fadeIn");
+    resultsPanel.classList.add("translateDown");
+  }
 
   lastQuery = query2;
 
@@ -429,12 +442,12 @@ function searchTree(query2) {
 
   animateScrollTop(searchResults);
 
-    // reset all families.cloned to false, used to insert new families into searchResults
+  // reset all families.cloned to false, used to insert new families into searchResults
   for (var i = 0; i < numFamilies; i++) {
     families[i].cloned = false;
   }
 
-    // boolean that search input term was bad or missing
+  // boolean that search input term was bad or missing
   var warning = false;
 
   if (lastSpecies && lastSpecies.classList.contains("active")) {
@@ -469,16 +482,16 @@ function searchTree(query2) {
       matches[j++] = special[k].parentNode.cloneNode(true);
     }
   }
-      // not endemic, extinct, hypothetical, vagrant or incertae
+  // not endemic, extinct, hypothetical, vagrant or incertae
   else {
 
     query2 = query2.replace(/^\s+|\s+$/g, "");
 
-        //  wildcards * and ? ::
+    //  wildcards * and ? ::
     // query2 = query2.replace(/\\\*/g, "[a-zA-Z'ñã\\s-]+");
     // query2 = query2.replace(/\\\?/g, "[a-zA-Z'ñã\\s-]");
 
-      // SACC only uses ñ and São, no other accented characters
+    // SACC only uses ñ and São, no other accented characters
     query2 = query2.replace(/n/g, "(n|ñ)");
     query2 = query2.replace(/a/g, "(a|ã)");
 
@@ -488,7 +501,7 @@ function searchTree(query2) {
     query2 = query2.replace(/í/g, "i");
     query2 = query2.replace(/ç/g, "c");
 
-      // now database can have any number of spaces between genus and species
+    // now database can have any number of spaces between genus and species
     query2 = query2.replace(/\s+/g, "\\s+");
 
     if (query2) {
@@ -500,10 +513,10 @@ function searchTree(query2) {
       else if   ( query  ===   "")  warning = true;
     }
 
-      // bad or missing search term
+    // bad or missing search term
     if (warning)  {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
-      document.getElementById("searchResults").classList.add("fadeIn");
+      searchResults.classList.add("fadeIn");
       // searchResults.style.height = "55px";
 
       resetSearchResultsHeight();
@@ -512,9 +525,9 @@ function searchTree(query2) {
 
     var pattern = new RegExp(query, "i");
 
-      // consider using array.filter(function()) in the future
+    // consider using array.filter(function()) in the future
 
-      // nodes must be cloned otherwise they are removed from the tree !!
+    // nodes must be cloned otherwise they are removed from the tree !!
 
     for (i = 0; i < sL ; i++ )  {
 
@@ -541,7 +554,7 @@ function searchTree(query2) {
 
   if (matches.length === 0)  {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
-    document.getElementById("searchResults").classList.add("fadeIn");
+    searchResults.classList.add("fadeIn");
     // searchResults.style.height = "55px";
 
     resetSearchResultsHeight();
@@ -551,7 +564,7 @@ function searchTree(query2) {
 
   var z;
   var matchClass;
-    // if list isn't set to "", it defaults to undefined
+  // if list isn't set to "", it defaults to undefined
   var list = "";
 
   for (k = 0; k < matches.length ; k++ )  {
@@ -563,9 +576,9 @@ function searchTree(query2) {
       list += "<li class='family'><span class='fco'>";
       list += matches[k].firstChild.firstChild.textContent + "</span><span class='fsc'>";
 
-          // <li class="family"><span class='fTitle'><span class="fcommon">INCERTAE SEDIS-2</span><span class="fscientific"> </span></span>
-                                                                                 // must have space ^ here
-                                                                                 // or handle as below
+      // <li class="family"><span class='fTitle'><span class="fcommon">INCERTAE SEDIS-2</span><span class="fscientific"> </span></span>
+      // must have space between the spans
+      // or handle as below
 
       list += (matches[k].firstChild.lastChild) ? matches[k].firstChild.childNodes[1].textContent : " ";
       list += "</span></li>";
@@ -591,7 +604,7 @@ function searchTree(query2) {
 
   searchResults.innerHTML = list;
 
-  document.getElementById("searchResults").classList.add("fadeIn");
+  searchResults.classList.add("fadeIn");
 
   lastQuery = lastQuery.replace(/\\\*/g, "*");
   lastQuery = lastQuery.replace(/\\\?/g, "?");
@@ -665,7 +678,7 @@ function gotoMatch(e) {
   else if (clicked.textContent.replace(/^\s+|\s+$/g, "") ===  "search results will appear here") return;
   else if (clicked.textContent.replace(/^\s+|\s+$/g, "") ===  "")  return;
 
-    // goto family level else to <li>commom scientific
+  // goto family level else to <li>commom scientific
   if (clickedClass === "family") {
     clicked = ev.target;
   }
@@ -697,7 +710,7 @@ function gotoMatch(e) {
     entry = species[i];
 
     var entryTextTrimmed = entry.textContent.split("\n")[0];
-      // match if clicked = common, scientific or default
+    // match if clicked = common, scientific or default
     if (entryTextTrimmed === eText && clickedClass !== "family")  {
 
       var familyTemp = entry.parentNode;
@@ -708,8 +721,8 @@ function gotoMatch(e) {
         familyTemp.parentNode.className = "familyOpen";
       }
 
-        // put highlighted bird at top of taxPage
-        // entry.scrollIntoView(true);
+      // put highlighted bird at top of taxPage
+      // entry.scrollIntoView(true);
 
       elem = simpleBarTaxPage.getScrollElement();
 
@@ -729,8 +742,8 @@ function gotoMatch(e) {
       break;
     }
 
-      // match in family, fcommon, fscientific  ||
-      // "INCERTAE SEDIS-1 " for some reason eText returns a space at the end of the INCERTAE SEDIS's
+    // match in family, fcommon, fscientific  ||
+    // "INCERTAE SEDIS-1 " for some reason eText returns a space at the end of the INCERTAE SEDIS's
 
     /*<li class='family'><span class='fTitle'><span class='fco'>SCREAMERS</span><span class='fsc'>ANHIMIDAE</span></span>
 	    <ul class='birds'>
@@ -819,13 +832,13 @@ function toggleFamilyOpen(event) {
     // clicked on a closed family
     // check to see if family at bottom of taxPage, if so, open and move up ?*
 
-      // Element.scrollIntoViewIfNeeded()  webkit only
+    // Element.scrollIntoViewIfNeeded()  webkit only
 
     var taxPageHeight = taxPage.getBoundingClientRect().height;
 
     if (familyTarget.offsetTop - taxPage.scrollTop > taxPageHeight - 24)  {
 
-        //  will the entire family fit in taxPage ?
+      //  will the entire family fit in taxPage ?
 
       if (familyTarget.parentNode.clientHeight > taxPageHeight)
         taxPage.scrollTop = familyTarget.parentNode.offsetTop;
@@ -848,12 +861,12 @@ function toggleFamilyOpen(event) {
     }
     document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentTaxonomyCountry] + " families, " + numSpeciesList[currentTaxonomyCountry] + " species";
   }
-    //   clicked on a species in the taxTree
+  //   clicked on a species in the taxTree
   if (!familyTarget) {
-      // clicked in between common and scientific names in an open family, i.e., the LI element, not a DIV/SPAN
+    // clicked in between common and scientific names in an open family, i.e., the LI element, not a DIV/SPAN
 
-      //    <ul class="span">
-      //    <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
+    //    <ul class="span">
+    //    <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
 
     if (thisSpecies.parentNode.classList.contains("birds")) {
       thisSpecies = thisSpecies.firstChild;
