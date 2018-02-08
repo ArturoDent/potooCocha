@@ -43,6 +43,8 @@ var simpleBarResults;
 var simpleBarTaxPage;
 
 var closeResultsPanelButton;
+var resultsPanelOpen = false;
+
 var searchInput;
 
 var lastResultsSpecies;
@@ -67,8 +69,10 @@ document.addEventListener("DOMContentLoaded", function(){
   // searchSlideUpWrapper_height        =  searchSlideUpWrapper.style.height;
 
   taxInstructionsButton = document.querySelector(".taxInstructionsButton");
+
   closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
-  closeResultsPanelButton.addEventListener("click", closeSearchResultsPanel);
+  closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
+
   searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
 
@@ -197,7 +201,7 @@ function loadCountryTaxonomy(evt) {
   if (lastQuery)   {
     document.getElementById("countrySearch").classList.remove("closed");
     document.getElementById("searchTerm").innerHTML = taxCountry + " : '" + lastQuery + "'";
-    document.querySelector(".results-panel").style.opacity = "1";
+    // document.querySelector(".results-panel").style.opacity = "1";
   }
 
   // all samTax calls could be put into one if (taxCountry === "South America")  else
@@ -288,11 +292,17 @@ function loadCountryTaxonomy(evt) {
   animateScrollTop(taxPage);
 }
 
-function closeSearchResultsPanel(evt) {
+function toggleSearchResultsPanel(evt) {
 
-  searchResults.classList.remove("fadeIn");
-  resultsPanel.classList.remove("translateDown");
+  if (resultsPanelOpen) closeResultsPanelButton.removeEventListener("click", toggleSearchResultsPanel);
+  else closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
+
+  searchResults.classList.toggle("fadeIn");
+  resultsPanel.classList.toggle("translateDown");
+  resultsPanelOpen = !resultsPanelOpen;
 }
+
+
 
 function updatetaxArticleQueries(data) {
 
@@ -340,8 +350,12 @@ function getQuery(event)  {
   if ( badIndex !== -1) {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
     // searchResults.style.height = "55px";
-    searchResults.classList.add("fadeIn");
-    resultsPanel.classList.add("translateDown");
+
+    // searchResults.classList.add("fadeIn");
+    // resultsPanel.classList.add("translateDown");
+
+    if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+
     resetSearchResultsHeight();
     return;
   }
@@ -417,10 +431,12 @@ function searchTree(query2) {
     return;
   }
 
-  if (!resultsPanel.classList.contains("translateDown")) {
-    searchResults.classList.add("fadeIn");
-    resultsPanel.classList.add("translateDown");
-  }
+  if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+
+  // if (!resultsPanel.classList.contains("translateDown")) {
+  //   searchResults.classList.add("fadeIn");
+  //   resultsPanel.classList.add("translateDown");
+  // }
 
   lastQuery = query2;
 
@@ -433,7 +449,9 @@ function searchTree(query2) {
   }
   else {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
-    searchResults.classList.add("fadeIn");
+
+    if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+    // searchResults.classList.add("fadeIn");
     searchResults.style.top = 0;
 
     resetSearchResultsHeight();
@@ -516,7 +534,9 @@ function searchTree(query2) {
     // bad or missing search term
     if (warning)  {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
-      searchResults.classList.add("fadeIn");
+
+      if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+      // searchResults.classList.add("fadeIn");
       // searchResults.style.height = "55px";
 
       resetSearchResultsHeight();
@@ -554,7 +574,9 @@ function searchTree(query2) {
 
   if (matches.length === 0)  {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
-    searchResults.classList.add("fadeIn");
+
+    if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+    // searchResults.classList.add("fadeIn");
     // searchResults.style.height = "55px";
 
     resetSearchResultsHeight();
@@ -604,7 +626,8 @@ function searchTree(query2) {
 
   searchResults.innerHTML = list;
 
-  searchResults.classList.add("fadeIn");
+  if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+  // searchResults.classList.add("fadeIn");
 
   lastQuery = lastQuery.replace(/\\\*/g, "*");
   lastQuery = lastQuery.replace(/\\\?/g, "?");

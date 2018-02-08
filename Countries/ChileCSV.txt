@@ -106,16 +106,16 @@ E,Chilean Woodstar,Eulidia yarrellii
 
 ,RAILS,RALLIDAE
 ,Austral Rail,Rallus antarcticus
+,Purple Gallinule,Porphyrio martinica
 ,Black Rail,Laterallus jamaicensis
-,Spot-flanked Gallinule,Porphyriops melanops
 ,Spotted Rail,Pardirallus maculatus
 ,Plumbeous Rail,P. sanguinolentus
+,Spot-flanked Gallinule,Porphyriops melanops
 ,Common Gallinule,Gallinula galeata
-,Purple Gallinule,Porphyrio martinica
-,Red-gartered Coot,Fulica armillata
-,Red-fronted Coot,F. rufifrons
-,Giant Coot,F. gigantea
+,Red-fronted Coot,Fulica rufifrons
 ,Horned Coot,F. cornuta
+,Giant Coot,F. gigantea
+,Red-gartered Coot,F. armillata
 ,Slate-colored Coot,F. ardesiaca
 ,White-winged Coot,F. leucoptera
 
@@ -125,14 +125,14 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Tawny-throated Dotterel,Oreopholus ruficollis
 ,Southern Lapwing,Vanellus chilensis
 ,Andean Lapwing,V. resplendens
-,Semipalmated Plover,Charadrius semipalmatus
-,Wilson's Plover,C. wilsonia
+,Rufous-chested Dotterel,Charadrius modestus
 ,Killdeer,C. vociferus
-,Snowy Plover,C. nivosus
+,Semipalmated Plover,C. semipalmatus
+,Wilson's Plover,C. wilsonia
 ,Collared Plover,C. collaris
 ,Puna Plover,C. alticola
 ,Two-banded Plover,C. falklandicus
-,Rufous-chested Dotterel,C. modestus
+,Snowy Plover,C. nivosus
 ,Diademed Sandpiper-Plover,Phegornis mitchellii
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
@@ -206,6 +206,9 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
+,SKIMMERS,RYNCHOPIDAE
+,Black Skimmer,Rynchops niger
+
 ,GULLS,LARIDAE
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Sabine's Gull,Xema sabini
@@ -238,9 +241,6 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Elegant Tern,Thalasseus elegans
 ,Sandwich Tern,T. sandvicensis
 ,Royal Tern,T. maximus
-
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
 
 ,TROPICBIRDS,PHAETHONTIDAE
 ,Red-billed Tropicbird,Phaethon aethereus
@@ -364,9 +364,9 @@ E,Chilean Woodstar,Eulidia yarrellii
 ,Roseate Spoonbill,Platalea ajaja
 
 ,NEW WORLD VULTURES,CATHARTIDAE
-,Turkey Vulture,Cathartes aura
-,Black Vulture,Coragyps atratus
 ,Andean Condor,Vultur gryphus
+,Black Vulture,Coragyps atratus
+,Turkey Vulture,Cathartes aura
 
 ,OSPREY,PANDIONIDAE
 ,Osprey,Pandion haliaetus
@@ -400,9 +400,9 @@ E,Chilean Woodstar,Eulidia yarrellii
 
 ,WOODPECKERS,PICIDAE
 ,Striped Woodpecker,Veniliornis lignarius
+,Magellanic Woodpecker,Campephilus magellanicus
 ,Chilean Flicker,Colaptes pitius
 ,Andean Flicker,C. rupicola
-,Magellanic Woodpecker,Campephilus magellanicus
 
 ,FALCONS,FALCONIDAE
 ,Southern Caracara,Caracara plancus

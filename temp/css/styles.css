@@ -1471,13 +1471,13 @@ input[type='checkbox']:disabled + label {
   box-shadow: none;
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
-  transition: height 350ms; }
+  transition: all 350ms; }
 
 #searchResults.fadeIn {
   opacity: 1;
   transition: all 2s; }
 
-.results-panels .fadeIn {
+.results-panel.fadeIn {
   opacity: 1;
   transition: all 2s; }
 

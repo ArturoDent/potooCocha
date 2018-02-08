@@ -321,11 +321,8 @@ E,Esmeraldas Woodstar,C. berlepschi
 ,RAILS,RALLIDAE
 ,Mangrove Rail,Rallus longirostris
 ,Virginia Rail,R. limicola
-,Brown Wood-Rail,Aramides wolfi
-,Gray-necked Wood-Rail,A. cajaneus
-,Rufous-necked Wood-Rail,A. axillaris
-,Red-winged Wood-Rail,A. calopterus
-,Uniform Crake,Amaurolimnas concolor
+,Purple Gallinule,Porphyrio martinica
+,Azure Gallinule,P. flavirostris
 ,Chestnut-headed Crake,Anurolimnas castaneiceps
 ,Russet-crowned Crake,A. viridis
 ,Black-banded Crake,A. fasciatus
@@ -333,17 +330,20 @@ E,Esmeraldas Woodstar,C. berlepschi
 ,White-throated Crake,L. albigularis
 ,Gray-breasted Crake,L. exilis
 E,Galapagos Rail,L. spilonota
-,Yellow-breasted Crake,Porzana flaviventer
-,Sora,P. carolina
 ,Ash-throated Crake,Mustelirallus albicollis
 ,Colombian Crake,M. colombianus
 ,Paint-billed Crake,M. erythrops
 ,Spotted Rail,Pardirallus maculatus
 ,Blackish Rail,P. nigricans
 ,Plumbeous Rail,P. sanguinolentus
+,Uniform Crake,Amaurolimnas concolor
+,Brown Wood-Rail,Aramides wolfi
+,Gray-necked Wood-Rail,A. cajaneus
+,Rufous-necked Wood-Rail,A. axillaris
+,Red-winged Wood-Rail,A. calopterus
+,Yellow-breasted Crake,Porzana flaviventer
+,Sora,P. carolina
 ,Common Gallinule,Gallinula galeata
-,Purple Gallinule,Porphyrio martinica
-,Azure Gallinule,P. flavirostris
 ,Slate-colored Coot,Fulica ardesiaca
 
 ,FINFOOTS,HELIORNITHIDAE
@@ -357,12 +357,12 @@ E,Galapagos Rail,L. spilonota
 ,Pied Lapwing,Vanellus cayanus
 ,Southern Lapwing,V. chilensis
 ,Andean Lapwing,V. resplendens
-,Semipalmated Plover,Charadrius semipalmatus
+,Killdeer,Charadrius vociferus
+,Semipalmated Plover,C. semipalmatus
 ,Piping Plover,C. melodus
 ,Wilson's Plover,C. wilsonia
-,Killdeer,C. vociferus
-,Snowy Plover,C. nivosus
 ,Collared Plover,C. collaris
+,Snowy Plover,C. nivosus
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
 ,American Oystercatcher,Haematopus palliatus
@@ -428,6 +428,9 @@ E,Galapagos Rail,L. spilonota
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
+,SKIMMERS,RYNCHOPIDAE
+,Black Skimmer,Rynchops niger
+
 ,GULLS,LARIDAE
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Sabine's Gull,Xema sabini
@@ -463,9 +466,6 @@ E,Lava Gull,L. fuliginosus
 ,Elegant Tern,Thalasseus elegans
 ,Sandwich Tern,T. sandvicensis
 ,Royal Tern,T. maximus
-
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
 
 ,SUNBITTERN,EURYPYGIDAE
 ,Sunbittern,Eurypyga helias
@@ -522,8 +522,10 @@ E,Galapagos Shearwater,P. subalaris
 ,Magnificent Frigatebird,Fregata magnificens
 ,Great Frigatebird,F. minor
 
+,ANHINGAS,ANHINGIDAE
+,Anhinga,Anhinga anhinga
+
 ,BOOBIES,SULIDAE
-,Cape Gannet,Morus capensis
 ,Blue-footed Booby,Sula nebouxii
 ,Peruvian Booby,S. variegata
 ,Masked Booby,S. dactylatra
@@ -535,9 +537,6 @@ E,Galapagos Shearwater,P. subalaris
 E,Flightless Cormorant,Phalacrocorax harrisi
 ,Neotropic Cormorant,P. brasilianus
 ,Guanay Cormorant,P. bougainvillii
-
-,ANHINGAS,ANHINGIDAE
-,Anhinga,Anhinga anhinga
 
 ,PELICANS,PELECANIDAE
 ,Brown Pelican,Pelecanus occidentalis
@@ -578,12 +577,12 @@ E,Flightless Cormorant,Phalacrocorax harrisi
 ,Roseate Spoonbill,Platalea ajaja
 
 ,NEW WORLD VULTURES,CATHARTIDAE
+,King Vulture,Sarcoramphus papa
+,Andean Condor,Vultur gryphus
+,Black Vulture,Coragyps atratus
 ,Turkey Vulture,Cathartes aura
 ,Lesser Yellow-headed Vulture,C. burrovianus
 ,Greater Yellow-headed Vulture,C. melambrotus
-,Black Vulture,Coragyps atratus
-,King Vulture,Sarcoramphus papa
-,Andean Condor,Vultur gryphus
 
 ,OSPREY,PANDIONIDAE
 ,Osprey,Pandion haliaetus
@@ -642,14 +641,14 @@ E,Galapagos Hawk,B. galapagoensis
 ,Barn Owl,Tyto alba
 
 ,OWLS,STRIGIDAE
-,Tropical Screech-Owl,Megascops choliba
-,Peruvian Screech-Owl,M. roboratus
+,White-throated Screech-Owl,Megascops albogularis
+,Tropical Screech-Owl,M. choliba
 ,Colombian Screech-Owl,M. colombianus
 ,Rufescent Screech-Owl,M. ingens
 ,Cinnamon Screech-Owl,M. petersoni
-,Tawny-bellied Screech-Owl,M. watsonii
 ,Vermiculated Screech-Owl,M. guatemalae
-,White-throated Screech-Owl,M. albogularis
+,Peruvian Screech-Owl,M. roboratus
+,Tawny-bellied Screech-Owl,M. watsonii
 ,Crested Owl,Lophostrix cristata
 ,Spectacled Owl,Pulsatrix perspicillata
 ,Band-bellied Owl,P. melanota
@@ -687,20 +686,20 @@ E,Galapagos Hawk,B. galapagoensis
 ,Collared Trogon,T. collaris
 ,Masked Trogon,T. personatus
 
-,KINGFISHERS,ALCEDINIDAE
-,Ringed Kingfisher,Megaceryle torquata
-,Belted Kingfisher,M. alcyon
-,Amazon Kingfisher,Chloroceryle amazona
-,Green Kingfisher,C. americana
-,Green-and-rufous Kingfisher,C. inda
-,American Pygmy Kingfisher,C. aenea
-
 ,MOTMOTS,MOMOTIDAE
 ,Broad-billed Motmot,Electron platyrhynchum
 ,Rufous Motmot,Baryphthengus martii
 ,Whooping Motmot,Momotus subrufescens
 ,Amazonian Motmot,M. momota
 ,Andean Motmot,M. aequatorialis
+
+,KINGFISHERS,ALCEDINIDAE
+,Ringed Kingfisher,Megaceryle torquata
+,Belted Kingfisher,M. alcyon
+,Amazon Kingfisher,Chloroceryle amazona
+,American Pygmy Kingfisher,C. aenea
+,Green Kingfisher,C. americana
+,Green-and-rufous Kingfisher,C. inda
 
 ,JACAMARS,GALBULIDAE
 ,White-eared Jacamar,Galbalcyrhynchus leucotis
@@ -781,6 +780,18 @@ E,Galapagos Hawk,B. galapagoensis
 ,Bar-bellied Woodpecker,V. nigriceps
 ,Red-stained Woodpecker,V. affinis
 ,Choco Woodpecker,V. chocoensis
+,Powerful Woodpecker,Campephilus pollens
+,Crimson-bellied Woodpecker,C. haematogaster
+,Red-necked Woodpecker,C. rubricollis
+,Crimson-crested Woodpecker,C. melanoleucos
+,Guayaquil Woodpecker,C. gayaquilensis
+,Lineated Woodpecker,Dryocopus lineatus
+,Cinnamon Woodpecker,Celeus loricatus
+,Ringed Woodpecker,C. torquatus
+,Scale-breasted Woodpecker,C. grammicus
+,Cream-colored Woodpecker,C. flavus
+,Rufous-headed Woodpecker,C. spectabilis
+,Chestnut Woodpecker,C. elegans
 ,White-throated Woodpecker,Piculus leucolaemus
 ,Lita Woodpecker,P. litae
 ,Yellow-throated Woodpecker,P. flavigula
@@ -789,18 +800,6 @@ E,Galapagos Hawk,B. galapagoensis
 ,Crimson-mantled Woodpecker,C. rivolii
 ,Spot-breasted Woodpecker,C. punctigula
 ,Andean Flicker,C. rupicola
-,Cinnamon Woodpecker,Celeus loricatus
-,Ringed Woodpecker,C. torquatus
-,Scale-breasted Woodpecker,C. grammicus
-,Cream-colored Woodpecker,C. flavus
-,Rufous-headed Woodpecker,C. spectabilis
-,Chestnut Woodpecker,C. elegans
-,Lineated Woodpecker,Dryocopus lineatus
-,Powerful Woodpecker,Campephilus pollens
-,Crimson-bellied Woodpecker,C. haematogaster
-,Red-necked Woodpecker,C. rubricollis
-,Crimson-crested Woodpecker,C. melanoleucos
-,Guayaquil Woodpecker,C. gayaquilensis
 
 ,FALCONS,FALCONIDAE
 ,Laughing Falcon,Herpetotheres cachinnans
@@ -849,8 +848,8 @@ E,Galapagos Hawk,B. galapagoensis
 ,Mealy Parrot,A. farinosa
 ,Orange-winged Parrot,A. amazonica
 ,Scaly-naped Parrot,A. mercenarius
-,Blue-winged Parrotlet,Forpus xanthopterygius
-,Dusky-billed Parrotlet,F. modestus
+,Dusky-billed Parrotlet,Forpus modestus
+,Blue-winged Parrotlet,F. xanthopterygius
 ,Pacific Parrotlet,F. coelestis
 ,Black-headed Parrot,Pionites melanocephalus
 ,Red-fan Parrot,Deroptyus accipitrinus
@@ -962,7 +961,7 @@ E,El Oro Parakeet,P. orcesi
 ,White-plumed Antbird,Pithys albifrons
 ,Bicolored Antbird,Gymnopithys bicolor
 ,White-cheeked Antbird,G. leucaspis
-,Lunulated Antbird,G. lunulatus
+,Lunulated Antbird,Oneillornis lunulatus
 ,Hairy-crested Antbird,Rhegmatorhina melanosticta
 ,Spotted Antbird,Hylophylax naevioides
 ,Spot-backed Antbird,H. naevius

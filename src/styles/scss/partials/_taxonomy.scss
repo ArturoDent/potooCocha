@@ -381,7 +381,7 @@ position: relative;
     // use this for simpleBar
     overflow:hidden;
 
-    transition  :  height 350ms;
+    transition  :  all 350ms;
 }
 
 #searchResults.fadeIn  {
@@ -389,7 +389,7 @@ position: relative;
     transition  :  all 2s;
 }
 
-.results-panels .fadeIn  {
+.results-panel.fadeIn  {
     opacity  :  1;
     transition  :  all 2s;
 }

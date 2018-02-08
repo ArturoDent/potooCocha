@@ -139,28 +139,28 @@ HUMMINGBIRDS,TROCHILIDAE
 LIMPKIN,ARAMIDAE
 ,,Limpkin,Aramus guarauna
 RAILS,RALLIDAE
-,,Speckled Rail,Coturnicops notatus
-,,Ocellated Crake,Micropygia schomburgkii
-,,Giant Wood-Rail,Aramides ypecaha
-,,Gray-necked Wood-Rail,A. cajaneus
-5,,Slaty-breasted Wood-Rail,A. saracura
+,,Purple Gallinule,Porphyrio martinica
+,,Azure Gallinule,P. flavirostris
 ,,Russet-crowned Crake,Anurolimnas viridis
 ,,Rufous-sided Crake,Laterallus melanophaius
-,,Gray-breasted Crake,L. exilis
+5,,Gray-breasted Crake,L. exilis
 ,,Red-and-white Crake,L. leucopyrrhus
-10,,Rufous-faced Crake,L. xenopterus
-,,Yellow-breasted Crake,Porzana flaviventer
-,,Spot-flanked Gallinule,Porphyriops melanops
-,,Ash-throated Crake,Mustelirallus albicollis
+,,Rufous-faced Crake,L. xenopterus
+,,Speckled Rail,Coturnicops notatus
+,,Ocellated Crake,Micropygia schomburgkii
+10,,Ash-throated Crake,Mustelirallus albicollis
 ,,Paint-billed Crake,M. erythrops
-15,,Spotted Rail,Pardirallus maculatus
+,,Spotted Rail,Pardirallus maculatus
 ,,Blackish Rail,P. nigricans
 ,,Plumbeous Rail,P. sanguinolentus
-,,Common Gallinule,Gallinula galeata
-,,Purple Gallinule,Porphyrio martinica
-20,,Azure Gallinule,P. flavirostris
-,,Red-gartered Coot,Fulica armillata
-,,Red-fronted Coot,F. rufifrons
+15,,Giant Wood-Rail,Aramides ypecaha
+,,Gray-necked Wood-Rail,A. cajaneus
+,,Slaty-breasted Wood-Rail,A. saracura
+,,Spot-flanked Gallinule,Porphyriops melanops
+,,Yellow-breasted Crake,Porzana flaviventer
+20,,Common Gallinule,Gallinula galeata
+,,Red-fronted Coot,Fulica rufifrons
+,,Red-gartered Coot,F. armillata
 ,,White-winged Coot,F. leucoptera
 FINFOOTS,HELIORNITHIDAE
 ,,Sungrebe,Heliornis fulica
@@ -169,9 +169,9 @@ PLOVERS,CHARADRIIDAE
 ,,Black-bellied Plover,P. squatarola
 ,,Pied Lapwing,Vanellus cayanus
 ,,Southern Lapwing,V. chilensis
-5,,Semipalmated Plover,Charadrius semipalmatus
+5,,Rufous-chested Dotterel,Charadrius modestus
+,,Semipalmated Plover,C. semipalmatus
 ,,Collared Plover,C. collaris
-,,Rufous-chested Dotterel,C. modestus
 AVOCETS and STILTS,RECURVIROSTRIDAE
 ,,Black-necked Stilt,Himantopus mexicanus
 SANDPIPERS,SCOLOPACIDAE
@@ -201,6 +201,8 @@ JACANAS,JACANIDAE
 ,,Wattled Jacana,Jacana jacana
 PAINTED-SNIPE,ROSTRATULIDAE
 ,,South American Painted-snipe,Nycticryphes semicollaris
+SKIMMERS,RYNCHOPIDAE
+,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
 ,,Brown-hooded Gull,Chroicocephalus maculipennis
 ,,Gray-hooded Gull,C. cirrocephalus
@@ -213,16 +215,14 @@ GULLS,LARIDAE
 ,,Arctic Tern,S. paradisaea
 ,,Snowy-crowned Tern,S. trudeaui
 ,,Royal Tern,Thalasseus maximus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 STORKS,CICONIIDAE
 ,,Maguari Stork,Ciconia maguari
 ,,Jabiru,Jabiru mycteria
 ,,Wood Stork,Mycteria americana
-CORMORANTS,PHALACROCORACIDAE
-,,Neotropic Cormorant,Phalacrocorax brasilianus
 ANHINGAS,ANHINGIDAE
 ,,Anhinga,Anhinga anhinga
+CORMORANTS,PHALACROCORACIDAE
+,,Neotropic Cormorant,Phalacrocorax brasilianus
 HERONS,ARDEIDAE
 ,,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,,Boat-billed Heron,Cochlearius cochlearius
@@ -246,11 +246,11 @@ IBISES,THRESKIORNITHIDAE
 ,,Buff-necked Ibis,T. caudatus
 ,,Roseate Spoonbill,Platalea ajaja
 NEW WORLD VULTURES,CATHARTIDAE
-,,Turkey Vulture,Cathartes aura
-,,Lesser Yellow-headed Vulture,C. burrovianus
-,,Black Vulture,Coragyps atratus
 ,,King Vulture,Sarcoramphus papa
 ,,Andean Condor,Vultur gryphus
+,,Black Vulture,Coragyps atratus
+,,Turkey Vulture,Cathartes aura
+,,Lesser Yellow-headed Vulture,C. burrovianus
 OSPREY,PANDIONIDAE
 ,,Osprey,Pandion haliaetus
 HAWKS,ACCIPITRIDAE
@@ -311,15 +311,15 @@ TROGONS,TROGONIDAE
 ,,Blue-crowned Trogon,Trogon curucui
 ,,Surucua Trogon,T. surrucura
 ,,Black-throated Trogon,T. rufus
-KINGFISHERS,ALCEDINIDAE
-,,Ringed Kingfisher,Megaceryle torquata
-,,Amazon Kingfisher,Chloroceryle amazona
-,,Green Kingfisher,C. americana
-,,Green-and-rufous Kingfisher,C. inda
-,,American Pygmy Kingfisher,C. aenea
 MOTMOTS,MOMOTIDAE
 ,,Rufous-capped Motmot,Baryphthengus ruficapillus
 ,,Amazonian Motmot,Momotus momota
+KINGFISHERS,ALCEDINIDAE
+,,Ringed Kingfisher,Megaceryle torquata
+,,Amazon Kingfisher,Chloroceryle amazona
+,,American Pygmy Kingfisher,C. aenea
+,,Green Kingfisher,C. americana
+,,Green-and-rufous Kingfisher,C. inda
 JACAMARS,GALBULIDAE
 ,,Rufous-tailed Jacamar,Galbula ruficauda
 PUFFBIRDS,BUCCONIDAE
@@ -343,18 +343,18 @@ WOODPECKERS,PICIDAE
 ,,White-spotted Woodpecker,Veniliornis spilogaster
 ,,Checkered Woodpecker,V. mixtus
 ,,Little Woodpecker,V. passerinus
-10,,Golden-green Woodpecker,Piculus chrysochloros
+10,,Robust Woodpecker,Campephilus robustus
+,,Crimson-crested Woodpecker,C. melanoleucos
+,,Cream-backed Woodpecker,C. leucopogon
+,,Lineated Woodpecker,Dryocopus lineatus
+,,Black-bodied Woodpecker,D. schulzi
+15,,Helmeted Woodpecker,Celeus galeatus
+,,Pale-crested Woodpecker,C. lugubris
+,,Blond-crested Woodpecker,C. flavescens
+,,Golden-green Woodpecker,Piculus chrysochloros
 ,,White-browed Woodpecker,P. aurulentus
 ,,Green-barred Woodpecker,Colaptes melanochloros
 ,,Campo Flicker,C. campestris
-,,Helmeted Woodpecker,Celeus galeatus
-15,,Pale-crested Woodpecker,C. lugubris
-,,Blond-crested Woodpecker,C. flavescens
-,,Lineated Woodpecker,Dryocopus lineatus
-,,Black-bodied Woodpecker,D. schulzi
-,,Robust Woodpecker,Campephilus robustus
-,,Crimson-crested Woodpecker,C. melanoleucos
-,,Cream-backed Woodpecker,C. leucopogon
 SERIEMAS,CARIAMIDAE
 ,,Red-legged Seriema,Cariama cristata
 ,,Black-legged Seriema,Chunga burmeisteri

@@ -303,29 +303,29 @@ TRUMPETERS,PSOPHIIDAE
 RAILS,RALLIDAE
 ,,Mangrove Rail,Rallus longirostris
 ,,Virginia Rail,R. limicola
-,,Brown Wood-Rail,Aramides wolfi
-,,Gray-necked Wood-Rail,A. cajaneus
-5,,Rufous-necked Wood-Rail,A. axillaris
-,,Red-winged Wood-Rail,A. calopterus
-,,Uniform Crake,Amaurolimnas concolor
-,,Chestnut-headed Crake,Anurolimnas castaneiceps
+,,Purple Gallinule,Porphyrio martinica
+,,Azure Gallinule,P. flavirostris
+5,,Chestnut-headed Crake,Anurolimnas castaneiceps
 ,,Russet-crowned Crake,A. viridis
-10,,Black-banded Crake,A. fasciatus
+,,Black-banded Crake,A. fasciatus
 ,,Rufous-sided Crake,Laterallus melanophaius
 ,,White-throated Crake,L. albigularis
-,,Gray-breasted Crake,L. exilis
+10,,Gray-breasted Crake,L. exilis
 ,endemic,Galapagos Rail,L. spilonota
-15,,Yellow-breasted Crake,Porzana flaviventer
-,,Sora,P. carolina
 ,,Ash-throated Crake,Mustelirallus albicollis
 ,,Colombian Crake,M. colombianus
 ,,Paint-billed Crake,M. erythrops
-20,,Spotted Rail,Pardirallus maculatus
+15,,Spotted Rail,Pardirallus maculatus
 ,,Blackish Rail,P. nigricans
 ,,Plumbeous Rail,P. sanguinolentus
-,,Common Gallinule,Gallinula galeata
-,,Purple Gallinule,Porphyrio martinica
-25,,Azure Gallinule,P. flavirostris
+,,Uniform Crake,Amaurolimnas concolor
+,,Brown Wood-Rail,Aramides wolfi
+20,,Gray-necked Wood-Rail,A. cajaneus
+,,Rufous-necked Wood-Rail,A. axillaris
+,,Red-winged Wood-Rail,A. calopterus
+,,Yellow-breasted Crake,Porzana flaviventer
+,,Sora,P. carolina
+25,,Common Gallinule,Gallinula galeata
 ,,Slate-colored Coot,Fulica ardesiaca
 FINFOOTS,HELIORNITHIDAE
 ,,Sungrebe,Heliornis fulica
@@ -337,12 +337,12 @@ PLOVERS,CHARADRIIDAE
 5,,Pied Lapwing,Vanellus cayanus
 ,,Southern Lapwing,V. chilensis
 ,,Andean Lapwing,V. resplendens
-,,Semipalmated Plover,Charadrius semipalmatus
-,,Piping Plover,C. melodus
-10,,Wilson's Plover,C. wilsonia
-,,Killdeer,C. vociferus
-,,Snowy Plover,C. nivosus
+,,Killdeer,Charadrius vociferus
+,,Semipalmated Plover,C. semipalmatus
+10,,Piping Plover,C. melodus
+,,Wilson's Plover,C. wilsonia
 ,,Collared Plover,C. collaris
+,,Snowy Plover,C. nivosus
 OYSTERCATCHERS,HAEMATOPODIDAE
 ,,American Oystercatcher,Haematopus palliatus
 ,,Blackish Oystercatcher,H. ater
@@ -400,6 +400,8 @@ SKUAS,STERCORARIIDAE
 ,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
+SKIMMERS,RYNCHOPIDAE
+,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
 ,,Swallow-tailed Gull,Creagrus furcatus
 ,,Sabine's Gull,Xema sabini
@@ -435,8 +437,6 @@ GULLS,LARIDAE
 ,,Elegant Tern,Thalasseus elegans
 ,,Sandwich Tern,T. sandvicensis
 ,,Royal Tern,T. maximus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 SUNBITTERN,EURYPYGIDAE
 ,,Sunbittern,Eurypyga helias
 TROPICBIRDS,PHAETHONTIDAE
@@ -484,20 +484,19 @@ STORKS,CICONIIDAE
 FRIGATEBIRDS,FREGATIDAE
 ,,Magnificent Frigatebird,Fregata magnificens
 ,,Great Frigatebird,F. minor
+ANHINGAS,ANHINGIDAE
+,,Anhinga,Anhinga anhinga
 BOOBIES,SULIDAE
-,,Cape Gannet,Morus capensis
 ,,Blue-footed Booby,Sula nebouxii
 ,,Peruvian Booby,S. variegata
 ,,Masked Booby,S. dactylatra
-5,,Nazca Booby,S. granti
+,,Nazca Booby,S. granti
 ,,Red-footed Booby,S. sula
 ,,Brown Booby,S. leucogaster
 CORMORANTS,PHALACROCORACIDAE
 ,endemic,Flightless Cormorant,Phalacrocorax harrisi
 ,,Neotropic Cormorant,P. brasilianus
 ,,Guanay Cormorant,P. bougainvillii
-ANHINGAS,ANHINGIDAE
-,,Anhinga,Anhinga anhinga
 PELICANS,PELECANIDAE
 ,,Brown Pelican,Pelecanus occidentalis
 ,,Peruvian Pelican,P. thagus
@@ -534,12 +533,12 @@ IBISES,THRESKIORNITHIDAE
 ,,Black-faced Ibis,Theristicus melanopis
 ,,Roseate Spoonbill,Platalea ajaja
 NEW WORLD VULTURES,CATHARTIDAE
+,,King Vulture,Sarcoramphus papa
+,,Andean Condor,Vultur gryphus
+,,Black Vulture,Coragyps atratus
 ,,Turkey Vulture,Cathartes aura
 ,,Lesser Yellow-headed Vulture,C. burrovianus
 ,,Greater Yellow-headed Vulture,C. melambrotus
-,,Black Vulture,Coragyps atratus
-,,King Vulture,Sarcoramphus papa
-,,Andean Condor,Vultur gryphus
 OSPREY,PANDIONIDAE
 ,,Osprey,Pandion haliaetus
 HAWKS,ACCIPITRIDAE
@@ -594,14 +593,14 @@ HAWKS,ACCIPITRIDAE
 BARN OWLS,TYTONIDAE
 ,,Barn Owl,Tyto alba
 OWLS,STRIGIDAE
-,,Tropical Screech-Owl,Megascops choliba
-,,Peruvian Screech-Owl,M. roboratus
+,,White-throated Screech-Owl,Megascops albogularis
+,,Tropical Screech-Owl,M. choliba
 ,,Colombian Screech-Owl,M. colombianus
 ,,Rufescent Screech-Owl,M. ingens
 5,,Cinnamon Screech-Owl,M. petersoni
-,,Tawny-bellied Screech-Owl,M. watsonii
 ,,Vermiculated Screech-Owl,M. guatemalae
-,,White-throated Screech-Owl,M. albogularis
+,,Peruvian Screech-Owl,M. roboratus
+,,Tawny-bellied Screech-Owl,M. watsonii
 ,,Crested Owl,Lophostrix cristata
 10,,Spectacled Owl,Pulsatrix perspicillata
 ,,Band-bellied Owl,P. melanota
@@ -637,19 +636,19 @@ TROGONS,TROGONIDAE
 ,,Black-throated Trogon,T. rufus
 ,,Collared Trogon,T. collaris
 ,,Masked Trogon,T. personatus
-KINGFISHERS,ALCEDINIDAE
-,,Ringed Kingfisher,Megaceryle torquata
-,,Belted Kingfisher,M. alcyon
-,,Amazon Kingfisher,Chloroceryle amazona
-,,Green Kingfisher,C. americana
-,,Green-and-rufous Kingfisher,C. inda
-,,American Pygmy Kingfisher,C. aenea
 MOTMOTS,MOMOTIDAE
 ,,Broad-billed Motmot,Electron platyrhynchum
 ,,Rufous Motmot,Baryphthengus martii
 ,,Whooping Motmot,Momotus subrufescens
 ,,Amazonian Motmot,M. momota
 ,,Andean Motmot,M. aequatorialis
+KINGFISHERS,ALCEDINIDAE
+,,Ringed Kingfisher,Megaceryle torquata
+,,Belted Kingfisher,M. alcyon
+,,Amazon Kingfisher,Chloroceryle amazona
+,,American Pygmy Kingfisher,C. aenea
+,,Green Kingfisher,C. americana
+,,Green-and-rufous Kingfisher,C. inda
 JACAMARS,GALBULIDAE
 ,,White-eared Jacamar,Galbalcyrhynchus leucotis
 ,,Brown Jacamar,Brachygalba lugubris
@@ -724,26 +723,26 @@ WOODPECKERS,PICIDAE
 ,,Bar-bellied Woodpecker,V. nigriceps
 ,,Red-stained Woodpecker,V. affinis
 ,,Choco Woodpecker,V. chocoensis
-15,,White-throated Woodpecker,Piculus leucolaemus
-,,Lita Woodpecker,P. litae
-,,Yellow-throated Woodpecker,P. flavigula
-,,Golden-green Woodpecker,P. chrysochloros
-,,Golden-olive Woodpecker,Colaptes rubiginosus
-20,,Crimson-mantled Woodpecker,C. rivolii
-,,Spot-breasted Woodpecker,C. punctigula
-,,Andean Flicker,C. rupicola
-,,Cinnamon Woodpecker,Celeus loricatus
-,,Ringed Woodpecker,C. torquatus
-25,,Scale-breasted Woodpecker,C. grammicus
-,,Cream-colored Woodpecker,C. flavus
-,,Rufous-headed Woodpecker,C. spectabilis
-,,Chestnut Woodpecker,C. elegans
-,,Lineated Woodpecker,Dryocopus lineatus
-30,,Powerful Woodpecker,Campephilus pollens
+15,,Powerful Woodpecker,Campephilus pollens
 ,,Crimson-bellied Woodpecker,C. haematogaster
 ,,Red-necked Woodpecker,C. rubricollis
 ,,Crimson-crested Woodpecker,C. melanoleucos
 ,,Guayaquil Woodpecker,C. gayaquilensis
+20,,Lineated Woodpecker,Dryocopus lineatus
+,,Cinnamon Woodpecker,Celeus loricatus
+,,Ringed Woodpecker,C. torquatus
+,,Scale-breasted Woodpecker,C. grammicus
+,,Cream-colored Woodpecker,C. flavus
+25,,Rufous-headed Woodpecker,C. spectabilis
+,,Chestnut Woodpecker,C. elegans
+,,White-throated Woodpecker,Piculus leucolaemus
+,,Lita Woodpecker,P. litae
+,,Yellow-throated Woodpecker,P. flavigula
+30,,Golden-green Woodpecker,P. chrysochloros
+,,Golden-olive Woodpecker,Colaptes rubiginosus
+,,Crimson-mantled Woodpecker,C. rivolii
+,,Spot-breasted Woodpecker,C. punctigula
+,,Andean Flicker,C. rupicola
 FALCONS,FALCONIDAE
 ,,Laughing Falcon,Herpetotheres cachinnans
 ,,Barred Forest-Falcon,Micrastur ruficollis
@@ -790,8 +789,8 @@ PARROTS,PSITTACIDAE
 ,,Mealy Parrot,A. farinosa
 ,,Orange-winged Parrot,A. amazonica
 25,,Scaly-naped Parrot,A. mercenarius
-,,Blue-winged Parrotlet,Forpus xanthopterygius
-,,Dusky-billed Parrotlet,F. modestus
+,,Dusky-billed Parrotlet,Forpus modestus
+,,Blue-winged Parrotlet,F. xanthopterygius
 ,,Pacific Parrotlet,F. coelestis
 ,,Black-headed Parrot,Pionites melanocephalus
 30,,Red-fan Parrot,Deroptyus accipitrinus
@@ -901,7 +900,7 @@ ANTBIRDS,THAMNOPHILIDAE
 ,,White-plumed Antbird,Pithys albifrons
 85,,Bicolored Antbird,Gymnopithys bicolor
 ,,White-cheeked Antbird,G. leucaspis
-,,Lunulated Antbird,G. lunulatus
+,,Lunulated Antbird,Oneillornis lunulatus
 ,,Hairy-crested Antbird,Rhegmatorhina melanosticta
 ,,Spotted Antbird,Hylophylax naevioides
 90,,Spot-backed Antbird,H. naevius

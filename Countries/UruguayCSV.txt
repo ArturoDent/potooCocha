@@ -95,22 +95,22 @@
 ,Limpkin,Aramus guarauna
 
 ,RAILS,RALLIDAE
-,Speckled Rail,Coturnicops notatus
-,Giant Wood-Rail,Aramides ypecaha
-,Gray-necked Wood-Rail,A. cajaneus
+,Purple Gallinule,Porphyrio martinica
+,Azure Gallinule,P. flavirostris
 ,Rufous-sided Crake,Laterallus melanophaius
 ,Red-and-white Crake,L. leucopyrrhus
-,Yellow-breasted Crake,Porzana flaviventer
-,Dot-winged Crake,P. spiloptera
-,Spot-flanked Gallinule,Porphyriops melanops
+,Speckled Rail,Coturnicops notatus
 ,Ash-throated Crake,Mustelirallus albicollis
 ,Spotted Rail,Pardirallus maculatus
 ,Plumbeous Rail,P. sanguinolentus
+,Giant Wood-Rail,Aramides ypecaha
+,Gray-necked Wood-Rail,A. cajaneus
+,Spot-flanked Gallinule,Porphyriops melanops
+,Yellow-breasted Crake,Porzana flaviventer
+,Dot-winged Crake,P. spiloptera
 ,Common Gallinule,Gallinula galeata
-,Purple Gallinule,Porphyrio martinica
-,Azure Gallinule,P. flavirostris
-,Red-gartered Coot,Fulica armillata
-,Red-fronted Coot,F. rufifrons
+,Red-fronted Coot,Fulica rufifrons
+,Red-gartered Coot,F. armillata
 ,White-winged Coot,F. leucoptera
 
 ,PLOVERS,CHARADRIIDAE
@@ -118,10 +118,10 @@
 ,Black-bellied Plover,P. squatarola
 ,Tawny-throated Dotterel,Oreopholus ruficollis
 ,Southern Lapwing,Vanellus chilensis
-,Semipalmated Plover,Charadrius semipalmatus
+,Rufous-chested Dotterel,Charadrius modestus
+,Semipalmated Plover,C. semipalmatus
 ,Collared Plover,C. collaris
 ,Two-banded Plover,C. falklandicus
-,Rufous-chested Dotterel,C. modestus
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
 ,American Oystercatcher,Haematopus palliatus
@@ -172,6 +172,9 @@
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
+,SKIMMERS,RYNCHOPIDAE
+,Black Skimmer,Rynchops niger
+
 ,GULLS,LARIDAE
 ,Brown-hooded Gull,Chroicocephalus maculipennis
 ,Gray-hooded Gull,C. cirrocephalus
@@ -190,9 +193,6 @@
 ,Snowy-crowned Tern,S. trudeaui
 ,Sandwich Tern,Thalasseus sandvicensis
 ,Royal Tern,T. maximus
-
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
 
 ,PENGUINS,SPHENISCIDAE
 ,King Penguin,Aptenodytes patagonicus
@@ -244,17 +244,16 @@
 ,FRIGATEBIRDS,FREGATIDAE
 ,Magnificent Frigatebird,Fregata magnificens
 
+,ANHINGAS,ANHINGIDAE
+,Anhinga,Anhinga anhinga
+
 ,BOOBIES,SULIDAE
-,Cape Gannet,Morus capensis
 ,Masked Booby,Sula dactylatra
 ,Brown Booby,S. leucogaster
 
 ,CORMORANTS,PHALACROCORACIDAE
 ,Neotropic Cormorant,Phalacrocorax brasilianus
 ,Imperial Cormorant,P. atriceps
-
-,ANHINGAS,ANHINGIDAE
-,Anhinga,Anhinga anhinga
 
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
@@ -277,9 +276,9 @@
 ,Roseate Spoonbill,Platalea ajaja
 
 ,NEW WORLD VULTURES,CATHARTIDAE
+,Black Vulture,Coragyps atratus
 ,Turkey Vulture,Cathartes aura
 ,Lesser Yellow-headed Vulture,C. burrovianus
-,Black Vulture,Coragyps atratus
 
 ,OSPREY,PANDIONIDAE
 ,Osprey,Pandion haliaetus
@@ -334,10 +333,10 @@
 ,White-fronted Woodpecker,M. cactorum
 ,White-spotted Woodpecker,Veniliornis spilogaster
 ,Checkered Woodpecker,V. mixtus
+,Cream-backed Woodpecker,Campephilus leucopogon
 ,White-browed Woodpecker,Piculus aurulentus
 ,Green-barred Woodpecker,Colaptes melanochloros
 ,Campo Flicker,C. campestris
-,Cream-backed Woodpecker,Campephilus leucopogon
 
 ,SERIEMAS,CARIAMIDAE
 ,Red-legged Seriema,Cariama cristata

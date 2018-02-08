@@ -143,22 +143,22 @@ LIMPKIN,ARAMIDAE
 TRUMPETERS,PSOPHIIDAE
 ,,Gray-winged Trumpeter,Psophia crepitans
 RAILS,RALLIDAE
-,,Speckled Rail,Coturnicops notatus
-,,Ocellated Crake,Micropygia schomburgkii
 ,,Mangrove Rail,Rallus longirostris
-,,Gray-necked Wood-Rail,Aramides cajaneus
-5,,Rufous-necked Wood-Rail,A. axillaris
-,,Uniform Crake,Amaurolimnas concolor
-,,Russet-crowned Crake,Anurolimnas viridis
-,,Rufous-sided Crake,Laterallus melanophaius
-,,Gray-breasted Crake,L. exilis
-10,,Yellow-breasted Crake,Porzana flaviventer
-,,Sora,P. carolina
-,,Ash-throated Crake,Mustelirallus albicollis
-,,Paint-billed Crake,M. erythrops
-,,Common Gallinule,Gallinula galeata
 ,,Purple Gallinule,Porphyrio martinica
 ,,Azure Gallinule,P. flavirostris
+,,Russet-crowned Crake,Anurolimnas viridis
+5,,Rufous-sided Crake,Laterallus melanophaius
+,,Gray-breasted Crake,L. exilis
+,,Speckled Rail,Coturnicops notatus
+,,Ocellated Crake,Micropygia schomburgkii
+,,Ash-throated Crake,Mustelirallus albicollis
+10,,Paint-billed Crake,M. erythrops
+,,Uniform Crake,Amaurolimnas concolor
+,,Gray-necked Wood-Rail,Aramides cajaneus
+,,Rufous-necked Wood-Rail,A. axillaris
+,,Yellow-breasted Crake,Porzana flaviventer
+,,Sora,P. carolina
+,,Common Gallinule,Gallinula galeata
 FINFOOTS,HELIORNITHIDAE
 ,,Sungrebe,Heliornis fulica
 PLOVERS,CHARADRIIDAE
@@ -202,6 +202,8 @@ SKUAS,STERCORARIIDAE
 ,,Great Skua,Stercorarius skua
 ,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
+SKIMMERS,RYNCHOPIDAE
+,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
 ,,Laughing Gull,Leucophaeus atricilla
 ,,Lesser Black-backed Gull,Larus fuscus
@@ -218,8 +220,6 @@ GULLS,LARIDAE
 ,,Arctic Tern,S. paradisaea
 ,,Sandwich Tern,Thalasseus sandvicensis
 ,,Royal Tern,T. maximus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 SUNBITTERN,EURYPYGIDAE
 ,,Sunbittern,Eurypyga helias
 SHEARWATERS,PROCELLARIIDAE
@@ -235,12 +235,12 @@ STORKS,CICONIIDAE
 ,,Wood Stork,Mycteria americana
 FRIGATEBIRDS,FREGATIDAE
 ,,Magnificent Frigatebird,Fregata magnificens
+ANHINGAS,ANHINGIDAE
+,,Anhinga,Anhinga anhinga
 BOOBIES,SULIDAE
 ,,Brown Booby,Sula leucogaster
 CORMORANTS,PHALACROCORACIDAE
 ,,Neotropic Cormorant,Phalacrocorax brasilianus
-ANHINGAS,ANHINGIDAE
-,,Anhinga,Anhinga anhinga
 PELICANS,PELECANIDAE
 ,,Brown Pelican,Pelecanus occidentalis
 HERONS,ARDEIDAE
@@ -271,11 +271,11 @@ IBISES,THRESKIORNITHIDAE
 ,,Buff-necked Ibis,Theristicus caudatus
 ,,Roseate Spoonbill,Platalea ajaja
 NEW WORLD VULTURES,CATHARTIDAE
+,,King Vulture,Sarcoramphus papa
+,,Black Vulture,Coragyps atratus
 ,,Turkey Vulture,Cathartes aura
 ,,Lesser Yellow-headed Vulture,C. burrovianus
 ,,Greater Yellow-headed Vulture,C. melambrotus
-,,Black Vulture,Coragyps atratus
-,,King Vulture,Sarcoramphus papa
 OSPREY,PANDIONIDAE
 ,,Osprey,Pandion haliaetus
 HAWKS,ACCIPITRIDAE
@@ -318,8 +318,8 @@ BARN OWLS,TYTONIDAE
 ,,Barn Owl,Tyto alba
 OWLS,STRIGIDAE
 ,,Tropical Screech-Owl,Megascops choliba
-,,Tawny-bellied Screech-Owl,M. watsonii
 ,,Vermiculated Screech-Owl,M. guatemalae
+,,Tawny-bellied Screech-Owl,M. watsonii
 ,,Crested Owl,Lophostrix cristata
 5,,Spectacled Owl,Pulsatrix perspicillata
 ,,Great Horned Owl,Bubo virginianus
@@ -339,15 +339,15 @@ TROGONS,TROGONIDAE
 ,,Black-throated Trogon,T. rufus
 ,,Collared Trogon,T. collaris
 ,,Masked Trogon,T. personatus
+MOTMOTS,MOMOTIDAE
+,,Amazonian Motmot,Momotus momota
 KINGFISHERS,ALCEDINIDAE
 ,,Ringed Kingfisher,Megaceryle torquata
 ,,Belted Kingfisher,M. alcyon
 ,,Amazon Kingfisher,Chloroceryle amazona
+,,American Pygmy Kingfisher,C. aenea
 ,,Green Kingfisher,C. americana
 ,,Green-and-rufous Kingfisher,C. inda
-,,American Pygmy Kingfisher,C. aenea
-MOTMOTS,MOMOTIDAE
-,,Amazonian Motmot,Momotus momota
 JACAMARS,GALBULIDAE
 ,,Brown Jacamar,Brachygalba lugubris
 ,,Yellow-billed Jacamar,Galbula albirostris
@@ -387,17 +387,17 @@ WOODPECKERS,PICIDAE
 ,,Golden-collared Woodpecker,V. cassini
 ,,Blood-colored Woodpecker,V. sanguineus
 10,,Little Woodpecker,V. passerinus
+,,Red-necked Woodpecker,Campephilus rubricollis
+,,Crimson-crested Woodpecker,C. melanoleucos
+,,Lineated Woodpecker,Dryocopus lineatus
+,,Ringed Woodpecker,Celeus torquatus
+15,,Waved Woodpecker,C. undatus
+,,Cream-colored Woodpecker,C. flavus
+,,Chestnut Woodpecker,C. elegans
 ,,Yellow-throated Woodpecker,Piculus flavigula
 ,,Golden-green Woodpecker,P. chrysochloros
 ,,Golden-olive Woodpecker,Colaptes rubiginosus
 ,,Spot-breasted Woodpecker,C. punctigula
-15,,Ringed Woodpecker,Celeus torquatus
-,,Waved Woodpecker,C. undatus
-,,Cream-colored Woodpecker,C. flavus
-,,Chestnut Woodpecker,C. elegans
-,,Lineated Woodpecker,Dryocopus lineatus
-,,Red-necked Woodpecker,Campephilus rubricollis
-,,Crimson-crested Woodpecker,C. melanoleucos
 FALCONS,FALCONIDAE
 ,,Laughing Falcon,Herpetotheres cachinnans
 ,,Barred Forest-Falcon,Micrastur ruficollis
@@ -429,8 +429,8 @@ PARROTS,PSITTACIDAE
 ,,Yellow-crowned Parrot,A. ochrocephala
 ,,Mealy Parrot,A. farinosa
 ,,Orange-winged Parrot,A. amazonica
-15,,Green-rumped Parrotlet,Forpus passerinus
-,,Dusky-billed Parrotlet,F. modestus
+15,,Dusky-billed Parrotlet,Forpus modestus
+,,Green-rumped Parrotlet,F. passerinus
 ,,Black-headed Parrot,Pionites melanocephalus
 ,,Red-fan Parrot,Deroptyus accipitrinus
 ,,Painted Parakeet,Pyrrhura picta

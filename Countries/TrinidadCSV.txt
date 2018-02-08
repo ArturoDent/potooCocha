@@ -108,16 +108,16 @@ E,Trinidad Piping-Guan,Pipile pipile
 
 ,RAILS,RALLIDAE
 ,Mangrove Rail,Rallus longirostris
-,Gray-necked Wood-Rail,Aramides cajaneus
-,Rufous-necked Wood-Rail,A. axillaris
-,Gray-breasted Crake,Laterallus exilis
-,Yellow-breasted Crake,Porzana flaviventer
-,Sora,P. carolina
-,Paint-billed Crake,Mustelirallus erythrops
-,Spotted Rail,Pardirallus maculatus
-,Common Gallinule,Gallinula galeata
 ,Purple Gallinule,Porphyrio martinica
 ,Azure Gallinule,P. flavirostris
+,Gray-breasted Crake,Laterallus exilis
+,Paint-billed Crake,Mustelirallus erythrops
+,Spotted Rail,Pardirallus maculatus
+,Gray-necked Wood-Rail,Aramides cajaneus
+,Rufous-necked Wood-Rail,A. axillaris
+,Yellow-breasted Crake,Porzana flaviventer
+,Sora,P. carolina
+,Common Gallinule,Gallinula galeata
 ,American Coot,Fulica americana
 
 ,FINFOOTS,HELIORNITHIDAE
@@ -128,11 +128,11 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Black-bellied Plover,P. squatarola
 ,Pied Lapwing,Vanellus cayanus
 ,Southern Lapwing,V. chilensis
-,Semipalmated Plover,Charadrius semipalmatus
+,Killdeer,Charadrius vociferus
+,Semipalmated Plover,C. semipalmatus
 ,Wilson's Plover,C. wilsonia
-,Killdeer,C. vociferus
-,Snowy Plover,C. nivosus
 ,Collared Plover,C. collaris
+,Snowy Plover,C. nivosus
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
 ,American Oystercatcher,Haematopus palliatus
@@ -184,6 +184,9 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Pomarine Jaeger,S. pomarinus
 ,Parasitic Jaeger,S. parasiticus
 
+,SKIMMERS,RYNCHOPIDAE
+,Black Skimmer,Rynchops niger
+
 ,GULLS,LARIDAE
 ,Black-legged Kittiwake,Rissa tridactyla
 ,Sabine's Gull,Xema sabini
@@ -210,9 +213,6 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Sandwich Tern,Thalasseus sandvicensis
 ,Royal Tern,T. maximus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,TROPICBIRDS,PHAETHONTIDAE
 ,Red-billed Tropicbird,Phaethon aethereus
 ,White-tailed Tropicbird,P. lepturus
@@ -237,6 +237,9 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,FRIGATEBIRDS,FREGATIDAE
 ,Magnificent Frigatebird,Fregata magnificens
 
+,ANHINGAS,ANHINGIDAE
+,Anhinga,Anhinga anhinga
+
 ,BOOBIES,SULIDAE
 ,Masked Booby,Sula dactylatra
 ,Red-footed Booby,S. sula
@@ -244,9 +247,6 @@ E,Trinidad Piping-Guan,Pipile pipile
 
 ,CORMORANTS,PHALACROCORACIDAE
 ,Neotropic Cormorant,Phalacrocorax brasilianus
-
-,ANHINGAS,ANHINGIDAE
-,Anhinga,Anhinga anhinga
 
 ,PELICANS,PELECANIDAE
 ,Brown Pelican,Pelecanus occidentalis
@@ -285,9 +285,9 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Roseate Spoonbill,P. ajaja
 
 ,NEW WORLD VULTURES,CATHARTIDAE
-,Turkey Vulture,Cathartes aura
-,Black Vulture,Coragyps atratus
 ,King Vulture,Sarcoramphus papa
+,Black Vulture,Coragyps atratus
+,Turkey Vulture,Cathartes aura
 
 ,OSPREY,PANDIONIDAE
 ,Osprey,Pandion haliaetus
@@ -335,15 +335,15 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Guianan Trogon,T. violaceus
 ,Collared Trogon,T. collaris
 
+,MOTMOTS,MOMOTIDAE
+E,Trinidad Motmot,Momotus bahamensis
+
 ,KINGFISHERS,ALCEDINIDAE
 ,Ringed Kingfisher,Megaceryle torquata
 ,Belted Kingfisher,M. alcyon
 ,Amazon Kingfisher,Chloroceryle amazona
-,Green Kingfisher,C. americana
 ,American Pygmy Kingfisher,C. aenea
-
-,MOTMOTS,MOMOTIDAE
-E,Trinidad Motmot,Momotus bahamensis
+,Green Kingfisher,C. americana
 
 ,JACAMARS,GALBULIDAE
 ,Rufous-tailed Jacamar,Galbula ruficauda
@@ -354,10 +354,10 @@ E,Trinidad Motmot,Momotus bahamensis
 ,WOODPECKERS,PICIDAE
 ,Red-crowned Woodpecker,Melanerpes rubricapillus
 ,Red-rumped Woodpecker,Veniliornis kirkii
-,Golden-olive Woodpecker,Colaptes rubiginosus
-,Chestnut Woodpecker,Celeus elegans
-,Lineated Woodpecker,Dryocopus lineatus
 ,Crimson-crested Woodpecker,Campephilus melanoleucos
+,Lineated Woodpecker,Dryocopus lineatus
+,Chestnut Woodpecker,Celeus elegans
+,Golden-olive Woodpecker,Colaptes rubiginosus
 
 ,FALCONS,FALCONIDAE
 ,Crested Caracara,Caracara cheriway
