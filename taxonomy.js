@@ -429,7 +429,7 @@ function searchTree(query2) {
     return;
   }
 
-  if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+  if (!resultsPanelOpen) toggleSearchResultsPanel(null);
 
   // if (!resultsPanel.classList.contains("translateDown")) {
   //   searchResults.classList.add("fadeIn");
@@ -448,7 +448,7 @@ function searchTree(query2) {
   else {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
 
-    if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+    if (!resultsPanelOpen) toggleSearchResultsPanel(null);
     // searchResults.classList.add("fadeIn");
     searchResults.style.top = 0;
 
@@ -533,7 +533,7 @@ function searchTree(query2) {
     if (warning)  {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
 
-      if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+      if (!resultsPanelOpen) toggleSearchResultsPanel(null);
       // searchResults.classList.add("fadeIn");
       // searchResults.style.height = "55px";
 
@@ -573,7 +573,7 @@ function searchTree(query2) {
   if (matches.length === 0)  {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
 
-    if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+    if (!resultsPanelOpen) toggleSearchResultsPanel(null);
     // searchResults.classList.add("fadeIn");
     // searchResults.style.height = "55px";
 
@@ -624,7 +624,7 @@ function searchTree(query2) {
 
   searchResults.innerHTML = list;
 
-  if (!resultsPanelOpen) toggleSearchResultsPanel(event);
+  if (!resultsPanelOpen) toggleSearchResultsPanel(null);
   // searchResults.classList.add("fadeIn");
 
   lastQuery = lastQuery.replace(/\\\*/g, "*");
