@@ -4,7 +4,7 @@ var reload = browserSync.reload;
 
 var newer = require('gulp-newer');
 var sass = require("gulp-sass");
-    // minify js files
+// minify js files
 var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 var rename = require("gulp-rename");

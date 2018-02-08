@@ -809,12 +809,11 @@ input[type='checkbox']:disabled + label {
   animation-delay: 0.2s; }
 
 @keyframes flashDays {
-  0% {
-    background-color: #A65751; }
+  0% { }
   50% {
-    background-color: white; }
-  100% {
-    background-color: #A65751; } }
+    background-color: #c8c8c8;
+    color: black; }
+  100% { } }
 
 #sampleTable td.familyHidden {
   border: solid 1px #515050; }

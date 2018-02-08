@@ -295,11 +295,15 @@ function setNumDays(evt)  {
 
   // rules for column double border right vs. number of days
 
+  // clear all cds classes
+
   [].forEach.call(sampleTable.querySelectorAll("td"), function (el) {
     el.classList.remove("cds");
   });
 
-  sampleTable.querySelectorAll("th").classList.remove("cds");
+  [].forEach.call(sampleTable.querySelectorAll("th"), function (el) {
+    el.classList.remove("cds");
+  });
 
   // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
   //   el.classList.remove("cds");
@@ -313,29 +317,23 @@ function setNumDays(evt)  {
 
   // sampleTable.querySelector("th:nth-child(6)").classList.remove("cds");
 
-  if (gNumDays === 6 || gNumDays === 7) {
+  if (gNumDays === 6) {
 
     [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
       el.classList.add("cds");
     });
 
-    sampleTable.querySelector("th:nth-child(3)").classList.add("cds");
+    sampleTable.querySelector("th:nth-child(4)").classList.add("cds");
   }
-  else if (gNumDays === 8) {
+  else if (gNumDays ===  7 || gNumDays === 8) {
 
     [].forEach.call(sampleTable.querySelectorAll("td:nth-child(7)"), function (el) {
       el.classList.add("cds");
     });
 
-    sampleTable.querySelector("th:nth-child(3)").classList.add("cds");
+    sampleTable.querySelector("th:nth-child(5)").classList.add("cds");
   }
-  else if (gNumDays >= 9) {
-
-    // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
-    //   el.classList.remove("cds");
-    // });
-
-    // sampleTable.querySelector("th:nth-child(11)").classList.remove("cds");
+  else if (gNumDays ===  9 || gNumDays === 10) {
 
     [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
       el.classList.add("cds");
@@ -343,20 +341,20 @@ function setNumDays(evt)  {
 
     sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
   }
-  // else if (gNumDays !== 5) {
+  else if (gNumDays === 11 || gNumDays === 12) {
 
-  //   [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
-  //     el.classList.add("cds");
-  //   });
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
+      el.classList.add("cds");
+    });
 
-  //   sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
+    sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
 
-  //   [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
-  //     el.classList.add("cds");
-  //   });
+    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
+      el.classList.add("cds");
+    });
 
-  //   sampleTable.querySelector("th:nth-child(11)").classList.add("cds");
-  // }
+    sampleTable.querySelector("th:nth-child(11)").classList.add("cds");
+  }
 
   if (gNumDays !== 0) {
 

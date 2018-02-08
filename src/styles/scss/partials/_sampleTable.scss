@@ -100,13 +100,14 @@
 
 @keyframes flashDays {
   0% {
-    background-color: $birdRolloverColor;
+    // background-color: black;
   }
   50% {
-    background-color: white;
+    background-color: rgb(200, 200, 200);
+    color: black;
   }
   100% {
-    background-color: $birdRolloverColor;
+    // background-color: rgba(200, 200, 200, 0.5);
   }
 }
 

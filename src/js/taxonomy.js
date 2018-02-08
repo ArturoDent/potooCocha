@@ -302,8 +302,6 @@ function toggleSearchResultsPanel(evt) {
   resultsPanelOpen = !resultsPanelOpen;
 }
 
-
-
 function updatetaxArticleQueries(data) {
 
   // <ul id='tree'>
