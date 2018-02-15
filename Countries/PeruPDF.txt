@@ -510,8 +510,6 @@ STORKS,CICONIIDAE
 FRIGATEBIRDS,FREGATIDAE
 ,,Magnificent Frigatebird,Fregata magnificens
 ,,Great Frigatebird,F. minor
-ANHINGAS,ANHINGIDAE
-,,Anhinga,Anhinga anhinga
 BOOBIES,SULIDAE
 ,,Cape Gannet,Morus capensis
 ,,Blue-footed Booby,Sula nebouxii
@@ -520,6 +518,8 @@ BOOBIES,SULIDAE
 5,,Nazca Booby,S. granti
 ,,Red-footed Booby,S. sula
 ,,Brown Booby,S. leucogaster
+ANHINGAS,ANHINGIDAE
+,,Anhinga,Anhinga anhinga
 CORMORANTS,PHALACROCORACIDAE
 ,,Red-legged Cormorant,Phalacrocorax gaimardi
 ,,Neotropic Cormorant,P. brasilianus
@@ -552,7 +552,8 @@ IBISES,THRESKIORNITHIDAE
 ,,White Ibis,Eudocimus albus
 ,,Puna Ibis,Plegadis ridgwayi
 ,,Green Ibis,Mesembrinibis cayennensis
-,,Buff-necked Ibis,Theristicus caudatus
+,,Bare-faced Ibis,Phimosus infuscatus
+5,,Buff-necked Ibis,Theristicus caudatus
 ,,Black-faced Ibis,T. melanopis
 ,,Roseate Spoonbill,Platalea ajaja
 NEW WORLD VULTURES,CATHARTIDAE
@@ -933,13 +934,13 @@ ANTBIRDS,THAMNOPHILIDAE
 ,,Ash-breasted Antbird,M. lugubris
 ,,Black-faced Antbird,M. myotherinus
 ,,Black-tailed Antbird,M. melanurus
-85,,Black-chinned Antbird,Hypocnemoides melanopogon
+85,,White-lined Antbird,M. lophotes
+,,Black-chinned Antbird,Hypocnemoides melanopogon
 ,,Band-tailed Antbird,H. maculicauda
 ,,Black-and-white Antbird,Myrmochanes hemileucus
 ,,Silvered Antbird,Sclateria naevia
-,,Black-headed Antbird,Percnostola rufifrons
-90,endemic,Allpahuayo Antbird,P. arenarum
-,,White-lined Antbird,P. lophotes
+90,,Black-headed Antbird,Percnostola rufifrons
+,endemic,Allpahuayo Antbird,P. arenarum
 ,,Slate-colored Antbird,Myrmelastes schistaceus
 ,,Plumbeous Antbird,M. hyperythrus
 ,,Spot-winged Antbird,M. leucostigma

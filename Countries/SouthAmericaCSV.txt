@@ -561,7 +561,7 @@ E,Santa Marta Sabrewing,C. phainopeplus
 ,Fork-tailed Woodnymph,T. furcata
 E,Long-tailed Woodnymph,T. watertonii
 ,Violet-capped Woodnymph,T. glaucopis
-,Sombre Hummingbird,Aphantochroa cirrochloris
+E,Sombre Hummingbird,Aphantochroa cirrochloris
 ,Many-spotted Hummingbird,Taphrospilus hypostictus
 ,White-throated Hummingbird,Leucochloris albicollis
 ,Buffy Hummingbird,Leucippus fallax
@@ -641,7 +641,7 @@ E,Galapagos Rail,L. spilonota
 ,Uniform Crake,Amaurolimnas concolor
 ,Giant Wood-Rail,Aramides ypecaha
 ,Brown Wood-Rail,A. wolfi
-,Little Wood-Rail,A. mangle
+E,Little Wood-Rail,A. mangle
 ,Gray-necked Wood-Rail,A. cajaneus
 ,Rufous-necked Wood-Rail,A. axillaris
 ,Red-winged Wood-Rail,A. calopterus
@@ -934,9 +934,6 @@ E,Galapagos Shearwater,P. subalaris
 ,Magnificent Frigatebird,F. magnificens
 ,Great Frigatebird,F. minor
 
-,ANHINGAS,ANHINGIDAE
-,Anhinga,Anhinga anhinga
-
 ,BOOBIES,SULIDAE
 ,Cape Gannet,Morus capensis
 ,Australasian Gannet,M. serrator
@@ -946,6 +943,9 @@ E,Galapagos Shearwater,P. subalaris
 ,Nazca Booby,S. granti
 ,Red-footed Booby,S. sula
 ,Brown Booby,S. leucogaster
+
+,ANHINGAS,ANHINGIDAE
+,Anhinga,Anhinga anhinga
 
 ,CORMORANTS,PHALACROCORACIDAE
 ,Red-legged Cormorant,Phalacrocorax gaimardi
@@ -1469,7 +1469,7 @@ E,Pearly Parakeet,P. lepida
 ,Green-cheeked Parakeet,P. molinae
 E,Pfrimer's Parakeet,P. pfrimeri
 E,Gray-breasted Parakeet,P. griseipectus
-,Maroon-faced Parakeet,P. leucotis
+E,Maroon-faced Parakeet,P. leucotis
 ,Painted Parakeet,P. picta
 ,Santarem Parakeet,P. amazonum
 ,Bonaparte's Parakeet,P. lucianii
@@ -1693,6 +1693,7 @@ E,Slender Antbird,Rhopornis ardesiacus
 ,Ash-breasted Antbird,M. lugubris
 ,Black-faced Antbird,M. myotherinus
 ,Black-tailed Antbird,M. melanurus
+,White-lined Antbird,M. lophotes
 ,Black-chinned Antbird,Hypocnemoides melanopogon
 ,Band-tailed Antbird,H. maculicauda
 ,Black-and-white Antbird,Myrmochanes hemileucus
@@ -1700,7 +1701,6 @@ E,Slender Antbird,Rhopornis ardesiacus
 ,Silvered Antbird,Sclateria naevia
 ,Black-headed Antbird,Percnostola rufifrons
 E,Allpahuayo Antbird,P. arenarum
-,White-lined Antbird,P. lophotes
 ,Slate-colored Antbird,Myrmelastes schistaceus
 ,Roraiman Antbird,M. saturatus
 ,Plumbeous Antbird,M. hyperythrus
