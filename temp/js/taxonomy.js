@@ -11,7 +11,7 @@ var numFamilies;
 var birds;
 
 var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1382, "Brazil":1800, "Chile":496,
-  "Colombia":1849, "Curaçao":218, "Ecuador":1627, "French Guiana":697,
+  "Colombia":1844, "Curaçao":218, "Ecuador":1627, "French Guiana":697,
   "Guyana":783, "Paraguay":694, "Peru":1800, "Suriname":730, "Trinidad":468,
   "Uruguay":443, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3380};
 
