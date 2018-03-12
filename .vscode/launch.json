@@ -19,18 +19,11 @@
         },
         {
             "name": "Chrome : Launch with sourcemaps",
-            // works with or without preLaunchTask
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}",
-
             "sourceMaps": true,
-            // sourceMapPathOverrides because gulp sets source incorrectly according to extension readme
-            // "sourceMapPathOverrides": {
-            //     "/src/js/*": "${workspaceRoot}/src/js/*"
-            // },
-            // "diagnosticLogging": true,
             "runtimeArgs": [
             "--remote-debugging-port=9222"
             ]
@@ -63,5 +56,6 @@
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}"
         }
+
     ]
 }

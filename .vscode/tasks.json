@@ -11,9 +11,31 @@
             "type": "shell",
             "options": {
                 "cwd": "${workspaceRoot}"
-            },
+            }
             // "dependsOn": "Echo"
+        },
+        {
+            "label": "node -v",
+            "command": "node",
+            "args": [
+                "-v"
+            ],
+            "type": "shell"
         }
+        // },
+        // {
+        //     "taskName": "View in Chrome",
+        //     "type": "process",
+        //     "command": "chrome.exe",
+        //     "windows": {
+        //     "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+        //     },
+        //     "args": [ 
+        //         "${workspaceRoot}/home.html"
+        //             ],
+        //     "problemMatcher": []
+        // }
+
 
         // {
         //     "taskName": "Echo",

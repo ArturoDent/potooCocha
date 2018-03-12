@@ -121,12 +121,8 @@
   text-decoration: none;
   text-shadow : 0  1px rgba(0,0,0,1);
 
-  // background : transparent;
-
-  // border: 1px solid transparent;
-  border-top: 1px solid transparent;
-  // border-top-right-radius: 10px;
-  // border-bottom-right-radius: 10px;
+  border: 1px solid transparent;
+  // border-top: 1px solid transparent;
 
   border-radius: 10px;
 
@@ -140,12 +136,9 @@
   // background: $panelFlyoutFontColor;
   background-color:  $countryMenuHighlightColor;
 
-  // background: -webkit-linear-gradient(left, rgba(60,60,60,1) 0%, $countryMenuColor 100%);
-  // background: -moz-linear-gradient(left,  rgba(60,60,60,1) 0%, $countryMenuColor 100%);
-  // background: -o-linear-gradient(left,  rgba(60,60,60,1) 0%, $countryMenuColor 100%);
-  // background: linear-gradient(to right, rgba(60,60,60,1) 0%, $countryMenuColor 100%);
-
   // border: 1px solid #999;
+  border-top: 1px solid rgba(255,2555,255,0.3);
+  
   transition : all 350ms;
 }
 
@@ -164,6 +157,7 @@
   background-position: center;
   background-origin: padding-box;
   background-color: $bgColor;
+  // background-color: transparent;
   // background-size: 50px 50px;
   // background-repeat: no-repeat;
 

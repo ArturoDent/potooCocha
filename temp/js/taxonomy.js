@@ -10,10 +10,10 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
-var numSpeciesList = { "Argentina":1002, "Aruba":219, "Bolivia":1382, "Brazil":1800, "Chile":496,
-  "Colombia":1844, "Curaçao":218, "Ecuador":1627, "French Guiana":697,
+var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1382, "Brazil":1800, "Chile":493,
+  "Colombia":1844, "Curaçao":218, "Ecuador":1627, "French Guiana":698,
   "Guyana":783, "Paraguay":694, "Peru":1800, "Suriname":730, "Trinidad":468,
-  "Uruguay":443, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3380};
+  "Uruguay":442, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3488};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2

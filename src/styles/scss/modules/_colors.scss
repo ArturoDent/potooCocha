@@ -12,11 +12,8 @@ $panelColor : lighten($bgColor, 5%);
 $searchHeaderColor : rgba(0,0,0,0.2);
 
 $turquoiseHighlightColor : #0B95A1;
-// $goldHighlightColor : #B0850F;
 
-$countryMenuHighlightColor : #ce402e;
-
-$genericButtonColor  :  rgb(166, 87, 81);
+$genericButtonColor  :  #a65751;
 
 $genericButtonHighlightColor : darken($bgColor, 7%);
 
@@ -29,6 +26,10 @@ $birdRolloverColor : #A65751;
 $birdActiveColor : #A65751;
 
 $countryMenuColor : lighten($bgColor, 5%);
+// $countryMenuColor : #a65751;
+// $countryMenuHighlightColor : #ce402e;
+$countryMenuHighlightColor : #676767;
+
 
 // $overlayLeftColor : rgba(84,85,80, 0.85);
 // $overlayRightColor : rgba(90,90,90, 0.75);

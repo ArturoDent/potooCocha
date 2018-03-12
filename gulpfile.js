@@ -1,6 +1,9 @@
 var gulp = require("gulp");
-var browserSync = require("browser-sync").create();
+var browserSync = require("browser-sync").create("index.html");
+// var browserSync2 = require("browser-sync").create("citations.html");
+
 var reload = browserSync.reload;
+// var reload2 = browserSync2.reload;
 
 var newer = require('gulp-newer');
 var sass = require("gulp-sass");
@@ -18,7 +21,7 @@ var stripdebug = require("gulp-strip-debug");
 var modifyHTMLlinks = require("gulp-processhtml");
 var addVersionString = require("gulp-version-number");
 
-var imageMin = require("gulp-imagemin");
+// var imageMin = require("gulp-imagemin");
 
 // var gutil = require("gulp-util");
 // var ftp = require("vinyl-ftp");
@@ -26,6 +29,7 @@ var imageMin = require("gulp-imagemin");
 
 function serve(done) {
   browserSync.init({
+    port: 3000,
     server: {
       baseDir: "./",
       index: "home.html",
@@ -33,8 +37,36 @@ function serve(done) {
     // open: false,
     ghostMode: false
   });
+  // browserSync2.init({
+  //   port: 3003,
+  //   ui: {
+  //     port: 3004
+  //   },
+  //   server: {
+  //     baseDir: "./",
+  //     index: "citations.html",
+  //   },
+  //   // open: false,
+  //   ghostMode: false
+  // });
   done();
 }
+
+// function serve2(done) {
+//   browserSync2.init({
+//     port: 3003,
+//     ui: {
+//       port: 3004
+//     },
+//     server: {
+//       baseDir: "./",
+//       index: "citations.html",
+//     },
+//     // open: false,
+//     ghostMode: false
+//   });
+//   done();
+// }
 
 function serveTest(done) {
   browserSync.init({
@@ -52,6 +84,21 @@ var paths = {
     src: "home.html",
     temp: "./temp",
     deploy: "./deploy"
+  },
+  citations: {
+    src: "citations.html"
+  },
+  authors: {
+    src: "Authors/*.txt",
+    deploy: "./deploy/Authors"
+  },
+  occurrences: {
+    src: "data/occurrences.txt",
+    deploy: "./deploy/data"
+  },
+  countries: {
+    src: "Countries/*.*",
+    deploy: "./deploy/Countries"
   },
   sass: {
     src: "./src/styles/scss/**/*.scss",
@@ -79,8 +126,10 @@ var paths = {
 
 function watch() {
   gulp.watch(paths.js.src, gulp.series(moveJStoTemp, reloadJS));
-  gulp.watch(paths.sass.src, gulp.series(sass2css));
+  // gulp.watch(paths.sass.src, gulp.series(sass2css));
+  gulp.watch(paths.sass.src, sass2css);
   gulp.watch("./*.html").on("change", reload);
+  // gulp.watch("./*.html").on("change", reload2);
 }
 
 function sass2css() {
@@ -173,11 +222,35 @@ function copySVG() {
     .pipe(gulp.dest(paths.svg.deploy));
 }
 
-function processImages() {
-  return gulp.src(paths.flags.src)
-    .pipe(imageMin())
-    .pipe(gulp.dest(paths.flags.deploy));
+function copyCitations() {
+  return gulp.src(paths.citations.src)
+    .pipe(newer(paths.html.deploy))
+    .pipe(gulp.dest(paths.html.deploy));
 }
+
+function copyAuthors() {
+  return gulp.src(paths.authors.src)
+    .pipe(newer(paths.authors.deploy))
+    .pipe(gulp.dest(paths.authors.deploy));
+}
+
+function copyOccurrences() {
+  return gulp.src(paths.occurrences.src)
+    .pipe(newer(paths.occurrences.deploy))
+    .pipe(gulp.dest(paths.occurrences.deploy));
+}
+
+function copyCountries() {
+  return gulp.src(paths.countries.src)
+    .pipe(newer(paths.countries.deploy))
+    .pipe(gulp.dest(paths.countries.deploy));
+}
+
+// function processImages() {
+//   return gulp.src(paths.flags.src)
+//     .pipe(imageMin())
+//     .pipe(gulp.dest(paths.flags.deploy));
+// }
 
 function copyFLAGS() {
   return gulp.src(paths.flags.src)
@@ -185,31 +258,80 @@ function copyFLAGS() {
     .pipe(gulp.dest(paths.flags.deploy));
 }
 
-// gulp.task("ftp:experimental", function() {
-//   var conn = ftp.create( {
-//     host:     "hostname.com",
-//     user:     "user",
-//     password: "password",
-//     parallel: 3,
-//     log:      gutil.log
-//   } );
+// to get Countries and occurrences.txt from BuildSACC folder
+const buildGlobs = [
+  '../BuildSACC/data/occurrences.txt',
+  '../BuildSACC/Countries/*.*'
+  // '../BuildSACC/workFlow.txt'
+];
 
-//   /* list all files you wish to ftp in the glob variable */
-//   var globs = [
-//     "**/*",
-//     "*",
-//     "!node_modules/**" // if you wish to exclude directories, start the item with an !
-//   ];
+function copyBuildSACC() {
+  return gulp.src(buildGlobs)
+    .pipe(newer("./deploy"))
+    .pipe(gulp.dest("./deploy"));
+}
 
-//   return gulp.src( globs, { base: ".", buffer: false } )
-//     .pipe( conn.newer( "server_directory/" ) ) // only upload newer files
-//     .pipe( conn.dest( "server_directory/" ) )
-//     .pipe(notify("Dev site updated!"));
-// });
+const gutil = require('gulp-util');
+const ftp = require('vinyl-ftp');
+// const notify = require('gulp-notify');
 
-// gulp.task("default", function () {
-//     gulp.watch(["*", "**/*"], ["ftp:experimental"]);
-// });
+/* list all files you wish to ftp in the glob variable */
+const ftpGlobs = [
+  'deploy/css/*.css',
+  'deploy/js/*.js',
+  'deploy/svg/SouthAmerica.svg',
+  // 'deploy/flags/*.png',
+  'deploy/home.html',
+  'deploy/citations.html',
+  'deploy/Authors/*.txt',
+  'deploy/data/occurrences.txt',
+  'deploy/Countries/*.*',
+  '!ftpConfig.js'
+];
+
+const gulpftp = require('./ftpConfig.js');
+
+function deployExperimental  () {
+
+  console.log(gulpftp);
+
+  const conn = ftp.create({
+    host: gulpftp.config.host,
+    user: gulpftp.config.user,
+    password: gulpftp.config.pass,
+    parallel: 3,
+    log: gutil.log
+  });
+
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
+  return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
+
+    .pipe(conn.newer('./experimental.net')) // only upload newer files
+    .pipe(conn.dest('./experimental.net'));
+  // .pipe(notify("experimental.net updated"));
+}
+
+function deployPotoococha () {
+
+  console.log(gulpftp);
+
+  const conn = ftp.create({
+    host: gulpftp.config.host,
+    user: gulpftp.config.user,
+    password: gulpftp.config.pass,
+    parallel: 3,
+    log: gutil.log
+  });
+
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
+  return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
+
+    .pipe(conn.newer('.')) // only upload newer files
+    .pipe(conn.dest('.'));
+// .pipe(notify("potoococha updated"));
+}
 
 gulp.task("sync", gulp.series(sass2css, moveJStoTemp, reloadJS, serve, watch));
 
@@ -221,4 +343,14 @@ gulp.task("serve:deploy", gulp.series(serveTest));
 
 gulp.task("production", gulp.series(processJS));
 
-gulp.task("deploy:final", gulp.series(processHTML, processCSS, moveJStoTemp, processJS, copySVG, copyFLAGS ));
+gulp.task("build", gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
+  copySVG, copyFLAGS, copyCitations, copyAuthors, copyOccurrences, copyCountries));
+
+gulp.task("getBuild", gulp.series(copyBuildSACC));
+
+// gulp.task("default", gulp.series(deployExperimental));
+
+gulp.task('deploy:E', gulp.series(deployExperimental));
+gulp.task('deploy:P', gulp.series(deployPotoococha));
+
+
