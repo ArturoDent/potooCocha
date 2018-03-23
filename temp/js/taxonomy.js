@@ -10,6 +10,7 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
+
 var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1382, "Brazil":1800, "Chile":493,
   "Colombia":1844, "Curaçao":218, "Ecuador":1627, "French Guiana":698,
   "Guyana":783, "Paraguay":694, "Peru":1800, "Suriname":730, "Trinidad":468,
@@ -23,7 +24,7 @@ var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "
   "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
   "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
-// South America : 102 families not including 2 incertae "families", 3376 total spp.
+// South America : 102 families not including 2 incertae "families", 3488 total spp.
 //                 which includes one hypothetical (in one country only) Black Turnstone
 //                 class='fco'>(?!INCERTAE).*?  --> finds number of families not including INCERTAE in ..SACC.html
 
@@ -292,6 +293,7 @@ function loadCountryTaxonomy(evt) {
   animateScrollTop(taxPage);
 }
 
+// eslint-disable-next-line
 function toggleSearchResultsPanel(evt) {
 
   if (resultsPanelOpen) closeResultsPanelButton.removeEventListener("click", toggleSearchResultsPanel);

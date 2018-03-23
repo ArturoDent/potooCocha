@@ -20,19 +20,10 @@
     position  :  relative;
     top : -5px;
     left : -70px;
-    // width : calc(100% + 100px);
-
     width : calc(100% + 10ch);
-
-    // height: 250px;
-    // margin-bottom: -150px;
-
     height: 22ch;
     margin-bottom: -14.5ch;
-
-    // padding  :  30px 40px 50px 30px;
     padding  :  1.7ch 5ch 0 5ch;
-
 
     z-index: 0;
 
@@ -42,52 +33,22 @@
     color: $panelFlyoutFontColor;
 
     background-color  :  $searchHeaderColor;
-    // border-bottom : 1px solid rgba(255,255,255,0.25);
 
     border-top-left-radius: 50px;
     border-bottom-left-radius: 90px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 
-    // border: 1px solid rgba(255,255,255,0.2);
     border  :  1px solid rgba(255,255,255,0.25);
     border-top : 1px solid transparent;
     box-shadow : inset 0 -1px 1px -1px rgba(0,0,0,1), inset 0 0 1px rgba(0,0,0,1);
 }
 
 .taxArticleMain {
-    // padding  :  20px 0 40px 10px;
     padding  : 20px 0 0 0;
-
     text-align: left;
     line-height: 2rem;
 }
-
-// .linkWrapper  {
-//     display : inline-block;
-//     padding: 0;
-//     margin-right : 2ch;
-//     width : 7.2ch;
-//     letter-spacing: 0;
-//     // border : solid 1px transparent;
-//     // border-bottom  :  solid 1px $panelFlyoutFontColor;
-//     // box-shadow : 0 1px rgba(0,0,0,0.5);
-//     // background-color: transparent;
-//     box-shadow: inset 0 -1px  $panelFlyoutFontColor;
-//     transition: all 850ms;
-// }
-
-// .linkWrapper:hover {
-//     // width: auto;
-//     // margin-right : 0;
-//     letter-spacing: 1px;;
-
-//     // border: solid 1px $panelFlyoutFontColor;
-//     // border-right: none;
-//     // box-shadow: inset 0 -1px  $genericButtonColor;
-//     // background-color: $genericButtonColor;
-
-// }
 
 #taxonomyArticle a.linkHighlight {
     padding : 0 3px 1px 4px;
@@ -101,5 +62,4 @@
 
 #taxonomyArticle a.linkHighlight:hover {
     border: solid 1px $panelFlyoutFontColor;
-    // background-color: $genericButtonColor;
 }

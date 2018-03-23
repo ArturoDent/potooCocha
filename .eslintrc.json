@@ -37,13 +37,10 @@
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "func-call-spacing": ["error", "never"],
 
-    // "indent": ["error", 2],
    "indent": ["error", 2, { "FunctionExpression": {"parameters": "first"} }],
-//    "indent": ["error", 2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }],
 
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
     "no-trailing-spaces": ["error", { "skipBlankLines": false }],
-    // "quotes": ["error", "double", { "avoidEscape": true }],
     "eqeqeq": 2,
     "no-cond-assign": ["error", "always"],
     "default-case": "error",

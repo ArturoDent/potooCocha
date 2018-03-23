@@ -18,14 +18,6 @@
 
 .taxInstructionsButton  {
     position  :  absolute;
-    // top : -39px;
-    // right : -53px;
-
-    // top : -39px;
-    // right : -53px;
-    // width  :  46px;
-    // height  :  46px;
-
     top : -2.6rem;
     right : -4rem;
     width  :  3rem;
@@ -57,7 +49,6 @@
 }
 
 .taxInstructionsButton.instructionsClosed {
-    // transform: translateX(calc(-36vw - 75px));
     transform: translateX(-42ch);
 }
 
@@ -68,9 +59,7 @@
 
 #searchForm  {
     position  :  relative;
-    // padding  : 25px 0 30px 0;
     padding  : 2.5ch 0 3ch 0;
-
     margin-top : 10px;
 
     transform-origin: top right;
@@ -98,7 +87,6 @@
     margin  :  0;
 
     pointer-events  :  auto;
-    // z-index: 1;
 
     -webkit-transition  :  all 2s;
        -moz-transition  :  all 2s;
@@ -119,15 +107,10 @@
 }
 
 #taxonomyCountryButton {
-    // margin : 0 50px 0 -20px;
-    // padding      : 8px 20px 10px 15%;
-position: relative;
+    position: relative;
     margin : 0 5ch 0 -2ch;
     padding : 0.6ch 2ch 1ch 12%;
     z-index  :  1;
-
-    // font-size : 1.2rem;
-    // line-height  : 20px;
     transition  :  all 700ms ease-in-out;
 }
 
@@ -189,9 +172,7 @@ position: relative;
     justify-content  :  space-between;
     align-items: flex-start;
     position  :  absolute;
-    // top : -50px;
     top : -3.7ch;
-
     left  :  102.4%;
 
     font-size  :  0.9rem;
@@ -210,14 +191,11 @@ position: relative;
 }
 
 #searchSpecials a  {
-    // padding : 2px 20px 4px 20px;
     padding : 0.2ch 2ch 0.45ch 2ch;
-    // margin-bottom : 0.8ch;
 
     color : white;
     text-shadow : 1px 1px 1px rgba(0,0,0,0.5);
     border : 1px solid rgba(255,255,255,0.2);
-    // border-bottom : 1px solid rgba(0,0,0,0.2);
     border-radius : 2px;
 
     background-color : $genericButtonColor;
@@ -233,7 +211,6 @@ position: relative;
 
     background-color : #222;
     box-shadow : 0 0 2px rgba(0,0,0,1);
-
 }
 
 #searchSpecials.SAM span.searchSpecialWrapper {
@@ -258,12 +235,9 @@ position: relative;
 
     position  :  relative;
     height  :  0;
-
     width : calc(100% + 10vw);
     left : -10vw;
-    // margin  :  0 0 50px 0;
     margin  : 10ch 0 0 0;
-
     padding  :  0;
 
     order : 2;
@@ -302,13 +276,11 @@ position: relative;
 #closeResultsPanelButton  {
     position: relative;
     left: 100%;
-    // top: 0;
     padding: 0.25rem 0 0 0;
     width: 30px;
     height: 30px;
 
     text-align: center;
-    // line-height: 30px;
 
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 50%;
@@ -324,17 +296,10 @@ position: relative;
     background-color: black;
 }
 
-
 #countrySearch  {
     opacity  :  1;
 
     position  :  relative;
-    // padding : 5px 0 10px 0;
-    // margin: 0 0 20px 0;
-    // top: 10px;
-    // left : 20px;
-    // width : calc(100% - 40px);
-
     padding : 1ch 0 0 0;
     height : 4.2ch;
     margin: 0 0 2ch 0;
@@ -368,8 +333,6 @@ position: relative;
     line-height  :  1rem;
 
     border: none;
-    // border-top  :  10px solid transparent;
-    // border-bottom  :  5px solid transparent;
     box-shadow : 0 -1px 0 rgba(255,255,255,0.35);
     box-shadow : none;
 //  FIXME :
@@ -408,14 +371,6 @@ position: relative;
 #searchResults li.bird {
     font-size : 0.9rem;
 }
-
-// .noselect {
-//     -webkit-touch-callout  :  none;
-//     -webkit-user-select  :  none;
-//        -moz-user-select  :  none;
-//         -ms-user-select  :  none;
-//             user-select  :  none;
-// }
 
 #countrySearch.closed  {
     opacity  :  0;
@@ -549,9 +504,6 @@ position: relative;
     height: 0;
     width: calc(100% + 10vw);
     left: -10vw;
-
-    // margin: 15px 0 15px 0;
-    // padding  :  20px 0 0 0;
     margin: 1.5ch 0;
     padding  :  2ch 0 0 0;
 
@@ -800,7 +752,6 @@ to {
 
 #tree ul li {
     padding : 2px 0 2px 0;
-    // colrgb(25, 21, 21)red;
     border: none;
     border-top : 1px solid transparent;
     border-bottom : 1px solid transparent;
