@@ -28,24 +28,29 @@
 
     font-size  :  1.6rem;
     font-weight  :  bold;
-    color  :  #eee;
+    // color  :  #eee;
+    // color  :  $bgColor;
+    color  :  white;
     text-align  :  center;
 
     border : 2px solid  $turquoiseHighlightColor;
     border-radius  :  50%;
-    background-color  :  $turquoiseHighlightColor;
-    box-shadow: inset 0 0 2px 2px rgba(0,0,0,0.4), 0 0 0 8px $bgColor;
+    // background-color  :  $turquoiseHighlightColor;
+    background-color  :  $bgColor;
+    box-shadow: inset 0 0 0 2px $bgColor, 0 0 0 8px $bgColor;
 
     cursor  :  pointer;
     transform: translateX(0);
-    -webkit-transition  :  transform 1000ms ease-in-out 500ms;
-       -moz-transition  :  transform 1000ms ease-in-out 500ms;
-         -o-transition  :  transform 1000ms ease-in-out 500ms;
-            transition  :  transform 1000ms ease-in-out 500ms;
+    -webkit-transition  :  transform  ease-in-out 1000ms;
+       -moz-transition  :  transform  ease-in-out 1000ms;
+         -o-transition  :  transform  ease-in-out 1000ms;
+            transition  :  transform  ease-in-out 1000ms;
 }
 
 .taxInstructionsButton:hover {
-    box-shadow: inset 0 0 3px 3px rgba(255,255,255,0.2), 0 0 0 8px $bgColor;
+    // color: white;
+    // box-shadow: inset 0 0 0 3px rgba(255,255,255,0.2), 0 0 0 8px $bgColor;
+    background-color  :  black;
 }
 
 .taxInstructionsButton.instructionsClosed {

@@ -1,5 +1,4 @@
 $bodyBorderColor : darken(#A65751, 5%);
-// $bgColor  :  rgb(59, 59, 59);
 $bgColor  :  rgb(68, 67, 67);
 
 $titleTextFontColor : #d5d5d5;
@@ -11,10 +10,10 @@ $panelColor : lighten($bgColor, 5%);
 
 $searchHeaderColor : rgba(0,0,0,0.2);
 
-$turquoiseHighlightColor : #0B95A1;
+// $turquoiseHighlightColor : #0B95A1;
+$turquoiseHighlightColor : #9fb1bf;
 
 $genericButtonColor  :  #a65751;
-// $genericButtonColor  :  #bb5d04;
 
 $genericButtonHighlightColor : darken($bgColor, 7%);
 

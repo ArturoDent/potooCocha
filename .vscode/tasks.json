@@ -17,11 +17,34 @@
         {
             "label": "node -v",
             "command": "node",
+            "dependsOn": ["Echo"],
             "args": [
                 "-v"
             ],
             "type": "shell"
+        },
+        {
+            "label": "Echo2",
+            "command": "echo",
+            "args": ["echo 2"],
+            "type": "shell",
         }
+        
+        {
+            "label": "Echo",
+            "command": "echo",
+            "args": [ "${env:USERNAME}" ],
+            "type": "shell",
+        }
+        
+        // {
+        //     "label": "new folder",
+        //     "command": "${command:explorer.newFolder}",
+        //     // "args": [
+        //     //     "ZZZZ"
+        //     // ],
+        //     "type": "process"
+        // }
         // },
         // {
         //     "taskName": "View in Chrome",
@@ -38,14 +61,10 @@
 
 
         // {
-        //     "taskName": "Echo",
-        //     "command": "echo",
-        //     "args": ["Hi", "there!"],
-        //     "isShellCommand": true,
-        //     "isBackground": true,
-        //     "echoCommand": true,
-        //     "showOutput": "always",
-        //     "isBuildCommand": false
+        //     "label": "Echo",
+        //     "command": "${command:workbench.files.action.collapseExplorerFolders}",
+        //     // "args": ["${command:workbench.files.action.collapseExplorerFolders}"],
+        //     "type": "shell",
         // }
 
     ]

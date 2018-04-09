@@ -3,12 +3,13 @@
   top: 0;
   left: 100%;
   z-index: 2000;
+  // box-shadow: -10px 0 10px (0,0,0,0.5);
 
   transition: transform 1000ms 750ms;
 }
 
 .menu-show {
-  transform: translateX(-235px);
+  transform: translateX(-435px);
 }
 
 .md-overlay {
@@ -19,7 +20,8 @@
   top: 0;
   left: 0;
   // width of vertical scrollbar
-  width: calc(100vw - 23px);
+  // width: calc(100vw - 23px);
+  width: 100vw;
 
   height: 100vh;
   margin: 0;
@@ -27,7 +29,7 @@
   // z-index: 10;
   border: none;
   // background-color: $overlayRightColor;
-  background-color: rgba(0,0,0,0.75);
+  // background-color: rgba(0,0,0,0.75);
 
   // background: -moz-linear-gradient(left, rgba(0,0,0,0.75) 0%, rgba(0,0,0,1) 90%);
   // background: -webkit-linear-gradient(left, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 90%);
@@ -37,9 +39,12 @@
   // background: -webkit-radial-gradient(center, circle cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
   // background: radial-gradient(200px circle at 0% 0%, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
 
-  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,1) 100%);
-  background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 100%);
-  background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 100%);
+  // background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,1) 100%);
+  // background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 100%);
+  // background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 100%);
+  
+
+  background-color: #6d7880;
 
   transition: opacity 1000ms;
 }
@@ -47,12 +52,12 @@
 .md-show ~ .md-overlay {
   opacity: 1;
   transition: opacity 1000ms;
-
-  // visibility: visible;
 }
 
 .country-menu {
-
+ 
+  position: relative;
+  
   display  :  -webkit-flex;
   display  :  -ms-flex;
   display  :  flex;
@@ -77,7 +82,24 @@
   background: -moz-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
   background: -o-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
   background: linear-gradient(to right, $countryMenuColor 0%, $bgColor 100%);
+  
+  // box-shadow: -30px 0 30px rgba(0,0,0,0.3);
 }
+
+// .country-menu::before {
+//   content: '';
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 0;
+//   height: 100vh;
+//   box-shadow: -5px 0 5px 5px  rgba(0,0,0,0.3);
+  
+//   // background: -webkit-linear-gradient(left, $countryMenuColor 0%, $bgColor 100%);
+//   // background: -moz-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
+//   // background: -o-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
+//   // background: linear-gradient(to right, $countryMenuColor 0%, $bgColor 100%);
+// }
 
 // <nav class="country-menu" contenteditable="false">
 //       <div><a>South America</a><span><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></span></div>

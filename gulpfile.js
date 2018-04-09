@@ -259,16 +259,22 @@ function copyFLAGS() {
 }
 
 // to get Countries and occurrences.txt from BuildSACC folder
-const buildGlobs = [
-  '../BuildSACC/data/occurrences.txt',
-  '../BuildSACC/Countries/*.*'
+const buildGlobs = {
+  occurrences: '../BuildSACC/data/occurrences.txt',
+  countries: '../BuildSACC/Countries/*.*'
   // '../BuildSACC/workFlow.txt'
-];
+};
 
-function copyBuildSACC() {
-  return gulp.src(buildGlobs)
-    .pipe(newer("./deploy"))
-    .pipe(gulp.dest("./deploy"));
+function copyBuildSACCdata() {
+  return gulp.src(buildGlobs.occurrences)
+    .pipe(newer("./data"))
+    .pipe(gulp.dest("./data"));
+}
+
+function copyBuildSACCcountries() {
+  return gulp.src(buildGlobs.countries)
+    .pipe(newer("./Countries"))
+    .pipe(gulp.dest("./Countries"));
 }
 
 const gutil = require('gulp-util');
@@ -346,7 +352,7 @@ gulp.task("production", gulp.series(processJS));
 gulp.task("build", gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
   copySVG, copyFLAGS, copyCitations, copyAuthors, copyOccurrences, copyCountries));
 
-gulp.task("getBuild", gulp.series(copyBuildSACC));
+gulp.task("getBuild", gulp.series(copyBuildSACCdata, copyBuildSACCcountries));
 
 // gulp.task("default", gulp.series(deployExperimental));
 

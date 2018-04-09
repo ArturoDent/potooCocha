@@ -407,3 +407,4 @@ function openChecklistPage()  {
 
   window.open( "../php/makePDF.php" + vars, "_blank" );
 }
+//# sourceMappingURL=sourcemaps/main.js.map

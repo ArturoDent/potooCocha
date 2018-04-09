@@ -142,7 +142,6 @@ function showCountryModal(evt) {
 
   countryModal.classList.add("menu-show");
   countryModal.classList.add("md-show");
-  // map.classList.add("modal-left");
 
   if (evt.target.id === "checklistCountryButton") countryModalOpener = "checklistCountryButton";
   else countryModalOpener = "taxonomyCountryButton";
@@ -152,7 +151,7 @@ function closeCountryModal(evt)  {
 
   countryModal.classList.remove("menu-show");
   countryModal.classList.remove("md-show");
-  // map.classList.remove("modal-left");
+
   if (evt) evt.stopPropagation();
 }
 

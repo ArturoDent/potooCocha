@@ -122,7 +122,7 @@
 .taxInstructionsButton.hasTooltip:hover .tooltip {
     // transform  :  rotate(-9deg);
     // border : 1.5px solid transparent;
-
+    color: $bgColor;
     box-shadow : inset -240px 0 2px $turquoiseHighlightColor, 0 0 15px  $turquoiseHighlightColor;
     will-change: transform;
 }
