@@ -89,6 +89,7 @@
 
     position: relative;
     width  :  100%;
+    height : auto;
     margin  :  0;
 
     pointer-events  :  auto;
@@ -100,9 +101,11 @@
 }
 
 #searchForm span.searchGroup  {
-    position : absolute;
-    top : -13px;
-    right : 7%;
+    position : relative;
+    // top : -13px;
+    // right : 7%;
+    margin: 25px 0 30px 0;
+    left: 25%;
     opacity  :  1;
 }
 
@@ -111,23 +114,23 @@
     pointer-events  :  none;
 }
 
-#taxonomyCountryButton {
-    position: relative;
-    margin : 0 5ch 0 -2ch;
-    padding : 0.6ch 2ch 1ch 12%;
-    z-index  :  1;
-    transition  :  all 700ms ease-in-out;
-}
+// #taxonomyCountryButton {
+//     position: relative;
+//     margin : 0 5ch 0 -2ch;
+//     padding : 0.6ch 2ch 1ch 12%;
+//     z-index  :  1;
+//     transition  :  all 700ms ease-in-out;
+// }
 
-#taxonomyCountryButton.highlight:hover, #taxonomyCountryButton.highlight:focus {
-    box-shadow  :  inset -255px 0 5px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
-}
+// #taxonomyCountryButton.highlight:hover, #taxonomyCountryButton.highlight:focus {
+//     box-shadow  :  inset -255px 0 5px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+// }
 
 // to highlight the label : "search :" when the countryModal darkens the screen
-.searchGroup label  {
-    position: relative;
-    z-index: 1;
-}
+// .searchGroup label  {
+//     position: relative;
+//     z-index: 1;
+// }
 
 #searchInput  {
     height               :  auto;
@@ -177,7 +180,7 @@
     justify-content  :  space-between;
     align-items: flex-start;
     position  :  absolute;
-    top : -3.7ch;
+    top : -2.5ch;
     left  :  102.4%;
 
     font-size  :  0.9rem;
@@ -271,11 +274,16 @@
     left : 10vw;
     padding: 0 0 1ch 0;
     overflow-x : visible;
-
-    border  :  1px solid rgba(255,255,255,0.25);
+    
+    border  :  1px solid rgba(255,255,255,0.15);
     border-radius  :  3px;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
-    background-color: $panelColor;
+    background-color  :  $panelColor;
+    box-shadow: 0 0 2px rgba(0,0,0,0.7);
+
+    // border  :  1px solid rgba(255,255,255,0.25);
+    // border-radius  :  3px;
+    // box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+    // background-color: $panelColor;
 }
 
 #closeResultsPanelButton  {
@@ -290,7 +298,7 @@
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 50%;
     background-color: $panelColor;
-    box-shadow: 0 0 0 8px $bgColor, -10px 0 1px rgba(255,255,255,0.25), -9px 0 0 2px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 6px $bgColor, -8px 0 1px rgba(255,255,255,0.25), -7px 0 0 2px rgba(0,0,0,0.2);
 
     z-index: 2;
     cursor: pointer;
@@ -538,12 +546,17 @@
     left : 10vw;
     padding : 0 0 1ch 0;
     margin : 0;
-
-    border  :  1px solid rgba(255,255,255,0.25);
+    
+    border  :  1px solid rgba(255,255,255,0.15);
     border-radius  :  3px;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+    background-color  :  $panelColor;
+    box-shadow: 0 0 2px rgba(0,0,0,0.7);
 
-    background-color: $panelColor;
+    // border  :  1px solid rgba(255,255,255,0.25);
+    // border-radius  :  3px;
+    // box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+    // background-color: $panelColor;
+    
     overflow-x : visible;
 }
 

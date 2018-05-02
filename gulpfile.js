@@ -24,7 +24,6 @@ var addVersionString = require("gulp-version-number");
 // var imageMin = require("gulp-imagemin");
 
 // var gutil = require("gulp-util");
-// var ftp = require("vinyl-ftp");
 // var notify = require("gulp-notify");
 
 function serve(done) {
@@ -143,7 +142,7 @@ function reloadJS() {
   return gulp.src(paths.js.src)
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write("sourcemaps"))
-    .pipe(gulp.dest("."))
+    // .pipe(gulp.dest("."))
     .pipe(reload({ stream:true }));
 }
 

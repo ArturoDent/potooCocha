@@ -10,7 +10,6 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
-
 var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1382, "Brazil":1801, "Chile":493,
   "Colombia":1845, "Curaçao":218, "Ecuador":1627, "French Guiana":698,
   "Guyana":783, "Paraguay":695, "Peru":1801, "Suriname":730, "Trinidad":469,
@@ -31,6 +30,7 @@ var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "
 
 var currentTaxonomyCountry;
 var currentTaxonomyCountryElement;
+var searchCountryText;
 
 // var taxonomyArticle;
 var taxTreeArticleOpen = false;
@@ -59,7 +59,7 @@ var searchInstructionsOpen = true;
 
 var selectedFillColor = "#fff";
 
-/* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap   */
+/* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap  countryButton */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
   closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
   closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
+
+  searchCountryText = document.getElementById("searchCountryText");
 
   searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
@@ -155,13 +157,10 @@ function showSearchInstructions(state)  {
   }
 }
 
-/* global taxonomyCountryButton  */
 // eslint-disable-next-line
 function loadCountryTaxonomy(evt) {
 
   var taxCountry;
-
-  window.closeCountryModal();
 
   if (searchSpecials.classList.contains("grayed")) {
     document.querySelector("#searchForm span.grayed").classList.remove("grayed");
@@ -258,8 +257,7 @@ function loadCountryTaxonomy(evt) {
   }
 
   // remove space from within "French Guiana", svg id = "FrenchGuiana"
-  if (!lastQuery)  {
-
+  if (!lastQuery) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
     var temp = taxCountry.replace(" ", "");
     if (taxCountry !== "South America") selectedCountryFillColor(temp, selectedFillColor);
@@ -275,14 +273,14 @@ function loadCountryTaxonomy(evt) {
 
   currentTaxonomyCountry = taxCountry;
 
-  taxonomyCountryButton.innerHTML = taxCountry;
-  if (taxCountry === "Falklands") taxonomyCountryButton.innerHTML = "Malvinas";
+  //  the Falklands *******
+  searchCountryText.innerHTML = taxCountry;
+
+  // countryButton.innerHTML = taxCountry;
+  if (taxCountry === "Falklands") countryButton.innerHTML = "Malvinas";
 
   currentTaxonomyCountryElement.classList.add("taxHighlight");
   if (currentTaxonomyCountryElement.classList.contains("checkHighlight")) currentTaxonomyCountryElement.classList.add("bothHighlights");
-
-  taxonomyCountryButton.classList.remove("needsAttention");
-  taxonomyCountryButton.classList.add("highlight");
 
   document.querySelector("#treeIntroText").innerHTML = taxCountry + " &nbsp; : &nbsp; " + numFamiliesList[taxCountry] + " families, " + numSpeciesList[taxCountry] + " species *";
   if (taxCountry === "Falklands")
@@ -424,12 +422,6 @@ function searchTree(query2) {
   // });
 
   // observer.observe(searchResults, { childList: true });
-
-  if (!currentTaxonomyCountry) {
-
-    taxonomyCountryButton.classList.add("needsAttention");
-    return;
-  }
 
   if (!resultsPanelOpen) toggleSearchResultsPanel(null);
 
@@ -870,7 +862,11 @@ function toggleFamilyOpen(event) {
         taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
     }
     //  show family and numSpecies in that family
-    document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "  &nbsp; : &nbsp; " + familyTarget.parentNode.firstChild.children[1].textContent + " has " + familyTarget.children.length + " species";
+    // INCERTAE SEDIS-1 and INCERTAE SEDIS-2
+    var scientificFamily = familyTarget.parentNode.firstChild.children[1].textContent;
+    if (!scientificFamily) scientificFamily = familyTarget.parentNode.firstChild.children[0].textContent;
+
+    document.querySelector("#treeIntroText").innerHTML = currentTaxonomyCountry + "  &nbsp; : &nbsp; " + scientificFamily + " has " + familyTarget.children.length + " species";
   }
 
   else if (familyTarget)  {

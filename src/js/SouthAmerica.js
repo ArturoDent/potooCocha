@@ -14,7 +14,7 @@ var extinctColor         =  "#f33";
 var residentColor        =  "#00838f";
 
 // var nonBreederColor      =  "#df7900";
-var nonBreederColor      =  "#B66405";
+var nonBreederColor      =  "#994c00";
 var vagrantColor         =  "gold";
 var hypotheticalColor    =  "#005903";
 // var hypotheticalColor    =  "#007913";
@@ -105,6 +105,7 @@ function newFillColor(obj, newColor) {
       obj.style.fill = "#444";
     }
     obj.style.fill = newColor;
+    if (newColor !== vagrantColor) obj.style.stroke = baseStrokeColor;
   }
 
   else if (obj.parentNode.nodeName === "g")  {
@@ -119,6 +120,7 @@ function newFillColor(obj, newColor) {
       }
 
       paths[i].style.fill = newColor;
+      if (newColor !== vagrantColor) paths[i].style.stroke = baseStrokeColor;
     }
   }
 }
@@ -214,6 +216,7 @@ function highlightSAMmap(index, current) {
     case "V":
 
       newFillColor(cc, vagrantColor);
+      newStrokeColor(cc, '#444');
       break;
 
     case "H":

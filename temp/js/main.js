@@ -9,27 +9,22 @@ var showEndemics;
 
 // var birds;
 
-//#region
-
 var currentChecklistCountry;
 var currentChecklistCountryElement;
 var checklistAuthorsPanel;
+var checklistFlyoutText;
 
-//#endregion
-
-var countryModalOverlay;
-var countryModalOpener;
+// var countryModalOverlay;
 var countryModal;
 
 var gNumDays;
 var gStartDate;
 var previousNumDaysClass;
 
+var countryButton;
 var numDaysButton;
-var checklistCountryButton;
 var pdfButton;
 var csvButton;
-var taxonomyCountryButton;
 
 // var map;
 
@@ -41,17 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("resize", onResizeWindow);
 
-  countryModalOverlay = document.querySelector(".md-overlay");
+  // countryModalOverlay = document.querySelector(".md-overlay");
 
-  countryModalOverlay.addEventListener("click", closeCountryModal);
-
-  // document.getElementById("countryModal").addEventListener("click", closeCountryModal);
-
-  checklistCountryButton                   =  document.getElementById("checklistCountryButton");
-  taxonomyCountryButton                    =  document.getElementById("taxonomyCountryButton");
-
-  checklistCountryButton.addEventListener("click", showCountryModal);
-  taxonomyCountryButton.addEventListener("click", showCountryModal);
+  // countryModalOverlay.addEventListener("click", toggleCountryModal);
+  countryButton                    =  document.getElementById("countryButton");
+  countryButton.addEventListener("click", toggleCountryModal);
 
   numDaysButton                       =  document.getElementById("numDays");
   numDaysButton.addEventListener("click", setNumDays);
@@ -85,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   italics.addEventListener("click", toggleSampleTableItalics);
 
   checklistAuthorsPanel = document.getElementById("checklistAuthorsPanel");
+  checklistFlyoutText = document.getElementById("checklistFlyoutText");
 
   //  TODO : (below should be changed)
 
@@ -138,19 +128,10 @@ function checkWindowScroll() {
   else document.getElementById("currentMap").style.opacity = 1;
 }
 
-function showCountryModal(evt) {
+function toggleCountryModal(evt)  {
 
-  countryModal.classList.add("menu-show");
-  countryModal.classList.add("md-show");
-
-  if (evt.target.id === "checklistCountryButton") countryModalOpener = "checklistCountryButton";
-  else countryModalOpener = "taxonomyCountryButton";
-}
-
-function closeCountryModal(evt)  {
-
-  countryModal.classList.remove("menu-show");
-  countryModal.classList.remove("md-show");
+  countryModal.classList.toggle("menu-show");
+  countryModal.classList.toggle("md-show");
 
   if (evt) evt.stopPropagation();
 }
@@ -195,8 +176,11 @@ function choseCountry(evt) {
   // if (!currentChecklistCountry && !parseInt) map.getElementsByClassName("drawing")[0].classList.add("active");
   if (!currentChecklistCountry) map.getElementsByClassName("drawing")[0].classList.add("active");
 
-  if (countryModalOpener === "checklistCountryButton") choseChecklistCountry(evt);
-  else loadCountryTaxonomy(evt);
+  // if (countryModalOpener === "checklistCountryButton") choseChecklistCountry(evt);
+  // else loadCountryTaxonomy(evt);
+
+  choseChecklistCountry(evt);
+  loadCountryTaxonomy(evt);
 }
 
 function choseChecklistCountry(evt) {
@@ -205,7 +189,7 @@ function choseChecklistCountry(evt) {
 
   var pageScrollTop = document.body.scrollTop;
 
-  closeCountryModal();
+  toggleCountryModal();
 
   if (currentChecklistCountry) {
     currentChecklistCountryElement.classList.remove("checkHighlight");
@@ -234,14 +218,15 @@ function choseChecklistCountry(evt) {
   else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
   else   currentChecklistCountry = selectedCountry;
 
-  checklistCountryButton.innerHTML = selectedCountry;
-  // if (selectedCountry === "Falklands/Malv.") checklistCountryButton.innerHTML = "Falklands";
+  // checklistCountryButton.innerHTML = selectedCountry;
+  countryButton.innerHTML = selectedCountry;
+
+  checklistFlyoutText.innerHTML = "Make a checklist for " + selectedCountry;
 
   currentChecklistCountryElement.classList.add("checkHighlight");
-  if (currentChecklistCountryElement.classList.contains("taxHighlight")) currentChecklistCountryElement.classList.add("bothHighlights");
+  // if (currentChecklistCountryElement.classList.contains("taxHighlight")) currentChecklistCountryElement.classList.add("bothHighlights");
 
-  checklistCountryButton.classList.remove("needsAttention");
-  checklistCountryButton.classList.add("highlight");
+  countryButton.classList.add("highlight");
 
   pdfButton.classList.add("highlight");
   csvButton.classList.add("highlight");
@@ -379,18 +364,11 @@ function getCSVText()  {
     form.submit();
     form.remove();
   }
-  else  checklistCountryButton.classList.add("needsAttention");
 }
 
 function openChecklistPage()  {
 
   var vars;
-
-  if (!currentChecklistCountry)  {
-    checklistCountryButton.innerHTML = "Select Country";
-    checklistCountryButton.classList.add("needsAttention");
-    return;
-  }
 
   if (gNumDays === undefined)   gNumDays = 12;
   if (gStartDate === undefined) gStartDate = 1;

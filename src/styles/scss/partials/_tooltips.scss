@@ -43,8 +43,8 @@
     position  :  absolute;
     // top  :  160px;
     // left  :  -20px;
-    top  :  500%;
-    left  :  -10%;
+    top  :  160px;
+    left  :  0;
 
     width  :  6em;
     padding : 0 0 3px 0;
@@ -52,7 +52,7 @@
     letter-spacing : 0.1em;
     background-color  :  #a32d00;
 
-    transform  :  rotate(0);
+    transform  :  rotate(0) scale(1.2);
     -webkit-transform-origin  :  top right;
        -moz-transform-origin  :  top right;
         -ms-transform-origin  :  top right;
@@ -139,7 +139,8 @@
     transform: scaleX(1) rotate(-4deg);
 }
 
-.deleteMapButton.hasTooltip:hover .tooltip {
+// .deleteMapButton.hasTooltip:hover .tooltip, .deleteMapButton.hasTooltip.hover .tooltip {
+.deleteMapButton.hasTooltip.hover .tooltip {
     opacity  :  1;
-    transform  :  rotate(-10deg);
+    transform  :  rotate(-10deg) scale(1.3);
 }

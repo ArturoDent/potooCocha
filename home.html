@@ -131,7 +131,7 @@
       <article id="taxonomyArticle">
 
         <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
-            target="_blank" rel="noopener">taxonomy</a> of the birds of South America (April 6, 2018).</div>
+            target="_blank" rel="noopener">taxonomy</a> of the birds of <span id="searchCountryText">South America (April 6, 2018)</span>.</div>
 
         <span class="taxInstructionsButton hasTooltip">?
         <span class="tooltip">Close instructions</span>
@@ -199,12 +199,12 @@
         <form id="searchForm" class='panel'>
 
           <div class="searchForm_contents">
-            <span type="button" id="taxonomyCountryButton" class="genericButton">select country</span>
+            <!-- <span type="button" id="taxonomyCountryButton" class="genericButton">select country</span> -->
             <span class="grayed searchGroup">
-            <label  for="searchInput">search &nbsp;: &nbsp; </label>
-            <input name="searchField" id="searchInput" size="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
-          </span>
+              <label  for="searchInput">search &nbsp;: &nbsp; </label>
+              <input name="searchField" id="searchInput" size="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
+            </span>
           </div>
 
           <div id="searchSpecials" class="grayed open">
@@ -223,7 +223,7 @@
 
       <article id="checklistArticle">
 
-        <div class="flyoutPanel topFlyoutPanel">Make checklists for any country in South America</div>
+        <div class="flyoutPanel topFlyoutPanel"><span id="checklistFlyoutText">Make checklists for any country in South America</span></div>
 
         <div class="panel">
 
@@ -343,7 +343,7 @@
           <input id="italics" type="checkbox"><label for="italics">No italics</label><br>
           <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label>
 
-          <span type="button" id="checklistCountryButton" class="genericButton">country</span>
+          <!-- <span type="button" id="checklistCountryButton" class="genericButton">country</span> -->
 
           <span type="button" id="pdfButton" class="genericButton">checklist
           <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
@@ -419,8 +419,10 @@
     </div>
   </article>
 
-
   <div class="md-modal" id="countryModal">
+    
+  <span type="button" id="countryButton" class="genericButton">select country</span>
+    
     <nav class="country-menu" contenteditable="false">
       <div class="countryItem"><a>South America</a><div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div></div>
       <div class="countryItem"><a>Aruba</a><div class="flag"><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></div></div>
@@ -446,7 +448,7 @@
   </div>
 
   <div class="md-overlay"></div>
-
+  
   <!-- build:remove -->
   <script src="src/js/simplebar.js"></script>
   <!-- /build -->

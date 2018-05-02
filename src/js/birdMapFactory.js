@@ -7,30 +7,43 @@ var deleteAllMapsButton;
 
 var currentID = 0;
 
-/* global  prepareSVGstyles highlightSAMmap map lastIndex  */
+/* global  highlightSAMmap map lastIndex  */
 
 document.addEventListener("DOMContentLoaded", function () {
   saveMapButton = document.querySelector(".saveMapButton");
   saveMapButton.addEventListener("click", saveCurrentMap);
   mapsCollection = document.getElementById("mapsCollection");
+
+  deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
+
+  deleteAllMapsButton.addEventListener("click", deleteAllMaps);
+
+  deleteAllMapsButton.addEventListener("mouseenter", function () {
+
+    var mouseenterEvent = new Event('mouseenter');
+    var numMaps = mapsCollection.children.length - 1;
+
+    for (var index = 0; index < numMaps; index++) {
+      mapsCollection.children[numMaps - index].children[1].dispatchEvent(mouseenterEvent);
+    }
+  }, false);
+
+  deleteAllMapsButton.addEventListener("mouseleave", function () {
+
+    var mouseleaveEvent = new Event('mouseleave');
+    var numMaps = mapsCollection.children.length - 1;
+
+    for (var index = 0; index < numMaps; index++) {
+      mapsCollection.children[numMaps - index].children[1].dispatchEvent(mouseleaveEvent);
+    }
+  }, false);
+
 });
 
-function revealMapsCollection(evt) {
+function revealMapsCollection() {
 
-  // if mapsCollection.classList.contains("open") mapsCollection.classList.remove("open");
-  // else mapsCollection.classList.add("open");
-
-  // if (evt.type !== "mouseenter") {
-  //   mapsCollection.classList.remove("open");
-  //   map.classList.remove("shiftUp");
-  // }
-  // else {
   mapsCollection.classList.toggle("open");
-  // console.log(mapsCollection.getBoundingClientRect().height);
-  // mapsCollection.style.transform = "translateY(-" +  parseInt(mapsCollection.getBoundingClientRect().height) + "px)";
-
   map.classList.toggle("shiftUp");
-  // }
 }
 
 function deleteMap(evt)  {
@@ -70,8 +83,8 @@ function saveCurrentMap()  {
   var len = mapsCollection.getElementsByClassName("thinify smallBird").length;
   if (len === 5)  return;
 
-	// clone node, remove ids so not duplicate
-	// reattach eventListeners
+  // clone node, remove ids so not duplicate
+  // reattach eventListeners
 
   var thisInstance = map.children[0];
 
@@ -84,7 +97,6 @@ function saveCurrentMap()  {
   dupNode.querySelector(".colorKey").style.opacity = "0";
   dupNode.querySelector(".colorKey").style.display = "none";
 
-
   dupNode.querySelector(".birdName").removeAttribute("id");
   dupNode.querySelector(".drawing").removeAttribute("id");
   dupNode.querySelector(".drawing").classList.add("smallBirdDrawing");
@@ -96,9 +108,8 @@ function saveCurrentMap()  {
   if (len === 0) {
     mapsCollection.addEventListener("click", revealMapsCollection);
     mapsCollection.classList.add("namesOnlySeen");
-    // mapsCollection.addEventListener("mouseenter", revealMapsCollection);
 
-    deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
+    // deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
     deleteAllMapsButton.addEventListener("click", deleteAllMaps);
   }
   else if (len === 4)  {
@@ -106,14 +117,23 @@ function saveCurrentMap()  {
   }
 
   mapsCollection.appendChild(dupNode);
-
+  
   deleteMapButton = dupNode.querySelector(".deleteMapButton");
   deleteMapButton.addEventListener("click", deleteMap);
 
+  // var numMaps = mapsCollection.children.length - 1;
+
+  deleteMapButton.addEventListener("mouseenter", function () {
+    this.classList.add("hover");
+  });
+
+  deleteMapButton.addEventListener("mouseleave", function () {
+    this.classList.remove("hover");
+  });
+
+
   document.getElementById("thin" + currentID).onload = function () {
     // prepareSVGstyles("thin" + currentID);
-
-    // fillSAMmap();
 
     highlightSAMmap(lastIndex, "thin" + currentID);
     dupNode.querySelector(".birdName.smallBirdText").classList.add("highlightName");
@@ -142,4 +162,3 @@ function deleteAllMaps(evt) {
   map.classList.remove("shiftUp");
   map.querySelector(".saveMapButton").style.display = "block";
 }
-// # sourceMappingURL=maps/birdMapFactory.js.map

@@ -76,11 +76,9 @@
                                      // "Checklists"
 .checklistTitle  {
     position  :  absolute;
-    // top  :  10px;
-    // left  :  -245px;
     top  :  1ch;
     left  :  -44%;
-    z-index  :  2;
+    // z-index  :  2;
 
     font-size  :  1.25rem;
     font-weight  :  bold;
@@ -98,32 +96,32 @@
             transform-origin  :  top right;
 }
 
-#checklistCountryButton {
-    position  :  absolute;
-    top  :  15%;
-    right  :  -30%;
-    // padding :  4px 30px 6px 0;
-    // min-width : 260px;
-    // padding :  0.4ch 3ch 0.6ch 0;
-    // padding : 0.8ch 2ch 1ch 0;
-    // padding : 0.6ch 2ch 1ch 0;
-    padding : 0 2ch 0.1ch 0;
+// #checklistCountryButton {
+//     position  :  absolute;
+//     top  :  15%;
+//     right  :  -30%;
+//     // padding :  4px 30px 6px 0;
+//     // min-width : 260px;
+//     // padding :  0.4ch 3ch 0.6ch 0;
+//     // padding : 0.8ch 2ch 1ch 0;
+//     // padding : 0.6ch 2ch 1ch 0;
+//     padding : 0 2ch 0.1ch 0;
 
-    width : 20ch;
-    z-index: 1;
+//     width : 20ch;
+//     z-index: 1;
 
-    text-align: right;
-    // line-height  :  20px;
-}
+//     text-align: right;
+//     // line-height  :  20px;
+// }
 
-#checklistCountryButton.highlight:hover, #checklistCountryButton.highlight:focus {
-    box-shadow  :  inset -185px 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
+// #checklistCountryButton.highlight:hover, #checklistCountryButton.highlight:focus {
+//     box-shadow  :  inset -185px 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.2);
+// }
 
 #pdfButton {
     position  :  absolute;
     right  :  -30%;
-    bottom  :  37%;
+    bottom  :  45%;
 
     // height  :  2.5ch;
     width : 15ch;
