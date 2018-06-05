@@ -15,7 +15,9 @@ body {
     font-size  :  1rem;
     font-weight  :  600;
     color : white;
+    // color : rgb(30, 30, 30);
     text-shadow : 0  1px rgba(0,0,0,0.5);
+    // text-shadow : 0  0 1px rgb(162, 149, 137);
     letter-spacing  :  0.04em;
 
     background-color  :  $bgColor;
@@ -30,11 +32,6 @@ body::after {
     height: 100%;
     top:0;
 
-    // border-top: 1px solid $bodyBorderColor;
-    // border-right: 1px solid $bodyBorderColor;
-    // border-bottom: 1px solid $bodyBorderColor;
-    // border-left: 1px solid $bodyBorderColor;
-
     border: 1px solid $bodyBorderColor;
     pointer-events: none;
 }
@@ -45,9 +42,8 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
 
 #mainContent {
     position : relative;
-    top : 20vh;
+    top : 15vh;
     left : 10vw;
-
     transition  :  transform 750ms;
 }
 
@@ -57,71 +53,65 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
 
 .titleBanner {
     position  :  absolute;
-
     top : 0;
     left : 0;
     width : 100vw;
     height: auto;
-    padding: 1ch 25% 0.8ch 0;
+    padding: 1ch 7% 0.8ch 0;
 
     text-align: center;
     font-size  :  2.8rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     color  :  $titleTextFontColor;
-    letter-spacing  :  0.2em;
+    letter-spacing  :  0.1em;
 
-    // background-color  :  $titleBannerColor;
     background-color  :  $bgColor;
     box-shadow: 0 1px 2px rgba(0,0,0, 0.5);
-
-// background: rgb(90,90,90);
-// background: -moz-linear-gradient(left, rgba(90,90,90,0) 5%, rgba(60,60,60,1) 30%, rgba(60,60,60,1) 35%, rgba(90,90,90,0) 90%);
-// background: -webkit-linear-gradient(left, rgba(90,90,90,0) 5%,rgba(60,60,60,1) 30%,rgba(60,60,60,1) 35%,rgba(90,90,90,0) 90%);
-// background: linear-gradient(to right, rgba(90,90,90,0) 5%,rgba(60,60,60,1) 30%,rgba(60,60,60,1) 35%,rgba(90,90,90,0) 90%);
 }
 
 .titleBanner_spacer  {
     position  :  relative;
     top  :  -13px;
     left : -3px;
+    margin: 0 0 0 5px;
 
     letter-spacing  :  0.1em;
-    // color : $turquoiseHighlightColor;
-    // color : $countryMenuHighlightColor;
     color : #df6757;
-    font-size  :  1.3rem;
+    // color : gold;
+    font-size  :  1.5rem;
     font-variant  :  normal;
     text-shadow : 0  1px rgba(0,0,0,0.8);
+    // text-shadow : 0  1px rgba(255,255,255,0.3);
 
     // poor support 2017-08
     // text-decoration: underline  $;
-    // border-bottom: 4px double $turquoiseHighlightColor;
     border-bottom: 4px double #df6757;
+    // border-bottom: 4px double gold;
 }
 
-#countryButton {
-    position: absolute;
-    top: 20px;
-    right: 280px;
-    width: 270px;
-    padding : 0.6ch 0 1ch 2ch;
-    text-align: left;
-    // z-index  :  1;
-    box-shadow  :  inset 0 0 25px 15px transparent, 3px 3px 5px rgba(0, 0, 0, 0.2);
+// #countryButton {
+//     position: absolute;
+//     top: 20px;
+//     right: 280px;
+//     width: 270px;
+//     padding : 0.6ch 0 1ch 2ch;
+//     text-align: left;
+//     // z-index  :  1;
+//     box-shadow  :  inset 0 0 25px 15px transparent, 3px 3px 5px rgba(0, 0, 0, 0.2);
     
-    transition  :  all 400ms ease-in-out;
-}
+//     transition  :  all 400ms ease-in-out;
+// }
 
-#countryButton:hover, #countryButton:focus {
-    border : 1px solid #888;
-    box-shadow  :  inset 270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
-}
+// #countryButton:hover, #countryButton:focus {
+//     border : 1px solid #888;
+//     box-shadow  :  inset 270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+// }
 
-#countryButton.highlight:hover, #countryButton.highlight:focus {
-    border : 1px solid #888;
-    box-shadow  :  inset -270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
-}
+// #countryButton.highlight:hover, #countryButton.highlight:focus {
+//     border : 1px solid #888;
+//     box-shadow  :  inset -270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+// }
 
 .articles {
     display  :  -webkit-flex;
@@ -184,7 +174,7 @@ article {
 
 .topFlyoutPanel  {
     margin: 0 0 2ch 0;
-    top: 1ch;
+    top: 2ch;
     left : 2ch;
     width : calc(100% - 4ch);
 
@@ -231,7 +221,7 @@ footer {
     flex-direction  :  row;
 
     justify-content  :  space-around;
-    margin  :  3ch 0 1ch 0;
+    margin  :  2ch 0 1ch 0;
 }
 
 footer a  {
@@ -245,3 +235,6 @@ footer a:hover, footer a:focus {
     border  :  solid 1px #bbb;
     transition: all 350ms;
 }
+
+// input:focus + .inpuInfo { display: block; }
+

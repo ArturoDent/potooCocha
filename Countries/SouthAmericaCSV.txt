@@ -714,6 +714,7 @@ E,Little Wood-Rail,A. mangle
 ,Red Knot,Calidris canutus
 ,Surfbird,C. virgata
 ,Ruff,C. pugnax
+,Sharp-tailed Sandpiper,C. acuminata
 ,Stilt Sandpiper,C. himantopus
 ,Curlew Sandpiper,C. ferruginea
 ,Sanderling,C. alba
@@ -1040,7 +1041,7 @@ E,White-collared Kite,L. forbesi
 ,Rufous-thighed Kite,H. diodon
 ,Mississippi Kite,Ictinia mississippiensis
 ,Plumbeous Kite,I. plumbea
-,Northern Harrier,Circus cyaneus
+,Northern Harrier,Circus hudsonius
 ,Long-winged Harrier,C. buffoni
 ,Gray-bellied Hawk,Accipiter poliogaster
 ,Tiny Hawk,A. superciliosus
@@ -1087,12 +1088,12 @@ E,Galapagos Hawk,B. galapagoensis
 ,White-throated Screech-Owl,M. albogularis
 ,Tropical Screech-Owl,M. choliba
 E,Koepcke's Screech-Owl,M. koepckeae
-,Colombian Screech-Owl,M. colombianus
 ,Rufescent Screech-Owl,M. ingens
 ,Cinnamon Screech-Owl,M. petersoni
 ,Cloud-forest Screech-Owl,M. marshalli
 ,Montane Forest Screech-Owl,M. hoyi
-,Vermiculated Screech-Owl,M. guatemalae
+,Choco Screech-Owl,M. centralis
+,Foothill  Screech-Owl,M. roraimae
 ,Long-tufted Screech-Owl,M. sanctaecatarinae
 E,Santa Marta Screech-Owl,M. gilesi
 ,Peruvian Screech-Owl,M. roboratus
@@ -2672,7 +2673,9 @@ E,Cerulean-capped Manakin,L. coeruleocapilla
 ,Wire-tailed Manakin,P. filicauda
 ,Band-tailed Manakin,P. fasciicauda
 ,Club-winged Manakin,Machaeropterus deliciosus
-,Striped Manakin,M. regulus
+,Striolated Manakin,M. striolatus
+E,Painted Manakin,M. eckelberryi
+E,Kinglet Manakin,M. regulus
 ,Fiery-capped Manakin,M. pyrocephalus
 ,White-crowned Manakin,Dixiphia pipra
 ,Scarlet-horned Manakin,Ceratopipra cornuta
@@ -3177,11 +3180,14 @@ E,Large Tree-Finch,C. psittacula
 E,Medium Tree-Finch,C. pauper
 E,Small Tree-Finch,C. parvulus
 E,Mangrove Finch,C. heliobates
-E,Small Ground-Finch,Geospiza fuliginosa
-E,Large Ground-Finch,G. magnirostris
-E,Sharp-beaked Ground-Finch,G. difficilis
-E,Common Cactus-Finch,G. scandens
+E,Sharp-beaked Ground-Finch,Geospiza difficilis
+E,Vampire Ground-Finch,G. septentrionalis
+E,Small Ground-Finch,G. fuliginosa
 E,Medium Ground-Finch,G. fortis
+E,Genovesa Ground-Finch,G. acutirostris
+E,Common Cactus-Finch,G. scandens
+E,Genovesa Cactus-Finch,G. propinqua
+E,Large Ground-Finch,G. magnirostris
 E,Large Cactus-Finch,G. conirostris
 ,Glistening-green Tanager,Chlorochrysa phoenicotis
 ,Orange-eared Tanager,C. calliparaea
@@ -3368,7 +3374,6 @@ E,Crested Ant-Tanager,H. cristata
 ,Golden Grosbeak,Pheucticus chrysogaster
 ,Black-backed Grosbeak,P. aureoventris
 ,Rose-breasted Grosbeak,P. ludovicianus
-,Black-headed Grosbeak,P. melanocephalus
 ,Rose-breasted Chat,Granatellus pelzelni
 ,Vermilion Cardinal,Cardinalis phoeniceus
 ,Yellow-green Grosbeak,Caryothraustes canadensis

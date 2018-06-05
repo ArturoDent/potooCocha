@@ -18,12 +18,12 @@
 
 .searchWord {
     position  :  relative;
-    top : 0;
+    // top : 10px;
     left : -70px;
     width : calc(100% + 10ch);
     height: 22ch;
-    margin-bottom: -14.5ch;
-    padding  :  1.7ch 5ch 0 5ch;
+    margin-bottom: -12.5ch;
+    padding  :  3ch 5ch 0 5ch;
 
     z-index: 0;
 
@@ -45,7 +45,7 @@
 }
 
 .taxArticleMain {
-    padding  : 20px 0 0 0;
+    padding  : 30px 0 0 0;
     text-align: left;
     line-height: 2rem;
 }

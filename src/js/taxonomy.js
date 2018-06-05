@@ -11,9 +11,9 @@ var numFamilies;
 var birds;
 
 var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1382, "Brazil":1801, "Chile":493,
-  "Colombia":1845, "Curaçao":218, "Ecuador":1627, "French Guiana":698,
-  "Guyana":783, "Paraguay":695, "Peru":1801, "Suriname":730, "Trinidad":469,
-  "Uruguay":448, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3388};
+  "Colombia":1845, "Curaçao":217, "Ecuador":1630, "French Guiana":698,
+  "Guyana":783, "Paraguay":695, "Peru":1801, "Suriname":731, "Trinidad":469,
+  "Uruguay":448, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3394};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
@@ -59,7 +59,7 @@ var searchInstructionsOpen = true;
 
 var selectedFillColor = "#fff";
 
-/* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap  countryButton */
+/* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap   */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -110,6 +110,7 @@ function loadIntoArray(data) {
   birds = data.split("\n");
 }
 
+
 function animateScrollTop(el) {
 
   // var step = el.scrollTop / (duration/25);
@@ -139,7 +140,7 @@ function showSearchInstructions(state)  {
 
     // searchSlideUpWrapper.style.height = searchSlideUpWrapper_height;
     searchSlideUpWrapper.classList.remove("closeInstructions");
-    searchSpecials.classList.add("open");
+    // searchSpecials.classList.add("open");
     searchInstructionsOpen = true;
 
     document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Close";
@@ -150,7 +151,7 @@ function showSearchInstructions(state)  {
     // searchSlideUpWrapper.style.height = 0;
     searchSlideUpWrapper.classList.add("closeInstructions");
     taxInstructionsButton.classList.add("instructionsClosed");
-    searchSpecials.classList.remove("open");
+    // searchSpecials.classList.remove("open");
     searchInstructionsOpen = false;
 
     document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Open";
@@ -169,8 +170,7 @@ function loadCountryTaxonomy(evt) {
   }
 
   if (currentTaxonomyCountry) {
-    currentTaxonomyCountryElement.classList.remove("taxHighlight");
-    currentTaxonomyCountryElement.classList.remove("bothHighlights");
+    currentTaxonomyCountryElement.classList.remove("highlight");
   }
 
   // trying to force a redraw because of iPhone
@@ -274,13 +274,15 @@ function loadCountryTaxonomy(evt) {
   currentTaxonomyCountry = taxCountry;
 
   //  the Falklands *******
-  searchCountryText.innerHTML = taxCountry;
+  // searchCountryText.innerHTML = taxCountry;
+
+  if (taxCountry === "Falklands") searchCountryText.innerHTML = "the Falklands";
+  else searchCountryText.innerHTML = taxCountry;
 
   // countryButton.innerHTML = taxCountry;
-  if (taxCountry === "Falklands") countryButton.innerHTML = "Malvinas";
+  // if (taxCountry === "Falklands") countryButton.innerHTML = "Malvinas";
 
-  currentTaxonomyCountryElement.classList.add("taxHighlight");
-  if (currentTaxonomyCountryElement.classList.contains("checkHighlight")) currentTaxonomyCountryElement.classList.add("bothHighlights");
+  currentTaxonomyCountryElement.classList.add("highlight");
 
   document.querySelector("#treeIntroText").innerHTML = taxCountry + " &nbsp; : &nbsp; " + numFamiliesList[taxCountry] + " families, " + numSpeciesList[taxCountry] + " species *";
   if (taxCountry === "Falklands")
@@ -632,8 +634,7 @@ function searchTree(query2) {
   }
 
   resetSearchResultsHeight();
-
-  return;
+  // return;
 }
 
 function resetSearchResultsHeight() {
@@ -641,7 +642,7 @@ function resetSearchResultsHeight() {
   searchResults.style.height = "auto";
 
   simpleBarResults = new SimpleBar(document.getElementById("searchResults"), { autoHide: false });
-  simpleBarResults.recalculate();
+  // simpleBarResults.recalculate();
 
   var elem;
 
@@ -662,11 +663,12 @@ function resetSearchResultsHeight() {
 function resetTaxPageHeight() {
 
   simpleBarTaxPage = new SimpleBar(taxPage, { autoHide: false });
-  var elem;
+  // var elem;
 
-  taxPage.style.height = "calc(100vh - 262px)";
-  elem = simpleBarTaxPage.getScrollElement();
-  elem.style.maxHeight = "calc(100vh - 262px)";
+  taxPage.style.height = "75vh";
+
+  // elem = simpleBarTaxPage.getScrollElement();
+  // taxPage.style.height = "75vh";
 
   simpleBarTaxPage.recalculate();
 }

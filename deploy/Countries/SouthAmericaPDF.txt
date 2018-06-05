@@ -686,6 +686,7 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Red Knot,Calidris canutus
 ,,Surfbird,C. virgata
 ,,Ruff,C. pugnax
+,,Sharp-tailed Sandpiper,C. acuminata
 ,,Stilt Sandpiper,C. himantopus
 ,,Curlew Sandpiper,C. ferruginea
 ,,Sanderling,C. alba
@@ -989,7 +990,7 @@ HAWKS,ACCIPITRIDAE
 ,,Rufous-thighed Kite,H. diodon
 ,,Mississippi Kite,Ictinia mississippiensis
 ,,Plumbeous Kite,I. plumbea
-20,,Northern Harrier,Circus cyaneus
+20,,Northern Harrier,Circus hudsonius
 ,,Long-winged Harrier,C. buffoni
 ,,Gray-bellied Hawk,Accipiter poliogaster
 ,,Tiny Hawk,A. superciliosus
@@ -1034,12 +1035,12 @@ OWLS,STRIGIDAE
 ,,White-throated Screech-Owl,M. albogularis
 ,,Tropical Screech-Owl,M. choliba
 ,endemic,Koepcke's Screech-Owl,M. koepckeae
-5,,Colombian Screech-Owl,M. colombianus
-,,Rufescent Screech-Owl,M. ingens
+5,,Rufescent Screech-Owl,M. ingens
 ,,Cinnamon Screech-Owl,M. petersoni
 ,,Cloud-forest Screech-Owl,M. marshalli
 ,,Montane Forest Screech-Owl,M. hoyi
-10,,Vermiculated Screech-Owl,M. guatemalae
+,,Choco Screech-Owl,M. centralis
+10,,Foothill  Screech-Owl,M. roraimae
 ,,Long-tufted Screech-Owl,M. sanctaecatarinae
 ,endemic,Santa Marta Screech-Owl,M. gilesi
 ,,Peruvian Screech-Owl,M. roboratus
@@ -2594,12 +2595,14 @@ MANAKINS,PIPRIDAE
 ,,Wire-tailed Manakin,P. filicauda
 ,,Band-tailed Manakin,P. fasciicauda
 ,,Club-winged Manakin,Machaeropterus deliciosus
-40,,Striped Manakin,M. regulus
+40,,Striolated Manakin,M. striolatus
+,endemic,Painted Manakin,M. eckelberryi
+,endemic,Kinglet Manakin,M. regulus
 ,,Fiery-capped Manakin,M. pyrocephalus
 ,,White-crowned Manakin,Dixiphia pipra
-,,Scarlet-horned Manakin,Ceratopipra cornuta
+45,,Scarlet-horned Manakin,Ceratopipra cornuta
 ,,Red-capped Manakin,C. mentalis
-45,,Golden-headed Manakin,C. erythrocephala
+,,Golden-headed Manakin,C. erythrocephala
 ,,Red-headed Manakin,C. rubrocapilla
 ,,Round-tailed Manakin,C. chloromeros
 TITYRAS,TITYRIDAE
@@ -3082,11 +3085,14 @@ TANAGERS,THRAUPIDAE
 ,endemic,Medium Tree-Finch,C. pauper
 ,endemic,Small Tree-Finch,C. parvulus
 ,endemic,Mangrove Finch,C. heliobates
-,endemic,Small Ground-Finch,Geospiza fuliginosa
-,endemic,Large Ground-Finch,G. magnirostris
-,endemic,Sharp-beaked Ground-Finch,G. difficilis
-,endemic,Common Cactus-Finch,G. scandens
+,endemic,Sharp-beaked Ground-Finch,Geospiza difficilis
+,endemic,Vampire Ground-Finch,G. septentrionalis
+,endemic,Small Ground-Finch,G. fuliginosa
 ,endemic,Medium Ground-Finch,G. fortis
+,endemic,Genovesa Ground-Finch,G. acutirostris
+,endemic,Common Cactus-Finch,G. scandens
+,endemic,Genovesa Cactus-Finch,G. propinqua
+,endemic,Large Ground-Finch,G. magnirostris
 ,endemic,Large Cactus-Finch,G. conirostris
 ,,Glistening-green Tanager,Chlorochrysa phoenicotis
 ,,Orange-eared Tanager,C. calliparaea
@@ -3270,16 +3276,15 @@ CARDINAL GROSBEAKS,CARDINALIDAE
 ,,Golden Grosbeak,Pheucticus chrysogaster
 15,,Black-backed Grosbeak,P. aureoventris
 ,,Rose-breasted Grosbeak,P. ludovicianus
-,,Black-headed Grosbeak,P. melanocephalus
 ,,Rose-breasted Chat,Granatellus pelzelni
 ,,Vermilion Cardinal,Cardinalis phoeniceus
-20,,Yellow-green Grosbeak,Caryothraustes canadensis
-,,Red-and-black Grosbeak,Periporphyrus erythromelas
+,,Yellow-green Grosbeak,Caryothraustes canadensis
+20,,Red-and-black Grosbeak,Periporphyrus erythromelas
 ,,Blue Seedeater,Amaurospiza concolor
 ,endemic,Carrizal Seedeater,A. carrizalensis
 ,,Blackish-blue Seedeater,A. moesta
-25,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
-,,Blue-black Grosbeak,C. cyanoides
+,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
+25,,Blue-black Grosbeak,C. cyanoides
 ,,Ultramarine Grosbeak,C. brissonii
 ,,Blue Grosbeak,Passerina caerulea
 ,,Indigo Bunting,P. cyanea

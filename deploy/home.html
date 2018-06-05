@@ -25,7 +25,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/styles.min.css?v=20180406212739">
+  <link rel="stylesheet" href="css/styles.min.css?v=20180604220430">
     
 </head>
 
@@ -94,7 +94,7 @@
 
       <article class='panel results-panel'>
         <div id='fakeResultsBox'>
-            <div id="closeResultsPanelButton">X</div>
+          <div id="closeResultsPanelButton">X</div>
           <div id='countrySearch' class='closed'>
             <span id='searchTerm'></span>
           </div>
@@ -114,14 +114,12 @@
         </div>
       </article>
 
-            <article id="taxonomyArticle">
+                  <article id="taxonomyArticle">
 
         <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
-            target="_blank" rel="noopener">taxonomy</a> of the birds of South America (April 6, 2018).</div>
+            target="_blank" rel="noopener">taxonomy</a> of the birds of <span id="searchCountryText">South America (June 1, 2018)</span>.</div>
 
-        <span class="taxInstructionsButton hasTooltip">?
-        <span class="tooltip">Close instructions</span>
-        </span>
+        <span class="taxInstructionsButton hasTooltip">?<span class="tooltip">Close instructions</span></span>
 
         <div class="slideUpWrapper panel">
 
@@ -130,17 +128,17 @@
             Type part of a word like "xantho". <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCdiacritical.htm"
               target="_blank" rel="noopener">Accents</a> and capitalization are added. You can search family names.<br><br>
 
-            Island nations are not shown to scale.<br><br> incertae [sedis] : two "groups" of uncertain classification.
           </div>
 
           <footer>
 
             <span><a href="citations.html" target="_blank" rel="noopener">citations</a> *</span>
 
-            <span class="obfuscated_link">
+            <span class="obfuscated_link">              
 
               <script type="text/javascript">
-                //<![CDATA[
+
+                              //<![CDATA[
 <!--[if true]
                 var x = "function f(x,y){var i,o=\"\",l=x.length;for(i=0;i<l;i++){y%=127;o+=St" +
                   "ring.fromCharCode(x.charCodeAt(i)^(y++));}return o;}f(\"4&:6\\\">77z=t%w$\\" +
@@ -164,9 +162,9 @@
                 //]]>
               </script>
 
-            <svg class="icon icon-paper-plane-o"><use xlink:href="#icon-paper-plane-o"></use></svg>
-          </span>
+              <svg class="icon icon-paper-plane-o"><use xlink:href="#icon-paper-plane-o"></use></svg>
 
+                          </span>
           </footer><br>
 
         </div>
@@ -174,20 +172,17 @@
         <form id="searchForm" class='panel'>
 
           <div class="searchForm_contents">
-            <span type="button" id="taxonomyCountryButton" class="genericButton">select country</span>
             <span class="grayed searchGroup">
-            <label  for="searchInput">search &nbsp;: &nbsp; </label>
-            <input name="searchField" id="searchInput" size="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-            <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
-          </span>
+              <label  for="searchInput">search &nbsp;: &nbsp; </label>
+              <input name="searchField" id="searchInput" size="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg>
+            </span>
           </div>
 
           <div id="searchSpecials" class="grayed open">
             <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
-            <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a>
-            </span>
-            <span class="searchSpecialWrapper"><a><span class="highlightSpecial">h</span>ypothetical</a>
-            </span>
+            <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
+            <span class="searchSpecialWrapper"><a><span class="highlightSpecial">h</span>ypothetical</a></span>
             <span class="searchSpecialWrapper"><a>incertae</a></span>
             <span class="searchSpecialWrapper"><a><span class="highlightSpecial">v</span>agrant</a>
             </span>
@@ -198,7 +193,7 @@
 
       <article id="checklistArticle">
 
-        <div class="flyoutPanel topFlyoutPanel">Make checklists for any country in South America</div>
+        <div class="flyoutPanel topFlyoutPanel"><span id="checklistFlyoutText">Make checklists for any country in South America</span></div>
 
         <div class="panel">
 
@@ -301,9 +296,9 @@
             <tfoot></tfoot>
           </table>
 
-          <div id="checklistAuthorsPanel"></div>
-
         </div>
+
+                <div id="checklistAuthorsPanel"></div>
 
         <div id="checklistOptions" class='panel'>
 
@@ -315,8 +310,6 @@
 
           <input id="italics" type="checkbox"><label for="italics">No italics</label><br>
           <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label>
-
-          <span type="button" id="checklistCountryButton" class="genericButton">country</span>
 
           <span type="button" id="pdfButton" class="genericButton">checklist
           <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
@@ -385,15 +378,17 @@
     </div>
   </section>
 
-  <article id='mapsCollection'>
+    <article id='mapsCollection'>
     <div id='mapsHeader'>
       <span id='deleteAllMapsButton'>Delete All</span>
     </div>
   </article>
 
-
   <div class="md-modal" id="countryModal">
-    <nav class="country-menu" contenteditable="false">
+
+      <span type="button" id="countryButton" class="genericButton">select country</span>
+
+        <nav class="country-menu" contenteditable="false">
       <div class="countryItem"><a>South America</a><div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div></div>
       <div class="countryItem"><a>Aruba</a><div class="flag"><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></div></div>
       <div class="countryItem"><a>Curaçao</a><div class="flag"><img src="../../../flags/32/Curacao.png"  alt="Flag of Curacao"></div></div>
@@ -416,10 +411,11 @@
     </nav>
   </div>
 
-  <div class="md-overlay"></div>
+  <div class="md-overlay">
+    <div class="overlayInfo">Choose "South America" if you wish to use the taxonomy of <span class="underline">all</span> countries for a search or checklist.</div>
+  </div>
 
-  <script src="js/app.min.js?v=20180406212739"></script>
+    <script src="js/app.min.js?v=20180604220430"></script>
 
 </body>
-
 </html>

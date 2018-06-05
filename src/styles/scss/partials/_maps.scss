@@ -1,8 +1,8 @@
 #mapsCollection  {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     
-    align-items: stretch;
+    // align-items: stretch;
 
     position  :  fixed;
     top : 95vh;
@@ -98,33 +98,56 @@
 // }
 
 .smallBird  {
+    display: inline-block;
     opacity  :  0;
+    position  :  relative;
+    // left: 110vw;
+    top: -70px;
+    // width: 200px;
+    // margin: 0;
 
-    transform  :  scale(0.75) translateY(-21px);
+    // transform  :  scale(0.75) translateY(-370px);
+    transform  :  scale(0.75);
     -webkit-transform-origin  :  0 50%;
        -moz-transform-origin  :  0 50%;
         -ms-transform-origin  :  0 50%;
          -o-transform-origin  :  0 50%;
             transform-origin  :  0 50%;
-}
-
-.thinify  {
-    // flex-grow: 0;
-    flex-grow: 0;
-    flex-basis: 305px;
-    
-    // align-self: flex-start;
-    
-    position  :  relative;
-    left : 3%;
-    margin-left : -1.5%;
     transition: all 500ms;
 }
+
+// .smallBird0 {
+//     left : 40vw;
+// }
+
+// .smallBird1 {
+//     left : 20vw;
+// }
+
+// .smallBird2 {
+//     left : 40vw;
+// }
+
+// .smallBird3 {
+//     left : 60vw;
+// }
+
+// .smallBird4 {
+//     left : 80vw;
+// }
+
+// .thinify  {
+    
+//     // position  :  relative;
+//     // left : 3%;
+//     // margin-left : -1.5%;
+//     transition: all 500ms;
+// }
 
 .offscreen {
     position  :  relative;
     
-    left: 100%;
+    left: 110%;
     transition: all 1s;
 }
 
@@ -154,14 +177,19 @@
     font-style  :  italic;
 }
 
-.birdName.smallBirdText   {
+// .birdName.smallBirdText   {
+.smallBirdText   {
+    position  :  absolute;
+    
     top  :  -2.4rem;
-    left  :  -26%;
-    width  :  calc(100% + 40px);
+    left  :  -40%;
+    // width  :  calc(100% + 50px);
+    width  :  calc(100% + 40%);
     height : 4.1rem;
-    padding : 0.6rem 0.2rem 0 0.2rem;
+    padding : 0.6rem 0 0 0;
 
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.15rem;
     line-height  : 1.3rem;
 }
 
@@ -236,15 +264,13 @@
 .drawing  {
     position  :  relative;
     text-shadow  :  none;
-    -webkit-filter  :  drop-shadow( -1px 0 0 rgba(255,255,255,0.3) ) drop-shadow( -2px 0 0 rgba(0,0,0,0.5) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.4) );
-        -ms-filter  :  drop-shadow( -1px 0 0 rgba(255,255,255,0.3) ) drop-shadow( -2px 0 0 rgba(0,0,0,0.5) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.4) );
-            filter  :  drop-shadow( -1px 0 0 rgba(255,255,255,0.3) ) drop-shadow( -2px 0 0 rgba(0,0,0,0.5) ) drop-shadow( 1px 0 0 rgba(255,255,255,0.4) );
+    -webkit-filter  :  drop-shadow( 0 0 1px rgba(255,255,255,0.8) ) drop-shadow( 0 0 4px rgba(0,0,0,0.4) );
+            filter  :  drop-shadow( 0 0 1px rgba(255,255,255,0.8) ) drop-shadow( 0 0 4px rgba(0,0,0,0.4) );
 }
 
 .drawing.active  {
-    -webkit-filter : drop-shadow( -3px 0 3px rgba(0,0,0,0.3) ) drop-shadow( 3px 0 3px rgba(0,0,0,0.3) );
-    -ms-filter : drop-shadow( -3px 0 3px rgba(0,0,0,0.3) ) drop-shadow( 3px 0 3px rgba(0,0,0,0.3) );
-    filter  :  drop-shadow( -3px 0 3px rgba(0,0,0,0.3) ) drop-shadow( 3px 0 3px rgba(0,0,0,0.3) );
+    -webkit-filter  :  drop-shadow( 0 0 8px rgba(0, 0, 0, 0.6) );
+            filter  :  drop-shadow( 0 0 8px rgba(0, 0, 0, 0.6) );
 }
 
 .colorKey {

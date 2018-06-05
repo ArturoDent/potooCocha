@@ -132,6 +132,7 @@ function toggleCountryModal(evt)  {
 
   countryModal.classList.toggle("menu-show");
   countryModal.classList.toggle("md-show");
+  countryButton.classList.toggle("expand");
 
   if (evt) evt.stopPropagation();
 }
@@ -215,16 +216,14 @@ function choseChecklistCountry(evt) {
   else if (selectedCountry === "French Guiana")  currentChecklistCountry = "FrenchGuiana";
   // else if (selectedCountry === "Falklands/Malv.")  currentChecklistCountry = "Falklands";
   // else if (selectedCountry === "Malvinas")  currentChecklistCountry = "Falklands";
-  else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
+  // else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
   else   currentChecklistCountry = selectedCountry;
 
   // checklistCountryButton.innerHTML = selectedCountry;
-  countryButton.innerHTML = selectedCountry;
+  if (selectedCountry === "Falklands") countryButton.innerHTML = "Malvinas/Falklands";
+  else countryButton.innerHTML = selectedCountry;
 
   checklistFlyoutText.innerHTML = "Make a checklist for " + selectedCountry;
-
-  currentChecklistCountryElement.classList.add("checkHighlight");
-  // if (currentChecklistCountryElement.classList.contains("taxHighlight")) currentChecklistCountryElement.classList.add("bothHighlights");
 
   countryButton.classList.add("highlight");
 
@@ -239,7 +238,10 @@ function choseChecklistCountry(evt) {
   if (selectedCountry !== "South America") selectedCountryFillColor(currentChecklistCountry, selectedFillColor);
   else fillSAMmap("", "");
 
-  getAjax("Authors/" + currentChecklistCountry + ".txt", setChecklistAuthors);
+  if (currentChecklistCountry === "Curaçao") {
+    getAjax("Authors/" + "Curacao.txt", setChecklistAuthors);
+  }
+  else getAjax("Authors/" + currentChecklistCountry + ".txt", setChecklistAuthors);
 }
 
 // ^(.*\\.) \\d\\d\\d\\d\\..*(Version.*$)

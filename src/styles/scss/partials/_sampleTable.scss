@@ -4,7 +4,7 @@
   width: 100%;
   min-width: 480px;
   // margin: 0 auto 25px auto;
-  margin: 0 auto 2.5ch auto;
+  margin: 1ch auto 4ch auto;
 
   font-size: 0.8rem;
   font-weight: bold;
@@ -159,36 +159,42 @@
   content: '5';
   position: absolute;
   top: 7px;
-  left: -28px;
+  // left: -28px;
+  left: -15px;
   width: auto;
   height: auto;
-  padding: 2px 5px 3px 5px;
+  padding: 2px 0 3px 0x;
 
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-shadow: none;
 
-  border: 1px solid rgb(110, 109, 109);
-  border-radius: 50%;
+  // border: 1px solid rgb(110, 109, 109);
+  // border: 1px solid transparent;
+  border: 1px solid transparent;
+  // border-radius: 50%;
   background-color: $panelColor;
-  transition: all 500ms;
+  transition: left 500ms;
 }
 
 .leftCheckBox.show + .showLineNumbers::before {
   content: '5';
   position: absolute;
-  top: 7px;
+  top: 5px;
   left: -33px;
   width: auto;
   height: auto;
-  padding: 2px 5px 3px 5px;
+  // padding: 2px 5px 3px 5px;
+  padding: 2px 2px 3px 1px;
 
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-shadow: none;
 
   border: 1px solid transparent;
-  border-radius: 50%;
+  // border-top: 1px solid black;
+  // border-bottom: 1px solid black;
+  // border-radius: 50%;
   background-color: $panelColor;
-  transition: all 500ms;
+  transition: left 500ms;
   }
 
 .showEndemics {
@@ -198,24 +204,26 @@
   content: 'E';
   position: absolute;
   top: 6px;
-  left: -29px;
+  // left: -29px;
+  left: -15px;
   width: auto;
   height: auto;
-  padding: 2px 5px 3px 5px;
+  padding: 2px 0 3px 0;
   font-size: 0.6rem;
   text-shadow: none;
 
-  border: 1px solid rgb(110, 109, 109);
-  border-radius: 50%;
+  // border: 1px solid rgb(110, 109, 109);
+  border: 1px solid transparent;
+  // border-radius: 50%;
   background-color: $panelColor;
-  transition: all 500ms;
+  transition: left 500ms;
 }
 
 .leftCheckBox.show + .endemical.showEndemics::before {
     content: 'E';
   position: absolute;
   top: 6px;
-  left: -32px;
+  left: -33px;
   width: auto;
   height: auto;
   padding: 2px 1px 3px 1px;
@@ -224,12 +232,12 @@
   text-shadow: none;
 
   border: 1px solid transparent;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  // border-top: 1px solid black;
+  // border-bottom: 1px solid black;
 
   // border-radius: 50%;
   background-color: $panelColor;
-  transition: all 500ms;
+  transition: left 500ms;
 }
 
 #sampleTable.numDays0 .cLs {

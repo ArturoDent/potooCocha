@@ -7,13 +7,15 @@
 
     border-top: none;
     border-bottom: none;
-    transition: opacity  350ms, max-height 600ms 250ms;
+    transition: opacity  450ms, max-height 600ms 250ms;
+    
+    // backdrop-filter: blur(5px);
 }
 
 .slideUpWrapper.closeInstructions  {
     max-height: 0;
     opacity: 0;
-    transition: max-height 350ms, opacity 600ms 250ms;
+    transition: max-height 450ms, opacity 600ms 250ms;
 }
 
 .taxInstructionsButton  {
@@ -28,19 +30,17 @@
 
     font-size  :  1.6rem;
     font-weight  :  bold;
-    // color  :  #eee;
-    // color  :  $bgColor;
     color  :  white;
+    // color  :  #333;
     text-align  :  center;
 
-    border : 2px solid  $turquoiseHighlightColor;
+    border : 2px solid  $goldHighlightColor;
     border-radius  :  50%;
-    // background-color  :  $turquoiseHighlightColor;
     background-color  :  $bgColor;
-    box-shadow: inset 0 0 0 2px $bgColor, 0 0 0 8px $bgColor;
-
+    box-shadow: inset 0 0 0 2px $bgColor, 0 0 0 8px $bgColor;    
+    
     cursor  :  pointer;
-    transform: translateX(0);
+    transform: translateX(-42ch);
     -webkit-transition  :  transform  ease-in-out 1000ms;
        -moz-transition  :  transform  ease-in-out 1000ms;
          -o-transition  :  transform  ease-in-out 1000ms;
@@ -48,17 +48,14 @@
 }
 
 .taxInstructionsButton:hover {
-    // color: white;
-    // box-shadow: inset 0 0 0 3px rgba(255,255,255,0.2), 0 0 0 8px $bgColor;
     background-color  :  black;
 }
 
-.taxInstructionsButton.instructionsClosed {
-    transform: translateX(-42ch);
-}
-
 .taxInstructionsButton.instructionsClosed .tooltip {
+    font-size: 1rem;
+    font-weight: bold;
     letter-spacing: 0.3rem;
+    background-color: $panelColor;
     transform: scaleX(0.7);
 }
 
@@ -86,7 +83,6 @@
 }
 
 .searchForm_contents  {
-
     position: relative;
     width  :  100%;
     height : auto;
@@ -102,8 +98,6 @@
 
 #searchForm span.searchGroup  {
     position : relative;
-    // top : -13px;
-    // right : 7%;
     margin: 25px 0 30px 0;
     left: 25%;
     opacity  :  1;
@@ -113,18 +107,6 @@
     opacity  :  0.3;
     pointer-events  :  none;
 }
-
-// #taxonomyCountryButton {
-//     position: relative;
-//     margin : 0 5ch 0 -2ch;
-//     padding : 0.6ch 2ch 1ch 12%;
-//     z-index  :  1;
-//     transition  :  all 700ms ease-in-out;
-// }
-
-// #taxonomyCountryButton.highlight:hover, #taxonomyCountryButton.highlight:focus {
-//     box-shadow  :  inset -255px 0 5px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
-// }
 
 // to highlight the label : "search :" when the countryModal darkens the screen
 // .searchGroup label  {
@@ -140,13 +122,16 @@
     font-size            :  1rem;
     color                :  white;
     font-weight: bold;
-    letter-spacing       :  0.1em;
+    letter-spacing       :  0.13em;
     text-align           :  center;
     text-shadow          :  1px 1px 2px rgba(0,0,0,0.3);
 
-    border               :  1px solid rgba(255,255,255,0.5);
-    border-radius        :  3px;
-    background-color           :  $panelColor;
+    // border               :  1px solid rgba(255,255,255,0.5);
+    // border-radius        :  3px;
+    // background-color     :  $panelColor;
+    
+    border               : none;
+    background-color     : #333;
 
     -webkit-user-select  : text;
     -moz-user-select     : text;
@@ -154,37 +139,40 @@
     user-select          : text;
 }
 
-#searchInput:focus  {
-    outline  :  none;
-}
+#searchInput:focus  {  outline: none;  }
 
-#searchInput::-moz-placeholder             {
-    color  :  white;
-}
+// #searchInput:focus + .inpuInfo { display: block; }
 
-#searchInput::-ms-input-placeholder        {
-    color  :  white;
-}
+#searchInput::-moz-placeholder  {  color  :  white;  }
+#searchInput::-ms-input-placeholder  {  color  :  white;  }
+#searchInput::-webkit-input-placeholder  {  color  :  white;  }
 
-#searchInput::-webkit-input-placeholder    {
-    color  :  white;
-}
-
-#searchInput::placeholder                  {
-    color  :  white;
-}
+#searchInput::placeholder  {  color  :  white;  }
 
 #searchSpecials  {
     display  :  flex;
     flex-direction  :  column;
     justify-content  :  space-between;
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: flex-end;
+    
     position  :  absolute;
-    top : -2.5ch;
-    left  :  102.4%;
+    // top : -2.5ch;
+    top : -5.8ch;
+    // left  :  102.4%;
+    left  :  95%;
+    padding : 25px 20px 25px 20px;
 
     font-size  :  0.9rem;
     pointer-events  :  auto;
+    
+    border : solid 1px transparent;
+    // border-right: 1px solid white;
+    
+    border : solid 1px $bgColor;
+    border-radius : 50%;
+    // background-color : $bgColor;
+    box-shadow: inset -100px 0 100px $bgColor;
     transition  :  all 500ms 1300ms;
 }
 
@@ -221,17 +209,15 @@
     box-shadow : 0 0 2px rgba(0,0,0,1);
 }
 
-#searchSpecials.SAM span.searchSpecialWrapper {
-    margin-bottom : 2ch;
-}
+#searchSpecials.SAM span.searchSpecialWrapper  {  margin-bottom : 2ch;  }
 
-#searchSpecials span.notAvailable  {
-    display  :  none;
-}
+#searchSpecials span.notAvailable  {  display  :  none;  }
 
 #searchSpecials.SAM  {
     justify-content  :  space-around;
-    top : -0.7ch;
+    // top : -0.7ch;
+    top : -3ch;
+    left : 98%;
 }
 
 .highlightSpecial { border-bottom: 1px solid white; }
@@ -245,7 +231,7 @@
     height  :  0;
     width : calc(100% + 10vw);
     left : -10vw;
-    margin  : 10ch 0 0 0;
+    margin  : 6ch 0 0 0;
     padding  :  0;
 
     order : 2;
@@ -279,11 +265,6 @@
     border-radius  :  3px;
     background-color  :  $panelColor;
     box-shadow: 0 0 2px rgba(0,0,0,0.7);
-
-    // border  :  1px solid rgba(255,255,255,0.25);
-    // border-radius  :  3px;
-    // box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
-    // background-color: $panelColor;
 }
 
 #closeResultsPanelButton  {
@@ -295,7 +276,8 @@
 
     text-align: center;
 
-    border: 1px solid rgba(255,255,255,0.25);
+    // border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid gold;
     border-radius: 50%;
     background-color: $panelColor;
     box-shadow: 0 0 0 6px $bgColor, -8px 0 1px rgba(255,255,255,0.25), -7px 0 0 2px rgba(0,0,0,0.2);
@@ -314,9 +296,8 @@
 
     position  :  relative;
     padding : 1ch 0 0 0;
-    height : 4.2ch;
-    margin: 0 0 2ch 0;
-    top: 1ch;
+    height : 4ch;
+    margin: -10px 0 1ch 0;
     left : 2ch;
     width : calc(100% - 4ch);
 
@@ -337,10 +318,10 @@
     opacity  :  0;
     position  :  relative;
     left  :  -10vw;
-    width  :  calc(100% + 10vw + 1ch);
+    width  :  calc(100% + 10vw + 1.1ch);
     height  :  auto;
     max-height  :  370px;
-    padding  :  5px 0 0 10vw;
+    padding  :  0 0 0 10vw;
 
     font-size  :  1rem;
     line-height  :  1rem;
@@ -403,7 +384,6 @@
     left : -33px;
     margin-right : -7px;
     content : '';
-
     border-left : 7px solid $birdRolloverColor;
 }
 
@@ -413,7 +393,6 @@
     left : -35px;
     margin-right : -10px;
     content : '';
-
     border-left : 10px solid $birdRolloverColor;
 }
 
@@ -438,7 +417,6 @@
     background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
     background: -webkit-linear-gradient(left, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
     background: linear-gradient(to right, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
-
     transition: border-right 650ms;
 }
 
@@ -483,7 +461,6 @@
 
 .extinct::before  {
     content  :  'x';
-
     position  :  relative;
     left  :  -9px;
     font-size  :  0.8rem;
@@ -491,7 +468,6 @@
 
 .hy::before  {
     content  :  'h';
-
     position  :  relative;
     left  :  -9px;
     font-size  :  0.8rem;
@@ -499,7 +475,6 @@
 
 .va::before  {
     content  :  'v';
-
     position  :  relative;
     left  :  -9px;
     font-size  :  0.8rem;
@@ -535,6 +510,8 @@
 .tax-panel.translateDown  {
     opacity : 1;
     height : auto;
+    padding  :  2ch 0 10ch 0;
+    
     transform : translateY(0);
 }
 
@@ -545,18 +522,12 @@
     width : calc(100% - 10vw);
     left : 10vw;
     padding : 0 0 1ch 0;
-    margin : 0;
+    margin : 1ch 0 0 0;
     
     border  :  1px solid rgba(255,255,255,0.15);
     border-radius  :  3px;
     background-color  :  $panelColor;
     box-shadow: 0 0 2px rgba(0,0,0,0.7);
-
-    // border  :  1px solid rgba(255,255,255,0.25);
-    // border-radius  :  3px;
-    // box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
-    // background-color: $panelColor;
-    
     overflow-x : visible;
 }
 
@@ -564,10 +535,12 @@
 
 #taxPage  {
     position  :  relative;
+    top: 10px;
     left  :  -10vw;
-    width  :  calc(100% + 10vw + 1ch);
+    width  :  calc(100% + 10vw + 1.2ch);
     height : auto;
-    max-height  :  calc(100vh - 262px);
+    // max-height  :  calc(100vh - 262px);
+    max-height  :  75vh;
 
     padding  :  0.5ch 0 0 10vw;
     margin : 0 0 2ch 0;
@@ -580,12 +553,10 @@
 
     // use below if no SimpleBar
     // overflow-y  :  visible;
-
     overflow-y: hidden;
 
     border: none;
     border-radius  :  10px;
-
     background-color : transparent;
     box-shadow: none;
 }
@@ -641,6 +612,7 @@ to {
     cursor  :  pointer;
 }
 
+// family names and species names too
 #tree .familyOpen  {
     width : 100%;
     cursor  :  pointer;
@@ -651,7 +623,7 @@ to {
     padding  :  1px 0 2px 15px;
 }
 
-/*target : familyOpen common name only*/
+/*target : familyOpen family common and sci names for families that are open  */
 #tree li.familyOpen > span:nth-child(1)  {
     padding  :  1px 0 2px  15px;
 }
@@ -660,10 +632,10 @@ to {
 // #tree li.familyOpen > span:nth-child(2)  {
 // }
 
+// all family names whether open or not
 .fTitle  {
     display: inline-block;
     width: calc(100% - 8px);
-
     border-top : 1px solid transparent;
     border-bottom : 1px solid transparent;
     background-color: transparent;
@@ -675,29 +647,31 @@ to {
     background-color  :  $birdRolloverColor;
 }
 
+// hover: family names only
 .familyOpen .fTitle:hover {
     background-color  :  $birdRolloverColor;
-
     border-top : 1px solid darken($birdRolloverColor, 10%);
     border-bottom : 1px solid darken($birdRolloverColor, 10%);
 }
 
+// ***  
 .family .fTitle.active  {
     background-color  :  $birdRolloverColor;
 }
 
+// just the species within a family (that is open)
 #tree .familyOpen  ul  {
     width: calc(100% - 8px);
     font-size  :  0.9rem;
     line-height  :  1rem;
 }
 
-/*target : familyOpen common names only*/
+/* target : familyOpen bird common names only */
 #tree .familyOpen  ul  li span:first-child {
     padding  :  1px 0 0 27px;
 }
 
-/*target : familyOpen sci names only*/
+/*target : familyOpen bird sci names only*/
 #tree .familyOpen .birds li span:last-child  {
     position  :  absolute;
     left  :  52.8%;
@@ -767,7 +741,6 @@ to {
     border-left : 7px solid $birdRolloverColor;
 }
 
-
 #tree ul li {
     padding : 2px 0 2px 0;
     border: none;
@@ -775,7 +748,7 @@ to {
     border-bottom : 1px solid transparent;
 }
 
-/* added by toggleFamilyOpen */
+/* added by toggleFamilyOpen, the species highlighted */
 #tree ul li.active {
     position : relative;
     background-color : $birdActiveColor;
@@ -793,7 +766,6 @@ to {
     background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
     background: -webkit-linear-gradient(left, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
     background: linear-gradient(to right, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
-
     transition: border-right 650ms;
 }
 

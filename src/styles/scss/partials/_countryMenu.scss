@@ -3,8 +3,6 @@
   top: 0;
   left: 100%;
   z-index: 2000;
-  // box-shadow: -10px 0 10px (0,0,0,0.5);
-
   transition: transform 1000ms 250ms;
 }
 
@@ -14,50 +12,7 @@
 
 .md-overlay {
   opacity: 0;
-  // visibility: hidden;
   pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  // width of vertical scrollbar
-  // width: calc(100vw - 23px);
-  width: 100vw;
-
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  // z-index: 10;
-  border: none;
-  // background-color: $overlayRightColor;
-  // background-color: rgba(0,0,0,0.75);
-
-  // background: -moz-linear-gradient(left, rgba(0,0,0,0.75) 0%, rgba(0,0,0,1) 90%);
-  // background: -webkit-linear-gradient(left, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 90%);
-  // background: linear-gradient(to right, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 90%);
-
-  // background: -moz-radial-gradient(center, circle cover, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-  // background: -webkit-radial-gradient(center, circle cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
-  // background: radial-gradient(200px circle at 0% 0%, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
-
-  // background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,1) 100%);
-  // background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 100%);
-  // background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 100%);
-  
-
-  // background-color: #6d7880;
-  background-color: #888;
-
-  transition: all 1000ms 700ms;
-}
-
-.md-show ~ .md-overlay {
-  opacity: 0.95;
-  transition: all 1000ms;
-}
-
-.country-menu {
- 
-  position: relative;
   
   display  :  -webkit-flex;
   display  :  -ms-flex;
@@ -70,54 +25,127 @@
   -webkit-flex-wrap  :  nowrap;
   -ms-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
-
-  // justify-content: space-around;
+  
+  align-items: center;
+  justify-content: center;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  // padding: 10px 0 10px 0;
-
-
-  // align-items: center;
-  font-size: 1rem;
+  margin: 0;
+  padding: 0;
   
-  background-color: $countryMenuColor;
-
-  // background: -webkit-linear-gradient(left, $countryMenuColor 0%, $bgColor 100%);
-  // background: -moz-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
-  // background: -o-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
-  // background: linear-gradient(to right, $countryMenuColor 0%, $bgColor 100%);
-  
-  // box-shadow: -30px 0 30px rgba(0,0,0,0.3);
+  border: none;
+  background-color: $bgColor;
+  transition: all 1000ms 700ms;
 }
 
-// .country-menu::before {
-//   content: '';
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 0;
-//   height: 100vh;
-//   box-shadow: -5px 0 5px 5px  rgba(0,0,0,0.3);
+.md-show ~ .md-overlay {
+  opacity: 1;
+  transition: all 1000ms;
+}
+
+.overlayInfo  {
+  width: 20vw;
+  min-width: 250px;
+  padding: 20px;
+  margin-right: 350px;
   
-//   // background: -webkit-linear-gradient(left, $countryMenuColor 0%, $bgColor 100%);
-//   // background: -moz-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
-//   // background: -o-linear-gradient(left,  $countryMenuColor 0%, $bgColor 100%);
-//   // background: linear-gradient(to right, $countryMenuColor 0%, $bgColor 100%);
-// }
+  pointer-events: none;
+  
+  font-size: 1.2em;
+  font-variant: small-caps;
+  line-height: 1.6em;
+  text-align: center;
+  
+  border: 3px single rgba(255,255,255,0.5);
+  border-radius:  10px;
+  background-color: $overlayInfoColor;
+  box-shadow:  inset 0 0 4px white, 0 0 4px rgba(0,0,0,0.7);
+}
 
-// <nav class="country-menu" contenteditable="false">
-//       <div><a>South America</a><span><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></span></div>
-//       <div><a>Aruba</a><span><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></span></div>
+// .overlayInfo .underline
+.underline {
+  border-bottom: 2px double white;
+  
+  // no support for below in Edge
+  // text-decoration-style: solid;
+  // text-decoration-color: white;
+  // text-decoration-line: underline;
+}
 
-// .country-menu div.countryitem
+#countryButton {
+  position: absolute;
+  top: 20px;
+  right: 300px;
+  width: 270px;
+  padding : 0.6ch 0 1ch 2ch;
+  
+  text-align: left;
+  
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow  :  inset 0 0 25px 15px transparent, 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition  :  box-shadow 400ms, width 400ms, right 400ms 400ms;
+}
+
+#countryButton:after {
+  content  :  '';
+  position  :  absolute;
+  top  :  -2.3px;
+  left  :  101%;
+  border-style  :  solid;
+  border-width  :  calc(1.2em + 2px);
+  border-color  :  transparent transparent transparent $genericButtonColor;
+  transition : all 200ms 500ms;
+}
+
+#countryButton.expand:after {
+  left  :  102%;
+  border-color  :  transparent transparent transparent white;  
+}
+
+#countryButton:hover, #countryButton:focus {
+  border : 1px solid #888;
+  box-shadow  :  inset 270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#countryButton.highlight:hover, #countryButton.highlight:focus {
+  border : 1px solid #888;
+  box-shadow  :  inset -270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#countryButton.expand  {
+  right: 330px;
+  width: 370px;
+}
+
+.country-menu {
+  position: relative;
+  display  :  -webkit-flex;
+  display  :  -ms-flex;
+  display  :  flex;
+
+  -webkit-flex-direction  :  column;
+  -ms-flex-direction  :  column;
+  flex-direction  :  column;
+
+  -webkit-flex-wrap  :  nowrap;
+  -ms-flex-wrap  :  nowrap;
+  flex-wrap  :  nowrap;
+
+  padding: 5px 0;
+  justify-content: space-around;
+  height: 100vh;
+  font-size: 1rem;
+  background-color: $countryMenuColor;
+}
+
 .countryItem {
-  // width: 250px;
   position: relative;
   width: 270px;
-  
-  // height: calc((100vh - 20px) / 19);
-  // padding: 6px 0 0 20px;
-  
-  // height: 160px;
   
   display  :  -webkit-flex;
   display  :  -ms-flex;
@@ -131,134 +159,72 @@
   -ms-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
 
-  // justify-content: space-around;
-
   align-items: center;
 
-  // top : -12px;
-  // left: 0;
   letter-spacing: 1.5px;
   line-height: 1rem;
-  
 }
 
 .countryItem a {
   position: relative;
-  // width: 270px;
-  width: 100%;
-  // left : 5px;
-  
+  width: 271px;
   margin-right: -40px;
-
-  // height: 2.5rem;
-  // padding: 6px 0 6px 20px;
-  
+  margin-bottom: 1px;
   // need to subtract the font-size ass well
   padding: (calc(((100vh - 40px) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 40px) - (19 * 1rem)) / 38)) 20px;
-  // height: calc((100vh - 20px) / 19);
-  
-  // padding: 6px 0 0 20px;
 
-  // line-height: 1rem;
   text-decoration: none;
   text-shadow : 0  1px rgba(0,0,0,1);
 
-  border: 1px solid transparent;
-  border-radius: 3px;
-
-  // transform: translateX(0);
   transition: all 450ms ease-out;
   cursor: pointer;
 }
 
 .country-menu a:hover, .country-menu a:focus  {
-  color: #fff;
   background-color:  $countryMenuHighlightColor;
-  border-top: 1px solid rgba(255,2555,255,0.2);
-  border-bottom: 1px solid rgba(255,2555,255,0.2);
 }
 
-// .country-menu div.flag
+.country-menu a.highlight   {
+  width: 300px;
+  background-color:  $countryMenuHighlightColor;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  transition: all 450ms ease-out;
+}
+
+.country-menu a.highlight:after {
+  content  :  '';
+  position  :  absolute;
+  top  :  -1px;
+  left  :  calc(100% - 28px);
+  border-style  :  solid;
+  border-width  :  1.5rem;
+  border-color  :  transparent white transparent transparent;
+  transition : all 400ms;
+}
+
+.country-menu a.highlight:hover {
+  padding-left: 30px;
+}
+
+.country-menu a.highlight:hover:after {
+  // border-color  :  transparent $genericButtonColor transparent transparent;
+  border-color  :  transparent black transparent transparent;
+}
+
 .flag  {
   position: absolute;
-  // left: 225px;
-  
   height: 26px;
   width:26px;
   left: calc(100% - 52px);
-  
   
   border-radius : 50%;
   background-position: center;
   background-origin: padding-box;
   background-color: $countryMenuColor;
-  // background-color: transparent;
-  // background-size: 50px 50px;
-  // background-repeat: no-repeat;
-
 }
 
 .country-menu img {
-  // display: inline;
-  // position : absolute;
-  // top: -6px;
-  // left: 0px;
-  // padding: 5px;
-  // margin-left: 50px;
   height: 26px;
   width:26px;
-
-  // border-radius : 50%;
-
-  // background-position: center;
-  // background-origin: padding-box;
   background-color: tranparent;
-  
-
-  // background-size: 50px 50px;
-  // background-repeat: no-repeat;
 }
-
-
-
-.country-menu a.taxHighlight,
-.country-menu a.checkHighlight,
-.country-menu a.bothHighlights   {
-  // padding: 0 0 0 50px;
-  color: #fff;
-
-  border-top: 1px solid rgba(255,2555,255,0.3);
-
-  // border-top: 3px solid $bgColor;
-  // border-bottom: 3px solid $bgColor;
-
-  // background-color: $panelFlyoutFontColor;
-  background-color:  $countryMenuHighlightColor;
-
-  // box-shadow : 0 0 0 5px $bgColor;
-
-  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-
-
-  // background: -webkit-linear-gradient(left, $countryMenuColor 0%, $bgColor 50%, $countryMenuColor 100%);
-  // background: -moz-linear-gradient(left,  $countryMenuColor 0%, $bgColor 50%, $countryMenuColor 100%);
-  // background: -o-linear-gradient(left,  $countryMenuColor 0%, $bgColor 50%, $countryMenuColor 100%);
-  // background: linear-gradient(to right, $countryMenuColor 0%, $bgColor 50%, $countryMenuColor 100%);
-
-  // transform: translateX(-20px);
-  transition: all 1000ms ease-out;
-}
-
-// .country-menu a.taxHighlight:hover,
-// .country-menu a.checkHighlight:hover,
-// .country-menu a.bothHighlights:hover   {
-//   border: 1px solid white;
-// }
-
-// .country-menu a.taxHighlight span,
-// .country-menu a.checkHighlight span,
-// .country-menu a.bothHighlights span   {
-//   // letter-spacing: 3.5px;
-//   // padding: 0 0 0 10px;
-//   transition: all 550ms ease-out;
-// }

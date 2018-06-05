@@ -270,6 +270,7 @@ function copyBuildSACCdata() {
     .pipe(gulp.dest("./data"));
 }
 
+// show files transported
 function copyBuildSACCcountries() {
   return gulp.src(buildGlobs.countries)
     .pipe(newer("./Countries"))
@@ -339,6 +340,10 @@ function deployPotoococha () {
 }
 
 gulp.task("sync", gulp.series(sass2css, moveJStoTemp, reloadJS, serve, watch));
+
+gulp.task("serve", gulp.series(serve));
+gulp.task("watch", gulp.series(watch));
+
 
 // gulp.task("sync", gulp.series(sass2css, reloadJS, serve));
 // gulp.task("reloadJS", gulp.series(moveJStoTemp));

@@ -12,12 +12,49 @@
             "options": {
                 "cwd": "${workspaceRoot}"
             }
-            // "dependsOn": "Echo"
         },
+        {
+            "label": "Gulp: Start server only",
+            
+            "type": "gulp",
+            "task": "serve",
+            "problemMatcher": []
+        },
+        {
+            "label": "Gulp: watch",
+            
+            "type": "gulp",
+            "task": "watch",
+            "problemMatcher": []
+        },
+        // {
+        //     "label": "Gulp: Start server only",
+        //     "command": "gulp",
+        //     "args": [
+        //         "serve"
+        //     ],
+        //     "type": "shell",
+        //     "options": {
+        //         "cwd": "${workspaceRoot}"
+        //     }
+        // },
+        // {
+        //     "label": "Gulp: watch",
+        //     "command": "gulp",
+        //     "args": [
+        //         "watch"
+        //     ],
+        //     "type": "shell",
+        //     "options": {
+        //         "cwd": "${workspaceRoot}"
+        //     }
+        // },
         {
             "label": "node -v",
             "command": "node",
-            "dependsOn": ["Echo"],
+            "dependsOn": [
+                "Echo"
+            ],
             "args": [
                 "-v"
             ],
@@ -26,47 +63,24 @@
         {
             "label": "Echo2",
             "command": "echo",
-            "args": ["echo 2"],
-            "type": "shell",
-        }
-        
+            "args": [
+                "echo 2"
+            ],
+            "type": "shell"
+        },
         {
             "label": "Echo",
             "command": "echo",
-            "args": [ "${env:USERNAME}" ],
-            "type": "shell",
-        }
-        
+            "args": [
+                "${env:USERNAME}"
+            ],
+            "type": "shell"
+        },
         // {
-        //     "label": "new folder",
-        //     "command": "${command:explorer.newFolder}",
-        //     // "args": [
-        //     //     "ZZZZ"
-        //     // ],
-        //     "type": "process"
-        // }
-        // },
-        // {
-        //     "taskName": "View in Chrome",
-        //     "type": "process",
-        //     "command": "chrome.exe",
-        //     "windows": {
-        //     "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-        //     },
-        //     "args": [ 
-        //         "${workspaceRoot}/home.html"
-        //             ],
+        //     "type": "gulp",
+        //     "task": "sync",
         //     "problemMatcher": []
         // }
-
-
-        // {
-        //     "label": "Echo",
-        //     "command": "${command:workbench.files.action.collapseExplorerFolders}",
-        //     // "args": ["${command:workbench.files.action.collapseExplorerFolders}"],
-        //     "type": "shell",
-        // }
-
     ]
 }
 
