@@ -10,7 +10,7 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
-var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1382, "Brazil":1801, "Chile":493,
+var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1383, "Brazil":1801, "Chile":496,
   "Colombia":1845, "Curaçao":217, "Ecuador":1630, "French Guiana":698,
   "Guyana":783, "Paraguay":695, "Peru":1801, "Suriname":731, "Trinidad":469,
   "Uruguay":448, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3394};
@@ -18,14 +18,14 @@ var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1382, "Brazil":1
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
-var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":66,
+var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":67,
   "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":82,
   "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
   "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
 
-// South America : 102 families not including 2 incertae "families", 3488 total spp.
-//                 which includes one hypothetical (in one country only) Black Turnstone
-//                 class='fco'>(?!INCERTAE).*?  --> finds number of families not including INCERTAE in ..SACC.html
+// South America : 102 families not including 2 incertae "families", 3394 total spp.
+//
+//   class='fco'>(?!INCERTAE).*?  --> finds number of families not including INCERTAE in ..SACC.html
 
 
 var currentTaxonomyCountry;

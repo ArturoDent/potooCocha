@@ -20,6 +20,7 @@ var stripComments = require("gulp-strip-comments");
 var stripdebug = require("gulp-strip-debug");
 var modifyHTMLlinks = require("gulp-processhtml");
 var addVersionString = require("gulp-version-number");
+var print = require('gulp-print').default;
 
 // var imageMin = require("gulp-imagemin");
 
@@ -191,6 +192,7 @@ const versionConfig = {
 
 function processHTML()  {
   return gulp.src(paths.html.src)
+    .pipe(print())
 
   // modifyHTMLlinks: remove browserSync script link
   // update css/js links to .min.css or .min.js
@@ -224,24 +226,28 @@ function copySVG() {
 function copyCitations() {
   return gulp.src(paths.citations.src)
     .pipe(newer(paths.html.deploy))
+    .pipe(print())
     .pipe(gulp.dest(paths.html.deploy));
 }
 
 function copyAuthors() {
   return gulp.src(paths.authors.src)
     .pipe(newer(paths.authors.deploy))
+    .pipe(print())
     .pipe(gulp.dest(paths.authors.deploy));
 }
 
 function copyOccurrences() {
   return gulp.src(paths.occurrences.src)
     .pipe(newer(paths.occurrences.deploy))
+    .pipe(print())
     .pipe(gulp.dest(paths.occurrences.deploy));
 }
 
 function copyCountries() {
   return gulp.src(paths.countries.src)
     .pipe(newer(paths.countries.deploy))
+    .pipe(print())
     .pipe(gulp.dest(paths.countries.deploy));
 }
 
@@ -267,6 +273,7 @@ const buildGlobs = {
 function copyBuildSACCdata() {
   return gulp.src(buildGlobs.occurrences)
     .pipe(newer("./data"))
+    .pipe(print())
     .pipe(gulp.dest("./data"));
 }
 
@@ -274,6 +281,7 @@ function copyBuildSACCdata() {
 function copyBuildSACCcountries() {
   return gulp.src(buildGlobs.countries)
     .pipe(newer("./Countries"))
+    .pipe(print())
     .pipe(gulp.dest("./Countries"));
 }
 
@@ -362,5 +370,3 @@ gulp.task("getBuild", gulp.series(copyBuildSACCdata, copyBuildSACCcountries));
 
 gulp.task('deploy:E', gulp.series(deployExperimental));
 gulp.task('deploy:P', gulp.series(deployPotoococha));
-
-
