@@ -10,10 +10,10 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
-var numSpeciesList = { "Argentina":1004, "Aruba":219, "Bolivia":1383, "Brazil":1801, "Chile":496,
-  "Colombia":1845, "Curaçao":217, "Ecuador":1630, "French Guiana":698,
+var numSpeciesList = { "Argentina":1005, "Aruba":219, "Bolivia":1383, "Brazil":1802, "Chile":497,
+  "Colombia":1846, "Curaçao":217, "Ecuador":1631, "French Guiana":698,
   "Guyana":783, "Paraguay":695, "Peru":1801, "Suriname":731, "Trinidad":469,
-  "Uruguay":448, "Venezuela":1381, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3394};
+  "Uruguay":448, "Venezuela":1382, "Bonaire":209, "Falklands":227, "Malvinas":227, "South America": 3398};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
@@ -57,9 +57,8 @@ var searchSlideUpWrapper;
 var taxInstructionsButton;
 var searchInstructionsOpen = true;
 
-var selectedFillColor = "#fff";
 
-/* global   fillSAMmap SimpleBar selectedCountryFillColor currentMap   */
+/* global  SimpleBar  currentMap   */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -259,16 +258,16 @@ function loadCountryTaxonomy(evt) {
   // remove space from within "French Guiana", svg id = "FrenchGuiana"
   if (!lastQuery) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
-    var temp = taxCountry.replace(" ", "");
-    if (taxCountry !== "South America") selectedCountryFillColor(temp, selectedFillColor);
-    else fillSAMmap("", "");
+    // var temp = taxCountry.replace(" ", "");
+    // if (taxCountry !== "South America") selectedCountryFill(temp);
+    // else fillSAMmap("");
   }
 
   else if (lastQuery === "endemic" || lastQuery === "hypothetical"  || lastQuery === "vagrant" ||
       lastQuery === "incertae" || lastQuery === "extinct")  {
 
     currentMap.querySelector(".saveMapButton").style.display = "none";
-    if (taxCountry !== "South America") selectedCountryFillColor(taxCountry.replace(" ", ""), selectedFillColor);
+    // if (taxCountry !== "South America") selectedCountryFill(taxCountry.replace(" ", ""));
   }
 
   currentTaxonomyCountry = taxCountry;

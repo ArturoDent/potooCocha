@@ -25,7 +25,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/styles.min.css?v=20180612225840">
+  <link rel="stylesheet" href="css/styles.min.css?v=20180625172328">
     
 </head>
 
@@ -82,9 +82,36 @@
         </g>
       </symbol>
 
-
     </defs>
   </svg>
+
+      <div class="md-modal" id="countryModal">
+
+            <span type="button" id="countryButton" class="genericButton">select country</span>
+
+        <nav class="country-menu" contenteditable="false">
+      <div class="countryItem"><a>South America</a><div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div></div>
+      <div class="countryItem"><a>Aruba</a><div class="flag"><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></div></div>
+      <div class="countryItem"><a>Curaçao</a><div class="flag"><img src="../../../flags/32/Curacao.png"  alt="Flag of Curacao"></div></div>
+      <div class="countryItem"><a>Bonaire</a><div class="flag"><img src="../../../flags/32/Bonaire.png"  alt="Flag of Bonaire"></div></div>
+      <div class="countryItem"><a>Trinidad</a><div class="flag"><img src="../../../flags/32/Trinidad-and-tobago.png"  alt="Flag of Trinidad and Tobago"></div></div>
+      <div class="countryItem"><a>French Guiana</a><div class="flag"><img src="../../../flags/32/French-Southern.png"  alt="Flag of French Guiana"></div></div>
+      <div class="countryItem"><a>Suriname</a><div class="flag"><img src="../../../flags/32/Suriname.png"  alt="Flag of Suriname"></div></div>
+      <div class="countryItem"><a>Guyana</a><div class="flag"><img src="../../../flags/32/Guyana.png"  alt="Flag of Guyana"></div></div>
+      <div class="countryItem"><a>Venezuela</a><div class="flag"><img src="../../../flags/32/Venezuela.png"  alt="Flag of Venezuela"></div></div>
+      <div class="countryItem"><a>Colombia</a><div class="flag"><img src="../../../flags/32/Colombia.png"  alt="Flag of Colombia"></div></div>
+      <div class="countryItem"><a>Ecuador</a><div class="flag"><img src="../../../flags/32/Ecuador.png"  alt="Flag of Ecuador"></div></div>
+      <div class="countryItem"><a>Peru</a><div class="flag"><img src="../../../flags/32/Peru.png"  alt="Flag of Peru"></div></div>
+      <div class="countryItem"><a>Bolivia</a><div class="flag"><img src="../../../flags/32/Bolivia.png"  alt="Flag of Bolivia"></div></div>
+      <div class="countryItem"><a>Chile</a><div class="flag"><img src="../../../flags/32/Chile.png"  alt="Flag of Chile"></div></div>
+      <div class="countryItem"><a>Argentina</a><div class="flag"><img src="../../../flags/32/Argentina.png"  alt="Flag of Argentina"></div></div>
+      <div class="countryItem"><a>Falklands</a><div class="flag"><img src="../../../flags/32/Falkland-islands.png"  alt="Flag of British Falkland Islands"></div></div>
+      <div class="countryItem"><a>Brazil</a><div class="flag"><img src="../../../flags/32/Brazil.png"  alt="Flag of Brazil"></div></div>
+      <div class="countryItem"><a>Uruguay</a><div class="flag"><img src="../../../flags/32/Uruguay.png"  alt="Flag of Uruguay"></div></div>
+      <div class="countryItem"><a>Paraguay</a><div class="flag"><img src="../../../flags/32/Paraguay.png"  alt="Flag of Paraguay"></div></div>
+    </nav>
+
+      </div>
 
   <header class="titleBanner">Birds <span class="titleBanner_spacer">of</span> South America</header>
 
@@ -117,7 +144,7 @@
             <article id="taxonomyArticle">
 
         <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
-            target="_blank" rel="noopener">taxonomy</a> of the birds of <span id="searchCountryText">South America (June 12, 2018)</span>.</div>
+            target="_blank" rel="noopener">taxonomy</a> of the birds of <span id="searchCountryText">South America (June 21, 2018)</span>.</div>
 
         <span class="taxInstructionsButton hasTooltip">?<span class="tooltip">Close instructions</span></span>
 
@@ -302,20 +329,20 @@
 
         <div id="checklistOptions" class='panel'>
 
-          <div class="checklistTitle">CHECKLISTS</div>
-
-          <input id="lineNumbers" type="checkbox"><label for="lineNumbers">Line numbers</label><br>
+          <input id="lineNumbers"  type="checkbox"><label for="lineNumbers">Line numbers</label><br>
           <input id="showEndemics" type="checkbox"><label for="showEndemics">Show endemics</label><br>
-          <input id="leftCheck" type="checkbox"><label for="leftCheck">Left checkbox</label><br>
+          <input id="leftCheck"    type="checkbox"><label for="leftCheck">Left checkbox</label><br>
 
-          <input id="italics" type="checkbox"><label for="italics">No italics</label><br>
+          <input id="italics"  type="checkbox"><label for="italics">No italics</label><br>
           <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label>
 
           <span type="button" id="pdfButton" class="genericButton">checklist
-          <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
-        </span>
+            <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg>
+          </span>
 
           <span type="button" id="csvButton" class="genericButton">c,s,v file</span>
+
+                    <div class="checklistTitle">CHECKLISTS</div>
 
         </div>
 
@@ -384,38 +411,12 @@
     </div>
   </article>
 
-  <div class="md-modal" id="countryModal">
-
-      <span type="button" id="countryButton" class="genericButton">select country</span>
-
-        <nav class="country-menu" contenteditable="false">
-      <div class="countryItem"><a>South America</a><div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div></div>
-      <div class="countryItem"><a>Aruba</a><div class="flag"><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></div></div>
-      <div class="countryItem"><a>Curaçao</a><div class="flag"><img src="../../../flags/32/Curacao.png"  alt="Flag of Curacao"></div></div>
-      <div class="countryItem"><a>Bonaire</a><div class="flag"><img src="../../../flags/32/Bonaire.png"  alt="Flag of Bonaire"></div></div>
-      <div class="countryItem"><a>Trinidad</a><div class="flag"><img src="../../../flags/32/Trinidad-and-tobago.png"  alt="Flag of Trinidad and Tobago"></div></div>
-      <div class="countryItem"><a>French Guiana</a><div class="flag"><img src="../../../flags/32/French-Southern.png"  alt="Flag of French Guiana"></div></div>
-      <div class="countryItem"><a>Suriname</a><div class="flag"><img src="../../../flags/32/Suriname.png"  alt="Flag of Suriname"></div></div>
-      <div class="countryItem"><a>Guyana</a><div class="flag"><img src="../../../flags/32/Guyana.png"  alt="Flag of Guyana"></div></div>
-      <div class="countryItem"><a>Venezuela</a><div class="flag"><img src="../../../flags/32/Venezuela.png"  alt="Flag of Venezuela"></div></div>
-      <div class="countryItem"><a>Colombia</a><div class="flag"><img src="../../../flags/32/Colombia.png"  alt="Flag of Colombia"></div></div>
-      <div class="countryItem"><a>Ecuador</a><div class="flag"><img src="../../../flags/32/Ecuador.png"  alt="Flag of Ecuador"></div></div>
-      <div class="countryItem"><a>Peru</a><div class="flag"><img src="../../../flags/32/Peru.png"  alt="Flag of Peru"></div></div>
-      <div class="countryItem"><a>Bolivia</a><div class="flag"><img src="../../../flags/32/Bolivia.png"  alt="Flag of Bolivia"></div></div>
-      <div class="countryItem"><a>Chile</a><div class="flag"><img src="../../../flags/32/Chile.png"  alt="Flag of Chile"></div></div>
-      <div class="countryItem"><a>Argentina</a><div class="flag"><img src="../../../flags/32/Argentina.png"  alt="Flag of Argentina"></div></div>
-      <div class="countryItem"><a>Falklands</a><div class="flag"><img src="../../../flags/32/Falkland-islands.png"  alt="Flag of British Falkland Islands"></div></div>
-      <div class="countryItem"><a>Brazil</a><div class="flag"><img src="../../../flags/32/Brazil.png"  alt="Flag of Brazil"></div></div>
-      <div class="countryItem"><a>Uruguay</a><div class="flag"><img src="../../../flags/32/Uruguay.png"  alt="Flag of Uruguay"></div></div>
-      <div class="countryItem"><a>Paraguay</a><div class="flag"><img src="../../../flags/32/Paraguay.png"  alt="Flag of Paraguay"></div></div>
-    </nav>
-  </div>
-
   <div class="md-overlay">
-    <div class="overlayInfo">Choose "South America" if you wish to use the taxonomy of <span class="underline">all</span> countries for a search or checklist.</div>
+    <div class="overlayInfo"><span>Choose "South America" if you wish to use the taxonomy of <span class="underline">all</span> countries for a search or checklist.</span></div>
+    <span class="backgroundBox">potoococha</span>
   </div>
 
-    <script src="js/app.min.js?v=20180612225840"></script>
+    <script src="js/app.min.js?v=20180625172328"></script>
 
 </body>
 </html>

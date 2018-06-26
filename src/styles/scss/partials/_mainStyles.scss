@@ -74,10 +74,12 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
     position  :  relative;
     top  :  -13px;
     left : -3px;
-    margin: 0 0 0 5px;
+     margin: 0 0 0 5px;
+    // padding: 3px;
 
     letter-spacing  :  0.1em;
-    color : #df6757;
+    // color : #df6757;
+    color : white;
     // color : gold;
     font-size  :  1.5rem;
     font-variant  :  normal;
@@ -86,7 +88,12 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
 
     // poor support 2017-08
     // text-decoration: underline  $;
-    border-bottom: 4px double #df6757;
+    // border-bottom: 4px double #df6757;
+    // border: 4px double #df6757;
+    border-bottom: 4px double white;
+    
+    // box-shadow:  0 0 5px white;
+    
     // border-bottom: 4px double gold;
 }
 

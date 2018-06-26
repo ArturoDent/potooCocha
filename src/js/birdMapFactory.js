@@ -52,7 +52,7 @@ function deleteMap(evt)  {
 
   var birdInstance = this.parentNode;
 
-  //  FIXME  :  (rmemove any listeners first)
+  //  FIXME  :  (remove any listeners first)
 
   birdInstance.parentNode.removeChild(this.parentNode);
 

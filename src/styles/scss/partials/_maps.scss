@@ -1,18 +1,11 @@
 #mapsCollection  {
-    // display: flex;
-    // justify-content: center;
-    
-    // align-items: stretch;
-
     position  :  fixed;
     top : 95vh;
     left  :  0;
     width : 100vw;
     height  :  355px;
-
     margin  :  0;
     padding  :  0;
-    // text-align  :  center;
 
     background-color: $titleBannerColor;
     box-shadow  :  0 -3px 3px rgba(0,0,0,0.3);
@@ -116,34 +109,6 @@
     transition: all 500ms;
 }
 
-// .smallBird0 {
-//     left : 40vw;
-// }
-
-// .smallBird1 {
-//     left : 20vw;
-// }
-
-// .smallBird2 {
-//     left : 40vw;
-// }
-
-// .smallBird3 {
-//     left : 60vw;
-// }
-
-// .smallBird4 {
-//     left : 80vw;
-// }
-
-// .thinify  {
-    
-//     // position  :  relative;
-//     // left : 3%;
-//     // margin-left : -1.5%;
-//     transition: all 500ms;
-// }
-
 .offscreen {
     position  :  relative;
     
@@ -177,7 +142,6 @@
     font-style  :  italic;
 }
 
-// .birdName.smallBirdText   {
 .smallBirdText   {
     position  :  absolute;
     
@@ -269,8 +233,8 @@
 }
 
 .drawing.active  {
-    -webkit-filter  :  drop-shadow( 0 0 8px rgba(0, 0, 0, 0.6) );
-            filter  :  drop-shadow( 0 0 8px rgba(0, 0, 0, 0.6) );
+    -webkit-filter  :  drop-shadow( 0 0 3px rgba(0, 0, 0, 0.8) );
+            filter  :  drop-shadow( 0 0 3px rgba(0, 0, 0, 0.8) );
 }
 
 .colorKey {

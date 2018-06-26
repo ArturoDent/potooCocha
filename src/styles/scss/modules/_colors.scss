@@ -1,9 +1,7 @@
 $bodyBorderColor : darken(#A65751, 5%);
-// $bgColor  :  rgb(68, 67, 67);
-// $bgColor  :  rgb(145, 145, 145);
-// $bgColor  :  rgb(120, 120, 110);
-// $bgColor  :  #8a8a8a;
-$bgColor  :  #5c5c62;
+// $bgColor  :  #424f54;
+// $bgColor  :  #5c5c62;
+$bgColor  :  #636b6f;
 
 $titleTextFontColor : #d5d5d5;
 // $titleTextFontColor : #913c0b;
@@ -33,4 +31,4 @@ $birdActiveColor : #A65751;
 $countryMenuColor : darken($bgColor, 15%);
 $countryMenuHighlightColor : #ce402e;
 // $countryMenuHighlightColor : #2e2e2e;
-$overlayInfoColor : transparent;
+$overlayInfoColor : darken($bgColor, 10%);

@@ -6,16 +6,19 @@
 }
 
 #checklistAuthorsPanel  {
-    position: relative;
+    // position: relative;
+    display: inline-block;
     opacity: 0;
     height : auto;
-    margin : 0 1ch 6ch 1ch;
-    padding : 0.7ch 1ch 0.8ch 2ch;
+    width: auto;
+    max-width: 91%;
+    margin : 0 0 6ch 2ch;
+    padding : 0.8ch 2ch 1ch 3ch;
 
     font-variant: small-caps;
     font-size  :  0.8rem;
-    text-align  :  center;
-    line-height  :  1rem;
+    // text-align  :  center;
+    line-height  :  1.1rem;
     color: $panelFlyoutFontColor;
     background-color : $panelFlyoutColor;
     border-bottom-left-radius: 10px;
@@ -49,18 +52,21 @@
                                      // "Checklists"  **************************************************
 .checklistTitle  {
     position  :  absolute;
-    top  :  1ch;
-    left  :  -44%;
+    // top  :  1ch;
+    top  :  -130%;
+    // left  :  -44%;
+    left  :  -21vw;
 
     font-size  :  1.25rem;
+    // font-size  :  4rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  white;
+    color  :  rgba(255, 255, 255, 0);
 
-    text-shadow : 0 0 3px rgba(0,0,0,1);
+    text-shadow : 0 0 2px rgba(0,0,0,0.5);
     letter-spacing  :  0.2em;
 
-    transform  :  rotate(-86deg);
+    transform  :  rotate(-86deg) scale(2.5);
     -webkit-transform-origin  :  top right;
        -moz-transform-origin  :  top right;
         -ms-transform-origin  :  top right;

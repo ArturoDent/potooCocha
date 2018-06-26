@@ -28,7 +28,7 @@ var csvButton;
 
 // var map;
 
-/* global  map  loadCountryTaxonomy  selectedCountryFillColor getAjax currentMap selectedFillColor fillSAMmap  */
+/* global  map loadCountryTaxonomy selectedCountryFill getAjax currentMap fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("window.width = " + window.innerWidth);
@@ -235,8 +235,8 @@ function choseChecklistCountry(evt) {
   currentMap.querySelector(".saveMapButton").style.display = "none";
   currentMap.querySelector(".colorKey").style.opacity = "0";
 
-  if (selectedCountry !== "South America") selectedCountryFillColor(currentChecklistCountry, selectedFillColor);
-  else fillSAMmap("", "");
+  if (selectedCountry !== "South America") selectedCountryFill(currentChecklistCountry);
+  else fillSAMmap("");
 
   if (currentChecklistCountry === "Curaçao") {
     getAjax("Authors/" + "Curacao.txt", setChecklistAuthors);
@@ -244,19 +244,33 @@ function choseChecklistCountry(evt) {
   else getAjax("Authors/" + currentChecklistCountry + ".txt", setChecklistAuthors);
 }
 
-// ^(.*\\.) \\d\\d\\d\\d\\..*(Version.*$)
 function setChecklistAuthors(data) {
 
-  if (currentChecklistCountry === "SouthAmerica") {
-    checklistAuthorsPanel.innerHTML = "&nbsp;&nbsp;c<a href='citations.html' target='_blank'>itation</a>s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+  // Remsen, J. V., Jr., J. I. Areta, C. D. Cadena, S. Claramunt, A. Jaramillo, J. F. Pacheco, M. B. Robbins, F. G. Stiles, D. F. Stotz, and K. J. Zimmer.
+  // Version 21 June 2018. A classification of the bird species of South America.American Ornithologists' Union.
 
-    checklistAuthorsPanel.classList.add("show");
-    return;
+  var authors;
+
+  if (currentChecklistCountry === "SouthAmerica") {
+    authors = data.replace(/^.*(Version.*)$/g, "$1");
   }
 
-  var authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
-  checklistAuthorsPanel.innerHTML = authors;
+  else if (currentChecklistCountry === "Colombia") {
+    authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
+  }
 
+  // Asociación Colombiana de Ornitología checklist committee (Jorge E. Avendaño, Clara I. Bohórquez, Loreta Rosselli, Diana Arzuza-Buelvas,
+  // Felipe A.Estela, Andrés M.Cuervo, F.Gary Stiles, and Luis Miguel Renjifo). 2018.
+  // Species lists of birds for South American countries and territories: Colombia.Version 16 February 2018.
+
+  // Freile, J. F., R. Ahlman, R. S. Ridgely, A. Solano-Ugalde, D. Brinkhuizen, L. Navarrete, and P. J. Greenfield.
+  // 2018. Species lists of birds for South American countries and territories: Ecuador.Version 15 February 2017.
+
+  else {
+    authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
+  }
+
+  checklistAuthorsPanel.innerHTML = authors;
   checklistAuthorsPanel.classList.add("show");
 }
 

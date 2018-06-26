@@ -7,21 +7,17 @@ var countries  = { "Argentina":0, "Aruba":1, "Bolivia":2, "Brazil":3, "Chile":4,
   "Guyana":9, "Paraguay":10, "Peru":11, "Suriname":12, "Trinidad":13,
   "Uruguay":14, "Venezuela":15, "Bonaire":16, "Falklands":17 };
 
-
 var endemicColor         =  "#C23BC3";
 var extinctColor         =  "#f33";
-// var residentColor        =  "#678";
 var residentColor        =  "#00838f";
-
-// var nonBreederColor      =  "#df7900";
 var nonBreederColor      =  "#994c00";
 var vagrantColor         =  "gold";
 var hypotheticalColor    =  "#005903";
-// var hypotheticalColor    =  "#007913";
 var introducedColor      =  "#222";
 
-var baseColor            =  "​#444";
-var baseStrokeColor      =  "#bbb";
+var baseColor                =  "​#535b5f";
+var baseStrokeColor          =  "#bbb";
+var selectedCountryFillColor = '#fff';
 
 /* global addBirdNameToMap birds currentMap */
 
@@ -79,10 +75,8 @@ function setSVGstyles(obj )  {
   }
 }
 
-function fillSAMmap(color, skipCountry)  {
-// console.log(' in fillSAMap ');
+function fillSAMmap(skipCountry)  {
 
-  if (!color) color = baseColor;
   var svg;
   svg = currentMap.querySelector("#SAMsvg");
   var svgDoc = svg.contentDocument;
@@ -91,8 +85,7 @@ function fillSAMmap(color, skipCountry)  {
 
     var cc = svgDoc.getElementById(country);
     if (!cc || cc === skipCountry) continue;
-    // console.log(country);
-    newFillColor(cc, color);
+    newFillColor(cc, baseColor);
     newStrokeColor(cc, baseStrokeColor);
   }
   addBirdNameToMap("");
@@ -101,10 +94,12 @@ function fillSAMmap(color, skipCountry)  {
 function newFillColor(obj, newColor) {
 
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
+    //  HACK : (why does this have to be hardcoded? And below.)
     if (newColor === baseColor) {
-      obj.style.fill = "#444";
+      obj.style.fill = "#535b5f";
     }
-    obj.style.fill = newColor;
+    else obj.style.fill = newColor;
+
     if (newColor !== vagrantColor) obj.style.stroke = baseStrokeColor;
   }
 
@@ -116,25 +111,25 @@ function newFillColor(obj, newColor) {
     for (var i = 0; i < len; i++)  {
 
       if (newColor === baseColor) {
-        paths[i].style.fill = "#444";
+        paths[i].style.fill = "#535b5f";
       }
+      else paths[i].style.fill = newColor;
 
-      paths[i].style.fill = newColor;
       if (newColor !== vagrantColor) paths[i].style.stroke = baseStrokeColor;
     }
   }
 }
 // eslint-disable-next-line
-function selectedCountryFillColor(selectedCountry, color)  {
+function selectedCountryFill(selectedCountry)  {
 
   var svg = currentMap.querySelector("#SAMsvg");
   var svgDoc = svg.contentDocument;
 
   var cc = svgDoc.getElementById(selectedCountry);
-
+  
   // if (cc) {
-  fillSAMmap(baseColor, cc);
-  newFillColor(cc, color);
+  fillSAMmap(cc);
+  newFillColor(cc, selectedCountryFillColor);
   newStrokeColor(cc, baseStrokeColor);
   // }
   // else fillSAMmap(baseColor, selectedCountry);
@@ -142,6 +137,7 @@ function selectedCountryFillColor(selectedCountry, color)  {
 
 function newStrokeColor(obj, newColor) {
 
+  // TODO : (boost the Falklands stroke color?)
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
     obj.style.stroke = newColor;
   }
@@ -153,24 +149,14 @@ function newStrokeColor(obj, newColor) {
     var len = paths.length;
     for (var i = 0; i < len; i++)  {
 
-      paths[i].style.stroke = newColor;
+      if (obj.id === "Falklands") {
+        paths[i].style.stroke = "#fff";
+      }
+      
+      else paths[i].style.stroke = newColor;
     }
   }
 }
-
-// function selectedCountryStrokeColor(selectedCountry, color) {
-
-//   console.log("selectedCountryStrokeColor");
-
-//   var svg = currentMap.querySelector("#SAMsvg");
-//   var svgDoc = svg.contentDocument;
-
-//   var cc = svgDoc.getElementById(selectedCountry);
-
-//   if (cc) {
-//     newStrokeColor(cc, color);
-//   }
-// }
 
 /* global  mapsCollection saveMapButton  */
 // eslint-disable-next-line
@@ -216,7 +202,7 @@ function highlightSAMmap(index, current) {
     case "V":
 
       newFillColor(cc, vagrantColor);
-      newStrokeColor(cc, '#444');
+      newStrokeColor(cc, '#535b5f');
       break;
 
     case "H":

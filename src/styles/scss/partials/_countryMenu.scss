@@ -47,12 +47,55 @@
   transition: all 1000ms;
 }
 
+.backgroundBox {
+  position: absolute;
+  // left: 0;
+  // top: 0;
+  left: -1vw;
+  top:  90vh;
+  
+  height: 5vh;
+  width: 104vw;
+  padding-left: 5%;
+  line-height: 3.5vh;
+  // color: black;
+  // // border: 1px solid gold;
+  background-color: $genericButtonColor;
+  border: 5px double white;
+  
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.7); 
+  
+  // transform: rotateX(45deg);
+  // border-radius: 50%;
+  // background-color: rgba(255,255,0, 0.2);
+  // box-shadow: inset -20px 0 10vw black, -50px 0 5vw darkgray;
+  // box-shadow: -50px 0 5vw $genericButtonColor;
+  // box-shadow: inset -10px 0 10px black, -10px 0 10px rgba(0,0,0,0.3);
+  // transition: all 1000ms;
+  // z-index: -2;
+}
+
+  // .md-show ~ .md-overlay > .backgroundCircle  {
+  //   left: 0;
+  //   top: -30vh;
+  //   height: 100vw;
+  //   width: 100vw;
+  // }
+
+// TODO : (separately fade in/out)
+
 .overlayInfo  {
+  display: flex;
+  // align-content: center;
+  align-items: center;
   width: 20vw;
+  height: 20vw;
   min-width: 250px;
+  min-height: 250px;
+  
   padding: 20px;
   margin-right: 350px;
-  
+  // vertical-align: middle;
   pointer-events: none;
   
   font-size: 1.2em;
@@ -60,10 +103,15 @@
   line-height: 1.6em;
   text-align: center;
   
-  border: 3px single rgba(255,255,255,0.5);
-  border-radius:  10px;
+  // border: 4px double transparent;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  
+  // border-bottom: 4px solid $genericButtonColor;
+  
+  border-radius:  50%;
   background-color: $overlayInfoColor;
-  box-shadow:  inset 0 0 4px white, 0 0 4px rgba(0,0,0,0.7);
+  box-shadow:  inset 0 0 3px rgba(0,0,0,1);
 }
 
 // .overlayInfo .underline
