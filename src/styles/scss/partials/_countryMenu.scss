@@ -49,6 +49,7 @@
 
 .backgroundBox {
   position: absolute;
+  opacity: 0.4;
   // left: 0;
   // top: 0;
   left: -1vw;
@@ -189,6 +190,10 @@
   height: 100vh;
   font-size: 1rem;
   background-color: $countryMenuColor;
+  border-left: 1px solid rgba(0,0,0,0.3);
+  border-right: 1px solid rgba(0,0,0,0.3);
+  // box-shadow: 0 0 12px black;
+  box-shadow: -2px 0 2px rgba(0,0,0,0.2), 2px 0 2px rgba(0,0,0,0.2);
 }
 
 .countryItem {

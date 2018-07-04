@@ -170,4 +170,45 @@ var counterModule = (function() {
 
 <!-- height="342mm"
    width="209mm" -->
+   
+   // gulp.task('Preprocess HTML', function () {
+//   console.log("in Preprocess HTML");
+//   return gulp.src('./');
+// });
 
+// // function PreprocessHTML() {
+// //   console.log("in Preprocess HTML");
+// //   return gulp.src('./');
+// // }
+
+// function PreprocessStyles() {
+//   console.log("in Preprocess styles");
+//   return gulp.src('./');
+// }
+
+// function testTaskTrue() {
+//   console.log("in testTaskTrue");
+//   return gulp.src('./');
+// }
+
+// function testTaskFalse() {
+//   console.log("in testTaskFalse");
+//   return gulp.src('./');
+// }
+
+// function checkSomeCondition() {
+//   console.log("in checkSomeCondition");
+//   return false;
+// }
+
+// gulp.task('test', gulp.parallel( 'Preprocess HTML',  PreprocessStyles,
+//   done => {
+//     if (checkSomeCondition()) {
+//       testTaskTrue();
+//     }
+//     else {
+//       testTaskFalse();
+//     }
+//     done();
+//   }
+// ));

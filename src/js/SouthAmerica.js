@@ -119,14 +119,15 @@ function newFillColor(obj, newColor) {
     }
   }
 }
+
 // eslint-disable-next-line
-function selectedCountryFill(selectedCountry)  {
+function selectedCountryFill(selectedCountry) {
 
   var svg = currentMap.querySelector("#SAMsvg");
   var svgDoc = svg.contentDocument;
 
   var cc = svgDoc.getElementById(selectedCountry);
-  
+
   // if (cc) {
   fillSAMmap(cc);
   newFillColor(cc, selectedCountryFillColor);
@@ -152,7 +153,7 @@ function newStrokeColor(obj, newColor) {
       if (obj.id === "Falklands") {
         paths[i].style.stroke = "#fff";
       }
-      
+
       else paths[i].style.stroke = newColor;
     }
   }

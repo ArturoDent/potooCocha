@@ -252,11 +252,13 @@ function setChecklistAuthors(data) {
   var authors;
 
   if (currentChecklistCountry === "SouthAmerica") {
-    authors = data.replace(/^.*(Version.*)$/g, "$1");
+    // authors = data.replace(/^.*(Version.*)$/g, "$1");
+    authors = data.replace(/^.*Version(.*)$/g, "Remsen, et al. $1");
   }
 
   else if (currentChecklistCountry === "Colombia") {
-    authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
+    authors = data.replace(/^(.*)\s+\(.*\).*Version(.*)$/g, "$1. $2");
+    // authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
   }
 
   // Asociación Colombiana de Ornitología checklist committee (Jorge E. Avendaño, Clara I. Bohórquez, Loreta Rosselli, Diana Arzuza-Buelvas,
