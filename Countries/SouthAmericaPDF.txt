@@ -78,17 +78,18 @@ DUCKS,ANATIDAE
 ,,Northern Shoveler,S. clypeata
 ,,Blue-winged Teal,S. discors
 ,,Cinnamon Teal,S. cyanoptera
-30,,American Wigeon,Mareca americana
+30,,Eurasian Wigeon,Mareca penelope
+,,American Wigeon,M. americana
 ,,Chiloe Wigeon,M. sibilatrix
 ,,White-cheeked Pintail,Anas bahamensis
 ,,Northern Pintail,A. acuta
-,,Yellow-billed Pintail,A. georgica
-35,,Green-winged Teal,A. crecca
+35,,Yellow-billed Pintail,A. georgica
+,,Green-winged Teal,A. crecca
 ,,Andean Teal,A. andium
 ,,Yellow-billed Teal,A. flavirostris
 ,,Southern Pochard,Netta erythrophthalma
-,,Rosy-billed Pochard,N. peposaca
-40,,Ring-necked Duck,Aythya collaris
+40,,Rosy-billed Pochard,N. peposaca
+,,Ring-necked Duck,Aythya collaris
 ,,Lesser Scaup,A. affinis
 ,,Black-headed Duck,Heteronetta atricapilla
 ,,Masked Duck,Nomonyx dominicus
@@ -823,54 +824,55 @@ ALBATROSSES,DIOMEDEIDAE
 SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Northern Giant-Petrel,M. halli
-,,Southern Fulmar,Fulmarus glacialoides
-,,Antarctic Petrel,Thalassoica antarctica
-5,,Cape Petrel,Daption capense
+,,Northern Fulmar,Fulmarus glacialis
+,,Southern Fulmar,F. glacialoides
+5,,Antarctic Petrel,Thalassoica antarctica
+,,Cape Petrel,Daption capense
 ,,Snow Petrel,Pagodroma nivea
 ,,Kerguelen Petrel,Aphrodroma brevirostris
 ,,Gould's Petrel,Pterodroma leucoptera
-,,Great-winged Petrel,P. macroptera
-10,,Soft-plumaged Petrel,P. mollis
+10,,Great-winged Petrel,P. macroptera
+,,Soft-plumaged Petrel,P. mollis
 ,,Black-capped Petrel,P. hasitata
 ,,Atlantic Petrel,P. incerta
 ,,White-headed Petrel,P. lessonii
-,,Cook's Petrel,P. cookii
-15,,Black-winged Petrel,P. nigripennis
+15,,Cook's Petrel,P. cookii
+,,Black-winged Petrel,P. nigripennis
 ,,Masatierra Petrel,P. defilippiana
 ,,Stejneger's Petrel,P. longirostris
 ,,Murphy's Petrel,P. ultima
-,,Kermadec Petrel,P. neglecta
-20,,Trindade Petrel,P. arminjoniana
+20,,Kermadec Petrel,P. neglecta
+,,Trindade Petrel,P. arminjoniana
 ,,Mottled Petrel,P. inexpectata
 ,,Galapagos Petrel,P. phaeopygia
 ,,Juan Fernandez Petrel,P. externa
-,,Fea's Petrel,P. feae
-25,,Blue Petrel,Halobaena caerulea
+25,,Fea's Petrel,P. feae
+,,Blue Petrel,Halobaena caerulea
 ,,Fairy Prion,Pachyptila turtur
 ,,Broad-billed Prion,P. vittata
 ,,Antarctic Prion,P. desolata
-,,Slender-billed Prion,P. belcheri
-30,,Bulwer's Petrel,Bulweria bulwerii
+30,,Slender-billed Prion,P. belcheri
+,,Bulwer's Petrel,Bulweria bulwerii
 ,,Gray Petrel,Procellaria cinerea
 ,,White-chinned Petrel,P. aequinoctialis
 ,,Spectacled Petrel,P. conspicillata
-,,Parkinson's Petrel,P. parkinsoni
-35,,Westland Petrel,P. westlandica
+35,,Parkinson's Petrel,P. parkinsoni
+,,Westland Petrel,P. westlandica
 ,,Cory's Shearwater,Calonectris diomedea
 ,,Cape Verde Shearwater,C. edwardsii
 ,,Wedge-tailed Shearwater,Ardenna pacifica
-,,Buller's Shearwater,A. bulleri
-40,,Short-tailed Shearwater,A. tenuirostris
+40,,Buller's Shearwater,A. bulleri
+,,Short-tailed Shearwater,A. tenuirostris
 ,,Sooty Shearwater,A. grisea
 ,,Great Shearwater,A. gravis
 ,,Pink-footed Shearwater,A. creatopus
-,,Flesh-footed Shearwater,A. carneipes
-45,,Manx Shearwater,Puffinus puffinus
+45,,Flesh-footed Shearwater,A. carneipes
+,,Manx Shearwater,Puffinus puffinus
 ,endemic,Galapagos Shearwater,P. subalaris
 ,,Little Shearwater,P. assimilis
 ,,Audubon's Shearwater,P. lherminieri
-,,Peruvian Diving-Petrel,Pelecanoides garnotii
-50,,Common Diving-Petrel,P. urinatrix
+50,,Peruvian Diving-Petrel,Pelecanoides garnotii
+,,Common Diving-Petrel,P. urinatrix
 ,,South Georgia Diving-Petrel,P. georgicus
 ,,Magellanic Diving-Petrel,P. magellani
 STORM-PETRELS,HYDROBATIDAE
@@ -1529,166 +1531,168 @@ ANTBIRDS,THAMNOPHILIDAE
 ,,Plain-throated Antwren,Isleria hauxwelli
 ,,Rufous-bellied Antwren,I. guttata
 ,,Spot-winged Antshrike,Pygiptila stellaris
-,,Checker-throated Antwren,Epinecrophylla fulviventris
-70,,Brown-bellied Antwren,E. gutturalis
-,,White-eyed Antwren,E. leucophthalma
-,,Stipple-throated Antwren,E. haematonota
-,,Brown-backed Antwren,E. fjeldsaai
-,,Foothill Antwren,E. spodionota
-75,,Ornate Antwren,E. ornata
-,,Rufous-tailed Antwren,E. erythrura
+,,Checker-throated Stipplethroat,Epinecrophylla fulviventris
+70,,Brown-bellied Stipplethroat,E. gutturalis
+,,White-eyed Stipplethroat,E. leucophthalma
+,,Rio Negro Stipplethroat,E. pyrrhonota
+,,Rufous-backed Stipplethroat,E. haematonota
+,,Yasuni Stipplethroat,E. fjeldsaai
+75,,Rio Madeira Stipplethroat,E. amazonica
+,,Foothill Stipplethroat,E. spodionota
+,,Ornate Stipplethroat,E. ornata
+,,Rufous-tailed Stipplethroat,E. erythrura
 ,,Pygmy Antwren,Myrmotherula brachyura
-,,Moustached Antwren,M. ignota
+80,,Moustached Antwren,M. ignota
 ,,Yellow-throated Antwren,M. ambigua
-80,,Sclater's Antwren,M. sclateri
+,,Sclater's Antwren,M. sclateri
 ,,Guianan Streaked-Antwren,M. surinamensis
 ,,Amazonian Streaked-Antwren,M. multostriata
-,,Pacific Antwren,M. pacifica
+85,,Pacific Antwren,M. pacifica
 ,,Cherrie's Antwren,M. cherriei
-85,endemic,Klages's Antwren,M. klagesi
+,endemic,Klages's Antwren,M. klagesi
 ,,Stripe-chested Antwren,M. longicauda
 ,,White-flanked Antwren,M. axillaris
-,,Slaty Antwren,M. schisticolor
+90,,Slaty Antwren,M. schisticolor
 ,,Rio Suno Antwren,M. sunensis
-90,endemic,Salvadori's Antwren,M. minor
+,endemic,Salvadori's Antwren,M. minor
 ,,Long-winged Antwren,M. longipennis
 ,endemic,Band-tailed Antwren,M. urosticta
-,,Ihering's Antwren,M. iheringi
+95,,Ihering's Antwren,M. iheringi
 ,endemic,Rio de Janeiro Antwren,M. fluminensis
-95,,Ashy Antwren,M. grisea
+,,Ashy Antwren,M. grisea
 ,endemic,Unicolored Antwren,M. unicolor
 ,endemic,Alagoas Antwren,M. snowi
-,,Plain-winged Antwren,M. behni
+100,,Plain-winged Antwren,M. behni
 ,,Gray Antwren,M. menetriesii
-100,,Leaden Antwren,M. assimilis
+,,Leaden Antwren,M. assimilis
 ,,Banded Antbird,Dichrozona cincta
 ,,Stripe-backed Antbird,Myrmorchilus strigilatus
-,endemic,Caatinga Antwren,Herpsilochmus sellowi
+105,endemic,Caatinga Antwren,Herpsilochmus sellowi
 ,endemic,Ash-throated Antwren,H. parkeri
-105,endemic,Creamy-bellied Antwren,H. motacilloides
+,endemic,Creamy-bellied Antwren,H. motacilloides
 ,endemic,Predicted Antwren,H. praedictus
 ,endemic,Aripuana Antwren,H. stotzi
-,,Black-capped Antwren,H. atricapillus
+110,,Black-capped Antwren,H. atricapillus
 ,endemic,Bahia Antwren,H. pileatus
-110,,Spot-tailed Antwren,H. sticturus
+,,Spot-tailed Antwren,H. sticturus
 ,,Dugand's Antwren,H. dugandi
 ,,Todd's Antwren,H. stictocephalus
-,,Ancient Antwren,H. gentryi
+115,,Ancient Antwren,H. gentryi
 ,,Spot-backed Antwren,H. dorsimaculatus
-115,,Roraiman Antwren,H. roraimae
+,,Roraiman Antwren,H. roraimae
 ,endemic,Pectoral Antwren,H. pectoralis
 ,,Large-billed Antwren,H. longirostris
-,,Yellow-breasted Antwren,H. axillaris
+120,,Yellow-breasted Antwren,H. axillaris
 ,,Rufous-winged Antwren,H. rufimarginatus
-120,,Dot-winged Antwren,Microrhopias quixensis
+,,Dot-winged Antwren,Microrhopias quixensis
 ,endemic,Narrow-billed Antwren,Formicivora iheringi
 ,endemic,Black-hooded Antwren,F. erythronotos
-,,White-fringed Antwren,F. grisea
+125,,White-fringed Antwren,F. grisea
 ,endemic,Serra Antwren,F. serrana
-125,endemic,Restinga Antwren,F. littoralis
+,endemic,Restinga Antwren,F. littoralis
 ,,Black-bellied Antwren,F. melanogaster
 ,,Rusty-backed Antwren,F. rufa
-,endemic,Sincora Antwren,F. grantsaui
+130,endemic,Sincora Antwren,F. grantsaui
 ,endemic,Parana Antwren,Stymphalornis acutirostris
-130,endemic,Ferruginous Antbird,Drymophila ferruginea
+,endemic,Ferruginous Antbird,Drymophila ferruginea
 ,,Bertoni's Antbird,D. rubricollis
 ,endemic,Rufous-tailed Antbird,D. genei
-,endemic,Ochre-rumped Antbird,D. ochropyga
+135,endemic,Ochre-rumped Antbird,D. ochropyga
 ,,Dusky-tailed Antbird,D. malura
-135,endemic,Scaled Antbird,D. squamata
+,endemic,Scaled Antbird,D. squamata
 ,,Striated Antbird,D. devillei
 ,endemic,Santa Marta Antbird,D. hellmayri
-,,Klages's Antbird,D. klagesi
+140,,Klages's Antbird,D. klagesi
 ,endemic,East Andean Antbird,D. caudata
-140,,Streak-headed Antbird,D. striaticeps
+,,Streak-headed Antbird,D. striaticeps
 ,,Guianan Warbling-Antbird,Hypocnemis cantator
 ,,Imeri Warbling-Antbird,H. flavescens
-,,Peruvian Warbling-Antbird,H. peruviana
+145,,Peruvian Warbling-Antbird,H. peruviana
 ,,Yellow-breasted Warbling-Antbird,H. subflava
-145,endemic,Manicore Warbling-Antbird,H. rondoni
+,endemic,Manicore Warbling-Antbird,H. rondoni
 ,,Rondonia Warbling-Antbird,H. ochrogyna
 ,endemic,Spix's Warbling-Antbird,H. striata
-,,Yellow-browed Antbird,H. hypoxantha
+150,,Yellow-browed Antbird,H. hypoxantha
 ,endemic,Orange-bellied Antwren,Terenura sicki
-150,,Streak-capped Antwren,T. maculata
+,,Streak-capped Antwren,T. maculata
 ,,Willis's Antbird,Cercomacroides laeta
 ,endemic,Parker's Antbird,C. parkeri
-,,Dusky Antbird,C. tyrannina
+155,,Dusky Antbird,C. tyrannina
 ,,Black Antbird,C. serva
-155,,Blackish Antbird,C. nigrescens
+,,Blackish Antbird,C. nigrescens
 ,,Riparian Antbird,C. fuscicauda
 ,,Manu Antbird,Cercomacra manu
-,,Gray Antbird,C. cinerascens
+160,,Gray Antbird,C. cinerascens
 ,endemic,Rio de Janeiro Antbird,C. brasiliana
-160,,Mato Grosso Antbird,C. melanaria
+,,Mato Grosso Antbird,C. melanaria
 ,endemic,Bananal Antbird,C. ferdinandi
 ,,Jet Antbird,C. nigricans
-,,Rio Branco Antbird,C. carbonaria
+165,,Rio Branco Antbird,C. carbonaria
 ,,White-backed Fire-eye,Pyriglena leuconota
-165,endemic,Fringe-backed Fire-eye,P. atra
+,endemic,Fringe-backed Fire-eye,P. atra
 ,,White-shouldered Fire-eye,P. leucoptera
 ,endemic,Slender Antbird,Rhopornis ardesiacus
-,,White-browed Antbird,Myrmoborus leucophrys
+170,,White-browed Antbird,Myrmoborus leucophrys
 ,,Ash-breasted Antbird,M. lugubris
-170,,Black-faced Antbird,M. myotherinus
+,,Black-faced Antbird,M. myotherinus
 ,,Black-tailed Antbird,M. melanurus
 ,,White-lined Antbird,M. lophotes
-,,Black-chinned Antbird,Hypocnemoides melanopogon
+175,,Black-chinned Antbird,Hypocnemoides melanopogon
 ,,Band-tailed Antbird,H. maculicauda
-175,,Black-and-white Antbird,Myrmochanes hemileucus
+,,Black-and-white Antbird,Myrmochanes hemileucus
 ,,Bare-crowned Antbird,Gymnocichla nudiceps
 ,,Silvered Antbird,Sclateria naevia
-,,Black-headed Antbird,Percnostola rufifrons
+180,,Black-headed Antbird,Percnostola rufifrons
 ,endemic,Allpahuayo Antbird,P. arenarum
-180,,Slate-colored Antbird,Myrmelastes schistaceus
+,,Slate-colored Antbird,Myrmelastes schistaceus
 ,,Roraiman Antbird,M. saturatus
 ,,Plumbeous Antbird,M. hyperythrus
-,,Spot-winged Antbird,M. leucostigma
+185,,Spot-winged Antbird,M. leucostigma
 ,,Humaita Antbird,M. humaythae
-185,,Brownish-headed Antbird,M. brunneiceps
+,,Brownish-headed Antbird,M. brunneiceps
 ,endemic,Rufous-faced Antbird,M. rufifacies
 ,,Caura Antbird,M. caurensis
-,,White-bellied Antbird,Myrmeciza longipes
+190,,White-bellied Antbird,Myrmeciza longipes
 ,,Chestnut-backed Antbird,Poliocrania exsul
-190,,Gray-headed Antbird,Ampelornis griseiceps
+,,Gray-headed Antbird,Ampelornis griseiceps
 ,,Magdalena Antbird,Sipia palliata
 ,,Esmeraldas Antbird,S. nigricauda
-,,Stub-tailed Antbird,S. berlepschi
+195,,Stub-tailed Antbird,S. berlepschi
 ,,Chestnut-tailed Antbird,Sciaphylax hemimelaena
-195,,Zimmer's Antbird,S. castanea
+,,Zimmer's Antbird,S. castanea
 ,endemic,Cordillera Azul Antbird,Myrmoderus eowilsoni
 ,,Ferruginous-backed Antbird,M. ferrugineus
-,endemic,Scalloped Antbird,M. ruficauda
+200,endemic,Scalloped Antbird,M. ruficauda
 ,endemic,White-bibbed Antbird,M. loricatus
-200,endemic,Squamate Antbird,M. squamosus
+,endemic,Squamate Antbird,M. squamosus
 ,,White-shouldered Antbird,Akletos melanoceps
 ,,Goeldi's Antbird,A. goeldii
-,,Sooty Antbird,Hafferia fortis
+205,,Sooty Antbird,Hafferia fortis
 ,,Zeledon's Antbird,H. zeledoni
-205,,Blue-lored Antbird,H. immaculata
+,,Blue-lored Antbird,H. immaculata
 ,,Yapacana Antbird,Aprositornis disjuncta
 ,,Black-throated Antbird,Myrmophylax atrothorax
-,,Gray-bellied Antbird,Ammonastes pelzelni
+210,,Gray-bellied Antbird,Ammonastes pelzelni
 ,,Wing-banded Antbird,Myrmornis torquata
-210,,White-plumed Antbird,Pithys albifrons
+,,White-plumed Antbird,Pithys albifrons
 ,endemic,White-masked Antbird,P. castaneus
 ,,Bicolored Antbird,Gymnopithys bicolor
-,,White-cheeked Antbird,G. leucaspis
+215,,White-cheeked Antbird,G. leucaspis
 ,,Rufous-throated Antbird,G. rufigula
-215,,White-throated Antbird,Oneillornis salvini
+,,White-throated Antbird,Oneillornis salvini
 ,,Lunulated Antbird,O. lunulatus
 ,endemic,Bare-eyed Antbird,Rhegmatorhina gymnops
-,endemic,Harlequin Antbird,R. berlepschi
+220,endemic,Harlequin Antbird,R. berlepschi
 ,endemic,White-breasted Antbird,R. hoffmannsi
-220,,Chestnut-crested Antbird,R. cristata
+,,Chestnut-crested Antbird,R. cristata
 ,,Hairy-crested Antbird,R. melanosticta
 ,,Spotted Antbird,Hylophylax naevioides
-,,Spot-backed Antbird,H. naevius
+225,,Spot-backed Antbird,H. naevius
 ,,Dot-backed Antbird,H. punctulatus
-225,,Common Scale-backed Antbird,Willisornis poecilinotus
+,,Common Scale-backed Antbird,Willisornis poecilinotus
 ,endemic,Xingu Scale-backed Antbird,W. vidua
 ,,Black-spotted Bare-eye,Phlegopsis nigromaculata
-,,Reddish-winged Bare-eye,P. erythroptera
+230,,Reddish-winged Bare-eye,P. erythroptera
 ,endemic,Pale-faced Bare-eye,P. borbae
 ,,Ocellated Antbird,Phaenostictus mcleannani
 CRESCENTCHESTS,MELANOPAREIIDAE
@@ -2894,19 +2898,21 @@ TANAGERS,THRAUPIDAE
 ,,Grassland Yellow-Finch,S. luteola
 ,endemic,Raimondi's Yellow-Finch,S. raimondii
 40,,Sulphur-throated Finch,S. taczanowskii
-,,Black-hooded Sierra-Finch,Phrygilus atriceps
-,,Peruvian Sierra-Finch,P. punensis
-,,Gray-hooded Sierra-Finch,P. gayi
-,,Patagonian Sierra-Finch,P. patagonicus
-45,,Mourning Sierra-Finch,P. fruticeti
-,,Red-backed Sierra-Finch,P. dorsalis
-,,White-throated Sierra-Finch,P. erythronotus
-,endemic,Carbonated Sierra-Finch,P. carbonarius
-,,Band-tailed Sierra-Finch,P. alaudinus
-50,,Plumbeous Sierra-Finch,P. unicolor
-,,Ash-breasted Sierra-Finch,P. plebejus
-,,Blue Finch,Porphyrospiza caerulescens
-,,White-bridled Finch,Melanodera melanodera
+,,Black-hooded Sierra Finch,Phrygilus atriceps
+,,Peruvian Sierra Finch,P. punensis
+,,Gray-hooded Sierra Finch,P. gayi
+,,Patagonian Sierra Finch,P. patagonicus
+45,,Mourning Sierra Finch,P. fruticeti
+,,Plumbeous Sierra Finch,P. unicolor
+,,Ash-breasted Sierra Finch,P. plebejus
+,,Band-tailed Sierra Finch,Porphyrospiza alaudina
+,endemic,Carbonated Sierra Finch,P. carbonaria
+50,,Blue Finch,P. caerulescens
+,,Red-backed Sierra Finch,Idiopsar dorsalis
+,,White-throated Sierra Finch,I. erythronotus
+,,White-winged Diuca Finch,I. speculifera
+,,Short-tailed Finch,I. brachyurus
+55,,White-bridled Finch,Melanodera melanodera
 ,,Band-tailed Seedeater,Catamenia analis
 ,,Plain-colored Seedeater,C. inornata
 ,,Paramo Seedeater,C. homochroa
@@ -2926,7 +2932,6 @@ TANAGERS,THRAUPIDAE
 ,,Deep-blue Flowerpiercer,D. glauca
 ,,Bluish Flowerpiercer,D. caerulescens
 ,,Masked Flowerpiercer,D. cyanea
-,,Short-tailed Finch,Idiopsar brachyurus
 ,,Tit-like Dacnis,Xenodacnis parina
 ,,Slaty Finch,Haplospiza rustica
 ,,Uniform Finch,H. unicolor
@@ -2935,10 +2940,10 @@ TANAGERS,THRAUPIDAE
 ,endemic,Cone-billed Tanager,C. mesoleuca
 ,,Rufous-crested Tanager,Creurgops verticalis
 ,,Slaty Tanager,C. dentatus
-,,Flame-crested Tanager,Tachyphonus cristatus
-,,Yellow-crested Tanager,T. rufiventer
-,,Fulvous-crested Tanager,T. surinamus
-,,White-shouldered Tanager,T. luctuosus
+,,Flame-crested Tanager,Islerothraupis cristatus
+,,Yellow-crested Tanager,I. rufiventer
+,,White-shouldered Tanager,I. luctuosus
+,,Fulvous-crested Tanager,Tachyphonus surinamus
 ,,Tawny-crested Tanager,T. delatrii
 ,,Ruby-crowned Tanager,T. coronatus
 ,,White-lined Tanager,T. rufus
@@ -3031,19 +3036,19 @@ TANAGERS,THRAUPIDAE
 ,,Black-headed Hemispingus,Pseudospingus verticalis
 ,,Drab Hemispingus,P. xanthophthalmus
 ,,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
-,endemic,Bay-chested Warbling-Finch,Castanozoster thoracicus
+,endemic,Bay-chested Warbling Finch,Castanozoster thoracicus
 ,endemic,Slaty-backed Hemispingus,Poospiza goeringi
 ,endemic,Rufous-browed Hemispingus,P. rufosuperciliaris
-,,Bolivian Warbling-Finch,P. boliviana
-,,Rufous-sided Warbling-Finch,P. hypochondria
-,endemic,Cinnamon Warbling-Finch,P. ornata
-,,Black-and-chestnut Warbling-Finch,P. whitii
-,,Black-and-rufous Warbling-Finch,P. nigrorufa
-,endemic,Rufous-breasted Warbling-Finch,P. rubecula
-,endemic,Chestnut-breasted Mountain-Finch,P. caesar
-,,Collared Warbling-Finch,P. hispaniolensis
-,endemic,Cochabamba Mountain-Finch,P. garleppi
-,endemic,Tucuman Mountain-Finch,P. baeri
+,,Bolivian Warbling Finch,P. boliviana
+,endemic,Cinnamon Warbling Finch,P. ornata
+,,Black-and-chestnut Warbling Finch,P. whitii
+,,Black-and-rufous Warbling Finch,P. nigrorufa
+,endemic,Rufous-breasted Warbling Finch,P. rubecula
+,,Collared Warbling Finch,P. hispaniolensis
+,endemic,Cochabamba Mountain Finch,P. garleppi
+,endemic,Tucuman Mountain Finch,P. baeri
+,endemic,Chestnut-breasted Mountain Finch,Poospizopsis caesar
+,,Rufous-sided Warbling Finch,P. hypochondria
 ,endemic,Gray-capped Hemispingus,Kleinothraupis reyi
 ,,Black-capped Hemispingus,K. atropileus
 ,endemic,Parodi's Hemispingus,K. parodii
@@ -3058,14 +3063,14 @@ TANAGERS,THRAUPIDAE
 ,,Superciliaried Hemispingus,T. superciliaris
 ,,Rufous-chested Tanager,T. ornata
 ,endemic,Brown-flanked Tanager,T. pectoralis
-,,Rusty-browed Warbling-Finch,Microspingus erythrophrys
-,endemic,Plain-tailed Warbling-Finch,M. alticola
+,,Rusty-browed Warbling Finch,Microspingus erythrophrys
+,endemic,Plain-tailed Warbling Finch,M. alticola
 ,,Three-striped Hemispingus,M. trifasciatus
-,endemic,Buff-throated Warbling-Finch,M. lateralis
-,,Gray-throated Warbling-Finch,M. cabanisi
-,,Ringed Warbling-Finch,M. torquatus
-,,Black-capped Warbling-Finch,M. melanoleucus
-,endemic,Cinereous Warbling-Finch,M. cinereus
+,endemic,Buff-throated Warbling Finch,M. lateralis
+,,Gray-throated Warbling Finch,M. cabanisi
+,,Ringed Warbling Finch,M. torquatus
+,,Black-capped Warbling Finch,M. melanoleucus
+,endemic,Cinereous Warbling Finch,M. cinereus
 ,endemic,Pardusco,Nephelornis oneilli
 ,,Black-backed Bush Tanager,Urothraupis stolzmanni
 ,,White-rumped Tanager,Cypsnagra hirundinacea
@@ -3077,9 +3082,9 @@ TANAGERS,THRAUPIDAE
 ,endemic,Little Inca-Finch,I. watkinsi
 ,,Bananaquit,Coereba flaveola
 ,,Yellow-faced Grassquit,Tiaris olivaceus
-,,Dull-colored Grassquit,T. obscurus
-,,Sooty Grassquit,T. fuliginosus
-,,Black-faced Grassquit,T. bicolor
+,,Dull-colored Grassquit,Asemospiza obscura
+,,Sooty Grassquit,A. fuliginosa
+,,Black-faced Grassquit,Melanospiza bicolor
 ,endemic,Green Warbler-Finch,Certhidea olivacea
 ,endemic,Gray Warbler-Finch,C. fusca
 ,endemic,Vegetarian Finch,Platyspiza crassirostris
@@ -3103,8 +3108,7 @@ TANAGERS,THRAUPIDAE
 ,,Black-crested Finch,Lophospingus pusillus
 ,,Gray-crested Finch,L. griseocristatus
 ,,White-banded Tanager,Neothraupis fasciata
-,,White-winged Diuca-Finch,Diuca speculifera
-,,Common Diuca-Finch,D. diuca
+,,Common Diuca-Finch,Diuca diuca
 ,,Yellow Cardinal,Gubernatrix cristata
 ,,Red-crested Cardinal,Paroaria coronata
 ,endemic,Red-cowled Cardinal,P. dominicana
@@ -3143,22 +3147,22 @@ TANAGERS,THRAUPIDAE
 ,,Golden-chested Tanager,B. rothschildi
 ,,Moss-backed Tanager,B. edwardsi
 ,endemic,Gold-ringed Tanager,B. aureocincta
-,,Golden-naped Tanager,Tangara ruficervix
-,,Black-headed Tanager,T. cyanoptera
-,,Silvery Tanager,T. viridicollis
-,,Black-capped Tanager,T. heinei
-,,Green-throated Tanager,T. argyrofenges
-,endemic,Sira Tanager,T. phillipsi
-,,Gray-and-gold Tanager,T. palmeri
-,endemic,Black-backed Tanager,T. peruviana
-,,Chestnut-backed Tanager,T. preciosa
-,,Green-capped Tanager,T. meyerdeschauenseei
-,,Burnished-buff Tanager,T. cayana
-,,Scrub Tanager,T. vitriolina
-,,Masked Tanager,T. nigrocincta
-,,Golden-hooded Tanager,T. larvata
-,,Blue-necked Tanager,T. cyanicollis
-,,Blue-and-black Tanager,T. vassorii
+,,Golden-naped Tanager,Chalcothraupis ruficervix
+,,Gray-and-gold Tanager,Poecilostreptus palmeri
+,,Black-headed Tanager,Stilpnia cyanoptera
+,,Silvery Tanager,S. viridicollis
+,,Black-capped Tanager,S. heinei
+,,Green-throated Tanager,S. argyrofenges
+,endemic,Sira Tanager,S. phillipsi
+,endemic,Black-backed Tanager,S. peruviana
+,,Chestnut-backed Tanager,S. preciosa
+,,Green-capped Tanager,S. meyerdeschauenseei
+,,Burnished-buff Tanager,S. cayana
+,,Scrub Tanager,S. vitriolina
+,,Masked Tanager,S. nigrocincta
+,,Golden-hooded Tanager,S. larvata
+,,Blue-necked Tanager,S. cyanicollis
+,,Blue-and-black Tanager,Tangara vassorii
 ,,Beryl-spangled Tanager,T. nigroviridis
 ,,Metallic-green Tanager,T. labradorides
 ,,Blue-browed Tanager,T. cyanotis

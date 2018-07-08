@@ -949,12 +949,13 @@ E,Yellow-faced Parrotlet,F. xanthops
 ,Bluish-slate Antshrike,T. schistogynus
 ,Plain-throated Antwren,Isleria hauxwelli
 ,Spot-winged Antshrike,Pygiptila stellaris
-,White-eyed Antwren,Epinecrophylla leucophthalma
-,Stipple-throated Antwren,E. haematonota
-,Brown-backed Antwren,E. fjeldsaai
-,Foothill Antwren,E. spodionota
-,Ornate Antwren,E. ornata
-,Rufous-tailed Antwren,E. erythrura
+,White-eyed Stipplethroat,Epinecrophylla leucophthalma
+,Rio Negro Stipplethroat,E. pyrrhonota
+,Rufous-backed Stipplethroat,E. haematonota
+,Yasuni Stipplethroat,E. fjeldsaai
+,Foothill Stipplethroat,E. spodionota
+,Ornate Stipplethroat,E. ornata
+,Rufous-tailed Stipplethroat,E. erythrura
 ,Pygmy Antwren,Myrmotherula brachyura
 ,Moustached Antwren,M. ignota
 ,Sclater's Antwren,M. sclateri
@@ -1735,13 +1736,15 @@ E,Iquitos Gnatcatcher,P. clementsi
 ,Grassland Yellow-Finch,S. luteola
 E,Raimondi's Yellow-Finch,S. raimondii
 ,Sulphur-throated Finch,S. taczanowskii
-,Black-hooded Sierra-Finch,Phrygilus atriceps
-,Peruvian Sierra-Finch,P. punensis
-,Mourning Sierra-Finch,P. fruticeti
-,White-throated Sierra-Finch,P. erythronotus
-,Band-tailed Sierra-Finch,P. alaudinus
-,Plumbeous Sierra-Finch,P. unicolor
-,Ash-breasted Sierra-Finch,P. plebejus
+,Black-hooded Sierra Finch,Phrygilus atriceps
+,Peruvian Sierra Finch,P. punensis
+,Mourning Sierra Finch,P. fruticeti
+,Plumbeous Sierra Finch,P. unicolor
+,Ash-breasted Sierra Finch,P. plebejus
+,Band-tailed Sierra Finch,Porphyrospiza alaudina
+,White-throated Sierra Finch,Idiopsar erythronotus
+,White-winged Diuca Finch,I. speculifera
+,Short-tailed Finch,I. brachyurus
 ,Band-tailed Seedeater,Catamenia analis
 ,Plain-colored Seedeater,C. inornata
 ,Paramo Seedeater,C. homochroa
@@ -1754,17 +1757,16 @@ E,Raimondi's Yellow-Finch,S. raimondii
 ,Deep-blue Flowerpiercer,D. glauca
 ,Bluish Flowerpiercer,D. caerulescens
 ,Masked Flowerpiercer,D. cyanea
-,Short-tailed Finch,Idiopsar brachyurus
 ,Tit-like Dacnis,Xenodacnis parina
 ,Slaty Finch,Haplospiza rustica
 ,Blue-black Grassquit,Volatinia jacarina
 ,Black-and-white Tanager,Conothraupis speculigera
 ,Rufous-crested Tanager,Creurgops verticalis
 ,Slaty Tanager,C. dentatus
-,Flame-crested Tanager,Tachyphonus cristatus
-,Yellow-crested Tanager,T. rufiventer
-,Fulvous-crested Tanager,T. surinamus
-,White-shouldered Tanager,T. luctuosus
+,Flame-crested Tanager,Islerothraupis cristatus
+,Yellow-crested Tanager,I. rufiventer
+,White-shouldered Tanager,I. luctuosus
+,Fulvous-crested Tanager,Tachyphonus surinamus
 ,White-lined Tanager,T. rufus
 ,Red-shouldered Tanager,T. phoenicius
 ,Gray-headed Tanager,Eucometis penicillata
@@ -1819,9 +1821,9 @@ E,Cinereous Finch,Piezorina cinerea
 ,Drab Hemispingus,P. xanthophthalmus
 ,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
 E,Rufous-browed Hemispingus,Poospiza rufosuperciliaris
-E,Rufous-breasted Warbling-Finch,P. rubecula
-E,Chestnut-breasted Mountain-Finch,P. caesar
-,Collared Warbling-Finch,P. hispaniolensis
+E,Rufous-breasted Warbling Finch,P. rubecula
+,Collared Warbling Finch,P. hispaniolensis
+E,Chestnut-breasted Mountain Finch,Poospizopsis caesar
 ,Black-capped Hemispingus,Kleinothraupis atropileus
 E,Parodi's Hemispingus,K. parodii
 ,Orange-browed Hemispingus,K. calophrys
@@ -1833,7 +1835,7 @@ E,Parodi's Hemispingus,K. parodii
 ,Superciliaried Hemispingus,T. superciliaris
 ,Rufous-chested Tanager,T. ornata
 E,Brown-flanked Tanager,T. pectoralis
-E,Plain-tailed Warbling-Finch,Microspingus alticola
+E,Plain-tailed Warbling Finch,Microspingus alticola
 ,Three-striped Hemispingus,M. trifasciatus
 E,Pardusco,Nephelornis oneilli
 E,Great Inca-Finch,Incaspiza pulchra
@@ -1842,9 +1844,8 @@ E,Gray-winged Inca-Finch,I. ortizi
 E,Buff-bridled Inca-Finch,I. laeta
 E,Little Inca-Finch,I. watkinsi
 ,Bananaquit,Coereba flaveola
-,Dull-colored Grassquit,Tiaris obscurus
+,Dull-colored Grassquit,Asemospiza obscura
 ,Orange-eared Tanager,Chlorochrysa calliparaea
-,White-winged Diuca-Finch,Diuca speculifera
 ,Red-capped Cardinal,Paroaria gularis
 ,Black-faced Tanager,Schistochlamys melanopis
 ,Magpie Tanager,Cissopis leverianus
@@ -1866,15 +1867,15 @@ E,Yellow-scarfed Tanager,I. reinhardti
 ,Black-chested Mountain-Tanager,Cnemathraupis eximia
 E,Golden-backed Mountain-Tanager,C. aureodorsalis
 ,Orange-throated Tanager,Wetmorethraupis sterrhopteron
-,Golden-naped Tanager,Tangara ruficervix
-,Silvery Tanager,T. viridicollis
-,Green-throated Tanager,T. argyrofenges
-E,Sira Tanager,T. phillipsi
-,Green-capped Tanager,T. meyerdeschauenseei
-,Burnished-buff Tanager,T. cayana
-,Masked Tanager,T. nigrocincta
-,Blue-necked Tanager,T. cyanicollis
-,Blue-and-black Tanager,T. vassorii
+,Golden-naped Tanager,Chalcothraupis ruficervix
+,Silvery Tanager,Stilpnia viridicollis
+,Green-throated Tanager,S. argyrofenges
+E,Sira Tanager,S. phillipsi
+,Green-capped Tanager,S. meyerdeschauenseei
+,Burnished-buff Tanager,S. cayana
+,Masked Tanager,S. nigrocincta
+,Blue-necked Tanager,S. cyanicollis
+,Blue-and-black Tanager,Tangara vassorii
 ,Beryl-spangled Tanager,T. nigroviridis
 ,Metallic-green Tanager,T. labradorides
 ,Blue-browed Tanager,T. cyanotis
