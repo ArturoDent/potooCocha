@@ -191,9 +191,9 @@
 
     color : white;
     text-shadow : 1px 1px 1px rgba(0,0,0,0.5);
+    
     border : 1px solid rgba(255,255,255,0.2);
     border-radius : 2px;
-
     background-color : $genericButtonColor;
     box-shadow : 0 0 2px rgba(0,0,0,0.5);
 
@@ -211,7 +211,7 @@
 
 #searchSpecials.SAM span.searchSpecialWrapper  {  margin-bottom : 2ch;  }
 
-#searchSpecials span.notAvailable  {  display  :  none;  }
+#searchSpecials span.notAvailable  {  display : none;  }
 
 #searchSpecials.SAM  {
     justify-content  :  space-around;
@@ -340,6 +340,8 @@
 
     transition  :  all 350ms;
 }
+
+// TODO : (why two here?)
 
 #searchResults.fadeIn  {
     opacity  :  1;

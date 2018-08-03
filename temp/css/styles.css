@@ -88,11 +88,11 @@
   text-align: center;
   letter-spacing: 0.15em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  border: 1px solid transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #6a6a6a;
+  border-bottom: 1px solid #3d3c3c;
   border-radius: 4px;
   background-color: #a65751;
-  box-shadow: inset 0 0 0 transparent, 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 transparent, 2px 2px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   -webkit-transition: all 650ms;
   -moz-transition: all 650ms;
@@ -101,15 +101,12 @@
 
 .genericButton:hover, .genericButton:focus {
   text-shadow: 1px 1px 1px black;
-  box-shadow: inset 20ch 0 5px 15px #333, 2px 2px 2px rgba(0, 0, 0, 0.2); }
-
-.genericButton.highlight {
-  border: 1px solid #888;
-  transition: all 750ms; }
+  box-shadow: inset 20ch 0 5px 15px #333, 2px 2px 2px rgba(0, 0, 0, 0.1); }
 
 .genericButton.highlight:hover, .genericButton.highlight:focus {
   /*border  :  1px solid rgba(255,255,255,0.8);*/
-  box-shadow: inset -20ch 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset -20ch 0 5px 15px #252525, 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 750ms; }
 
 html {
   width: 100%;
@@ -1051,32 +1048,29 @@ input[type='checkbox']:disabled + label {
   padding: 0;
   border: none;
   background-color: #636b6f;
-  transition: all 1000ms 700ms; }
+  transition: opacity 1000ms; }
 
 .md-show ~ .md-overlay {
-  opacity: 1;
-  transition: all 1000ms; }
+  opacity: 1; }
 
 .backgroundBox {
   position: absolute;
-  opacity: 0.4;
   left: -1vw;
   top: 90vh;
   height: 5vh;
-  width: 104vw;
-  padding-left: 5%;
-  line-height: 3.5vh;
+  width: 9vw;
+  padding-left: 6vw;
+  line-height: 4.5vh;
   background-color: #a65751;
-  border: 5px double white;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7); }
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); }
 
 .overlayInfo {
   display: flex;
   align-items: center;
   width: 20vw;
-  height: 20vw;
+  height: 10vh;
   min-width: 250px;
-  min-height: 250px;
+  min-height: 170px;
   padding: 20px;
   margin-right: 350px;
   pointer-events: none;
@@ -1086,8 +1080,8 @@ input[type='checkbox']:disabled + label {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  background-color: #4b5154;
+  border-radius: 30%;
+  background-color: #954e49;
   box-shadow: inset 0 0 3px black; }
 
 .underline {
@@ -1098,11 +1092,11 @@ input[type='checkbox']:disabled + label {
   top: 20px;
   right: 300px;
   width: 270px;
-  padding: 0.6ch 0 1ch 2ch;
+  padding: 0.7ch 0 0.9ch 2ch;
   text-align: left;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: inset 0 0 25px 15px transparent, 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 25px 15px transparent, 2px 2px 3px rgba(0, 0, 0, 0.1);
   transition: box-shadow 400ms, width 400ms, right 400ms 400ms; }
 
 #countryButton:after {
@@ -1121,11 +1115,11 @@ input[type='checkbox']:disabled + label {
 
 #countryButton:hover, #countryButton:focus {
   border: 1px solid #888;
-  box-shadow: inset 270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset 270px 0 25px 15px #252525, 2px 2px 3px rgba(0, 0, 0, 0.1); }
 
 #countryButton.highlight:hover, #countryButton.highlight:focus {
   border: 1px solid #888;
-  box-shadow: inset -270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2); }
+  box-shadow: inset -270px 0 25px 15px #252525, 2px 2px 3px rgba(0, 0, 0, 0.1); }
 
 #countryButton.expand {
   right: 330px;

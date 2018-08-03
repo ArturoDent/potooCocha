@@ -7,14 +7,10 @@ var italics;
 var lineNumbers;
 var showEndemics;
 
-// var birds;
-
-var currentChecklistCountry;
-var currentChecklistCountryElement;
+var currentCountry;
 var checklistAuthorsPanel;
 var checklistFlyoutText;
 
-// var countryModalOverlay;
 var countryModal;
 
 var gNumDays;
@@ -25,20 +21,15 @@ var countryButton;
 var numDaysButton;
 var pdfButton;
 var csvButton;
-
-// var map;
+var requested;
 
 /* global  map loadCountryTaxonomy selectedCountryFill getAjax currentMap fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("window.width = " + window.innerWidth);
-  // map   =  document.getElementById("currentMap");
 
   window.addEventListener("resize", onResizeWindow);
 
-  // countryModalOverlay = document.querySelector(".md-overlay");
-
-  // countryModalOverlay.addEventListener("click", toggleCountryModal);
   countryButton                    =  document.getElementById("countryButton");
   countryButton.addEventListener("click", toggleCountryModal);
 
@@ -51,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
   sampleTable = document.getElementById("sampleTable");
   sampleTable.classList.add("numDays" + String(gNumDays));
 
-  previousNumDaysClass = "numDays" + String(gNumDays);
+  // previousNumDaysClass = "numDays" + String(gNumDays);
+  previousNumDaysClass = "numDays10";
 
   pdfButton                           =  document.getElementById("pdfButton");
   pdfButton.addEventListener("click", openChecklistPage);
@@ -65,8 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
   sciNames     =  document.getElementById("sciNames");
   italics      =  document.getElementById("italics");
 
-  previousNumDaysClass = "numDays10";
-
   lineNumbers.addEventListener("click", toggleSampleTableLineNumbers);
   leftCheck.addEventListener("click", toggleSampleTableLeftChecks);
   showEndemics.addEventListener("click", toggleSampleTableShowEndemics);
@@ -76,13 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   checklistAuthorsPanel = document.getElementById("checklistAuthorsPanel");
   checklistFlyoutText = document.getElementById("checklistFlyoutText");
 
-  //  TODO : (below should be changed)
-
-  [].forEach.call(document.getElementsByClassName("country-menu")[0].getElementsByTagName("a"), function (el) {
-    el.addEventListener("click", choseCountry);
-  });
-
-  // toggleSampleTableLeftChecks();
+  document.querySelector(".country-menu").addEventListener("click", setCountry);
   leftCheck.checked = true;
 
   countryModal = document.getElementById("countryModal");
@@ -91,10 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
 });
 
-//   *******************  end of  (document).ready(function() ******************************************
+//   *******************   end of  (document).ready(function()   ******************************************
+
+// TODO : (is this needed?)
 
 function onResizeWindow() {
-  // console.log("onResize() called");
 
   // initCurrentMap();
 
@@ -153,16 +138,11 @@ function toggleSampleTableItalics()  {
   sampleTable.classList.toggle("noItalics");
 }
 
-// add : if no sci names = both line numbers and endemic possible ?
-
 function toggleSampleTableLeftChecks() {
 
-  [].forEach.call(sampleTable.getElementsByClassName("leftCheckBox"), function (el) {
-    el.classList.toggle("show");
-  });
-
-  [].forEach.call(sampleTable.getElementsByClassName("familyHidden"), function (el) {
-    el.classList.toggle("show");
+  var list = sampleTable.querySelectorAll(".leftCheckBox, .familyHidden");
+  Array.prototype.forEach.call(list, function (item) {
+    item.classList.toggle("show");
   });
 }
 
@@ -171,77 +151,53 @@ function toggleSampleTableLineNumbers() {
   sampleTable.querySelector("td.lineNumbers").classList.toggle("showLineNumbers");
 }
 
-// decide which function to call based on which countryButton opened the country menu
-function choseCountry(evt) {
+function setCountry(evt) {
 
-  // if (!currentChecklistCountry && !parseInt) map.getElementsByClassName("drawing")[0].classList.add("active");
-  if (!currentChecklistCountry) map.getElementsByClassName("drawing")[0].classList.add("active");
+  // find and remove the previous highlighted Country
+  var previousHighlightedCountry = evt.target.parentNode.parentNode.querySelector(".highlight");
+  if (previousHighlightedCountry) previousHighlightedCountry.classList.remove("highlight");
 
-  // if (countryModalOpener === "checklistCountryButton") choseChecklistCountry(evt);
-  // else loadCountryTaxonomy(evt);
+  evt.target.classList.add("highlight");
 
-  choseChecklistCountry(evt);
-  loadCountryTaxonomy(evt);
-}
-
-function choseChecklistCountry(evt) {
-
-  var selectedCountry;
-
-  var pageScrollTop = document.body.scrollTop;
+  if (!currentCountry) map.getElementsByClassName("drawing")[0].classList.add("active");
 
   toggleCountryModal();
 
-  if (currentChecklistCountry) {
-    currentChecklistCountryElement.classList.remove("checkHighlight");
-    currentChecklistCountryElement.classList.remove("bothHighlights");
-  }
+  currentCountry = evt.target.innerText;
 
-  selectedCountry = evt.target.innerText;
+  if (currentCountry === "Falklands") countryButton.innerHTML = "Malvinas/Falklands";
+  else countryButton.innerHTML = currentCountry;
 
-  if (evt.target.tagName === "A") {
-    currentChecklistCountryElement = evt.target;
-    // selectedCountry = evt.target.children[1].innerHTML;
-  }
-  else if (evt.target.tagName === "SPAN") {
-    currentChecklistCountryElement = evt.target.parentNode;
-    // selectedCountry = evt.target.innerHTML;
-  }
-  // else {  //  evt.target.tagName === "IMG")
-  //   currentChecklistCountryElement = evt.target.parentNode;
-  //   selectedCountry = evt.target.nextElementSibling.innerHTML;
-  // }
+  setChecklistCountryAuthors(currentCountry);
+  loadCountryTaxonomy(currentCountry);
+}
 
-  if (selectedCountry === "South America")  currentChecklistCountry = "SouthAmerica";
-  else if (selectedCountry === "French Guiana")  currentChecklistCountry = "FrenchGuiana";
-  // else if (selectedCountry === "Falklands/Malv.")  currentChecklistCountry = "Falklands";
-  // else if (selectedCountry === "Malvinas")  currentChecklistCountry = "Falklands";
-  // else if (selectedCountry === "Curaçao")  currentChecklistCountry = "Curacao";
-  else   currentChecklistCountry = selectedCountry;
+function setChecklistCountryAuthors(country) {
 
-  // checklistCountryButton.innerHTML = selectedCountry;
-  if (selectedCountry === "Falklands") countryButton.innerHTML = "Malvinas/Falklands";
-  else countryButton.innerHTML = selectedCountry;
-
-  checklistFlyoutText.innerHTML = "Make a checklist for " + selectedCountry;
+  checklistFlyoutText.innerHTML = "Make a checklist for " + country;
 
   countryButton.classList.add("highlight");
 
   pdfButton.classList.add("highlight");
   csvButton.classList.add("highlight");
 
-  document.body.scrollTop = pageScrollTop;
-
   currentMap.querySelector(".saveMapButton").style.display = "none";
   currentMap.querySelector(".colorKey").style.opacity = "0";
 
-  if (selectedCountry !== "South America") selectedCountryFill(currentChecklistCountry);
+  if (country === "French Guiana") selectedCountryFill("FrenchGuiana");
+  else if (country !== "South America") selectedCountryFill(country);
   else fillSAMmap("");
 
-  if (currentChecklistCountry === "Curaçao") {
+  if (country === "Curaçao") {
     getAjax("Authors/" + "Curacao.txt", setChecklistAuthors);
   }
-  else getAjax("Authors/" + currentChecklistCountry + ".txt", setChecklistAuthors);
+  else if (country === "French Guiana") {
+    getAjax("Authors/" + "FrenchGuiana.txt", setChecklistAuthors);
+  }
+  else if (country === "South America") {
+    getAjax("Authors/" + "SouthAmerica.txt", setChecklistAuthors);
+  }
+  else getAjax("Authors/" + country + ".txt", setChecklistAuthors);
 }
 
 function setChecklistAuthors(data) {
@@ -251,12 +207,12 @@ function setChecklistAuthors(data) {
 
   var authors;
 
-  if (currentChecklistCountry === "SouthAmerica") {
+  if (currentCountry === "SouthAmerica") {
     // authors = data.replace(/^.*(Version.*)$/g, "$1");
     authors = data.replace(/^.*Version(.*)$/g, "Remsen, et al. $1");
   }
 
-  else if (currentChecklistCountry === "Colombia") {
+  else if (currentCountry === "Colombia") {
     authors = data.replace(/^(.*)\s+\(.*\).*Version(.*)$/g, "$1. $2");
     // authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
   }
@@ -266,7 +222,7 @@ function setChecklistAuthors(data) {
   // Species lists of birds for South American countries and territories: Colombia.Version 16 February 2018.
 
   // Freile, J. F., R. Ahlman, R. S. Ridgely, A. Solano-Ugalde, D. Brinkhuizen, L. Navarrete, and P. J. Greenfield.
-  // 2018. Species lists of birds for South American countries and territories: Ecuador.Version 15 February 2017.
+  // 2018. Species lists of birds for South American countries and territories: Ecuador. Version 15 February 2017.
 
   else {
     authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
@@ -279,6 +235,7 @@ function setChecklistAuthors(data) {
 function setNumDays(evt)  {
 
   var day = evt.target;
+  var list;   // will be a NodeList of th/td's with cds class applies to them
 
   if (day.classList.contains("highlight")) {  // if click on already highlighted target ignore
     return;
@@ -297,85 +254,72 @@ function setNumDays(evt)  {
 
   // rules for column double border right vs. number of days
 
-  // clear all cds classes
+  // first clear all cds classes
 
-  [].forEach.call(sampleTable.querySelectorAll("td"), function (el) {
-    el.classList.remove("cds");
+  list = sampleTable.querySelectorAll("td.cds, th.cds");
+  Array.prototype.forEach.call(list, function (item) {
+    item.classList.remove("cds");
   });
-
-  [].forEach.call(sampleTable.querySelectorAll("th"), function (el) {
-    el.classList.remove("cds");
-  });
-
-  // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
-  //   el.classList.remove("cds");
-  // });
-
-  // sampleTable.querySelector("th:nth-child(4)").classList.remove("cds");
-
-  // [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
-  //   el.classList.remove("cds");
-  // });
-
-  // sampleTable.querySelector("th:nth-child(6)").classList.remove("cds");
 
   if (gNumDays === 6) {
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(6)"), function (el) {
-      el.classList.add("cds");
+    list = sampleTable.querySelectorAll("td:nth-child(6), th:nth-child(4)");
+    Array.prototype.forEach.call(list, function (item) {
+      item.classList.add("cds");
     });
-
-    sampleTable.querySelector("th:nth-child(4)").classList.add("cds");
   }
   else if (gNumDays ===  7 || gNumDays === 8) {
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(7)"), function (el) {
-      el.classList.add("cds");
+    list = sampleTable.querySelectorAll("td:nth-child(7), th:nth-child(5)");
+    Array.prototype.forEach.call(list, function (item) {
+      item.classList.add("cds");
     });
 
-    sampleTable.querySelector("th:nth-child(5)").classList.add("cds");
   }
   else if (gNumDays ===  9 || gNumDays === 10) {
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
-      el.classList.add("cds");
+    list = sampleTable.querySelectorAll("td:nth-child(8), th:nth-child(6)");
+    Array.prototype.forEach.call(list, function (item) {
+      item.classList.add("cds");
     });
-
-    sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
   }
   else if (gNumDays === 11 || gNumDays === 12) {
 
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(8)"), function (el) {
-      el.classList.add("cds");
+    list = sampleTable.querySelectorAll("td:nth-child(8), td:nth-child(13), th:nth-child(6), th:nth-child(11)");
+    Array.prototype.forEach.call(list, function (item) {
+      item.classList.add("cds");
     });
-
-    sampleTable.querySelector("th:nth-child(6)").classList.add("cds");
-
-    [].forEach.call(sampleTable.querySelectorAll("td:nth-child(13)"), function (el) {
-      el.classList.add("cds");
-    });
-
-    sampleTable.querySelector("th:nth-child(11)").classList.add("cds");
   }
 
   if (gNumDays !== 0) {
 
-    [].forEach.call(sampleTable.getElementsByTagName("th"), function (el) {
-      el.classList.remove("flashDays");
-    });
+    var item = sampleTable.querySelector("th.flashDays");
+    if (item)  item.classList.remove("flashDays");
 
     sampleTable.querySelector("th:nth-child(" + (gNumDays + 1) + ")").classList.add("flashDays");
   }
 }
 
-function getCSVText()  {
+function getCSVText() {
 
-  if (currentChecklistCountry)  {
+  if (!currentCountry) return;
 
-    // var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentChecklistCountry + '"></form>');
+  requested = "csv";
+  logVisit();  // could update the log in sendCSV.php
+
+  var tempCountry;
+
+  if (currentCountry === "French Guiana") tempCountry = "FrenchGuiana";
+  else if (currentCountry === "South America") tempCountry = "SouthAmerica";
+  else if (currentCountry === "Curaçao") tempCountry = "Curacao";
+  else tempCountry = currentCountry;
+
+  if (tempCountry)  {
+
+    // var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentCountry + '"></form>');
     var form = document.createElement("form");
     form.setAttribute("method", "post");
-    form.setAttribute("action", "../php/sendCSV.php?country=" + currentChecklistCountry + "");
+    form.setAttribute("action", "../php/sendCSV.php?country=" + tempCountry + "");
 
     document.body.appendChild(form);
 
@@ -384,14 +328,25 @@ function getCSVText()  {
   }
 }
 
-function openChecklistPage()  {
+function openChecklistPage() {
+
+  if (!currentCountry) return;
+
+  requested = "checklist";
+  logVisit();  // could update the log in makePDF.php
 
   var vars;
+  var tempCountry;
+
+  if (currentCountry === "French Guiana") tempCountry = "FrenchGuiana";
+  else if (currentCountry === "South America") tempCountry = "SouthAmerica";
+  else if (currentCountry === "Curaçao") tempCountry = "Curacao";
+  else tempCountry = currentCountry;
 
   if (gNumDays === undefined)   gNumDays = 12;
   if (gStartDate === undefined) gStartDate = 1;
 
-  vars = "?country="       + currentChecklistCountry;
+  vars = "?country="       + tempCountry;
   vars += "&num_days="     + gNumDays;
   vars += "&start_date="   + gStartDate;
 
@@ -402,4 +357,20 @@ function openChecklistPage()  {
   vars += "&italics="      + !italics.checked;
 
   window.open( "../php/makePDF.php" + vars, "_blank" );
+}
+
+function logVisit() {
+
+  if (!navigator.sendBeacon) {
+    console.log("sendBeacon() not supported");
+    return true;
+  }
+
+  var url = "./php/collectVisits.php";
+
+  var data = new FormData();
+  data.append('country', currentCountry);
+  data.append('document', requested);
+
+  navigator.sendBeacon(url, data);
 }

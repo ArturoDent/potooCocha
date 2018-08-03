@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+      "target": "ES6",
+      "lib": ["es6", "esnext"],
+      // "allowJs": true,
+      // "checkJs": true
+      // "module": "es6"
+      // "noImplicitAny": true
+      // "outDir": "
+      // "outFile": ""
+      // "removeComments": true
+      // "rootDir": "
+      // "sourceMap"
+      // "watch": true"
+  },
+  "exclude": [
+      "node_modules",
+      "**/node_modules/*"
+  ]
+}

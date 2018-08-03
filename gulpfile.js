@@ -8,6 +8,7 @@ var reload = browserSync.reload;
 var newer = require('gulp-newer');
 var sass = require("gulp-sass");
 // minify js files
+
 var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 var rename = require("gulp-rename");
@@ -352,14 +353,13 @@ gulp.task("sync", gulp.series(sass2css, moveJStoTemp, reloadJS, serve, watch));
 gulp.task("serve", gulp.series(serve));
 gulp.task("watch", gulp.series(watch));
 
-
 // gulp.task("sync", gulp.series(sass2css, reloadJS, serve));
 // gulp.task("reloadJS", gulp.series(moveJStoTemp));
 
 gulp.task("serve:watch", gulp.series(serve, watch));
 gulp.task("serve:deploy", gulp.series(serveTest));
 
-gulp.task("production", gulp.series(processJS));
+gulp.task("production", gulp.series(moveJStoTemp, processJS));
 
 gulp.task("build", gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
   copySVG, copyFLAGS, copyCitations, copyAuthors, copyOccurrences, copyCountries));

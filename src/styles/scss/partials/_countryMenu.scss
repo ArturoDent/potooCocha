@@ -39,60 +39,38 @@
   
   border: none;
   background-color: $bgColor;
-  transition: all 1000ms 700ms;
+  // transition: opacity 1000ms 700ms;
+  transition: opacity 1000ms;
 }
 
 .md-show ~ .md-overlay {
   opacity: 1;
-  transition: all 1000ms;
+  // transition: opacity 1000ms;
 }
 
 .backgroundBox {
   position: absolute;
-  opacity: 0.4;
-  // left: 0;
-  // top: 0;
   left: -1vw;
   top:  90vh;
   
   height: 5vh;
-  width: 104vw;
-  padding-left: 5%;
-  line-height: 3.5vh;
-  // color: black;
-  // // border: 1px solid gold;
+  width: 9vw;
+  padding-left: 6vw;
+  line-height: 4.5vh;
   background-color: $genericButtonColor;
-  border: 5px double white;
-  
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.7); 
-  
-  // transform: rotateX(45deg);
-  // border-radius: 50%;
-  // background-color: rgba(255,255,0, 0.2);
-  // box-shadow: inset -20px 0 10vw black, -50px 0 5vw darkgray;
-  // box-shadow: -50px 0 5vw $genericButtonColor;
-  // box-shadow: inset -10px 0 10px black, -10px 0 10px rgba(0,0,0,0.3);
-  // transition: all 1000ms;
-  // z-index: -2;
+  box-shadow: 0 0 2px rgba(0,0,0,0.7); 
 }
 
-  // .md-show ~ .md-overlay > .backgroundCircle  {
-  //   left: 0;
-  //   top: -30vh;
-  //   height: 100vw;
-  //   width: 100vw;
-  // }
-
-// TODO : (separately fade in/out)
+// TODO : (separately fade in/out) ?
 
 .overlayInfo  {
   display: flex;
   // align-content: center;
   align-items: center;
   width: 20vw;
-  height: 20vw;
+  height: 10vh;
   min-width: 250px;
-  min-height: 250px;
+  min-height: 170px;
   
   padding: 20px;
   margin-right: 350px;
@@ -104,14 +82,10 @@
   line-height: 1.6em;
   text-align: center;
   
-  // border: 4px double transparent;
   border-top: 1px solid rgba(0,0,0,0.3);
   border-bottom: 1px solid rgba(255,255,255,0.6);
-  
-  // border-bottom: 4px solid $genericButtonColor;
-  
-  border-radius:  50%;
-  background-color: $overlayInfoColor;
+  border-radius:  30%;
+  background-color: darken($genericButtonColor, 5%);
   box-shadow:  inset 0 0 3px rgba(0,0,0,1);
 }
 
@@ -130,13 +104,13 @@
   top: 20px;
   right: 300px;
   width: 270px;
-  padding : 0.6ch 0 1ch 2ch;
+  padding : 0.7ch 0 0.9ch 2ch;
   
   text-align: left;
   
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow  :  inset 0 0 25px 15px transparent, 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow  :  inset 0 0 25px 15px transparent, 2px 2px 3px rgba(0, 0, 0, 0.1);
   transition  :  box-shadow 400ms, width 400ms, right 400ms 400ms;
 }
 
@@ -158,12 +132,12 @@
 
 #countryButton:hover, #countryButton:focus {
   border : 1px solid #888;
-  box-shadow  :  inset 270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow  :  inset 270px 0 25px 15px #252525, 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 #countryButton.highlight:hover, #countryButton.highlight:focus {
   border : 1px solid #888;
-  box-shadow  :  inset -270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow  :  inset -270px 0 25px 15px #252525, 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 #countryButton.expand  {
