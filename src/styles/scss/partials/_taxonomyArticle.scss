@@ -18,8 +18,7 @@
 
 .searchWord {
     position  :  relative;
-    // top : 10px;
-    left : -70px;
+    left : -5.4rem;
     width : calc(100% + 10ch);
     height: 22ch;
     margin-bottom: -12.5ch;
@@ -34,32 +33,32 @@
 
     background-color  :  $searchHeaderColor;
 
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 90px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 3.85rem;
+    border-bottom-left-radius: 6.9rem;
+    border-bottom-right-radius: 0.77rem;
+    border-top-right-radius: 0.77rem;
 
-    border  :  1px solid rgba(255,255,255,0.1);
-    border-top : 1px solid transparent;
-    box-shadow : inset 0 -1px 1px -1px rgba(0,0,0,0.4), inset 0 0 1px rgba(0,0,0,0.4);
+    border  :  0.077rem solid rgba(255,255,255,0.1);
+    border-top : 0.077rem solid transparent;
+    box-shadow : inset 0 -0.077rem 0.077rem -0.077rem rgba(0,0,0,0.4), inset 0 0 0.077rem rgba(0,0,0,0.4);
 }
 
 .taxArticleMain {
-    padding  : 30px 0 0 0;
+    padding  : 1.15rem 0 0 0;
     text-align: left;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 #taxonomyArticle a.linkHighlight {
-    padding : 0 3px 1px 4px;
+    padding : 0 0.23rem 0.077rem 0.31rem;
     border: none;
-    border-radius: 2px;
-    border : solid 1px transparent;
-    border-bottom  :  solid 1px $panelFlyoutFontColor;
-    box-shadow : 0 1px rgba(0,0,0,0.5);
+    border-radius: 0.15rem;
+    border : solid 0.077rem transparent;
+    border-bottom  :  solid 0.077rem $panelFlyoutFontColor;
+    box-shadow : 0 0.077rem rgba(0,0,0,0.5);
     transition: border 850ms;
 }
 
 #taxonomyArticle a.linkHighlight:hover {
-    border: solid 1px $panelFlyoutFontColor;
+    border: solid 0.077rem $panelFlyoutFontColor;
 }

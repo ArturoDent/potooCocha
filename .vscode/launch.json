@@ -12,6 +12,7 @@
             "type": "node",
             "request": "launch",
             "name": "Gulp sync",
+            
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
                 "sync"

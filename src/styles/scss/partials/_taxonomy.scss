@@ -3,7 +3,7 @@
 .slideUpWrapper  {
     position: relative;
     overflow-y: hidden;
-    max-height: 350px;
+    max-height: 27rem;
 
     border-top: none;
     border-bottom: none;
@@ -34,10 +34,10 @@
     // color  :  #333;
     text-align  :  center;
 
-    border : 2px solid  $goldHighlightColor;
+    border : 0.15rem solid  $goldHighlightColor;
     border-radius  :  50%;
     background-color  :  $bgColor;
-    box-shadow: inset 0 0 0 2px $bgColor, 0 0 0 8px $bgColor;    
+    box-shadow: inset 0 0 0 0.15rem $bgColor, 0 0 0 0.62rem $bgColor;    
     
     cursor  :  pointer;
     transform: translateX(-42ch);
@@ -54,7 +54,7 @@
 .taxInstructionsButton.instructionsClosed .tooltip {
     font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.31rem;
     background-color: $panelColor;
     transform: scaleX(0.7);
 }
@@ -62,7 +62,7 @@
 #searchForm  {
     position  :  relative;
     padding  : 2.5ch 0 3ch 0;
-    margin-top : 10px;
+    margin-top : 0.77rem;
 
     transform-origin: top right;
 
@@ -78,7 +78,7 @@
 }
 
 #searchForm:focus-within .icon-pen {
-    transform:  translate(-20px, -5px);
+    transform:  translate(-1.54rem, -0.38rem);
     transition: all 350ms;
 }
 
@@ -98,7 +98,7 @@
 
 #searchForm span.searchGroup  {
     position : relative;
-    margin: 25px 0 30px 0;
+    margin: 1.92rem 0 2.31rem 0;
     left: 25%;
     opacity  :  1;
 }
@@ -117,17 +117,17 @@
 #searchInput  {
     height               :  auto;
     margin               :  0;
-    padding              :  3px 0  4px 0;
+    padding              :  0.23rem 0  0.31rem 0;
 
     font-size            :  1rem;
     color                :  white;
     font-weight: bold;
     letter-spacing       :  0.13em;
     text-align           :  center;
-    text-shadow          :  1px 1px 2px rgba(0,0,0,0.3);
+    text-shadow          :  0.077rem 0.077rem 0.15rem rgba(0,0,0,0.3);
 
-    // border               :  1px solid rgba(255,255,255,0.5);
-    // border-radius        :  3px;
+    // border               :  0.077rem solid rgba(255,255,255,0.5);
+    // border-radius        :  0.23rem;
     // background-color     :  $panelColor;
     
     border               : none;
@@ -151,76 +151,104 @@
 
 #searchSpecials  {
     display  :  flex;
-    flex-direction  :  column;
-    justify-content  :  space-between;
-    // align-items: flex-start;
-    align-items: flex-end;
+    // flex-direction  :  column;
+    flex-direction  :  row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    // text-align: center;
+    // align-items: stretch;
     
     position  :  absolute;
-    // top : -2.5ch;
-    top : -5.8ch;
-    // left  :  102.4%;
-    left  :  95%;
-    padding : 25px 20px 25px 20px;
+    top : -6.7ch;
+    left  :  96%;
+    // width: 200px;
+    width: 15.38rem;
+    
+    // width: 200px;
+    padding : 2.31rem 3.08rem 2.69rem 3.08rem;
 
+    color: white;
     font-size  :  0.9rem;
+    text-shadow : 0.077rem 0.077rem 0.077rem rgba(0,0,0,0.5);
+    
     pointer-events  :  auto;
+    // transform: rotate(5deg);   
     
-    border : solid 1px transparent;
-    // border-right: 1px solid white;
+    // border : solid 0.077rem #aaa;
+    // border  :  0.077rem solid rgba(255,255,255,0.15);
     
-    border : solid 1px $bgColor;
     border-radius : 50%;
-    // background-color : $bgColor;
-    box-shadow: inset -100px 0 100px $bgColor;
+    // background-color: $panelColor;
+    // box-shadow: 0.077rem 0 0.077rem rgba(0,0,0,0.4);
+    
+    // box-shadow: inset -100px 0 100px $bgColor;
+    box-shadow: inset -0.77rem 0 7.7rem $bgColor;
     transition  :  all 500ms 1300ms;
 }
 
 #searchSpecials.grayed  {
-    opacity  :  0.6;
+    opacity  :  0.5;
     pointer-events  :  none;
 }
 
-#searchSpecials span.searchSpecialWrapper {
-    margin-bottom : 1.6ch;
+.searchSpecialWrapper {
+    padding: 0.8ch 0 0.8ch 0;
     transition  :  all 1000ms;
 }
 
-#searchSpecials a  {
-    padding : 0.2ch 2ch 0.45ch 2ch;
+.searchSpecialWrapper:nth-of-type(1) a {
+    // width: 200px;
+    // align-self: stretch;
+    // flex-basis: inherit;
+   padding: 0.1ch 2.69rem 0.5ch 2.69rem;
+}
+.searchSpecialWrapper:nth-of-type(2) a {
+   padding: 0.1ch 2.38rem 0.5ch 2.38rem;
+}
+.searchSpecialWrapper:nth-of-type(3) a {
+    padding : 0.1ch 2ch 0.5ch 2ch;
+}
+.searchSpecialWrapper:nth-of-type(4) a {
+   padding: 0.1ch 2.38rem 0.5ch 2.38rem;
+}
+.searchSpecialWrapper:nth-of-type(5) a {
+   padding: 0.1ch 2.54rem 0.5ch 2.54rem;
+}
 
-    color : white;
-    text-shadow : 1px 1px 1px rgba(0,0,0,0.5);
-    
-    border : 1px solid rgba(255,255,255,0.2);
-    border-radius : 2px;
+.searchSpecialWrapper a  {
+    // padding : 0.2ch 2ch 0.45ch 2ch;
+    // padding : 0.2ch 2ch 0.45ch 2ch;
+    border : 0.077rem solid rgba(255,255,255,0.2);
+    border-radius : 0.15rem;
     background-color : $genericButtonColor;
-    box-shadow : 0 0 2px rgba(0,0,0,0.5);
+    box-shadow : 0 0 0.15rem rgba(0,0,0,0.5);
 
     cursor  :  pointer;
     transition : all 350ms;
 }
 
-#searchSpecials a:hover  {
-    color: white;
-    border : 1px solid #666;
-
+.searchSpecialWrapper:hover a  {
+    border : 0.077rem solid #666;
     background-color : #222;
-    box-shadow : 0 0 2px rgba(0,0,0,1);
+    box-shadow : 0 0 0.15rem rgba(0,0,0,1);
 }
 
-#searchSpecials.SAM span.searchSpecialWrapper  {  margin-bottom : 2ch;  }
+// .searchSpecialWrapper a:first-of-type  {
+//     transform: rotate(25deg);   
+// }
+
+#searchSpecials.SAM .searchSpecialWrapper  {  padding : 1ch 0 1ch 0;  }
 
 #searchSpecials span.notAvailable  {  display : none;  }
 
 #searchSpecials.SAM  {
     justify-content  :  space-around;
-    // top : -0.7ch;
-    top : -3ch;
-    left : 98%;
+    top : -4.3ch;
+    left : 96%;
 }
 
-.highlightSpecial { border-bottom: 1px solid white; }
+.highlightSpecial { border-bottom: 0.077rem solid white; }
 
 /*  -----------------------   searchResults  panel  ----------------------  */
 
@@ -241,7 +269,7 @@
     box-shadow: none;
     background-color: transparent;
 
-    transform : translateY(-100px);
+    transform : translateY(-7.7rem);
     transition  :  all 1000ms;
 }
 
@@ -261,34 +289,87 @@
     padding: 0 0 1ch 0;
     overflow-x : visible;
     
-    border  :  1px solid rgba(255,255,255,0.15);
-    border-radius  :  3px;
+    border  :  0.077rem solid rgba(255,255,255,0.15);
+    border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    box-shadow: 0 0 2px rgba(0,0,0,0.7);
+    box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
 }
 
-#closeResultsPanelButton  {
+#closeResultsPanelButton, #closeOpenFamiliesButton  {
     position: relative;
-    left: 100%;
-    padding: 0.25rem 0 0 0;
-    width: 30px;
-    height: 30px;
+    // left: 100%;
+    // padding: 0.25rem 0 0 0;
+    // width: 30px;
+    // height: 30px;
 
     text-align: center;
+    font-weight  :  bold;
 
-    // border: 1px solid rgba(255,255,255,0.25);
-    border: 1px solid gold;
+    border: 0.077rem solid $goldHighlightColor;
     border-radius: 50%;
     background-color: $panelColor;
-    box-shadow: 0 0 0 6px $bgColor, -8px 0 1px rgba(255,255,255,0.25), -7px 0 0 2px rgba(0,0,0,0.2);
+    // box-shadow: 0 0 0 6px $bgColor, -8px 0 0.077rem rgba(255,255,255,0.25), -7px 0 0 0.15rem rgba(0,0,0,0.2);
 
     z-index: 2;
     cursor: pointer;
     transition: all 300ms;
 }
 
-#closeResultsPanelButton:hover  {
-    background-color: black;
+#closeResultsPanelButton  {
+    
+    left: 100%;
+    // padding: 0 0 1rem 0;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.4rem 0 0 0;
+    
+    font-size  :  1rem;
+    line-height: 1rem;
+    // font-weight  :  bold;
+    
+    // // box-shadow: 0 0 0 6px $bgColor,
+    box-shadow: 0 0 0 0.46rem $bgColor,
+                0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
+                0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
+}
+
+#closeOpenFamiliesButton  {
+    left: calc(100% - 1.31rem);
+    top: 2.54rem;
+    width  :  3rem;
+    height  :  3rem;
+    padding  :  0.23rem 0 0 0;
+
+    font-size  :  1.6rem;
+    // font-weight  :  bold;
+
+    border : 0.15rem solid  $goldHighlightColor;
+    box-shadow: 0 0 0 0.62rem $bgColor, 
+                0 -0.077rem 0 0.62rem $bgColor, -0.077rem 0 0 0.62rem $bgColor,  -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),
+                0.077rem -0.077rem 0 0.69rem $bgColor, -0.077rem -0.077rem 0 0.69rem $bgColor,  -0.077rem -0.077rem 0 0.69rem rgba(255,255,255, 0.25);
+}
+
+#closeResultsPanelButton:hover, #closeOpenFamiliesButton:hover  {
+    background-color: rgb(34, 34, 34);
+}
+
+#closeOpenFamiliesButton::before  {
+    opacity: 0;
+    position: absolute;
+    content: "close open families";
+    left: -8vw;
+    top: 90%;
+    width: 8vw;
+    padding:0.38rem;
+    border-radius: 0.15rem;
+    font-size: 0.9rem;
+    background-color: $panelColor;
+    box-shadow: 0 0 0 0.077rem rgb(115, 115, 115);
+    transition: all 200ms 500ms ease-in-out;
+}
+
+#closeOpenFamiliesButton:hover::before  {
+    opacity: 1;
 }
 
 #countrySearch  {
@@ -297,19 +378,19 @@
     position  :  relative;
     padding : 1ch 0 0 0;
     height : 4ch;
-    margin: -10px 0 1ch 0;
+    margin: -0.77rem 0 1ch 0;
     left : 2ch;
     width : calc(100% - 4ch);
 
-    font-size  :  1.1rem;
+    font-size  :  1.15rem;
     font-variant  :  small-caps;
     color  :  $panelFlyoutFontColor;
     text-align  :  center;
     letter-spacing  :  0.1em;
 
-    border  :  1px solid rgba(255,255,255,0.25);
-    border-top  :  1px solid rgba(0,0,0,0.25);
-    border-radius: 5px;
+    border  :  0.077rem solid rgba(255,255,255,0.25);
+    border-top  :  0.077rem solid rgba(0,0,0,0.25);
+    border-radius: 0.38rem;
     background-color  :  $panelFlyoutColor;
     box-shadow : none;
 }
@@ -320,14 +401,14 @@
     left  :  -10vw;
     width  :  calc(100% + 10vw + 1.1ch);
     height  :  auto;
-    max-height  :  370px;
+    max-height  :  28.5rem;
     padding  :  0 0 0 10vw;
 
     font-size  :  1rem;
     line-height  :  1rem;
 
     border: none;
-    box-shadow : 0 -1px 0 rgba(255,255,255,0.35);
+    box-shadow : 0 -0.077rem 0 rgba(255,255,255,0.35);
     box-shadow : none;
 //  FIXME :
     -webkit-overflow-scrolling  :  touch;
@@ -355,13 +436,14 @@
 
 #searchResults li  {
     position : relative;
-    padding  :  0 0 1px 16px;
-    width: calc(100% - 9px);
+    // padding  :  0 0 0.077rem 16px;
+    padding  :  0.077rem 0 0.12rem 1.23rem;
+    width: calc(100% - 0.69rem);
 
     list-style-type  :  none;
     cursor  :  pointer;
-    border-top : 1px solid transparent;
-    border-bottom : 1px solid transparent;
+    border-top : 0.077rem solid transparent;
+    border-bottom : 0.077rem solid transparent;
 }
 
 #searchResults li.bird {
@@ -375,31 +457,31 @@
 
 #searchResults li:hover  {
     color  :  white;
-    border-top : 1px solid darken($birdRolloverColor, 10%);
-    border-bottom : 1px solid darken($birdRolloverColor, 10%);
+    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
+    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
     background-color  :  $birdRolloverColor;
 }
 
 #searchResults li.bird:not(.active):hover::before  {
     position : relative;
-    top : 1px;
-    left : -33px;
-    margin-right : -7px;
+    top : 0.077rem;
+    left : -2.54rem;
+    margin-right : -0.54rem;
     content : '';
-    border-left : 7px solid $birdRolloverColor;
+    border-left : 0.54rem solid $birdRolloverColor;
 }
 
 #searchResults li.family:hover::before  {
     position : relative;
-    top : 1px;
-    left : -35px;
-    margin-right : -10px;
+    top : 0.077rem;
+    left : -2.69rem;
+    margin-right : -0.77rem;
     content : '';
-    border-left : 10px solid $birdRolloverColor;
+    border-left : 0.77rem solid $birdRolloverColor;
 }
 
 #searchResults li:not(.family) span:first-child  {
-    padding  :  3px 0 3px 16px;
+    padding  :  0.23rem 0 0.23rem 1.2rem;
 }
 
 #searchResults li.active  {
@@ -410,9 +492,9 @@
     position : absolute;
     content : '';
 
-    top: -1px;
+    top: -0.077rem;
     left : -10vw;
-    height : calc(100% + 2px);
+    height : calc(100% + 0.15rem);
     width : 10vw;
 
     border-right : 0vw solid $birdRolloverColor;
@@ -427,19 +509,19 @@
 }
 
 #searchResults .family      {
-    margin  :  5px 0 0 0;
-    padding: 1px 0 2px 16px;
+    margin  :  0.38rem 0 0 0;
+    padding: 0.077rem 0 0.15rem 1.2rem;
 }
 
 #searchResults .familyOpen  {
-    margin  :  5px 0 0 0;
-    padding: 1px 0 2px 16px;
+    margin  :  0.38rem 0 0 0;
+    padding: 0.077rem 0 0.15rem 1.2rem;
 }
 
 // species scientific names only
 #searchResults span:not(.fsc):last-child  {
     position  :  absolute;
-    left  :  calc(52.8% + 15px);
+    left  :  calc(52.8% + 1.15rem);
 }
 
 .fsc  {
@@ -457,34 +539,34 @@
     content  :  'e';
 
     position  :  relative;
-    left  :  -9px;
+    left  :  -0.69rem;
     font-size  :  0.8rem;
 }
 
 .extinct::before  {
     content  :  'x';
     position  :  relative;
-    left  :  -9px;
+    left  :  -0.69rem;
     font-size  :  0.8rem;
 }
 
 .hy::before  {
     content  :  'h';
     position  :  relative;
-    left  :  -9px;
+    left  :  -0.69rem;
     font-size  :  0.8rem;
 }
 
 .va::before  {
     content  :  'v';
     position  :  relative;
-    left  :  -9px;
+    left  :  -0.69rem;
     font-size  :  0.8rem;
 }
 
 #searchResults .endemic,#searchResults .extinct,#searchResults .hy,#searchResults .va  {
     position  :  relative;
-    left  :  -7px;
+    left  :  -0.575rem;
 }
 
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
@@ -509,10 +591,16 @@
     transition : all 2000ms;
 }
 
+// .panel.tax-panel {
+//     border-right:red;
+// }
+
 .tax-panel.translateDown  {
     opacity : 1;
     height : auto;
+    // height : 70vh;
     padding  :  2ch 0 10ch 0;
+    // padding  :  2ch 0 8ch 0;
     
     transform : translateY(0);
 }
@@ -524,12 +612,13 @@
     width : calc(100% - 10vw);
     left : 10vw;
     padding : 0 0 1ch 0;
+    // padding : 0 0 0 0;
     margin : 1ch 0 0 0;
     
-    border  :  1px solid rgba(255,255,255,0.15);
-    border-radius  :  3px;
+    border  :  0.077rem solid rgba(255,255,255,0.15);
+    border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    box-shadow: 0 0 2px rgba(0,0,0,0.7);
+    box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
     overflow-x : visible;
 }
 
@@ -537,15 +626,18 @@
 
 #taxPage  {
     position  :  relative;
-    top: 10px;
+    top: 0.77rem;
     left  :  -10vw;
-    width  :  calc(100% + 10vw + 1.2ch);
-    height : auto;
-    // max-height  :  calc(100vh - 262px);
+    // width  :  calc(100% + 10vw + 1.2ch);
+    width  :  calc(100% + 10vw + 1ch);
+    // height : auto;
+    height : 100%;
+    // max-height  :  calc(100vh - 260.15rem);
     max-height  :  75vh;
 
     padding  :  0.5ch 0 0 10vw;
-    margin : 0 0 2ch 0;
+    // margin : 0 0 2ch 0;
+    margin : 0 0 1ch 0;
 
     font-size  :  1rem;
     line-height : 1.3rem;
@@ -555,22 +647,22 @@
 
     // use below if no SimpleBar
     // overflow-y  :  visible;
-    overflow-y: hidden;
+    // overflow-y: hidden;
 
     border: none;
-    border-radius  :  10px;
+    // border-radius  :  10px;
     background-color : transparent;
     box-shadow: none;
 }
 
-#taxPageButtons  {
+#taxPageButton  {
     cursor  :  pointer;
     transition : all 350ms;
 }
 
-#taxPageButtons:hover  {
-    letter-spacing : 3px;
-    box-shadow  :  0 2px 4px #444;
+#taxPageButton:hover  {
+    letter-spacing : 0.23rem;
+    box-shadow  :  0 0.15rem 0.31rem #444;
 }
 
 #tree *       {
@@ -617,17 +709,18 @@ to {
 // family names and species names too
 #tree .familyOpen  {
     width : 100%;
+    padding: 0 0 0.46rem 0;
     cursor  :  pointer;
 }
 
 /*target : family common name only*/
 #tree li.family > span:nth-child(1)  {
-    padding  :  1px 0 2px 15px;
+    padding  :  0.077rem 0 0.15rem 1.15rem;
 }
 
 /*target : familyOpen family common and sci names for families that are open  */
 #tree li.familyOpen > span:nth-child(1)  {
-    padding  :  1px 0 2px  15px;
+    padding  :  0.077rem 0 0.15rem 1.15rem;
 }
 
 /*target : familyOpen sci name only*/
@@ -637,23 +730,23 @@ to {
 // all family names whether open or not
 .fTitle  {
     display: inline-block;
-    width: calc(100% - 8px);
-    border-top : 1px solid transparent;
-    border-bottom : 1px solid transparent;
+    width: calc(100% - 0.62rem);
+    border-top : 0.077rem solid transparent;
+    border-bottom : 0.077rem solid transparent;
     background-color: transparent;
 }
 
 .family .fTitle:hover {
-    border-top : 1px solid darken($birdRolloverColor, 10%);
-    border-bottom : 1px solid darken($birdRolloverColor, 10%);
+    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
+    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
     background-color  :  $birdRolloverColor;
 }
 
 // hover: family names only
 .familyOpen .fTitle:hover {
     background-color  :  $birdRolloverColor;
-    border-top : 1px solid darken($birdRolloverColor, 10%);
-    border-bottom : 1px solid darken($birdRolloverColor, 10%);
+    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
+    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
 }
 
 // ***  
@@ -663,14 +756,16 @@ to {
 
 // just the species within a family (that is open)
 #tree .familyOpen  ul  {
-    width: calc(100% - 8px);
+    width: calc(100% - 0.62rem);
+    margin-top: -0.15rem;
+    padding: 0;
     font-size  :  0.9rem;
     line-height  :  1rem;
 }
 
 /* target : familyOpen bird common names only */
 #tree .familyOpen  ul  li span:first-child {
-    padding  :  1px 0 0 27px;
+    padding  :  0.077rem 0 0 2.1rem;
 }
 
 /*target : familyOpen bird sci names only*/
@@ -685,7 +780,7 @@ to {
 
 #taxPage.samTax .hy,#taxPage.samTax .va  {
     position  :  relative;
-    left  :  19px;
+    left  :  1.55rem;
 }
 
 #searchResults.samTax .hy:before,#searchResults.samTax .va:before  {
@@ -699,55 +794,95 @@ to {
 
 #taxPage.samTax li.familyOpen span.hy  {
     position  :  relative;
-    left  :  19px;
+    left  :  1.55rem;
 }
 
 #taxPage.samTax li.familyOpen span.va  {
     position  :  relative;
-    left  :  19px;
+    left  :  1.55rem;
 }
 
 #taxPage .endemic, #taxPage .extinct, #taxPage .hy, #taxPage .va  {
     position  :  relative;
-    left  :  -8px;
+    left  :  -0.7rem;
 }
 
 #tree .fco, #tree .fsc  {
     font-weight  :  bold;
 }
 
+// TODO : (use arrows) ►▼
+
+#tree .familyOpen::before {
+    content: '▼';
+    position : relative;
+    left : -2.5vw;
+    top : 0.15rem;
+    
+    margin-right : -1.343rem;
+    // color: $genericButtonColor;
+    font-size: 1.3rem;
+    // color: rgb(200,200,200);
+    // color: $genericButtonColor;
+    // text-shadow: 0 0 0.15rem white;
+    
+    // border-radius: 50%;
+    // background-color: white;
+}
+
+// #tree .family:hover, #tree .familyOpen:hover {
+//     position: relative;
+//     top: -0.5px;   
+// }
+    
 #tree .family:hover::before, #tree .familyOpen:hover::before {
     position : relative;
-    top : 1px;
-    left : -20px;
-    margin-right : -10px;
-    content : '';
-    border-left : 10px solid white;
+    // top : 0.15rem;
+    top : 0.15rem;
+    left : -2.5vw;
+    // margin-right : -17.5px;
+    margin-right : -1.343rem;
+    
+    font-size: 1.3rem;
+    // color: rgb(200,200,200);
+    // text-shadow: 0 0  0.15rem white;
+    // content : '';
+    // // border-left : 10px solid white;
+}
+
+#tree .family:hover::before {
+    content: '►';
+    color: black;
+    
+}
+
+#tree .familyOpen:hover::before {
+    content: '▼';
 }
 
 /*    below targets each individual bird */
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover  {
-    padding : 2px 0 2px 0;
+    padding : 0.15rem 0 0.15rem 0;
     background-color  :  $birdRolloverColor;
-    border-top : 1px solid darken($birdRolloverColor, 10%);
-    border-bottom : 1px solid darken($birdRolloverColor, 10%);
+    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
+    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
     transition: background-color 450ms;
 }
 
 #tree ul > li:hover::before  {
     position : relative;
-    top : 1px;
-    left : -18px;
-    margin-right : -7px;
+    top : 0.077rem;
+    left : -1.385rem;
+    margin-right : -0.54rem;
     content : '';
-    border-left : 7px solid $birdRolloverColor;
+    border-left : 0.54rem solid $birdRolloverColor;
 }
 
 #tree ul li {
-    padding : 2px 0 2px 0;
+    padding : 0.15rem 0 0.15rem 0;
     border: none;
-    border-top : 1px solid transparent;
-    border-bottom : 1px solid transparent;
+    border-top : 0.077rem solid transparent;
+    border-bottom : 0.077rem solid transparent;
 }
 
 /* added by toggleFamilyOpen, the species highlighted */
@@ -758,10 +893,10 @@ to {
 
 #tree ul li.active::before {
     position : absolute;
-    top : -1px;
+    top : -0.077rem;
     left : -10vw;
     content : '';
-    height : calc(100% + 2px);
+    height : calc(100% + 0.15rem);
     width : 10vw;
 
     border-right : 0 solid $birdActiveColor;

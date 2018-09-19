@@ -4,93 +4,86 @@
     position  :  relative;
     width  :  1rem;
     height  :  1rem;
-
+    
     fill  :  #ddd;
-    -webkit-filter  :  drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -1px -1px 1px rgba(0,0,0,0.3) );
-        -ms-filter  :  drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -1px -1px 1px rgba(0,0,0,0.3) );
-            filter  :  drop-shadow( 2px 2px 2px rgba(0,0,0,0.3) ) drop-shadow( -1px -1px 1px rgba(0,0,0,0.3) );
+    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+            filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
     stroke  :  #ddd;
     stroke-width  :  0;
 }
 
 .icon-pen {
-
-    // position : relative;
-    // top  :  -5px;
-    // left  :  -15px;
-    // right : 0;
     width  :  2rem;
     height  :  2rem;
     opacity: 1;
-    transform: translate(-15px, -5px);
+    transform: translate(-1.15rem, -0.38rem);
     transition: all 350ms;
 }
 
 @supports ( all:initial ) {
   .icon-pen {
-     transform: translate(15px, -30px);
+     transform: translate(1.15rem, -2.31rem);
     //  opacity : 0;
   }
 }
 
 .icon-pin  {
-    top  :  -22px;
-    left  :  8px;
-    width  :  3em;
-    height  :  3em;
+    top  :  -1.7rem;
+    left  :  0.62rem;
+    width  :  3rem;
+    height  :  3rem;
     fill  :  lighten($bgColor, 45%);
     stroke  :  #333;
     stroke-width  :  0.25px;
 }
 
 .icon-female {
-    top  :  -1px;
-    left: -1px;
+    top  :  -0.077rem;
+    left: -0.077rem;
     transform: scale(1.2);
     fill : ddd;
-    -webkit-filter  :  drop-shadow( 2px 2px 2px 0.3 ) drop-shadow( -1px -1px 1px 0.3 );
-        -ms-filter  :  drop-shadow( 2px 2px 2px 0.3 ) drop-shadow( -1px -1px 1px 0.3 );
-            filter  :  drop-shadow( 2px 2px 2px 0.3 ) drop-shadow( -1px -1px 1px 0.3 );
+    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem 0.3 ) drop-shadow( -0.077rem -0.077rem 0.077rem 0.3 );
+        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem 0.3 ) drop-shadow( -0.077rem -0.077rem 0.077rem 0.3 );
+            filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem 0.3 ) drop-shadow( -0.077rem -0.077rem 0.077rem 0.3 );
 }
 
 .icon-camera  {
-    top  :  1px;
+    top  :  0.077rem;
 }
 
 .icon-list  {
-    top  :  2px;
-    left: 2px;
+    top  :  0.15rem;
+    left: 0.15rem;
     transform: scale(1.5);
     // width  :  4rem;
 }
 
 .icon-file-excel  {
-    top  :  1px;
+    top  :  0.077rem;
     // width  :  1em;
-    height  :  0.92em;
-    left  :  7px;
-    // margin-right : 15px;
+    height  :  0.92rem;
+    left  :  0.54rem;
 }
 
 .icon-paper-plane-o {
-    top  :  1px;
+    top  :  0.077rem;
 }
 
 .icon-delete  {
-    // top  :  2px;
-    // left: 2px;
+    // top  :  0.15rem;
+    // left: 0.15rem;
     transform: scale(2,1.8);
 
     -webkit-filter  : none;
     -ms-filter  : none;
         filter  : none;
     // stroke  :  #fff;
-    // stroke-width  :  0.25px;
     // width  :  4rem;
 }
 
 #icon-delete-circle {
     fill: rgb(96, 96, 96);
     stroke  :  #ddd;
-    stroke-width  :  1px;
+    stroke-width  :  0.077rem;
 }

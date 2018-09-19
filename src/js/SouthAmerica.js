@@ -30,17 +30,19 @@ function initCurrentMap() {
   map.style.opacity = "1";
 }
 
+//  TODO : (is this necessary? Straight to setSVGstyles()?)
 // eslint-disable-next-line
-function prepareSVGstyles(evt)  {
+function prepareSVGstyles(obj)  {
 
-  var svg;
+  // var svg;
+  var svg = document.getElementById(obj);
 
-  if (evt.target && evt.target.id === "SAMsvg") {
-    svg = document.getElementById("SAMsvg");
-  }
-  else {
-    svg = document.getElementById(evt);
-  }
+  // if (evt.target && evt.target.id === "SAMsvg") {
+  //   svg = document.getElementById("SAMsvg");
+  // }
+  // else {
+  //   svg = document.getElementById(evt);
+  // }
 
   var svgDoc = svg.contentDocument;
 
@@ -64,7 +66,7 @@ function setSVGstyles(obj )  {
   }
 
   else if (obj.parentNode.nodeName === "g")  {
-    // obj.parentNode.style.filter = "blur(20px)";
+    // obj.parentNode.style.filter = "blur(1.54rem)";
 
     var paths = obj.querySelectorAll("path");
     var len = paths.length;

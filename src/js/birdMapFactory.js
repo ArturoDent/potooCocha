@@ -89,13 +89,11 @@ function saveCurrentMap()  {
   dupNode.classList.remove("birdMapInstance");
   // dupNode.classList.add("thinify");
   dupNode.classList.add("smallBird");
-  dupNode.classList.add("smallBird" + len);
-
-  // dupNode.style.left = (20 * len) + "vw";
+  // dupNode.classList.add("smallBird" + len);  not used
 
   dupNode.querySelector(".birdName").classList.add("smallBirdText");
 
-  dupNode.querySelector(".colorKey").style.opacity = "0";
+  // dupNode.querySelector(".colorKey").style.opacity = "0";
   dupNode.querySelector(".colorKey").style.display = "none";
 
   dupNode.querySelector(".birdName").removeAttribute("id");
@@ -150,33 +148,33 @@ function repositionChildMaps(numChildren) {
   switch (numChildren) {
 
   case 1:
-    smallMaps[0].style.left = "48vw";
+    smallMaps[0].style.left = "45vw";
     break;
 
   case 2:
-    smallMaps[0].style.left = "42vw";
-    smallMaps[1].style.left = "45vw";
+    smallMaps[0].style.left = "34vw";
+    smallMaps[1].style.left = "41vw";
     break;
 
   case 3:
-    smallMaps[0].style.left = "36vw";
-    smallMaps[1].style.left = "39vw";
-    smallMaps[2].style.left = "42vw";
+    smallMaps[0].style.left = "26vw";
+    smallMaps[1].style.left = "30.25vw";
+    smallMaps[2].style.left = "34.5vw";
     break;
 
   case 4:
-    smallMaps[0].style.left = "26vw";
-    smallMaps[1].style.left = "28vw";
-    smallMaps[2].style.left = "30vw";
-    smallMaps[3].style.left = "32vw";
+    smallMaps[0].style.left = "21vw";
+    smallMaps[1].style.left = "24vw";
+    smallMaps[2].style.left = "27vw";
+    smallMaps[3].style.left = "30vw";
     break;
 
   case 5:
-    smallMaps[0].style.left = "20vw";
-    smallMaps[1].style.left = "21vw";
-    smallMaps[2].style.left = "22vw";
-    smallMaps[3].style.left = "23vw";
-    smallMaps[4].style.left = "24vw";
+    smallMaps[0].style.left = "17vw";
+    smallMaps[1].style.left = "20vw";
+    smallMaps[2].style.left = "23vw";
+    smallMaps[3].style.left = "26vw";
+    smallMaps[4].style.left = "29vw";
     break;
 
   default:

@@ -23,5 +23,25 @@ $logFile  = '../logFileRequests.txt';
 
 $txt = "\t" . $when . "  -->  " . $country . " : "  . $document;
 
+// TODO : (if $logFile is too big, start replacing from the beginning?)
+// filesize($logFile) -> in bytes, ftruncate()
+// http://php.net/manual/en/function.ftruncate.php  ftruncatestart()
+// TODO : (if creating file: 
+// 
+// ***************************     Documents requested by Country and Date     **********************)
+
+if (file_exists($logFile)) {
+  file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+} 
+else {
+  $txt = "\n\n***************************     Documents requested by Country and Date     **********************\n\n";
+  file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+  $txt = "\t" . $when . "  -->  " . $country . " : "  . $document;
+  file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+}
+
+
 file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+
 ?>

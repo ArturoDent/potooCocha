@@ -3,18 +3,16 @@ var browserSync = require("browser-sync").create("index.html");
 // var browserSync2 = require("browser-sync").create("citations.html");
 
 var reload = browserSync.reload;
-// var reload2 = browserSync2.reload;
 
 var newer = require('gulp-newer');
 var sass = require("gulp-sass");
-// minify js files
 
 var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 var rename = require("gulp-rename");
 var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
-var sourcemaps = require("gulp-sourcemaps");
+// var sourcemaps = require("gulp-sourcemaps");
 // var cached = require("gulp-cached");
 // var remember = require("gulp-remember");
 var stripComments = require("gulp-strip-comments");
@@ -24,7 +22,6 @@ var addVersionString = require("gulp-version-number");
 var print = require('gulp-print').default;
 
 // var imageMin = require("gulp-imagemin");
-
 // var gutil = require("gulp-util");
 // var notify = require("gulp-notify");
 
@@ -50,6 +47,11 @@ function serve(done) {
   //   // open: false,
   //   ghostMode: false
   // });
+  // gulp.watch(paths.js.src, gulp.series(reloadJS));
+  // gulp.watch(paths.sass.src, gulp.series(sass2css));
+  // // gulp.watch("./*.html").on("change", reload);
+  // gulp.watch("./*.html").on("change", stream);
+
   done();
 }
 
@@ -126,11 +128,11 @@ var paths = {
 };
 
 function watch() {
-  gulp.watch(paths.js.src, gulp.series(moveJStoTemp, reloadJS));
-  // gulp.watch(paths.sass.src, gulp.series(sass2css));
-  gulp.watch(paths.sass.src, sass2css);
+  // gulp.watch(paths.js.src, gulp.series(moveJStoTemp, reloadJS));
+  gulp.watch(paths.js.src, gulp.series(reloadJS));
+  gulp.watch(paths.sass.src, gulp.series(sass2css));
   gulp.watch("./*.html").on("change", reload);
-  // gulp.watch("./*.html").on("change", reload2);
+  // gulp.watch("./*.html").on("change", stream);
 }
 
 function sass2css() {
@@ -138,14 +140,16 @@ function sass2css() {
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(paths.css.temp))
     .pipe(reload({ stream:true }));
+    // .pipe(stream( {once: true}) );
 }
 
 function reloadJS() {
   return gulp.src(paths.js.src)
-    .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write("sourcemaps"))
-    // .pipe(gulp.dest("."))
+    .pipe(newer(paths.js.src))
+    // .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.write("sourcemaps"))
     .pipe(reload({ stream:true }));
+    // .pipe(stream( {once: true}) );
 }
 
 function moveJStoTemp() {
@@ -290,6 +294,7 @@ const gutil = require('gulp-util');
 const ftp = require('vinyl-ftp');
 // const notify = require('gulp-notify');
 
+// TODO : (php folder and logFileRequests.txt?)
 /* list all files you wish to ftp in the glob variable */
 const ftpGlobs = [
   'deploy/css/*.css',
@@ -348,25 +353,21 @@ function deployPotoococha () {
 // .pipe(notify("potoococha updated"));
 }
 
-gulp.task("sync", gulp.series(sass2css, moveJStoTemp, reloadJS, serve, watch));
+gulp.task("sync", gulp.series(sass2css, reloadJS, serve, watch));
 
 gulp.task("serve", gulp.series(serve));
 gulp.task("watch", gulp.series(watch));
-
-// gulp.task("sync", gulp.series(sass2css, reloadJS, serve));
-// gulp.task("reloadJS", gulp.series(moveJStoTemp));
 
 gulp.task("serve:watch", gulp.series(serve, watch));
 gulp.task("serve:deploy", gulp.series(serveTest));
 
 gulp.task("production", gulp.series(moveJStoTemp, processJS));
 
+// TODO : (include php and logFileRequests.txt)
 gulp.task("build", gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
   copySVG, copyFLAGS, copyCitations, copyAuthors, copyOccurrences, copyCountries));
 
 gulp.task("getBuild", gulp.series(copyBuildSACCdata, copyBuildSACCcountries));
-
-// gulp.task("default", gulp.series(deployExperimental));
 
 gulp.task('deploy:E', gulp.series(deployExperimental));
 gulp.task('deploy:P', gulp.series(deployPotoococha));

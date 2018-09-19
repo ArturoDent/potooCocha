@@ -91,12 +91,12 @@ function onResizeWindow() {
 
   var len = mapsCollection.children.length;
 
-  if (len > 0) {
-
-    if (window.innerWidth > 1680) mapsCollection.style.height = "350px";
-    else if (window.innerWidth >= 1600) mapsCollection.style.height = "300px";
-    else if (window.innerWidth >= 1165) mapsCollection.style.height = "270px";
-    else mapsCollection.style.height = "235px";
+  if (len > 0) {    
+    
+    if (window.innerWidth > 1680) mapsCollection.style.height = "26.92rem";
+    else if (window.innerWidth >= 1600) mapsCollection.style.height = "23.1rem";
+    else if (window.innerWidth >= 1165) mapsCollection.style.height = "20.8rem";
+    else mapsCollection.style.height = "18.1rem";
   }
 
   console.log("Resize: window.width = " + window.innerWidth);
@@ -116,8 +116,10 @@ function checkWindowScroll() {
 function toggleCountryModal(evt)  {
 
   countryModal.classList.toggle("menu-show");
-  countryModal.classList.toggle("md-show");
-  countryButton.classList.toggle("expand");
+
+  // countryModal.classList.toggle("show");
+  document.getElementsByClassName("md-overlay")[0].classList.toggle("show");
+  // countryButton.classList.toggle("expand");
 
   if (evt) evt.stopPropagation();
 }

@@ -2,7 +2,7 @@ html {
     width  :  100%;
     height  :  100%;
     /*so 1em = 10px (browser default usually 16px)*/
-    font-size  :  16px;
+    font-size  :  calc(100vw / 118.15); 
     // line-height : calc(28 / 1rem);
     background-color  :  $bgColor;
 }
@@ -16,8 +16,8 @@ body {
     font-weight  :  600;
     color : white;
     // color : rgb(30, 30, 30);
-    text-shadow : 0  1px rgba(0,0,0,0.5);
-    // text-shadow : 0  0 1px rgb(162, 149, 137);
+    text-shadow : 0  0.077rem rgba(0,0,0,0.5);
+    // text-shadow : 0  0 0.077rem rgb(162, 149, 137);
     letter-spacing  :  0.04em;
 
     background-color  :  $bgColor;
@@ -32,24 +32,24 @@ body::after {
     height: 100%;
     top:0;
 
-    border: 1px solid $bodyBorderColor;
+    border: 0.077rem solid $bodyBorderColor;
     pointer-events: none;
 }
 
 a   {  color  :  inherit;   text-decoration  :  none;  }
 
-a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
+a:link  {  border-bottom  :  solid 0.077rem $panelFlyoutFontColor;  }
 
 #mainContent {
     position : relative;
-    top : 15vh;
+    top : 25vh;
     left : 10vw;
     transition  :  transform 750ms;
 }
 
-#mainContent.modal-shrink {
-    transform  :  translateX(-100px);
-}
+// #mainContent.modal-shrink {
+//     transform  :  translateX(-);
+// }
 
 .titleBanner {
     position  :  absolute;
@@ -57,68 +57,37 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
     left : 0;
     width : 100vw;
     height: auto;
-    padding: 1ch 7% 0.8ch 0;
+    padding: 0.4ch 20% 0.5ch 0;
 
     text-align: center;
-    font-size  :  2.8rem;
+    font-size  :  3rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  $titleTextFontColor;
+    // color  :  white;
     letter-spacing  :  0.1em;
+    text-shadow: 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
 
-    background-color  :  $bgColor;
-    box-shadow: 0 1px 2px rgba(0,0,0, 0.5);
+    background-color  :  $titleBannerColor;
+    box-shadow: inset 0 0.5rem 1.15rem rgba(0,0,0, 0.2);
 }
 
 .titleBanner_spacer  {
     position  :  relative;
-    top  :  -13px;
-    left : -3px;
-     margin: 0 0 0 5px;
-    // padding: 3px;
+    top  :  -1rem;
+    left : -0.3rem;
+    margin: 0 0 0 0.5rem;
 
     letter-spacing  :  0.1em;
-    // color : #df6757;
     color : white;
-    // color : gold;
     font-size  :  1.5rem;
     font-variant  :  normal;
-    text-shadow : 0  1px rgba(0,0,0,0.8);
-    // text-shadow : 0  1px rgba(255,255,255,0.3);
+    text-shadow : 0  0.077rem rgba(0,0,0,0.8);
 
     // poor support 2017-08
     // text-decoration: underline  $;
-    // border-bottom: 4px double #df6757;
-    // border: 4px double #df6757;
-    border-bottom: 4px double white;
     
-    // box-shadow:  0 0 5px white;
-    
-    // border-bottom: 4px double gold;
+    border-bottom: 0.31rem double white;
 }
-
-// #countryButton {
-//     position: absolute;
-//     top: 20px;
-//     right: 280px;
-//     width: 270px;
-//     padding : 0.6ch 0 1ch 2ch;
-//     text-align: left;
-//     // z-index  :  1;
-//     box-shadow  :  inset 0 0 25px 15px transparent, 3px 3px 5px rgba(0, 0, 0, 0.2);
-    
-//     transition  :  all 400ms ease-in-out;
-// }
-
-// #countryButton:hover, #countryButton:focus {
-//     border : 1px solid #888;
-//     box-shadow  :  inset 270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
-// }
-
-// #countryButton.highlight:hover, #countryButton.highlight:focus {
-//     border : 1px solid #888;
-//     box-shadow  :  inset -270px 0 25px 15px #252525, 3px 3px 5px rgba(0, 0, 0, 0.2);
-// }
 
 .articles {
     display  :  -webkit-flex;
@@ -130,7 +99,6 @@ a:link  {  border-bottom  :  solid 1px $panelFlyoutFontColor;  }
     left  :  0;
     width : 60ch;
     max-width : 60ch;
-    margin-top  :  4.5ch;
 
     overflow  :  visible;
 }
@@ -140,7 +108,7 @@ section  {
 }
 
 article {
-    border-radius  :  3px;
+    border-radius  :  0.23rem;
     transition  :  all 500ms;
 }
 
@@ -150,10 +118,10 @@ article {
 
     pointer-events  :  auto;
 
-    border  :  1px solid rgba(255,255,255,0.15);
-    border-radius  :  3px;
+    border  :  0.077rem solid rgba(255,255,255,0.15);
+    border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    box-shadow: 0 0 2px rgba(0,0,0,0.7);
+    box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
 
     -webkit-transition  :  opacity 2s;
        -moz-transition  :  opacity 2s;
@@ -171,11 +139,11 @@ article {
     font-size  :  1rem;
     font-variant  :  small-caps;
     color  :  $panelFlyoutFontColor;
-    text-shadow : 1px 1px rgba(0,0,0,1);
+    text-shadow : 0.077rem 0.077rem rgba(0,0,0,1);
     text-align  :  center;
     letter-spacing  :  0.1em;
 
-    border  :  1px solid rgba(255,255,255,0.25);
+    border  :  0.077rem solid rgba(255,255,255,0.25);
     background-color  :  $panelFlyoutColor;
 }
 
@@ -185,25 +153,25 @@ article {
     left : 2ch;
     width : calc(100% - 4ch);
 
-    border-top  :  1px solid rgba(0,0,0,0.25);
-    border-radius: 5px;
-    box-shadow : inset 0 -1px 1px -1px rgba(0,0,0,0.2), inset 0 0 1px rgba(0,0,0,0.2);
+    border-top  :  0.077rem solid rgba(0,0,0,0.25);
+    border-radius: 0.38rem;
+    box-shadow : inset 0 -0.077rem 0.077rem -0.077rem rgba(0,0,0,0.2), inset 0 0 0.077rem rgba(0,0,0,0.2);
 }
 
 #checklistArticle .topFlyoutPanel  {
     position: absolute;
     top: -3.8ch;
     left : 8ch;
-    min-width : calc(100% - 80px);
+    min-width : calc(100% - 6.15rem);
     height  :  10ch;
     // padding : 0.7ch 0 0 0;
     padding : 0.8ch 0 0 0;
 
     letter-spacing: 0;
 
-    border-radius : 20px;
-    border-top-right-radius  :  20px;
-    border-bottom-right-radius  :  20px;
+    border-radius : 1.54rem;
+    border-top-right-radius  :  1.54rem;
+    border-bottom-right-radius  :  1.54rem;
 }
 
 .bottomFlyoutPanel  {
@@ -212,9 +180,9 @@ article {
     left : 2ch;
     width : calc(100% - 4ch);
 
-    border-top  :  1px solid rgba(0,0,0,0.25);
-    border-radius: 5px;
-    box-shadow  :  inset 0 1px 1px -1px rgba(0,0,0,0.2), inset 0 0 1px rgba(0,0,0,0.2);
+    border-top  :  0.077rem solid rgba(0,0,0,0.25);
+    border-radius: 0.38rem;
+    box-shadow  :  inset 0 0.077rem 0.077rem -0.077rem rgba(0,0,0,0.2), inset 0 0 0.077rem rgba(0,0,0,0.2);
 }
 
 /*   -------------------   Footer   ----------------------------   */
@@ -229,18 +197,18 @@ footer {
     flex-direction  :  row;
 
     justify-content  :  space-around;
-    margin  :  2ch 0 1ch 0;
+    margin  :  2.5ch 0 1ch 0;
 }
 
 footer a  {
-    padding : 1px 3px 2px 5px;
+    padding : 0.077rem 0.23rem 0.15rem 0.38rem;
     text-decoration  :  none;
-    border : solid 1px transparent;
-    border-bottom  :  solid 1px #bbb;
+    border : solid 0.077rem transparent;
+    border-bottom  :  solid 0.077rem #bbb;
 }
 
 footer a:hover, footer a:focus {
-    border  :  solid 1px #bbb;
+    border  :  solid 0.077rem #bbb;
     transition: all 350ms;
 }
 

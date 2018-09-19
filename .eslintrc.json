@@ -39,10 +39,10 @@
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
     "func-call-spacing": ["error", "never"],
 
-   "indent": ["error", 2, { "FunctionExpression": {"parameters": "first"} }],
+    "indent": ["error", 2, { "ignoreComments": true }],
 
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-    "no-trailing-spaces": ["error", { "skipBlankLines": false }],
+    "no-trailing-spaces": ["warning", { "skipBlankLines": true }],
     "eqeqeq": 2,
     "no-cond-assign": ["error", "always"],
     "default-case": "error",

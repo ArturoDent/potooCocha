@@ -13,7 +13,7 @@ var birds;
 var numSpeciesList = { "Argentina":1005, "Aruba":219, "Bolivia":1383, "Brazil":1804, "Chile":498,
   "Colombia":1847, "Curaçao":218, "Ecuador":1632, "French Guiana":698,
   "Guyana":783, "Paraguay":694, "Peru":1803, "Suriname":731, "Trinidad":470,
-  "Uruguay":448, "Venezuela":1383, "Bonaire":210, "Falklands":227, "Malvinas":227, "South America": 3398};
+  "Uruguay":448, "Venezuela":1383, "Bonaire":210, "Falklands":227, "South America": 3398};
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
@@ -21,7 +21,7 @@ var numSpeciesList = { "Argentina":1005, "Aruba":219, "Bolivia":1383, "Brazil":1
 var numFamiliesList = { "Argentina":87, "Aruba":52, "Bolivia":78, "Brazil":91, "Chile":67,
   "Colombia":90, "Curaçao":50, "Ecuador":91, "French Guiana":82,
   "Guyana":78, "Paraguay":72, "Peru":88, "Suriname":80, "Trinidad":70,
-  "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "Malvinas":48, "South America": 102};
+  "Uruguay":72, "Venezuela":87, "Bonaire":47, "Falklands":48, "South America": 102};
 
 // South America : 102 families not including 2 incertae "families", 3394 total spp.
 //   class='fco'>(?!INCERTAE).*?  --> finds number of families not including INCERTAE in ..SACC.html
@@ -39,6 +39,7 @@ var simpleBarTaxPage;
 
 var closeResultsPanelButton;
 var resultsPanelOpen = false;
+var closeOpenFamilies;
 
 var searchInput;
 
@@ -50,7 +51,7 @@ var taxInstructionsButton;
 var searchInstructionsOpen = true;
 
 
-/* global  SimpleBar  currentMap  currentCountry */
+/* global  SimpleBar  currentMap  currentCountry  */
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -61,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
   closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
+  
+  closeOpenFamilies = document.getElementById("closeOpenFamiliesButton");
+  closeOpenFamilies.addEventListener("click", closeAllFamilies);
 
   searchCountryText = document.getElementById("searchCountryText");
 
@@ -69,10 +73,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // TODO : (are all of these necessary?)  (especially "click" and "focusin"?)
   searchInput.addEventListener("input", getQuery);
-  searchInput.addEventListener("change", getQuery);
-  searchInput.addEventListener("click", getQuery);
-  searchInput.addEventListener("textInput", getQuery);
-  searchInput.addEventListener("focusin", getQuery);
+  // searchInput.addEventListener("change", getQuery);
+  // searchInput.addEventListener("click", getQuery);
+  // searchInput.addEventListener("textInput", getQuery);
+  // searchInput.addEventListener("focusin", getQuery);
 
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
 
@@ -82,13 +86,16 @@ document.addEventListener("DOMContentLoaded", function(){
   searchResults = document.getElementById("searchResults");
   resultsPanel = document.querySelector(".results-panel");
 
-  searchResults.addEventListener("click", gotoMatch);
+  searchResults.addEventListener("click", gotoMatch, false);
   taxPage.addEventListener("click", toggleFamilyOpen);
-  document.querySelector("#taxPageButton").addEventListener("click", closeAllFamilies);
+  // document.querySelector("#taxPageButton").addEventListener("click", closeAllFamilies);
 
+  // TODO : (start with searchInstructions closed?)
+  // showSearchInstructions(),
+  
   // preloading the file occurrences.txt
-  // TODO : (delay this ?)
-  getAjax("../data/occurrences.txt", function (data) { loadIntoArray(data); });
+  // TODO : (delay this ? prefetch?)
+  getAjax("../data/occurrences.txt", function (data) { loadOccurrences(data); });
 });
 
 function getAjax(url, success) {
@@ -103,23 +110,63 @@ function getAjax(url, success) {
   return xhr;
 }
 
-function loadIntoArray(data) {
+function loadOccurrences(data) {
   birds = data.split("\n");
+  // loadRandomCountryAtStart();
+  // loadArubaStart();
 }
 
-function animateScrollTop(el) {
+// TODO : (can this be delayed at start?)
+// function loadArubaStart() {
 
-  // var step = el.scrollTop / (duration/25);
-  var step = 25;
+//   lastQuery = "elae";
+//   // lastQuery = "rufo";
+//   // set searchInput.value to lastQuery
+//   // set currentCountry to firstCountry
+//   searchInput.value = lastQuery;
 
-  (function animateScroll() {
-    el.scrollTop -= step;
-    if (el.scrollTop > 0) setTimeout(animateScroll, 25);
-  })();
-}
+//   // TODO : (assign currentCountry in main.js)
+
+//   // eslint-disable-next-line
+//   currentCountry = "Aruba";
+//   loadCountryTaxonomy(currentCountry);
+//   setChecklistCountryAuthors(currentCountry);
+
+//   // evt.target = "<span>Ornate Stipplethroat</span>";
+//   // gotoMatch(evt);
+//   // searchResults.addEventListener("click", gotoMatch);
+// }
+
+// function loadRandomCountryAtStart() {
+
+//   var firstKey = Math.floor(Math.random() * 19);
+//   var firstCountry = Object.keys(numSpeciesList)[firstKey];
+//   console.log("firstCountry = " + firstCountry);
+
+//   lastQuery = "xantho";
+//   // set searchInput.value to lastQuery
+//   // set currentCountry to firstCountry
+//   searchInput.value = lastQuery;
+//   // TODO : (assign currentCountry in main.js)
+//   // eslint-disable-next-line
+//   currentCountry = firstCountry;
+//   loadCountryTaxonomy(firstCountry);
+// }
+
+// function animateScrollTop(el) {
+
+//   // var step = el.scrollTop / (duration/25);
+//   var step = 25;
+
+//   (function animateScroll() {
+//     el.scrollTop -= step;
+//     if (el.scrollTop > 0) setTimeout(animateScroll, 25);
+//   })();
+// }
 
 function showSearchInstructions()  {
 
+  // TODO : (merge these below)
   if ( !searchInstructionsOpen )  document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Close";
   else   document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Open";
 
@@ -147,14 +194,14 @@ function loadCountryTaxonomy(country) {
     taxPage.classList.remove("samTax");
   }
 
-  if (country === "French Guiana")   getAjax("Countries/FrenchGuianaSACC.html", updatetaxArticleQueries);
+  if (country === "French Guiana")   getAjax("Countries/FrenchGuianaSACC.html", getCountryData);
 
   // because Curaçao is accented here but not in filenames
-  else if (country === "Curaçao")    getAjax("Countries/CuracaoSACC.html", updatetaxArticleQueries);
+  else if (country === "Curaçao")    getAjax("Countries/CuracaoSACC.html", getCountryData);
 
   else if (country === "South America") {
 
-    getAjax("Countries/SouthAmericaSACC.html", updatetaxArticleQueries);
+    getAjax("Countries/SouthAmericaSACC.html", getCountryData);
     searchResults.classList.add("samTax");
 
     // so hypotheticals and vagrants aren't selectable if South America is chosen
@@ -166,7 +213,7 @@ function loadCountryTaxonomy(country) {
     taxPage.classList.add("samTax");
   }
 
-  else if (country)   getAjax("Countries/" + country + "SACC.html", updatetaxArticleQueries);
+  else if (country)   getAjax("Countries/" + country + "SACC.html", getCountryData);
 
   if (country !== "South America")  {
     searchSpecials.querySelector("span:nth-of-type(3)").classList.remove("notAvailable");
@@ -188,12 +235,12 @@ function loadCountryTaxonomy(country) {
   else   searchCountryText.innerHTML = country;
 
   if (country === "Falklands")
-    document.querySelector("#treeIntroText").innerHTML = "Falklands/Malvinas" + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species *";
-  else   document.querySelector("#treeIntroText").innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species *";
+    document.querySelector("#treeIntroText").innerHTML = "Falklands/Malvinas" + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
+  else   document.querySelector("#treeIntroText").innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
 
   document.querySelector(".colorKey").style.opacity = "0.9";
 
-  animateScrollTop(taxPage);
+  // animateScrollTop(taxPage);
 }
 
 function toggleSearchResultsPanel() {
@@ -207,7 +254,11 @@ function toggleSearchResultsPanel() {
   resultsPanelOpen = !resultsPanelOpen;
 }
 
-function updatetaxArticleQueries(data) {
+function closeOpenFamilies() {
+  
+}
+
+function getCountryData(data) {
 
   // <ul id='tree'>
   // TODO : (fixed size? for taxPage)
@@ -216,6 +267,7 @@ function updatetaxArticleQueries(data) {
   var taxPanel = document.querySelector(".tax-panel");
 
   // TODO : (delay translateDown till after countryMenu is gone)
+  // TODO : (or have already translatedDown?)
   if (!taxTreeArticleOpen)   taxPanel.classList.add("translateDown");
   else   taxTreeArticleOpen = true;
 
@@ -230,9 +282,9 @@ function updatetaxArticleQueries(data) {
   if (lastQuery) searchTree(lastQuery);
   // document.querySelector("#taxPageButton").addEventListener("click", closeAllFamilies);
 
-  simpleBarTaxPage = new SimpleBar(document.getElementById("taxPage"), { autoHide: false });
-  // simpleBarTaxPage.recalculate();
-
+  // simpleBarTaxPage = new SimpleBar(document.getElementById("taxPage"), { autoHide: false });
+  // simpleBarTaxPage = new SimpleBar(taxPage), { autoHide: false });
+  //  FIXME : (height of simpleBar?)
   resetTaxPageHeight();
 }
 
@@ -261,11 +313,17 @@ function getSearchSpecialsQuery(evt)  {
   //  <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
   //  <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
 
+  var term;
+  
   // clear the input
   searchInput.value = "";
 
+  // clicked between buttons
+  if (evt.target.className === "searchSpecialWrapper") term = evt.target.textContent.trim();
+  else term = evt.target.parentNode.textContent.trim();
+  
   // parentNode else if you click on "e" for example of extinct only the "e" is detected as the textContent of the target
-  var term = evt.target.parentNode.textContent.trim();
+  // var term = evt.target.parentNode.textContent.trim();
   searchTree(term);
 }
 
@@ -303,7 +361,7 @@ function searchTree(query2) {
     return;
   }
 
-  animateScrollTop(searchResults);
+  // animateScrollTop(searchResults);
 
   // reset all families.cloned to false, used to insert new families into searchResults
   for (var i = 0; i < numFamilies; i++) {
@@ -381,8 +439,6 @@ function searchTree(query2) {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
 
       if (!resultsPanelOpen) toggleSearchResultsPanel();
-      // searchResults.classList.add("fadeIn");
-      // searchResults.style.height = "55px";
 
       resetSearchResultsHeight();
       return;
@@ -437,8 +493,6 @@ function searchTree(query2) {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
 
     if (!resultsPanelOpen) toggleSearchResultsPanel();
-    // searchResults.classList.add("fadeIn");
-    // searchResults.style.height = "55px";
 
     resetSearchResultsHeight();
 
@@ -490,8 +544,8 @@ function searchTree(query2) {
   if (!resultsPanelOpen) toggleSearchResultsPanel();
   // searchResults.classList.add("fadeIn");
 
-  lastQuery = lastQuery.replace(/\\\*/g, "*");
-  lastQuery = lastQuery.replace(/\\\?/g, "?");
+  // lastQuery = lastQuery.replace(/\\\*/g, "*");
+  // lastQuery = lastQuery.replace(/\\\?/g, "?");
 
   if (currentCountry === "Falklands") {
     document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + " : '" + lastQuery + "'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]";
@@ -501,6 +555,20 @@ function searchTree(query2) {
   }
 
   resetSearchResultsHeight();
+
+  // i.e., first run
+  // TODO : (why no work?)
+  // if (!lastSpecies) {
+
+  //   var evt = new MouseEvent("click", {
+  //     bubbles: true,
+  //     cancelable: true,
+  //     view: window
+  //   });
+
+  //   var cb = document.getElementById("searchResults").children[7]; //element to click on
+  //   cb.dispatchEvent(evt);
+  // }
   // return;
 }
 
@@ -514,28 +582,28 @@ function resetSearchResultsHeight() {
   var elem;
 
   if (searchResults.scrollHeight >= 300) {
-    searchResults.style.height = "325px";
+    searchResults.style.height = "25rem";
     elem = simpleBarResults.getScrollElement();
-    elem.style.maxHeight = "320px";
+    elem.style.height = "25rem";
   }
   else {
-    searchResults.style.height = searchResults.scrollHeight + 35 + "px";
+    searchResults.style.height = searchResults.scrollHeight + "px";
     elem = simpleBarResults.getScrollElement();
-    elem.style.height = searchResults.scrollHeight + 35 + "px";
+    elem.style.height = searchResults.scrollHeight + "px";
   }
 
-  simpleBarResults.recalculate();
+  // simpleBarResults.recalculate();
 }
 
 function resetTaxPageHeight() {
 
   simpleBarTaxPage = new SimpleBar(taxPage, { autoHide: false });
-  // var elem;
+
+  var elem;
 
   taxPage.style.height = "75vh";
-
-  // elem = simpleBarTaxPage.getScrollElement();
-  // taxPage.style.height = "75vh";
+  elem = simpleBarTaxPage.getScrollElement();
+  elem.style.height = "75vh";
 
   simpleBarTaxPage.recalculate();
 }
@@ -552,6 +620,9 @@ function gotoMatch(e) {
   // TODO : (element.closest()? with polyfill)
   var ev = e || window.event;  // window.event for IE8-
   var clicked = ev.target;
+
+  // console.log(ev.target);
+
   var clickedPar = clicked.parentNode;
   var clickedClass = clicked.className;
 
@@ -638,6 +709,8 @@ function gotoMatch(e) {
       </ul>
     </li>*/
 
+    
+    // 
     else if (entryTextTrimmed === eText && clickedClass === "family")  {
 
       elem = simpleBarTaxPage.getScrollElement();
@@ -651,7 +724,7 @@ function gotoMatch(e) {
       lastSpecies = entry.firstChild;
       lastSpecies.classList.toggle("active");
 
-      if (lastResultsSpecies)  {
+      if (lastResultsSpecies) {
         lastResultsSpecies.classList.toggle("active");
         lastResultsSpecies = null;
       }
@@ -660,12 +733,12 @@ function gotoMatch(e) {
   }
 }
 
-function addBirdNameToMap(name)  {
+function addBirdNameToMap (name) {
 
   var temp = "";
 
-  if ( name ) {
-    temp = "<span>" + name.firstChild.textContent + "</span><br/><span>" + name.lastChild.textContent + "</span>";
+  if (name) {
+            temp = "<span>" + name.firstChild.textContent + "</span><br/><span>" + name.lastChild.textContent + "</span>";
     document.getElementById("currentBirdName").innerHTML = temp;
   }
   else {

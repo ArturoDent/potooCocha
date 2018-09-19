@@ -9,7 +9,7 @@
 
     z-index : 100;
     border-radius  :  0;
-    box-shadow  :  2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow  :  0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2);
     transition  :  all 500ms ease;
 }
 
@@ -17,17 +17,14 @@
     opacity  :  1;
     position  :  absolute;
     top  : 0;
-    left  :  65px;
-    // height  :  1.3rem;
-    padding : 0 0 2px 0;
+    left  :  5rem;
+    padding : 0 0 0.15rem 0;
     width  :  14rem;
 
     letter-spacing: 0.2rem;
-    // color: #333;
 
     background-color  :  transparent;
-    // border : 1.5px solid black;
-    border : 1.5px solid  $goldHighlightColor;
+    border : 0.12 solid  $goldHighlightColor;
     box-shadow  :  inset 0 0 0 transparent;
 
     transform  :  rotate(-4deg);
@@ -42,50 +39,37 @@
 
 .deleteMapButton .tooltip {
     position  :  absolute;
-    // top  :  160px;
-    // left  :  -20px;
-    top  :  160px;
-    left  :  0;
+    top  :  14rem;
+    left  : -1rem;
 
-    width  :  6em;
-    padding : 0 0 3px 0;
-    font-size  :  0.9rem;
-    letter-spacing : 0.1em;
-    background-color  :  #a32d00;
-
-    transform  :  rotate(0) scale(1.2);
-    -webkit-transform-origin  :  top right;
-       -moz-transform-origin  :  top right;
-        -ms-transform-origin  :  top right;
-         -o-transform-origin  :  top right;
-            transform-origin  :  top right;
+    width  :  6.5em;
+    padding : 0 0 0.1rem 0;
+    font-size  :  0.75rem;
+    letter-spacing : 0.15em;
+    background-color  :  transparent;
+    border: 1px solid #f88509;
+    transform-origin  :  top right;
+    transform: rotate(-5deg);
 }
 
 .saveMapButton .tooltip {
     position  :  absolute;
-    // top  :  -60px;
-    // left  :  -155px;
+    
     width  :  10em;
-    padding : 0 0 2px 0;
-
+    padding : 0 0 0.15rem 0;
+    
+    text-align: center;
     opacity: 1;
-    border: 1px solid rgba(255,255,255,0.5);
-    // background-color  :  black;
+    border: 0.077rem solid rgba(255,255,255,0.5);
+    background-color  :  $panelColor;
 
-    // transform  :  rotate(0);
-    transform: scaleX(0.95) rotate(-4deg);
+    transform  :  rotate(-20deg);
 
-    // -webkit-transform-origin  :  top right;
-    //    -moz-transform-origin  :  top right;
-    //     -ms-transform-origin  :  top right;
-    //      -o-transform-origin  :  top right;
-    //         transform-origin  :  top right;
-
-    -webkit-transform-origin  :  0 50%;
-       -moz-transform-origin  :  0 50%;
-        -ms-transform-origin  :  0 50%;
-         -o-transform-origin  :  0 50%;
-            transform-origin  :  0 50%;
+    -webkit-transform-origin  :  middle right;
+       -moz-transform-origin  :  middle right;
+        -ms-transform-origin  :  middle right;
+         -o-transform-origin  :  middle right;
+            transform-origin  :  middle right;
 }
 
 .tooltip:after {
@@ -111,44 +95,51 @@
 }
 
 .saveMapButton .tooltip:after {
-    top  :  -1px;
+    top  :  -0.077rem;
     left  :  100%;
     border-width  :  0.9em;
-
     border-color  :  transparent transparent transparent #fff;
+    transition: all 350ms;
 }
-
+;
 .deleteMapButton .tooltip:after {
-    top  :  0;
-    left  :  100%;
-    border-width  :  0.78em;
+    top  :  -0.08rem;
+    left  :  104%;
+    border-width  :  1em;
 
-    border-color  :  transparent transparent transparent #a32d00;
+    border-color  :  transparent transparent transparent #f88509;
 }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip {
     // transform  :  rotate(-9deg);
-    // border : 1.5px solid transparent;
     color: black;
     text-shadow: none;
-    box-shadow : inset -240px 0 2px $goldHighlightColor, 0 0 15px  $goldHighlightColor;
+    box-shadow : inset -18.5rem 0 0.15rem $goldHighlightColor, 0 0 1.15rem  $goldHighlightColor;
     will-change: transform;
 }
 
     // makes the arrow of the tooltip (.tooltip:after) change color upon hover
-// .taxInstructionsButton.hasTooltip:hover .tooltip:after {
-//     border-color  :  transparent #fff transparent transparent;
-// }
+    // .taxInstructionsButton.hasTooltip:hover .tooltip:after {
+    //     border-color  :  transparent #fff transparent transparent;
+    // }
 
 .saveMapButton.hasTooltip:hover .tooltip {
-    opacity  :  1;
     background-color  :  #333;
-    // transform  :  rotate(-2deg);
-    transform: scaleX(1) rotate(-4deg);
+    // transform: rotate(-4deg);
+}
+
+.saveMapButton.hasTooltip:hover .tooltip:after {
+    top  :  -0.23rem;
+    left  :  104%;
+    border-width  :  1.1em;
+    
+    border-color  :  transparent transparent transparent #333;
 }
 
 // .deleteMapButton.hasTooltip:hover .tooltip, .deleteMapButton.hasTooltip.hover .tooltip {
 .deleteMapButton.hasTooltip.hover .tooltip {
     opacity  :  1;
-    transform  :  rotate(-10deg) scale(1.3);
+    // background-color  :  #f8850947;
+    // transform  :  rotate(-10deg) scale(1.3);
+    // transform  :  scale(1.3);
 }

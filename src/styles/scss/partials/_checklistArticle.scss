@@ -1,6 +1,6 @@
 #checklistArticle {
     position  :  relative;
-    margin  :  9ch 0 0 0;
+    margin  :  7ch 0 0 0;
     order : 4;
     overflow  :  visible;
 }
@@ -21,8 +21,8 @@
     line-height  :  1.1rem;
     color: $panelFlyoutFontColor;
     background-color : $panelFlyoutColor;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0.77rem;
+    border-bottom-right-radius: 0.77rem;
     transition : opacity 550ms 400ms;
 }
 
@@ -55,15 +55,15 @@
     // top  :  1ch;
     top  :  -130%;
     // left  :  -44%;
-    left  :  -21vw;
+    left  :  -20vw;
 
     font-size  :  1.25rem;
     // font-size  :  4rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  rgba(255, 255, 255, 0);
+    color  :  $panelColor;
 
-    text-shadow : 0 0 2px rgba(0,0,0,0.5);
+    text-shadow :  0 0 0.077rem white, 0 0 0.38rem rgba(0,0,0,0.9);
     letter-spacing  :  0.2em;
 
     transform  :  rotate(-86deg) scale(2.5);
@@ -100,7 +100,7 @@
     // left  :  1.5ch;
     left  :  -5ch;
     width  :  140%;
-    margin  :  0 0 60px 0;
+    margin  :  0 0 4.6rem 0;
 
     color  :  #fff;
     background-color  :  transparent;
@@ -108,21 +108,22 @@
 
 #days {
     position  :  relative;
-    top  :  8px;
+    top  :  0.62rem;
     padding: 0;
     height: 1.4rem;
     
     font-size  :  1rem;
     letter-spacing  :  0.1em;
     text-shadow: none;
-    text-shadow : 0  1px rgba(0,0,0,0.3);
+    text-shadow : 0  0.077rem rgba(0,0,0,0.3);
     
-    border-bottom: 3px solid #df6757;
+    border-bottom: 0.23rem solid #df6757;
     border-left: 2ch solid transparent;
 }
 
 #numDays a {
     position  :  relative;
+    top : 0;
     width  :  4.4ch;
     height  :  4.4ch;
     padding  :  1ch 0 0 0;
@@ -131,12 +132,12 @@
     font-size  :  1.1rem;
     text-align  :  center;
     text-decoration  :  none;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 0.077rem 0.077rem 0.23rem rgba(0,0,0,0.1);
 
     // slightly randomize the variuos border-radii ala cicada principle ?***
     border-radius  :  50%;
     background-color  :  #eee;
-    box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3), inset 0 0 7px rgba(255,255,2550,0.5);
+    box-shadow  :  0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5), -0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3), inset 0 0 0.54rem rgba(255,255,2550,0.5);
 
     cursor  :  pointer;
     -webkit-transition  :  all 400ms;
@@ -147,20 +148,20 @@
 
 #numDays a:hover,#numDays a:focus {
     color : #fff;
-    text-shadow  :  1px 1px 1px rgba(0,0,0,0.6);
+    text-shadow  :  0.077rem 0.077rem 0.077rem rgba(0,0,0,0.6);
     border-top-right-radius  :  5%;
     background-color  :  $genericButtonColor;
 }
 
 #numDays a.highlight {
-    top  :  -15px;
+    top  :  -1.38rem;
 
     color  :  #fff;
 
-    // border: 1px solid rgba(255,255,255,0.5);
+    // border: 0.077rem solid rgba(255,255,255,0.5);
     border-top-right-radius  :  5%;
     background-color  :  $genericButtonColor;
-    // box-shadow  :  1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.3), inset 0 0 7px rgba(255,255,255,0.5);
+    // box-shadow  :  0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5), -0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3), inset 0 0 0.54rem rgba(255,255,255,0.5);
 
     transform  :  scale(1.2);
     transition : all 550ms;

@@ -2,30 +2,21 @@
   position: fixed;
   top: 0;
   left: 100%;
-  z-index: 2000;
+  z-index: 200;
   transition: transform 1000ms 250ms;
 }
 
 .menu-show {
-  transform: translateX(-350px);
+  transform: translateX(-21vw);
 }
 
 .md-overlay {
   opacity: 0;
   pointer-events: none;
   
-  display  :  -webkit-flex;
-  display  :  -ms-flex;
   display  :  flex;
-
-  -webkit-flex-direction  :  column;
-  -ms-flex-direction  :  column;
   flex-direction  :  column;
-
-  -webkit-flex-wrap  :  nowrap;
-  -ms-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
-  
   align-items: center;
   justify-content: center;
   
@@ -36,45 +27,56 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-  
+  z-index: 10;
   border: none;
   background-color: $bgColor;
-  // transition: opacity 1000ms 700ms;
-  transition: opacity 1000ms;
+  transition: opacity 1000ms 700ms;
 }
 
-.md-show ~ .md-overlay {
+.md-overlay.show {
   opacity: 1;
-  // transition: opacity 1000ms;
+  transition: opacity 500ms;
 }
 
-.backgroundBox {
-  position: absolute;
-  left: -1vw;
-  top:  90vh;
+.md-overlay.show .overlayInfo {
+  opacity: 1;
   
-  height: 5vh;
-  width: 9vw;
-  padding-left: 6vw;
-  line-height: 4.5vh;
-  background-color: $genericButtonColor;
-  box-shadow: 0 0 2px rgba(0,0,0,0.7); 
+  transition: all 750ms 500ms;
+}
+ 
+.titleStrip {
+  position: absolute;
+  left: 1vw;
+  top:  100vh;
+  height: 11.2vh;
+  width: 101vh;
+  text-align: center;
+  
+  transform-origin: top left;
+  transform: rotate(-90deg);
+  
+  font-size: 8.8vh;
+  letter-spacing: 0.5vh;
+  color: darken($bgColor, 5%);
+  text-shadow : -0.077rem 0.077rem rgba(186, 186, 186, 0.4), 0.077rem -0.077rem 0.077rem rgba(0,0,0,0.4);
+  
+  background-color: $titleBannerColor;
+  box-shadow: inset 0 0 0.15rem rgb(250, 249, 249), 0 0 0.15rem rgba(0,0,0,0.5); 
 }
 
 // TODO : (separately fade in/out) ?
 
 .overlayInfo  {
+  opacity: 0;
+  position: relative;
   display: flex;
-  // align-content: center;
   align-items: center;
+  left: calc((100vw - (11.2vh + 1vw + 21vw)) / 2 - 45vw);
   width: 20vw;
   height: 10vh;
-  min-width: 250px;
-  min-height: 170px;
-  
-  padding: 20px;
-  margin-right: 350px;
-  // vertical-align: middle;
+  min-width: 31ch;
+  min-height: 15ch;
+  padding: 1.54rem;
   pointer-events: none;
   
   font-size: 1.2em;
@@ -82,16 +84,16 @@
   line-height: 1.6em;
   text-align: center;
   
-  border-top: 1px solid rgba(0,0,0,0.3);
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-  border-radius:  30%;
-  background-color: darken($genericButtonColor, 5%);
-  box-shadow:  inset 0 0 3px rgba(0,0,0,1);
+  border-top: 0.077rem solid rgba(255,255,255,0.5);
+  border-bottom: 0.077rem solid rgba(255,255,255,0.5);
+  border-radius:  0.23rem;
+  box-shadow:  inset 0 0 5rem rgba(0,0,0,0.1);
+  transform: scale(0.95);
+  transition: all 500ms;  
 }
 
-// .overlayInfo .underline
 .underline {
-  border-bottom: 2px double white;
+  border-bottom: 0.15rem double white;
   
   // no support for below in Edge
   // text-decoration-style: solid;
@@ -99,130 +101,138 @@
   // text-decoration-line: underline;
 }
 
+// TODO : (difference font color with  ackground?)
+//  collor:#00F0B5;  mix-blend-mode: difference;
+//  but text was in its own container, and not supported in Edge
+
 #countryButton {
   position: absolute;
-  top: 20px;
-  right: 300px;
-  width: 270px;
-  padding : 0.7ch 0 0.9ch 2ch;
+  top: 1.3rem;
+  // left: 30vw;
+  right: 19vw;
+  width: 18vw;
+  height: auto;
+  padding : 0.7ch 2ch 0.9ch 0; 
+   
+  // text-align: left;
   
-  text-align: left;
-  
+  border: 0.077rem solid white;
+  border-radius: 0.2rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow  :  inset 0 0 25px 15px transparent, 2px 2px 3px rgba(0, 0, 0, 0.1);
-  transition  :  box-shadow 400ms, width 400ms, right 400ms 400ms;
+  // background-color: $bgColor;
+  // background-color: rgb(186, 141, 30);
+  background-color: transparent;
+  box-shadow  :  inset 0 0 0 0 transparent, 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
+  transition  :  box-shadow 400ms;
 }
 
 #countryButton:after {
   content  :  '';
   position  :  absolute;
-  top  :  -2.3px;
+  // top  :  -2.0.23rem;
+  top  :  -0.33rem;
   left  :  101%;
   border-style  :  solid;
-  border-width  :  calc(1.2em + 2px);
-  border-color  :  transparent transparent transparent $genericButtonColor;
+  // border-width  :  calc(1.2em + 0.15rem);
+  border-width  :  1.7rem;
+  border-color  :  transparent transparent transparent white;
   transition : all 200ms 500ms;
 }
 
-#countryButton.expand:after {
-  left  :  102%;
-  border-color  :  transparent transparent transparent white;  
-}
+// #countryButton.expand:after {
+//   left  :  102%;
+//   // border-color  :  transparent transparent transparent white;  
+// }
 
 #countryButton:hover, #countryButton:focus {
-  border : 1px solid #888;
-  box-shadow  :  inset 270px 0 25px 15px #252525, 2px 2px 3px rgba(0, 0, 0, 0.1);
+  // border : 0.077rem solid #888;
+  box-shadow  :  inset 20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
 }
 
 #countryButton.highlight:hover, #countryButton.highlight:focus {
-  border : 1px solid #888;
-  box-shadow  :  inset -270px 0 25px 15px #252525, 2px 2px 3px rgba(0, 0, 0, 0.1);
+  // border : 0.077rem solid #888;
+  box-shadow  :  inset -20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
 }
 
-#countryButton.expand  {
-  right: 330px;
-  width: 370px;
-}
+// #countryButton.expand  {
+// }
 
 .country-menu {
   position: relative;
   display  :  -webkit-flex;
-  display  :  -ms-flex;
   display  :  flex;
 
   -webkit-flex-direction  :  column;
-  -ms-flex-direction  :  column;
   flex-direction  :  column;
 
   -webkit-flex-wrap  :  nowrap;
-  -ms-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
 
-  padding: 5px 0;
+  padding: 0.5rem 0;
   justify-content: space-around;
   height: 100vh;
   font-size: 1rem;
-  background-color: $countryMenuColor;
-  border-left: 1px solid rgba(0,0,0,0.3);
-  border-right: 1px solid rgba(0,0,0,0.3);
-  // box-shadow: 0 0 12px black;
-  box-shadow: -2px 0 2px rgba(0,0,0,0.2), 2px 0 2px rgba(0,0,0,0.2);
+  border-left: 0.077rem solid rgba(0,0,0,0.3);
+  border-right: 0.077rem solid rgba(0,0,0,0.3);
+  box-shadow:  inset 0 0 10rem rgba(0,0,0,0.3);
 }
 
 .countryItem {
   position: relative;
-  width: 270px;
+  width: 16vw;
   
   display  :  -webkit-flex;
-  display  :  -ms-flex;
   display  :  flex;
 
   -webkit-flex-direction  :  row;
-  -ms-flex-direction  :  row;
   flex-direction  :  row;
 
   -webkit-flex-wrap  :  nowrap;
-  -ms-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
 
   align-items: center;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 0.1rem;
   line-height: 1rem;
 }
 
 .countryItem a {
   position: relative;
-  width: 271px;
-  margin-right: -40px;
-  margin-bottom: 1px;
+  width: calc(100% + 0.077rem);
+  
+  margin-right: -3rem;
+  
+  margin-bottom: 0.077rem;
   // need to subtract the font-size ass well
-  padding: (calc(((100vh - 40px) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 40px) - (19 * 1rem)) / 38)) 20px;
+  padding: (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 1.6rem;
+  // // padding: (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 1.6rem;
+  padding: 0.9rem 0 0.9rem 1.6rem;
 
   text-decoration: none;
-  text-shadow : 0  1px rgba(0,0,0,1);
-
+  text-shadow : 0  0.077rem rgba(0,0,0,1);
+  
   transition: all 450ms ease-out;
   cursor: pointer;
 }
 
 .country-menu a:hover, .country-menu a:focus  {
   background-color:  $countryMenuHighlightColor;
+  box-shadow: inset 0 0 0.23rem black;
 }
 
 .country-menu a.highlight   {
-  width: 300px;
+  width: 16.5vw;
   background-color:  $countryMenuHighlightColor;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 0.15rem 0.15rem rgba(0,0,0,0.3);
   transition: all 450ms ease-out;
 }
 
 .country-menu a.highlight:after {
   content  :  '';
   position  :  absolute;
-  top  :  -1px;
-  left  :  calc(100% - 28px);
+  top  :  -0.077rem;
+  left  :  calc(100% - 2.1rem);
   border-style  :  solid;
   border-width  :  1.5rem;
   border-color  :  transparent white transparent transparent;
@@ -230,7 +240,7 @@
 }
 
 .country-menu a.highlight:hover {
-  padding-left: 30px;
+  padding-left: 2.2rem;
 }
 
 .country-menu a.highlight:hover:after {
@@ -240,9 +250,11 @@
 
 .flag  {
   position: absolute;
-  height: 26px;
-  width:26px;
-  left: calc(100% - 52px);
+  // left: calc(100% - 50.15rem);
+  
+  height: 2rem;
+  width:2rem;
+  left: calc(100% - 4rem);
   
   border-radius : 50%;
   background-position: center;
@@ -251,7 +263,7 @@
 }
 
 .country-menu img {
-  height: 26px;
-  width:26px;
+  height:  2rem;
+  width: 2rem;
   background-color: tranparent;
 }
