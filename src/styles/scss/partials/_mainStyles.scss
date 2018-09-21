@@ -1,7 +1,7 @@
 html {
-    width  :  100%;
+    width  :  100%;  
     height  :  100%;
-    /*so 1em = 10px (browser default usually 16px)*/
+    /*so 1em = 13px (browser default usually 16px)*/
     font-size  :  calc(100vw / 118.15); 
     // line-height : calc(28 / 1rem);
     background-color  :  $bgColor;

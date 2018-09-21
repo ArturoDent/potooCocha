@@ -61,9 +61,10 @@
     // font-size  :  4rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  $panelColor;
+    // color  :  $panelColor;
+    color  :  rgb(209, 209, 209);
 
-    text-shadow :  0 0 0.077rem white, 0 0 0.38rem rgba(0,0,0,0.9);
+    text-shadow :  0 0 0.38rem rgba(0,0,0,0.9), 0 0 0.177rem white;
     letter-spacing  :  0.2em;
 
     transform  :  rotate(-86deg) scale(2.5);

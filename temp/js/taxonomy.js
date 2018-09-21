@@ -82,7 +82,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   taxInstructionsButton.addEventListener("click", showSearchInstructions);
 
-  taxPage        =  document.getElementById("taxPage");
+  taxPage = document.getElementById("taxPage");
+  // TODO : set taxPage height here??
+  
   searchResults = document.getElementById("searchResults");
   resultsPanel = document.querySelector(".results-panel");
 

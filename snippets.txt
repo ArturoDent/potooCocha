@@ -212,3 +212,36 @@ var counterModule = (function() {
 //     done();
 //   }
 // ));
+
+function build (path)  {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+    console.log("2 path = " + path);
+  });
+};
+
+function anotherTask (path)  {
+  return new Promise(resolve => { console.log("4 path = " + path); });
+};
+
+function testWatch () {
+  
+  console.log("in testWatch");
+  
+  var watcher = gulp.watch('src/js/*.js', { debounceDelay: 2000 });
+  
+  watcher.on('change', async function (path, stats) {
+    
+    console.log('1 File ' + path + ' was changed');
+    await build(path);
+    console.log("3 after build");
+    
+    await anotherTask(path);
+    console.log("5 after anotherTask");
+  });
+};
+
+gulp.task('default', gulp.series(testWatch));
+  

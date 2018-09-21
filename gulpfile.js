@@ -132,7 +132,6 @@ function watch() {
   gulp.watch(paths.js.src, gulp.series(reloadJS));
   gulp.watch(paths.sass.src, gulp.series(sass2css));
   gulp.watch("./*.html").on("change", reload);
-  // gulp.watch("./*.html").on("change", stream);
 }
 
 function sass2css() {
@@ -140,7 +139,6 @@ function sass2css() {
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest(paths.css.temp))
     .pipe(reload({ stream:true }));
-    // .pipe(stream( {once: true}) );
 }
 
 function reloadJS() {
@@ -149,7 +147,6 @@ function reloadJS() {
     // .pipe(sourcemaps.init())
     // .pipe(sourcemaps.write("sourcemaps"))
     .pipe(reload({ stream:true }));
-    // .pipe(stream( {once: true}) );
 }
 
 function moveJStoTemp() {

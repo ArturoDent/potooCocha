@@ -13,6 +13,7 @@
   border: none; }
 
 #sampleTable td {
+  position: relative;
   height: 2.31rem;
   padding: 0.15rem 0.15rem 0.15rem 0.15rem;
   border: solid 0.077rem #000; }
@@ -117,12 +118,14 @@
   border-top: transparent;
   border-bottom: transparent;
   border-left: transparent;
-  transition: width 350ms; }
+  transition: width 350ms;
+ }
 
 #sampleTable td.leftCheckBox.show {
   width: 2.31rem;
   border: solid 0.077rem #000;
-  transition: width 350ms; }
+  // transition: width 350ms; 
+}
 
 .centerText {
   text-align: center; }
@@ -134,7 +137,7 @@
   letter-spacing: 0.1em; }
 
 .noScientificNames .cLfs {
-  visibility: hidden; }
+  opacity: 0; }
 
 #sampleTable.noScientificNames .cLc {
   letter-spacing: 0.1em; }
@@ -147,7 +150,7 @@
 
 .showLineNumbers {
   position: relative; }
-
+ 
 .leftCheckBox:not(.show) + .showLineNumbers::before {
   content: '5';
   position: absolute;
@@ -160,10 +163,7 @@
   font-size: 0.6rem;
   text-shadow: none;
 
-  // border: 0.077rem solid rgb(110, 109, 109);
-  // border: 0.077rem solid transparent;
   border: 0.077rem solid transparent;
-  // border-radius: 50%;
   background-color: $panelColor;
   transition: left 500ms;
 }
@@ -181,11 +181,8 @@
   text-shadow: none;
 
   border: 0.077rem solid transparent;
-  // border-top: 0.077rem solid black;
-  // border-bottom: 0.077rem solid black;
-  // border-radius: 50%;
   background-color: $panelColor;
-  transition: left 500ms;
+  // transition: left 500ms;
   }
 
 .showEndemics {
@@ -202,9 +199,7 @@
   font-size: 0.6rem;
   text-shadow: none;
 
-  // border: 0.077rem solid rgb(110, 109, 109);
   border: 0.077rem solid transparent;
-  // border-radius: 50%;
   background-color: $panelColor;
   transition: left 500ms;
 }
@@ -213,7 +208,6 @@
     content: 'E';
   position: absolute;
   top: 0.46rem;
-  // left: -2.54rem;
   left: -2.4rem;
   width: auto;
   height: auto;
@@ -223,12 +217,8 @@
   text-shadow: none;
 
   border: 0.077rem solid transparent;
-  // border-top: 0.077rem solid black;
-  // border-bottom: 0.077rem solid black;
-
-  // border-radius: 50%;
   background-color: $panelColor;
-  transition: left 500ms;
+  // transition: left 500ms;
 }
 
 #sampleTable.numDays0 .cLs {
