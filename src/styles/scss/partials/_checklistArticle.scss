@@ -1,28 +1,63 @@
 #checklistArticle {
     position  :  relative;
-    margin  :  7ch 0 0 0;
+    width: 100%;
+    margin  :  0;
     order : 4;
     overflow  :  visible;
 }
 
+#checklistArticle .topFlyoutPanel  {
+    position: relative;
+    top: 0;
+    left : 2.5%;
+    // min-width : calc(100% - 6.15rem);
+    min-width : calc(100% - 6rem);
+    height  :  auto;
+    // padding : 0.8ch 0 1.5ch 0;
+    padding : 0.8ch 0 1.5ch 10%;
+
+    text-align: left;
+    letter-spacing: 0;
+
+    border-radius : 0.3rem;
+    // border-top-right-radius  :  -1rem;
+    // border-bottom-right-radius  :  1.54rem;
+}
+
 #checklistAuthorsPanel  {
-    // position: relative;
-    display: inline-block;
+    position: relative;
+    // display: inline-block;
     opacity: 0;
     height : auto;
-    width: auto;
-    max-width: 91%;
-    margin : 0 0 6ch 2ch;
-    padding : 0.8ch 2ch 1ch 3ch;
+    // width: auto;
+    width: 100%;
+    // max-width: 100%;
+    // max-width: 130%;
+
+    top : 0;
+    // left: 12.5%;
+    left: 0;
+
+    // margin : 0 0 6ch 2ch;
+    // padding : 0.8ch 2ch 1ch 3ch;
+    padding : 1ch 2ch 0 3ch;
 
     font-variant: small-caps;
     font-size  :  0.8rem;
-    // text-align  :  center;
+
+    // color: #333;
+    // color: $sampleTableTextColor;
+
+    text-align  :  center;
+    text-shadow: none;
     line-height  :  1.1rem;
-    color: $panelFlyoutFontColor;
-    background-color : $panelFlyoutColor;
-    border-bottom-left-radius: 0.77rem;
-    border-bottom-right-radius: 0.77rem;
+    // color: $panelFlyoutFontColor;
+    // background-color : $panelFlyoutColor;
+    background-color : $sampleTableBGColor;
+    // border-bottom-left-radius: 0.77rem;
+    // border-bottom-right-radius: 0.77rem;
+    // border-radius: 0.25rem;
+
     transition : opacity 550ms 400ms;
 }
 
@@ -30,9 +65,11 @@
     opacity: 1;
 }
 
-#checklistArticle .panel  {
-    padding  :  2.5ch 2% 0 2%;
-}
+// #checklistArticle .panel  {
+    // width: 110%;
+    // padding  :  2.5ch 2% 0 2%;
+    // background-color: transparent;
+// }
 
 #checklistOptions.panel {
     position  :  relative;
@@ -45,26 +82,29 @@
     line-height : 2.4rem;
     letter-spacing  :  0.15em;
 
+    border: 1px solid #888;
     border-top-left-radius  :  10%;
     border-bottom-right-radius  :  25%;
 }
 
-                                     // "Checklists"  **************************************************
+//  *******************************    "Checklists"    **************************************************
+
 .checklistTitle  {
     position  :  absolute;
     // top  :  1ch;
     top  :  -130%;
     // left  :  -44%;
-    left  :  -20vw;
+    left  :  -19vw;
 
-    font-size  :  1.25rem;
+    font-size  :  1.1rem;
     // font-size  :  4rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     // color  :  $panelColor;
     color  :  rgb(209, 209, 209);
 
-    text-shadow :  0 0 0.38rem rgba(0,0,0,0.9), 0 0 0.177rem white;
+    // text-shadow :  0 0 0.38rem rgba(0,0,0,0.9), 0 0 0.177rem white;
+    text-shadow :  0 0 0.177rem white;
     letter-spacing  :  0.2em;
 
     transform  :  rotate(-86deg) scale(2.5);
@@ -75,36 +115,49 @@
             transform-origin  :  top right;
 }
 
+#pdfButton, #csvButton  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position  :  absolute;
+  width : 16ch;
+  padding : 0 1.3ch 0.5ch 1ch;
+}
+
 #pdfButton {
-    position  :  absolute;
+    // position  :  absolute;
     right  :  -30%;
     bottom  :  45%;
 
-    width : 15ch;
-    padding : 0 0 0.1ch 0;
+    // width : 16ch;
+    // padding : 0 1.3ch 0.5ch 1ch;
 }
 
 #csvButton {
-    position  :  absolute;
+    // position  :  absolute;
     right : -30%;
     bottom  :  15%;
-    width : 15ch;
-    padding : 0 0 0.1ch 0;
+    // width : 16ch;
+    // padding : 0 1.3ch 0.5ch 1ch;
 }
+
+// *************************  numDays   ******************************************
 
 #numDays {
     display  :  flex;
     flex-direction  :  row;
-    justify-content  :  space-around;
+    // justify-content  :  space-around;
+    justify-content  :  center;
 
     position  :  relative;
     // left  :  1.5ch;
-    left  :  -5ch;
+    left  :  -5.5ch;
     width  :  140%;
-    margin  :  0 0 4.6rem 0;
+    margin  :  5rem 0 4.6rem 0;
 
-    color  :  #fff;
-    background-color  :  transparent;
+    // color  :  #fff;
+    // background-color  :  transparent;
 }
 
 #days {
@@ -112,21 +165,23 @@
     top  :  0.62rem;
     padding: 0;
     height: 1.4rem;
-    
+    margin-right: 3ch;
+
     font-size  :  1rem;
     letter-spacing  :  0.1em;
     text-shadow: none;
     text-shadow : 0  0.077rem rgba(0,0,0,0.3);
-    
+
     border-bottom: 0.23rem solid #df6757;
     border-left: 2ch solid transparent;
 }
 
-#numDays a {
+#numDays  > a  {
     position  :  relative;
     top : 0;
-    width  :  4.4ch;
-    height  :  4.4ch;
+    width  :  4ch;
+    height  :  4ch;
+    margin-right: 3px;
     padding  :  1ch 0 0 0;
 
     color : #454647;
@@ -135,36 +190,58 @@
     text-decoration  :  none;
     text-shadow: 0.077rem 0.077rem 0.23rem rgba(0,0,0,0.1);
 
-    // slightly randomize the variuos border-radii ala cicada principle ?***
+    // TODO : slightly randomize the various border-radii ala cicada principle ?***
     border-radius  :  50%;
     background-color  :  #eee;
-    box-shadow  :  0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5), -0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3), inset 0 0 0.54rem rgba(255,255,2550,0.5);
+    box-shadow  :  0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5), -0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3), inset 0 0 0.54rem rgba(255,255,2550,1);
+
+  transform: scale(1);
 
     cursor  :  pointer;
-    -webkit-transition  :  all 400ms;
-       -moz-transition  :  all 400ms;
-         -o-transition  :  all 400ms;
-            transition  :  all 300ms;
+    -webkit-transition  :  transform 300ms;
+       -moz-transition  :  transform 300ms;
+         -o-transition  :  transform 300ms;
+            transition  :  transform 300ms;
 }
 
-#numDays a:hover,#numDays a:focus {
+// #numDays a::before, #numDays a.highlight::before {
+//   content: "";
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background-color: $panelColor;
+//   left: -10px;
+//   top:-10px;
+//   border-radius: 50%;
+//   z-index: -1;
+// }
+
+// every other one is different
+#numDays  > a:nth-of-type(2n)  {
     color : #fff;
-    text-shadow  :  0.077rem 0.077rem 0.077rem rgba(0,0,0,0.6);
-    border-top-right-radius  :  5%;
-    background-color  :  $genericButtonColor;
+    border-radius  :  50%;
+    background-color  :  #333;
 }
 
-#numDays a.highlight {
-    top  :  -1.38rem;
+#numDays > a:hover,#numDays > a:focus {
+    color : #fff;
+    // color : #664;
+    // background-color  :  $genericButtonColor;
+    background-color  :  $numDaysHoverColor;
+}
 
-    color  :  #fff;
+// #numDays a:nth-of-type(2n).highlight {
+//     box-shadow: 0 0 2px 2px white;
+// }
 
-    // border: 0.077rem solid rgba(255,255,255,0.5);
-    border-top-right-radius  :  5%;
-    background-color  :  $genericButtonColor;
-    // box-shadow  :  0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5), -0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3), inset 0 0 0.54rem rgba(255,255,255,0.5);
+// #numDays a:nth-of-type(2n-1).highlight {
+//     box-shadow: 0 0 2px 2px black;
+// }
 
-    transform  :  scale(1.2);
-    transition : all 550ms;
-    cursor : default;
+#numDays > a.highlight {
+    // top  :  -0.5rem;
+    border-top-right-radius  :  1%;
+    transform  :  scale(1.5);
+    // transition : all  550ms;
+    // cursor : default;
 }

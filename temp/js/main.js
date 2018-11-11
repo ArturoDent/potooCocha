@@ -113,6 +113,8 @@ function checkWindowScroll() {
   else document.getElementById("currentMap").style.opacity = 1;
 }
 
+// FIXME : why is this called twice? for each countryButton select
+
 function toggleCountryModal(evt)  {
 
   countryModal.classList.toggle("menu-show");
@@ -122,6 +124,20 @@ function toggleCountryModal(evt)  {
   // countryButton.classList.toggle("expand");
 
   if (evt) evt.stopPropagation();
+  
+  // TODO : if scroll at bottom (i.e., looking at checklists ), set it there again
+  
+  // console.log("")
+  
+  // if (document.body.scrollTop > ____) {
+  
+  // both of below do not work on the first choice of country - height of page changing?
+  // doesn't go all the way to botton of page
+  // numDaysButton.scrollIntoView(false);
+  
+  // does go to the bottom of page
+  // document.body.scrollTop = 2000;
+  // };
 }
 
 function toggleSampleTableShowEndemics() {
@@ -161,7 +177,14 @@ function setCountry(evt) {
 
   evt.target.classList.add("highlight");
 
-  if (!currentCountry) map.getElementsByClassName("drawing")[0].classList.add("active");
+  if (!currentCountry) {
+    
+   // TODO : put code for scrolling page here 
+    map.getElementsByClassName("drawing")[0].classList.add("active");
+  }
+  else {
+    
+  }
 
   toggleCountryModal();
 

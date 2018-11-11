@@ -10,10 +10,24 @@
     transition: opacity  450ms, max-height 600ms 250ms;
 }
 
+.slideUpWrapper.panel  {
+  padding  :  0 2.5ch 0 2.5ch;
+}
+
 .slideUpWrapper.closeInstructions  {
     max-height: 0;
     opacity: 0;
     transition: max-height 450ms, opacity 600ms 250ms;
+}
+
+.slideUpWrapper.closeInstructions +  #searchForm  {
+    background-color: transparent;
+    transition: background 450ms;
+}
+
+.slideUpWrapper.closeInstructions +  #searchForm  input {
+    background-color: $bgColor;
+    transition: background 350ms 300ms;
 }
 
 .taxInstructionsButton  {
@@ -34,8 +48,8 @@
     border : 0.15rem solid  $goldHighlightColor;
     border-radius  :  50%;
     background-color  :  $bgColor;
-    box-shadow: inset 0 0 0 0.15rem $bgColor, 0 0 0 0.62rem $bgColor;    
-    
+    box-shadow: inset 0 0 0 0.15rem $bgColor, 0 0 0 0.62rem $bgColor;
+
     cursor  :  pointer;
     transform: translateX(-42ch);
     -webkit-transition  :  transform  ease-in-out 1000ms;
@@ -59,8 +73,9 @@
 
 #searchForm  {
     position  :  relative;
-    padding  : 2.5ch 0 3ch 0;
-    margin-top : 0.77rem;
+    padding  : 1ch 0 2ch 0;
+    // margin-top : 0.77rem;
+    // margin-top : 0.77rem;
 
     transform-origin: top right;
 
@@ -75,10 +90,10 @@
     background-color: $countryMenuColor;
 }
 
-#searchForm:focus-within .icon-pen {
-    transform:  translate(-1.54rem, -0.38rem);
-    transition: all 350ms;
-}
+// #searchForm:focus-within .icon-pen {
+//     transform:  translate(-1.54rem, -0.38rem);
+//     transition: all 350ms;
+// }
 
 .searchForm_contents  {
     position: relative;
@@ -142,17 +157,17 @@
     flex-direction  :  row;
     flex-wrap: wrap;
     align-items: center;
-    
+
     position  :  absolute;
-    top : -6.7ch;
+    top : -8.2ch;
     left  :  96%;
     width: 15.38rem;
     padding : 2.31rem 3.08rem 2.69rem 3.08rem;
 
-    color: white;
+    // color: white;
     font-size  :  0.9rem;
     text-shadow : 0.077rem 0.077rem 0.077rem rgba(0,0,0,0.5);
-    
+
     pointer-events  :  auto;
     border-radius : 50%;
     box-shadow: inset -0.77rem 0 7.7rem $bgColor;
@@ -189,6 +204,8 @@
     border : 0.077rem solid rgba(255,255,255,0.2);
     border-radius : 0.15rem;
     background-color : $genericButtonColor;
+    // background: radial-gradient(ellipse at center, rgba(0,0,0, 0.1) 0%, rgba(255,255,255,0.05) 100%), $genericButtonColor;
+
     box-shadow : 0 0 0.15rem rgba(0,0,0,0.5);
 
     cursor  :  pointer;
@@ -211,6 +228,11 @@
     left : 96%;
 }
 
+// #searchTerm lastQuery
+#searchTerm span {
+  color: #96d4fd;
+}
+
 .highlightSpecial { border-bottom: 0.077rem solid white; }
 
 /*  -----------------------   searchResults  panel  ----------------------  */
@@ -222,7 +244,7 @@
     height  :  0;
     width : calc(100% + 10vw);
     left : -10vw;
-    margin  : 6ch 0 0 0;
+    margin  : 8ch 0 0 0;
     padding  :  0;
 
     order : 2;
@@ -251,7 +273,7 @@
     left : 10vw;
     padding: 0 0 1ch 0;
     overflow-x : visible;
-    
+
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
     background-color  :  $panelColor;
@@ -267,24 +289,43 @@
     border-radius: 50%;
     background-color: $panelColor;
 
-    z-index: 2;
+    // z-index: 2;
     cursor: pointer;
     transition: all 300ms;
 }
 
 #closeResultsPanelButton  {
-    
     left: 100%;
     width: 2rem;
     height: 2rem;
     padding: 0.4rem 0 0 0;
-    
+
     font-size  :  1rem;
     line-height: 1rem;
-    
+
     box-shadow: 0 0 0 0.46rem $bgColor,
                 0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
                 0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
+}
+
+#printerButton {
+  position: absolute;
+  top: calc(100% - 1.31rem);
+  left: calc(100% - 1.31rem);
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+
+  // padding: 0.5rem;
+  border-radius: 50%;
+  background-color: $panelColor;
+  border : 0.15rem solid  $goldHighlightColor;
+  // box-shadow: 0 0 0 0.62rem $bgColor,
+              // 0 -0.077rem 0 0.62rem $bgColor, -0.077rem 0 0 0.62rem $bgColor,  -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),
+              // 0.077rem -0.077rem 0 0.69rem $bgColor, -0.077rem -0.077rem 0 0.69rem $bgColor,  -0.077rem -0.077rem 0 0.69rem rgba(255,255,255, 0.25);
+  box-shadow: 0 0 0 0.3rem $bgColor,
+              0 -0.06rem 0 0.3rem $bgColor, -0.06rem 0 0 0.3rem $bgColor,  -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
+              0.06rem -0.06rem 0 0.4rem $bgColor, -0.06rem -0.06rem 0 0.4rem $bgColor,  -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
 }
 
 #closeOpenFamiliesButton  {
@@ -297,12 +338,12 @@
     font-size  :  1.6rem;
 
     border : 0.15rem solid  $goldHighlightColor;
-    box-shadow: 0 0 0 0.62rem $bgColor, 
+    box-shadow: 0 0 0 0.62rem $bgColor,
                 0 -0.077rem 0 0.62rem $bgColor, -0.077rem 0 0 0.62rem $bgColor,  -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),
                 0.077rem -0.077rem 0 0.69rem $bgColor, -0.077rem -0.077rem 0 0.69rem $bgColor,  -0.077rem -0.077rem 0 0.69rem rgba(255,255,255, 0.25);
 }
 
-#closeResultsPanelButton:hover, #closeOpenFamiliesButton:hover  {
+#closeResultsPanelButton:hover, #closeOpenFamiliesButton:hover, #printerButton:hover  {
     background-color: rgb(34, 34, 34);
 }
 
@@ -335,7 +376,8 @@
     left : 2ch;
     width : calc(100% - 4ch);
 
-    font-size  :  1.15rem;
+    // font-size  :  1.15rem;
+    // font-size  :  1.15rem;
     font-variant  :  small-caps;
     color  :  $panelFlyoutFontColor;
     text-align  :  center;
@@ -361,7 +403,7 @@
     line-height  :  1rem;
 
     border: none;
-    box-shadow : 0 -0.077rem 0 rgba(255,255,255,0.35);
+    // box-shadow : 0 -0.077rem 0 rgba(255,255,255,0.35);
     box-shadow : none;
 //  FIXME :
     -webkit-overflow-scrolling  :  touch;
@@ -532,6 +574,16 @@
     left  :  -0.575rem;
 }
 
+// @media print {
+//     li {
+//       color:red;
+//    }
+//    .family, .familyOpen {
+//     // padding: 0.077rem 0 0.15rem 1.2rem;
+//     margin-top: 2ch;
+//   }
+// }
+
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
 // TODO : height already fixed (in script onload?) just translate down and opacity so height isn't changing
 .tax-panel  {
@@ -569,7 +621,7 @@
     left : 10vw;
     padding : 0 0 1ch 0;
     margin : 1ch 0 0 0;
-    
+
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
     background-color  :  $panelColor;
@@ -771,7 +823,7 @@ to {
     position : absolute;
     left : -2.5vw;
     top : 0.15rem;
-    
+
     font-size: 1.3rem;
 }
 
@@ -795,6 +847,7 @@ to {
 }
 
 #tree ul li:hover::before  {
+    // below same as &nbsp;
     content : '\a0\a0';
     position : absolute;
     top : 0.12rem;

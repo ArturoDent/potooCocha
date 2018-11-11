@@ -4,82 +4,129 @@
     position  :  relative;
     width  :  1rem;
     height  :  1rem;
-    
+
     fill  :  #ddd;
-    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
-        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
-            filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+    // -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+        // -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+            // filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
     stroke  :  #ddd;
     stroke-width  :  0;
 }
 
-.icon-pen {
-    width  :  2rem;
-    height  :  2rem;
-    opacity: 1;
-    transform: translate(-1.15rem, -0.38rem);
-    transition: all 350ms;
+.icon-printer  {
+  top: -0.15ch;
+  // left: -0.05ch;
+  width  :  2em;
+  height  :  2em;
+  fill:  #ddd;
 }
 
-@supports ( all:initial ) {
-  .icon-pen {
-     transform: translate(1.15rem, -2.31rem);
-    //  opacity : 0;
-  }
+.icon-download  {
+    // stroke  :  #333;
+    top: 0.8ch;
+    transform: scale(1.6);
 }
 
-.icon-pin  {
-    top  :  -1.7rem;
-    left  :  0.62rem;
-    width  :  3rem;
-    height  :  3rem;
-    fill  :  lighten($bgColor, 45%);
-    stroke  :  #333;
-    stroke-width  :  0.25px;
+// .icon-pen {
+//     width  :  2rem;
+//     height  :  2rem;
+//     opacity: 1;
+//     transform: translate(-1.15rem, -0.38rem);
+//     transition: all 350ms;
+// }
+
+.icon-mag-glass {
+    width  :  2.5em;
+    height  :  2.5em;
+
+    // stroke  :  #333;
+    // stroke-width  :  0.15rem;
+
+    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+            filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+
+    // opacity: 0.5;
+    transform: translate(-1.3rem,0.75rem);
+    // below because icon showing on overlay page
+    z-index: -0;
+    // transition: all 350ms;
 }
+
+// @supports ( all:initial ) {
+//   .icon-mag-glass {
+//      transform: translate(1.15rem, -2.31rem);
+//   }
+// }
+
+// .icon-pin  {
+//     top  :  -1.7rem;
+//     left  :  0.62rem;
+//     width  :  3rem;
+//     height  :  3rem;
+//     fill  :  lighten($bgColor, 45%);
+//     stroke  :  #333;
+//     stroke-width  :  0.25px;
+// }
 
 .icon-female {
     top  :  -0.077rem;
     left: -0.077rem;
-    transform: scale(1.2);
-    fill : ddd;
-    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem 0.3 ) drop-shadow( -0.077rem -0.077rem 0.077rem 0.3 );
-        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem 0.3 ) drop-shadow( -0.077rem -0.077rem 0.077rem 0.3 );
-            filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem 0.3 ) drop-shadow( -0.077rem -0.077rem 0.077rem 0.3 );
+    transform: scale(1.3);
+    // fill : #333;
+    fill : $sampleTableTextColor;
+    // stroke : #333;
+    // -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+        // -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
+            // filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.3) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
 }
 
 .icon-camera  {
     top  :  0.077rem;
+    // fill : #345;
+    fill : $sampleTableTextColor;
+    transform: scale(1.3);
 }
 
-.icon-list  {
-    top  :  0.15rem;
-    left: 0.15rem;
-    transform: scale(1.5);
-    // width  :  4rem;
+// .icon-list  {
+//     top  :  0.15rem;
+//     left: 0.15rem;
+//     transform: scale(1.5);
+//     // width  :  4rem;
+// }
+
+// .icon-file-excel  {
+//     top  :  0.077rem;
+//     // width  :  1em;
+//     height  :  0.92rem;
+//     left  :  0.54rem;
+// }
+
+.icon-paper-plane {
+    // top  :  -0.4rem;
+    // left :  -0.2rem;
+
+    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
+        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
+            filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
+
+    transform : translate(-0.2rem, -0.4rem);
+    transition : translate 2s;
 }
 
-.icon-file-excel  {
-    top  :  0.077rem;
-    // width  :  1em;
-    height  :  0.92rem;
-    left  :  0.54rem;
-}
+// @supports ( all:initial ) {
+//   .icon-paper-plane {
+//      transform: translate(1.15rem, -2.31rem);
+//   }
+// }
 
-.icon-paper-plane-o {
-    top  :  0.077rem;
-}
 
 .icon-delete  {
-    // top  :  0.15rem;
-    // left: 0.15rem;
     transform: scale(2,1.8);
 
     -webkit-filter  : none;
-    -ms-filter  : none;
-        filter  : none;
-    // stroke  :  #fff;
-    // width  :  4rem;
+        -ms-filter  : none;
+            filter  : none;
 }
 
 #icon-delete-circle {

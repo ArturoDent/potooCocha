@@ -1,4 +1,5 @@
 .md-modal {
+  // opacity: 0;
   position: fixed;
   top: 0;
   left: 100%;
@@ -8,18 +9,19 @@
 
 .menu-show {
   transform: translateX(-21vw);
+  // opacity: 1;
 }
 
 .md-overlay {
   opacity: 0;
   pointer-events: none;
-  
+
   display  :  flex;
   flex-direction  :  column;
   flex-wrap  :  nowrap;
   align-items: center;
   justify-content: center;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -40,10 +42,10 @@
 
 .md-overlay.show .overlayInfo {
   opacity: 1;
-  
+
   transition: all 750ms 500ms;
 }
- 
+
 .titleStrip {
   position: absolute;
   left: 1vw;
@@ -51,17 +53,17 @@
   height: 11.2vh;
   width: 101vh;
   text-align: center;
-  
+
   transform-origin: top left;
   transform: rotate(-90deg);
-  
+
   font-size: 8.8vh;
   letter-spacing: 0.5vh;
-  color: darken($bgColor, 5%);
+  color: darken($bgColor, 10%);
   text-shadow : -0.077rem 0.077rem rgba(186, 186, 186, 0.4), 0.077rem -0.077rem 0.077rem rgba(0,0,0,0.4);
-  
+
   background-color: $titleBannerColor;
-  box-shadow: inset 0 0 0.15rem rgb(250, 249, 249), 0 0 0.15rem rgba(0,0,0,0.5); 
+  box-shadow: inset 0 0 0.15rem rgb(250, 249, 249), 0 0 0.15rem rgba(0,0,0,0.5);
 }
 
 // TODO : (separately fade in/out) ?
@@ -78,23 +80,23 @@
   min-height: 15ch;
   padding: 1.54rem;
   pointer-events: none;
-  
+
   font-size: 1.2em;
   font-variant: small-caps;
   line-height: 1.6em;
   text-align: center;
-  
+
   border-top: 0.077rem solid rgba(255,255,255,0.5);
   border-bottom: 0.077rem solid rgba(255,255,255,0.5);
   border-radius:  0.23rem;
-  box-shadow:  inset 0 0 5rem rgba(0,0,0,0.1);
+  box-shadow:  inset 0 0 5rem rgba(0,0,0,0.3);
   transform: scale(0.95);
-  transition: all 500ms;  
+  transition: all 500ms;
 }
 
 .underline {
   border-bottom: 0.15rem double white;
-  
+
   // no support for below in Edge
   // text-decoration-style: solid;
   // text-decoration-color: white;
@@ -112,19 +114,22 @@
   right: 19vw;
   width: 18vw;
   height: auto;
-  padding : 0.7ch 2ch 0.9ch 0; 
-   
+  padding : 0.7ch 2ch 0.9ch 0;
+
   // text-align: left;
-  
+
   border: 0.077rem solid white;
   border-radius: 0.2rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   // background-color: $bgColor;
   // background-color: rgb(186, 141, 30);
-  background-color: transparent;
-  box-shadow  :  inset 0 0 0 0 transparent, 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
-  transition  :  box-shadow 400ms;
+  // background-color: transparent;
+  background: linear-gradient(45deg, rgba(255,255,255, 0.1) 0%, rgba(20, 20, 20, 0) 100%);
+  // background-color: transparent;
+  box-shadow  :  0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
+  // transition  :  box-shadow 400ms;
+  transition  :  background 400ms;
 }
 
 #countryButton:after {
@@ -142,23 +147,25 @@
 
 // #countryButton.expand:after {
 //   left  :  102%;
-//   // border-color  :  transparent transparent transparent white;  
+//   // border-color  :  transparent transparent transparent white;
 // }
 
 #countryButton:hover, #countryButton:focus {
   // border : 0.077rem solid #888;
-  box-shadow  :  inset 20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
+  // box-shadow  :  inset 20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, rgba(20, 20, 20, 0.2) 0%, rgba(255,255,255, 0.15) 100%);
 }
 
-#countryButton.highlight:hover, #countryButton.highlight:focus {
-  // border : 0.077rem solid #888;
-  box-shadow  :  inset -20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
-}
+// #countryButton.highlight:hover, #countryButton.highlight:focus {
+//   // border : 0.077rem solid #888;
+//   box-shadow  :  inset -20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
+// }
 
 // #countryButton.expand  {
 // }
 
 .country-menu {
+  // opacity: 0;
   position: relative;
   display  :  -webkit-flex;
   display  :  flex;
@@ -173,15 +180,31 @@
   justify-content: space-around;
   height: 100vh;
   font-size: 1rem;
-  border-left: 0.077rem solid rgba(0,0,0,0.3);
-  border-right: 0.077rem solid rgba(0,0,0,0.3);
-  box-shadow:  inset 0 0 10rem rgba(0,0,0,0.3);
+  border-left: 0.077rem single rgba(0,0,0,0.2);
+  border-right: 0.077rem solid rgba(0,0,0,0.2);
+  // box-shadow: 0 0 1rem rgba(0,0,0,0.3), inset -4rem 0 2rem rgba(0,0,0,0.3);
+
+  // background: linear-gradient(90deg, rgba(255, 255, 254, 1) 50%, rgba(75, 75, 75, 1) 100%);
+
+  box-shadow:  inset 0 0 8rem rgba(0,0,0,0.2);
+
+  transition: all 2000ms;
 }
+
+// .country-menu.show .countryItem a  {
+//   // opacity: 1;
+//   // padding: 0.5rem 0;
+//   // height: 95vh;
+//   // font-size: 1rem;
+//   // color: white;
+//   // margin-right: -3rem;
+
+// }
 
 .countryItem {
   position: relative;
   width: 16vw;
-  
+
   display  :  -webkit-flex;
   display  :  flex;
 
@@ -200,18 +223,17 @@
 .countryItem a {
   position: relative;
   width: calc(100% + 0.077rem);
-  
+
   margin-right: -3rem;
-  
   margin-bottom: 0.077rem;
   // need to subtract the font-size ass well
-  padding: (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 1.6rem;
+  // padding: (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 1.6rem;
   // // padding: (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 0 (calc(((100vh - 3.08rem) - (19 * 1rem)) / 38)) 1.6rem;
   padding: 0.9rem 0 0.9rem 1.6rem;
 
   text-decoration: none;
   text-shadow : 0  0.077rem rgba(0,0,0,1);
-  
+
   transition: all 450ms ease-out;
   cursor: pointer;
 }
@@ -251,11 +273,11 @@
 .flag  {
   position: absolute;
   // left: calc(100% - 50.15rem);
-  
+
   height: 2rem;
   width:2rem;
-  left: calc(100% - 4rem);
-  
+  left: calc(100% - 3rem);
+
   border-radius : 50%;
   background-position: center;
   background-origin: padding-box;

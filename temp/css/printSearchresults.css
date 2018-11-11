@@ -1,0 +1,25 @@
+.simplebar-content {
+  list-style-type: none;
+  padding: 0 0 0 40px;
+}
+
+h3 {
+  /* padding: 1ch 0 1ch 15ch; */
+  margin: 0 0 3ch 0;
+  text-align: center;
+}
+
+.family, .familyOpen {
+  margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc;
+}
+
+.fsc {
+  position: absolute; left: 50%;
+}
+
+.bird>span {
+  padding-left: 10px;}
+
+.bird span:last-child  {
+  position: absolute; left: 50%;
+}

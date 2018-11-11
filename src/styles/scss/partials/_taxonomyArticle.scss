@@ -20,14 +20,14 @@
     position  :  relative;
     left : -5.4rem;
     width : calc(100% + 10ch);
-    height: 22ch;
-    margin-bottom: -12.5ch;
-    padding  :  3ch 5ch 0 5ch;
+    height: 23ch;
+    margin-bottom: -12ch;
+    padding  :  2.5ch 7ch 0 7ch;
 
     z-index: 0;
 
     font-size : 1.06rem;
-    line-height : 1.6rem;
+    line-height : 1.8rem;
     text-align: center;
     color: $panelFlyoutFontColor;
 
@@ -45,13 +45,13 @@
 
 .taxArticleMain {
     padding  : 1.15rem 0 0 0;
-    text-align: left;
+    // text-align: center;
     line-height: 1.5rem;
 }
 
 #taxonomyArticle a.linkHighlight {
     padding : 0 0.23rem 0.077rem 0.31rem;
-    border: none;
+    // border: none;
     border-radius: 0.15rem;
     border : solid 0.077rem transparent;
     border-bottom  :  solid 0.077rem $panelFlyoutFontColor;

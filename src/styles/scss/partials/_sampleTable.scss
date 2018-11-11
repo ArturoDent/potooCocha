@@ -1,70 +1,80 @@
+.tableWrapper  {
+  position: relative;
+  width: 120%;
+  margin: -2rem  0 5.5rem 0;
+  padding: 1.825rem 1.825rem 0.73rem 1.825rem;
+  text-shadow: none;
+  background-color: $sampleTableBGColor;
+  color: $sampleTableTextColor;
+  border-radius: 0.23rem;
+  box-shadow: 0.073rem 0.073rem #666, 0.23rem 0.23rem $sampleTableBGColor, 0.3rem 0.3rem #666, 0.46rem 0.46rem $sampleTableBGColor, 0.41rem 0.41rem #666;
+  z-index: 1;
+}
+
 #sampleTable {
   position: relative;
   left: 0.15rem;
   width: 100%;
   min-width: 37rem;
-  margin: 1ch auto 4ch auto;
+  margin: 0 auto 4ch auto;
 
   font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
   empty-cells: show;
   border-collapse: collapse;
-  border: none; }
+  border: none;
+}
 
 #sampleTable td {
   position: relative;
   height: 2.31rem;
   padding: 0.15rem 0.15rem 0.15rem 0.15rem;
-  border: solid 0.077rem #000; }
+  border: solid 0.077rem #000;
+  transition: all 250ms; }
 
 #sampleTable thead {
   display: table-header-group;
-  height: 2.1rem; }
+  height: 2.1rem;
+  font-size: 0.6rem;
+  border: solid 0.077rem #000; }
 
-#sampleTable tbody {
-  display: table-row-group; }
+#sampleTable tbody { display: table-row-group; }
 
 #sampleTable .cLfc, #sampleTable .cLfs {
+  opacity: 1;
   padding-top: 0.77rem;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-align: left;
   border-right: hidden;
-  border-left: hidden; }
+  border-left: hidden;
+  transition: all 250ms; }
 
-#sampleTable .cLfs {
-  text-align: left; }
+#sampleTable .cLfs { text-align: left; }
 
 #sampleTable .cLc {
   padding: 0.077rem 0 0.23rem 0.77rem;
   border-right: hidden; }
 
 #sampleTable .cLc, #sampleTable .cLs {
+  opacity: 1;
+  transition: all 250ms;
   text-align: left; }
 
-#sampleTable .cLc, #sampleTable .cLFc {
-  width: 15.38rem; }
+#sampleTable .cLc, #sampleTable .cLFc { width: 15.38rem; }
 
-#sampleTable .cLs, #sampleTable .cLFs {
-  width: auto; }
+#sampleTable .cLs, #sampleTable .cLFs { width: auto; }
 
 #sampleTable .cLs {
   padding: 0.15rem 0 0.15rem 0;
   font-style: italic; }
 
-#sampleTable .fre {
-  border-right: hidden; }
+#sampleTable .fre { border-right: hidden; }
 
-#sampleTable .cds {
-  border-right: 0.23rem double #000; }
+#sampleTable .cds { border-right: 0.23rem double #000; }
 
-#sampleTable .rds {
-  border-bottom: 0.23rem double #000; }
-
-#sampleTable thead {
-  font-size: 0.6rem;
-  border: solid 0.077rem #000; }
+#sampleTable .rds { border-bottom: 0.23rem double #000; }
 
 /*  there is no tfoot in #sampleTable  */
 /*#sampleTable tfoot tr:first-child td  {
@@ -79,38 +89,38 @@
   padding: 0 0.15rem;
   font-weight: bold;
   border: solid 0.077rem #000;
-  background-color: transparent; }
+  background-color: transparent;
+  transition: all 250ms;
+}
 
 #sampleTable th:not(:first-child) {
-  background-color: $panelColor; }
+  background-color: transparent; }
 
-.flashDays {
-  animation-name: flashDays;
-  animation-duration: 1s;
+// .flashDays {
+  // animation-name: flashDays;
+  // animation-duration: 1s;
   // so that applied styles in the animation are retained after the animation runs
-  animation-fill-mode: both;
-  animation-timing-function: ease-out;
-  animation-delay: 0.2s;
-}
+  // animation-fill-mode: both;
+  // animation-timing-function: ease-out;
+  // animation-delay: 0.2s;
+// }
 
-@keyframes flashDays {
-  0% {
+// @keyframes flashDays {
+  // 0% {
     // background-color: black;
-  }
-  50% {
-    background-color: rgb(200, 200, 200);
-    color: black;
-  }
-  100% {
+  // }
+  // 80% {
+    // background-color: $genericButtonColor;
+    // color: white;
+  // }
+  // 100% {
     // background-color: rgba(200, 200, 200, 0.5);
-  }
-}
+  // }
+// }
 
-#sampleTable td.familyHidden {
-  border: solid 0.077rem $panelColor; }
+#sampleTable td.familyHidden { border: solid 0.077rem transparent; }
 
-#sampleTable td.familyHidden.show {
-  border-bottom: solid 0.077rem #000; }
+#sampleTable td.familyHidden.show { border-bottom: solid 0.077rem #000; }
 
 #sampleTable td.leftCheckBox {
   width: 0;
@@ -124,47 +134,37 @@
 #sampleTable td.leftCheckBox.show {
   width: 2.31rem;
   border: solid 0.077rem #000;
-  // transition: width 350ms; 
 }
 
-.centerText {
-  text-align: center; }
+.centerText { text-align: center; }
 
-#sampleTable td.double-separator {
-  border-right: 0.23rem double #000; }
+#sampleTable td.double-separator { border-right: 0.23rem double #000; }
 
-.noScientificNames .cLfc {
-  letter-spacing: 0.1em; }
+#sampleTable.noScientificNames .cLfc { letter-spacing: 0.15em; }
 
-.noScientificNames .cLfs {
-  opacity: 0; }
+#sampleTable.noScientificNames .cLfs { opacity: 0; }
 
-#sampleTable.noScientificNames .cLc {
-  letter-spacing: 0.1em; }
+#sampleTable.noScientificNames .cLc { letter-spacing: 0.1em; }
 
-#sampleTable.noScientificNames .cLs {
-  opacity: 0; }
+#sampleTable.noScientificNames .cLs { opacity: 0; }
 
-#sampleTable.noItalics .cLs {
-  font-style: normal; }
+#sampleTable.noItalics .cLs { font-style: normal; }
 
-.showLineNumbers {
-  position: relative; }
- 
+.showLineNumbers { position: relative; }
+
 .leftCheckBox:not(.show) + .showLineNumbers::before {
   content: '5';
   position: absolute;
   top: 0.54rem;
-  left: -1.15rem;
+  left: -1.6rem;
   width: auto;
   height: auto;
-  padding: 0.15rem 0 0.23rem 0;
+  padding: 0.15rem 0.3rem 0.23rem 0.3rem;
 
   font-size: 0.6rem;
   text-shadow: none;
 
-  border: 0.077rem solid transparent;
-  background-color: $panelColor;
+  background-color: $sampleTableBGColor;
   transition: left 500ms;
 }
 
@@ -172,175 +172,154 @@
   content: '5';
   position: absolute;
   top: 0.38rem;
-  left: -2.4rem;
+  // left: -2.4rem;
+  left: -2.7rem;
   width: auto;
   height: auto;
-  padding: 0.15rem 0.15rem 0.23rem 0.077rem;
+  padding: 0.15rem 0.3rem 0.23rem 0.3rem;
 
   font-size: 0.6rem;
   text-shadow: none;
 
-  border: 0.077rem solid transparent;
-  background-color: $panelColor;
-  // transition: left 500ms;
+  background-color: $sampleTableBGColor;
   }
 
-.showEndemics {
-  position: relative; }
+.showEndemics { position: relative; }
 
 .leftCheckBox:not(.show) + .endemical.showEndemics::before {
   content: 'E';
   position: absolute;
   top: 0.46rem;
-  left: -1.15rem;
+  left: -1.6rem;
   width: auto;
   height: auto;
-  padding: 0.15rem 0 0.23rem 0;
+  padding: 0.15rem 0.3rem 0.23rem 0.3rem;
+
   font-size: 0.6rem;
   text-shadow: none;
 
-  border: 0.077rem solid transparent;
-  background-color: $panelColor;
+  background-color: $sampleTableBGColor;
   transition: left 500ms;
 }
 
 .leftCheckBox.show + .endemical.showEndemics::before {
-    content: 'E';
+  content: 'E';
   position: absolute;
   top: 0.46rem;
-  left: -2.4rem;
+  left: -2.6rem;
   width: auto;
   height: auto;
-  padding: 0.15rem 0.077rem 0.23rem 0.077rem;
+  padding: 0.15rem 0.3rem 0.23rem 0.3rem;
 
   font-size: 0.6rem;
   text-shadow: none;
 
-  border: 0.077rem solid transparent;
-  background-color: $panelColor;
-  // transition: left 500ms;
+  background-color: $sampleTableBGColor;
 }
 
-#sampleTable.numDays0 .cLs {
+.numDays0 .cLs {
   border-right: 0.077rem solid #000; }
 
-#sampleTable.numDays0 th {
+.numDays0 th {
   width: 0;
   border: 0.077rem solid transparent; }
 
-#sampleTable.numDays1 th {
-  width: 4.62rem; }
+.numDays1 th { width: 4.62rem; }
 
-#sampleTable.numDays2 th {
-  width: 4.15rem; }
+.numDays2 th { width: 4.15rem; }
 
-#sampleTable.numDays3 th {
-  width: 3.85rem; }
+.numDays3 th { width: 3.85rem; }
 
-#sampleTable.numDays4 th {
-  width: 3.38rem; }
+.numDays4 th { width: 3.38rem; }
 
-#sampleTable.numDays5 th {
-  width: 3.08rem; }
+.numDays5 th { width: 3.08rem; }
 
-#sampleTable.numDays6 th {
-  width: 2.77rem; }
+.numDays6 th { width: 2.77rem; }
 
-#sampleTable.numDays7 th {
-  width: 2.62rem; }
+.numDays7 th { width: 2.62rem; }
 
-#sampleTable.numDays8 th {
-  width: 2.46rem; }
+.numDays8 th { width: 2.46rem; }
 
-#sampleTable.numDays9 th {
-  width: 2.31rem; }
+.numDays9 th { width: 2.31rem; }
 
-#sampleTable.numDays10 th {
-  width: 2.15rem; }
+.numDays10 th { width: 2.15rem; }
 
-#sampleTable.numDays11 th {
-  width: 2rem; }
+.numDays11 th { width: 2rem; }
 
-#sampleTable.numDays12 th {
-  width: 1.85rem; }
+.numDays12 th { width: 1.85rem;
 
-.numDays11 th:nth-child(n+13) {
-  display: none; }
+    // animation-name: days;
+    // animation-duration: 350ms;
+    // // so that applied styles in the animation are retained after the animation runs
+    // animation-fill-mode: both;
+    // animation-timing-function: ease-out;
+    // animation-delay: 0.2s;
+  }
 
-.numDays10 th:nth-child(n+12) {
-  display: none; }
+  @keyframes days {
+    0% {
+      // opacity: 0;
+      width: 0;
+    }
+    100% {
+      // opacity: 1;
+      width: inherit;
+    }
+  }
 
-.numDays9 th:nth-child(n+11) {
-  display: none; }
+.numDays11 th:nth-child(n+13) { display: none; }
 
-.numDays8 th:nth-child(n+10) {
-  display: none; }
+.numDays10 th:nth-child(n+12) { display: none; }
 
-.numDays7 th:nth-child(n+9) {
-  display: none; }
+.numDays9 th:nth-child(n+11) { display: none; }
 
-.numDays6 th:nth-child(n+8) {
-  display: none; }
+.numDays8 th:nth-child(n+10) { display: none; }
 
-.numDays5 th:nth-child(n+7) {
-  display: none; }
+.numDays7 th:nth-child(n+9) { display: none; }
 
-.numDays4 th:nth-child(n+6) {
-  display: none; }
+.numDays6 th:nth-child(n+8) { display: none; }
 
-.numDays3 th:nth-child(n+5) {
-  display: none; }
+.numDays5 th:nth-child(n+7) { display: none; }
 
-.numDays2 th:nth-child(n+4) {
-  display: none; }
+.numDays4 th:nth-child(n+6) { display: none; }
 
-.numDays1 th:nth-child(n+3) {
-  display: none; }
+.numDays3 th:nth-child(n+5) { display: none; }
+
+.numDays2 th:nth-child(n+4) { display: none; }
+
+.numDays1 th:nth-child(n+3) { display: none; }
 
 .numDays0 th {
   display: none;
   width : 0;
   border: 0.077rem solid transparent; }
 
-.numDays11 td:nth-child(n+15) {
-  display: none; }
+.numDays11 td:nth-child(n+15) { display: none; }
 
-.numDays10 td:nth-child(n+14) {
-  display: none; }
+.numDays10 td:nth-child(n+14) { display: none; }
 
-.numDays9 td:nth-child(n+13) {
-  display: none; }
+.numDays9 td:nth-child(n+13) { display: none; }
 
-.numDays8 td:nth-child(n+12) {
-  display: none; }
+.numDays8 td:nth-child(n+12) { display: none; }
 
-.numDays7 td:nth-child(n+11) {
-  display: none; }
+.numDays7 td:nth-child(n+11) { display: none; }
 
-.numDays6 td:nth-child(n+10) {
-  display: none; }
+.numDays6 td:nth-child(n+10) { display: none; }
 
-.numDays5 td:nth-child(n+9) {
-  display: none; }
+.numDays5 td:nth-child(n+9) { display: none; }
 
-.numDays4 td:nth-child(n+8) {
-  display: none; }
+.numDays4 td:nth-child(n+8) { display: none; }
 
-.numDays3 td:nth-child(n+7) {
-  display: none; }
+.numDays3 td:nth-child(n+7) { display: none; }
 
-.numDays2 td:nth-child(n+6) {
-  display: none; }
+.numDays2 td:nth-child(n+6) { display: none; }
 
-.numDays1 td:nth-child(n+5) {
-  display: none; }
+.numDays1 td:nth-child(n+5) { display: none; }
 
-.numDays0 td:nth-child(n+4) {
-  display: none; }
+.numDays0 td:nth-child(n+4) { display: none; }
 
 #sampleTable th:first-child {
-  border: solid 0.077rem $panelColor;
+  border: solid 0.077rem transparent;
   border-right: solid 0.077rem #000; }
 
-.numDays0 tr.topBorderDisappear {
-  border-top : hidden; }
+.numDays0 tr.topBorderDisappear { border-top : hidden; }

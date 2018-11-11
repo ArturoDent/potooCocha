@@ -121,7 +121,7 @@ class PDF extends TCPDF {
 	public function LoadAuthors($file)  {
 
 		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		$this->authors = $lines[0];
+		$this->authors = str_replace("&nbsp;", " ", $lines[0]);
 	}
 
 	public function Header()  {
@@ -151,6 +151,8 @@ class PDF extends TCPDF {
 			//   OR *** 6 or 7 days chosen, then put end of third day
 
 			// if ( ($i % (startDate + 6) == 0) && ($i != ($this->numDays + startDate) ) {
+				
+				// TODO : if days == 8  put double border after 4
 
 			if ($this->numDays == 6 || $this->numDays == 7) {
 

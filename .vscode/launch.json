@@ -1,5 +1,9 @@
 {
     "version": "0.1.0",
+
+      "env": {
+          "url": "http://localhost:3000"
+    },
     "compounds": [
         {
             "name": "Start server and chrome debugger",
@@ -7,15 +11,17 @@
         }
     ],
     "configurations": [
-     
+
         {
             "type": "node",
             "request": "launch",
             "name": "Gulp sync",
-            
+            // "name": "$env:gulp-sync", this works
+
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
                 "sync"
+                // "$env:task" won't work here
             ]
         },
         {
@@ -39,10 +45,11 @@
         {
             "name": "Chrome : Launch with sourcemaps",
             // "preLaunchTask": "Gulp: Start server only",
-    
+
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:3000",
+            // "url": "$env:url", does not work
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "runtimeArgs": [
