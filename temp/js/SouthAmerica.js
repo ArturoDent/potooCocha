@@ -2,22 +2,31 @@
 
 var map;
 
-var countries  = { "Argentina":0, "Aruba":1, "Bolivia":2, "Brazil":3, "Chile":4,
-  "Colombia":5, "Curaçao":6, "Ecuador":7, "FrenchGuiana":8,
-  "Guyana":9, "Paraguay":10, "Peru":11, "Suriname":12, "Trinidad":13,
-  "Uruguay":14, "Venezuela":15, "Bonaire":16, "Falklands":17 };
+var countries = {
+  "Argentina": 0, "Aruba": 1, "Bolivia": 2, "Brazil": 3, "Chile": 4,
+  "Colombia": 5, "Curaçao": 6, "Ecuador": 7, "FrenchGuiana": 8,
+  "Guyana": 9, "Paraguay": 10, "Peru": 11, "Suriname": 12, "Trinidad": 13,
+  "Uruguay": 14, "Venezuela": 15, "Bonaire": 16, "Falklands": 17
+};
 
-var endemicColor         =  "#C23BC3";
-var extinctColor         =  "#f33";
-var residentColor        =  "#00838f";
-var nonBreederColor      =  "#994c00";
-var vagrantColor         =  "gold";
-var hypotheticalColor    =  "#005903";
-var introducedColor      =  "#222";
+// ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4']
 
-var baseColor                =  "​#535b5f";
-var baseStrokeColor          =  "#bbb";
-var selectedCountryFillColor = '#fff';
+var endemicColor = "#d73027";
+var extinctColor = "#000";
+var residentColor = "#fc8d59";
+
+// var nonBreederColor = "url(#pattern-horizStripes)";
+var nonBreederColor = "#ddd";
+
+var vagrantColor = "#caca30";
+// var hypotheticalColor = "url(#pattern-vertStripes)";
+var hypotheticalColor = "#579ac4";
+// var introducedColor = "url(#pattern-circles)";
+var introducedColor = "#fee090";
+
+var baseColor = "​#535b5f";
+var baseStrokeColor = "#fff";
+var selectedCountryFillColor = "#f33";
 
 /* global addBirdNameToMap birds currentMap */
 
@@ -27,12 +36,12 @@ function initCurrentMap() {
   prepareSVGstyles("SAMsvg");
 
   map = document.getElementById("currentMap");
-  map.style.opacity = "1";
+  // map.style.opacity = "1";
 }
 
 //  TODO : (is this necessary? Straight to setSVGstyles()?)
 // eslint-disable-next-line
-function prepareSVGstyles(obj)  {
+function prepareSVGstyles(obj) {
 
   // var svg;
   var svg = document.getElementById(obj);
@@ -57,27 +66,27 @@ function prepareSVGstyles(obj)  {
 }
 
 // eslint-disable-next-line
-function setSVGstyles(obj )  {
+function setSVGstyles(obj) {
 
-  if (obj.nodeName === "path"  || obj.nodeName === "circle") {
+  if (obj.nodeName === "path" || obj.nodeName === "circle") {
 
     // obj.style.transition = "fill 1s, stroke 1s";
     obj.style.transition = "fill 1s";
   }
 
-  else if (obj.parentNode.nodeName === "g")  {
+  else if (obj.parentNode.nodeName === "g") {
     // obj.parentNode.style.filter = "blur(1.54rem)";
 
     var paths = obj.querySelectorAll("path");
     var len = paths.length;
 
-    for (var i = 0; i < len; i++)  {
+    for (var i = 0; i < len; i++) {
       paths[i].style.transition = "fill 1s";
     }
   }
 }
 
-function fillSAMmap(skipCountry)  {
+function fillSAMmap(skipCountry) {
 
   var svg;
   svg = currentMap.querySelector("#SAMsvg");
@@ -99,25 +108,29 @@ function newFillColor(obj, newColor) {
     //  HACK : (why does this have to be hardcoded? And below.)
     if (newColor === baseColor) {
       obj.style.fill = "#535b5f";
+      // obj.style.fill = "url(#circles)";
     }
     else obj.style.fill = newColor;
+    // obj.style.fill = newColor;
 
-    if (newColor !== vagrantColor) obj.style.stroke = baseStrokeColor;
+    if (newColor !== residentColor) obj.style.stroke = baseStrokeColor;
   }
 
-  else if (obj.parentNode.nodeName === "g")  {
+  else if (obj.parentNode.nodeName === "g") {
 
     var paths = obj.querySelectorAll("path");
 
     var len = paths.length;
-    for (var i = 0; i < len; i++)  {
+    for (var i = 0; i < len; i++) {
 
       if (newColor === baseColor) {
         paths[i].style.fill = "#535b5f";
+        // paths[i].style.fill = "url(#circles)";
       }
       else paths[i].style.fill = newColor;
+      // paths[i].style.fill = newColor;
 
-      if (newColor !== vagrantColor) paths[i].style.stroke = baseStrokeColor;
+      if (newColor !== residentColor) paths[i].style.stroke = baseStrokeColor;
     }
   }
 }
@@ -145,12 +158,12 @@ function newStrokeColor(obj, newColor) {
     obj.style.stroke = newColor;
   }
 
-  else if (obj.parentNode.nodeName === "g")  {
+  else if (obj.parentNode.nodeName === "g") {
 
     var paths = obj.querySelectorAll("path");
 
     var len = paths.length;
-    for (var i = 0; i < len; i++)  {
+    for (var i = 0; i < len; i++) {
 
       if (obj.id === "Falklands") {
         paths[i].style.stroke = "#fff";
@@ -187,52 +200,56 @@ function highlightSAMmap(index, current) {
 
     switch (cList[countries[country]]) {
 
-    case "X(e)":
+      case "X(e)":
 
-      newFillColor(cc, endemicColor);
-      break;
+        newFillColor(cc, endemicColor);
+        break;
 
-    case "X":
+      case "X":
 
-      newFillColor(cc, residentColor);
-      break;
+        newFillColor(cc, residentColor);
+        newStrokeColor(cc, '#444')
+        break;
 
-    case "NB":
+      case "NB":
 
-      newFillColor(cc, nonBreederColor);
-      break;
+        newFillColor(cc, nonBreederColor);
+        newStrokeColor(cc, '#444')
+        break;
 
-    case "V":
+      case "V":
 
-      newFillColor(cc, vagrantColor);
-      newStrokeColor(cc, '#535b5f');
-      break;
+        newFillColor(cc, vagrantColor);
+        newStrokeColor(cc, '#444');
+        break;
 
-    case "H":
-      newFillColor(cc, hypotheticalColor);
-      break;
+      case "H":
+        newFillColor(cc, hypotheticalColor);
+        // newStrokeColor(cc, '#444')
+        break;
 
-    case "IN":
+      case "IN":
 
-      newFillColor(cc, introducedColor);
-      break;
+        newFillColor(cc, introducedColor);
+        newStrokeColor(cc, '#444')
+        break;
 
-    case "EX":
+      case "EX":
 
-      newFillColor(cc, extinctColor);
-      break;
+        newFillColor(cc, extinctColor);
+        break;
 
-    case "EX(e)":
+      case "EX(e)":
 
-      newFillColor(cc, extinctColor);
-      break;
+        newFillColor(cc, extinctColor);
+        break;
 
-    default:
-      newFillColor(cc, baseColor);
+      default:
+        newFillColor(cc, baseColor);
     }
 
-    if (current !== "currentMap")  newStrokeColor(cc, "#fff");
+    if (current !== "currentMap") newStrokeColor(cc, "#fff");
   }
 
-  if ( (current === "currentMap") && (mapsCollection.children.length < 5) ) {  saveMapButton.style.display = "block";  }
+  if ((current === "currentMap") && (mapsCollection.children.length < 5)) { saveMapButton.style.display = "block"; }
 }

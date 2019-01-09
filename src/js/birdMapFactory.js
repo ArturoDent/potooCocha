@@ -50,30 +50,47 @@ function deleteMap(evt)  {
 
   evt.stopPropagation();
 
-  var birdInstance = this.parentNode;
-
-  //  FIXME  :  (remove any listeners first)
-
-  birdInstance.parentNode.removeChild(this.parentNode);
-
-  // birdInstance.addEventListener("transitionend", birdInstance.parentNode.removeChild(this.parentNode), false);
-  // birdInstance.classList.add("removed");
-
   map.querySelector(".saveMapButton").style.display = "block";
-
   var len = mapsCollection.getElementsByClassName("smallBird").length;
 
-  if (len === 0)  {
+  if (len === 1) {
 
-    mapsCollection.classList.remove("namesOnlySeen");
-    mapsCollection.removeEventListener("click", revealMapsCollection);
-    deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
+    // mapsCollection.classList.remove("namesOnlySeen");
+    // mapsCollection.removeEventListener("click", revealMapsCollection);
+    // deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
 
-    mapsCollection.classList.remove("open");
-    map.classList.remove("shiftUp");
+    deleteAllMaps(evt);
+
+    // mapsCollection.classList.remove("open");
+    // map.classList.remove("shiftUp");
   }
-  else repositionChildMaps(len);
+  else {
+    var birdInstance = this.parentNode;
+    birdInstance.parentNode.removeChild(this.parentNode);
+    map.querySelector(".saveMapButton").style.display = "block";
+
+    repositionChildMaps(len-1);
+  }
 }
+
+  // var birdInstance = this.parentNode;
+  // birdInstance.parentNode.removeChild(this.parentNode);
+
+//   map.querySelector(".saveMapButton").style.display = "block";
+
+//   var len = mapsCollection.getElementsByClassName("smallBird").length;
+
+//   if (len === 0)  {
+
+//     mapsCollection.classList.remove("namesOnlySeen");
+//     mapsCollection.removeEventListener("click", revealMapsCollection);
+//     deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
+
+//     mapsCollection.classList.remove("open");
+//     map.classList.remove("shiftUp");
+//   }
+//   else repositionChildMaps(len);
+// }
 
 function saveCurrentMap()  {
 
@@ -186,6 +203,8 @@ function deleteAllMaps(evt) {
 
   evt.stopPropagation();
 
+  revealMapsCollection();  // toggle off
+
   var maps = mapsCollection.getElementsByClassName("smallBird");
   var len = maps.length;
 
@@ -197,7 +216,7 @@ function deleteAllMaps(evt) {
   mapsCollection.removeEventListener("click", revealMapsCollection);
   deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
 
-  mapsCollection.classList.remove("open");
-  map.classList.remove("shiftUp");
+  // mapsCollection.classList.remove("open");
+  // map.classList.remove("shiftUp");
   map.querySelector(".saveMapButton").style.display = "block";
 }

@@ -40,12 +40,10 @@
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
                 "watch"
-            ]
+            ],
         },
         {
             "name": "Chrome : Launch with sourcemaps",
-            // "preLaunchTask": "Gulp: Start server only",
-
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:3000",
@@ -54,7 +52,8 @@
             "sourceMaps": true,
             "runtimeArgs": [
             "--remote-debugging-port=9222"
-            ]
+            ],
+            // "preLaunchTask": "Echo vars"
         },
         {
             "name": "Chrome : Launch without sourcemaps",

@@ -9,21 +9,24 @@ var countries = {
   "Uruguay": 14, "Venezuela": 15, "Bonaire": 16, "Falklands": 17
 };
 
-var endemicColor = "#ddd";
-var extinctColor = "#000";
-// var residentColor             = "#f33";
-var residentColor = "#56b";
+// ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4']
 
-// var nonBreederColor         =  "#994c00";
-var nonBreederColor = "url(#pattern-horizStripes)";
-// var vagrantColor              = "gold";
-var vagrantColor = "#9e0296";
-var hypotheticalColor = "url(#pattern-vertStripes)";
-var introducedColor = "url(#pattern-circles)";
+var endemicColor = "#d73027";
+var extinctColor = "#000";
+var residentColor = "#fc8d59";
+
+// var nonBreederColor = "url(#pattern-horizStripes)";
+var nonBreederColor = "#ddd";
+
+var vagrantColor = "#caca30";
+// var hypotheticalColor = "url(#pattern-vertStripes)";
+var hypotheticalColor = "#579ac4";
+// var introducedColor = "url(#pattern-circles)";
+var introducedColor = "#fee090";
 
 var baseColor = "​#535b5f";
 var baseStrokeColor = "#fff";
-var selectedCountryFillColor = "#fff";
+var selectedCountryFillColor = "#f33";
 
 /* global addBirdNameToMap birds currentMap */
 
@@ -110,7 +113,7 @@ function newFillColor(obj, newColor) {
     else obj.style.fill = newColor;
     // obj.style.fill = newColor;
 
-    // if (newColor !== vagrantColor) obj.style.stroke = baseStrokeColor;
+    if (newColor !== residentColor) obj.style.stroke = baseStrokeColor;
   }
 
   else if (obj.parentNode.nodeName === "g") {
@@ -127,7 +130,7 @@ function newFillColor(obj, newColor) {
       else paths[i].style.fill = newColor;
       // paths[i].style.fill = newColor;
 
-      // if (newColor !== vagrantColor) paths[i].style.stroke = baseStrokeColor;
+      if (newColor !== residentColor) paths[i].style.stroke = baseStrokeColor;
     }
   }
 }
@@ -205,27 +208,30 @@ function highlightSAMmap(index, current) {
       case "X":
 
         newFillColor(cc, residentColor);
-        // newStrokeColor(cc, '#444')
+        newStrokeColor(cc, '#444')
         break;
 
       case "NB":
 
         newFillColor(cc, nonBreederColor);
+        newStrokeColor(cc, '#444')
         break;
 
       case "V":
 
         newFillColor(cc, vagrantColor);
-        // newStrokeColor(cc, '#535b5f');
+        newStrokeColor(cc, '#444');
         break;
 
       case "H":
         newFillColor(cc, hypotheticalColor);
+        // newStrokeColor(cc, '#444')
         break;
 
       case "IN":
 
         newFillColor(cc, introducedColor);
+        newStrokeColor(cc, '#444')
         break;
 
       case "EX":

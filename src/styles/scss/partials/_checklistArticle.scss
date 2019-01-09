@@ -82,7 +82,7 @@
     line-height : 2.4rem;
     letter-spacing  :  0.15em;
 
-    border: 1px solid #888;
+    // border: 1px solid orange;
     border-top-left-radius  :  10%;
     border-bottom-right-radius  :  25%;
 }
@@ -91,9 +91,7 @@
 
 .checklistTitle  {
     position  :  absolute;
-    // top  :  1ch;
     top  :  -130%;
-    // left  :  -44%;
     left  :  -19vw;
 
     font-size  :  1.1rem;
@@ -169,7 +167,7 @@
 
     font-size  :  1rem;
     letter-spacing  :  0.1em;
-    text-shadow: none;
+    // text-shadow: none;
     text-shadow : 0  0.077rem rgba(0,0,0,0.3);
 
     border-bottom: 0.23rem solid #df6757;

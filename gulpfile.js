@@ -10,6 +10,7 @@ const newer = require('gulp-newer');
 const sass = require("gulp-sass");
 
 // const uglify = require("gulp-uglify");
+// const minify = require("gulp-minfy");
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
 const autoprefixer = require("gulp-autoprefixer");
@@ -131,9 +132,14 @@ const paths = {
 
 function watch() {
   // gulp.watch(paths.js.src, gulp.series(moveJStoTemp, reloadJS));
-  gulp.watch(paths.js.src, gulp.series(reloadJS));
-  gulp.watch(paths.sass.src, gulp.series(sass2css));
-  gulp.watch("./*.html").on("change", reload);
+
+  gulp.watch(paths.js.src, reloadJS);
+  gulp.watch(paths.sass.src, sass2css);
+  // gulp.watch("./*.html").on("change", reload);
+  gulp.watch("./*.html", { events: 'all' }, function(cb) {
+    reload();
+    cb();
+  });
 }
 
 function sass2css() {
@@ -175,6 +181,7 @@ function processJS() {
       suffix: ".min",
       extname: ".js"
     }))
+    // why no minify ?????
     // .pipe(uglify())
     .pipe(gulp.dest(paths.js.deploy));
 }
@@ -310,7 +317,7 @@ const ftpGlobs = [
 
 const gulpftp = require('./ftpConfig.js');
 
-function newThing() { };
+// function newThing() { };
 
 function deployExperimental() {
     console.log(gulpftp);
@@ -326,6 +333,7 @@ function deployExperimental() {
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance
     return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
+    // return gulp.src(ftpGlobs, { base: '.', buffer: false })
 
       .pipe(conn.newer('./experimental.net')) // only upload newer files
       .pipe(conn.dest('./experimental.net'));
@@ -360,7 +368,7 @@ exports.sync = gulp.series(sass2css, reloadJS, serve, watch);
 // gulp.task("serve", gulp.series(serve));
 exports.serve = gulp.series(serve);
 
-// gulp.task("watch", gulp.series(watch));
+exports.watch = gulp.series(watch);
 // gulp.task("serve:watch", gulp.series(serve, watch));
 // gulp.task("serve:deploy", gulp.series(serveTest));
 
@@ -393,7 +401,7 @@ exports.deploy_P = gulp.series(deployPotoococha);
   // );
 // });
 
-// does the following work?
+// does the following work? with the return??
 // function compress () {
   // return pump([
       // gulp.src('lib/*.js'),

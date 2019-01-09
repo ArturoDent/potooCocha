@@ -12,9 +12,9 @@ var birds;
 
 var numSpeciesList = {
   "Argentina": 1005, "Aruba": 219, "Bolivia": 1383, "Brazil": 1804, "Chile": 498,
-  "Colombia": 1847, "Curaçao": 218, "Ecuador": 1632, "French Guiana": 698,
+  "Colombia": 1847, "Curaçao": 217, "Ecuador": 1632, "French Guiana": 698,
   "Guyana": 783, "Paraguay": 694, "Peru": 1803, "Suriname": 731, "Trinidad": 470,
-  "Uruguay": 448, "Venezuela": 1383, "Bonaire": 210, "Falklands": 227, "South America": 3398
+  "Uruguay": 448, "Venezuela": 1383, "Bonaire": 209, "Falklands": 227, "South America": 3402
 };
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
@@ -329,16 +329,18 @@ function getQuery() {
 
 function getSearchSpecialsQuery(evt) {
 
-  //  <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
-  //  <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
+  // <div id="searchSpecials" class="grayed">
+  //    <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
+  //    <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
 
   var term;
 
   // clear the input
   searchInput.value = "";
 
-  // clicked between buttons
-  if (evt.target.className === "searchSpecialWrapper") term = evt.target.textContent.trim();
+  if (evt.target.id === "searchSpecials") return;     // clicked in #searchSpecials but not on a button area
+  else if (evt.target.className === "searchSpecialWrapper")
+    term = evt.target.textContent.trim();    // clicked between "visible" buttons but on their background, i.e., "searchSpecialWrapper"
   else term = evt.target.parentNode.textContent.trim();
 
   // parentNode else if you click on "e" for example of extinct only the "e" is detected as the textContent of the target

@@ -15,14 +15,14 @@
         },
         {
             "label": "Gulp: Start server only",
-            
+
             "type": "gulp",
             "task": "serve",
             "problemMatcher": []
         },
         {
             "label": "Gulp: watch",
-            
+
             "type": "gulp",
             "task": "watch",
             "problemMatcher": []
@@ -73,10 +73,11 @@
             "type": "shell"
         },
         {
-            "label": "Echo",
+            "label": "Echo vars",
             "command": "echo",
             "args": [
-                "${env:USERNAME}"
+                "${env:USERNAME}",
+                "workspaceFolder = ${workspaceFolder}"
             ],
             "type": "shell"
         },

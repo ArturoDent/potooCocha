@@ -1,4 +1,4 @@
-"use strict";      
+"use strict";
 
 var sampleTable;
 var leftCheck;
@@ -23,17 +23,21 @@ var pdfButton;
 var csvButton;
 var requested;
 
+var mailLink;
+var observer;
+var target;
+
 /* global  map loadCountryTaxonomy selectedCountryFill getAjax currentMap fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("window.width = " + window.innerWidth);
 
-  window.addEventListener("resize", onResizeWindow);
+  // window.addEventListener("resize", onResizeWindow);
 
-  countryButton                    =  document.getElementById("countryButton");
+  countryButton = document.getElementById("countryButton");
   countryButton.addEventListener("click", toggleCountryModal);
 
-  numDaysButton                       =  document.getElementById("numDays");
+  numDaysButton = document.getElementById("numDays");
   numDaysButton.addEventListener("click", setNumDays);
 
   numDaysButton.children.item(11).classList.add("highlight");
@@ -45,17 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // previousNumDaysClass = "numDays" + String(gNumDays);
   previousNumDaysClass = "numDays10";
 
-  pdfButton                           =  document.getElementById("pdfButton");
+  pdfButton = document.getElementById("pdfButton");
   pdfButton.addEventListener("click", openChecklistPage);
 
-  csvButton                           =  document.getElementById("csvButton");
+  csvButton = document.getElementById("csvButton");
   csvButton.addEventListener("click", getCSVText);
 
-  lineNumbers  =  document.getElementById("lineNumbers");
-  leftCheck    =  document.getElementById("leftCheck");
-  showEndemics =  document.getElementById("showEndemics");
-  sciNames     =  document.getElementById("sciNames");
-  italics      =  document.getElementById("italics");
+  lineNumbers = document.getElementById("lineNumbers");
+  leftCheck = document.getElementById("leftCheck");
+  showEndemics = document.getElementById("showEndemics");
+  sciNames = document.getElementById("sciNames");
+  italics = document.getElementById("italics");
 
   lineNumbers.addEventListener("click", toggleSampleTableLineNumbers);
   leftCheck.addEventListener("click", toggleSampleTableLeftChecks);
@@ -71,70 +75,124 @@ document.addEventListener("DOMContentLoaded", function () {
 
   countryModal = document.getElementById("countryModal");
 
+  mailLink = document.getElementById("mailLink");
+  mailLink.addEventListener("click", sendEmail);
+
+  target = document.getElementById("checklistArticle");
+
+
+  // var browser = navigator.userAgent;
+  // if (browser.indexOf("Edge") > -1) fadeMap();
+  // setUpMapBodyIntersectionObserver();
+
+
   // only set for smaller widths, here and in onResizeWindow()
-  if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
+
+  // FIXME : get rid of checkWindowScroll
+  // if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
+  // window.addEventListener("scroll", checkWindowScroll);
 });
 
 //   *******************   end of  (document).ready(function()   ******************************************
 
-// TODO : (is this needed?)
+function setUpMapBodyIntersectionObserver() {
+  var options = {
 
-function onResizeWindow() {
+    root: null,
+    // root: document.getElementsByTagName("body")[0],
+    rootMargin: "0px",
+    // rootMargin: "0% 0% 50% 0%",
+    threshold: 0.4
+  };
 
-  // initCurrentMap();
-
-  if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
-  else window.removeEventListener("scroll", checkWindowScroll);
-
-  // check for mapCollection height
-  var mapsCollection = document.querySelector("#mapsCollection");
-
-  var len = mapsCollection.children.length;
-
-  if (len > 0) {    
-    
-    if (window.innerWidth > 1680) mapsCollection.style.height = "26.92rem";
-    else if (window.innerWidth >= 1600) mapsCollection.style.height = "23.1rem";
-    else if (window.innerWidth >= 1165) mapsCollection.style.height = "20.8rem";
-    else mapsCollection.style.height = "18.1rem";
-  }
-
-  console.log("Resize: window.width = " + window.innerWidth);
+  observer = new IntersectionObserver(fadeMap, options);
+  // target = document.getElementById("checklistArticle");
+  observer.observe(target);
 }
 
-function checkWindowScroll() {
+function fadeMap(entries, observer) {
+  console.log("in fadeMap");
 
-  var docElement = document.documentElement;
-  var winElement = window;
+  // var browser = navigator.userAgent;
 
-  if ((docElement.scrollHeight - winElement.innerHeight) <= winElement.pageYOffset) {
-    document.getElementById("currentMap").style.opacity = 0;
-  }
-  else document.getElementById("currentMap").style.opacity = 1;
+  // if ((browser.indexOf("Edge") > -1) && taxTreeArticleOpen) map.classList.toggle("fadeMap");;
+
+  var map = document.getElementById("currentMap");
+
+  // if (taxTreeArticleOpen) {
+  //   map.style.opacity == "1";
+  // }
+
+  map.classList.toggle("fadeMap");
+
+  // if (map && map.classList && map.classList.contains("fadeMap")) map.classlist.remove("fadeMap");
+  // else map.classList.add("fadeMap");
+}
+
+//  TODO  : (is this needed?)
+
+// function onResizeWindow() {
+
+//   // initCurrentMap();
+
+//   // if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
+//   // else window.removeEventListener("scroll", checkWindowScroll);
+
+//   // check for mapCollection height
+//   var mapsCollection = document.querySelector("#mapsCollection");
+
+//   var len = mapsCollection.children.length;
+
+//   if (len > 0) {
+
+//     if (window.innerWidth > 1680) mapsCollection.style.height = "26.92rem";
+//     else if (window.innerWidth >= 1600) mapsCollection.style.height = "23.1rem";
+//     else if (window.innerWidth >= 1165) mapsCollection.style.height = "20.8rem";
+//     else mapsCollection.style.height = "18.1rem";
+//   }
+
+//   console.log("Resize: window.width = " + window.innerWidth);
+// }
+
+// TODO : debounce this if going to use it
+// function checkWindowScroll() {
+
+//   var docElement = document.documentElement;
+//   var winElement = window;
+
+//   if ((docElement.scrollHeight - winElement.innerHeight) <= winElement.pageYOffset) {
+//     document.getElementById("currentMap").style.opacity = 0;
+//   }
+//   else document.getElementById("currentMap").style.opacity = 1;
+// }
+
+function sendEmail() {
+  console.log("in sendEmail");
+  window.location.href = "mailto:mark@potoococha.net";
 }
 
 // FIXME : why is this called twice? for each countryButton select
 
-function toggleCountryModal(evt)  {
+function toggleCountryModal(evt) {
 
   countryModal.classList.toggle("menu-show");
 
-  // countryModal.classList.toggle("show");
   document.getElementsByClassName("md-overlay")[0].classList.toggle("show");
-  // countryButton.classList.toggle("expand");
+
+  // document.querySelector(".country-menu").classList.toggle("show");
 
   if (evt) evt.stopPropagation();
-  
+
+  // setUpMapBodyIntersectionObserver();
+
   // TODO : if scroll at bottom (i.e., looking at checklists ), set it there again
-  
-  // console.log("")
-  
+
   // if (document.body.scrollTop > ____) {
-  
+
   // both of below do not work on the first choice of country - height of page changing?
   // doesn't go all the way to botton of page
   // numDaysButton.scrollIntoView(false);
-  
+
   // does go to the bottom of page
   // document.body.scrollTop = 2000;
   // };
@@ -145,13 +203,13 @@ function toggleSampleTableShowEndemics() {
   sampleTable.querySelector("td.endemical").classList.toggle("showEndemics");
 }
 
-function toggleSampleTableSciNames()  {
+function toggleSampleTableSciNames() {
 
   sampleTable.classList.toggle("noScientificNames");
   italics.disabled = !italics.disabled;
 }
 
-function toggleSampleTableItalics()  {
+function toggleSampleTableItalics() {
 
   sampleTable.classList.toggle("noItalics");
 }
@@ -178,12 +236,12 @@ function setCountry(evt) {
   evt.target.classList.add("highlight");
 
   if (!currentCountry) {
-    
-   // TODO : put code for scrolling page here 
+
+    // TODO : put code for scrolling page here
     map.getElementsByClassName("drawing")[0].classList.add("active");
   }
   else {
-    
+
   }
 
   toggleCountryModal();
@@ -201,13 +259,14 @@ function setChecklistCountryAuthors(country) {
 
   checklistFlyoutText.innerHTML = "Make a checklist for " + country;
 
-  countryButton.classList.add("highlight");
+  // TODO : how much of below is necessary?
+  // countryButton.classList.add("highlight");
 
-  pdfButton.classList.add("highlight");
-  csvButton.classList.add("highlight");
+  // pdfButton.classList.add("highlight");
+  // csvButton.classList.add("highlight");
 
-  currentMap.querySelector(".saveMapButton").style.display = "none";
-  currentMap.querySelector(".colorKey").style.opacity = "0";
+  // currentMap.querySelector(".saveMapButton").style.display = "none";
+  // currentMap.querySelector(".colorKey").style.opacity = "0";
 
   if (country === "French Guiana") selectedCountryFill("FrenchGuiana");
   else if (country !== "South America") selectedCountryFill(country);
@@ -257,7 +316,7 @@ function setChecklistAuthors(data) {
   checklistAuthorsPanel.classList.add("show");
 }
 
-function setNumDays(evt)  {
+function setNumDays(evt) {
 
   var day = evt.target;
   var list;   // will be a NodeList of th/td's with cds class applies to them
@@ -265,8 +324,8 @@ function setNumDays(evt)  {
   if (day.classList.contains("highlight")) {  // if click on already highlighted target ignore
     return;
   }
-  else if (gNumDays || gNumDays === 0)   {
-    numDaysButton.children[gNumDays+1].classList.remove("highlight");
+  else if (gNumDays || gNumDays === 0) {
+    numDaysButton.children[gNumDays + 1].classList.remove("highlight");
   }
 
   day.classList.add("highlight");
@@ -293,7 +352,7 @@ function setNumDays(evt)  {
       item.classList.add("cds");
     });
   }
-  else if (gNumDays ===  7 || gNumDays === 8) {
+  else if (gNumDays === 7 || gNumDays === 8) {
 
     list = sampleTable.querySelectorAll("td:nth-child(7), th:nth-child(5)");
     Array.prototype.forEach.call(list, function (item) {
@@ -301,7 +360,7 @@ function setNumDays(evt)  {
     });
 
   }
-  else if (gNumDays ===  9 || gNumDays === 10) {
+  else if (gNumDays === 9 || gNumDays === 10) {
 
     list = sampleTable.querySelectorAll("td:nth-child(8), th:nth-child(6)");
     Array.prototype.forEach.call(list, function (item) {
@@ -316,13 +375,13 @@ function setNumDays(evt)  {
     });
   }
 
-  if (gNumDays !== 0) {
+  // if (gNumDays !== 0) {
 
-    var item = sampleTable.querySelector("th.flashDays");
-    if (item)  item.classList.remove("flashDays");
+  // var item = sampleTable.querySelector("th.flashDays");
+  // if (item)  item.classList.remove("flashDays");
 
-    sampleTable.querySelector("th:nth-child(" + (gNumDays + 1) + ")").classList.add("flashDays");
-  }
+  // sampleTable.querySelector("th:nth-child(" + (gNumDays + 1) + ")").classList.add("flashDays");
+  // }
 }
 
 function getCSVText() {
@@ -339,7 +398,7 @@ function getCSVText() {
   else if (currentCountry === "Curaçao") tempCountry = "Curacao";
   else tempCountry = currentCountry;
 
-  if (tempCountry)  {
+  if (tempCountry) {
 
     // var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentCountry + '"></form>');
     var form = document.createElement("form");
@@ -368,20 +427,20 @@ function openChecklistPage() {
   else if (currentCountry === "Curaçao") tempCountry = "Curacao";
   else tempCountry = currentCountry;
 
-  if (gNumDays === undefined)   gNumDays = 12;
+  if (gNumDays === undefined) gNumDays = 12;
   if (gStartDate === undefined) gStartDate = 1;
 
-  vars = "?country="       + tempCountry;
-  vars += "&num_days="     + gNumDays;
-  vars += "&start_date="   + gStartDate;
+  vars = "?country=" + tempCountry;
+  vars += "&num_days=" + gNumDays;
+  vars += "&start_date=" + gStartDate;
 
-  vars += "&line_nos="     + lineNumbers.checked;
-  vars += "&left_check="   + leftCheck.checked;
-  vars += "&endemics="     + showEndemics.checked;
-  vars += "&sci_names="    + !sciNames.checked;
-  vars += "&italics="      + !italics.checked;
+  vars += "&line_nos=" + lineNumbers.checked;
+  vars += "&left_check=" + leftCheck.checked;
+  vars += "&endemics=" + showEndemics.checked;
+  vars += "&sci_names=" + !sciNames.checked;
+  vars += "&italics=" + !italics.checked;
 
-  window.open( "../php/makePDF.php" + vars, "_blank" );
+  window.open("../php/makePDF.php" + vars, "_blank");
 }
 
 function logVisit() {
