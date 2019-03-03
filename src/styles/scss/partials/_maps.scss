@@ -167,7 +167,7 @@
     position  :  fixed;
     // position  :  sticky;
     top  :  22vh;
-    left  :  65vw;
+    left  :  70vw;
     margin  :  0 0 0 0.38rem;
 
     // to show map through modal overlay
@@ -202,7 +202,7 @@
 }
 
 #currentMap.shiftUp  {
-    transform: scale(0.85) translateY(-19vh);
+    transform: scale(0.9) translateY(-8vh);
 }
 
 #currentMap .deleteMapButton {
@@ -247,8 +247,8 @@
 .saveMapButton  {
     display  :  none;
     position  :  absolute;
-    top  :  70%;
-    left  :  -38%;
+    top  :  45%;
+    left  :  -25%;
     background-color  :  transparent;
 }
 
@@ -330,7 +330,7 @@
 .colorKey ul li:nth-child(6) {    /* nonbreeder    */
     position: relative;
     // border-left: 1.3rem solid #a95c05;
-    border-left: 1.3rem solid #ddd;
+    border-left: 1.3rem solid #579ac4;
     // border-left: 1.3rem solid  url(#pattern-horizStripes);
 }
 
@@ -347,7 +347,8 @@
 .colorKey ul li:nth-child(7) {    /* hypothetical  */
     margin-top  :  0.4rem;
     // border-left: 1.3rem solid #005559;
-    border-left: 1.3rem solid #579ac4;
+    // border-left: 1.3rem solid #579ac4;
+    border-left: 1.3rem solid #ddd;
 }
 
 // .colorKey ul li:nth-child(7)::before  {    /* hypothetical    */

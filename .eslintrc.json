@@ -10,7 +10,7 @@
         "sourceType": "module"
     },
     "rules": {
-        
+
         "linebreak-style": [
             "error",
             "windows"
@@ -29,8 +29,11 @@
                 "exceptions": ["*"],
                 "balanced": true
             }
-        }],
-        
+          }
+        ],
+
+      "multiline-comment-style": ["error", "starred-block"],
+
     "no-console": 0,
     "no-undef": "error",
     "no-unused-vars": "warn",

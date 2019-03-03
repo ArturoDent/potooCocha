@@ -16,16 +16,17 @@ var extinctColor = "#000";
 var residentColor = "#fc8d59";
 
 // var nonBreederColor = "url(#pattern-horizStripes)";
-var nonBreederColor = "#ddd";
+var nonBreederColor = "#579ac4";
 
 var vagrantColor = "#caca30";
 // var hypotheticalColor = "url(#pattern-vertStripes)";
-var hypotheticalColor = "#579ac4";
+var hypotheticalColor = "#ddd";
 // var introducedColor = "url(#pattern-circles)";
 var introducedColor = "#fee090";
 
 var baseColor = "​#535b5f";
 var baseStrokeColor = "#fff";
+var darkerStrokeColor = "#444";
 var selectedCountryFillColor = "#f33";
 
 /* global addBirdNameToMap birds currentMap */
@@ -203,52 +204,56 @@ function highlightSAMmap(index, current) {
       case "X(e)":
 
         newFillColor(cc, endemicColor);
+        newStrokeColor(cc, baseStrokeColor)
         break;
 
       case "X":
 
         newFillColor(cc, residentColor);
-        newStrokeColor(cc, '#444')
+        newStrokeColor(cc, baseStrokeColor)
         break;
 
       case "NB":
 
         newFillColor(cc, nonBreederColor);
-        newStrokeColor(cc, '#444')
+        newStrokeColor(cc, baseStrokeColor)
         break;
 
       case "V":
 
         newFillColor(cc, vagrantColor);
-        newStrokeColor(cc, '#444');
+        newStrokeColor(cc, darkerStrokeColor);
         break;
 
       case "H":
         newFillColor(cc, hypotheticalColor);
-        // newStrokeColor(cc, '#444')
+        newStrokeColor(cc, darkerStrokeColor)
         break;
 
       case "IN":
 
         newFillColor(cc, introducedColor);
-        newStrokeColor(cc, '#444')
+        newStrokeColor(cc, darkerStrokeColor)
         break;
 
       case "EX":
 
         newFillColor(cc, extinctColor);
+        newStrokeColor(cc, baseStrokeColor)        
         break;
 
       case "EX(e)":
 
         newFillColor(cc, extinctColor);
+        newStrokeColor(cc, baseStrokeColor)        
         break;
 
       default:
         newFillColor(cc, baseColor);
+        newStrokeColor(cc, baseStrokeColor)
     }
-
-    if (current !== "currentMap") newStrokeColor(cc, "#fff");
+    // removed so little maps get the right strokeColors
+    // if (current !== "currentMap") newStrokeColor(cc, "#fff");
   }
 
   if ((current === "currentMap") && (mapsCollection.children.length < 5)) { saveMapButton.style.display = "block"; }

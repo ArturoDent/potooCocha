@@ -8,9 +8,10 @@
             "args": [
                 "sync"
             ],
+
             "type": "shell",
             "options": {
-                "cwd": "${workspaceRoot}"
+                "cwd": "${workspaceRoot}",
             }
         },
         {
@@ -22,11 +23,29 @@
         },
         {
             "label": "Gulp: watch",
-
             "type": "gulp",
             "task": "watch",
-            "problemMatcher": []
+            "isBackground": true,
+            "problemMatcher": [
+              {
+                "base": "$tsc-watch",
+                "background": {
+                  "activeOnStart": true,
+                  "beginsPattern": "Using gulpfile ~\\OneDrive\\experimental\\gulpfile.js",
+                  "endsPattern": "Starting 'watch'..."
+                }
+              }
+            ],
         },
+        {
+          "label": "postdebugKill",
+          "type": "process",
+          "command":[
+            "${command:workbench.action.tasks.terminate}",
+            "${command:workbench.action.acceptSelectedQuickOpenItem}",
+          ],
+        },
+
         // {
         //     "label": "Gulp: Start server only",
         //     "command": "gulp",

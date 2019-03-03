@@ -332,6 +332,10 @@ function setNumDays(evt) {
   gNumDays = parseInt(day.innerHTML);
 
   sampleTable.classList.remove(previousNumDaysClass);
+  
+  // sampleTable.classList.add("numDays12");
+  // sampleTable.classList.remove("numDays12");
+  
   sampleTable.classList.add("numDays" + String(gNumDays));
 
   previousNumDaysClass = "numDays" + String(gNumDays);

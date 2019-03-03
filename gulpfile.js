@@ -83,7 +83,7 @@ function serveTest(done) {
     ghostMode: false
   });
   done();
-}
+};
 
 const paths = {
   html: {
@@ -361,32 +361,24 @@ function deployPotoococha() {
   // .pipe(notify("potoococha updated"));
 }
 
-// gulp.task("sync", gulp.series(sass2css, reloadJS, serve, watch));
 exports.sync = gulp.series(sass2css, reloadJS, serve, watch);
 // exports.default = exports.sync;   this works
 
-// gulp.task("serve", gulp.series(serve));
 exports.serve = gulp.series(serve);
+exports.scss = gulp.series(sass2css);
 
 exports.watch = gulp.series(watch);
-// gulp.task("serve:watch", gulp.series(serve, watch));
-// gulp.task("serve:deploy", gulp.series(serveTest));
 
-// gulp.task("production", gulp.series(moveJStoTemp, processJS));
 exports.production = gulp.series(moveJStoTemp, processJS);
 
 // TODO : (include php and logFileRequests.txt)
-// gulp.task("build", gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
-  // copySVG, copyFLAGS, copyCitations, copyAuthors, copyOccurrences, copyCountries));
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
-  copySVG, copyFLAGS, copyCitations, copyAuthors, copyOccurrences, copyCountries);
+                            copySVG, copyFLAGS, copyCitations, copyAuthors,
+                            copyOccurrences, copyCountries);
 
-// gulp.task("getBuild", gulp.series(copyBuildSACCdata, copyBuildSACCcountries));
 exports.getBuild = gulp.series(copyBuildSACCdata, copyBuildSACCcountries);
 
-// gulp.task('deploy:E', gulp.series(deployExperimental));
 exports.deploy_E = gulp.series(deployExperimental);
-// gulp.task('deploy:P', gulp.series(deployPotoococha));
 exports.deploy_P = gulp.series(deployPotoococha);
 
 // **********************************  pump  *****************************

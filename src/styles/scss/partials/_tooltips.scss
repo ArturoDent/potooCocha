@@ -42,23 +42,24 @@
 
 .deleteMapButton .tooltip {
     position  :  absolute;
-    top  :  14rem;
-    left  : -1rem;
+    top  :  7rem;
+    left  : -1.3rem;
 
-    width  :  6.5em;
-    padding : 0 0 0.1rem 0;
-    font-size  :  0.75rem;
+    width  :  5.5em;
+    // padding : 0 0 0.1rem 0;
+    padding : 0;
+    font-size  :  0.6rem;
     letter-spacing : 0.15em;
     background-color  :  transparent;
     border: 1px solid #f88509;
     transform-origin  :  top right;
-    transform: rotate(-5deg);
+    transform: rotate(-15deg);
 }
 
 .saveMapButton .tooltip {
     position  :  absolute;
 
-    width  :  10em;
+    width  :  5em;
     padding : 0 0 0.15rem 0;
 
     text-align: center;
@@ -106,9 +107,9 @@
 }
 ;
 .deleteMapButton .tooltip:after {
-    top  :  -0.08rem;
-    left  :  104%;
-    border-width  :  1em;
+    top  :  -0.18rem;
+    left  :  105%;
+    border-width  :  1.3em;
 
     border-color  :  transparent transparent transparent #f88509;
 }
@@ -132,7 +133,7 @@
 }
 
 .saveMapButton.hasTooltip:hover .tooltip:after {
-    top  :  -0.23rem;
+    top  :  -0.17rem;
     left  :  104%;
     border-width  :  1.1em;
 

@@ -56,7 +56,7 @@
   -webkit-filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5));
   -ms-filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5));
   filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5));
-  transform: translate(-0.2rem, -0.4rem);
+  transform: rotate(10deg) translate(-0.2rem, -0.4rem);
   transition: translate 2s; }
 
 .icon-delete {
@@ -356,7 +356,7 @@ footer a:hover, footer a:focus {
   opacity: 1;
   position: fixed;
   top: 22vh;
-  left: 65vw;
+  left: 70vw;
   margin: 0 0 0 0.38rem;
   transform: translateY(0);
   -webkit-transform-origin: 0 0;
@@ -377,7 +377,7 @@ footer a:hover, footer a:focus {
   transition: fill 1.2s; }
 
 #currentMap.shiftUp {
-  transform: scale(0.85) translateY(-19vh); }
+  transform: scale(0.9) translateY(-8vh); }
 
 #currentMap .deleteMapButton {
   display: none; }
@@ -413,8 +413,8 @@ footer a:hover, footer a:focus {
 .saveMapButton {
   display: none;
   position: absolute;
-  top: 70%;
-  left: -38%;
+  top: 45%;
+  left: -25%;
   background-color: transparent; }
 
 .drawing {
@@ -472,16 +472,16 @@ footer a:hover, footer a:focus {
 .colorKey ul li:nth-child(6) {
   /* nonbreeder    */
   position: relative;
-  border-left: 1.3rem solid #ddd; }
+  border-left: 1.3rem solid #579ac4; }
 
 .colorKey ul li:nth-child(7) {
   /* hypothetical  */
   margin-top: 0.4rem;
-  border-left: 1.3rem solid #579ac4; }
+  border-left: 1.3rem solid #ddd; }
 
 #checklistArticle {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: 0;
   order: 4;
   overflow: visible; }
@@ -490,7 +490,7 @@ footer a:hover, footer a:focus {
   position: relative;
   top: 0;
   left: 2.5%;
-  min-width: calc(100% - 6rem);
+  min-width: calc(90% - 6rem);
   height: auto;
   padding: 0.8ch 0 1.5ch 10%;
   text-align: left;
@@ -567,7 +567,7 @@ footer a:hover, footer a:focus {
   justify-content: center;
   position: relative;
   left: -5.5ch;
-  width: 140%;
+  width: 150%;
   margin: 5rem 0 4.6rem 0; }
 
 #days {
@@ -1005,11 +1005,6 @@ input[type='checkbox']:disabled + label {
 .md-overlay {
   opacity: 0;
   pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -1019,11 +1014,12 @@ input[type='checkbox']:disabled + label {
   padding: 0;
   z-index: 10;
   border: none;
-  background-color: #53595d;
+  background-color: #292828;
   transition: opacity 1000ms 700ms; }
 
 .md-overlay.show {
-  opacity: 1;
+  opacity: 0.95;
+  pointer-events: all;
   transition: opacity 500ms; }
 
 .md-overlay.show .overlayInfo {
@@ -1090,7 +1086,7 @@ input[type='checkbox']:disabled + label {
 #countryButton:after {
   content: '';
   position: absolute;
-  top: -0.33rem;
+  top: -0.27rem;
   left: 101%;
   border-style: solid;
   border-width: 1.7rem;
@@ -1112,9 +1108,9 @@ input[type='checkbox']:disabled + label {
   justify-content: space-around;
   height: 100vh;
   font-size: 1rem;
-  border-left: 0.077rem single rgba(0, 0, 0, 0.2);
+  border-left: 0.077rem solid rgba(0, 0, 0, 0.2);
   border-right: 0.077rem solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 8rem rgba(0, 0, 0, 0.2);
+  background-color: #706540;
   transition: all 2000ms; }
 
 .countryItem {
@@ -1158,14 +1154,14 @@ input[type='checkbox']:disabled + label {
   left: calc(100% - 2.1rem);
   border-style: solid;
   border-width: 1.5rem;
-  border-color: transparent white transparent transparent;
+  border-color: transparent #998c60 transparent transparent;
   transition: all 400ms; }
 
 .country-menu a.highlight:hover {
   padding-left: 2.2rem; }
 
 .country-menu a.highlight:hover:after {
-  border-color: transparent black transparent transparent; }
+  border-color: transparent white transparent transparent; }
 
 .flag {
   position: absolute;
@@ -1198,7 +1194,7 @@ input[type='checkbox']:disabled + label {
   width: calc(100% + 10ch);
   height: 23ch;
   margin-bottom: -12ch;
-  padding: 2.5ch 7ch 0 7ch;
+  padding: 3ch 4ch 0 5ch;
   z-index: 0;
   font-size: 1.06rem;
   line-height: 1.8rem;
@@ -1357,16 +1353,12 @@ input[type='checkbox']:disabled + label {
   color: white; }
 
 #searchSpecials {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
   position: absolute;
   top: -8.2ch;
   left: 96%;
   width: 15.38rem;
-  padding: 2.31rem 3.08rem 2.69rem 3.08rem;
-  font-size: 0.9rem;
+  padding: 2.31rem 3.08rem 2.69rem 2.08rem;
+  font-size: 0.82rem;
   text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   pointer-events: auto;
   border-radius: 50%;
@@ -1378,23 +1370,14 @@ input[type='checkbox']:disabled + label {
   pointer-events: none; }
 
 .searchSpecialWrapper {
-  padding: 0.8ch 0 0.8ch 0;
+  padding: 0.5ch 0;
+  text-align: center;
   transition: all 1000ms; }
 
-.searchSpecialWrapper:nth-of-type(1) a {
-  padding: 0.1ch 2.69rem 0.5ch 2.69rem; }
-
-.searchSpecialWrapper:nth-of-type(2) a {
-  padding: 0.1ch 2.38rem 0.5ch 2.38rem; }
-
-.searchSpecialWrapper:nth-of-type(3) a {
-  padding: 0.1ch 2ch 0.5ch 2ch; }
-
-.searchSpecialWrapper:nth-of-type(4) a {
-  padding: 0.1ch 2.38rem 0.5ch 2.38rem; }
-
-.searchSpecialWrapper:nth-of-type(5) a {
-  padding: 0.1ch 2.54rem 0.5ch 2.54rem; }
+.searchSpecialWrapper a {
+  display: inline-block;
+  width: 14ch;
+  padding: 0.1ch 0 0.5ch 0; }
 
 .searchSpecialWrapper a {
   border: 0.077rem solid rgba(255, 255, 255, 0.2);
@@ -1412,7 +1395,7 @@ input[type='checkbox']:disabled + label {
 #searchSpecials.SAM .searchSpecialWrapper {
   padding: 1ch 0 1ch 0; }
 
-#searchSpecials span.notAvailable {
+#searchSpecials div.notAvailable {
   display: none; }
 
 #searchSpecials.SAM {
@@ -2068,20 +2051,20 @@ input[type='checkbox']:disabled + label {
 
 .deleteMapButton .tooltip {
   position: absolute;
-  top: 14rem;
-  left: -1rem;
-  width: 6.5em;
-  padding: 0 0 0.1rem 0;
-  font-size: 0.75rem;
+  top: 7rem;
+  left: -1.3rem;
+  width: 5.5em;
+  padding: 0;
+  font-size: 0.6rem;
   letter-spacing: 0.15em;
   background-color: transparent;
   border: 1px solid #f88509;
   transform-origin: top right;
-  transform: rotate(-5deg); }
+  transform: rotate(-15deg); }
 
 .saveMapButton .tooltip {
   position: absolute;
-  width: 10em;
+  width: 5em;
   padding: 0 0 0.15rem 0;
   text-align: center;
   opacity: 1;
@@ -2121,9 +2104,9 @@ input[type='checkbox']:disabled + label {
   transition: all 350ms; }
 
 .deleteMapButton .tooltip:after {
-  top: -0.08rem;
-  left: 104%;
-  border-width: 1em;
+  top: -0.18rem;
+  left: 105%;
+  border-width: 1.3em;
   border-color: transparent transparent transparent #f88509; }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip {
@@ -2136,7 +2119,7 @@ input[type='checkbox']:disabled + label {
   background-color: #333; }
 
 .saveMapButton.hasTooltip:hover .tooltip:after {
-  top: -0.23rem;
+  top: -0.17rem;
   left: 104%;
   border-width: 1.1em; }
 

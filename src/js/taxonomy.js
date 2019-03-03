@@ -12,19 +12,19 @@ var birds;
 
 var numSpeciesList = {
   "Argentina": 1005, "Aruba": 219, "Bolivia": 1383, "Brazil": 1804, "Chile": 498,
-  "Colombia": 1847, "Curaçao": 217, "Ecuador": 1632, "French Guiana": 698,
+  "Colombia": 1848, "Curaçao": 217, "Ecuador": 1633, "French Guiana": 698,
   "Guyana": 783, "Paraguay": 694, "Peru": 1803, "Suriname": 731, "Trinidad": 470,
-  "Uruguay": 448, "Venezuela": 1383, "Bonaire": 209, "Falklands": 227, "South America": 3402
+  "Uruguay": 448, "Venezuela": 1383, "Bonaire": 208, "Falklands": 227, "South America": 3403
 };
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 // numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
 
 var numFamiliesList = {
-  "Argentina": 87, "Aruba": 52, "Bolivia": 78, "Brazil": 91, "Chile": 67,
-  "Colombia": 90, "Curaçao": 50, "Ecuador": 91, "French Guiana": 82,
-  "Guyana": 78, "Paraguay": 72, "Peru": 88, "Suriname": 80, "Trinidad": 70,
-  "Uruguay": 72, "Venezuela": 87, "Bonaire": 47, "Falklands": 48, "South America": 102
+  "Argentina": 87, "Aruba": 52, "Bolivia": 78, "Brazil": 92, "Chile": 68,
+  "Colombia": 91, "Curaçao": 51, "Ecuador": 92, "French Guiana": 83,
+  "Guyana": 79, "Paraguay": 72, "Peru": 89, "Suriname": 81, "Trinidad": 71,
+  "Uruguay": 73, "Venezuela": 88, "Bonaire": 48, "Falklands": 49, "South America": 103
 };
 
 // South America : 102 families not including 2 incertae "families", 3394 total spp.
@@ -122,6 +122,11 @@ function getAjax(url, success) {
   return xhr;
 }
 
+
+/**
+ *
+ * @param {*} data
+ */
 function loadOccurrences(data) {
   birds = data.split("\n");
   // loadRandomCountryAtStart();
@@ -219,8 +224,8 @@ function loadCountryTaxonomy(country) {
 
     // so hypotheticals and vagrants aren't selectable if South America is chosen
 
-    searchSpecials.querySelector("span:nth-of-type(3)").classList.add("notAvailable");
-    searchSpecials.querySelector("span:nth-of-type(5)").classList.add("notAvailable");
+    searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
+    searchSpecials.querySelector("div:nth-of-type(5)").classList.add("notAvailable");
 
     searchSpecials.classList.add("SAM");
     taxPage.classList.add("samTax");
@@ -229,8 +234,8 @@ function loadCountryTaxonomy(country) {
   else if (country) getAjax("Countries/" + country + "SACC.html", getCountryData);
 
   if (country !== "South America") {
-    searchSpecials.querySelector("span:nth-of-type(3)").classList.remove("notAvailable");
-    searchSpecials.querySelector("span:nth-of-type(5)").classList.remove("notAvailable");
+    searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
+    searchSpecials.querySelector("div:nth-of-type(5)").classList.remove("notAvailable");
     searchSpecials.classList.remove("SAM");
   }
 

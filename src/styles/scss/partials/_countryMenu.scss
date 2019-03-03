@@ -16,11 +16,11 @@
   opacity: 0;
   pointer-events: none;
 
-  display  :  flex;
-  flex-direction  :  column;
-  flex-wrap  :  nowrap;
-  align-items: center;
-  justify-content: center;
+  // display  :  flex;
+  // flex-direction  :  column;
+  // flex-wrap  :  nowrap;
+  // align-items: center;
+  // justify-content: center;
 
   position: fixed;
   top: 0;
@@ -31,12 +31,14 @@
   padding: 0;
   z-index: 10;
   border: none;
-  background-color: $bgColor;
+  // background-color: $bgColor;
+  background-color: rgb(41, 40, 40);
   transition: opacity 1000ms 700ms;
 }
 
 .md-overlay.show {
-  opacity: 1;
+  opacity: 0.95;
+  pointer-events: all;
   transition: opacity 500ms;
 }
 
@@ -136,7 +138,7 @@
   content  :  '';
   position  :  absolute;
   // top  :  -2.0.23rem;
-  top  :  -0.33rem;
+  top  :  -0.27rem;
   left  :  101%;
   border-style  :  solid;
   // border-width  :  calc(1.2em + 0.15rem);
@@ -145,27 +147,13 @@
   transition : all 200ms 500ms;
 }
 
-// #countryButton.expand:after {
-//   left  :  102%;
-//   // border-color  :  transparent transparent transparent white;
-// }
-
 #countryButton:hover, #countryButton:focus {
   // border : 0.077rem solid #888;
   // box-shadow  :  inset 20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
   background: linear-gradient(45deg, rgba(20, 20, 20, 0.2) 0%, rgba(255,255,255, 0.15) 100%);
 }
 
-// #countryButton.highlight:hover, #countryButton.highlight:focus {
-//   // border : 0.077rem solid #888;
-//   box-shadow  :  inset -20rem 0 2rem 1.1rem rgb(62, 62, 62), 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
-// }
-
-// #countryButton.expand  {
-// }
-
 .country-menu {
-  // opacity: 0;
   position: relative;
   display  :  -webkit-flex;
   display  :  flex;
@@ -180,26 +168,14 @@
   justify-content: space-around;
   height: 100vh;
   font-size: 1rem;
-  border-left: 0.077rem single rgba(0,0,0,0.2);
+  border-left: 0.077rem solid rgba(0, 0, 0, 0.2);
   border-right: 0.077rem solid rgba(0,0,0,0.2);
-  // box-shadow: 0 0 1rem rgba(0,0,0,0.3), inset -4rem 0 2rem rgba(0,0,0,0.3);
 
-  // background: linear-gradient(90deg, rgba(255, 255, 254, 1) 50%, rgba(75, 75, 75, 1) 100%);
-
-  box-shadow:  inset 0 0 8rem rgba(0,0,0,0.2);
+  background-color: #706540;
+  // box-shadow:  inset 0 0 8rem rgba(0,0,0,0.2);
 
   transition: all 2000ms;
 }
-
-// .country-menu.show .countryItem a  {
-//   // opacity: 1;
-//   // padding: 0.5rem 0;
-//   // height: 95vh;
-//   // font-size: 1rem;
-//   // color: white;
-//   // margin-right: -3rem;
-
-// }
 
 .countryItem {
   position: relative;
@@ -257,7 +233,8 @@
   left  :  calc(100% - 2.1rem);
   border-style  :  solid;
   border-width  :  1.5rem;
-  border-color  :  transparent white transparent transparent;
+  // border-color  :  transparent white transparent transparent;
+  border-color  :  transparent #998c60 transparent transparent;
   transition : all 400ms;
 }
 
@@ -267,7 +244,7 @@
 
 .country-menu a.highlight:hover:after {
   // border-color  :  transparent $genericButtonColor transparent transparent;
-  border-color  :  transparent black transparent transparent;
+  border-color  :  transparent white transparent transparent;
 }
 
 .flag  {

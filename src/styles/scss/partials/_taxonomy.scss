@@ -153,19 +153,20 @@
 #searchInput::placeholder  {  color  :  white;  }
 
 #searchSpecials  {
-    display  :  flex;
-    flex-direction  :  row;
-    flex-wrap: wrap;
-    align-items: center;
+    // display  :  flex;
+    // flex-direction  :  row;
+    // flex-wrap: wrap;
+    // align-items: center;
 
     position  :  absolute;
     top : -8.2ch;
     left  :  96%;
     width: 15.38rem;
-    padding : 2.31rem 3.08rem 2.69rem 3.08rem;
+    padding : 2.31rem 3.08rem 2.69rem 2.08rem;
 
     // color: white;
-    font-size  :  0.9rem;
+    // font-size  :  0.9rem;
+    font-size  :  0.82rem;
     text-shadow : 0.077rem 0.077rem 0.077rem rgba(0,0,0,0.5);
 
     pointer-events  :  auto;
@@ -180,25 +181,37 @@
 }
 
 .searchSpecialWrapper {
-    padding: 0.8ch 0 0.8ch 0;
+    // display: inline-block;
+    padding: 0.5ch 0;
+    text-align: center;
+    // width: 300px;
+    // padding: 0.1ch 2.38rem 0.5ch 2.38rem;
     transition  :  all 1000ms;
 }
 
-.searchSpecialWrapper:nth-of-type(1) a {
-   padding: 0.1ch 2.69rem 0.5ch 2.69rem;
+.searchSpecialWrapper a {
+    display: inline-block; 
+    width: 14ch;
+    padding: 0.1ch 0 0.5ch 0;
 }
-.searchSpecialWrapper:nth-of-type(2) a {
-   padding: 0.1ch 2.38rem 0.5ch 2.38rem;
-}
-.searchSpecialWrapper:nth-of-type(3) a {
-    padding : 0.1ch 2ch 0.5ch 2ch;
-}
-.searchSpecialWrapper:nth-of-type(4) a {
-   padding: 0.1ch 2.38rem 0.5ch 2.38rem;
-}
-.searchSpecialWrapper:nth-of-type(5) a {
-   padding: 0.1ch 2.54rem 0.5ch 2.54rem;
-}
+
+// .searchSpecialWrapper:nth-of-type(1) a {
+//   width: 300px;
+//   display: inline-block; 
+//   //  padding: 0.1ch 2.69rem 0.5ch 2.69rem;
+// }
+// .searchSpecialWrapper:nth-of-type(2) a {
+//    padding: 0.1ch 2.38rem 0.5ch 2.38rem;
+// }
+// .searchSpecialWrapper:nth-of-type(3) a {
+//     padding : 0.1ch 2ch 0.5ch 2ch;
+// }
+// .searchSpecialWrapper:nth-of-type(4) a {
+//    padding: 0.1ch 2.38rem 0.5ch 2.38rem;
+// }
+// .searchSpecialWrapper:nth-of-type(5) a {
+//    padding: 0.1ch 2.54rem 0.5ch 2.54rem;
+// }
 
 .searchSpecialWrapper a  {
     border : 0.077rem solid rgba(255,255,255,0.2);
@@ -220,7 +233,7 @@
 
 #searchSpecials.SAM .searchSpecialWrapper  {  padding : 1ch 0 1ch 0;  }
 
-#searchSpecials span.notAvailable  {  display : none;  }
+#searchSpecials div.notAvailable  {  display : none;  }
 
 #searchSpecials.SAM  {
     justify-content  :  space-around;

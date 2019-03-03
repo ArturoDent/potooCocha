@@ -2,10 +2,11 @@
  * SimpleBar.js - v3.0.0-beta.3
  * Scrollbars, simpler.
  * https://grsmto.github.io/simplebar/
- * 
+ *
  * Made by Adrien Denat from a fork by Jonathan Nicol
  * Under MIT License
  */
+
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -2764,10 +2765,10 @@
       value: function hideNativeScrollbar() {
         // Recalculate scrollbarWidth in case it's a zoom
         this.scrollbarWidth = scrollbarWidth();
-        
+
         // this.scrollContentEl.style[this.isRtl ? 'paddingLeft' : 'paddingRight'] = "".concat(this.scrollbarWidth || this.offsetSize, "px");
         // had to add +1 to get Chrome and FF not to show a thin white line to the right of the scrolltrack
-        
+
         this.scrollContentEl.style[this.isRtl ? 'paddingLeft' : 'paddingRight'] = "".concat(this.scrollbarWidth+1.5 || this.offsetSize, "px");
         this.scrollContentEl.style.marginBottom = "-".concat(this.scrollbarWidth * 2 || this.offsetSize, "px");
         this.contentEl.style.paddingBottom = "".concat(this.scrollbarWidth || this.offsetSize, "px");

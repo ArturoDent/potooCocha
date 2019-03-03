@@ -1,9 +1,9 @@
 {
     "version": "0.1.0",
 
-      "env": {
-          "url": "http://localhost:3000"
-    },
+    //   "env": {
+    //       "url": "http://localhost:3000"
+    // },
     "compounds": [
         {
             "name": "Start server and chrome debugger",
@@ -16,8 +16,11 @@
             "type": "node",
             "request": "launch",
             "name": "Gulp sync",
+            // "env": {
+            //   "url": "sdfsdf"
+            // },
             // "name": "$env:gulp-sync", this works
-
+            // "envFile": "${workspaceFolder}/.env",
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
                 "sync"
@@ -31,7 +34,10 @@
             "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
             "args": [
                 "serve"
-            ]
+            ],
+
+            "preLaunchTask": "Gulp: watch",
+            "postDebugTask": "postdebugKill"
         },
         {
             "type": "node",
@@ -51,7 +57,7 @@
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "runtimeArgs": [
-            "--remote-debugging-port=9222"
+              "--remote-debugging-port=9222"
             ],
             // "preLaunchTask": "Echo vars"
         },
@@ -62,7 +68,7 @@
             "request": "launch",
             "file": "${workspaceRoot}",
             "runtimeArgs": [
-            "--remote-debugging-port=9222"
+              "--remote-debugging-port=9222"
             ]
         },
         {
@@ -82,7 +88,19 @@
             "port": 9222,
             "url": "http://localhost:3000",
             "webRoot": "${workspaceRoot}"
-        }
+        },
+      //   {
+      //     "type": "browser-preview",
+      //     "request": "attach",
+      //     "name": "Browser Preview: Attach"
+      // },
+      // {
+      //     "type": "browser-preview",
+      //     "request": "launch",
+      //     "name": "Browser Preview: Launch",
+      //     "url": "http://localhost:3000",
+      //     "webRoot": "${workspaceFolder}"
+      // }
 
     ]
 }

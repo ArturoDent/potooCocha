@@ -105,12 +105,15 @@
 .icon-paper-plane {
     // top  :  -0.4rem;
     // left :  -0.2rem;
+    
+    // width: 1.9em; height: 1.9em;
 
     -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
         -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
             filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
 
-    transform : translate(-0.2rem, -0.4rem);
+    // transform : translate(-0.2rem, -0.4rem);
+    transform : rotate(10deg) translate(-0.2rem, -0.4rem);
     transition : translate 2s;
 }
 
