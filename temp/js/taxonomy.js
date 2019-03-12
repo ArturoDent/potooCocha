@@ -12,19 +12,19 @@ var birds;
 
 var numSpeciesList = {
   "Argentina": 1005, "Aruba": 219, "Bolivia": 1383, "Brazil": 1804, "Chile": 498,
-  "Colombia": 1848, "Curaçao": 217, "Ecuador": 1633, "French Guiana": 698,
+  "Colombia": 1848, "Curaçao": 218, "Ecuador": 1633, "French Guiana": 698,
   "Guyana": 783, "Paraguay": 694, "Peru": 1803, "Suriname": 731, "Trinidad": 470,
   "Uruguay": 448, "Venezuela": 1383, "Bonaire": 208, "Falklands": 227, "South America": 3403
 };
 
 // numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
-// numFamilies does not include Incertae Sedis-1 or Incertae Sedis-2
+// numFamilies does not include Incertae Sedis
 
 var numFamiliesList = {
-  "Argentina": 87, "Aruba": 52, "Bolivia": 78, "Brazil": 92, "Chile": 68,
-  "Colombia": 91, "Curaçao": 51, "Ecuador": 92, "French Guiana": 83,
-  "Guyana": 79, "Paraguay": 72, "Peru": 89, "Suriname": 81, "Trinidad": 71,
-  "Uruguay": 73, "Venezuela": 88, "Bonaire": 48, "Falklands": 49, "South America": 103
+  "Argentina": 87, "Aruba": 52, "Bolivia": 78, "Brazil": 93, "Chile": 68,
+  "Colombia": 93, "Curaçao": 51, "Ecuador": 93, "French Guiana": 83,
+  "Guyana": 80, "Paraguay": 72, "Peru": 89, "Suriname": 81, "Trinidad": 71,
+  "Uruguay": 73, "Venezuela": 90, "Bonaire": 48, "Falklands": 49, "South America": 105
 };
 
 // South America : 102 families not including 2 incertae "families", 3394 total spp.
@@ -541,7 +541,7 @@ function searchTree(query2) {
       list += "<li class='family'><span class='fco'>";
       list += matches[k].firstChild.firstChild.textContent + "</span><span class='fsc'>";
 
-      // <li class="family"><span class='fTitle'><span class="fcommon">INCERTAE SEDIS-2</span><span class="fscientific"> </span></span>
+      // <li class="family"><span class='fTitle'><span class="fcommon">INCERTAE SEDIS</span><span class="fscientific"> </span></span>
       // must have space between the spans
       // or handle as below
 
@@ -730,7 +730,7 @@ function gotoMatch(e) {
     }
 
     // match in family, fcommon, fscientific  ||
-    // "INCERTAE SEDIS-1 " for some reason eText returns a space at the end of the INCERTAE SEDIS's
+    // "INCERTAE SEDIS " for some reason eText returns a space at the end of the INCERTAE SEDIS's
 
     /*<li class='family'><span class='fTitle'><span class='fco'>SCREAMERS</span><span class='fsc'>ANHIMIDAE</span></span>
 	    <ul class='birds'>
@@ -836,7 +836,7 @@ function toggleFamilyOpen(event) {
         taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
     }
     //  show family and numSpecies in that family
-    // INCERTAE SEDIS-1 and INCERTAE SEDIS-2
+    // INCERTAE SEDIS
     var scientificFamily = familyTarget.parentNode.firstChild.children[1].textContent;
     if (!scientificFamily) scientificFamily = familyTarget.parentNode.firstChild.children[0].textContent;
 
@@ -914,7 +914,22 @@ function printElem (evt) {
   var numSpecies = document.getElementsByClassName("bird").length;
 
   var html = '<html><head><title></title><head>';
-  html += '<link rel="stylesheet" href="temp/css/printSearchresults.css" />';
+  
+  var css = "<style>";
+  css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }"
+  css += "h3 { margin: 0 0 3ch 0; text-align: center; }";
+  css += ".family, .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
+  css += ".fsc { position: absolute; left: 50%; }";
+  css += ".bird>span { padding-left: 10px;}";
+  css += ".bird span:last-child { position: absolute; left: 50%; }";
+  css += "</style>";
+  html += css;
+  
+  
+  // html += '<link rel="stylesheet" href="./printCSS/printSearchresults.css" />';  old online version that works
+  // use below for working in gulp sync
+  // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';  
+  
   html += '</head><body>';
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += content;

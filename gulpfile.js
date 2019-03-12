@@ -3,7 +3,6 @@ const gulp = require("gulp");
 
 const browserSync = require("browser-sync").create("index.html");
 // const browserSync2 = require("browser-sync").create("citations.html");
-
 const reload = browserSync.reload;
 
 const newer = require('gulp-newer');
@@ -58,22 +57,6 @@ function serve(done) {
   done();
 }
 
-// function serve2(done) {
-//   browserSync2.init({
-//     port: 3003,
-//     ui: {
-//       port: 3004
-//     },
-//     server: {
-//       baseDir: "./",
-//       index: "citations.html",
-//     },
-//     // open: false,
-//     ghostMode: false
-//   });
-//   done();
-// }
-
 function serveTest(done) {
   browserSync.init({
     server: {
@@ -111,9 +94,14 @@ const paths = {
     stylesFile: "./src/styles/scss/styles.scss"
   },
   css: {
-    src: "./temp/css/styles.css",
+    src: "./temp/css/*.css",
     temp: "./temp/css",
     deploy: "./deploy/css"
+  },
+  printCSS: {
+    src: "./src/printCSS/printSearchResults.css",
+    temp: "./temp/css",
+    deploy: "./deploy/printCSS"
   },
   js: {
     src: "./src/js/**/*.js",
@@ -130,9 +118,9 @@ const paths = {
   }
 };
 
-function watch() {
-  // gulp.watch(paths.js.src, gulp.series(moveJStoTemp, reloadJS));
 
+//  FIXME : use gulp.series here)(
+function watch() {
   gulp.watch(paths.js.src, reloadJS);
   gulp.watch(paths.sass.src, sass2css);
   // gulp.watch("./*.html").on("change", reload);
@@ -160,6 +148,11 @@ function reloadJS() {
 function moveJStoTemp() {
   return gulp.src(paths.js.src)
     .pipe(gulp.dest(paths.js.temp));
+}
+
+function movePrintCSStoTemp() {
+  return gulp.src(paths.printCSS.src)
+    .pipe(gulp.dest(paths.printCSS.temp));
 }
 
 const scriptOrder = [
@@ -228,9 +221,15 @@ function processCSS() {
     .pipe(gulp.dest(paths.css.deploy));
 }
 
+function processPrintCSS() {
+  return gulp.src(paths.css.src)
+    .pipe(gulp.dest(paths.printCSS.deploy));
+}
+
 function copySVG() {
   return gulp.src(paths.svg.src)
     .pipe(newer(paths.svg.deploy))
+    .pipe(print())
     .pipe(gulp.dest(paths.svg.deploy));
 }
 
@@ -281,7 +280,7 @@ const buildGlobs = {
   // '../BuildSACC/workFlow.txt'
 };
 
-function copyBuildSACCdata() {
+function getBuildSACCdata() {
   return gulp.src(buildGlobs.occurrences)
     .pipe(newer("./data"))
     .pipe(print())
@@ -289,7 +288,7 @@ function copyBuildSACCdata() {
 }
 
 // show files transported
-function copyBuildSACCcountries() {
+function getBuildSACCcountries() {
   return gulp.src(buildGlobs.countries)
     .pipe(newer("./Countries"))
     .pipe(print())
@@ -304,6 +303,7 @@ const ftp = require('vinyl-ftp');
 /* list all files you wish to ftp in the glob variable */
 const ftpGlobs = [
   'deploy/css/*.css',
+  // 'deploy/printCSS/printSearchResults',
   'deploy/js/*.js',
   'deploy/svg/SouthAmerica.svg',
   // 'deploy/flags/*.png',
@@ -317,10 +317,7 @@ const ftpGlobs = [
 
 const gulpftp = require('./ftpConfig.js');
 
-// function newThing() { };
-
 function deployExperimental() {
-    console.log(gulpftp);
 
     const conn = ftp.create({
       host: gulpftp.config.host,
@@ -333,16 +330,12 @@ function deployExperimental() {
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance
     return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
-    // return gulp.src(ftpGlobs, { base: '.', buffer: false })
-
-      .pipe(conn.newer('./experimental.net')) // only upload newer files
+      .pipe(conn.newer('./experimental.net'))
       .pipe(conn.dest('./experimental.net'));
-    // .pipe(notify("experimental.net updated"));
     }
 
 function deployPotoococha() {
-
-  console.log(gulpftp);
+  // console.log(gulpftp);
 
   const conn = ftp.create({
     host: gulpftp.config.host,
@@ -352,13 +345,9 @@ function deployPotoococha() {
     log: gutil.log
   });
 
-  // using base = '.' will transfer everything to /public_html correctly
-  // turn off buffering in gulp.src for best performance
   return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
-
     .pipe(conn.newer('.')) // only upload newer files
     .pipe(conn.dest('.'));
-  // .pipe(notify("potoococha updated"));
 }
 
 exports.sync = gulp.series(sass2css, reloadJS, serve, watch);
@@ -374,9 +363,9 @@ exports.production = gulp.series(moveJStoTemp, processJS);
 // TODO : (include php and logFileRequests.txt)
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
                             copySVG, copyFLAGS, copyCitations, copyAuthors,
-                            copyOccurrences, copyCountries);
+                            copyOccurrences, copyCountries, movePrintCSStoTemp);
 
-exports.getBuild = gulp.series(copyBuildSACCdata, copyBuildSACCcountries);
+exports.getBuild = gulp.series(getBuildSACCdata, getBuildSACCcountries);
 
 exports.deploy_E = gulp.series(deployExperimental);
 exports.deploy_P = gulp.series(deployPotoococha);

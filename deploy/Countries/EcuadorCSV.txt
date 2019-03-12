@@ -1007,10 +1007,10 @@ E,El Oro Parakeet,P. orcesi
 ,White-lored Antpitta,H. fulviventris
 ,Thrush-like Antpitta,Myrmothera campanisona
 ,Ochre-breasted Antpitta,Grallaricula flavirostris
-,Peruvian Antpitta,G. peruviana
-,Rusty-breasted Antpitta,G. ferrugineipectus
-,Slate-crowned Antpitta,G. nana
 ,Crescent-faced Antpitta,G. lineifrons
+,Leymebamba Antpitta,G. leymebambae
+,Peruvian Antpitta,G. peruviana
+,Slate-crowned Antpitta,G. nana
 
 ,TAPACULOS,RHINOCRYPTIDAE
 ,Rusty-belted Tapaculo,Liosceles thoracicus
@@ -1420,7 +1420,7 @@ E,Galapagos Flycatcher,M. magnirostris
 ,One-colored Becard,P. homochrous
 ,Pink-throated Becard,P. minor
 
-,INCERTAE SEDIS-1,
+,INCERTAE SEDIS,
 ,Wing-barred Piprites,Piprites chloris
 
 ,VIREOS,VIREONIDAE
@@ -1543,9 +1543,153 @@ E,Floreana Mockingbird,M. trifasciatus
 E,Española Mockingbird,M. macdonaldi
 E,San Cristobal Mockingbird,M. melanotis
 
+,ESTRILDIDS,ESTRILDIDAE
+,Tricolored Munia,Lonchura malacca
+
+,OLD WORLD SPARROWS,PASSERIDAE
+,House Sparrow,Passer domesticus
+
 ,PIPITS and WAGTAILS,MOTACILLIDAE
 ,Red-throated Pipit,Anthus cervinus
 ,Paramo Pipit,A. bogotensis
+
+,FINCHES,FRINGILLIDAE
+,Andean Siskin,Spinus spinescens
+,Hooded Siskin,S. magellanicus
+,Saffron Siskin,S. siemiradzkii
+,Olivaceous Siskin,S. olivaceus
+,Yellow-bellied Siskin,S. xanthogastrus
+,Lesser Goldfinch,S. psaltria
+,Purple-throated Euphonia,Euphonia chlorotica
+,Orange-crowned Euphonia,E. saturata
+,Thick-billed Euphonia,E. laniirostris
+,Golden-rumped Euphonia,E. cyanocephala
+,Fulvous-vented Euphonia,E. fulvicrissa
+,Golden-bellied Euphonia,E. chrysopasta
+,Bronze-green Euphonia,E. mesochrysa
+,White-vented Euphonia,E. minuta
+,Orange-bellied Euphonia,E. xanthogaster
+,Rufous-bellied Euphonia,E. rufiventris
+,Blue-naped Chlorophonia,Chlorophonia cyanea
+,Chestnut-breasted Chlorophonia,C. pyrrhophrys
+,Yellow-collared Chlorophonia,C. flavirostris
+
+,SPARROWS,PASSERELLIDAE
+,Tanager Finch,Oreothraupis arremonops
+,Yellow-throated Chlorospingus,Chlorospingus flavigularis
+,Short-billed Chlorospingus,C. parvirostris
+,Ashy-throated Chlorospingus,C. canigularis
+,Common Chlorospingus,C. flavopectus
+,Dusky Chlorospingus,C. semifuscus
+,Yellow-green Chlorospingus,C. flavovirens
+,Tumbes Sparrow,Rhynchospiza stolzmanni
+,Yellow-browed Sparrow,Ammodramus aurifrons
+,Black-striped Sparrow,Arremonops conirostris
+,Gray-browed Brushfinch,Arremon assimilis
+,Orange-billed Sparrow,A. aurantiirostris
+,Black-capped Sparrow,A. abeillei
+,Chestnut-capped Brushfinch,A. brunneinucha
+,Olive Finch,A. castaneiceps
+,Rufous-collared Sparrow,Zonotrichia capensis
+,White-naped Brushfinch,Atlapetes albinucha
+,White-rimmed Brushfinch,A. leucopis
+,White-headed Brushfinch,A. albiceps
+,Tricolored Brushfinch,A. tricolor
+,Slaty Brushfinch,A. schistaceus
+,Pale-naped Brushfinch,A. pallidinucha
+,Yellow-breasted Brushfinch,A. latinuchus
+,White-winged Brushfinch,A. leucopterus
+E,Pale-headed Brushfinch,A. pallidiceps
+,Bay-crowned Brushfinch,A. seebohmi
+
+,BLACKBIRDS,ICTERIDAE
+,Russet-backed Oropendola,Psarocolius angustifrons
+,Green Oropendola,P. viridis
+,Chestnut-headed Oropendola,P. wagleri
+,Crested Oropendola,P. decumanus
+,Olive Oropendola,P. bifasciatus
+,Solitary Black Cacique,Cacicus solitarius
+,Ecuadorian Cacique,C. sclateri
+,Scarlet-rumped Cacique,C. uropygialis
+,Yellow-rumped Cacique,C. cela
+,Mountain Cacique,C. chrysonotus
+,Band-tailed Cacique,C. latirostris
+,Red-rumped Cacique,C. haemorrhous
+,Casqued Cacique,C. oseryi
+,Yellow-billed Cacique,Amblycercus holosericeus
+,Orange-backed Troupial,Icterus croconotus
+,White-edged Oriole,I. graceannae
+,Yellow-tailed Oriole,I. mesomelas
+,Epaulet Oriole,I. cayanensis
+,Yellow-backed Oriole,I. chrysater
+,Baltimore Oriole,I. galbula
+,Scrub Blackbird,Dives warczewiczi
+,Oriole Blackbird,Gymnomystax mexicanus
+,Velvet-fronted Grackle,Lampropsar tanagrinus
+,Pale-eyed Blackbird,Agelasticus xanthophthalmus
+,Giant Cowbird,Molothrus oryzivorus
+,Shiny Cowbird,M. bonariensis
+,Great-tailed Grackle,Quiscalus mexicanus
+,Bobolink,Dolichonyx oryzivorus
+,Red-breasted Meadowlark,Sturnella militaris
+,Peruvian Meadowlark,S. bellicosa
+
+,WOOD-WARBLERS,PARULIDAE
+,Ovenbird,Seiurus aurocapilla
+,Northern Waterthrush,Parkesia noveboracensis
+,Golden-winged Warbler,Vermivora chrysoptera
+,Black-and-white Warbler,Mniotilta varia
+,Prothonotary Warbler,Protonotaria citrea
+,Tennessee Warbler,Leiothlypis peregrina
+,Connecticut Warbler,Oporornis agilis
+,Masked Yellowthroat,Geothlypis aequinoctialis
+,Mourning Warbler,G. philadelphia
+,Olive-crowned Yellowthroat,G. semiflava
+,American Redstart,Setophaga ruticilla
+,Cerulean Warbler,S. cerulea
+,Tropical Parula,S. pitiayumi
+,Bay-breasted Warbler,S. castanea
+,Blackburnian Warbler,S. fusca
+,Yellow Warbler,S. petechia
+,Chestnut-sided Warbler,S. pensylvanica
+,Blackpoll Warbler,S. striata
+,Black-throated Blue Warbler,S. caerulescens
+,Black-throated Green Warbler,S. virens
+,Citrine Warbler,Myiothlypis  luteoviridis
+,Black-crested Warbler,M. nigrocristata
+,Buff-rumped Warbler,M. fulvicauda
+,Golden-bellied Warbler,M. chrysogaster
+,Gray-and-gold Warbler,M. fraseri
+,Russet-crowned Warbler,M. coronata
+,Three-striped Warbler,Basileuterus tristriatus
+,Three-banded Warbler,B. trifasciatus
+,Canada Warbler,Cardellina  canadensis
+,Wilson's Warbler,C. pusilla
+,Slate-throated Redstart,Myioborus miniatus
+,Spectacled Redstart,M. melanocephalus
+
+,MITROSPINGIDS,MITROSPINGIDAE
+,Dusky-faced Tanager,Mitrospingus cassinii
+
+,CARDINAL GROSBEAKS,CARDINALIDAE
+,Hepatic Tanager,Piranga flava
+,Summer Tanager,P. rubra
+,Scarlet Tanager,P. olivacea
+,Red-hooded Tanager,P. rubriceps
+,White-winged Tanager,P. leucoptera
+,Red-crowned Ant-Tanager,Habia rubica
+,Carmiol's Tanager,Chlorothraupis carmioli
+,Lemon-spectacled Tanager,C. olivacea
+,Ochre-breasted Tanager,C. stolzmanni
+,Golden Grosbeak,Pheucticus chrysogaster
+,Black-backed Grosbeak,P. aureoventris
+,Rose-breasted Grosbeak,P. ludovicianus
+,Blue Seedeater,Amaurospiza concolor
+,Blue-black Grosbeak,Cyanoloxia cyanoides
+,Amazonian Grosbeak,C. rothschildii
+,Blue Grosbeak,Passerina caerulea
+,Indigo Bunting,P. cyanea
+,Dickcissel,Spiza americana
 
 ,TANAGERS,THRAUPIDAE
 ,White-capped Tanager,Sericossypha albocristata
@@ -1682,7 +1826,8 @@ E,Española Ground-Finch,G. conirostris
 ,Blue-winged Mountain-Tanager,A. somptuosus
 ,Black-chinned Mountain-Tanager,A. notabilis
 ,Hooded Mountain-Tanager,Buthraupis montana
-,Masked Mountain-Tanager,B. wetmorei
+,Masked Mountain-Tanager,Tephrospilus wetmorei
+,Blue-capped Tanager,Sporathraupis cyanocephala
 ,Grass-green Tanager,Chlorornis riefferii
 ,Black-chested Mountain-Tanager,Cnemathraupis eximia
 ,Orange-throated Tanager,Wetmorethraupis sterrhopteron
@@ -1717,152 +1862,7 @@ E,Española Ground-Finch,G. conirostris
 ,Silver-throated Tanager,T. icterocephala
 ,Blue-gray Tanager,Thraupis episcopus
 ,Palm Tanager,T. palmarum
-,Blue-capped Tanager,T. cyanocephala
 ,Rufous-throated Tanager,Ixothraupis rufigula
 ,Speckled Tanager,I. guttata
 ,Yellow-bellied Tanager,I. xanthogastra
 ,Spotted Tanager,I. punctata
-
-,INCERTAE SEDIS-2,
-,Dusky-faced Tanager,Mitrospingus cassinii
-
-,SPARROWS,EMBERIZIDAE
-,Tanager Finch,Oreothraupis arremonops
-,Yellow-throated Chlorospingus,Chlorospingus flavigularis
-,Short-billed Chlorospingus,C. parvirostris
-,Ashy-throated Chlorospingus,C. canigularis
-,Common Chlorospingus,C. flavopectus
-,Dusky Chlorospingus,C. semifuscus
-,Yellow-green Chlorospingus,C. flavovirens
-,Tumbes Sparrow,Rhynchospiza stolzmanni
-,Yellow-browed Sparrow,Ammodramus aurifrons
-,Black-striped Sparrow,Arremonops conirostris
-,Gray-browed Brushfinch,Arremon assimilis
-,Orange-billed Sparrow,A. aurantiirostris
-,Black-capped Sparrow,A. abeillei
-,Chestnut-capped Brushfinch,A. brunneinucha
-,Olive Finch,A. castaneiceps
-,Rufous-collared Sparrow,Zonotrichia capensis
-,White-naped Brushfinch,Atlapetes albinucha
-,White-rimmed Brushfinch,A. leucopis
-,White-headed Brushfinch,A. albiceps
-,Tricolored Brushfinch,A. tricolor
-,Slaty Brushfinch,A. schistaceus
-,Pale-naped Brushfinch,A. pallidinucha
-,Yellow-breasted Brushfinch,A. latinuchus
-,White-winged Brushfinch,A. leucopterus
-E,Pale-headed Brushfinch,A. pallidiceps
-,Bay-crowned Brushfinch,A. seebohmi
-
-,CARDINAL GROSBEAKS,CARDINALIDAE
-,Hepatic Tanager,Piranga flava
-,Summer Tanager,P. rubra
-,Scarlet Tanager,P. olivacea
-,Red-hooded Tanager,P. rubriceps
-,White-winged Tanager,P. leucoptera
-,Red-crowned Ant-Tanager,Habia rubica
-,Carmiol's Tanager,Chlorothraupis carmioli
-,Lemon-spectacled Tanager,C. olivacea
-,Ochre-breasted Tanager,C. stolzmanni
-,Golden Grosbeak,Pheucticus chrysogaster
-,Black-backed Grosbeak,P. aureoventris
-,Rose-breasted Grosbeak,P. ludovicianus
-,Blue Seedeater,Amaurospiza concolor
-,Blue-black Grosbeak,Cyanoloxia cyanoides
-,Amazonian Grosbeak,C. rothschildii
-,Blue Grosbeak,Passerina caerulea
-,Indigo Bunting,P. cyanea
-,Dickcissel,Spiza americana
-
-,WOOD-WARBLERS,PARULIDAE
-,Ovenbird,Seiurus aurocapilla
-,Northern Waterthrush,Parkesia noveboracensis
-,Golden-winged Warbler,Vermivora chrysoptera
-,Black-and-white Warbler,Mniotilta varia
-,Prothonotary Warbler,Protonotaria citrea
-,Tennessee Warbler,Leiothlypis peregrina
-,Connecticut Warbler,Oporornis agilis
-,Masked Yellowthroat,Geothlypis aequinoctialis
-,Mourning Warbler,G. philadelphia
-,Olive-crowned Yellowthroat,G. semiflava
-,American Redstart,Setophaga ruticilla
-,Cerulean Warbler,S. cerulea
-,Tropical Parula,S. pitiayumi
-,Bay-breasted Warbler,S. castanea
-,Blackburnian Warbler,S. fusca
-,Yellow Warbler,S. petechia
-,Chestnut-sided Warbler,S. pensylvanica
-,Blackpoll Warbler,S. striata
-,Black-throated Blue Warbler,S. caerulescens
-,Black-throated Green Warbler,S. virens
-,Citrine Warbler,Myiothlypis  luteoviridis
-,Black-crested Warbler,M. nigrocristata
-,Buff-rumped Warbler,M. fulvicauda
-,Golden-bellied Warbler,M. chrysogaster
-,Gray-and-gold Warbler,M. fraseri
-,Russet-crowned Warbler,M. coronata
-,Three-striped Warbler,Basileuterus tristriatus
-,Three-banded Warbler,B. trifasciatus
-,Canada Warbler,Cardellina  canadensis
-,Wilson's Warbler,C. pusilla
-,Slate-throated Redstart,Myioborus miniatus
-,Spectacled Redstart,M. melanocephalus
-
-,BLACKBIRDS,ICTERIDAE
-,Russet-backed Oropendola,Psarocolius angustifrons
-,Green Oropendola,P. viridis
-,Chestnut-headed Oropendola,P. wagleri
-,Crested Oropendola,P. decumanus
-,Olive Oropendola,P. bifasciatus
-,Solitary Black Cacique,Cacicus solitarius
-,Ecuadorian Cacique,C. sclateri
-,Scarlet-rumped Cacique,C. uropygialis
-,Yellow-rumped Cacique,C. cela
-,Mountain Cacique,C. chrysonotus
-,Band-tailed Cacique,C. latirostris
-,Red-rumped Cacique,C. haemorrhous
-,Casqued Cacique,C. oseryi
-,Yellow-billed Cacique,Amblycercus holosericeus
-,Orange-backed Troupial,Icterus croconotus
-,White-edged Oriole,I. graceannae
-,Yellow-tailed Oriole,I. mesomelas
-,Epaulet Oriole,I. cayanensis
-,Yellow-backed Oriole,I. chrysater
-,Baltimore Oriole,I. galbula
-,Scrub Blackbird,Dives warczewiczi
-,Oriole Blackbird,Gymnomystax mexicanus
-,Velvet-fronted Grackle,Lampropsar tanagrinus
-,Pale-eyed Blackbird,Agelasticus xanthophthalmus
-,Giant Cowbird,Molothrus oryzivorus
-,Shiny Cowbird,M. bonariensis
-,Great-tailed Grackle,Quiscalus mexicanus
-,Bobolink,Dolichonyx oryzivorus
-,Red-breasted Meadowlark,Sturnella militaris
-,Peruvian Meadowlark,S. bellicosa
-
-,FINCHES,FRINGILLIDAE
-,Andean Siskin,Spinus spinescens
-,Hooded Siskin,S. magellanicus
-,Saffron Siskin,S. siemiradzkii
-,Olivaceous Siskin,S. olivaceus
-,Yellow-bellied Siskin,S. xanthogastrus
-,Lesser Goldfinch,S. psaltria
-,Purple-throated Euphonia,Euphonia chlorotica
-,Orange-crowned Euphonia,E. saturata
-,Thick-billed Euphonia,E. laniirostris
-,Golden-rumped Euphonia,E. cyanocephala
-,Fulvous-vented Euphonia,E. fulvicrissa
-,Golden-bellied Euphonia,E. chrysopasta
-,Bronze-green Euphonia,E. mesochrysa
-,White-vented Euphonia,E. minuta
-,Orange-bellied Euphonia,E. xanthogaster
-,Rufous-bellied Euphonia,E. rufiventris
-,Blue-naped Chlorophonia,Chlorophonia cyanea
-,Chestnut-breasted Chlorophonia,C. pyrrhophrys
-,Yellow-collared Chlorophonia,C. flavirostris
-
-,ESTRILDIDS,ESTRILDIDAE
-,Tricolored Munia,Lonchura malacca
-
-,OLD WORLD SPARROWS,PASSERIDAE
-,House Sparrow,Passer domesticus

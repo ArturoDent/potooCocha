@@ -898,7 +898,7 @@ TITYRAS,TITYRIDAE
 ,,Chestnut-crowned Becard,P. castaneus
 ,,White-winged Becard,P. polychopterus
 ,,Crested Becard,P. validus
-INCERTAE SEDIS-1,
+INCERTAE SEDIS,
 ,,Wing-barred Piprites,Piprites chloris
 ,,Black-capped Piprites,P. pileata
 VIREOS,VIREONIDAE
@@ -960,6 +960,8 @@ MOCKINGBIRDS,MIMIDAE
 STARLINGS,STURNIDAE
 ,,Crested Myna,Acridotheres cristatellus
 ,,European Starling,Sturnus vulgaris
+OLD WORLD SPARROWS,PASSERIDAE
+,,House Sparrow,Passer domesticus
 PIPITS and WAGTAILS,MOTACILLIDAE
 ,,Yellowish Pipit,Anthus lutescens
 ,,Short-billed Pipit,A. furcatus
@@ -968,6 +970,75 @@ PIPITS and WAGTAILS,MOTACILLIDAE
 5,,Ochre-breasted Pipit,A. nattereri
 ,,Hellmayr's Pipit,A. hellmayri
 ,,Paramo Pipit,A. bogotensis
+FINCHES,FRINGILLIDAE
+,,European Greenfinch,Chloris chloris
+,,European Goldfinch,Carduelis carduelis
+,,Thick-billed Siskin,Spinus crassirostris
+,,Hooded Siskin,S. magellanicus
+5,,Black Siskin,S. atratus
+,,Yellow-rumped Siskin,S. uropygialis
+,,Black-chinned Siskin,S. barbatus
+,,Purple-throated Euphonia,Euphonia chlorotica
+,,Violaceous Euphonia,E. violacea
+10,,Green-throated Euphonia,E. chalybea
+,,Golden-rumped Euphonia,E. cyanocephala
+,,Chestnut-bellied Euphonia,E. pectoralis
+,,Blue-naped Chlorophonia,Chlorophonia cyanea
+SPARROWS,PASSERELLIDAE
+,,Common Chlorospingus,Chlorospingus flavopectus
+,,Stripe-capped Sparrow,Rhynchospiza strigiceps
+,,Grassland Sparrow,Ammodramus humeralis
+,,Yellow-browed Sparrow,A. aurifrons
+5,,White-browed Brushfinch,Arremon torquatus
+,,Saffron-billed Sparrow,A. flavirostris
+,,Rufous-collared Sparrow,Zonotrichia capensis
+,,Fulvous-headed Brushfinch,Atlapetes fulviceps
+,endemic,Yellow-striped Brushfinch,A. citrinellus
+BLACKBIRDS,ICTERIDAE
+,,Crested Oropendola,Psarocolius decumanus
+,,Solitary Black Cacique,Cacicus solitarius
+,,Golden-winged Cacique,C. chrysopterus
+,,Red-rumped Cacique,C. haemorrhous
+5,,Orange-backed Troupial,Icterus croconotus
+,,Variable Oriole,I. pyrrhopterus
+,,Chopi Blackbird,Gnorimopsar chopi
+,,Austral Blackbird,Curaeus curaeus
+,,Scarlet-headed Blackbird,Amblyramphus holosericeus
+10,,Unicolored Blackbird,Agelasticus cyanopus
+,,Yellow-winged Blackbird,A. thilius
+,,Chestnut-capped Blackbird,Chrysomus ruficapillus
+,,Saffron-cowled Blackbird,Xanthopsar flavus
+,,Yellow-rumped Marshbird,Pseudoleistes guirahuro
+15,,Brown-and-yellow Marshbird,P. virescens
+,,Grayish Baywing,Agelaioides badius
+,,Screaming Cowbird,Molothrus rufoaxillaris
+,,Giant Cowbird,M. oryzivorus
+,,Shiny Cowbird,M. bonariensis
+20,,Bobolink,Dolichonyx oryzivorus
+,,White-browed Meadowlark,Sturnella superciliaris
+,,Pampas Meadowlark,S. defilippii
+,,Long-tailed Meadowlark,S. loyca
+WOOD-WARBLERS,PARULIDAE
+,,Northern Waterthrush,Parkesia noveboracensis
+,,Masked Yellowthroat,Geothlypis aequinoctialis
+,,American Redstart,Setophaga ruticilla
+,,Tropical Parula,S. pitiayumi
+5,,Yellow Warbler,S. petechia
+,,Blackpoll Warbler,S. striata
+,,Flavescent Warbler,Myiothlypis  flaveola
+,,White-browed Warbler,M. leucoblephara
+,,Pale-legged Warbler,M. signata
+10,,Riverbank Warbler,M. rivularis
+,,Two-banded Warbler,M. bivittata
+,,Golden-crowned Warbler,Basileuterus culicivorus
+,,Brown-capped Redstart,Myioborus brunniceps
+CARDINAL GROSBEAKS,CARDINALIDAE
+,,Hepatic Tanager,Piranga flava
+,,Red-crowned Ant-Tanager,Habia rubica
+,,Black-backed Grosbeak,Pheucticus aureoventris
+,,Blackish-blue Seedeater,Amaurospiza moesta
+,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
+,,Ultramarine Grosbeak,C. brissonii
 TANAGERS,THRAUPIDAE
 ,,Hooded Tanager,Nemosia pileata
 ,,Plushcap,Catamblyrhynchus diadema
@@ -1074,74 +1145,3 @@ TANAGERS,THRAUPIDAE
 ,,Red-necked Tanager,T. cyanocephala
 ,,Sayaca Tanager,Thraupis sayaca
 ,,Palm Tanager,T. palmarum
-SPARROWS,EMBERIZIDAE
-,,Common Chlorospingus,Chlorospingus flavopectus
-,,Stripe-capped Sparrow,Rhynchospiza strigiceps
-,,Grassland Sparrow,Ammodramus humeralis
-,,Yellow-browed Sparrow,A. aurifrons
-5,,White-browed Brushfinch,Arremon torquatus
-,,Saffron-billed Sparrow,A. flavirostris
-,,Rufous-collared Sparrow,Zonotrichia capensis
-,,Fulvous-headed Brushfinch,Atlapetes fulviceps
-,endemic,Yellow-striped Brushfinch,A. citrinellus
-CARDINAL GROSBEAKS,CARDINALIDAE
-,,Hepatic Tanager,Piranga flava
-,,Red-crowned Ant-Tanager,Habia rubica
-,,Black-backed Grosbeak,Pheucticus aureoventris
-,,Blackish-blue Seedeater,Amaurospiza moesta
-,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
-,,Ultramarine Grosbeak,C. brissonii
-WOOD-WARBLERS,PARULIDAE
-,,Northern Waterthrush,Parkesia noveboracensis
-,,Masked Yellowthroat,Geothlypis aequinoctialis
-,,American Redstart,Setophaga ruticilla
-,,Tropical Parula,S. pitiayumi
-5,,Yellow Warbler,S. petechia
-,,Blackpoll Warbler,S. striata
-,,Flavescent Warbler,Myiothlypis  flaveola
-,,White-browed Warbler,M. leucoblephara
-,,Pale-legged Warbler,M. signata
-10,,Riverbank Warbler,M. rivularis
-,,Two-banded Warbler,M. bivittata
-,,Golden-crowned Warbler,Basileuterus culicivorus
-,,Brown-capped Redstart,Myioborus brunniceps
-BLACKBIRDS,ICTERIDAE
-,,Crested Oropendola,Psarocolius decumanus
-,,Solitary Black Cacique,Cacicus solitarius
-,,Golden-winged Cacique,C. chrysopterus
-,,Red-rumped Cacique,C. haemorrhous
-5,,Orange-backed Troupial,Icterus croconotus
-,,Variable Oriole,I. pyrrhopterus
-,,Chopi Blackbird,Gnorimopsar chopi
-,,Austral Blackbird,Curaeus curaeus
-,,Scarlet-headed Blackbird,Amblyramphus holosericeus
-10,,Unicolored Blackbird,Agelasticus cyanopus
-,,Yellow-winged Blackbird,A. thilius
-,,Chestnut-capped Blackbird,Chrysomus ruficapillus
-,,Saffron-cowled Blackbird,Xanthopsar flavus
-,,Yellow-rumped Marshbird,Pseudoleistes guirahuro
-15,,Brown-and-yellow Marshbird,P. virescens
-,,Grayish Baywing,Agelaioides badius
-,,Screaming Cowbird,Molothrus rufoaxillaris
-,,Giant Cowbird,M. oryzivorus
-,,Shiny Cowbird,M. bonariensis
-20,,Bobolink,Dolichonyx oryzivorus
-,,White-browed Meadowlark,Sturnella superciliaris
-,,Pampas Meadowlark,S. defilippii
-,,Long-tailed Meadowlark,S. loyca
-FINCHES,FRINGILLIDAE
-,,European Greenfinch,Chloris chloris
-,,European Goldfinch,Carduelis carduelis
-,,Thick-billed Siskin,Spinus crassirostris
-,,Hooded Siskin,S. magellanicus
-5,,Black Siskin,S. atratus
-,,Yellow-rumped Siskin,S. uropygialis
-,,Black-chinned Siskin,S. barbatus
-,,Purple-throated Euphonia,Euphonia chlorotica
-,,Violaceous Euphonia,E. violacea
-10,,Green-throated Euphonia,E. chalybea
-,,Golden-rumped Euphonia,E. cyanocephala
-,,Chestnut-bellied Euphonia,E. pectoralis
-,,Blue-naped Chlorophonia,Chlorophonia cyanea
-OLD WORLD SPARROWS,PASSERIDAE
-,,House Sparrow,Passer domesticus

@@ -441,46 +441,29 @@ THRUSHES,TURDIDAE
 ,,White-necked Thrush,T. albicollis
 MOCKINGBIRDS,MIMIDAE
 ,,Tropical Mockingbird,Mimus gilvus
-TANAGERS,THRAUPIDAE
-,,Green Honeycreeper,Chlorophanes spiza
-,,Bicolored Conebill,Conirostrum bicolor
-,,Orange-fronted Yellow-Finch,Sicalis columbiana
-,,Saffron Finch,S. flaveola
-5,,Grassland Yellow-Finch,S. luteola
-,,Blue-black Grassquit,Volatinia jacarina
-,,White-shouldered Tanager,Islerothraupis luctuosa
-,,White-lined Tanager,Tachyphonus rufus
-,,Silver-beaked Tanager,Ramphocelus carbo
-10,,Purple Honeycreeper,Cyanerpes caeruleus
-,,Red-legged Honeycreeper,C. cyaneus
-,,Swallow Tanager,Tersina viridis
-,,Blue Dacnis,Dacnis cayana
-,,Lesson's Seedeater,Sporophila bouvronides
-15,,Lined Seedeater,S. lineola
-,,Ruddy-breasted Seedeater,S. minuta
-,,Wing-barred Seedeater,S. americana
-,,Yellow-bellied Seedeater,S. nigricollis
-,,Slate-colored Seedeater,S. schistacea
-,,Grayish Saltator,Saltator coerulescens
-,,Streaked Saltator,S. striatipectus
-,,Bananaquit,Coereba flaveola
-,,Sooty Grassquit,Asemospiza fuliginosa
-,,Black-faced Grassquit,Melanospiza bicolor
-,,Masked Cardinal,Paroaria nigrogenis
-,,Turquoise Tanager,Tangara mexicana
-,,Bay-headed Tanager,T. gyrola
-,,Blue-gray Tanager,Thraupis episcopus
-,,Palm Tanager,T. palmarum
-,,Blue-capped Tanager,T. cyanocephala
-,,Speckled Tanager,Ixothraupis guttata
-CARDINAL GROSBEAKS,CARDINALIDAE
-,,Hepatic Tanager,Piranga flava
-,,Summer Tanager,P. rubra
-,,Scarlet Tanager,P. olivacea
-,,Red-crowned Ant-Tanager,Habia rubica
-5,,Rose-breasted Grosbeak,Pheucticus ludovicianus
-,,Indigo Bunting,Passerina cyanea
-,,Dickcissel,Spiza americana
+ESTRILDIDS,ESTRILDIDAE
+,,Common Waxbill,Estrilda astrild
+,,Tricolored Munia,Lonchura malacca
+OLD WORLD SPARROWS,PASSERIDAE
+,,House Sparrow,Passer domesticus
+FINCHES,FRINGILLIDAE
+,,Lesser Goldfinch,Spinus psaltria
+,,Trinidad Euphonia,Euphonia trinitatis
+,,Violaceous Euphonia,E. violacea
+,,Golden-rumped Euphonia,E. cyanocephala
+BLACKBIRDS,ICTERIDAE
+,,Crested Oropendola,Psarocolius decumanus
+,,Yellow-rumped Cacique,Cacicus cela
+,,Orchard Oriole,Icterus spurius
+,,Baltimore Oriole,I. galbula
+5,,Yellow Oriole,I. nigrogularis
+,,Yellow-hooded Blackbird,Chrysomus icterocephalus
+,,Giant Cowbird,Molothrus oryzivorus
+,,Shiny Cowbird,M. bonariensis
+,,Carib Grackle,Quiscalus lugubris
+10,,Great-tailed Grackle,Q. mexicanus
+,,Bobolink,Dolichonyx oryzivorus
+,,Red-breasted Meadowlark,Sturnella militaris
 WOOD-WARBLERS,PARULIDAE
 ,,Ovenbird,Seiurus aurocapilla
 ,,Northern Waterthrush,Parkesia noveboracensis
@@ -509,26 +492,43 @@ WOOD-WARBLERS,PARULIDAE
 25,,Black-throated Green Warbler,S. virens
 ,,Golden-crowned Warbler,Basileuterus culicivorus
 ,,Canada Warbler,Cardellina  canadensis
-BLACKBIRDS,ICTERIDAE
-,,Crested Oropendola,Psarocolius decumanus
-,,Yellow-rumped Cacique,Cacicus cela
-,,Orchard Oriole,Icterus spurius
-,,Baltimore Oriole,I. galbula
-5,,Yellow Oriole,I. nigrogularis
-,,Yellow-hooded Blackbird,Chrysomus icterocephalus
-,,Giant Cowbird,Molothrus oryzivorus
-,,Shiny Cowbird,M. bonariensis
-,,Carib Grackle,Quiscalus lugubris
-10,,Great-tailed Grackle,Q. mexicanus
-,,Bobolink,Dolichonyx oryzivorus
-,,Red-breasted Meadowlark,Sturnella militaris
-FINCHES,FRINGILLIDAE
-,,Lesser Goldfinch,Spinus psaltria
-,,Trinidad Euphonia,Euphonia trinitatis
-,,Violaceous Euphonia,E. violacea
-,,Golden-rumped Euphonia,E. cyanocephala
-ESTRILDIDS,ESTRILDIDAE
-,,Common Waxbill,Estrilda astrild
-,,Tricolored Munia,Lonchura malacca
-OLD WORLD SPARROWS,PASSERIDAE
-,,House Sparrow,Passer domesticus
+CARDINAL GROSBEAKS,CARDINALIDAE
+,,Hepatic Tanager,Piranga flava
+,,Summer Tanager,P. rubra
+,,Scarlet Tanager,P. olivacea
+,,Red-crowned Ant-Tanager,Habia rubica
+5,,Rose-breasted Grosbeak,Pheucticus ludovicianus
+,,Indigo Bunting,Passerina cyanea
+,,Dickcissel,Spiza americana
+TANAGERS,THRAUPIDAE
+,,Green Honeycreeper,Chlorophanes spiza
+,,Bicolored Conebill,Conirostrum bicolor
+,,Orange-fronted Yellow-Finch,Sicalis columbiana
+,,Saffron Finch,S. flaveola
+5,,Grassland Yellow-Finch,S. luteola
+,,Blue-black Grassquit,Volatinia jacarina
+,,White-shouldered Tanager,Islerothraupis luctuosa
+,,White-lined Tanager,Tachyphonus rufus
+,,Silver-beaked Tanager,Ramphocelus carbo
+10,,Purple Honeycreeper,Cyanerpes caeruleus
+,,Red-legged Honeycreeper,C. cyaneus
+,,Swallow Tanager,Tersina viridis
+,,Blue Dacnis,Dacnis cayana
+,,Lesson's Seedeater,Sporophila bouvronides
+15,,Lined Seedeater,S. lineola
+,,Ruddy-breasted Seedeater,S. minuta
+,,Wing-barred Seedeater,S. americana
+,,Yellow-bellied Seedeater,S. nigricollis
+,,Slate-colored Seedeater,S. schistacea
+,,Grayish Saltator,Saltator coerulescens
+,,Streaked Saltator,S. striatipectus
+,,Bananaquit,Coereba flaveola
+,,Sooty Grassquit,Asemospiza fuliginosa
+,,Black-faced Grassquit,Melanospiza bicolor
+,,Masked Cardinal,Paroaria nigrogenis
+,,Blue-capped Tanager,Sporathraupis cyanocephala
+,,Turquoise Tanager,Tangara mexicana
+,,Bay-headed Tanager,T. gyrola
+,,Blue-gray Tanager,Thraupis episcopus
+,,Palm Tanager,T. palmarum
+,,Speckled Tanager,Ixothraupis guttata
