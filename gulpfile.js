@@ -130,6 +130,14 @@ function watch() {
   });
 }
 
+/**
+* How VSCode indents it
+*/
+
+/**
+ * How I want it
+ */
+
 function sass2css() {
   return gulp.src(paths.sass.stylesFile)
     .pipe(sass().on("error", sass.logError))
