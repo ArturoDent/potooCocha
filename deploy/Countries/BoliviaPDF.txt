@@ -189,9 +189,9 @@ HUMMINGBIRDS,TROCHILIDAE
 ,,Needle-billed Hermit,P. philippii
 ,,Great-billed Hermit,P. malaris
 ,,Green-fronted Lancebill,Doryfera ludovicae
-,,Wedge-billed Hummingbird,Schistes geoffroyi
+,,Geoffroy's Daggerbill,Schistes geoffroyi
 15,,Brown Violetear,Colibri delphinae
-,,Green Violetear,C. thalassinus
+,,Lesser Violetear,C. cyanotus
 ,,Sparkling Violetear,C. coruscans
 ,,White-vented Violetear,C. serrirostris
 ,,Horned Sungem,Heliactin bilophus
@@ -243,18 +243,18 @@ HUMMINGBIRDS,TROCHILIDAE
 65,,Glittering-bellied Emerald,C. lucidus
 ,,Violet-headed Hummingbird,Klais guimeti
 ,,Gray-breasted Sabrewing,Campylopterus largipennis
-,,Swallow-tailed Hummingbird,Eupetomena macroura
 ,,Fork-tailed Woodnymph,Thalurania furcata
-70,,Many-spotted Hummingbird,Taphrospilus hypostictus
+,,Many-spotted Hummingbird,Taphrospilus hypostictus
+70,,Swallow-tailed Hummingbird,Eupetomena macroura
+,,Versicolored Emerald,Chrysuronia versicolor
+,,Golden-tailed Sapphire,C. oenone
 ,,White-throated Hummingbird,Leucochloris albicollis
-,,White-bellied Hummingbird,Amazilia chionogaster
-,,Versicolored Emerald,A. versicolor
-,,Glittering-throated Emerald,A. fimbriata
-75,,Sapphire-spangled Emerald,A. lactea
-,,Golden-tailed Sapphire,Chrysuronia oenone
+,,Glittering-throated Emerald,Chionomesa fimbriata
+75,,Sapphire-spangled Emerald,C. lactea
 ,,Rufous-throated Sapphire,Hylocharis sapphirina
-,,White-chinned Sapphire,H. cyanus
 ,,Gilded Hummingbird,H. chrysura
+,,White-bellied Hummingbird,"Amazilia" chionogaster
+,,White-chinned Sapphire,Chlorestes cyanus
 HOATZIN,OPISTHOCOMIDAE
 ,,Hoatzin,Opisthocomus hoazin
 LIMPKIN,ARAMIDAE
@@ -839,8 +839,8 @@ OVENBIRDS,FURNARIIDAE
 ,,Olive-backed Foliage-gleaner,A. infuscatus
 75,,Spotted Barbtail,Premnoplex brunnescens
 ,,Pearled Treerunner,Margarornis squamiger
+,,Tawny Tit-Spinetail,Sylviorthorhynchus yanacensis
 ,,Brown-capped Tit-Spinetail,Leptasthenura fuliginiceps
-,,Tawny Tit-Spinetail,L. yanacensis
 ,,Plain-mantled Tit-Spinetail,L. aegithaloides
 80,,Andean Tit-Spinetail,L. andicola
 ,,Rufous-fronted Thornbird,Phacellodomus rufifrons
@@ -1209,7 +1209,8 @@ WRENS,TROGLODYTIDAE
 GNATCATCHERS,POLIOPTILIDAE
 ,,Half-collared Gnatwren,Microbates cinereiventris
 ,,Long-billed Gnatwren,Ramphocaenus melanurus
-,,Masked Gnatcatcher,Polioptila dumicola
+,,Klage's Gnatcatcher,Polioptila paraensis
+,,Masked Gnatcatcher,P. dumicola
 DONACOBIUS,DONACOBIIDAE
 ,,Black-capped Donacobius,Donacobius atricapilla
 DIPPERS,CINCLIDAE
@@ -1277,36 +1278,36 @@ SPARROWS,PASSERELLIDAE
 ,endemic,Bolivian Brushfinch,A. rufinucha
 ,,Fulvous-headed Brushfinch,A. fulviceps
 BLACKBIRDS,ICTERIDAE
-,,Russet-backed Oropendola,Psarocolius angustifrons
+,,Bobolink,Dolichonyx oryzivorus
+,,Red-breasted Meadowlark,Leistes militaris
+,,White-browed Meadowlark,L. superciliaris
+,,Yellow-billed Cacique,Amblycercus holosericeus
+5,,Russet-backed Oropendola,Psarocolius angustifrons
 ,,Dusky-green Oropendola,P. atrovirens
 ,,Green Oropendola,P. viridis
 ,,Crested Oropendola,P. decumanus
-5,,Olive Oropendola,P. bifasciatus
-,,Solitary Black Cacique,Cacicus solitarius
+,,Olive Oropendola,P. bifasciatus
+10,,Solitary Black Cacique,Cacicus solitarius
 ,,Golden-winged Cacique,C. chrysopterus
 ,,Scarlet-rumped Cacique,C. uropygialis
 ,,Yellow-rumped Cacique,C. cela
-10,,Mountain Cacique,C. chrysonotus
-,,Red-rumped Cacique,C. haemorrhous
+,,Mountain Cacique,C. chrysonotus
+15,,Red-rumped Cacique,C. haemorrhous
 ,,Casqued Cacique,C. oseryi
-,,Yellow-billed Cacique,Amblycercus holosericeus
 ,,Venezuelan Troupial,Icterus icterus
-15,,Epaulet Oriole,I. cayanensis
+,,Epaulet Oriole,I. cayanensis
 ,,Variable Oriole,I. pyrrhopterus
-,,Velvet-fronted Grackle,Lampropsar tanagrinus
-,,Chopi Blackbird,Gnorimopsar chopi
-,,Scarlet-headed Blackbird,Amblyramphus holosericeus
-20,,Unicolored Blackbird,Agelasticus cyanopus
-,,Yellow-winged Blackbird,A. thilius
-,,Chestnut-capped Blackbird,Chrysomus ruficapillus
-,endemic,Bolivian Blackbird,Oreopsar bolivianus
-,,Grayish Baywing,Agelaioides badius
-25,,Screaming Cowbird,Molothrus rufoaxillaris
+20,,Screaming Cowbird,Molothrus rufoaxillaris
 ,,Giant Cowbird,M. oryzivorus
 ,,Shiny Cowbird,M. bonariensis
-,,Bobolink,Dolichonyx oryzivorus
-,,Red-breasted Meadowlark,Sturnella militaris
-,,White-browed Meadowlark,S. superciliaris
+,,Velvet-fronted Grackle,Lampropsar tanagrinus
+,,Scarlet-headed Blackbird,Amblyramphus holosericeus
+25,,Chopi Blackbird,Gnorimopsar chopi
+,,Grayish Baywing,Agelaioides badius
+,endemic,Bolivian Blackbird,Oreopsar bolivianus
+,,Unicolored Blackbird,Agelasticus cyanopus
+,,Yellow-winged Blackbird,A. thilius
+,,Chestnut-capped Blackbird,Chrysomus ruficapillus
 WOOD-WARBLERS,PARULIDAE
 ,,Black-and-white Warbler,Mniotilta varia
 ,,Connecticut Warbler,Oporornis agilis
@@ -1365,8 +1366,8 @@ TANAGERS,THRAUPIDAE
 ,,Black-hooded Sierra Finch,Phrygilus atriceps
 ,,Peruvian Sierra Finch,P. punensis
 ,,Mourning Sierra Finch,P. fruticeti
-,,Plumbeous Sierra Finch,P. unicolor
-25,,Ash-breasted Sierra Finch,P. plebejus
+,,Plumbeous Sierra Finch,Geospizopsis unicolor
+25,,Ash-breasted Sierra Finch,G. plebejus
 ,,Band-tailed Sierra Finch,Porphyrospiza alaudina
 ,,Blue Finch,P. caerulescens
 ,,Red-backed Sierra Finch,Idiopsar dorsalis

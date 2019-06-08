@@ -196,17 +196,17 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Amethyst Woodstar,Calliphlox amethystina
 ,Glittering-bellied Emerald,Chlorostilbon lucidus
 ,Purple-crowned Plovercrest,Stephanoxis loddigesii
-,Swallow-tailed Hummingbird,Eupetomena macroura
 ,Fork-tailed Woodnymph,Thalurania furcata
 ,Violet-capped Woodnymph,T. glaucopis
 ,Many-spotted Hummingbird,Taphrospilus hypostictus
+,Swallow-tailed Hummingbird,Eupetomena macroura
+,Versicolored Emerald,Chrysuronia versicolor
 ,White-throated Hummingbird,Leucochloris albicollis
-,White-bellied Hummingbird,Amazilia chionogaster
-,Versicolored Emerald,A. versicolor
-,Sapphire-spangled Emerald,A. lactea
+,Sapphire-spangled Emerald,Chionomesa lactea
 ,Rufous-throated Sapphire,Hylocharis sapphirina
-,White-chinned Sapphire,H. cyanus
 ,Gilded Hummingbird,H. chrysura
+,White-bellied Hummingbird,"Amazilia" chionogaster
+,White-chinned Sapphire,Chlorestes cyanus
 
 ,LIMPKIN,ARAMIDAE
 ,Limpkin,Aramus guarauna
@@ -250,11 +250,11 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Andean Lapwing,V. resplendens
 ,Rufous-chested Dotterel,Charadrius modestus
 ,Semipalmated Plover,C. semipalmatus
+,Lesser Sand-Plover,C. mongolus
 ,Wilson's Plover,C. wilsonia
 ,Collared Plover,C. collaris
 ,Puna Plover,C. alticola
 ,Two-banded Plover,C. falklandicus
-,Lesser Sand-Plover,C. mongolus
 ,Diademed Sandpiper-Plover,Phegornis mitchellii
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
@@ -765,8 +765,8 @@ E,Olrog's Cinclodes,C. olrogi
 ,Pearled Treerunner,Margarornis squamiger
 ,Thorn-tailed Rayadito,Aphrastura spinicauda
 ,Des Murs's Wiretail,Sylviorthorhynchus desmursii
+,Tawny Tit-Spinetail,S. yanacensis
 ,Brown-capped Tit-Spinetail,Leptasthenura fuliginiceps
-,Tawny Tit-Spinetail,L. yanacensis
 ,Tufted Tit-Spinetail,L. platensis
 ,Plain-mantled Tit-Spinetail,L. aegithaloides
 ,Araucaria Tit-Spinetail,L. setaria
@@ -789,8 +789,8 @@ E,Olrog's Cinclodes,C. olrogi
 ,Sharp-billed Canastero,A. pyrrholeuca
 ,Maquis Canastero,A. heterura
 ,Straight-billed Reedhaunter,Limnoctites rectirostris
-,Sulphur-throated Spinetail,Cranioleuca sulphurifera
-,Stripe-crowned Spinetail,C. pyrrhophia
+,Sulphur-bearded Reedhaunter,L. sulphuriferus
+,Stripe-crowned Spinetail,Cranioleuca pyrrhophia
 ,Olive Spinetail,C. obsoleta
 E,Patagonian Canastero,Pseudasthenes patagonica
 E,Steinbach's Canastero,P. steinbachi
@@ -823,6 +823,7 @@ E,White-throated Cacholote,P. gutturalis
 ,Slaty Elaenia,E. strepera
 ,Lesser Elaenia,E. chiriquensis
 ,Highland Elaenia,E. obscura
+,Small-headed Elaenia,E. sordida
 ,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,Suiriri Flycatcher,Suiriri suiriri
 ,Buff-banded Tyrannulet,Mecocerculus hellmayri
@@ -1080,29 +1081,29 @@ E,Rusty-backed Monjita,X. rubetra
 E,Yellow-striped Brushfinch,A. citrinellus
 
 ,BLACKBIRDS,ICTERIDAE
+,Bobolink,Dolichonyx oryzivorus
+,White-browed Meadowlark,Leistes superciliaris
+,Pampas Meadowlark,L. defilippii
+,Long-tailed Meadowlark,L. loyca
 ,Crested Oropendola,Psarocolius decumanus
 ,Solitary Black Cacique,Cacicus solitarius
 ,Golden-winged Cacique,C. chrysopterus
 ,Red-rumped Cacique,C. haemorrhous
 ,Orange-backed Troupial,Icterus croconotus
 ,Variable Oriole,I. pyrrhopterus
-,Chopi Blackbird,Gnorimopsar chopi
-,Austral Blackbird,Curaeus curaeus
+,Screaming Cowbird,Molothrus rufoaxillaris
+,Giant Cowbird,M. oryzivorus
+,Shiny Cowbird,M. bonariensis
 ,Scarlet-headed Blackbird,Amblyramphus holosericeus
+,Austral Blackbird,Curaeus curaeus
+,Chopi Blackbird,Gnorimopsar chopi
+,Grayish Baywing,Agelaioides badius
 ,Unicolored Blackbird,Agelasticus cyanopus
 ,Yellow-winged Blackbird,A. thilius
 ,Chestnut-capped Blackbird,Chrysomus ruficapillus
 ,Saffron-cowled Blackbird,Xanthopsar flavus
 ,Yellow-rumped Marshbird,Pseudoleistes guirahuro
 ,Brown-and-yellow Marshbird,P. virescens
-,Grayish Baywing,Agelaioides badius
-,Screaming Cowbird,Molothrus rufoaxillaris
-,Giant Cowbird,M. oryzivorus
-,Shiny Cowbird,M. bonariensis
-,Bobolink,Dolichonyx oryzivorus
-,White-browed Meadowlark,Sturnella superciliaris
-,Pampas Meadowlark,S. defilippii
-,Long-tailed Meadowlark,S. loyca
 
 ,WOOD-WARBLERS,PARULIDAE
 ,Northern Waterthrush,Parkesia noveboracensis
@@ -1147,8 +1148,8 @@ E,Monte Yellow-Finch,S. mendozae
 ,Gray-hooded Sierra Finch,P. gayi
 ,Patagonian Sierra Finch,P. patagonicus
 ,Mourning Sierra Finch,P. fruticeti
-,Plumbeous Sierra Finch,P. unicolor
-,Ash-breasted Sierra Finch,P. plebejus
+,Plumbeous Sierra Finch,Geospizopsis unicolor
+,Ash-breasted Sierra Finch,G. plebejus
 ,Band-tailed Sierra Finch,Porphyrospiza alaudina
 E,Carbonated Sierra Finch,P. carbonaria
 ,Red-backed Sierra Finch,Idiopsar dorsalis

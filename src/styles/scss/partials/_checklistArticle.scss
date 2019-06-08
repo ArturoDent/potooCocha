@@ -74,10 +74,10 @@
 
 #checklistOptions.panel {
     position  :  relative;
-    left  :  10%;
-    width  :  80%;
+    left  :  5%;
+    width  :  90%;
     margin  :  1ch 0 6ch 0;
-    padding  :  1ch 0 1ch 3ch;
+    padding  :  1.8ch 0 2ch 3ch;
 
     font-size  :  1rem;
     line-height : 2.4rem;
@@ -91,27 +91,36 @@
 //  *******************************    "Checklists"    **************************************************
 
 .checklistTitle  {
-    position  :  absolute;
-    top  :  -130%;
-    left  :  -19vw;
+    // position  :  absolute;
+    position  :  relative;
+    top  : -0.5rem;
+    
+    top : 1.7rem;
+    // left  :  -19vw;
+    left : -4vw;
 
-    font-size  :  1.1rem;
+    // font-size  :  1.1rem;
     // font-size  :  4rem;
+    font-size  :  6rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
     // color  :  $panelColor;
-    color  :  rgb(209, 209, 209);
+    // color  :  rgb(209, 209, 209);
+    color  :  $bgColor;
 
     // text-shadow :  0 0 0.38rem rgba(0,0,0,0.9), 0 0 0.177rem white;
-    text-shadow :  0 0 0.177rem white;
+    // text-shadow :  0 0 0.177rem white;
+    text-shadow :  0 0 2px white;
     letter-spacing  :  0.2em;
 
-    transform  :  rotate(-86deg) scale(2.5);
-    -webkit-transform-origin  :  top right;
-       -moz-transform-origin  :  top right;
-        -ms-transform-origin  :  top right;
-         -o-transform-origin  :  top right;
-            transform-origin  :  top right;
+    // // transform  :  rotate(-86deg) scale(2.5);
+    // transform  :  scale(2.5);
+    // transform  :  scale(2.5);
+    // -webkit-transform-origin  :  top right;
+    //    -moz-transform-origin  :  top right;
+    //     -ms-transform-origin  :  top right;
+    //      -o-transform-origin  :  top right;
+    //         transform-origin  :  top right; 
 }
 
 #pdfButton, #csvButton  {
@@ -120,8 +129,8 @@
   justify-content: space-between;
 
   position  :  absolute;
-  width : 16ch;
-  padding : 0 1.3ch 0.5ch 1ch;
+  width : 19ch;
+  padding : 0.5ch 1.9ch 1ch 1.5ch;
 }
 
 #pdfButton {
@@ -175,7 +184,7 @@
     border-left: 2ch solid transparent;
 }
 
-#numDays  > a  {
+#numDays > a  {
     position  :  relative;
     top : 0;
     width  :  4ch;
@@ -223,6 +232,7 @@
 }
 
 #numDays > a:hover,#numDays > a:focus {
+    outline: none;
     color : #fff;
     // color : #664;
     // background-color  :  $genericButtonColor;

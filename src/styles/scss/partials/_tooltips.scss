@@ -114,7 +114,7 @@
     border-color  :  transparent transparent transparent #f88509;
 }
 
-.taxInstructionsButton.hasTooltip:hover .tooltip {
+.taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {
     // transform  :  rotate(-9deg);
     color: black;
     text-shadow: none;

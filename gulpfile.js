@@ -82,8 +82,10 @@ const paths = {
     deploy: "./deploy/Authors"
   },
   occurrences: {
-    src: "data/occurrences.txt",
-    deploy: "./deploy/data"
+    // src: "data/occurrences.txt",
+    src: "occurrences/occurrences.txt",
+    // deploy: "./deploy/data"
+    deploy: "./deploy/occurrences"
   },
   countries: {
     src: "Countries/*.*",
@@ -283,16 +285,19 @@ function copyFLAGS() {
 
 // to get Countries and occurrences.txt from BuildSACC folder
 const buildGlobs = {
-  occurrences: '../BuildSACC/data/occurrences.txt',
+  // occurrences: '../BuildSACC/data/occurrences.txt',
+  occurrences: '../BuildSACC/occurrences/occurrences.txt',
   countries: '../BuildSACC/Countries/*.*'
   // '../BuildSACC/workFlow.txt'
 };
 
 function getBuildSACCdata() {
   return gulp.src(buildGlobs.occurrences)
-    .pipe(newer("./data"))
+    // .pipe(newer("./data"))
+    .pipe(newer("./occurrences"))
     .pipe(print())
-    .pipe(gulp.dest("./data"));
+    // .pipe(gulp.dest("./data"));
+    .pipe(gulp.dest("./occurrences"));
 }
 
 // show files transported
@@ -318,7 +323,8 @@ const ftpGlobs = [
   'deploy/home.html',
   'deploy/citations.html',
   'deploy/Authors/*.txt',
-  'deploy/data/occurrences.txt',
+  // 'deploy/data/occurrences.txt',
+  'deploy/occurrences/occurrences.txt',
   'deploy/Countries/*.*',
   '!ftpConfig.js'
 ];
@@ -373,7 +379,7 @@ exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
                             copySVG, copyFLAGS, copyCitations, copyAuthors,
                             copyOccurrences, copyCountries, movePrintCSStoTemp);
 
-exports.getBuild = gulp.series(getBuildSACCdata, getBuildSACCcountries);
+exports.getSACC = gulp.series(getBuildSACCdata, getBuildSACCcountries);
 
 exports.deploy_E = gulp.series(deployExperimental);
 exports.deploy_P = gulp.series(deployPotoococha);

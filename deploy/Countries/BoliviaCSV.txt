@@ -204,9 +204,9 @@ E,Horned Curassow,Pauxi unicornis
 ,Needle-billed Hermit,P. philippii
 ,Great-billed Hermit,P. malaris
 ,Green-fronted Lancebill,Doryfera ludovicae
-,Wedge-billed Hummingbird,Schistes geoffroyi
+,Geoffroy's Daggerbill,Schistes geoffroyi
 ,Brown Violetear,Colibri delphinae
-,Green Violetear,C. thalassinus
+,Lesser Violetear,C. cyanotus
 ,Sparkling Violetear,C. coruscans
 ,White-vented Violetear,C. serrirostris
 ,Horned Sungem,Heliactin bilophus
@@ -258,18 +258,18 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,Glittering-bellied Emerald,C. lucidus
 ,Violet-headed Hummingbird,Klais guimeti
 ,Gray-breasted Sabrewing,Campylopterus largipennis
-,Swallow-tailed Hummingbird,Eupetomena macroura
 ,Fork-tailed Woodnymph,Thalurania furcata
 ,Many-spotted Hummingbird,Taphrospilus hypostictus
+,Swallow-tailed Hummingbird,Eupetomena macroura
+,Versicolored Emerald,Chrysuronia versicolor
+,Golden-tailed Sapphire,C. oenone
 ,White-throated Hummingbird,Leucochloris albicollis
-,White-bellied Hummingbird,Amazilia chionogaster
-,Versicolored Emerald,A. versicolor
-,Glittering-throated Emerald,A. fimbriata
-,Sapphire-spangled Emerald,A. lactea
-,Golden-tailed Sapphire,Chrysuronia oenone
+,Glittering-throated Emerald,Chionomesa fimbriata
+,Sapphire-spangled Emerald,C. lactea
 ,Rufous-throated Sapphire,Hylocharis sapphirina
-,White-chinned Sapphire,H. cyanus
 ,Gilded Hummingbird,H. chrysura
+,White-bellied Hummingbird,"Amazilia" chionogaster
+,White-chinned Sapphire,Chlorestes cyanus
 
 ,HOATZIN,OPISTHOCOMIDAE
 ,Hoatzin,Opisthocomus hoazin
@@ -895,8 +895,8 @@ E,Masked Antpitta,Hylopezus auricularis
 ,Olive-backed Foliage-gleaner,A. infuscatus
 ,Spotted Barbtail,Premnoplex brunnescens
 ,Pearled Treerunner,Margarornis squamiger
+,Tawny Tit-Spinetail,Sylviorthorhynchus yanacensis
 ,Brown-capped Tit-Spinetail,Leptasthenura fuliginiceps
-,Tawny Tit-Spinetail,L. yanacensis
 ,Plain-mantled Tit-Spinetail,L. aegithaloides
 ,Andean Tit-Spinetail,L. andicola
 ,Rufous-fronted Thornbird,Phacellodomus rufifrons
@@ -1276,7 +1276,8 @@ E,Bolivian Spinetail,C. henricae
 ,GNATCATCHERS,POLIOPTILIDAE
 ,Half-collared Gnatwren,Microbates cinereiventris
 ,Long-billed Gnatwren,Ramphocaenus melanurus
-,Masked Gnatcatcher,Polioptila dumicola
+,Klage's Gnatcatcher,Polioptila paraensis
+,Masked Gnatcatcher,P. dumicola
 
 ,DONACOBIUS,DONACOBIIDAE
 ,Black-capped Donacobius,Donacobius atricapilla
@@ -1353,6 +1354,10 @@ E,Bolivian Brushfinch,A. rufinucha
 ,Fulvous-headed Brushfinch,A. fulviceps
 
 ,BLACKBIRDS,ICTERIDAE
+,Bobolink,Dolichonyx oryzivorus
+,Red-breasted Meadowlark,Leistes militaris
+,White-browed Meadowlark,L. superciliaris
+,Yellow-billed Cacique,Amblycercus holosericeus
 ,Russet-backed Oropendola,Psarocolius angustifrons
 ,Dusky-green Oropendola,P. atrovirens
 ,Green Oropendola,P. viridis
@@ -1365,24 +1370,20 @@ E,Bolivian Brushfinch,A. rufinucha
 ,Mountain Cacique,C. chrysonotus
 ,Red-rumped Cacique,C. haemorrhous
 ,Casqued Cacique,C. oseryi
-,Yellow-billed Cacique,Amblycercus holosericeus
 ,Venezuelan Troupial,Icterus icterus
 ,Epaulet Oriole,I. cayanensis
 ,Variable Oriole,I. pyrrhopterus
-,Velvet-fronted Grackle,Lampropsar tanagrinus
-,Chopi Blackbird,Gnorimopsar chopi
-,Scarlet-headed Blackbird,Amblyramphus holosericeus
-,Unicolored Blackbird,Agelasticus cyanopus
-,Yellow-winged Blackbird,A. thilius
-,Chestnut-capped Blackbird,Chrysomus ruficapillus
-E,Bolivian Blackbird,Oreopsar bolivianus
-,Grayish Baywing,Agelaioides badius
 ,Screaming Cowbird,Molothrus rufoaxillaris
 ,Giant Cowbird,M. oryzivorus
 ,Shiny Cowbird,M. bonariensis
-,Bobolink,Dolichonyx oryzivorus
-,Red-breasted Meadowlark,Sturnella militaris
-,White-browed Meadowlark,S. superciliaris
+,Velvet-fronted Grackle,Lampropsar tanagrinus
+,Scarlet-headed Blackbird,Amblyramphus holosericeus
+,Chopi Blackbird,Gnorimopsar chopi
+,Grayish Baywing,Agelaioides badius
+E,Bolivian Blackbird,Oreopsar bolivianus
+,Unicolored Blackbird,Agelasticus cyanopus
+,Yellow-winged Blackbird,A. thilius
+,Chestnut-capped Blackbird,Chrysomus ruficapillus
 
 ,WOOD-WARBLERS,PARULIDAE
 ,Black-and-white Warbler,Mniotilta varia
@@ -1444,8 +1445,8 @@ E,Bolivian Blackbird,Oreopsar bolivianus
 ,Black-hooded Sierra Finch,Phrygilus atriceps
 ,Peruvian Sierra Finch,P. punensis
 ,Mourning Sierra Finch,P. fruticeti
-,Plumbeous Sierra Finch,P. unicolor
-,Ash-breasted Sierra Finch,P. plebejus
+,Plumbeous Sierra Finch,Geospizopsis unicolor
+,Ash-breasted Sierra Finch,G. plebejus
 ,Band-tailed Sierra Finch,Porphyrospiza alaudina
 ,Blue Finch,P. caerulescens
 ,Red-backed Sierra Finch,Idiopsar dorsalis

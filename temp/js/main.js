@@ -12,6 +12,7 @@ var checklistAuthorsPanel;
 var checklistFlyoutText;
 
 var countryModal;
+var modalOverlay;
 
 var gNumDays;
 var gStartDate;
@@ -38,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
   countryButton.addEventListener("click", toggleCountryModal);
 
   numDaysButton = document.getElementById("numDays");
-  numDaysButton.addEventListener("click", setNumDays);
+  numDaysButton.addEventListener("click", setNumDays)
+  // onKeyUp listener for tabbing and entering
+  numDaysButton.addEventListener('keyup', setNumDays);
 
   numDaysButton.children.item(11).classList.add("highlight");
   gNumDays = 10;
@@ -46,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
   sampleTable = document.getElementById("sampleTable");
   sampleTable.classList.add("numDays" + String(gNumDays));
 
-  // previousNumDaysClass = "numDays" + String(gNumDays);
   previousNumDaysClass = "numDays10";
 
   pdfButton = document.getElementById("pdfButton");
@@ -66,31 +68,28 @@ document.addEventListener("DOMContentLoaded", function () {
   showEndemics.addEventListener("click", toggleSampleTableShowEndemics);
   sciNames.addEventListener("click", toggleSampleTableSciNames);
   italics.addEventListener("click", toggleSampleTableItalics);
+  
+  lineNumbers.nextElementSibling.addEventListener("keyup", toggleSampleTableLineNumbers);
+  leftCheck.nextElementSibling.addEventListener("keyup", toggleSampleTableLeftChecks);
+  showEndemics.nextElementSibling.addEventListener("keyup", toggleSampleTableShowEndemics);
+  sciNames.nextElementSibling.addEventListener("keyup", toggleSampleTableSciNames);
+  italics.nextElementSibling.addEventListener("keyup", toggleSampleTableItalics);
 
   checklistAuthorsPanel = document.getElementById("checklistAuthorsPanel");
   checklistFlyoutText = document.getElementById("checklistFlyoutText");
 
   document.querySelector(".country-menu").addEventListener("click", setCountry);
+  document.querySelector(".country-menu").addEventListener("keyup", setCountry);  
+  
   leftCheck.checked = true;
 
   countryModal = document.getElementById("countryModal");
+  modalOverlay = document.getElementById("md-overlay");
 
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
 
   target = document.getElementById("checklistArticle");
-
-
-  // var browser = navigator.userAgent;
-  // if (browser.indexOf("Edge") > -1) fadeMap();
-  // setUpMapBodyIntersectionObserver();
-
-
-  // only set for smaller widths, here and in onResizeWindow()
-
-  // FIXME : get rid of checkWindowScroll
-  // if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
-  // window.addEventListener("scroll", checkWindowScroll);
 });
 
 //   *******************   end of  (document).ready(function()   ******************************************
@@ -154,36 +153,22 @@ function fadeMap(entries, observer) {
 //   console.log("Resize: window.width = " + window.innerWidth);
 // }
 
-// TODO : debounce this if going to use it
-// function checkWindowScroll() {
-
-//   var docElement = document.documentElement;
-//   var winElement = window;
-
-//   if ((docElement.scrollHeight - winElement.innerHeight) <= winElement.pageYOffset) {
-//     document.getElementById("currentMap").style.opacity = 0;
-//   }
-//   else document.getElementById("currentMap").style.opacity = 1;
-// }
 
 function sendEmail() {
-  console.log("in sendEmail");
+  // TODO : can this be obfuscated?  unicode??
   window.location.href = "mailto:mark@potoococha.net";
 }
-
-// FIXME : why is this called twice? for each countryButton select
 
 function toggleCountryModal(evt) {
 
   countryModal.classList.toggle("menu-show");
 
-  document.getElementsByClassName("md-overlay")[0].classList.toggle("show");
-
-  // document.querySelector(".country-menu").classList.toggle("show");
+  modalOverlay.classList.toggle("show");
 
   if (evt) evt.stopPropagation();
-
-  // setUpMapBodyIntersectionObserver();
+  
+  // taxPanel.classList.add("translateDown");
+  document.getElementById("tax-panel").classList.add("translateDown");
 
   // TODO : if scroll at bottom (i.e., looking at checklists ), set it there again
 
@@ -198,23 +183,63 @@ function toggleCountryModal(evt) {
   // };
 }
 
-function toggleSampleTableShowEndemics() {
+function toggleSampleTableShowEndemics(evt) {
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup") {
+    if (evt.keyCode !== 13) {
+      return;
+    }
+    else {
+      evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
+    }
+  }
 
   sampleTable.querySelector("td.endemical").classList.toggle("showEndemics");
 }
 
-function toggleSampleTableSciNames() {
+function toggleSampleTableSciNames(evt) {
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup") {
+    if (evt.keyCode !== 13) {
+      return;
+    }
+    else {
+      evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
+    }
+  }
 
   sampleTable.classList.toggle("noScientificNames");
   italics.disabled = !italics.disabled;
 }
 
-function toggleSampleTableItalics() {
+function toggleSampleTableItalics(evt) {
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup") {
+    if (evt.keyCode !== 13) {
+      return;
+    }
+    else {
+      evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
+    }
+  }
 
   sampleTable.classList.toggle("noItalics");
 }
 
-function toggleSampleTableLeftChecks() {
+function toggleSampleTableLeftChecks(evt) {
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup") {
+    if (evt.keyCode !== 13) {
+      return;
+    }
+    else {
+      evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
+    }
+  }
 
   var list = sampleTable.querySelectorAll(".leftCheckBox, .familyHidden");
   Array.prototype.forEach.call(list, function (item) {
@@ -222,12 +247,27 @@ function toggleSampleTableLeftChecks() {
   });
 }
 
-function toggleSampleTableLineNumbers() {
+function toggleSampleTableLineNumbers(evt) {
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup") {
+    if (evt.keyCode !== 13) {
+      return;
+    }
+    else {
+      evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
+    }
+  }
 
   sampleTable.querySelector("td.lineNumbers").classList.toggle("showLineNumbers");
 }
 
 function setCountry(evt) {
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup" && evt.keyCode !== 13) {
+    return;
+  }
 
   // find and remove the previous highlighted Country
   var previousHighlightedCountry = evt.target.parentNode.parentNode.querySelector(".highlight");
@@ -240,9 +280,9 @@ function setCountry(evt) {
     // TODO : put code for scrolling page here
     map.getElementsByClassName("drawing")[0].classList.add("active");
   }
-  else {
+  // else {
 
-  }
+  // }
 
   toggleCountryModal();
 
@@ -317,7 +357,12 @@ function setChecklistAuthors(data) {
 }
 
 function setNumDays(evt) {
-
+  
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup" && evt.keyCode !== 13) {
+    return;
+  }
+  
   var day = evt.target;
   var list;   // will be a NodeList of th/td's with cds class applies to them
 

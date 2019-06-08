@@ -1,8 +1,3 @@
-// $bodyBorderColor : darken(#A65751, 5%);
-// $bgColor  :  #424f54;
-// $bgColor  :  #5c5c65;
-// $bgColor  :  #323f44;
-
 $bgColor  :  #53595d;
 
 $titleTextFontColor : #fff;
@@ -10,10 +5,8 @@ $titleBannerColor : rgb(186, 141, 30);
 $bodyBorderColor : $titleBannerColor;
 
 $panelColor : darken($bgColor, 5%);
-// $panelColor : lighten($bgColor, 15%);
 $slateHoverColor : rgb(56, 61, 61);
 
-// $searchHeaderColor : rgb(41, 41, 41);
 $searchHeaderColor : $slateHoverColor;
 
 // $turquoiseHighlightColor : #64829a;
@@ -24,11 +17,7 @@ $genericButtonColor  :  #a65751;
 
 $genericButtonHighlightColor : darken($bgColor, 7%);
 
-// $panelFlyoutColor : rgba(0,0,0,0.5);
 $panelFlyoutColor : $slateHoverColor;
-// $panelFlyoutColor : lighten($slateHoverColor, 10%);
-
-// $panelFlyoutFontColor : lighten($bgColor, 50%);
 $panelFlyoutFontColor : white;
 
 $familyOpenColor : $bgColor;
@@ -36,10 +25,14 @@ $familyOpenColor : $bgColor;
 $birdRolloverColor : #A65751;
 $birdActiveColor : #A65751;
 
-$countryMenuColor : darken($bgColor, 15%);
+// $countryMenuColor : darken($bgColor, 15%);
+$countryMenuColor : #333;
 // $countryMenuHighlightColor : #ce402e;
-$countryMenuHighlightColor : rgb(62, 62, 62);
+// $countryMenuHighlightColor : rgb(62, 62, 62);
+$countryMenuHighlightColor : $titleBannerColor;
 
+// $overlayColor : rgb(82, 81, 81);
+$overlayColor : rgb(65, 93, 100);
 $overlayInfoColor : #ce402e;
 
 $mapCollectionColor: $panelFlyoutColor;

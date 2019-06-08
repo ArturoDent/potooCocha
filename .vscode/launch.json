@@ -36,7 +36,8 @@
                 "serve"
             ],
 
-            "preLaunchTask": "Gulp: watch",
+            // "preLaunchTask": "Gulp: watch",
+            "preLaunchTask": "Echo vars",
             "postDebugTask": "postdebugKill"
         },
         {

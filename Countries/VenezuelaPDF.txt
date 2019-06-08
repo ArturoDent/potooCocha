@@ -170,9 +170,9 @@ HUMMINGBIRDS,TROCHILIDAE
 20,,Great-billed Hermit,P. malaris
 ,,Green-fronted Lancebill,Doryfera ludovicae
 ,,Blue-fronted Lancebill,D. johannae
-,,Wedge-billed Hummingbird,Schistes geoffroyi
+,,Geoffroy's Daggerbill,Schistes geoffroyi
 ,,Brown Violetear,Colibri delphinae
-25,,Green Violetear,C. thalassinus
+25,,Lesser Violetear,C. cyanotus
 ,,Sparkling Violetear,C. coruscans
 ,,Black-eared Fairy,Heliothryx auritus
 ,,White-tailed Goldenthroat,Polytmus guainumbi
@@ -186,7 +186,7 @@ HUMMINGBIRDS,TROCHILIDAE
 ,,Orange-throated Sunangel,Heliangelus mavors
 ,,Amethyst-throated Sunangel,H. amethysticollis
 ,,Black-bellied Thorntail,Discosura langsdorffi
-,,Racket-tailed Coquette,D. longicaudus
+,,Racket-tipped Thorntail,D. longicaudus
 40,,Tufted Coquette,Lophornis ornatus
 ,,Spangled Coquette,L. stictolophus
 ,,Festive Coquette,L. chalybeus
@@ -225,30 +225,30 @@ HUMMINGBIRDS,TROCHILIDAE
 75,,Narrow-tailed Emerald,C. stenurus
 ,endemic,Green-tailed Emerald,C. alice
 ,,Short-tailed Emerald,C. poortmani
-,,Blue-chinned Sapphire,Chlorestes notata
 ,,Violet-headed Hummingbird,Klais guimeti
-80,,Gray-breasted Sabrewing,Campylopterus largipennis
-,,Rufous-breasted Sabrewing,C. hyperythrus
+,,Gray-breasted Sabrewing,Campylopterus largipennis
+80,,Rufous-breasted Sabrewing,C. hyperythrus
 ,,White-tailed Sabrewing,C. ensipennis
 ,,Lazuline Sabrewing,C. falcatus
 ,,Buff-breasted Sabrewing,C. duidae
-85,,White-vented Plumeleteer,Chalybura buffonii
-,,Crowned Woodnymph,Thalurania colombica
+,,White-vented Plumeleteer,Chalybura buffonii
+85,,Crowned Woodnymph,Thalurania colombica
 ,,Fork-tailed Woodnymph,T. furcata
 ,,Buffy Hummingbird,Leucippus fallax
+,,Steely-vented Hummingbird,Saucerottia  saucerottei
+,,Green-bellied Hummingbird,S. viridigaster
+90,,Copper-rumped Hummingbird,S. tobaci
 ,,Rufous-tailed Hummingbird,Amazilia tzacatl
-90,,Plain-bellied Emerald,A. leucogaster
-,,Versicolored Emerald,A. versicolor
-,,White-chested Emerald,A. brevirostris
-,,Glittering-throated Emerald,A. fimbriata
-,,Sapphire-spangled Emerald,A. lactea
-95,,Steely-vented Hummingbird,A. saucerottei
-,,Green-bellied Hummingbird,A. viridigaster
-,,Copper-rumped Hummingbird,A. tobaci
-,,Golden-tailed Sapphire,Chrysuronia oenone
-,,Shining-green Hummingbird,Lepidopyga goudoti
+,,Versicolored Emerald,Chrysuronia versicolor
+,,Shining-green Hummingbird,C. goudoti
+,,Golden-tailed Sapphire,C. oenone
+95,,White-chested Emerald,C. brevirostris
+,,Plain-bellied Emerald,C. leucogaster
+,,Glittering-throated Emerald,Chionomesa fimbriata
+,,Sapphire-spangled Emerald,C. lactea
 ,,Rufous-throated Sapphire,Hylocharis sapphirina
-,,White-chinned Sapphire,H. cyanus
+,,White-chinned Sapphire,Chlorestes cyanus
+,,Blue-chinned Sapphire,C. notata
 HOATZIN,OPISTHOCOMIDAE
 ,,Hoatzin,Opisthocomus hoazin
 LIMPKIN,ARAMIDAE
@@ -695,7 +695,7 @@ ANTBIRDS,THAMNOPHILIDAE
 ,,Rufous-bellied Antwren,Isleria guttata
 25,,Spot-winged Antshrike,Pygiptila stellaris
 ,,Brown-bellied Stipplethroat,Epinecrophylla gutturalis
-,,Rio Negro Stipplethroat,E. pyrrhonota
+,,Rufous-backed Stipplethroat,E. haematonota
 ,,Pygmy Antwren,Myrmotherula brachyura
 ,,Yellow-throated Antwren,M. ambigua
 30,,Guianan Streaked-Antwren,M. surinamensis
@@ -882,8 +882,8 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Lesser Elaenia,E. chiriquensis
 ,,Rufous-crowned Elaenia,E. ruficeps
 ,,Mountain Elaenia,E. frantzii
-20,,Great Elaenia,E. dayi
-,,Sierran Elaenia,E. pallatangae
+20,,Tepui Elaenia,E. olivina
+,,Great Elaenia,E. dayi
 ,,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,,White-lored Tyrannulet,O. inerme
 ,,Southern Beardless-Tyrannulet,Camptostoma obsoletum
@@ -1177,6 +1177,7 @@ GNATCATCHERS,POLIOPTILIDAE
 ,,Collared Gnatwren,Microbates collaris
 ,,Long-billed Gnatwren,Ramphocaenus melanurus
 ,,Tropical Gnatcatcher,Polioptila plumbea
+,,Rio Negro Gnatcatcher,P. facilis
 ,,Guianan Gnatcatcher,P. guianensis
 DONACOBIUS,DONACOBIIDAE
 ,,Black-capped Donacobius,Donacobius atricapilla
@@ -1199,10 +1200,12 @@ THRUSHES,TURDIDAE
 ,,Cocoa Thrush,T. fumigatus
 ,,Spectacled Thrush,T. nudigenis
 ,,Lawrence's Thrush,T. lawrencii
-15,,Black-billed Thrush,T. ignobilis
+15,,Pantepui Thrush,T. murinus
+,,Black-billed Thrush,T. ignobilis
+,,Campina Thrush,T. arthuri
 ,,Chestnut-bellied Thrush,T. fulviventris
 ,,Black-hooded Thrush,T. olivater
-,,Great Thrush,T. fuscater
+20,,Great Thrush,T. fuscater
 ,,Glossy-black Thrush,T. serranus
 ,,White-necked Thrush,T. albicollis
 MOCKINGBIRDS,MIMIDAE
@@ -1263,35 +1266,35 @@ SPARROWS,PASSERELLIDAE
 ,,Pale-naped Brushfinch,A. pallidinucha
 ,,Yellow-breasted Brushfinch,A. latinuchus
 BLACKBIRDS,ICTERIDAE
-,,Russet-backed Oropendola,Psarocolius angustifrons
+,,Bobolink,Dolichonyx oryzivorus
+,,Eastern Meadowlark,Sturnella magna
+,,Red-breasted Meadowlark,Leistes militaris
+,,Yellow-billed Cacique,Amblycercus holosericeus
+5,,Russet-backed Oropendola,Psarocolius angustifrons
 ,,Green Oropendola,P. viridis
 ,,Crested Oropendola,P. decumanus
 ,,Olive Oropendola,P. bifasciatus
-5,,Solitary Black Cacique,Cacicus solitarius
-,,Scarlet-rumped Cacique,C. uropygialis
+,,Solitary Black Cacique,Cacicus solitarius
+10,,Scarlet-rumped Cacique,C. uropygialis
 ,,Yellow-rumped Cacique,C. cela
 ,,Mountain Cacique,C. chrysonotus
 ,,Red-rumped Cacique,C. haemorrhous
-10,,Yellow-billed Cacique,Amblycercus holosericeus
 ,,Venezuelan Troupial,Icterus icterus
-,,Yellow-tailed Oriole,I. mesomelas
+15,,Yellow-tailed Oriole,I. mesomelas
 ,,Epaulet Oriole,I. cayanensis
 ,,Orchard Oriole,I. spurius
-15,,Orange-crowned Oriole,I. auricapillus
+,,Orange-crowned Oriole,I. auricapillus
 ,,Yellow-backed Oriole,I. chrysater
-,,Baltimore Oriole,I. galbula
+20,,Baltimore Oriole,I. galbula
 ,,Yellow Oriole,I. nigrogularis
-,,Golden-tufted Grackle,Macroagelaius imthurni
-20,,Oriole Blackbird,Gymnomystax mexicanus
-,,Velvet-fronted Grackle,Lampropsar tanagrinus
-,,Yellow-hooded Blackbird,Chrysomus icterocephalus
 ,,Giant Cowbird,Molothrus oryzivorus
 ,,Shiny Cowbird,M. bonariensis
-25,,Carib Grackle,Quiscalus lugubris
-,,Great-tailed Grackle,Q. mexicanus
-,,Bobolink,Dolichonyx oryzivorus
-,,Eastern Meadowlark,Sturnella magna
-,,Red-breasted Meadowlark,S. militaris
+,,Carib Grackle,Quiscalus lugubris
+25,,Great-tailed Grackle,Q. mexicanus
+,,Velvet-fronted Grackle,Lampropsar tanagrinus
+,,Oriole Blackbird,Gymnomystax mexicanus
+,,Golden-tufted Grackle,Macroagelaius imthurni
+,,Yellow-hooded Blackbird,Chrysomus icterocephalus
 WOOD-WARBLERS,PARULIDAE
 ,,Ovenbird,Seiurus aurocapilla
 ,,Worm-eating Warbler,Helmitheros vermivorum
@@ -1382,7 +1385,7 @@ TANAGERS,THRAUPIDAE
 15,,Orange-fronted Yellow-Finch,S. columbiana
 ,,Saffron Finch,S. flaveola
 ,,Grassland Yellow-Finch,S. luteola
-,,Plumbeous Sierra Finch,Phrygilus unicolor
+,,Plumbeous Sierra Finch,Geospizopsis unicolor
 ,,Plain-colored Seedeater,Catamenia inornata
 20,,Paramo Seedeater,C. homochroa
 ,,Glossy Flowerpiercer,Diglossa lafresnayii

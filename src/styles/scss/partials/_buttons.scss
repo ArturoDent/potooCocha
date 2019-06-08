@@ -27,6 +27,8 @@
 }
 
 .genericButton:hover,.genericButton:focus {
+    // outline : none;
+    outline: white 1px solid;
     text-shadow  :  0.077rem 0.077rem 0.077rem black;
     box-shadow  :  inset 20ch 0 0.38rem 1.15rem #333, 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1);
 }

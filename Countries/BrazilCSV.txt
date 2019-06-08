@@ -249,7 +249,7 @@ E,Hooded Visorbearer,A. lumachella
 ,Green-throated Mango,Anthracothorax viridigula
 ,Black-throated Mango,A. nigricollis
 ,Black-bellied Thorntail,Discosura langsdorffi
-,Racket-tailed Coquette,D. longicaudus
+,Racket-tipped Thorntail,D. longicaudus
 ,Tufted Coquette,Lophornis ornatus
 ,Dot-eared Coquette,L. gouldii
 E,Frilled Coquette,L. magnificus
@@ -265,30 +265,30 @@ E,Stripe-breasted Starthroat,H. squamosus
 ,Amethyst Woodstar,Calliphlox amethystina
 ,Blue-tailed Emerald,Chlorostilbon mellisugus
 ,Glittering-bellied Emerald,C. lucidus
-,Blue-chinned Sapphire,Chlorestes notata
 E,Green-crowned Plovercrest,Stephanoxis lalandi
 ,Purple-crowned Plovercrest,S. loddigesii
 ,Gray-breasted Sabrewing,Campylopterus largipennis
 ,Rufous-breasted Sabrewing,C. hyperythrus
 ,Buff-breasted Sabrewing,C. duidae
-,Swallow-tailed Hummingbird,Eupetomena macroura
 ,Fork-tailed Woodnymph,Thalurania furcata
 E,Long-tailed Woodnymph,T. watertonii
 ,Violet-capped Woodnymph,T. glaucopis
-E,Sombre Hummingbird,Aphantochroa cirrochloris
+,Swallow-tailed Hummingbird,Eupetomena macroura
+E,Sombre Hummingbird,E. cirrochloris
+,Olive-spotted Hummingbird,Talaphorus chlorocercus
+,Green-bellied Hummingbird,Saucerottia viridigaster
+,Versicolored Emerald,Chrysuronia versicolor
+,Golden-tailed Sapphire,C. oenone
+,White-chested Emerald,C. brevirostris
+,Plain-bellied Emerald,C. leucogaster
 ,White-throated Hummingbird,Leucochloris albicollis
-,Olive-spotted Hummingbird,Leucippus chlorocercus
-,White-bellied Hummingbird,Amazilia chionogaster
-,Plain-bellied Emerald,A. leucogaster
-,Versicolored Emerald,A. versicolor
-,White-chested Emerald,A. brevirostris
-,Glittering-throated Emerald,A. fimbriata
-,Sapphire-spangled Emerald,A. lactea
-,Green-bellied Hummingbird,A. viridigaster
-,Golden-tailed Sapphire,Chrysuronia oenone
+,Glittering-throated Emerald,Chionomesa fimbriata
+,Sapphire-spangled Emerald,C. lactea
 ,Rufous-throated Sapphire,Hylocharis sapphirina
-,White-chinned Sapphire,H. cyanus
 ,Gilded Hummingbird,H. chrysura
+,White-bellied Hummingbird,"Amazilia" chionogaster
+,White-chinned Sapphire,Chlorestes cyanus
+,Blue-chinned Sapphire,C. notata
 
 ,HOATZIN,OPISTHOCOMIDAE
 ,Hoatzin,Opisthocomus hoazin
@@ -975,7 +975,6 @@ E,Plumbeous Antvireo,D. plumbeus
 ,Spot-winged Antshrike,Pygiptila stellaris
 ,Brown-bellied Stipplethroat,Epinecrophylla gutturalis
 ,White-eyed Stipplethroat,E. leucophthalma
-,Rio Negro Stipplethroat,E. pyrrhonota
 ,Rufous-backed Stipplethroat,E. haematonota
 ,Rio Madeira Stipplethroat,E. amazonica
 ,Ornate Stipplethroat,E. ornata
@@ -1269,9 +1268,9 @@ E,Pink-legged Graveteiro,Acrobatornis fonsecai
 E,Striated Softtail,Thripophaga macroura
 ,Plain Softtail,T. fusciceps
 ,Straight-billed Reedhaunter,Limnoctites rectirostris
+,Sulphur-bearded Reedhaunter,L. sulphuriferus
 ,Rusty-backed Spinetail,Cranioleuca vulpina
 ,Parker's Spinetail,C. vulpecula
-,Sulphur-throated Spinetail,C. sulphurifera
 ,Stripe-crowned Spinetail,C. pyrrhophia
 ,Olive Spinetail,C. obsoleta
 E,Pallid Spinetail,C. pallida
@@ -1328,9 +1327,9 @@ E,Noronha Elaenia,E. ridleyana
 ,Plain-crested Elaenia,E. cristata
 ,Lesser Elaenia,E. chiriquensis
 ,Rufous-crowned Elaenia,E. ruficeps
-,Highland Elaenia,E. obscura
+,Tepui Elaenia,E. olivina
 ,Great Elaenia,E. dayi
-,Sierran Elaenia,E. pallatangae
+,Small-headed Elaenia,E. sordida
 ,White-lored Tyrannulet,Ornithion inerme
 ,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,Suiriri Flycatcher,Suiriri suiriri
@@ -1697,7 +1696,10 @@ E,Gray Wren,C. griseus
 ,Long-billed Gnatwren,Ramphocaenus melanurus
 ,Tropical Gnatcatcher,Polioptila plumbea
 ,Creamy-bellied Gnatcatcher,P. lactea
+,Rio Negro Gnatcatcher,P. facilis
 ,Guianan Gnatcatcher,P. guianensis
+,Klage's Gnatcatcher,P. paraensis
+E,Inambari Gnatcatcher,P. attenboroughi
 ,Masked Gnatcatcher,P. dumicola
 
 ,DONACOBIUS,DONACOBIIDAE
@@ -1773,6 +1775,11 @@ E,Half-collared Sparrow,A. semitorquatus
 ,Tepui Brushfinch,Atlapetes personatus
 
 ,BLACKBIRDS,ICTERIDAE
+,Bobolink,Dolichonyx oryzivorus
+,Eastern Meadowlark,Sturnella magna
+,Red-breasted Meadowlark,Leistes militaris
+,White-browed Meadowlark,L. superciliaris
+,Pampas Meadowlark,L. defilippii
 ,Russet-backed Oropendola,Psarocolius angustifrons
 ,Green Oropendola,P. viridis
 ,Crested Oropendola,P. decumanus
@@ -1789,12 +1796,18 @@ E,Campo Troupial,I. jamacaii
 ,Epaulet Oriole,I. cayanensis
 ,Variable Oriole,I. pyrrhopterus
 ,Yellow Oriole,I. nigrogularis
-,Golden-tufted Grackle,Macroagelaius imthurni
-,Oriole Blackbird,Gymnomystax mexicanus
+,Screaming Cowbird,Molothrus rufoaxillaris
+,Giant Cowbird,M. oryzivorus
+,Shiny Cowbird,M. bonariensis
+,Carib Grackle,Quiscalus lugubris
 ,Velvet-fronted Grackle,Lampropsar tanagrinus
-,Chopi Blackbird,Gnorimopsar chopi
-E,Forbes's Blackbird,Anumara forbesi
+,Oriole Blackbird,Gymnomystax mexicanus
+,Golden-tufted Grackle,Macroagelaius imthurni
 ,Scarlet-headed Blackbird,Amblyramphus holosericeus
+E,Forbes's Blackbird,Anumara forbesi
+,Chopi Blackbird,Gnorimopsar chopi
+,Grayish Baywing,Agelaioides badius
+E,Pale Baywing,A. fringillarius
 ,Unicolored Blackbird,Agelasticus cyanopus
 ,Yellow-winged Blackbird,A. thilius
 ,Chestnut-capped Blackbird,Chrysomus ruficapillus
@@ -1802,17 +1815,6 @@ E,Forbes's Blackbird,Anumara forbesi
 ,Saffron-cowled Blackbird,Xanthopsar flavus
 ,Yellow-rumped Marshbird,Pseudoleistes guirahuro
 ,Brown-and-yellow Marshbird,P. virescens
-,Grayish Baywing,Agelaioides badius
-E,Pale Baywing,A. fringillarius
-,Screaming Cowbird,Molothrus rufoaxillaris
-,Giant Cowbird,M. oryzivorus
-,Shiny Cowbird,M. bonariensis
-,Carib Grackle,Quiscalus lugubris
-,Bobolink,Dolichonyx oryzivorus
-,Eastern Meadowlark,Sturnella magna
-,Red-breasted Meadowlark,S. militaris
-,White-browed Meadowlark,S. superciliaris
-,Pampas Meadowlark,S. defilippii
 
 ,WOOD-WARBLERS,PARULIDAE
 ,Northern Waterthrush,Parkesia noveboracensis
