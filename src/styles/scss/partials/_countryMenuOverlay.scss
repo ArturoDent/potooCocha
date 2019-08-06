@@ -1,0 +1,113 @@
+#countryMenuLayer {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $overlayColor;
+  
+  pointer-events: none;
+  z-index: 2;
+  
+  transition: opacity 300ms 200ms ease-in-out;
+  will-change: opacity;
+}
+
+#countryMenuLayer.show {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 300ms 100ms ease-in-out;
+}
+
+#countryButton {
+  position: fixed;
+  // top: calc(1.5rem + 20px);
+  top: calc(1.5rem + 100px);
+  right: 4.8vw;
+  transform: translateX(-22vw);
+  
+  width: 15vw;
+  height: auto;
+  padding : 0.7ch 0 0.8ch 2ch;
+  
+  text-align  :  left;
+  cursor: pointer;
+  z-index: 3;
+  
+  border: 0.045rem solid $bgColor;
+  border-radius: 0.2rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: $titleBannerColor;
+  
+  box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+  // transition  :  transform 500ms ease-out, background-color 400ms, top 500ms ease-out, right 500ms ease-out;
+  transition  :  background-color 400ms, right 500ms 500ms ease-in-out;
+}
+
+#countryButton.slideLeft {  
+  // transform: translateX(-22vw);
+  // top: calc(1.5rem + 100px);
+  background-color: $titleBannerColor;  
+  transform: translateX(0);
+  // transition: transform 300ms ease-out, background-color 400ms;
+}
+
+#countryButton.countryChosen {  
+  // transform: translateX(-22vw);
+  // background-color: red;
+  top: 20px;
+  right: calc(5vw);
+  // transform: translateX(0);
+  width: 90px;
+  height: 80px;
+  padding : 0;
+  
+  text-align  :  center;
+  // border-color: $titleBannerColor;
+  border-color: darkgrayr;
+  border-left: none;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255, 0.5);
+  
+  // transition: right 500ms 500ms ease-in-out;
+}
+
+#countryButton:after {
+  content  :  '';
+  position  :  absolute;
+  top  :  -0.5rem;
+  left  :  102%;
+  border-style  :  solid;
+  border-width  :  1.7rem;
+  // border-color  :  transparent transparent transparent rgb(199, 199, 199);
+  border-color  :  transparent transparent transparent $bgColor;
+  // transition : all 200ms 500ms ease-in;
+  
+  // filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0.077rem 0 0.077rem lighten($titleBannerColor, 10%)) drop-shadow(-0.077rem 0 0.077rem lighten($titleBannerColor, 10%));
+}
+
+#countryButton.countryChosen:after {
+  top  :  12.5px;
+  left  :  107%;
+  // transition : all 200ms 500ms ease-in;
+  
+  // filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1));
+  // filter: drop-shadow(0.077rem 0 0.077rem lighten($titleBannerColor, 10%)) drop-shadow(-0.077rem 0 0.077rem lighten($titleBannerColor, 10%));
+}
+
+// #countryButton:hover:after, #countryButton:focus:after {
+//   border-color  :  transparent transparent transparent white;
+// }
+
+#countryButton:hover, #countryButton:focus {
+  outline: none;
+  border: 0.045rem solid white;
+  
+  background-color: $bgColor;
+  // background-color: darken($titleBannerColor, 5%);
+  // background: rgb(167,95,29);
+}

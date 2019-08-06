@@ -2,12 +2,16 @@
 
 .slideUpWrapper  {
     position: relative;
+    // position: absolute;
+    top: -8rem;
+    // top: 13ch;
     overflow-y: hidden;
     max-height: 27rem;
 
     border-top: none;
     border-bottom: none;
-    transition: opacity  450ms, max-height 600ms 250ms;
+    transform: translateY(0) scaleY(100%);
+    transition: opacity 450ms, transform 600ms 250ms ease-in-out;
 }
 
 .slideUpWrapper.panel  {
@@ -15,30 +19,65 @@
 }
 
 .slideUpWrapper.closeInstructions  {
-    max-height: 0;
+    transform: scaleY(0) translateY(-27rem);
     opacity: 0;
-    transition: max-height 450ms, opacity 600ms 250ms;
 }
 
-.slideUpWrapper.closeInstructions +  #searchForm  {
-    background-color: transparent;
-    transition: background 450ms;
+.slideUpWrapper +  #searchForm    {
+    // transform: translateY(0);
+    transform: translateY(-8rem);
+    transition: transform 400ms 200ms ease-in-out;
 }
 
-.slideUpWrapper.closeInstructions +  #searchForm  input {
-    background-color: $bgColor;
-    transition: background 350ms 300ms;
+.slideUpWrapper.closeInstructions +  #searchForm   {
+    transform: translateY(-24rem);
+    transition: transform 400ms ease-in-out;
 }
+
+#results-panel    {
+    transform-origin: top left;    
+    transform: scaleY(0) translateY(0) !important;
+    transition: transform 400ms ease;
+}
+
+#results-panel.closeInstructions:not(.resultsPanelBoolean)  {
+    transform: scaleY(0) translateY(-14rem) !important;
+}
+
+#results-panel.closeInstructions.resultsPanelBoolean  {
+    opacity : 1;
+    height : 100%;
+    transform: scaleY(1) translateY(-14rem) !important;
+}
+
+#results-panel.resultsPanelBoolean:not(.closeInstructions)  {
+    opacity : 1;
+    height : 100%;
+    transform: scaleY(1) translateY(0) !important;
+    // transform: scaleY(1) translateY(-8rem) !important;
+}
+
+#tax-panel  {
+    transition: all 400ms ease-in-out;
+}
+
+#tax-panel.setTaxPanelHeight  {
+    opacity : 1;
+    height: auto;
+    margin: 0 0 -10ch 0;
+}
+
+// .slideUpWrapper.closeInstructions +  #searchForm  input {
+//     background-color: $bgColor;
+//     transition: background 350ms 300ms;
+// }
 
 .taxInstructionsButton  {
     position  :  absolute;
     display: inline-block;
     
     top : -2.6rem;
-    // left : 0;
-    right :7vw;
-    // right : 0rem;
-    // left : 10vw;
+    left : -4vw;
     width  :  3rem;
     height  :  3rem;
 
@@ -53,14 +92,9 @@
     border : 0.15rem solid  $goldHighlightColor;
     border-radius  :  50%;
     background-color  :  $bgColor;
-    box-shadow: inset 0 0 0 0.15rem $bgColor, 0 0 0 0.62rem $bgColor;
+    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
 
     cursor  :  pointer;
-    transform: translateX(-42ch);
-    -webkit-transition  :  transform  ease-in-out 1000ms;
-       -moz-transition  :  transform  ease-in-out 1000ms;
-         -o-transition  :  transform  ease-in-out 1000ms;
-            transition  :  transform  ease-in-out 1000ms;
 }
 
 .taxInstructionsButton:hover, .taxInstructionsButton:focus {
@@ -69,21 +103,16 @@
 }
 
 .taxInstructionsButton.instructionsClosed .tooltip {
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.31rem;
+    width  :  10rem;
     border : 0.15rem solid  $goldHighlightColor;
     background-color: $panelColor;
-    transform: scaleX(0.7);
+    transform: rotate(0);
 }
 
 #searchForm  {
     position  :  relative;
     padding  : 1ch 0 2ch 0;
-    // margin-top : 0.77rem;
-    // margin-top : 0.77rem;
-
-    transform-origin: top right;
+    // transform-origin: top right;
 
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
@@ -92,8 +121,7 @@
 }
 
 #searchForm:focus-within  {
-    transform: scaleX(1.1);
-    background-color: $countryMenuColor;
+    background-color: rgb(99, 98, 98);
 }
 
 // #searchForm:focus-within .icon-pen {
@@ -239,7 +267,7 @@
     box-shadow : 0 0 0.15rem rgba(0,0,0,1);
 }
 
-#searchSpecials.SAM .searchSpecialWrapper  {  padding : 1ch 0 1ch 0;  }
+#searchSpecials.SAM .searchSpecialWrapper  {  padding : 0.5ch 0 0.5ch 0;  }
 
 #searchSpecials div.notAvailable  {  display : none;  }
 
@@ -258,16 +286,20 @@
 
 /*  -----------------------   searchResults  panel  ----------------------  */
 
-.results-panel  {
+#results-panel  {
     opacity  :  0;
     // opacity  :  1;
 
     position  :  relative;
-    height  :  0;
-    // height  :  auto;
+    // height  :  0;
+    height  :  auto;
+    
     width : calc(100% + 10vw);
+    
+    top : -8rem;
+    
     left : -10vw;
-    margin  : 7.25ch 0 0 0;
+    margin  : 5.5ch 0 2ch 0;
     padding  :  0;
 
     // order : 2;
@@ -277,16 +309,9 @@
     box-shadow: none;
     background-color: transparent;
 
-    // transform : translateY(-7.7rem);
-    // transform : scale(1,0);
-    transition  :  all 1000ms;
-}
-
-.results-panel.translateDown  {
-    opacity : 1;
-    height : 100%;
-    // transform : translateY(0);
-    // transform : scale(1,1);
+    // transform-origin: middle left;    
+    // transform: scaleY(0);
+    // transition  :  all 1000ms;
 }
 
 #fakeResultsBox  {
@@ -325,8 +350,11 @@
     left: 100%;
     width: 2.2rem;
     height: 2rem;
-    // padding: 0.15rem 0 0 0;
-    padding: 0 0.077rem 0 0;
+    // padding: 0 0 0 0.04rem;
+    padding: 0 0 0.08rem 0;
+    
+    text-align: center;
+    
 
     font-size  :  1.2rem;
     font-weight: 600;
@@ -367,8 +395,9 @@
   height: 2.2rem;
   cursor: pointer;
   color: white;
+  text-align: center;
   
-  // padding: 0.5rem;
+  padding: 0.077rem;
   border-radius: 50%;
   background-color: $panelColor;
   border : 0.15rem solid  $goldHighlightColor;
@@ -402,8 +431,10 @@
 }
 
 #closeOpenFamiliesButton  {
+    position: absolute;
     left: calc(100% - 1.31rem);
-    top: 2.54rem;
+    // top: 2.54rem;
+    top: calc(100% - 1.75rem);
     width  :  3rem;
     height  :  3rem;
     // padding  :  0.15rem 0 0 0;
@@ -467,7 +498,7 @@
 }
 
 #searchResults  {
-    opacity  :  0;
+    opacity  :  1;
     position  :  relative;
     left  :  -10vw;
     width  :  calc(100% + 10vw + 1.1ch);
@@ -500,10 +531,10 @@
     transition  :  all 2s;
 }
 
-.results-panel.fadeIn  {
-    opacity  :  1;
-    transition  :  all 2s;
-}
+// #results-panel.fadeIn  {
+//     opacity  :  1;
+//     transition  :  all 2s;
+// }
 
 #searchResults li  {
     position : relative;
@@ -663,36 +694,46 @@
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
 // TODO : height already fixed (in script onload?) just translate down and opacity so height isn't changing
 #tax-panel  {
+    
+    opacity: 0;
     position: relative;
     width: calc(100% + 10vw);
+    height: 0;
     top: 0;
+    // top: -15rem;
     left: -10vw;
-    margin: 0 0 -10ch 0;
-    padding :  2ch 0 0 0;
+    // margin: 0;
+    margin: 0 0 -20.5ch 0;
+    // padding :  5ch 0 0 0;
+    padding :  5ch 0 0 0;
 
-    // order : 3;
     z-index : 0;
-
-    opacity: 0;
     border: none;
     box-shadow: none;
     background-color: transparent;
 
     // transition : all 750ms 1250ms;
+    transform: translateY(-15rem);
+    // transition : transform 750ms 1250ms;
+    // transition : all 600ms 350ms;
 }
 
-#tax-panel.translateDown  {
-    opacity : 1;
-    margin: 0 0 10ch 0;
-}
+// #tax-panel.setTaxPanelHeight  {
+//     opacity : 1;
+//     height: auto;
+//     margin: 0 0 7ch 0;
+// }
 
 #fakeTaxPageBox  {
     position : relative;
-    top : 0;
+    // top : 0;
+    top : -1.5ch;
+    // height : auto;
     height : 100%;
     width : calc(100% - 10vw);
     left : 10vw;
-    padding : 0 0 1ch 0;
+    // padding : 0 0 1ch 0;
+    padding : 0 0 2ch 0;
     // margin : 1ch 0 0 0;
 
     border  :  0.077rem solid rgba(255,255,255,0.15);
@@ -706,14 +747,16 @@
 
 #taxPage  {
     position  :  relative;
-    top: 0.77rem;
+    // top: 0.77rem;
+    top: -1.5ch;
     left  :  -10vw;
     width  :  calc(100% + 10vw + 1ch);
-    // height : 100%;
-    // height : 100%;
+    height : 0;
     max-height  :  75vh;
-    padding  :  0.5ch 0 0 10vw;
-    margin : 0 0 1ch 0;
+    // padding  :  0.5ch 0 0 10vw;
+    padding  :  0 0 0 10vw;
+    // margin : 0 0 1ch 0;
+    margin : 0;
 
     font-size  :  1rem;
     line-height : 1.3rem;

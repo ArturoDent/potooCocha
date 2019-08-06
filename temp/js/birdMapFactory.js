@@ -99,6 +99,8 @@ function saveCurrentMap()  {
   if (len === 1) {
     mapsCollection.addEventListener("click", revealMapsCollection);
     mapsCollection.classList.add("namesOnlySeen");
+    
+    numDaysButton.classList.add("mapCollectionShowing");
 
     deleteAllMapsButton.addEventListener("click", deleteAllMaps);
   }
@@ -187,6 +189,8 @@ function deleteAllMaps(evt) {
   mapsCollection.classList.remove("namesOnlySeen");
   mapsCollection.removeEventListener("click", revealMapsCollection);
   deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
+  
+  numDaysButton.classList.remove("mapCollectionShowing");
 
   map.querySelector(".saveMapButton").style.display = "block";
 }

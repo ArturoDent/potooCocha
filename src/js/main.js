@@ -11,14 +11,14 @@ var currentCountry;
 var checklistAuthorsPanel;
 var checklistFlyoutText;
 
-var countryModal;
-var modalOverlay;
+var titleBanner;
+var countryMenuLayer;
+var countryButton;
 
 var gNumDays;
 var gStartDate;
 var previousNumDaysClass;
 
-var countryButton;
 var numDaysButton;
 var pdfButton;
 var csvButton;
@@ -28,15 +28,22 @@ var mailLink;
 var observer;
 var target;
 
+var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
+		"Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
+		"Guyana": "GY", "Paraguay": "PY", "Peru": "PE", "Suriname": "SU", "Trinidad": "TT",
+		"Uruguay": "UY", "Venezuela": "VE", "Bonaire": "BQ", "Falklands": "FK",
+		"South America": "SAM"
+};
+
 /* global  map loadCountryTaxonomy selectedCountryFill getAjax currentMap fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("window.width = " + window.innerWidth);
 
-  // window.addEventListener("resize", onResizeWindow);
-
   countryButton = document.getElementById("countryButton");
-  countryButton.addEventListener("click", toggleCountryModal);
+  countryButton.addEventListener("click", toggleCountryMenuLayer);
+  
+  titleBanner = document.getElementById("titleBanner");
 
   numDaysButton = document.getElementById("numDays");
   numDaysButton.addEventListener("click", setNumDays)
@@ -44,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
   numDaysButton.addEventListener('keyup', setNumDays);
 
   numDaysButton.children.item(11).classList.add("highlight");
-  gNumDays = 10;
-
+  gNumDays = 10;  
+  
   sampleTable = document.getElementById("sampleTable");
   sampleTable.classList.add("numDays" + String(gNumDays));
 
@@ -78,13 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
   checklistAuthorsPanel = document.getElementById("checklistAuthorsPanel");
   checklistFlyoutText = document.getElementById("checklistFlyoutText");
 
-  document.querySelector(".country-menu").addEventListener("click", setCountry);
-  document.querySelector(".country-menu").addEventListener("keyup", setCountry);  
+  document.querySelector("#country-menu").addEventListener("click", setCountry);
+  document.querySelector("#country-menu").addEventListener("keyup", setCountry);  
   
   leftCheck.checked = true;
 
-  countryModal = document.getElementById("countryModal");
-  modalOverlay = document.getElementById("md-overlay");
+  countryMenuLayer = document.getElementById("countryMenuLayer");
 
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
@@ -105,82 +111,30 @@ function setUpMapBodyIntersectionObserver() {
   };
 
   observer = new IntersectionObserver(fadeMap, options);
-  // target = document.getElementById("checklistArticle");
   observer.observe(target);
 }
 
 function fadeMap(entries, observer) {
-  console.log("in fadeMap");
-
-  // var browser = navigator.userAgent;
-
-  // if ((browser.indexOf("Edge") > -1) && taxTreeArticleOpen) map.classList.toggle("fadeMap");;
 
   var map = document.getElementById("currentMap");
-
-  // if (taxTreeArticleOpen) {
-  //   map.style.opacity == "1";
-  // }
-
   map.classList.toggle("fadeMap");
-
-  // if (map && map.classList && map.classList.contains("fadeMap")) map.classlist.remove("fadeMap");
-  // else map.classList.add("fadeMap");
 }
-
-//  TODO  : (is this needed?)
-
-// function onResizeWindow() {
-
-//   // initCurrentMap();
-
-//   // if (window.innerWidth < 870) { window.addEventListener("scroll", checkWindowScroll); }
-//   // else window.removeEventListener("scroll", checkWindowScroll);
-
-//   // check for mapCollection height
-//   var mapsCollection = document.querySelector("#mapsCollection");
-
-//   var len = mapsCollection.children.length;
-
-//   if (len > 0) {
-
-//     if (window.innerWidth > 1680) mapsCollection.style.height = "26.92rem";
-//     else if (window.innerWidth >= 1600) mapsCollection.style.height = "23.1rem";
-//     else if (window.innerWidth >= 1165) mapsCollection.style.height = "20.8rem";
-//     else mapsCollection.style.height = "18.1rem";
-//   }
-
-//   console.log("Resize: window.width = " + window.innerWidth);
-// }
-
 
 function sendEmail() {
   // TODO : can this be obfuscated?  unicode??
   window.location.href = "mailto:mark@potoococha.net";
 }
 
-function toggleCountryModal(evt) {
+function toggleCountryMenuLayer(evt) {
 
-  countryModal.classList.toggle("menu-show");
-
-  modalOverlay.classList.toggle("show");
+  countryMenuLayer.classList.toggle("show");
+  countryButton.classList.toggle("slideLeft");
+  
+  // if (!countryButton.classList.contains("wasOpened")) countryButton.classList.add("wasOpened");
 
   if (evt) evt.stopPropagation();
   
-  // taxPanel.classList.add("translateDown");
-  document.getElementById("tax-panel").classList.add("translateDown");
-
-  // TODO : if scroll at bottom (i.e., looking at checklists ), set it there again
-
-  // if (document.body.scrollTop > ____) {
-
-  // both of below do not work on the first choice of country - height of page changing?
-  // doesn't go all the way to botton of page
-  // numDaysButton.scrollIntoView(false);
-
-  // does go to the bottom of page
-  // document.body.scrollTop = 2000;
-  // };
+  document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 }
 
 function toggleSampleTableShowEndemics(evt) {
@@ -280,16 +234,18 @@ function setCountry(evt) {
     // TODO : put code for scrolling page here
     map.getElementsByClassName("drawing")[0].classList.add("active");
   }
-  // else {
 
-  // }
-
-  toggleCountryModal();
+  toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
 
-  if (currentCountry === "Falklands") countryButton.innerHTML = "Malvinas/Falklands";
-  else countryButton.innerHTML = currentCountry;
+  // countryButton.innerHTML = currentCountry;
+  // console.log(currentCountry);
+  
+  if (!titleBanner.classList.contains("countryChosen")) titleBanner.classList.add("countryChosen");
+  
+  if (!countryButton.classList.contains("countryChosen")) countryButton.classList.add("countryChosen");
+  countryButton.innerHTML = countries2Postals[currentCountry];
 
   setChecklistCountryAuthors(currentCountry);
   loadCountryTaxonomy(currentCountry);
@@ -298,15 +254,6 @@ function setCountry(evt) {
 function setChecklistCountryAuthors(country) {
 
   checklistFlyoutText.innerHTML = "Make a checklist for " + country;
-
-  // TODO : how much of below is necessary?
-  // countryButton.classList.add("highlight");
-
-  // pdfButton.classList.add("highlight");
-  // csvButton.classList.add("highlight");
-
-  // currentMap.querySelector(".saveMapButton").style.display = "none";
-  // currentMap.querySelector(".colorKey").style.opacity = "0";
 
   if (country === "French Guiana") selectedCountryFill("FrenchGuiana");
   else if (country !== "South America") selectedCountryFill(country);
@@ -331,7 +278,7 @@ function setChecklistAuthors(data) {
 
   var authors;
 
-  if (currentCountry === "SouthAmerica") {
+  if (currentCountry === "South America") {
     // authors = data.replace(/^.*(Version.*)$/g, "$1");
     authors = data.replace(/^.*Version(.*)$/g, "Remsen, et al. $1");
   }
@@ -377,16 +324,10 @@ function setNumDays(evt) {
   gNumDays = parseInt(day.innerHTML);
 
   sampleTable.classList.remove(previousNumDaysClass);
-  
-  // sampleTable.classList.add("numDays12");
-  // sampleTable.classList.remove("numDays12");
-  
   sampleTable.classList.add("numDays" + String(gNumDays));
-
   previousNumDaysClass = "numDays" + String(gNumDays);
 
   // rules for column double border right vs. number of days
-
   // first clear all cds classes
 
   list = sampleTable.querySelectorAll("td.cds, th.cds");
@@ -423,14 +364,6 @@ function setNumDays(evt) {
       item.classList.add("cds");
     });
   }
-
-  // if (gNumDays !== 0) {
-
-  // var item = sampleTable.querySelector("th.flashDays");
-  // if (item)  item.classList.remove("flashDays");
-
-  // sampleTable.querySelector("th:nth-child(" + (gNumDays + 1) + ")").classList.add("flashDays");
-  // }
 }
 
 function getCSVText() {
@@ -449,7 +382,6 @@ function getCSVText() {
 
   if (tempCountry) {
 
-    // var form = $('<form method="post" action="../php/sendCSV.php?country=' + currentCountry + '"></form>');
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", "../php/sendCSV.php?country=" + tempCountry + "");

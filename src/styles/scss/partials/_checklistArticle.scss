@@ -76,7 +76,7 @@
     position  :  relative;
     left  :  5%;
     width  :  90%;
-    margin  :  1ch 0 6ch 0;
+    margin  :  0 0 6ch 0;
     padding  :  1.8ch 0 2ch 3ch;
 
     font-size  :  1rem;
@@ -162,10 +162,15 @@
     // left  :  1.5ch;
     left  :  -5.5ch;
     width  :  150%;
-    margin  :  5rem 0 4.6rem 0;
+    margin  :  5rem 0 3rem 0;
 
     // color  :  #fff;
     // background-color  :  transparent;
+    transition: margin 300ms 1.3s linear;
+}
+
+#numDays.mapCollectionShowing  {
+    margin: 5rem 0 4.6rem 0;
 }
 
 #days {

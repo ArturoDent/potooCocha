@@ -6,27 +6,27 @@
     // },
     "compounds": [
         {
-            "name": "Start server and chrome debugger",
-            "configurations": ["Gulp: serve", "Chrome : Launch with sourcemaps", "Gulp: watch" ]
+            "name": "Start gulp sync and chrome debugger",
+            "configurations": ["Gulp: serve", "Chrome : Launch with sourcemaps" ]
         }
     ],
     "configurations": [
 
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Gulp sync",
-            // "env": {
-            //   "url": "sdfsdf"
-            // },
-            // "name": "$env:gulp-sync", this works
-            // "envFile": "${workspaceFolder}/.env",
-            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
-            "args": [
-                "sync"
-                // "$env:task" won't work here
-            ]
-        },
+        // {
+        //     "type": "node",
+        //     "request": "launch",
+        //     "name": "Gulp sync",
+        //     // "env": {
+        //     //   "url": "sdfsdf"
+        //     // },
+        //     // "name": "$env:gulp-sync", this works
+        //     // "envFile": "${workspaceFolder}/.env",
+        //     "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+        //     "args": [
+        //         "sync"
+        //         // "$env:task" won't work here
+        //     ]
+        // },
         {
             "type": "node",
             "request": "launch",
@@ -35,10 +35,17 @@
             "args": [
                 "serve"
             ],
+             "serverReadyAction": {
+                "pattern": "Local: http://localhost:([0-9]+)",
+                "uriFormat": "http://localhost:%s",
+                "action": "debugWithChrome",
+                // "webroot": "${workspaceFolder}"
+          },
+            
 
-            // "preLaunchTask": "Gulp: watch",
-            "preLaunchTask": "Echo vars",
-            "postDebugTask": "postdebugKill"
+            "preLaunchTask": "Gulp: watch",
+            // "preLaunchTask": "Echo vars",
+            // "postDebugTask": "postdebugKill"
         },
         {
             "type": "node",
@@ -49,6 +56,7 @@
                 "watch"
             ],
         },
+        
         {
             "name": "Chrome : Launch with sourcemaps",
             "type": "chrome",
@@ -60,7 +68,7 @@
             "runtimeArgs": [
               "--remote-debugging-port=9222"
             ],
-            // "preLaunchTask": "Echo vars"
+            // "preLaunchTask": "Gulp: Start server only"   // gulp serve
         },
         {
             "name": "Chrome : Launch without sourcemaps",

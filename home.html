@@ -87,11 +87,6 @@
     NDMuc3Znfp4JaAAAAABJRU5ErkJggg==" />
     </symbol>
 
-      <!-- <symbol id="icon-mag-glass" viewBox="0 0 512 512">
-        <title>magnifying glass</title>
-        <path d="M496.13,435.69L374.85,332.55c-12.53-11.28-25.94-16.46-36.77-15.96C366.70,283.05,384,239.54,384,192 C384,85.96,298.03,0,192,0C85.96,0,0,85.96,0,192s85.96,192,192,192c47.54,0,91.05-17.29,124.58-45.92 c-0.5,10.83,4.68,24.23,15.96,36.77L435.69,496.13c17.66,19.62,46.51,21.27,64.10,3.67 C517.40,482.20,515.75,453.35,496.13,435.69z M192,320c-70.69,0-128-57.30-128-128c0-70.69,57.30-128,128-128 c70.69,0,128,57.30,128,128C320,262.69,262.69,320,192,320z"/>
-      </symbol> -->
-
       <symbol id="icon-mag-glass" viewBox="0 0 512 512">
         <title>magnifying glass</title>
         <g>
@@ -132,7 +127,7 @@
     </defs>
   </svg>
 
-  <header class="titleBanner">Birds <span class="titleBanner_spacer">of</span> South America</header>
+  <header id="titleBanner">Birds <span class="titleBanner_spacer">of</span> South America</header>
 
   <main id='mainContent'>
 
@@ -142,14 +137,13 @@
         
         <button class="taxInstructionsButton hasTooltip">?<span class="tooltip">Close instructions</span></button>
 
-        <div class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
+        <h1 class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
             target="_blank" rel="noopener">taxonomy</a> of the birds of <span id="searchCountryText">South America
-            (June 6, 2019)</span>.</div>
+            (July 30, 2019)</span>.</h1>
 
         <div class="slideUpWrapper panel">
 
           <div class="taxArticleMain">
-
             Type part of a word like "xantho". &nbsp;Accents and capitalization are added. &nbsp;You can search family
             names.<br><br>
 
@@ -161,10 +155,6 @@
           <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*&nbsp; : any one or more characters.<br><br>
 
           "e* br" : "Elaenia brachyptera" or "Empress Brilliant".<br><br>-->
-
-            <!--<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="120" width="90%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 48 48" preserveAspectRatio="none">
-            <path d="m21.1 8.57 13.1 0.02m0.26-5.37 12.6 0.02m-43.2 26.8-3.3-0.1m33.8-26.9l0.00 11.8 12.7-0.02m0.00 5.65-9.35-0.02v6.42l9.35 0.01m-9.46-3.09-11.7-0.00v10.2l21.2-0.02m-0.00 6.41-34.7 0.18 0.01 6.14h34.7m-26.2-27.6-17 0.17 0.03 24.5 8.33 0.01m8.7-35.3 0.02 20.5 4.82-0.02" stroke="#959A93" stroke-width="0.5" fill="none"></path>
-          </svg><br>-->
 
             <!-- Island nations are not shown to scale.<br><br> incertae [sedis] : two "groups" of uncertain classification. -->
           </div>
@@ -190,7 +180,6 @@
               <label for="searchInput">search &nbsp;: &nbsp; </label>
               <input name="searchField" id="searchInput" size="15" type="text" autocomplete="off" autocorrect="off"
                 autocapitalize="off" spellcheck="false" tabindex="-1">
-              <!-- <svg class="icon icon-pen"><use xlink:href="#icon-pen"></use></svg> -->
               <svg class="icon icon-mag-glass">
                 <use xlink:href="#icon-mag-glass"></use>
               </svg>
@@ -207,12 +196,11 @@
 
         </form>
       </article>
-      <!--placeholder="xantho ..." -->
       
-      <article class='panel results-panel'>
+      <article class='panel' id='results-panel'>
         <div id='fakeResultsBox'>
           
-          <button id="closeResultsPanelButton" tabindex="-1">X</button>
+          <!-- <button id="closeResultsPanelButton" tabindex="-1">X</button> -->
           <div id='countrySearch' class='closed'>
             <span id='searchTerm'></span>
           </div>
@@ -222,7 +210,6 @@
             <li></li>
           </ul>
 
-          <!-- <span type="button" id="printerButton" class="genericButton"> -->
           <button id="printerButton" tabindex="-1">
             <svg class="icon icon-printer">
               <use xlink:href="#icon-printer"></use>
@@ -234,6 +221,7 @@
 
       <article class='panel' id='tax-panel'>
         <div id='fakeTaxPageBox'>
+          
           <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>
           <div id='taxPage' contenteditable='false'></div>
           <button id='closeOpenFamiliesButton' tabindex="-1">▲</button>
@@ -243,7 +231,6 @@
 
       <article id="checklistArticle">
         
-        <!-- <div class="checklistTitle">CHECKLISTS</div> -->
         <h1 class="checklistTitle">CHECKLISTS</h1>
 
         <div class="flyoutPanel topFlyoutPanel"><span id="checklistFlyoutText">Make checklists for any country in South
@@ -372,19 +359,11 @@
               <label for="sciNames" tabindex="0">No scientific names</la</li>
           </ul>
           
-          <!-- <input id="lineNumbers" type="checkbox"><label for="lineNumbers">Line numbers</label><br> -->          
-          <!-- <input id="showEndemics" type="checkbox"><label for="showEndemics">Show endemics</label><br>
-          <input id="leftCheck" type="checkbox"><label for="leftCheck">Left checkbox</label><br>
-
-          <input id="italics" type="checkbox"><label for="italics">No italics</label><br>
-          <input id="sciNames" type="checkbox"><label for="sciNames">No scientific names</label> -->
-
           <button id="pdfButton" class="genericButton">
             checklist&nbsp;
             <svg class="icon icon-download">
               <use xlink:href="#icon-download"></use>
             </svg>
-            <!-- <svg class="icon icon-list"><use xlink:href="#icon-list"></use></svg> -->
           </button>
 
           <button id="csvButton" class="genericButton">
@@ -419,9 +398,7 @@
 
   </main>
 
-  <!-- <div id="mapWrapper"> -->
 
-  <!-- <section id="currentMap" class="fadeMap" externalResourcesRequired="true"> -->
   <section id="currentMap" externalResourcesRequired="true">
     <div id="currentBird" class="birdMapInstance">
 
@@ -437,8 +414,6 @@
       </div>
 
       <div id="currentBirdMap" class="drawing">
-        
-        <!-- <object id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" height="440" width="275" onload="initCurrentMap(); loadArubaStart();"></object> -->
         
         <!-- preload may do nothing here, but is available on <object. -->
         <object rel="preload"  aria-labelledby="Map of South America" role="presentation" id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" onload="initCurrentMap();" tabindex="-1"></object>
@@ -464,25 +439,17 @@
     </div>
   </section>
 
-  <!-- </div> -->
-
   <article id='mapsCollection'>
     <div id='mapsHeader'>
       <button id='deleteAllMapsButton' tabindex="-1">delete all</button>
     </div>
   </article>
 
-  <div id="md-overlay">
-    <!-- <div class="overlayInfo"><span>Choose "South America" if you wish to use the taxonomy of <span class="underline">all</span>
-        countries for a search or checklist.</span></div> -->
-    <!-- <span class="titleStrip"><span>potoo&nbsp;⁘&nbsp;cocha</span></span> -->
-  </div>
-  
-  <div class="md-modal" id="countryModal">
+  <button id="countryButton" class="genericButton slideLeft" tabindex="0">select country</button>
+    
+  <div id="countryMenuLayer">
 
-      <button id="countryButton" class="genericButton" tabindex="0">select a country</button>
-  
-      <nav class="country-menu" contenteditable="false">
+      <nav id="country-menu" contenteditable="false">
         <div class="countryItem"><a tabindex="0">South America</a>
           <div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div>
         </div>
@@ -557,6 +524,7 @@
   <!-- /build -->
 
   <!-- build:remove -->
+  <script src="src/js/numLists.js"></script>
   <script src="src/js/taxonomy.js"></script>
   <script src="src/js/birdMapFactory.js"></script>
   <!-- /build -->

@@ -1,63 +1,35 @@
 const gulp = require("gulp");
-// const pump = require('pump');
-
 const browserSync = require("browser-sync").create("index.html");
-// const browserSync2 = require("browser-sync").create("citations.html");
 const reload = browserSync.reload;
 
 const newer = require('gulp-newer');
 const sass = require("gulp-sass");
 
-// const uglify = require("gulp-uglify");
-// const minify = require("gulp-minfy");
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
-// const sourcemaps = require("gulp-sourcemaps");
-// const cached = require("gulp-cached");
-// const remember = require("gulp-remember");
+
 const stripComments = require("gulp-strip-comments");
 const stripdebug = require("gulp-strip-debug");
-const modifyHTMLlinks = require("gulp-processhtml");
+const modifyHTMLlinks = require("gulp-processhtml");  // or try gulp-useref
 const addVersionString = require("gulp-version-number");
 const print = require('gulp-print').default;
 
-// const imageMin = require("gulp-imagemin");
-// const gutil = require("gulp-util");
-// const notify = require("gulp-notify");
 
-function serve(done) {
+function serve (done) {        // serve:    ./home.html 
   browserSync.init({
     port: 3000,
     server: {
       baseDir: "./",
       index: "home.html",
     },
-    // open: false,
     ghostMode: false
   });
-  // browserSync2.init({
-  //   port: 3003,
-  //   ui: {
-  //     port: 3004
-  //   },
-  //   server: {
-  //     baseDir: "./",
-  //     index: "citations.html",
-  //   },
-  //   // open: false,
-  //   ghostMode: false
-  // });
-  // gulp.watch(paths.js.src, gulp.series(reloadJS));
-  // gulp.watch(paths.sass.src, gulp.series(sass2css));
-  // // gulp.watch("./*.html").on("change", reload);
-  // gulp.watch("./*.html").on("change", stream);
-
   done();
 }
 
-function serveTest(done) {
+function serveDeploy (done) {      // serve:    deploy/home.html 
   browserSync.init({
     server: {
       baseDir: "deploy",
@@ -82,9 +54,7 @@ const paths = {
     deploy: "./deploy/Authors"
   },
   occurrences: {
-    // src: "data/occurrences.txt",
     src: "occurrences/occurrences.txt",
-    // deploy: "./deploy/data"
     deploy: "./deploy/occurrences"
   },
   countries: {
@@ -121,24 +91,14 @@ const paths = {
 };
 
 
-//  FIXME : use gulp.series here)(
 function watch() {
   gulp.watch(paths.js.src, reloadJS);
   gulp.watch(paths.sass.src, sass2css);
-  // gulp.watch("./*.html").on("change", reload);
   gulp.watch("./*.html", { events: 'all' }, function(cb) {
     reload();
     cb();
   });
 }
-
-/**
-* How VSCode indents it
-*/
-
-/**
- * How I want it
- */
 
 function sass2css() {
   return gulp.src(paths.sass.stylesFile)
@@ -149,9 +109,7 @@ function sass2css() {
 
 function reloadJS() {
   return gulp.src(paths.js.src)
-    .pipe(newer(paths.js.src))
-    // .pipe(sourcemaps.init())
-    // .pipe(sourcemaps.write("sourcemaps"))
+    .pipe(newer(paths.js.src))    // does newer() do anything here?
     .pipe(reload({ stream: true }));
 }
 
@@ -169,6 +127,7 @@ const scriptOrder = [
   "./temp/js/simplebar.js",
   "./temp/js/main.js",
   "./temp/js/SouthAmerica.js",
+  "./temp/js/numLists.js",
   "./temp/js/taxonomy.js",
   "./temp/js/birdMapFactory.js"
 ];
@@ -185,7 +144,7 @@ function processJS() {
       extname: ".js"
     }))
     // why no minify ?????
-    // .pipe(uglify())
+    // .pipe(uglifyES())
     .pipe(gulp.dest(paths.js.deploy));
 }
 
@@ -216,6 +175,7 @@ function processHTML() {
 
     // add ?v=dateTime stamp to css and js links
     .pipe(addVersionString(versionConfig))
+    
     .pipe(gulp.dest(paths.html.deploy));
 }
 
@@ -226,10 +186,24 @@ function processCSS() {
       cascade: false
     }))
     .pipe(cleanCSS())
-    // .pipe(concat("concat.css"))
     .pipe(rename("styles.min.css"))
     .pipe(gulp.dest(paths.css.deploy));
 }
+
+// Replace Autoprefixer browsers option to Browserslist config.
+// Use browserslist key in package.json or .browserslistrc file.
+
+// # last 2 versions: the last 2 versions for each browser.
+// # defaults: Browserslist’s default browsers (> 0.5%, last 2 versions, Firefox ESR, not dead).
+
+// Using browsers option cause some error. Browserslist config 
+// can be used for Babel, Autoprefixer, postcss-normalize and other tools.
+
+// If you really need to use option, rename it to overrideBrowserslist.
+
+// Learn more at:
+// https://github.com/browserslist/browserslist#readme
+// https://twitter.com/browserslist
 
 function processPrintCSS() {
   return gulp.src(paths.css.src)
@@ -283,34 +257,40 @@ function copyFLAGS() {
     .pipe(gulp.dest(paths.flags.deploy));
 }
 
-// to get Countries and occurrences.txt from BuildSACC folder
+// ************************   get the SACC data from the BuildSACC directory   **********************  //
+
+// to get Countries and occurrences.txt from BuildSACC directory
 const buildGlobs = {
-  // occurrences: '../BuildSACC/data/occurrences.txt',
   occurrences: '../BuildSACC/occurrences/occurrences.txt',
-  countries: '../BuildSACC/Countries/*.*'
-  // '../BuildSACC/workFlow.txt'
+  countries: '../BuildSACC/Countries/*.*',
+  // numLists: '../BuildSACC/numLists/numLists.js'
 };
 
-function getBuildSACCdata() {
+function getBuildSACC_Data() {
   return gulp.src(buildGlobs.occurrences)
-    // .pipe(newer("./data"))
     .pipe(newer("./occurrences"))
     .pipe(print())
-    // .pipe(gulp.dest("./data"));
     .pipe(gulp.dest("./occurrences"));
 }
 
-// show files transported
-function getBuildSACCcountries() {
+function getBuildSACC_Countries() {
   return gulp.src(buildGlobs.countries)
     .pipe(newer("./Countries"))
     .pipe(print())
     .pipe(gulp.dest("./Countries"));
 }
 
+// function getBuildSACC_NumLists() {
+//   return gulp.src(buildGlobs.numLists)
+//     .pipe(newer("./js/numLists.js"))
+//     .pipe(print())
+//     .pipe(gulp.dest("./js"));
+// }
+
+// ************************   ftp to experimental.potoococha.net and potoococha.net    **********************  //
+
 const gutil = require('gulp-util');
 const ftp = require('vinyl-ftp');
-// const notify = require('gulp-notify');
 
 // TODO : (php folder and logFileRequests.txt?)
 /* list all files you wish to ftp in the glob variable */
@@ -323,7 +303,6 @@ const ftpGlobs = [
   'deploy/home.html',
   'deploy/citations.html',
   'deploy/Authors/*.txt',
-  // 'deploy/data/occurrences.txt',
   'deploy/occurrences/occurrences.txt',
   'deploy/Countries/*.*',
   '!ftpConfig.js'
@@ -349,7 +328,6 @@ function deployExperimental() {
     }
 
 function deployPotoococha() {
-  // console.log(gulpftp);
 
   const conn = ftp.create({
     host: gulpftp.config.host,
@@ -360,9 +338,11 @@ function deployPotoococha() {
   });
 
   return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
-    .pipe(conn.newer('.')) // only upload newer files
+    .pipe(conn.newer('.'))
     .pipe(conn.dest('.'));
 }
+
+//  ****************************   compose and export tasks  *****************************  //
 
 exports.sync = gulp.series(sass2css, reloadJS, serve, watch);
 // exports.default = exports.sync;   this works
@@ -379,63 +359,30 @@ exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
                             copySVG, copyFLAGS, copyCitations, copyAuthors,
                             copyOccurrences, copyCountries, movePrintCSStoTemp);
 
-exports.getSACC = gulp.series(getBuildSACCdata, getBuildSACCcountries);
+exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries);
+// exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_NumLists);    
 
 exports.deploy_E = gulp.series(deployExperimental);
 exports.deploy_P = gulp.series(deployPotoococha);
 
-// **********************************  pump  *****************************
 
-// gulp.task('compress', function (cb) {
-  // pump([
-      // gulp.src('lib/*.js'),
-      // uglify(),
-      // gulp.dest('dist')
-    // ],
-    // cb
-  // );
-// });
 
-// does the following work? with the return??
-// function compress () {
-  // return pump([
-      // gulp.src('lib/*.js'),
-      // uglify(),
-      // gulp.dest('dist')
-    // ]
-  // );
-// });
+// *************************** not used ************************************ //
+
+// const pump = require('pump');
+// const uglifyES = require("uglify-es");  // check package name
+// const minify = require("gulp-minfy");
+// const cached = require("gulp-cached");
+// const remember = require("gulp-remember");
+// const imageMin = require("gulp-imagemin");
+// const gutil = require("gulp-util");
+// const debug  = require("gulp-debug");  // to see which files are in the stream
+// const notify = require("gulp-notify");
 
 // *****************************  env vars  *****************************
 
 // if (process.env.NODE_ENV === 'production') {
-  // exports.build = series(transpile, minify);
+//   exports.build = series(transpile, minify);
 // } else {
-  // exports.build = series(transpile, livereload);
+//   exports.build = series(transpile, livereload);
 // }
-
-// ********************************  chokidar  ***************************
-
-// npm install chokidar --save
-
-// Initialize watcher.
-// var watcher = chokidar.watch('file, dir, glob, or array', {
-//   ignored: /(^|[\/\\])\../,
-//   persistent: true
-// });
-
-// watcher.on('change', (path, stats) => {
-//   if (stats) console.log(`File ${path} changed size to ${stats.size}`);
-// });
-
-// ************************** async/await  ********************************
-
-// const fs = require('fs');
-
-// async function asyncAwaitTask() {
-//   const { version } = fs.readFileSync('package.json');
-//   console.log(version);
-//   await Promise.resolve('some result');
-// }
-
-// exports.default = asyncAwaitTask;

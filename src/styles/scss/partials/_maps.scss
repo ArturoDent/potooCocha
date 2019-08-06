@@ -14,7 +14,7 @@
     cursor: pointer;
     z-index : 10;
     // transform : scale(0.1);
-    transition  :  transform 1s;
+    transition  :  transform 500ms;
 }
 
 #mapsHeader  {
@@ -96,7 +96,8 @@
     background-color  :  transparent;
     border: 0.077rem solid white;
     border-left: none;
-    box-shadow  :  -0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5);
+    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+    // box-shadow  :  -0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5);
 
     // transform: scale(0.95);
 
@@ -112,7 +113,7 @@
 #deleteAllMapsButton::after  {
     content  :  '';
     position  :  absolute;
-    top  :  -0.31rem;
+    top  :  -0.4rem;
     left  :  103%;
 
     border-width  :  1.2em;
@@ -123,7 +124,7 @@
 
  #deleteAllMapsButton:hover::after  {
     left  :  105%;
-    border-color  :  transparent transparent transparent #f88509;
+    border-color  :  transparent transparent transparent #f00;
 }
 
 // #mapWrapper  {
@@ -167,7 +168,7 @@
     opacity  :  1;
     position  :  fixed;
     // position  :  sticky;
-    top  :  22vh;
+    top  :  28vh;
     left  :  70vw;
     margin  :  0 0 0 0.38rem;
 
@@ -181,7 +182,8 @@
         -ms-transform-origin  :  0 0;
          -o-transform-origin  :  0 0;
             transform-origin  :  0 0;
-    transition  : all 1.2s;
+    // transition  : all 1.2s;
+    transition  : all 500ms;
 }
 
 #currentMap.fadeMap {
@@ -203,7 +205,8 @@
 }
 
 #currentMap.shiftUp  {
-    transform: scale(0.9) translateY(-8vh);
+    // transform: scale(0.9) translateY(-8vh);
+    transform: translateY(-15vh);
 }
 
 #currentMap .deleteMapButton {
@@ -249,15 +252,15 @@
     display  :  none;
     position  :  absolute;
     top  :  45%;
-    left  :  -25%;
+    left  :  -35%;
     background-color  :  transparent;
 }
 
 .drawing  {
     position  :  relative;
     text-shadow  :  none;
-    -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.8) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.4) );
-            filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.8) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.4) );
+    -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
+            filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
 }
 
 .drawing.active  {

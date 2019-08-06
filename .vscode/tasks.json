@@ -19,7 +19,16 @@
 
             "type": "gulp",
             "task": "serve",
-            "problemMatcher": []
+            "problemMatcher": [
+                {
+                    // "base": "$tsc-watch",
+                    "background": {
+                      "activeOnStart": true,
+                      "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
+                      "endsPattern": "[Browsersync] Serving files from: ./"
+                    }
+                  }
+            ]
         },
         {
             "label": "Gulp: watch",
@@ -31,12 +40,19 @@
                 "base": "$tsc-watch",
                 "background": {
                   "activeOnStart": true,
-                  "beginsPattern": "Using gulpfile ~\\OneDrive\\experimental\\gulpfile.js",
+                  "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
                   "endsPattern": "Starting 'watch'..."
                 }
               }
             ],
         },
+        
+        {
+            "label": "Gulp: Start server and watch",
+            // "dependsOn": ["Gulp: Start server only", "Gulp: watch"]
+            "dependsOn": ["Gulp: Start server only"]
+        },
+        
         {
           "label": "postdebugKill",
           "type": "process",

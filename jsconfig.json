@@ -11,11 +11,11 @@
       // "removeComments": true
       // "rootDir": "
       // "sourceMap"
-      // "watch": true"
+      // "watch": true
   },
   "exclude": [
       "node_modules",
       "**/node_modules/*"
   ],
-  "include": []
+  "include": ["."]
 }

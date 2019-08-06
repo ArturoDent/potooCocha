@@ -125,7 +125,8 @@ body::after {
   width: 100%;
   height: 100%;
   top: 0;
-  border: 0.15rem solid #ba8d1e;
+  border: 0.15rem solid #b38206;
+  border-right: 0.2rem solid #b38206;
   border-top: none;
   pointer-events: none; }
 
@@ -139,27 +140,30 @@ a:link {
 #mainContent {
   position: relative;
   left: 10vw;
-  margin: 15vh 0 0 0;
+  margin: 18vh 0 0 0;
   transition: transform 750ms; }
 
 #mainContent.modal-shrink {
   transform: translateX(-200px); }
 
-.titleBanner {
+#titleBanner {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  padding: 0.4ch 20% 0.5ch 0;
+  top: 20px;
+  left: calc(3vw - 10px);
+  width: 94vw;
+  height: 80px;
+  padding: 0.4ch 5% 0.5ch 0;
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
   font-variant: small-caps;
   letter-spacing: 0.1em;
   text-shadow: 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
-  background-color: #ba8d1e;
-  box-shadow: inset 0 0.5rem 1.15rem rgba(0, 0, 0, 0.2); }
+  background-color: #b38206;
+  box-shadow: inset 0 0 1.15rem rgba(0, 0, 0, 0.2), 0 0 1.15rem rgba(0, 0, 0, 0.2); }
+
+#titleBanner.countryChosen {
+  width: calc(91vw - 45px); }
 
 .titleBanner_spacer {
   position: relative;
@@ -167,11 +171,11 @@ a:link {
   left: -0.3rem;
   margin: 0 0 0 0.5rem;
   letter-spacing: 0.1em;
-  color: #ddd;
+  color: #333;
   font-size: 1.5rem;
   font-variant: normal;
-  text-shadow: 0 0.077rem rgba(0, 0, 0, 0.6);
-  border-bottom: 0.31rem double #ddd; }
+  text-shadow: 0 0.077rem rgba(255, 255, 255, 0.2);
+  border-bottom: 0.31rem double #333; }
 
 .articles {
   display: -webkit-flex;
@@ -221,7 +225,7 @@ article {
 
 .topFlyoutPanel {
   margin: 0 0 2ch 0;
-  top: 2ch;
+  top: -1.5ch;
   left: 2ch;
   width: calc(100% - 4ch);
   border-top: 0.077rem solid rgba(0, 0, 0, 0.25);
@@ -269,14 +273,14 @@ footer a:hover, footer a:focus {
   box-shadow: 0 -0.6px 0.6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 10;
-  transition: transform 1s; }
+  transition: transform 500ms; }
 
 #mapsHeader {
   position: absolute;
   height: 3.2rem;
   width: 100%;
-  border-top: 0.077rem solid #ba8d1e;
-  border-bottom: 0.077rem solid #ba8d1e;
+  border-top: 0.077rem solid #b38206;
+  border-bottom: 0.077rem solid #b38206;
   background-color: #2c3030; }
 
 #mapsCollection.namesOnlySeen {
@@ -328,7 +332,7 @@ footer a:hover, footer a:focus {
   background-color: transparent;
   border: 0.077rem solid white;
   border-left: none;
-  box-shadow: -0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   -webkit-transform-origin: 0 50%;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
@@ -339,7 +343,7 @@ footer a:hover, footer a:focus {
 #deleteAllMapsButton::after {
   content: '';
   position: absolute;
-  top: -0.31rem;
+  top: -0.4rem;
   left: 103%;
   border-width: 1.2em;
   border-style: solid;
@@ -348,7 +352,7 @@ footer a:hover, footer a:focus {
 
 #deleteAllMapsButton:hover::after {
   left: 105%;
-  border-color: transparent transparent transparent #f88509; }
+  border-color: transparent transparent transparent #f00; }
 
 .birdName {
   position: absolute;
@@ -369,7 +373,7 @@ footer a:hover, footer a:focus {
 #currentMap {
   opacity: 1;
   position: fixed;
-  top: 22vh;
+  top: 28vh;
   left: 70vw;
   margin: 0 0 0 0.38rem;
   transform: translateY(0);
@@ -378,7 +382,7 @@ footer a:hover, footer a:focus {
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   transform-origin: 0 0;
-  transition: all 1.2s; }
+  transition: all 500ms; }
 
 #currentMap.fadeMap {
   opacity: 0; }
@@ -391,7 +395,7 @@ footer a:hover, footer a:focus {
   transition: fill 1.2s; }
 
 #currentMap.shiftUp {
-  transform: scale(0.9) translateY(-8vh); }
+  transform: translateY(-15vh); }
 
 #currentMap .deleteMapButton {
   display: none; }
@@ -428,14 +432,14 @@ footer a:hover, footer a:focus {
   display: none;
   position: absolute;
   top: 45%;
-  left: -25%;
+  left: -35%;
   background-color: transparent; }
 
 .drawing {
   position: relative;
   text-shadow: none;
-  -webkit-filter: drop-shadow(0 0 0.077rem rgba(255, 255, 255, 0.8)) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0 0 0.077rem rgba(255, 255, 255, 0.8)) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.4)); }
+  -webkit-filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8)); }
 
 .drawing.active {
   -webkit-filter: drop-shadow(0 0 0.23rem rgba(0, 0, 0, 0.8));
@@ -534,7 +538,7 @@ footer a:hover, footer a:focus {
   position: relative;
   left: 5%;
   width: 90%;
-  margin: 1ch 0 6ch 0;
+  margin: 0 0 6ch 0;
   padding: 1.8ch 0 2ch 3ch;
   font-size: 1rem;
   line-height: 2.4rem;
@@ -577,6 +581,10 @@ footer a:hover, footer a:focus {
   position: relative;
   left: -5.5ch;
   width: 150%;
+  margin: 5rem 0 3rem 0;
+  transition: margin 300ms 1.3s linear; }
+
+#numDays.mapCollectionShowing {
   margin: 5rem 0 4.6rem 0; }
 
 #days {
@@ -1017,115 +1025,79 @@ input[type='checkbox']:disabled ~ label {
 .numDays0 tr.topBorderDisappear {
   border-top: hidden; }
 
-.md-modal {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  z-index: 200;
-  transition: transform 500ms 250ms ease-out;
-  will-change: transform; }
-
-.menu-show {
-  transform: translateX(-21vw); }
-
-#md-overlay {
+#countryMenuLayer {
   opacity: 0;
-  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  z-index: 10;
-  border: none;
-  background-color: #415d64;
-  transition: opacity 1000ms 700ms;
+  background-color: #53595d;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 300ms 200ms ease-in-out;
   will-change: opacity; }
 
-#md-overlay.show {
+#countryMenuLayer.show {
   opacity: 1;
   pointer-events: all;
-  transition: opacity 500ms; }
-
-#md-overlay.show .overlayInfo {
-  opacity: 1;
-  transition: all 750ms 500ms; }
-
-.titleStrip {
-  position: absolute;
-  left: 1vw;
-  top: 100vh;
-  height: 11.2vh;
-  width: 101vh;
-  text-align: center;
-  transform-origin: top left;
-  transform: rotate(-90deg);
-  font-size: 8.8vh;
-  letter-spacing: 0.5vh;
-  color: #3b3f42;
-  text-shadow: -0.077rem 0.077rem rgba(186, 186, 186, 0.4), 0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.4);
-  background-color: #ba8d1e;
-  box-shadow: inset 0 0 0.15rem #faf9f9, 0 0 0.15rem rgba(0, 0, 0, 0.5); }
-
-.overlayInfo {
-  opacity: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  left: calc((100vw - (11.2vh + 1vw + 21vw)) / 2 - 45vw);
-  width: 20vw;
-  height: 10vh;
-  min-width: 31ch;
-  min-height: 15ch;
-  padding: 1.54rem;
-  pointer-events: none;
-  font-size: 1.2em;
-  font-variant: small-caps;
-  line-height: 1.6em;
-  text-align: center;
-  border-top: 0.077rem solid rgba(255, 255, 255, 0.5);
-  border-bottom: 0.077rem solid rgba(255, 255, 255, 0.5);
-  border-radius: 0.23rem;
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.3);
-  transform: scale(0.95);
-  transition: all 500ms; }
-
-.underline {
-  border-bottom: 0.15rem double white; }
+  transition: opacity 300ms 100ms ease-in-out; }
 
 #countryButton {
-  position: absolute;
-  top: 1.3rem;
-  right: 19vw;
-  width: 18vw;
+  position: fixed;
+  top: calc(1.5rem + 100px);
+  right: 4.8vw;
+  transform: translateX(-22vw);
+  width: 15vw;
   height: auto;
-  padding: 0.7ch 2ch 0.9ch 0;
-  border: 0.077rem solid white;
+  padding: 0.7ch 0 0.8ch 2ch;
+  text-align: left;
+  cursor: pointer;
+  z-index: 3;
+  border: 0.045rem solid #53595d;
   border-radius: 0.2rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #a47c1a;
-  box-shadow: 0.15rem 0.15rem 0.23rem rgba(0, 0, 0, 0.1);
-  transition: background-color 400ms; }
+  background-color: #b38206;
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+  transition: background-color 400ms, right 500ms 500ms ease-in-out; }
+
+#countryButton.slideLeft {
+  background-color: #b38206;
+  transform: translateX(0); }
+
+#countryButton.countryChosen {
+  top: 20px;
+  right: calc(5vw);
+  width: 90px;
+  height: 80px;
+  padding: 0;
+  text-align: center;
+  border-color: darkgrayr;
+  border-left: none;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
 
 #countryButton:after {
   content: '';
   position: absolute;
   top: -0.5rem;
-  left: 101%;
+  left: 102%;
   border-style: solid;
   border-width: 1.7rem;
-  border-color: transparent transparent transparent white;
-  transition: all 200ms 500ms;
-  filter: drop-shadow(-0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1)); }
+  border-color: transparent transparent transparent #53595d;
+  filter: drop-shadow(0.077rem 0 0.077rem #e4a608) drop-shadow(-0.077rem 0 0.077rem #e4a608); }
+
+#countryButton.countryChosen:after {
+  top: 12.5px;
+  left: 107%; }
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  background-color: #1e1e1e; }
+  border: 0.045rem solid white;
+  background-color: #53595d; }
 
-.country-menu {
+#country-menu {
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -1133,18 +1105,19 @@ input[type='checkbox']:disabled ~ label {
   flex-direction: column;
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  top: 0;
+  left: 75vw;
+  width: 17vw;
   padding: 0.5rem 0;
   justify-content: space-around;
   height: 100vh;
   font-size: 1rem;
-  border-left: 0.077rem solid rgba(0, 0, 0, 0.2);
-  border-right: 0.077rem solid rgba(0, 0, 0, 0.2);
-  background-color: #333;
-  transition: all 2000ms; }
+  background: #313131;
+  box-shadow: 0.1px 0 0 0.1px white, -0.2px 0 0 0.2px black; }
 
 .countryItem {
   position: relative;
-  width: 16vw;
+  width: 100%;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -1166,30 +1139,31 @@ input[type='checkbox']:disabled ~ label {
   transition: all 450ms ease-out;
   cursor: pointer; }
 
-.country-menu a:hover, .country-menu a:focus {
+#country-menu a:hover, #country-menu a:focus {
   outline: none;
-  background-color: #ba8d1e; }
+  background-color: #b38206;
+  color: black;
+  text-shadow: 0 0.077rem rgba(255, 255, 255, 0.2); }
 
-.country-menu a.highlight {
-  width: 16.5vw;
-  background-color: #ba8d1e;
+#country-menu a.highlight {
+  background-color: #b38206;
+  color: black;
+  text-shadow: 0 0.077rem rgba(255, 255, 255, 0.2);
   transition: all 450ms ease-out; }
 
-.country-menu a.highlight:after {
+#country-menu a.highlight:after {
   content: '';
   position: absolute;
   top: -0.077rem;
-  left: calc(100% - 2.1rem);
+  left: calc(100% - 1.75rem);
   border-style: solid;
   border-width: 1.5rem;
-  border-color: transparent #000 transparent transparent;
-  transition: all 400ms; }
+  border-color: transparent white transparent transparent;
+  filter: drop-shadow(0 0 0.077rem black);
+  transition: left 700ms ease-in-out; }
 
-.country-menu a.highlight:hover {
-  padding-left: 2.2rem; }
-
-.country-menu a.highlight:hover:after {
-  border-color: transparent white transparent transparent; }
+#country-menu a.highlight:hover:after {
+  left: calc(100% - 1rem); }
 
 .flag {
   position: absolute;
@@ -1201,7 +1175,7 @@ input[type='checkbox']:disabled ~ label {
   background-origin: padding-box;
   background-color: #333; }
 
-.country-menu img {
+#country-menu img {
   height: 2rem;
   width: 2rem;
   background-color: tranparent; }
@@ -1220,7 +1194,6 @@ input[type='checkbox']:disabled ~ label {
   left: -5.4rem;
   width: calc(100% + 10ch);
   height: 23ch;
-  margin-bottom: -12ch;
   padding: 3ch 4ch 0 5ch;
   z-index: 0;
   font-size: 1.06rem;
@@ -1255,33 +1228,60 @@ input[type='checkbox']:disabled ~ label {
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 .slideUpWrapper {
   position: relative;
+  top: -8rem;
   overflow-y: hidden;
   max-height: 27rem;
   border-top: none;
   border-bottom: none;
-  transition: opacity  450ms, max-height 600ms 250ms; }
+  transform: translateY(0) scaleY(100%);
+  transition: opacity 450ms, transform 600ms 250ms ease-in-out; }
 
 .slideUpWrapper.panel {
   padding: 0 2.5ch 0 2.5ch; }
 
 .slideUpWrapper.closeInstructions {
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 450ms, opacity 600ms 250ms; }
+  transform: scaleY(0) translateY(-27rem);
+  opacity: 0; }
+
+.slideUpWrapper + #searchForm {
+  transform: translateY(-8rem);
+  transition: transform 400ms 200ms ease-in-out; }
 
 .slideUpWrapper.closeInstructions + #searchForm {
-  background-color: transparent;
-  transition: background 450ms; }
+  transform: translateY(-24rem);
+  transition: transform 400ms ease-in-out; }
 
-.slideUpWrapper.closeInstructions + #searchForm input {
-  background-color: #53595d;
-  transition: background 350ms 300ms; }
+#results-panel {
+  transform-origin: top left;
+  transform: scaleY(0) translateY(0) !important;
+  transition: transform 400ms ease; }
+
+#results-panel.closeInstructions:not(.resultsPanelBoolean) {
+  transform: scaleY(0) translateY(-14rem) !important; }
+
+#results-panel.closeInstructions.resultsPanelBoolean {
+  opacity: 1;
+  height: 100%;
+  transform: scaleY(1) translateY(-14rem) !important; }
+
+#results-panel.resultsPanelBoolean:not(.closeInstructions) {
+  opacity: 1;
+  height: 100%;
+  transform: scaleY(1) translateY(0) !important; }
+
+#tax-panel {
+  transition: all 400ms ease-in-out; }
+
+#tax-panel.setTaxPanelHeight {
+  opacity: 1;
+  height: auto;
+  margin: 0 0 -10ch 0; }
 
 .taxInstructionsButton {
   position: absolute;
   display: inline-block;
   top: -2.6rem;
-  right: 7vw;
+  left: -4vw;
   width: 3rem;
   height: 3rem;
   padding: 0 0 0.15rem 0;
@@ -1293,38 +1293,29 @@ input[type='checkbox']:disabled ~ label {
   border: 0.15rem solid rgba(255, 217, 0, 0.6);
   border-radius: 50%;
   background-color: #53595d;
-  box-shadow: inset 0 0 0 0.15rem #53595d, 0 0 0 0.62rem #53595d;
-  cursor: pointer;
-  transform: translateX(-42ch);
-  -webkit-transition: transform  ease-in-out 1000ms;
-  -moz-transition: transform  ease-in-out 1000ms;
-  -o-transition: transform  ease-in-out 1000ms;
-  transition: transform  ease-in-out 1000ms; }
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #53595d;
+  cursor: pointer; }
 
 .taxInstructionsButton:hover, .taxInstructionsButton:focus {
   outline: none;
   background-color: black; }
 
 .taxInstructionsButton.instructionsClosed .tooltip {
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.31rem;
+  width: 10rem;
   border: 0.15rem solid rgba(255, 217, 0, 0.6);
   background-color: #474c50;
-  transform: scaleX(0.7); }
+  transform: rotate(0); }
 
 #searchForm {
   position: relative;
   padding: 1ch 0 2ch 0;
-  transform-origin: top right;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
   -o-transition: all 850ms ease-in-out;
   transition: all 850ms ease-in-out; }
 
 #searchForm:focus-within {
-  transform: scaleX(1.1);
-  background-color: #333; }
+  background-color: #636262; }
 
 .searchForm_contents {
   position: relative;
@@ -1425,7 +1416,7 @@ input[type='checkbox']:disabled ~ label {
   box-shadow: 0 0 0.15rem black; }
 
 #searchSpecials.SAM .searchSpecialWrapper {
-  padding: 1ch 0 1ch 0; }
+  padding: 0.5ch 0 0.5ch 0; }
 
 #searchSpecials div.notAvailable {
   display: none; }
@@ -1442,23 +1433,19 @@ input[type='checkbox']:disabled ~ label {
   border-bottom: 0.077rem solid white; }
 
 /*  -----------------------   searchResults  panel  ----------------------  */
-.results-panel {
+#results-panel {
   opacity: 0;
   position: relative;
-  height: 0;
+  height: auto;
   width: calc(100% + 10vw);
+  top: -8rem;
   left: -10vw;
-  margin: 7.25ch 0 0 0;
+  margin: 5.5ch 0 2ch 0;
   padding: 0;
   z-index: 0;
   border: none;
   box-shadow: none;
-  background-color: transparent;
-  transition: all 1000ms; }
-
-.results-panel.translateDown {
-  opacity: 1;
-  height: 100%; }
+  background-color: transparent; }
 
 #fakeResultsBox {
   position: relative;
@@ -1487,7 +1474,8 @@ input[type='checkbox']:disabled ~ label {
   left: 100%;
   width: 2.2rem;
   height: 2rem;
-  padding: 0 0.077rem 0 0;
+  padding: 0 0 0.08rem 0;
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.2rem;
@@ -1514,6 +1502,8 @@ input[type='checkbox']:disabled ~ label {
   height: 2.2rem;
   cursor: pointer;
   color: white;
+  text-align: center;
+  padding: 0.077rem;
   border-radius: 50%;
   background-color: #474c50;
   border: 0.15rem solid rgba(255, 217, 0, 0.6);
@@ -1533,8 +1523,9 @@ input[type='checkbox']:disabled ~ label {
   opacity: 1; }
 
 #closeOpenFamiliesButton {
+  position: absolute;
   left: calc(100% - 1.31rem);
-  top: 2.54rem;
+  top: calc(100% - 1.75rem);
   width: 3rem;
   height: 3rem;
   padding: 0 0 0.3rem 0;
@@ -1583,7 +1574,7 @@ input[type='checkbox']:disabled ~ label {
   box-shadow: none; }
 
 #searchResults {
-  opacity: 0;
+  opacity: 1;
   position: relative;
   left: -10vw;
   width: calc(100% + 10vw + 1.1ch);
@@ -1599,10 +1590,6 @@ input[type='checkbox']:disabled ~ label {
   transition: all 350ms; }
 
 #searchResults.fadeIn {
-  opacity: 1;
-  transition: all 2s; }
-
-.results-panel.fadeIn {
   opacity: 1;
   transition: all 2s; }
 
@@ -1728,29 +1715,27 @@ input[type='checkbox']:disabled ~ label {
 
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
 #tax-panel {
+  opacity: 0;
   position: relative;
   width: calc(100% + 10vw);
+  height: 0;
   top: 0;
   left: -10vw;
-  margin: 0 0 -10ch 0;
-  padding: 2ch 0 0 0;
+  margin: 0 0 -20.5ch 0;
+  padding: 5ch 0 0 0;
   z-index: 0;
-  opacity: 0;
   border: none;
   box-shadow: none;
-  background-color: transparent; }
-
-#tax-panel.translateDown {
-  opacity: 1;
-  margin: 0 0 10ch 0; }
+  background-color: transparent;
+  transform: translateY(-15rem); }
 
 #fakeTaxPageBox {
   position: relative;
-  top: 0;
+  top: -1.5ch;
   height: 100%;
   width: calc(100% - 10vw);
   left: 10vw;
-  padding: 0 0 1ch 0;
+  padding: 0 0 2ch 0;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
   background-color: #474c50;
@@ -1760,12 +1745,13 @@ input[type='checkbox']:disabled ~ label {
 /*  -----------------------------   #taxPage panel  ---------------------  */
 #taxPage {
   position: relative;
-  top: 0.77rem;
+  top: -1.5ch;
   left: -10vw;
   width: calc(100% + 10vw + 1ch);
+  height: 0;
   max-height: 75vh;
-  padding: 0.5ch 0 0 10vw;
-  margin: 0 0 1ch 0;
+  padding: 0 0 0 10vw;
+  margin: 0;
   font-size: 1rem;
   line-height: 1.3rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
@@ -2067,36 +2053,39 @@ input[type='checkbox']:disabled ~ label {
   background-color: transparent;
   border: 0.12rem solid rgba(255, 217, 0, 0.6);
   border-right: 0.2rem solid rgba(255, 217, 0, 0.6);
-  box-shadow: inset 0 0 0 transparent;
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-4deg);
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
   -o-transform-origin: top left;
   transform-origin: top left;
-  transition: transform 450ms, box-shadow 450ms, border 350ms 500ms; }
+  transition: all 450ms; }
 
 .deleteMapButton .tooltip {
   position: absolute;
   top: 7rem;
-  left: -1.3rem;
+  left: -1.8rem;
   width: 5.5em;
   padding: 0;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
+  font-size: 0.675rem;
+  text-align: center;
+  letter-spacing: 0.25em;
   background-color: transparent;
-  border: 1px solid #f88509;
+  border: 1px solid #bebdbd;
   transform-origin: top right;
   transform: rotate(-15deg); }
 
 .saveMapButton .tooltip {
   position: absolute;
-  width: 5em;
+  width: 6em;
   padding: 0 0 0.15rem 0;
   text-align: center;
+  letter-spacing: 0.2rem;
   opacity: 1;
   border: 0.077rem solid rgba(255, 255, 255, 0.5);
-  background-color: #474c50;
+  background-color: #53595d;
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-20deg);
   -webkit-transform-origin: middle right;
   -moz-transform-origin: middle right;
@@ -2112,29 +2101,24 @@ input[type='checkbox']:disabled ~ label {
   border-style: solid; }
 
 .taxInstructionsButton .tooltip:after {
-  top: -0.15em;
+  top: -0.125em;
   left: -2.25em;
   border-width: 0.98em;
   border-color: transparent rgba(255, 217, 0, 0.6) transparent transparent;
   transition: border-color 200ms 500ms; }
 
-.taxInstructionsButton.instructionsClosed .tooltip:after {
-  top: -0.15em;
-  left: -2.04em;
-  border-width: 0.8em; }
-
 .saveMapButton .tooltip:after {
-  top: -0.038rem;
-  left: 100%;
-  border-width: 0.9em;
+  top: -0.06rem;
+  left: 102.3%;
+  border-width: 0.91em;
   border-color: transparent transparent transparent #fff;
   transition: all 350ms; }
 
 .deleteMapButton .tooltip:after {
-  top: -0.18rem;
-  left: 105%;
-  border-width: 1.3em;
-  border-color: transparent transparent transparent #f88509; }
+  top: -0.2rem;
+  left: 107%;
+  border-width: 1.2em;
+  border-color: transparent transparent transparent white; }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {
   color: black;

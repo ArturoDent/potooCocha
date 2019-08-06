@@ -10,25 +10,8 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
-var numSpeciesList = {
-  "Argentina": 1006, "Aruba": 219, "Bolivia": 1384, "Brazil": 1806, "Chile": 498,
-  "Colombia": 1851, "Curaçao": 217, "Ecuador": 1635, "French Guiana": 699,
-  "Guyana": 785, "Paraguay": 694, "Peru": 1802, "Suriname": 732, "Trinidad": 470,
-  "Uruguay": 448, "Venezuela": 1386, "Bonaire": 208, "Falklands": 227, "South America": 3413
-};
-
-// numSpecies does not include hypotheticals, so taken from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
-// numFamilies does not include Incertae Sedis
-
-var numFamiliesList = {
-  "Argentina": 87, "Aruba": 52, "Bolivia": 78, "Brazil": 93, "Chile": 68,
-  "Colombia": 93, "Curaçao": 51, "Ecuador": 93, "French Guiana": 83,
-  "Guyana": 80, "Paraguay": 72, "Peru": 89, "Suriname": 81, "Trinidad": 71,
-  "Uruguay": 73, "Venezuela": 90, "Bonaire": 48, "Falklands": 49, "South America": 105
-};
-
-// South America : 105 families not including 1 incertae "family", 3403 total spp.
-//   class='fco'>(?!INCERTAE).*?  --> finds number of families not including INCERTAE in ..SACC.html
+// var numSpeciesList;   //  located in numLists.js
+// var numFamiliesList;
 
 var searchCountryText;
 var taxTreeArticleOpen = false;
@@ -42,7 +25,7 @@ var searchResults;
 var simpleBarResults;
 var simpleBarTaxPage;
 
-var closeResultsPanelButton;
+// var closeResultsPanelButton;
 var resultsPanelOpen = false;
 var printerButton;
 var closeOpenFamiliesButton;
@@ -66,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   taxInstructionsButton = document.querySelector(".taxInstructionsButton");
 
-  closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
-  closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
+  // closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
+  // closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
 
   // FIXME :
   printerButton = document.getElementById("printerButton");
@@ -92,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
   searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);  
 
-  taxInstructionsButton.addEventListener("click", showSearchInstructions);
+  taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
   taxPage = document.getElementById("taxPage");
   // TODO : set taxPage height here??
 
   searchResults = document.getElementById("searchResults");
-  resultsPanel = document.querySelector(".results-panel");
+  resultsPanel = document.getElementById("results-panel");
 
   searchResults.addEventListener("click", gotoMatch, false);
   taxPage.addEventListener("click", toggleFamilyOpen);
@@ -107,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // document.querySelector("#taxPageButton").addEventListener("click", closeAllFamilies);
 
   // TODO : (start with searchInstructions closed?)
-  // showSearchInstructions(),
+  // toggleSearchInstructions(),
 
   // preloading the file occurrences.txt
   // TODO : (delay this ? prefetch?)
@@ -147,14 +130,23 @@ function loadOccurrences(data) {
 //   })();
 // }
 
-function showSearchInstructions() {
+function toggleSearchInstructions() {
 
-  // TODO : (merge these below)
-  if (!searchInstructionsOpen) document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Close";
-  else document.querySelector(".taxInstructionsButton .tooltip").innerHTML = "Open";
+  // TODO : (merge these below)  
+  var taxInstructionTooltip = document.querySelector(".taxInstructionsButton .tooltip");
+  
+  if (!searchInstructionsOpen) taxInstructionTooltip.innerHTML = "Close";
+  else taxInstructionTooltip.innerHTML = "Open";
 
+  //  do only once, hence no toggle
   if (!taxInstructionsButton.classList.contains("instructionsClosed")) taxInstructionsButton.classList.add("instructionsClosed");
-  searchSlideUpWrapper.classList.toggle("closeInstructions");
+  
+  searchSlideUpWrapper.classList.toggle("closeInstructions");  
+  resultsPanel.classList.toggle("closeInstructions");  
+  
+  if (searchInstructionsOpen) moveTaxPanel("searchInstructionsClosing");
+  else moveTaxPanel("searchInstructionsOpening");
+  
   searchInstructionsOpen = !searchInstructionsOpen;
 }
 
@@ -164,7 +156,7 @@ function enableSearchSpecials() {
   searchSpecials.classList.remove("grayed");
   
   var list = searchSpecials.querySelectorAll("a");
-    // set tabIndex from -1 to 0 so tabbing works through searchSpecials after country chosen
+    // set tabIndex from -1 to 0 so tabbing works through searchSpecials after country is chosen
     
   list.forEach(function(element) {
     element.setAttribute("tabindex", "0");
@@ -179,20 +171,6 @@ function loadCountryTaxonomy(country) {
   if (searchSpecials.classList.contains("grayed")) {
     enableSearchSpecials();    
     
-    // document.querySelector("#searchForm span.grayed").classList.remove("grayed");
-    // searchSpecials.classList.remove("grayed");
-    
-    // set tabIndex from -1 to 0 so tabbing works through searchSpecials after country chosen
-    // var list = searchSpecials.querySelectorAll("a");
-    
-    // list.forEach(function(element) {
-    //   element.setAttribute("tabindex", "0");
-    // });
-    
-    // searchInput.setAttribute("tabindex", "0");
-    
-    // closeResultsPanelButton.setAttribute("tabindex", "0");
-    // printerButton.setAttribute("tabindex", "0");
     closeOpenFamiliesButton.setAttribute("tabindex", "0");
   }
 
@@ -250,25 +228,103 @@ function loadCountryTaxonomy(country) {
   if (country === "Falklands")
     document.querySelector("#treeIntroText").innerHTML = "Falklands/Malvinas" + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
   else document.querySelector("#treeIntroText").innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
-
-  // animateScrollTop(taxPage);
 }
 
-function toggleSearchResultsPanel() {
-
-  searchResults.classList.toggle("fadeIn");
-  resultsPanel.classList.toggle("translateDown");
+function toggleSearchResultsPanel() {  
   
-  if (!resultsPanelOpen) {
-    closeResultsPanelButton.setAttribute("tabindex", "0");
+  resultsPanel.classList.toggle("resultsPanelBoolean");
+    
+  if (!resultsPanelOpen) {      // results-panel was not open
+    moveTaxPanel("searchResultsOpening");
+    // closeResultsPanelButton.setAttribute("tabindex", "0");
     printerButton.setAttribute("tabindex", "0");
   }
-  else {
-    closeResultsPanelButton.setAttribute("tabindex", "-1");
+  else {                        // results-panel was open
+    moveTaxPanel("searchResultsClosing");    
+    // closeResultsPanelButton.setAttribute("tabindex", "-1");
     printerButton.setAttribute("tabindex", "-1");
   }
-  
+
   resultsPanelOpen = !resultsPanelOpen;
+}
+
+function moveTaxPanel(whatIsOpening) {
+  
+  //    "searchResultsOpening", "searchResultsClosing"
+  //    "searchInstructionsClosing", "searchInstructionsOpening"
+  
+  var anchor = document.querySelector(".searchWord");
+  var bottom = anchor.getBoundingClientRect().bottom;
+  var top = taxPanel.getBoundingClientRect().top;
+  var span = top - bottom;  // distance from bottom of '.searchWord' to top of #tax-panel
+  
+  var instructionsHeight = searchSlideUpWrapper.style.height;
+  var searchResultsBottom = searchResults.getBoundingClientRect().bottom;
+  
+  var oldTop = taxPanel.style.top ? taxPanel.style.top : "0px";
+  var oldTranslate = taxPanel.style.transform;
+  var resultPanelHeight = searchResults.offsetHeight;
+  // = 28 when not open
+  
+  // transform: translateY(-15rem);  // the initial state
+  
+  
+  switch (whatIsOpening) {
+    
+    case "searchResultsOpening":
+      if (searchInstructionsOpen) {
+        // taxPanel.style.top = '80px';
+        // var shift = resultPanelHeight;
+        taxPanel.style.transform = "translateY(-128px)";
+      }
+      else {
+        // taxPanel.style.top = parseInt(oldTop) + resultPanelHeight + 'px';
+        taxPanel.style.transform = "translateY(-128px)";        
+      }
+      break;
+    
+    // case "searchResultsClosing":
+    //   if (searchInstructionsOpen) {
+    //     var shift = 240 + resultPanelHeight + "px";
+    //     taxPanel.style.transform = "translateY(-" + shift +")";
+    //   }
+    //     // taxPanel.style.top = -resultPanelHeight + 'px';
+    //   else {
+    //     // taxPanel.style.top = parseInt(oldTop) - parseInt(instructionsHeight) + 'px';
+    //     var shift = 240 + parseInt(instructionsHeight) + resultPanelHeight + "px";
+    //     taxPanel.style.transform = "translateY(-" + shift +")";        
+    //   }
+    //   break;
+    
+    case "searchInstructionsClosing":
+      if (resultsPanelOpen) {
+        // taxPanel.style.top = parseInt(oldTop) - parseInt(instructionsHeight)  + 40 + 'px';
+        var shift = 100 + parseInt(instructionsHeight) + "px";        
+        taxPanel.style.transform = "translateY(-" + shift + ")";        
+      }
+      else {
+        // taxPanel.style.top =  parseInt(oldTop) - parseInt(instructionsHeight)  + 'px';
+        var shift = 200 + parseInt(instructionsHeight) + "px";
+        taxPanel.style.transform = "translateY(-" + shift + ")";        
+      }
+      break;
+    
+    case "searchInstructionsOpening":
+      if (resultsPanelOpen)  {
+        // taxPanel.style.top = '80px';
+        var shift = -100 + parseInt(instructionsHeight) + "px";        
+        taxPanel.style.transform = "translateY(-" + shift + ")";        
+      }
+      else {
+        // taxPanel.style.top = parseInt(oldTop) + parseInt(instructionsHeight)  + 'px';
+        var shift = 240 + "px";        
+        taxPanel.style.transform = "translateY(-" + shift + ")";        
+      }
+      break;
+  
+    default:
+      break;
+  }
 }
 
 function getCountryData(data) {
@@ -276,8 +332,6 @@ function getCountryData(data) {
   // <ul id='tree'>
   //  TODO  : tabindex="0" on all families and species !! ***
   taxPage.innerHTML = data;
-
-  var taxPanel = document.querySelector(".tax-panel");
 
   // so "species" includes the family level and individual bird species
   species = document.getElementById("tree").getElementsByTagName("li");
@@ -298,9 +352,12 @@ function getQuery() {
   var badIndex = searchInput.value.search(/[^"a-zñã'\s-]/i);
 
   if (badIndex !== -1) {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
+    // searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
+    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character not allowed </li><li></li>";
+    // if (!resultsPanelOpen) toggleSearchResultsPanel();
     resetSearchResultsHeight();
+    if (!resultsPanelOpen) toggleSearchResultsPanel();
+    
     return;
   }
 
@@ -351,7 +408,7 @@ function searchTree(query2) {
 
   var numFound = 0;
 
-  if (!resultsPanelOpen) toggleSearchResultsPanel();
+  // if (!resultsPanelOpen) toggleSearchResultsPanel();
 
   lastQuery = query2;
 
@@ -365,10 +422,13 @@ function searchTree(query2) {
   else {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
 
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
-    searchResults.style.top = 0;
+    // TODO : is this necessary given the above call to the same function?
+    // if (!resultsPanelOpen) toggleSearchResultsPanel();
+    // searchResults.style.top = 0;
 
     resetSearchResultsHeight();
+    if (!resultsPanelOpen) toggleSearchResultsPanel();
+    
     return;
   }
 
@@ -449,9 +509,11 @@ function searchTree(query2) {
     if (warning) {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
 
-      if (!resultsPanelOpen) toggleSearchResultsPanel();
+      // if (!resultsPanelOpen) toggleSearchResultsPanel();
 
       resetSearchResultsHeight();
+      if (!resultsPanelOpen) toggleSearchResultsPanel();
+      
       return;
     }
 
@@ -503,9 +565,10 @@ function searchTree(query2) {
   if (matches.length === 0) {
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
 
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
+    // if (!resultsPanelOpen) toggleSearchResultsPanel();
 
     resetSearchResultsHeight();
+    if (!resultsPanelOpen) toggleSearchResultsPanel();
 
     return;
   }
@@ -527,14 +590,21 @@ function searchTree(query2) {
       list += matches[k].firstChild.firstChild.textContent + "</span><span class='fsc'>";
 
       // <li class="family"><span class='fTitle'><span class="fcommon">INCERTAE SEDIS</span><span class="fscientific"> </span></span>
+      
+      // <li class='family'><span class='fTitle'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></span>
       // must have space between the spans
       // or handle as below
 
       list += (matches[k].firstChild.lastChild) ? matches[k].firstChild.childNodes[1].textContent : " ";
-      list += "</span></li>";
+      list += "</span></li>";  
+      
+      // list = list.trim();
+      
+      // "<li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'>"
 
       // only matched one family, get all its species and add them to list
       if (matches.length === 1) {
+        
         for (z = 0; z < matches[0].children[1].children.length; z++) {
 
           list += "<li data-i='" + matches[0].children[1].children[z].getAttribute("data-i") + "' class='bird'>" + matches[0].children[1].children[z].innerHTML + "</li>";
@@ -554,37 +624,26 @@ function searchTree(query2) {
 
   searchResults.innerHTML = list;
 
-  if (!resultsPanelOpen) toggleSearchResultsPanel();
+  // "<li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></li><li data-i='2592' class='bird'><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>"
+  
+  // "<li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></li><li data-i='2592' class='bird'><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>"
+  
+  // if (!resultsPanelOpen) toggleSearchResultsPanel();
   // searchResults.classList.add("fadeIn");
 
   // lastQuery = lastQuery.replace(/\\\*/g, "*");
   // lastQuery = lastQuery.replace(/\\\?/g, "?");
 
   if (currentCountry === "Falklands") {
-    // document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + " : '" + lastQuery + "'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]";
     document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + " : '<span>" + lastQuery + "</span>'&nbsp;&nbsp;   [ " + numFound + " species ]";
   }
   else {
-    // document.getElementById("searchTerm").innerHTML = currentCountry + " : '" + lastQuery + "'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]";
     document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + lastQuery + "</span>'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]";
   }
-
+  
+  // if (!resultsPanelOpen) toggleSearchResultsPanel();
   resetSearchResultsHeight();
-
-  // i.e., first run
-  // TODO : (why no work?)
-  // if (!lastSpecies) {
-
-  //   var evt = new MouseEvent("click", {
-  //     bubbles: true,
-  //     cancelable: true,
-  //     view: window
-  //   });
-
-  //   var cb = document.getElementById("searchResults").children[7]; //element to click on
-  //   cb.dispatchEvent(evt);
-  // }
-  // return;
+  if (!resultsPanelOpen) toggleSearchResultsPanel();
 }
 
 function resetSearchResultsHeight() {
@@ -592,7 +651,6 @@ function resetSearchResultsHeight() {
   searchResults.style.height = "auto";
 
   simpleBarResults = new SimpleBar(document.getElementById("searchResults"), { autoHide: false });
-  // simpleBarResults.recalculate();
 
   var elem;
 
@@ -606,7 +664,6 @@ function resetSearchResultsHeight() {
     elem = simpleBarResults.getScrollElement();
     elem.style.height = searchResults.scrollHeight + "px";
   }
-
   // simpleBarResults.recalculate();
 }
 
@@ -635,8 +692,6 @@ function gotoMatch(e) {
   // TODO : (element.closest()? with polyfill)
   var ev = e || window.event;  // window.event for IE8-
   var clicked = ev.target;
-
-  // console.log(ev.target);
 
   var clickedPar = clicked.parentNode;
   var clickedClass = clicked.className;
@@ -764,7 +819,6 @@ function addBirdNameToMap(name) {
 /* global highlightSAMmap */
 
 function toggleFamilyOpen(event) {
-  // console.log("toggleFamilyOpen");
 
   if (event.target.className.indexOf("simplebar") !== -1) return;
 
@@ -799,9 +853,6 @@ function toggleFamilyOpen(event) {
     familyTarget.classList.add("open");
 
     familyTarget.parentNode.className = "familyOpen";
-
-    // console.log('familyTarget.scrollHeight = ' + familyTarget.scrollHeight);
-
 
     // clicked on a closed family
     // check to see if family at bottom of taxPage, if so, open and move up ?*

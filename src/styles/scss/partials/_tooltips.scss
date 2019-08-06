@@ -28,7 +28,9 @@
     border-right : 0.2rem solid $goldHighlightColor;
 
     // box-shadow  :  inset 0 0 0 transparent;
-    box-shadow  :  inset 0 0 0 transparent;
+    // box-shadow  :  inset 0 0 0 transparent;
+    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+    
 
     transform  :  rotate(-4deg);
     -webkit-transform-origin  :  top left;
@@ -37,21 +39,25 @@
          -o-transform-origin  :  top left;
             transform-origin  :  top left;
 
-    transition: transform 450ms, box-shadow 450ms, border 350ms 500ms;
+    // transition: transform 450ms, box-shadow 450ms, border 350ms 500ms, width 450ms;
+    transition: all 450ms;
 }
 
 .deleteMapButton .tooltip {
     position  :  absolute;
     top  :  7rem;
-    left  : -1.3rem;
+    left  : -1.8rem;
 
     width  :  5.5em;
     // padding : 0 0 0.1rem 0;
     padding : 0;
-    font-size  :  0.6rem;
-    letter-spacing : 0.15em;
+    font-size  :  0.675rem;
+    // letter-spacing : 0.15em;
+    text-align: center;
+    letter-spacing : 0.25em;
     background-color  :  transparent;
-    border: 1px solid #f88509;
+    // border: 1px solid #f88509;
+    border: 1px solid rgb(190, 189, 189);
     transform-origin  :  top right;
     transform: rotate(-15deg);
 }
@@ -59,13 +65,15 @@
 .saveMapButton .tooltip {
     position  :  absolute;
 
-    width  :  5em;
+    width  :  6em;
     padding : 0 0 0.15rem 0;
 
     text-align: center;
+    letter-spacing: 0.2rem;
     opacity: 1;
     border: 0.077rem solid rgba(255,255,255,0.5);
-    background-color  :  $panelColor;
+    background-color  :  $bgColor;
+    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
 
     transform  :  rotate(-20deg);
 
@@ -85,33 +93,32 @@
 }
 
 .taxInstructionsButton .tooltip:after {
-    top  : -0.15em;
+    top  : -0.125em;
     left  :  -2.25em;
     border-width  :  0.98em;
     border-color  :  transparent  $goldHighlightColor transparent transparent;
     transition : border-color 200ms 500ms;
 }
 
-.taxInstructionsButton.instructionsClosed .tooltip:after {
-    top  : -0.15em;
-    left  :  -2.04em;
-    border-width  :  0.8em;
-}
+// .taxInstructionsButton.instructionsClosed .tooltip:after {
+//     top  : -0.15em;
+//     left  :  -2.04em;
+//     border-width  :  0.8em;
+// }
 
 .saveMapButton .tooltip:after {
-    top  :  -0.038rem;
-    left  :  100%;
-    border-width  :  0.9em;
+    top  :  -0.06rem;
+    left  :  102.3%;
+    border-width  :  0.91em;
     border-color  :  transparent transparent transparent #fff;
     transition: all 350ms;
 }
 ;
 .deleteMapButton .tooltip:after {
-    top  :  -0.18rem;
-    left  :  105%;
-    border-width  :  1.3em;
-
-    border-color  :  transparent transparent transparent #f88509;
+    top  :  -0.2rem;
+    left  :  107%;
+    border-width  :  1.2em;
+    border-color  :  transparent transparent transparent white;
 }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {

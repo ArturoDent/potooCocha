@@ -188,7 +188,7 @@ function highlightSAMmap(index, current) {
     svg = document.getElementById(current);
   }
   var svgDoc = svg.contentDocument;
-  var cList = birds[index].split("-");
+  var cList = birds[index].split("-");  // cList = []
 
   for (var country in countries) {
 
@@ -199,6 +199,7 @@ function highlightSAMmap(index, current) {
     // because the Falklands is the last country in the occurrence lists apparently split() is returning an extra character (newline?)
     if (country === "Falklands") cList[countries[country]] = cList[countries[country]].trim();
 
+      // cList[countries["Ecuador"]] = 7, so 8th item in the cList
     switch (cList[countries[country]]) {
 
       case "X(e)":
