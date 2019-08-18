@@ -18,7 +18,8 @@
 #countryMenuLayer.show {
   opacity: 1;
   pointer-events: all;
-  transition: opacity 300ms 100ms ease-in-out;
+  // transition: opacity 300ms 100ms ease-in-out;
+  transition: opacity 300ms  ease-in-out;
 }
 
 #countryButton {
@@ -44,15 +45,18 @@
   
   box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   // transition  :  transform 500ms ease-out, background-color 400ms, top 500ms ease-out, right 500ms ease-out;
-  transition  :  background-color 400ms, right 500ms 500ms ease-in-out;
+  // transition  :  background-color 400ms, right 500ms 500ms ease-in-out;
+  transition  :  background-color 400ms, transform 400ms ease-out;
 }
 
 #countryButton.slideLeft {  
   // transform: translateX(-22vw);
   // top: calc(1.5rem + 100px);
-  background-color: $titleBannerColor;  
+  // background-color: $titleBannerColor;  
   transform: translateX(0);
+  
   // transition: transform 300ms ease-out, background-color 400ms;
+  transition: transform 500ms 200ms ease-in-out;
 }
 
 #countryButton.countryChosen {  
@@ -67,13 +71,20 @@
   
   text-align  :  center;
   // border-color: $titleBannerColor;
-  border-color: darkgrayr;
-  border-left: none;
+  background-color: $bgColor;
+  // border-color: darkgray;
+  // border: 4px solid $titleBannerColor;
+  border: 2px solid white;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255, 0.5);
+  // box-shadow: inset 0 0 0 1px rgba(255,255,255, 0.5);
+  box-shadow: inset 0 0 2px 2px rgba(0,0,0, 0.1);
   
   // transition: right 500ms 500ms ease-in-out;
 }
+
+// #countryButton.slideLeft.countryChosen {  
+//   z-index: 5;
+// }
 
 #countryButton:after {
   content  :  '';
@@ -83,17 +94,22 @@
   border-style  :  solid;
   border-width  :  1.7rem;
   // border-color  :  transparent transparent transparent rgb(199, 199, 199);
-  border-color  :  transparent transparent transparent $bgColor;
+  // border-color  :  transparent transparent transparent $bgColor;
+  border-color  :  transparent transparent transparent white;
   // transition : all 200ms 500ms ease-in;
   
-  // filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1));
-  filter: drop-shadow(0.077rem 0 0.077rem lighten($titleBannerColor, 10%)) drop-shadow(-0.077rem 0 0.077rem lighten($titleBannerColor, 10%));
+  filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1)) drop-shadow(0.23rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1));
+  // filter: drop-shadow(0.077rem 0 0.077rem lighten($titleBannerColor, 10%)) drop-shadow(-0.077rem 0 0.077rem lighten($titleBannerColor, 10%));
 }
 
 #countryButton.countryChosen:after {
   top  :  12.5px;
-  left  :  107%;
+  // left  :  107%;
+  left  :  111%;
   // transition : all 200ms 500ms ease-in;
+  border-color  :  transparent transparent transparent white;
+  // filter: none;
+  // filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1)) drop-shadow(0.23rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1));
   
   // filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1));
   // filter: drop-shadow(0.077rem 0 0.077rem lighten($titleBannerColor, 10%)) drop-shadow(-0.077rem 0 0.077rem lighten($titleBannerColor, 10%));
@@ -105,9 +121,10 @@
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  border: 0.045rem solid white;
+  border-color: white;
   
-  background-color: $bgColor;
+  // background-color: $bgColor;
+  background-color: #333;
   // background-color: darken($titleBannerColor, 5%);
   // background: rgb(167,95,29);
 }

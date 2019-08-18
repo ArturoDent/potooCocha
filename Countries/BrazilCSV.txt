@@ -175,7 +175,8 @@ E,Pygmy Nightjar,N. hirundinaceus
 ,Common Pauraque,Nyctidromus albicollis
 ,White-winged Nightjar,Eleothreptus candicans
 ,Sickle-winged Nightjar,E. anomalus
-,Little Nightjar,Setopagis parvula
+,Todd's Nightjar,Setopagis heterura
+,Little Nightjar,S. parvula
 ,Roraiman Nightjar,S. whitelyi
 ,White-tailed Nightjar,Hydropsalis cayennensis
 ,Spot-tailed Nightjar,H. maculicaudus
@@ -253,6 +254,7 @@ E,Hooded Visorbearer,A. lumachella
 ,Tufted Coquette,Lophornis ornatus
 ,Dot-eared Coquette,L. gouldii
 E,Frilled Coquette,L. magnificus
+,Spangled Coquette,L. stictolophus
 ,Festive Coquette,L. chalybeus
 ,Peacock Coquette,L. pavoninus
 ,Velvet-browed Brilliant,Heliodoxa xanthogonys
@@ -330,6 +332,7 @@ E,Little Wood-Rail,A. mangle
 ,Spot-flanked Gallinule,Porphyriops melanops
 ,Yellow-breasted Crake,Porzana flaviventer
 ,Dot-winged Crake,P. spiloptera
+,Sora,P. carolina
 ,Common Gallinule,Gallinula galeata
 ,Lesser Moorhen,G. angulata
 ,Red-fronted Coot,Fulica rufifrons
@@ -373,6 +376,7 @@ E,Little Wood-Rail,A. mangle
 ,Red Knot,Calidris canutus
 ,Ruff,C. pugnax
 ,Stilt Sandpiper,C. himantopus
+,Curlew Sandpiper,C. ferruginea
 ,Sanderling,C. alba
 ,Baird's Sandpiper,C. bairdii
 ,Least Sandpiper,C. minutilla
@@ -384,6 +388,7 @@ E,Little Wood-Rail,A. mangle
 ,Giant Snipe,Gallinago undulata
 ,South American Snipe,G. paraguaiae
 ,Wilson's Phalarope,Phalaropus tricolor
+,Red-necked Phalarope,P. lobatus
 ,Red Phalarope,P. fulicarius
 ,Terek Sandpiper,Xenus cinereus
 ,Spotted Sandpiper,Actitis macularius
@@ -1466,6 +1471,7 @@ E,Velvety Black-Tyrant,K. nigerrimus
 ,Yellow-browed Tyrant,Satrapa icterophrys
 ,Little Ground-Tyrant,Muscisaxicola fluviatilis
 ,Dark-faced Ground-Tyrant,M. maclovianus
+,Cinnamon-bellied Ground-Tyrant,M. capistratus
 ,Gray-bellied Shrike-Tyrant,Agriornis micropterus
 ,Lesser Shrike-Tyrant,A. murinus
 ,Gray Monjita,Xolmis cinereus
@@ -1663,6 +1669,7 @@ E,White-naped Jay,C. cyanopogon
 ,Southern Rough-winged Swallow,Stelgidopteryx ruficollis
 ,Brown-chested Martin,Progne tapera
 ,Purple Martin,P. subis
+,Caribbean Martin,P. dominicensis
 ,Gray-breasted Martin,P. chalybea
 ,Southern Martin,P. elegans
 ,White-winged Swallow,Tachycineta albiventer
@@ -1729,6 +1736,9 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,Tropical Mockingbird,Mimus gilvus
 ,Chalk-browed Mockingbird,M. saturninus
 ,White-banded Mockingbird,M. triurus
+
+,STARLINGS,STURNIDAE
+,European Starling,Sturnus vulgaris
 
 ,ESTRILDIDS,ESTRILDIDAE
 ,Common Waxbill,Estrilda astrild
@@ -1849,6 +1859,7 @@ E,White-striped Warbler,Myiothlypis  leucophrys
 ,White-winged Tanager,P. leucoptera
 ,Red-crowned Ant-Tanager,Habia rubica
 ,Black-backed Grosbeak,Pheucticus aureoventris
+,Rose-breasted Grosbeak,P. ludovicianus
 ,Rose-breasted Chat,Granatellus pelzelni
 ,Yellow-green Grosbeak,Caryothraustes canadensis
 ,Red-and-black Grosbeak,Periporphyrus erythromelas

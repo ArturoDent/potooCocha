@@ -1041,7 +1041,7 @@ input[type='checkbox']:disabled ~ label {
 #countryMenuLayer.show {
   opacity: 1;
   pointer-events: all;
-  transition: opacity 300ms 100ms ease-in-out; }
+  transition: opacity 300ms  ease-in-out; }
 
 #countryButton {
   position: fixed;
@@ -1060,11 +1060,11 @@ input[type='checkbox']:disabled ~ label {
   border-bottom-right-radius: 0;
   background-color: #b38206;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
-  transition: background-color 400ms, right 500ms 500ms ease-in-out; }
+  transition: background-color 400ms, transform 400ms ease-out; }
 
 #countryButton.slideLeft {
-  background-color: #b38206;
-  transform: translateX(0); }
+  transform: translateX(0);
+  transition: transform 500ms 200ms ease-in-out; }
 
 #countryButton.countryChosen {
   top: 20px;
@@ -1073,10 +1073,10 @@ input[type='checkbox']:disabled ~ label {
   height: 80px;
   padding: 0;
   text-align: center;
-  border-color: darkgrayr;
-  border-left: none;
+  background-color: #53595d;
+  border: 2px solid white;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.1); }
 
 #countryButton:after {
   content: '';
@@ -1085,17 +1085,18 @@ input[type='checkbox']:disabled ~ label {
   left: 102%;
   border-style: solid;
   border-width: 1.7rem;
-  border-color: transparent transparent transparent #53595d;
-  filter: drop-shadow(0.077rem 0 0.077rem #e4a608) drop-shadow(-0.077rem 0 0.077rem #e4a608); }
+  border-color: transparent transparent transparent white;
+  filter: drop-shadow(0.15rem 0.23rem 0.15rem rgba(0, 0, 0, 0.1)) drop-shadow(0.23rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1)); }
 
 #countryButton.countryChosen:after {
   top: 12.5px;
-  left: 107%; }
+  left: 111%;
+  border-color: transparent transparent transparent white; }
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  border: 0.045rem solid white;
-  background-color: #53595d; }
+  border-color: white;
+  background-color: #333; }
 
 #country-menu {
   position: relative;

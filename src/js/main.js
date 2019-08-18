@@ -196,6 +196,7 @@ function toggleSampleTableLeftChecks(evt) {
   }
 
   var list = sampleTable.querySelectorAll(".leftCheckBox, .familyHidden");
+  
   Array.prototype.forEach.call(list, function (item) {
     item.classList.toggle("show");
   });

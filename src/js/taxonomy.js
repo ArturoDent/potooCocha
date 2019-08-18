@@ -278,8 +278,9 @@ function moveTaxPanel(whatIsOpening) {
         taxPanel.style.transform = "translateY(-128px)";
       }
       else {
-        // taxPanel.style.top = parseInt(oldTop) + resultPanelHeight + 'px';
-        taxPanel.style.transform = "translateY(-128px)";        
+        // taxPanel.style.transform = "translateY(-128px)";        
+        var shift = 100 + parseInt(instructionsHeight) + "px";        
+        taxPanel.style.transform = "translateY(-" + shift + ")"; 
       }
       break;
     
