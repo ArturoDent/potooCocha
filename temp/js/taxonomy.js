@@ -10,9 +10,6 @@ var numFamilies;
 // eslint-disable-next-line
 var birds;
 
-// var numSpeciesList;   //  located in numLists.js
-// var numFamiliesList;
-
 var searchCountryText;
 var taxTreeArticleOpen = false;
 
@@ -25,7 +22,6 @@ var searchResults;
 var simpleBarResults;
 var simpleBarTaxPage;
 
-// var closeResultsPanelButton;
 var resultsPanelOpen = false;
 var printerButton;
 var closeOpenFamiliesButton;
@@ -49,13 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   taxInstructionsButton = document.querySelector(".taxInstructionsButton");
 
-  // closeResultsPanelButton = document.getElementById("closeResultsPanelButton");
-  // closeResultsPanelButton.addEventListener("click", toggleSearchResultsPanel);
-
-  // FIXME :
   printerButton = document.getElementById("printerButton");
   printerButton.addEventListener("click", printElem);
-  // closeResultsPanelButton.addEventListener("click", printElem);
 
   closeOpenFamiliesButton = document.getElementById("closeOpenFamiliesButton");
   closeOpenFamiliesButton.addEventListener("click", closeAllFamilies);
@@ -65,12 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
   searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
 
-  // TODO : (are all of these necessary?)  (especially "click" and "focusin"?)
+  // (are all of these necessary?)  (especially "click" and "focusin"?)
   searchInput.addEventListener("input", getQuery);
-  // searchInput.addEventListener("change", getQuery);
-  // searchInput.addEventListener("click", getQuery);
-  // searchInput.addEventListener("textInput", getQuery);
-  // searchInput.addEventListener("focusin", getQuery);
+  // "change", "click", "textInput", "focusin"
 
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
   searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);  
@@ -78,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
   taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
   taxPage = document.getElementById("taxPage");
-  // TODO : set taxPage height here??
 
   searchResults = document.getElementById("searchResults");
   resultsPanel = document.getElementById("results-panel");
@@ -87,14 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   taxPage.addEventListener("click", toggleFamilyOpen);
   taxPanel = document.getElementById("tax-panel");
   
-  // document.querySelector("#taxPageButton").addEventListener("click", closeAllFamilies);
-
-  // TODO : (start with searchInstructions closed?)
-  // toggleSearchInstructions(),
-
   // preloading the file occurrences.txt
-  // TODO : (delay this ? prefetch?)
-  // getAjax("../data/occurrences.txt", function (data) { loadOccurrences(data); });
   getAjax("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
 });
 
@@ -236,12 +216,10 @@ function toggleSearchResultsPanel() {
     
   if (!resultsPanelOpen) {      // results-panel was not open
     moveTaxPanel("searchResultsOpening");
-    // closeResultsPanelButton.setAttribute("tabindex", "0");
     printerButton.setAttribute("tabindex", "0");
   }
   else {                        // results-panel was open
     moveTaxPanel("searchResultsClosing");    
-    // closeResultsPanelButton.setAttribute("tabindex", "-1");
     printerButton.setAttribute("tabindex", "-1");
   }
 
@@ -253,58 +231,27 @@ function moveTaxPanel(whatIsOpening) {
   //    "searchResultsOpening", "searchResultsClosing"
   //    "searchInstructionsClosing", "searchInstructionsOpening"
   
-  var anchor = document.querySelector(".searchWord");
-  var bottom = anchor.getBoundingClientRect().bottom;
-  var top = taxPanel.getBoundingClientRect().top;
-  var span = top - bottom;  // distance from bottom of '.searchWord' to top of #tax-panel
-  
   var instructionsHeight = searchSlideUpWrapper.style.height;
-  var searchResultsBottom = searchResults.getBoundingClientRect().bottom;
-  
-  var oldTop = taxPanel.style.top ? taxPanel.style.top : "0px";
-  var oldTranslate = taxPanel.style.transform;
-  var resultPanelHeight = searchResults.offsetHeight;
-  // = 28 when not open
-  
   // transform: translateY(-15rem);  // the initial state
-  
   
   switch (whatIsOpening) {
     
     case "searchResultsOpening":
       if (searchInstructionsOpen) {
-        // taxPanel.style.top = '80px';
-        // var shift = resultPanelHeight;
         taxPanel.style.transform = "translateY(-128px)";
       }
       else {
-        // taxPanel.style.transform = "translateY(-128px)";        
         var shift = 100 + parseInt(instructionsHeight) + "px";        
         taxPanel.style.transform = "translateY(-" + shift + ")"; 
       }
       break;
     
-    // case "searchResultsClosing":
-    //   if (searchInstructionsOpen) {
-    //     var shift = 240 + resultPanelHeight + "px";
-    //     taxPanel.style.transform = "translateY(-" + shift +")";
-    //   }
-    //     // taxPanel.style.top = -resultPanelHeight + 'px';
-    //   else {
-    //     // taxPanel.style.top = parseInt(oldTop) - parseInt(instructionsHeight) + 'px';
-    //     var shift = 240 + parseInt(instructionsHeight) + resultPanelHeight + "px";
-    //     taxPanel.style.transform = "translateY(-" + shift +")";        
-    //   }
-    //   break;
-    
     case "searchInstructionsClosing":
       if (resultsPanelOpen) {
-        // taxPanel.style.top = parseInt(oldTop) - parseInt(instructionsHeight)  + 40 + 'px';
         var shift = 100 + parseInt(instructionsHeight) + "px";        
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
       else {
-        // taxPanel.style.top =  parseInt(oldTop) - parseInt(instructionsHeight)  + 'px';
         var shift = 200 + parseInt(instructionsHeight) + "px";
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
@@ -312,12 +259,10 @@ function moveTaxPanel(whatIsOpening) {
     
     case "searchInstructionsOpening":
       if (resultsPanelOpen)  {
-        // taxPanel.style.top = '80px';
         var shift = -100 + parseInt(instructionsHeight) + "px";        
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
       else {
-        // taxPanel.style.top = parseInt(oldTop) + parseInt(instructionsHeight)  + 'px';
         var shift = 240 + "px";        
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
@@ -629,9 +574,6 @@ function searchTree(query2) {
   
   // "<li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></li><li data-i='2592' class='bird'><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>"
   
-  // if (!resultsPanelOpen) toggleSearchResultsPanel();
-  // searchResults.classList.add("fadeIn");
-
   // lastQuery = lastQuery.replace(/\\\*/g, "*");
   // lastQuery = lastQuery.replace(/\\\?/g, "?");
 
@@ -661,9 +603,11 @@ function resetSearchResultsHeight() {
     elem.style.height = "25rem";
   }
   else {
-    searchResults.style.height = searchResults.scrollHeight + "px";
+    // 25px added due to Chrome-only bug, 
+    //   it makes the searchResults height too short, even two species do not fit w/o scrolling
+    searchResults.style.height = searchResults.scrollHeight + 25 + "px";
     elem = simpleBarResults.getScrollElement();
-    elem.style.height = searchResults.scrollHeight + "px";
+    elem.style.height = searchResults.scrollHeight + 25 + "px";
   }
   // simpleBarResults.recalculate();
 }
@@ -944,14 +888,17 @@ function closeAllFamilies() {
 
 function printElem (evt) {
 
+  // if no search results do nothing
+  var numSpecies = document.getElementsByClassName("bird").length;
+  if (!numSpecies) return;
+  
   var divId = evt.target.id;
   if (divId === "printerButton" || evt.target.nodeName === "use") divId = "searchResults";
 
   var content = document.getElementById(divId).children[2].innerHTML;
-  var numSpecies = document.getElementsByClassName("bird").length;
 
   var html = '<html><head><title></title><head>';
-  
+
   var css = "<style>";
   css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }"
   css += "h3 { margin: 0 0 3ch 0; text-align: center; }";
@@ -961,7 +908,6 @@ function printElem (evt) {
   css += ".bird span:last-child { position: absolute; left: 50%; }";
   css += "</style>";
   html += css;
-  
   
   // html += '<link rel="stylesheet" href="./printCSS/printSearchresults.css" />';  old online version that works
   // use below for working in gulp sync
@@ -973,9 +919,7 @@ function printElem (evt) {
   html += '</body></html>';
 
   var printWindow = window.open('_blank', 'Print', 'menubar=yes,scroll=yes,height=600,width=800');
-
   printWindow.document.write(html);
-  // printWindow.focus();
 
   setTimeout(function() {
     printWindow.print();

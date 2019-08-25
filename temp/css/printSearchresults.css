@@ -17,8 +17,20 @@ h3 {
 }
 
 .bird>span {
-  padding-left: 10px;}
+  padding-left: 10px;
+}
 
 .bird span:last-child  {
   position: absolute; left: 50%;
 }
+
+/* from taxonomy.js */
+
+/* var css = "<style>";
+css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }"
+css += "h3 { margin: 0 0 3ch 0; text-align: center; }";
+css += ".family, .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
+css += ".fsc { position: absolute; left: 50%; }";
+css += ".bird>span { padding-left: 10px;}";
+css += ".bird span:last-child { position: absolute; left: 50%; }";
+css += "</style>"; */

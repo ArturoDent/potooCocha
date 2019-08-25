@@ -31,7 +31,6 @@ class PDF extends TCPDF {
 	protected  $headerCellWidth;
 	protected  $headerWidth;
 
-	// protected  $margins;
 	protected  $rMargin;
 	protected  $lMargin;
 
@@ -60,14 +59,9 @@ class PDF extends TCPDF {
 	protected  $familyCellHeight;
 	protected  $commonCellHeight;
 
-	// protected  $dashSeparator;
-	// protected  $thickSeparator;
 	protected  $defaultSeparator;
 	protected  $defaultSciSeparator;
 
-	// protected  $headerRBseparator;
-	// protected  $headerBseparator;
-	// protected  $headerRseparator;
 	protected  $headerDefaultSeparator;
 	protected  $finishedLastBird;
 
@@ -267,12 +261,12 @@ class PDF extends TCPDF {
 
 			else {
 
-																			// 	TINAMOUS,TINAMIDAE
-																			// 	,,Tawny-breasted Tinamou,Nothocercus julius
-																			// 	,,Highland Tinamou,N. bonapartei
-																			// 	,,Gray Tinamou,Tinamus tao
-																			//	,endemic,Black Tinamou,T. osgoodi
-																			// 	5,,Great Tinamou,T. major
+					// 	TINAMOUS,TINAMIDAE
+					// 	,,Tawny-breasted Tinamou,Nothocercus julius
+					// 	,,Highland Tinamou,N. bonapartei
+					// 	,,Gray Tinamou,Tinamus tao
+					//	,endemic,Black Tinamou,T. osgoodi
+					// 	5,,Great Tinamou,T. major
 																			
 				if (($i + 1) == $dataLength) $this->finishedLastBird = true;
 
@@ -320,12 +314,6 @@ class PDF extends TCPDF {
 					}
 	  		}
   				
-  				// if (!$EndemicCellWritten) {
-  				// 	// $this->Cell( $this->endemicCellWidth, $this->commonRowHeight, '', 1, 0, 'C', 0 );
-  				// 	$this->Cell( $this->endemicCellWidth, $this->commonRowHeight, '', 0, 0, 'C', 0 );					
-  				// }					
-
-
 				$this->SetCellPaddings($this->commonIndent,0,10,0);
 				$this->SetFont('', '', 10);
 
@@ -420,7 +408,6 @@ $left_check  =  filter_var($_GET['left_check'], FILTER_SANITIZE_STRING, FILTER_F
 $endemics    =  filter_var($_GET['endemics'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 $sci_names   =  filter_var($_GET['sci_names'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 
-// 		keep ?
 $italics     =  filter_var($_GET['italics'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 
 $pdf = new PDF( $num_days, $start_date, $endemics, $line_nos, $left_check, $sci_names, $italics, $country);

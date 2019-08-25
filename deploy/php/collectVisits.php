@@ -26,7 +26,6 @@ $txt = "\t" . $when . "  -->  " . $country . " : "  . $document;
 // TODO : (if $logFile is too big, start replacing from the beginning?)
 // filesize($logFile) -> in bytes, ftruncate()
 // http://php.net/manual/en/function.ftruncate.php  ftruncatestart()
-// TODO : (if creating file: 
 // 
 // ***************************     Documents requested by Country and Date     **********************)
 

@@ -1,18 +1,9 @@
 <?php
-// set_time_limit(0);
-// ignore_user_abort(false);
-// ini_set('output_buffering', 0);
-// ini_set('zlib.output_compression', 0)
-
-// ini_set('display_errors', '1');
-// error_reporting(E_ALL | E_STRICT);
-
 error_reporting(0);
 
 $country = filter_var($_GET['country'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 
 if (!isset($country)) { echo "failure"; exit;  }
-// echo "after isset";
 $fileName  = '../Countries/' . $country . 'CSV.txt';
 
 if(file_exists($fileName)) {

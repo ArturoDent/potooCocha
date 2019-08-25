@@ -183,13 +183,12 @@
          -o-transform-origin  :  0 0;
             transform-origin  :  0 0;
     // transition  : all 1.2s;
-    transition  : all 500ms;
+    transition  : transform 500ms;
 }
 
-#currentMap.fadeMap {
-  opacity : 0;
-  // left: 30vw;
-}
+// #currentMap.fadeMap {
+//   opacity : 0;
+// }
 
 #SAMsvg  {
 
@@ -274,7 +273,9 @@
     position  :  absolute;
     top  :  65%;
     left  :  78%;
-    transition  :  opacity 350ms;
+    
+    transform: scale(0.95);
+    // transition  :  opacity 350ms;
 }
 
 .colorKey ul {
@@ -288,7 +289,9 @@
 
     font-size  :  0.75rem;
     text-align  :  right;
-    letter-spacing  :  0.15em;
+    // letter-spacing  :  0.15em;
+    letter-spacing  :  0.17em;
+    
     text-shadow  :  rgba(0,0,0,0.5) 0.077rem 0.077rem 0.077rem;
     list-style-type  :  none;
 

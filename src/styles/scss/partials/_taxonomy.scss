@@ -386,11 +386,11 @@
 
 #printerButton {
   position: absolute;
-//   top: calc(100% - 1.31rem);
-  top: calc(100% - 2.4rem);
+  top: calc(100% - 1rem);
+//   top: calc(100% - 2.4rem);
 
-//   left: calc(100% - 1.31rem);
-  left: 100%;
+  left: calc(100% - 1rem);
+//   left: 100%;
   width: 2.2rem;
   height: 2.2rem;
   cursor: pointer;
@@ -402,13 +402,13 @@
   background-color: $panelColor;
   border : 0.15rem solid  $goldHighlightColor;
   
-//   box-shadow: 0 0 0 0.3rem $bgColor,
-//               0 -0.06rem 0 0.3rem $bgColor, -0.06rem 0 0 0.3rem $bgColor,  -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
-//               0.06rem -0.06rem 0 0.4rem $bgColor, -0.06rem -0.06rem 0 0.4rem $bgColor,  -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
+  box-shadow: 0 0 0 0.3rem $bgColor,
+              0 -0.06rem 0 0.3rem $bgColor, -0.06rem 0 0 0.3rem $bgColor,  -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
+              0.06rem -0.06rem 0 0.4rem $bgColor, -0.06rem -0.06rem 0 0.4rem $bgColor,  -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
               
-    box-shadow: 0 0 0 0.46rem $bgColor,
-              0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
-              0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
+    // box-shadow: 0 0 0 0.46rem $bgColor,
+    //           0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
+    //           0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
 }
 
 #printerButton::before  {

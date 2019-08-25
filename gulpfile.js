@@ -75,6 +75,11 @@ const paths = {
     temp: "./temp/css",
     deploy: "./deploy/printCSS"
   },
+  php: {
+    src: "./src/php/**/*.php",
+    // temp: "./temp/js",
+    deploy: "./deploy/php"
+  },
   js: {
     src: "./src/js/**/*.js",
     temp: "./temp/js",
@@ -89,7 +94,6 @@ const paths = {
     deploy: "./deploy/flags"
   }
 };
-
 
 function watch() {
   gulp.watch(paths.js.src, reloadJS);
@@ -210,6 +214,13 @@ function processPrintCSS() {
     .pipe(gulp.dest(paths.printCSS.deploy));
 }
 
+function copyPHP() {
+  return gulp.src(paths.php.src)
+    .pipe(newer(paths.php.deploy))
+    .pipe(print())
+    .pipe(gulp.dest(paths.php.deploy));
+}
+
 function copySVG() {
   return gulp.src(paths.svg.src)
     .pipe(newer(paths.svg.deploy))
@@ -292,12 +303,13 @@ function getBuildSACC_Countries() {
 const gutil = require('gulp-util');
 const ftp = require('vinyl-ftp');
 
-// TODO : (php folder and logFileRequests.txt?)
+// TODO : (logFileRequests.txt?)
 /* list all files you wish to ftp in the glob variable */
 const ftpGlobs = [
   'deploy/css/*.css',
   // 'deploy/printCSS/printSearchResults',
   'deploy/js/*.js',
+  'deploy/php/*.php',
   'deploy/svg/SouthAmerica.svg',
   // 'deploy/flags/*.png',
   'deploy/home.html',
@@ -356,7 +368,7 @@ exports.production = gulp.series(moveJStoTemp, processJS);
 
 // TODO : (include php and logFileRequests.txt)
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
-                            copySVG, copyFLAGS, copyCitations, copyAuthors,
+                            copyPHP, copySVG, copyFLAGS, copyCitations, copyAuthors,
                             copyOccurrences, copyCountries, movePrintCSStoTemp);
 
 exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries);
