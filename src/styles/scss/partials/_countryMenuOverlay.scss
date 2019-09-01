@@ -28,7 +28,7 @@
   
   width: 15vw;
   height: auto;
-  padding : 0.7ch 0 0.8ch 2ch;
+  padding : 0.5ch 0 0.9ch 2ch;
   
   text-align  :  left;
   cursor: pointer;
@@ -89,6 +89,6 @@
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  border-color: white;
+  border-color: rgb(184, 183, 183);
   background-color: #333;
 }

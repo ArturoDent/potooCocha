@@ -13,12 +13,12 @@ $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING, FILTER_FLAG_STR
 $document = filter_var($_POST['document'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 if (!isset($country)) { echo "failure on country"; exit;  }
 if (!isset($document)) { echo "failure on document requested"; exit;  }
-if($country == "Curaao") $country = "Curaçao";
+if($country == "Curaao") $country = "Curaçao";  // Curaçao got stripped
 
-list($IPcity, $IPregion, $IPcountry) = ip_visitor_country();
+list($IPcity, $IPregion, $IPcountry) = getIPinfo();  // dereferencing
 
 date_default_timezone_set('America/Chicago');
-$when = date('M d, Y  h:i a', time());  // Aug 01, 2018   10:02 pm  -->  Paraguay : checklist
+$when = date('M d, Y  h:i a', time());  // Aug 01, 2018  10:02 pm  -->  Paraguay [ckl] --> [ipInfo]
 
 $logFile  = '../logFileRequests.txt';
 $txt = "    ".$when."   -->   ".$country." [".$document."]   -->  " . $IPcity.", ".$IPregion."  ".$IPcountry;
@@ -27,7 +27,6 @@ $txt = "    ".$when."   -->   ".$country." [".$document."]   -->  " . $IPcity.",
 // filesize($logFile) -> in bytes, ftruncate()
 // http://php.net/manual/en/function.ftruncate.php  ftruncatestart()
 // 
-// ***************************     Documents requested by Country and Date and IP   **********************)
 
 if (!file_exists($logFile)) {
   $header = "\n\n***************************     Documents requested by Country and Date and IP    **********************\n\n";
@@ -36,15 +35,16 @@ if (!file_exists($logFile)) {
 
 file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 
-// works from potoocha.net, but not experimental.potoococha.net - probably a server config - emails not autorized
+// works from potoocha.net, but not experimental.potoococha.net - 
+// probably a server config issue - emails not authorized from the subdomain
 sendEmail($txt);
 
 // **********************************************************************************************************
 
-// or investigate     ini_set ("allow_url_fopen" , "on");
+// or investigate:   ini_set ("allow_url_fopen" , "on");
 // and simplify greatly, don't need curl
 
-function ip_visitor_country()  {
+function getIPinfo()  {
 
   $client  = @$_SERVER['HTTP_CLIENT_IP'];
   $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
@@ -87,10 +87,10 @@ function ip_visitor_country()  {
 
 function sendEmail($body)  {
 
-  $to      = 'markm3232@hotmail.com';
-  $subject = 'potoococha.net news';
-  $message = $body;
-  $headers = 'From: mark@potoococha.net';
+  $to       =  'markm3232@hotmail.com';  //change to  mark@potoococha.net ?
+  $subject  =  'potoococha.net news';
+  $message  =  $body;
+  $headers  =  'From: mark@potoococha.net';
 
   $success = mail($to, $subject, $message, $headers);
   if (!$success) {

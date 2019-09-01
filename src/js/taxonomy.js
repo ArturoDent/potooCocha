@@ -263,7 +263,7 @@ function moveTaxPanel(whatIsOpening) {
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
       else {
-        var shift = 240 + "px";        
+        var shift = 220 + "px";        
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
       break;

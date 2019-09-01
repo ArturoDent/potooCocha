@@ -27,6 +27,7 @@ var requested;
 var mailLink;
 var observer;
 var target;
+var upLoadData = new FormData();
 
 var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
 		"Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
@@ -96,29 +97,35 @@ document.addEventListener("DOMContentLoaded", function () {
   mailLink.addEventListener("click", sendEmail);
 
   target = document.getElementById("checklistArticle");
+  
+  updateActivityData("start");
 });
+
+window.addEventListener("unload", function (event) { 
+  uploadActivity(upLoadData);
+ });
 
 //   *******************   end of  (document).ready(function()   ******************************************
 
-function setUpMapBodyIntersectionObserver() {
-  var options = {
+// function setUpMapBodyIntersectionObserver() {
+//   var options = {
 
-    root: null,
-    // root: document.getElementsByTagName("body")[0],
-    rootMargin: "0px",
-    // rootMargin: "0% 0% 50% 0%",
-    threshold: 0.4
-  };
+//     root: null,
+//     // root: document.getElementsByTagName("body")[0],
+//     rootMargin: "0px",
+//     // rootMargin: "0% 0% 50% 0%",
+//     threshold: 0.4
+//   };
 
-  observer = new IntersectionObserver(fadeMap, options);
-  observer.observe(target);
-}
+//   observer = new IntersectionObserver(fadeMap, options);
+//   observer.observe(target);
+// }
 
-function fadeMap(entries, observer) {
+// function fadeMap(entries, observer) {
 
-  var map = document.getElementById("currentMap");
-  map.classList.toggle("fadeMap");
-}
+//   var map = document.getElementById("currentMap");
+//   map.classList.toggle("fadeMap");
+// }
 
 function sendEmail() {
   // TODO : can this be obfuscated?  unicode??
@@ -239,6 +246,7 @@ function setCountry(evt) {
   toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
+  updateActivityData("seelct");
 
   // countryButton.innerHTML = currentCountry;
   // console.log(currentCountry);
@@ -372,7 +380,7 @@ function getCSVText() {
   if (!currentCountry) return;
 
   requested = "csv";
-  logVisit();  // could update the log in sendCSV.php
+  uploadDownloads();  // could update the log in sendCSV.php
 
   var tempCountry;
 
@@ -398,8 +406,8 @@ function openChecklistPage() {
 
   if (!currentCountry) return;
 
-  requested = "checklist";
-  logVisit();  // could update the log in makePDF.php
+  requested = "ckl";
+  uploadDownloads();  // could update the log in makePDF.php
 
   var vars;
   var tempCountry;
@@ -425,18 +433,64 @@ function openChecklistPage() {
   window.open("../php/makePDF.php" + vars, "_blank");
 }
 
-function logVisit() {
+function uploadDownloads() {
 
   if (!navigator.sendBeacon) {
-    console.log("sendBeacon() not supported");
+    console.log("sendBeacon(uploadDownloads) not supported");
     return true;
   }
 
-  var url = "./php/collectVisits.php";
+  var downloadsURL = "./php/collectDownloads.php";
 
-  var data = new FormData();
-  data.append('country', currentCountry);
-  data.append('document', requested);
+  var downloadData = new FormData();
+  downloadData.append('country', currentCountry);
+  downloadData.append('document', requested);
 
-  navigator.sendBeacon(url, data);
+  navigator.sendBeacon(downloadsURL, downloadData);
+}
+
+function updateActivityData(stage) {
+  
+  switch (stage) {
+    
+    case "start":
+      activityData.append('newUser', "newUser");
+      break;
+    
+    case "select":
+      activityData.append('country', currentCountry);
+      break;
+    
+    case "download":
+      activityData.append('document', requested);
+      break;
+    
+    case "stop":
+      uploadActivity();
+      break;
+  
+    default:
+      break;
+  }
+}
+
+function uploadActivity() {
+  
+  if (!navigator.sendBeacon) {
+    console.log("sendBeacon(logActivity) not supported");
+    return true;
+  }
+
+  var activityURL = "./php/collectActivity.php";
+  
+  var qty = [];
+  qty["country"] = "Singapore";
+  qty["search"] = "xantho";
+
+  // var activityData = new FormData();
+  // activityData.append('country', currentCountry);
+  // activityData.append('document', requested);
+
+  // navigator.sendBeacon(activityURL, upLoadData);
+  navigator.sendBeacon(activityURL, qty);
 }

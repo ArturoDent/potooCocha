@@ -30,7 +30,7 @@
   fill: #ddd; }
 
 .icon-download {
-  top: 0.35ch;
+  top: 0.45ch;
   transform: scale(1.6); }
 
 .icon-mag-glass {
@@ -1049,7 +1049,7 @@ input[type='checkbox']:disabled ~ label {
   transform: translateX(-22vw);
   width: 15vw;
   height: auto;
-  padding: 0.7ch 0 0.8ch 2ch;
+  padding: 0.5ch 0 0.9ch 2ch;
   text-align: left;
   cursor: pointer;
   z-index: 3;
@@ -1095,7 +1095,7 @@ input[type='checkbox']:disabled ~ label {
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  border-color: white;
+  border-color: #b8b7b7;
   background-color: #333; }
 
 #country-menu {
@@ -1246,11 +1246,12 @@ input[type='checkbox']:disabled ~ label {
 
 .slideUpWrapper + #searchForm {
   transform: translateY(-8rem);
-  transition: transform 400ms 200ms ease-in-out; }
+  transition: all 400ms 200ms ease-in-out; }
 
 .slideUpWrapper.closeInstructions + #searchForm {
-  transform: translateY(-24rem);
-  transition: transform 400ms ease-in-out; }
+  border-bottom-left-radius: 0;
+  transform: translateY(-23.3rem);
+  transition: all 400ms ease-in-out; }
 
 #results-panel {
   transform-origin: top left;
@@ -1258,12 +1259,12 @@ input[type='checkbox']:disabled ~ label {
   transition: transform 400ms ease; }
 
 #results-panel.closeInstructions:not(.resultsPanelBoolean) {
-  transform: scaleY(0) translateY(-14rem) !important; }
+  transform: scaleY(0) translateY(-13rem) !important; }
 
 #results-panel.closeInstructions.resultsPanelBoolean {
   opacity: 1;
   height: 100%;
-  transform: scaleY(1) translateY(-14rem) !important; }
+  transform: scaleY(1) translateY(-13rem) !important; }
 
 #results-panel.resultsPanelBoolean:not(.closeInstructions) {
   opacity: 1;
@@ -1309,7 +1310,8 @@ input[type='checkbox']:disabled ~ label {
 
 #searchForm {
   position: relative;
-  padding: 1ch 0 2ch 0;
+  padding: 0 0 1.8ch 0;
+  border-bottom-left-radius: 6.9rem;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
   -o-transition: all 850ms ease-in-out;
@@ -1378,14 +1380,14 @@ input[type='checkbox']:disabled ~ label {
 #searchSpecials {
   position: absolute;
   top: -8.2ch;
-  left: 96%;
+  left: 90%;
   width: 15.38rem;
-  padding: 2.31rem 3.08rem 2.69rem 2.08rem;
+  padding: 2.31rem;
   font-size: 0.82rem;
   text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   pointer-events: auto;
   border-radius: 50%;
-  box-shadow: inset -0.77rem 0 7.7rem #53595d;
+  box-shadow: inset 0 0 3rem 1rem #53595d;
   transition: all 500ms 1300ms; }
 
 #searchSpecials.grayed {
@@ -1424,8 +1426,8 @@ input[type='checkbox']:disabled ~ label {
 
 #searchSpecials.SAM {
   justify-content: space-around;
-  top: -4.3ch;
-  left: 96%; }
+  padding: 3.5rem 0;
+  top: -6.9ch; }
 
 #searchTerm span {
   color: #96d4fd; }
