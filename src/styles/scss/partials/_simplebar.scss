@@ -14,21 +14,12 @@
     left: -10vw;
 
     padding-left: 10vw;
-    // padding-right: 0;
-    padding-right: 12px;
+    padding-right: 0.75rem;
 
     overflow-x: visible;
     overflow-y: scroll;
     min-width: 100%;
-    // width: calc(100% + 10vw + 1.08rem);
     width: calc(100% + 10vw + 1.08rem);
-
-    // border:red;
-    
-    /*min-height: 100%;*/
-    /*background-color: rgb(84,85,80);*/
-/*background: red;*/
-/*border: none;*/
     box-sizing: content-box;
 }
 
@@ -38,29 +29,20 @@
 
     left: -10vw;
     padding-left: 10vw;
-    // width: calc(100% + 10vw + 1.08rem);
     width: calc(100% + 10vw + 0.95rem);
 
-    /*overflow-x: scroll;*/
     overflow-x: hidden;
-
     overflow-y: visible;
-
     box-sizing: border-box;
-    /*height: auto;*/
-    /*min-height: 100%;*/
 }
 
 .simplebar-track {
     z-index: 1;
     position: absolute;
     right: 0;
-    /* background-color: red; */
+    width: 0.85rem;
     border: red;
     background-color: transparent;
-
-    width: 0.85rem;
-    // width: 1rem;
 }
 
 .simplebar-scrollbar {
@@ -68,14 +50,10 @@
     right: 0;
     border-radius: 0.38rem;
     min-height: 4.62rem;
-    // min-height: auto;
     width: 0.38rem;
-    // width: 0.46rem;
     opacity: 0;
     transition: opacity 0.2s linear;
     background-color: rgb(200, 200, 200);
-    // background-color: $genericButtonColor;
-    // background-color: darkgoldenrod;
     background-clip: padding-box;
 }
 
@@ -102,7 +80,6 @@
     top: 0.38rem;
     bottom: 0.77rem;
     cursor: pointer;
-    // border:red;
 }
 
 .horizontal.simplebar-track .simplebar-scrollbar {

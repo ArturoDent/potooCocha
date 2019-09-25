@@ -3,13 +3,6 @@
 
     border : none;
     box-shadow : none;
-
-    // order: 1;
-    // z-index: 1;
-
-    // overflow-x: visible;
-        // overflow-y: hidden;
-
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
          -o-transition  :  all 850ms ease-in-out;
@@ -19,10 +12,10 @@
 .searchWord {
     position  :  relative;
     left : -5.4rem;
-    width : calc(100% + 10ch);
-    height: 23ch;
-    // margin-bottom: -12ch;
-    padding  :  3ch 4ch 0 5ch;
+    width : calc(42vw + 10ch);
+    // height: 23ch;
+    height: 30vh;
+    padding  :  3vw 4vw 0 4vw;
 
     z-index: 0;
 
@@ -32,7 +25,6 @@
     color: $panelFlyoutFontColor;
 
     background-color  :  $searchHeaderColor;
-
     border-top-left-radius: 3.85rem;
     border-bottom-left-radius: 6.9rem;
     border-bottom-right-radius: 0.77rem;
@@ -45,13 +37,11 @@
 
 .taxArticleMain {
     padding  : 1.15rem 0 0 0;
-    // text-align: center;
     line-height: 1.5rem;
 }
 
 #taxonomyArticle a.linkHighlight {
     padding : 0 0.23rem 0.077rem 0.31rem;
-    // border: none;
     border-radius: 0.15rem;
     border : solid 0.077rem transparent;
     border-bottom  :  solid 0.077rem $panelFlyoutFontColor;

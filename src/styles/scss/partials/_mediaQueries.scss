@@ -1,166 +1,80 @@
-@media screen and (max-width: 1530px)  {
+@media screen and (max-width: 1024px)  {  // iPad landscape
   html {
-    font-size  :  calc(100vw / 100);
+    font-size  :  13px;
   }
-  // .checklistTitle  {
-  //   // top  :  -130%;
-  //   left  :  -21vw;
-  // }
+  #mainContent {
+    left : 5.5vw;
+    margin: 13vh 0 0 0;
+  }
+  .articles {
+    width : 51vw;
+    max-width : 51vw;
+  }
+  .taxInstructionsButton  {
+    // top : -2.6rem;
+    left : -2vw;
+  }
+  .searchWord {
+    left : -2.4rem;
+    height: 27vh;
+    padding  :  3vw 1vw 0 1.5vw;
+    margin-bottom: 3vw;
+  }
+  .slideUpWrapper  {
+    top: -10rem;
+    width: 92%;
+    left: 7%;
+  }
+  #searchForm  {
+    top: -2rem;
+    width: 92%;
+    left: 7%;
+  }
+  #searchForm span.searchGroup  {
+    // margin: 1.92rem 0 2.31rem 0;
+    left: 15%;
+  }
+  #searchSpecials  {
+    top : -9.9ch;
+    left  :  82%;
+  }
+  #results-panel  {
+    top : -10rem;
+  }
+  #checklistOptions.panel {
+    // left  :  5%;
+    width  :  110%;
+  }
+  #numDays {
+    justify-content  :  space-around;
+    left  :  -4.5ch;
+    width  :  170%;
+  }
+  #deleteAllMapsButton  {
+    padding: 0.15rem 1.5ch 0.23rem 1.5ch;
+    font-size: 0.9em;
+  }
+  .deleteMapButton  {
+    top  :  2.1rem;
+    // left  :  -10%;
+    transform: scale(0.85);
+  }
 }
 
+@media screen and (max-width: 768px)  {  // iPad portrait
+  html {
+    font-size  :  12px;
+  }
+}
 
-// @media screen and (max-width: 1536px)  {
-//     html {
-//         font-size  :  13px;
-//     }
-//     .titleBanner {
-//         // padding: 15px 0 15px 20vw;
-//         // font-size  :  2.4rem;
-//         font-size  : 3.5rem;
-//     }
-//     .titleBanner_spacer  {
-//         // top  :  -11px;
-//         letter-spacing  :  0.1em;
-//         // font-size  :  1.1rem;
-//     }
-//     .genericButton  {
-//         font-size: 1.2rem;
-//     }
-//     .articles {
-//         margin-top  :  15px;
-//         // line-height  :  24px;
-//     }
-//     .taxInstructionsButton  {
-//         padding  :  0.2rem 0 0 0;
-//         // font-size  :  1.4rem;
-//     }
-//     .taxInstructionsButton.hasTooltip:hover .tooltip {
-//         box-shadow : inset -180px 0 2px $goldHighlightColor, 0 0 15px goldHighlightColor;
-//     }
-//     // #closeResultsPanelButton  {
-//     //     // top: 0;
-//     //     padding: 0.4rem 0 0 0;
-//     // }
-//     // #checklistArticle .panel  {
-//     //     padding  :  2.5ch 2% 0 2%;
-//     // }
-//     // #sampleTable {
-//     //     left: -2%;
-//     //     width: 98%;
-//     // }
-//     #sampleTable td.leftCheckBox.show {
-//         width: 35px;
-//     }
-//     .showLineNumbers::before {
-//         left: -16px;
-//     }
-//     .showEndemics::before {
-//         top: 9px;
-//         left: -16px;
-//     }
-//     .checklistTitle  {
-//         font-size  :  1.2rem;
-//     }
-//     #checklistOptions.panel {
-//         width  :  75%;
-//     }
-//     #currentBirdMap {
-//         transform : scale(0.85);
-//     }
-//     //  #currentMap.shiftUp  {
-//     //     transform: translateY(-175px);
-//     // }
-//     #currentMap .birdName {
-//         // top  :  -26px;
-//         top : 5%;
-//         line-height  :  1.2rem;
-//     }
-//     // .saveMapButton  {
-//     //     left  :  -32%;
-//     // }
-//     // .colorKey {
-//     //     top  :  55%;
-//     //     left  :  75%;
-//     // }
-//     #mapsHeader  {
-//         height : 2.7rem;
-//     }
-//     #mapsCollection  {
-//         height  :  280px;
-//     }
-//     #mapsCollection.namesOnlySeen  {
-//         top : 100vh;
-//         transform : translateY(-2.7rem) scale(1);
-//     }
-//     #mapsCollection.open  {
-//         transform : translateY(-280px);
-//     }
-//     .smallBird  {
-//         transform  :  scale(0.6);
-//         top  :  -82px;
-//         // left: 110vw;
-//         margin-left : -70px;
-//     }
-    
-//     // .thinify  {
-//     //     top  :  -37px;
-//     //     left: 5%;
-//     //     margin-left : -70px;
-//     // }
-//     // .birdName.smallBirdText   {
-//     //     top  :  -2rem;
-//     //     // left  :  -16%;
+@media screen and (max-width: 667px)  {  // phone landscape
+  html {
+    font-size  :  11px;
+  }
+}
 
-//     //     // width  :  calc(100% + 40px);
-//     //     height : 3.8rem;
-//     //     padding : 0.3rem 0 0 0;
-//     //     font-size: 1.15rem;
-//     // }
-//     .colorKey {
-//         top  :  60%;
-//         left  :  74%;
-//     }
-//     // .country-menu {
-//     //     padding: 0 15px;
-//     // }
-//     // .country-menu a {
-//     //     left : -30px;
-//     //     width: 230px;
-//     //     padding: 0 0 0 35px;
-//     // }
-//     // .country-menu img {
-//     //     top: -5px;
-//     //     left: -24px;
-//     //     padding: 4px;
-//     //     height: 36px;
-//     //     width:36px;
-//     // }
-// }
-
-// @media screen and (max-width: 768px)  {
-//     #currentMap {
-//         transform : scale(0.5);
-//     }
-//     .colorKey {
-//         transform : scale(1.8);
-//         left  :  95%;
-//         top: 70%
-//     }
-//     #mapsCollection  {
-//         height  :  44mm;
-//     }
-//     #mapsCollection.open  {
-//         transform : translateY(-44mm);
-//     }
-//     .smallBird  {
-//         top: -33.5mm;
-//         transform  :  scale(0.4);
-//     }
-//     .smallBirdText   {
-//         transform: scale(1.7);
-//         top  :  -2.6rem;
-//     }
-//     .deleteMapButton  {
-//         transform: scale(1.7);
-//     }
-// }
+@media screen and (max-width: 375px)  {  // phone portrait
+  html {
+    font-size  :  10px;
+  }
+}

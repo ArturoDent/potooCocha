@@ -1,8 +1,7 @@
 #checklistArticle {
     position  :  relative;
-    // width: 100%;
     width: 90%;
-    margin  :  0;
+    margin  : 0;
     order : 4;
     overflow  :  visible;
 }
@@ -11,54 +10,32 @@
     position: relative;
     top: 0;
     left : 2.5%;
-    // min-width : calc(100% - 6.15rem);
-    min-width : calc(90% - 6rem);
+    // min-width : calc(90% - 4rem);
+    width : auto;
     height  :  auto;
-    // padding : 0.8ch 0 1.5ch 0;
-    padding : 0.8ch 0 1.5ch 10%;
+    padding : 0.8ch 5% 1.5ch 0;
 
-    text-align: left;
+    text-align: center;
     letter-spacing: 0;
-
     border-radius : 0.3rem;
-    // border-top-right-radius  :  -1rem;
-    // border-bottom-right-radius  :  1.54rem;
 }
 
 #checklistAuthorsPanel  {
     position: relative;
-    // display: inline-block;
     opacity: 0;
     height : auto;
-    // width: auto;
     width: 100%;
-    // max-width: 100%;
-    // max-width: 130%;
-
     top : 0;
-    // left: 12.5%;
     left: 0;
-
-    // margin : 0 0 6ch 2ch;
-    // padding : 0.8ch 2ch 1ch 3ch;
     padding : 1ch 2ch 0 3ch;
 
     font-variant: small-caps;
     font-size  :  0.8rem;
-
-    // color: #333;
-    // color: $sampleTableTextColor;
-
     text-align  :  center;
     text-shadow: none;
     line-height  :  1.1rem;
-    // color: $panelFlyoutFontColor;
-    // background-color : $panelFlyoutColor;
+    
     background-color : $sampleTableBGColor;
-    // border-bottom-left-radius: 0.77rem;
-    // border-bottom-right-radius: 0.77rem;
-    // border-radius: 0.25rem;
-
     transition : opacity 550ms 400ms;
 }
 
@@ -66,24 +43,17 @@
     opacity: 1;
 }
 
-// #checklistArticle .panel  {
-    // width: 110%;
-    // padding  :  2.5ch 2% 0 2%;
-    // background-color: transparent;
-// }
-
 #checklistOptions.panel {
     position  :  relative;
     left  :  5%;
-    width  :  90%;
-    margin  :  0 0 6ch 0;
-    padding  :  1.8ch 0 2ch 3ch;
+    width  :  105%;
+    margin  :  0;
+    padding  :  1.8ch 0 2ch 2ch;
 
     font-size  :  1rem;
     line-height : 2.4rem;
     letter-spacing  :  0.15em;
 
-    // border: 1px solid orange;
     border-top-left-radius  :  10%;
     border-bottom-right-radius  :  25%;
 }
@@ -91,36 +61,17 @@
 //  *******************************    "Checklists"    **************************************************
 
 .checklistTitle  {
-    // position  :  absolute;
     position  :  relative;
-    top  : -0.5rem;
-    
+    // top  : -0.5rem;
     top : 1.7rem;
-    // left  :  -19vw;
     left : -4vw;
 
-    // font-size  :  1.1rem;
-    // font-size  :  4rem;
     font-size  :  6rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    // color  :  $panelColor;
-    // color  :  rgb(209, 209, 209);
     color  :  $bgColor;
-
-    // text-shadow :  0 0 0.38rem rgba(0,0,0,0.9), 0 0 0.177rem white;
-    // text-shadow :  0 0 0.177rem white;
-    text-shadow :  0 0 2px white;
+    text-shadow :  0 0 0.125rem white;
     letter-spacing  :  0.2em;
-
-    // // transform  :  rotate(-86deg) scale(2.5);
-    // transform  :  scale(2.5);
-    // transform  :  scale(2.5);
-    // -webkit-transform-origin  :  top right;
-    //    -moz-transform-origin  :  top right;
-    //     -ms-transform-origin  :  top right;
-    //      -o-transform-origin  :  top right;
-    //         transform-origin  :  top right; 
 }
 
 #pdfButton, #csvButton  {
@@ -134,20 +85,13 @@
 }
 
 #pdfButton {
-    // position  :  absolute;
     right  :  -30%;
     bottom  :  45%;
-
-    // width : 16ch;
-    // padding : 0 1.3ch 0.5ch 1ch;
 }
 
 #csvButton {
-    // position  :  absolute;
     right : -30%;
     bottom  :  15%;
-    // width : 16ch;
-    // padding : 0 1.3ch 0.5ch 1ch;
 }
 
 // *************************  numDays   ******************************************
@@ -155,17 +99,13 @@
 #numDays {
     display  :  flex;
     flex-direction  :  row;
-    // justify-content  :  space-around;
     justify-content  :  center;
 
     position  :  relative;
-    // left  :  1.5ch;
     left  :  -5.5ch;
     width  :  150%;
-    margin  :  5rem 0 3rem 0;
+    margin  :  3rem 0 2.5rem 0;
 
-    // color  :  #fff;
-    // background-color  :  transparent;
     transition: margin 300ms 1.3s linear;
 }
 
@@ -182,7 +122,6 @@
 
     font-size  :  1rem;
     letter-spacing  :  0.1em;
-    // text-shadow: none;
     text-shadow : 0  0.077rem rgba(0,0,0,0.3);
 
     border-bottom: 0.23rem solid #df6757;
@@ -194,7 +133,7 @@
     top : 0;
     width  :  4ch;
     height  :  4ch;
-    margin-right: 3px;
+    margin-right: 0.19rem;
     padding  :  1ch 0 0 0;
 
     color : #454647;
@@ -217,18 +156,6 @@
             transition  :  transform 300ms;
 }
 
-// #numDays a::before, #numDays a.highlight::before {
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $panelColor;
-//   left: -10px;
-//   top:-10px;
-//   border-radius: 50%;
-//   z-index: -1;
-// }
-
 // every other one is different
 #numDays  > a:nth-of-type(2n)  {
     color : #fff;
@@ -239,23 +166,10 @@
 #numDays > a:hover,#numDays > a:focus {
     outline: none;
     color : #fff;
-    // color : #664;
-    // background-color  :  $genericButtonColor;
     background-color  :  $numDaysHoverColor;
 }
 
-// #numDays a:nth-of-type(2n).highlight {
-//     box-shadow: 0 0 2px 2px white;
-// }
-
-// #numDays a:nth-of-type(2n-1).highlight {
-//     box-shadow: 0 0 2px 2px black;
-// }
-
 #numDays > a.highlight {
-    // top  :  -0.5rem;
     border-top-right-radius  :  1%;
     transform  :  scale(1.5);
-    // transition : all  550ms;
-    // cursor : default;
 }
