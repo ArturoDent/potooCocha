@@ -27,6 +27,8 @@ var requested;
 var mailLink;
 var observer;
 var target;
+// var upLoadData = new FormData();
+var activityData = [];
 
 var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
 		"Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
@@ -96,29 +98,39 @@ document.addEventListener("DOMContentLoaded", function () {
   mailLink.addEventListener("click", sendEmail);
 
   target = document.getElementById("checklistArticle");
+  
+  // updateActivityData("start");
 });
+
+window.addEventListener("load", function (event) { 
+  updateActivityData("start");
+ });
+
+window.addEventListener("unload", function (event) { 
+  updateActivityData("stop");
+ });
 
 //   *******************   end of  (document).ready(function()   ******************************************
 
-function setUpMapBodyIntersectionObserver() {
-  var options = {
+// function setUpMapBodyIntersectionObserver() {
+//   var options = {
 
-    root: null,
-    // root: document.getElementsByTagName("body")[0],
-    rootMargin: "0px",
-    // rootMargin: "0% 0% 50% 0%",
-    threshold: 0.4
-  };
+//     root: null,
+//     // root: document.getElementsByTagName("body")[0],
+//     rootMargin: "0px",
+//     // rootMargin: "0% 0% 50% 0%",
+//     threshold: 0.4
+//   };
 
-  observer = new IntersectionObserver(fadeMap, options);
-  observer.observe(target);
-}
+//   observer = new IntersectionObserver(fadeMap, options);
+//   observer.observe(target);
+// }
 
-function fadeMap(entries, observer) {
+// function fadeMap(entries, observer) {
 
-  var map = document.getElementById("currentMap");
-  map.classList.toggle("fadeMap");
-}
+//   var map = document.getElementById("currentMap");
+//   map.classList.toggle("fadeMap");
+// }
 
 function sendEmail() {
   // TODO : can this be obfuscated?  unicode??
@@ -239,9 +251,10 @@ function setCountry(evt) {
   toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
-
+  updateActivityData("select");
+  
+  // uploadActivity();
   // countryButton.innerHTML = currentCountry;
-  // console.log(currentCountry);
   
   if (!titleBanner.classList.contains("countryChosen")) titleBanner.classList.add("countryChosen");
   
@@ -372,7 +385,8 @@ function getCSVText() {
   if (!currentCountry) return;
 
   requested = "csv";
-  logVisit();  // could update the log in sendCSV.php
+  // uploadDownloads();
+  updateActivityData("download");
 
   var tempCountry;
 
@@ -399,7 +413,8 @@ function openChecklistPage() {
   if (!currentCountry) return;
 
   requested = "checklist";
-  logVisit();  // could update the log in makePDF.php
+  // uploadDownloads();
+  updateActivityData("download");
 
   var vars;
   var tempCountry;
@@ -425,18 +440,74 @@ function openChecklistPage() {
   window.open("../php/makePDF.php" + vars, "_blank");
 }
 
-function logVisit() {
+function uploadDownloads() {
 
   if (!navigator.sendBeacon) {
-    console.log("sendBeacon() not supported");
+    console.log("sendBeacon(uploadDownloads) not supported");
     return true;
   }
 
-  var url = "./php/collectVisits.php";
+  var downloadsURL = "./php/collectDownloads.php";
 
-  var data = new FormData();
-  data.append('country', currentCountry);
-  data.append('document', requested);
+  var downloadData = new FormData();
+  downloadData.append('country', currentCountry);
+  downloadData.append('document', requested);
 
-  navigator.sendBeacon(url, data);
+  navigator.sendBeacon(downloadsURL, downloadData);
+}
+
+function updateActivityData(stage, query) {
+  
+  var action = [];
+  
+  switch (stage) {
+    
+    case "start":
+      action.push("start");
+      break;
+    
+    case "select":
+      action.push("select");
+      action.push(currentCountry);
+      break;
+
+    case "search":
+      action.push("search");
+      if (query)  action.push(query);
+      break;
+    
+    case "download":
+      action.push("download");
+      action.push(requested);
+      break;
+    
+    case "stop":
+      action.push("stop");
+      break;
+  
+    default:
+      break;
+  }
+  
+ uploadActivity(action);
+}
+
+function uploadActivity(action) {
+
+  if (!navigator.sendBeacon) {
+    return true;
+  }
+  var activityURL = "./php/collectActivity.php";
+  
+  // var JSONstringData = JSON.stringify(["start"]);
+  // var JSONstringData = JSON.stringify(["select", currentCountry]);
+  // var JSONstringData = JSON.stringify(["search"]);
+  // var JSONstringData = JSON.stringify(["download", "checklist"]);
+  // var JSONstringData = JSON.stringify(["stop"]);
+  
+  var JSONstringData = JSON.stringify(action);
+  
+  var downloadData = new FormData();
+  downloadData.append('action', JSONstringData);
+  navigator.sendBeacon(activityURL, downloadData);
 }

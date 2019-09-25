@@ -27,7 +27,8 @@ var requested;
 var mailLink;
 var observer;
 var target;
-var upLoadData = new FormData();
+// var upLoadData = new FormData();
+var activityData = [];
 
 var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
 		"Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
@@ -98,11 +99,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   target = document.getElementById("checklistArticle");
   
-  updateActivityData("start");
+  // updateActivityData("start");
 });
 
+window.addEventListener("load", function (event) { 
+  updateActivityData("start");
+ });
+
 window.addEventListener("unload", function (event) { 
-  uploadActivity(upLoadData);
+  updateActivityData("stop");
  });
 
 //   *******************   end of  (document).ready(function()   ******************************************
@@ -246,10 +251,10 @@ function setCountry(evt) {
   toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
-  updateActivityData("seelct");
-
+  updateActivityData("select");
+  
+  // uploadActivity();
   // countryButton.innerHTML = currentCountry;
-  // console.log(currentCountry);
   
   if (!titleBanner.classList.contains("countryChosen")) titleBanner.classList.add("countryChosen");
   
@@ -380,7 +385,8 @@ function getCSVText() {
   if (!currentCountry) return;
 
   requested = "csv";
-  uploadDownloads();  // could update the log in sendCSV.php
+  // uploadDownloads();
+  updateActivityData("download");
 
   var tempCountry;
 
@@ -406,8 +412,9 @@ function openChecklistPage() {
 
   if (!currentCountry) return;
 
-  requested = "ckl";
-  uploadDownloads();  // could update the log in makePDF.php
+  requested = "checklist";
+  // uploadDownloads();
+  updateActivityData("download");
 
   var vars;
   var tempCountry;
@@ -449,48 +456,58 @@ function uploadDownloads() {
   navigator.sendBeacon(downloadsURL, downloadData);
 }
 
-function updateActivityData(stage) {
+function updateActivityData(stage, query) {
+  
+  var action = [];
   
   switch (stage) {
     
     case "start":
-      activityData.append('newUser', "newUser");
+      action.push("start");
       break;
     
     case "select":
-      activityData.append('country', currentCountry);
+      action.push("select");
+      action.push(currentCountry);
+      break;
+
+    case "search":
+      action.push("search");
+      if (query)  action.push(query);
       break;
     
     case "download":
-      activityData.append('document', requested);
+      action.push("download");
+      action.push(requested);
       break;
     
     case "stop":
-      uploadActivity();
+      action.push("stop");
       break;
   
     default:
       break;
   }
+  
+ uploadActivity(action);
 }
 
-function uploadActivity() {
-  
+function uploadActivity(action) {
+
   if (!navigator.sendBeacon) {
-    console.log("sendBeacon(logActivity) not supported");
     return true;
   }
-
   var activityURL = "./php/collectActivity.php";
   
-  var qty = [];
-  qty["country"] = "Singapore";
-  qty["search"] = "xantho";
-
-  // var activityData = new FormData();
-  // activityData.append('country', currentCountry);
-  // activityData.append('document', requested);
-
-  // navigator.sendBeacon(activityURL, upLoadData);
-  navigator.sendBeacon(activityURL, qty);
+  // var JSONstringData = JSON.stringify(["start"]);
+  // var JSONstringData = JSON.stringify(["select", currentCountry]);
+  // var JSONstringData = JSON.stringify(["search"]);
+  // var JSONstringData = JSON.stringify(["download", "checklist"]);
+  // var JSONstringData = JSON.stringify(["stop"]);
+  
+  var JSONstringData = JSON.stringify(action);
+  
+  var downloadData = new FormData();
+  downloadData.append('action', JSONstringData);
+  navigator.sendBeacon(activityURL, downloadData);
 }

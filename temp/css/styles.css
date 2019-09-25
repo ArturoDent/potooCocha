@@ -14,7 +14,6 @@
   user-select: none; }
 
 .icon {
-  /*display  :  inline;*/
   position: relative;
   width: 1rem;
   height: 1rem;
@@ -40,7 +39,7 @@
   -ms-filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2)) drop-shadow(-0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3));
   filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2)) drop-shadow(-0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3));
   transform: translate(-1.3rem, 0.75rem);
-  z-index: -0; }
+  z-index: 1; }
 
 .icon-female {
   top: -0.077rem;
@@ -91,14 +90,13 @@
   transition: all 650ms; }
 
 .genericButton:hover, .genericButton:focus {
-  outline: white 1px solid;
+  outline: white 0.063 solid;
   text-shadow: 0.077rem 0.077rem 0.077rem black;
   box-shadow: inset 20ch 0 0.38rem 1.15rem #333, 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1); }
 
 html {
   min-height: 100%;
-  /*so 1em = 13px (browser default usually 16px)*/
-  font-size: calc(100vw / 118.15);
+  font-size: 16px;
   background-color: #53595d; }
 
 *:focus {
@@ -140,21 +138,17 @@ a:link {
 #mainContent {
   position: relative;
   left: 10vw;
-  margin: 18vh 0 0 0;
-  transition: transform 750ms; }
-
-#mainContent.modal-shrink {
-  transform: translateX(-200px); }
+  margin: 15.6vh 0 0 0; }
 
 #titleBanner {
   position: relative;
-  top: 20px;
-  left: calc(3vw - 10px);
+  top: 1.25rem;
+  left: calc(4vw - 1.25rem);
   width: 94vw;
-  height: 80px;
+  height: 4.5rem;
   padding: 0.4ch 5% 0.5ch 0;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   font-variant: small-caps;
   letter-spacing: 0.1em;
@@ -163,9 +157,9 @@ a:link {
   box-shadow: inset 0 0 1.15rem rgba(0, 0, 0, 0.2), 0 0 1.15rem rgba(0, 0, 0, 0.2); }
 
 #titleBanner.countryChosen {
-  width: calc(91vw - 30px);
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  width: calc(91vw - 1.9rem);
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem; }
 
 .titleBanner_spacer {
   position: relative;
@@ -186,8 +180,8 @@ a:link {
   flex-wrap: nowrap;
   position: relative;
   left: 0;
-  width: 60ch;
-  max-width: 60ch;
+  width: 42vw;
+  max-width: 42vw;
   overflow: visible; }
 
 section {
@@ -270,7 +264,7 @@ footer a:hover, footer a:focus {
   position: fixed;
   top: 100vh;
   width: 100vw;
-  height: calc(100vw / 4.5 - 1.8rem);
+  height: auto;
   background-color: #383d3d;
   box-shadow: 0 -0.6px 0.6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -289,7 +283,7 @@ footer a:hover, footer a:focus {
   transform: translateY(-3.2rem); }
 
 #mapsCollection.open {
-  transform: translateY(-100%); }
+  transform: translateY(-93%); }
 
 .smallBird {
   display: inline-block;
@@ -334,7 +328,7 @@ footer a:hover, footer a:focus {
   background-color: transparent;
   border: 0.077rem solid white;
   border-left: none;
-  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+  box-shadow: inset 0 0 0 0.012rem black, 0 0 0 0.012rem black;
   -webkit-transform-origin: 0 50%;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
@@ -376,7 +370,7 @@ footer a:hover, footer a:focus {
   opacity: 1;
   position: fixed;
   top: 28vh;
-  left: 70vw;
+  left: 71vw;
   margin: 0 0 0 0.38rem;
   transform: translateY(0);
   -webkit-transform-origin: 0 0;
@@ -387,7 +381,7 @@ footer a:hover, footer a:focus {
   transition: transform 500ms; }
 
 #SAMsvg {
-  height: calc(100vw / 3.6);
+  height: 50vh;
   width: auto; }
 
 #SAMsvg g, #SAMsvg p {
@@ -422,10 +416,11 @@ footer a:hover, footer a:focus {
 
 .deleteMapButton {
   position: absolute;
-  top: 3.2rem;
+  top: 2.5rem;
   left: -10%;
   height: auto;
-  width: auto; }
+  width: auto;
+  transform: scale(0.9); }
 
 .saveMapButton {
   display: none;
@@ -447,9 +442,9 @@ footer a:hover, footer a:focus {
 .colorKey {
   opacity: 0;
   position: absolute;
-  top: 65%;
-  left: 78%;
-  transform: scale(0.95); }
+  top: 59%;
+  left: 71%;
+  transform: scale(0.9); }
 
 .colorKey ul {
   position: relative; }
@@ -460,7 +455,7 @@ footer a:hover, footer a:focus {
   padding: 0.077rem 0.5rem 0.15rem 1.5rem;
   font-size: 0.75rem;
   text-align: right;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.13em;
   text-shadow: rgba(0, 0, 0, 0.5) 0.077rem 0.077rem 0.077rem;
   list-style-type: none;
   background: linear-gradient(to right, #474c50 0%, #505050 100%); }
@@ -507,10 +502,10 @@ footer a:hover, footer a:focus {
   position: relative;
   top: 0;
   left: 2.5%;
-  min-width: calc(90% - 6rem);
+  width: auto;
   height: auto;
-  padding: 0.8ch 0 1.5ch 10%;
-  text-align: left;
+  padding: 0.8ch 5% 1.5ch 0;
+  text-align: center;
   letter-spacing: 0;
   border-radius: 0.3rem; }
 
@@ -536,9 +531,9 @@ footer a:hover, footer a:focus {
 #checklistOptions.panel {
   position: relative;
   left: 5%;
-  width: 90%;
-  margin: 0 0 6ch 0;
-  padding: 1.8ch 0 2ch 3ch;
+  width: 105%;
+  margin: 0;
+  padding: 1.8ch 0 2ch 2ch;
   font-size: 1rem;
   line-height: 2.4rem;
   letter-spacing: 0.15em;
@@ -547,14 +542,13 @@ footer a:hover, footer a:focus {
 
 .checklistTitle {
   position: relative;
-  top: -0.5rem;
   top: 1.7rem;
   left: -4vw;
   font-size: 6rem;
   font-weight: bold;
   font-variant: small-caps;
   color: #53595d;
-  text-shadow: 0 0 2px white;
+  text-shadow: 0 0 0.125rem white;
   letter-spacing: 0.2em; }
 
 #pdfButton, #csvButton {
@@ -580,7 +574,7 @@ footer a:hover, footer a:focus {
   position: relative;
   left: -5.5ch;
   width: 150%;
-  margin: 5rem 0 3rem 0;
+  margin: 3rem 0 2.5rem 0;
   transition: margin 300ms 1.3s linear; }
 
 #numDays.mapCollectionShowing {
@@ -603,7 +597,7 @@ footer a:hover, footer a:focus {
   top: 0;
   width: 4ch;
   height: 4ch;
-  margin-right: 3px;
+  margin-right: 0.19rem;
   padding: 1ch 0 0 0;
   color: #454647;
   font-size: 1.1rem;
@@ -702,7 +696,7 @@ input[type='checkbox']:disabled ~ label {
 .tableWrapper {
   position: relative;
   width: 120%;
-  margin: -2rem  0 5.5rem 0;
+  margin: -2rem  0 3.5rem 0;
   padding: 1.825rem 1.825rem 0.73rem 1.825rem;
   text-shadow: none;
   background-color: #fefefe;
@@ -1034,7 +1028,7 @@ input[type='checkbox']:disabled ~ label {
   background-color: #53595d;
   pointer-events: none;
   z-index: 2;
-  transition: opacity 300ms 200ms ease-in-out;
+  transition: all 300ms 200ms ease-in-out;
   will-change: opacity; }
 
 #countryMenuLayer.show {
@@ -1044,12 +1038,13 @@ input[type='checkbox']:disabled ~ label {
 
 #countryButton {
   position: fixed;
-  top: calc(1.5rem + 100px);
-  right: 4.8vw;
-  transform: translateX(-22vw);
-  width: 15vw;
+  top: 8rem;
+  right: 6ch;
+  transform: translateX(-25vw);
+  width: 22ch;
   height: auto;
-  padding: 0.5ch 0 0.9ch 2ch;
+  padding: 0.5ch 0 0.9ch 1ch;
+  font-size: 1rem;
   text-align: left;
   cursor: pointer;
   z-index: 3;
@@ -1058,30 +1053,31 @@ input[type='checkbox']:disabled ~ label {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #53595d;
-  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
-  transition: background-color 400ms, transform 400ms ease-out; }
+  box-shadow: inset 0 0 0 0.03rem black, 0 0 0 0.03rem black;
+  will-change: transform; }
 
 #countryButton.slideLeft {
   transform: translateX(0);
   transition: transform 500ms 200ms ease-in-out; }
 
 #countryButton.countryChosen {
-  top: 20px;
-  right: calc(5vw);
-  width: 90px;
-  height: 80px;
+  top: 1.25rem;
+  right: 5vw;
+  width: 5.3rem;
+  height: 4.5rem;
   padding: 0;
   color: #eee;
+  font-size: 1.25rem;
   text-align: center;
   background-color: #53595d;
-  border: 2px solid #b38206;
+  border: 0.2rem solid #b38206;
   border-radius: 50%;
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.1); }
+  box-shadow: inset 0 0 0.03rem 0.03rem rgba(0, 0, 0, 0.1); }
 
 #countryButton:after {
   content: '';
   position: absolute;
-  top: -0.5rem;
+  top: -0.65rem;
   left: 104%;
   border-style: solid;
   border-width: 1.7rem;
@@ -1089,7 +1085,7 @@ input[type='checkbox']:disabled ~ label {
   filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.4)); }
 
 #countryButton.countryChosen:after {
-  top: 12.5px;
+  top: 0.2rem;
   left: 111%;
   border-color: transparent transparent transparent #b38206; }
 
@@ -1108,13 +1104,13 @@ input[type='checkbox']:disabled ~ label {
   flex-wrap: nowrap;
   top: 0;
   left: 75vw;
-  width: 17vw;
+  width: 22ch;
   padding: 0.5rem 0;
   justify-content: space-around;
   height: 100vh;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background: #313131;
-  box-shadow: 0.1px 0 0 0.1px white, -0.2px 0 0 0.2px black; }
+  box-shadow: 0 0 0 0.025rem rgba(255, 255, 255, 0.5), 0 0 0 0.0125rem black; }
 
 .countryItem {
   position: relative;
@@ -1134,7 +1130,7 @@ input[type='checkbox']:disabled ~ label {
   width: calc(100% + 0.077rem);
   margin-right: -3rem;
   margin-bottom: 0.077rem;
-  padding: 0.9rem 0 0.9rem 1.6rem;
+  padding: 0.6rem 0 0.6rem 1.3rem;
   text-decoration: none;
   text-shadow: 0 0.077rem black;
   transition: all 450ms ease-out;
@@ -1155,7 +1151,7 @@ input[type='checkbox']:disabled ~ label {
 #country-menu a.highlight:after {
   content: '';
   position: absolute;
-  top: -0.077rem;
+  top: -0.4rem;
   left: calc(100% - 1.75rem);
   border-style: solid;
   border-width: 1.5rem;
@@ -1168,8 +1164,8 @@ input[type='checkbox']:disabled ~ label {
 
 .flag {
   position: absolute;
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   left: calc(100% - 3rem);
   border-radius: 50%;
   background-position: center;
@@ -1177,8 +1173,8 @@ input[type='checkbox']:disabled ~ label {
   background-color: #333; }
 
 #country-menu img {
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   background-color: tranparent; }
 
 #taxonomyArticle {
@@ -1193,9 +1189,9 @@ input[type='checkbox']:disabled ~ label {
 .searchWord {
   position: relative;
   left: -5.4rem;
-  width: calc(100% + 10ch);
-  height: 23ch;
-  padding: 3ch 4ch 0 5ch;
+  width: calc(42vw + 10ch);
+  height: 30vh;
+  padding: 3vw 4vw 0 4vw;
   z-index: 0;
   font-size: 1.06rem;
   line-height: 1.8rem;
@@ -1324,6 +1320,7 @@ input[type='checkbox']:disabled ~ label {
   position: relative;
   width: 100%;
   height: auto;
+  left: 0;
   margin: 0;
   pointer-events: auto;
   -webkit-transition: all 2s;
@@ -1334,7 +1331,7 @@ input[type='checkbox']:disabled ~ label {
 #searchForm span.searchGroup {
   position: relative;
   margin: 1.92rem 0 2.31rem 0;
-  left: 25%;
+  left: 20%;
   opacity: 1; }
 
 #searchForm span.searchGroup.grayed {
@@ -1503,10 +1500,10 @@ input[type='checkbox']:disabled ~ label {
   left: calc(100% - 1rem);
   width: 2.2rem;
   height: 2.2rem;
+  padding: 0.077rem;
   cursor: pointer;
   color: white;
   text-align: center;
-  padding: 0.077rem;
   border-radius: 50%;
   background-color: #474c50;
   border: 0.15rem solid rgba(255, 217, 0, 0.6);
@@ -1645,7 +1642,7 @@ input[type='checkbox']:disabled ~ label {
   border-left: 0.77rem solid white; }
 
 #searchResults li:not(.family) span:first-child {
-  padding: 0.23rem 0 0.23rem 1.2rem; }
+  padding: 0.23rem 0 0.23rem 0.7rem; }
 
 #searchResults li.active {
   position: relative;
@@ -1677,7 +1674,7 @@ input[type='checkbox']:disabled ~ label {
 
 #searchResults span:not(.fsc):last-child {
   position: absolute;
-  left: calc(52.8% + 1.15rem); }
+  left: calc(52.8% + 0.7rem); }
 
 .fsc {
   position: absolute;
@@ -1846,12 +1843,12 @@ input[type='checkbox']:disabled ~ label {
 
 /* target : familyOpen bird common names only */
 #tree .familyOpen ul li span:first-child {
-  padding: 0.077rem 0 0 2rem; }
+  padding: 0.077rem 0 0 1.8rem; }
 
 /*target : familyOpen bird sci names only*/
 #tree .familyOpen .birds li span:last-child {
   position: absolute;
-  left: 52.8%; }
+  left: 52.6%; }
 
 #taxPage.samTax .hy:before, #taxPage.samTax .va:before {
   content: ''; }
@@ -1960,15 +1957,11 @@ input[type='checkbox']:disabled ~ label {
   position: relative;
   left: -10vw;
   padding-left: 10vw;
-  padding-right: 12px;
+  padding-right: 0.75rem;
   overflow-x: visible;
   overflow-y: scroll;
   min-width: 100%;
   width: calc(100% + 10vw + 1.08rem);
-  /*min-height: 100%;*/
-  /*background-color: rgb(84,85,80);*/
-  /*background: red;*/
-  /*border: none;*/
   box-sizing: content-box; }
 
 .simplebar-content {
@@ -1977,21 +1970,17 @@ input[type='checkbox']:disabled ~ label {
   left: -10vw;
   padding-left: 10vw;
   width: calc(100% + 10vw + 0.95rem);
-  /*overflow-x: scroll;*/
   overflow-x: hidden;
   overflow-y: visible;
-  box-sizing: border-box;
-  /*height: auto;*/
-  /*min-height: 100%;*/ }
+  box-sizing: border-box; }
 
 .simplebar-track {
   z-index: 1;
   position: absolute;
   right: 0;
-  /* background-color: red; */
+  width: 0.85rem;
   border: red;
-  background-color: transparent;
-  width: 0.85rem; }
+  background-color: transparent; }
 
 .simplebar-scrollbar {
   position: absolute;
@@ -2075,7 +2064,7 @@ input[type='checkbox']:disabled ~ label {
   text-align: center;
   letter-spacing: 0.25em;
   background-color: transparent;
-  border: 1px solid #bebdbd;
+  border: 0.063rem solid #bebdbd;
   transform-origin: top right;
   transform: rotate(-15deg); }
 
@@ -2140,6 +2129,58 @@ input[type='checkbox']:disabled ~ label {
 .deleteMapButton.hasTooltip.hover .tooltip {
   opacity: 1; }
 
-@media screen and (max-width: 1530px) {
+@media screen and (max-width: 1024px) {
   html {
-    font-size: calc(100vw / 100); } }
+    font-size: 13px; }
+  #mainContent {
+    left: 5.5vw;
+    margin: 13vh 0 0 0; }
+  .articles {
+    width: 51vw;
+    max-width: 51vw; }
+  .taxInstructionsButton {
+    left: -2vw; }
+  .searchWord {
+    left: -2.4rem;
+    height: 27vh;
+    padding: 3vw 1vw 0 1.5vw;
+    margin-bottom: 3vw; }
+  .slideUpWrapper {
+    top: -10rem;
+    width: 92%;
+    left: 7%; }
+  #searchForm {
+    top: -2rem;
+    width: 92%;
+    left: 7%; }
+  #searchForm span.searchGroup {
+    left: 15%; }
+  #searchSpecials {
+    top: -9.9ch;
+    left: 82%; }
+  #results-panel {
+    top: -10rem; }
+  #checklistOptions.panel {
+    width: 110%; }
+  #numDays {
+    justify-content: space-around;
+    left: -4.5ch;
+    width: 170%; }
+  #deleteAllMapsButton {
+    padding: 0.15rem 1.5ch 0.23rem 1.5ch;
+    font-size: 0.9em; }
+  .deleteMapButton {
+    top: 2.1rem;
+    transform: scale(0.85); } }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px; } }
+
+@media screen and (max-width: 667px) {
+  html {
+    font-size: 11px; } }
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 10px; } }

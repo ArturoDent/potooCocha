@@ -2,9 +2,7 @@
 
 .slideUpWrapper  {
     position: relative;
-    // position: absolute;
     top: -8rem;
-    // top: 13ch;
     overflow-y: hidden;
     max-height: 27rem;
 
@@ -24,14 +22,12 @@
 }
 
 .slideUpWrapper +  #searchForm    {
-    // transform: translateY(0);
     transform: translateY(-8rem);
     transition: all 400ms 200ms ease-in-out;
 }
 
 .slideUpWrapper.closeInstructions +  #searchForm   {
     border-bottom-left-radius: 0;
-    // transform: translateY(-24rem);
     transform: translateY(-23.3rem);
     transition: all 400ms ease-in-out;
 }
@@ -43,14 +39,12 @@
 }
 
 #results-panel.closeInstructions:not(.resultsPanelBoolean)  {
-    // transform: scaleY(0) translateY(-14rem) !important;
     transform: scaleY(0) translateY(-13rem) !important;
 }
 
 #results-panel.closeInstructions.resultsPanelBoolean  {
     opacity : 1;
     height : 100%;
-    // transform: scaleY(1) translateY(-14rem) !important;
     transform: scaleY(1) translateY(-13rem) !important;
 }
 
@@ -58,7 +52,6 @@
     opacity : 1;
     height : 100%;
     transform: scaleY(1) translateY(0) !important;
-    // transform: scaleY(1) translateY(-8rem) !important;
 }
 
 #tax-panel  {
@@ -70,11 +63,6 @@
     height: auto;
     margin: 0 0 -10ch 0;
 }
-
-// .slideUpWrapper.closeInstructions +  #searchForm  input {
-//     background-color: $bgColor;
-//     transition: background 350ms 300ms;
-// }
 
 .taxInstructionsButton  {
     position  :  absolute;
@@ -116,11 +104,8 @@
 #searchForm  {
     position  :  relative;
     padding  : 0 0 1.8ch 0;
-    // transform-origin: top right;
-    // background-color: $searchHeaderColor;
     
     border-bottom-left-radius: 6.9rem;
-
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
          -o-transition  :  all 850ms ease-in-out;
@@ -131,16 +116,12 @@
     background-color: rgb(99, 98, 98);
 }
 
-// #searchForm:focus-within .icon-pen {
-//     transform:  translate(-1.54rem, -0.38rem);
-//     transition: all 350ms;
-// }
-
 .searchForm_contents  {
     position: relative;
-    width  :  100%;
+    width  : 100%;
     height : auto;
-    margin  :  0;
+    left: 0;
+    margin  : 0;
 
     pointer-events  :  auto;
 
@@ -153,7 +134,7 @@
 #searchForm span.searchGroup  {
     position : relative;
     margin: 1.92rem 0 2.31rem 0;
-    left: 25%;
+    left: 20%;
     opacity  :  1;
 }
 
@@ -163,45 +144,42 @@
 }
 
 #searchInput  {
-    display: inline-block;
-    height               :  auto;
-    margin               :  0;
-    padding              :  0.23rem 0  0.31rem 0;
+    display:  inline-block;
+    // position: relative;
+    height:  auto;
+    // left:  0;
+    margin:  0;
+    padding:  0.23rem 0  0.31rem 0;
 
-    font-size            :  1rem;
-    color                :  white;
+    font-size:  1rem;
+    color:  white;
     font-weight: bold;
-    letter-spacing       :  0.13em;
-    text-align           :  center;
-    text-shadow          :  0.077rem 0.077rem 0.15rem rgba(0,0,0,0.3);
+    letter-spacing:  0.13em;
+    text-align:  center;
+    text-shadow:  0.077rem 0.077rem 0.15rem rgba(0,0,0,0.3);
 
-    border               : none;
-    background-color     : #333;
+    border: none;
+    background-color: #333;
 
-    -webkit-user-select  : text;
-    -moz-user-select     : text;
-    -ms-user-select      : text;
-    user-select          : text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select : text;
+    user-select : text;
 }
 
 #searchInput:focus  {  outline: none;  }
-
- #searchInput:focus + .inpuInfo { display: block; }
+#searchInput:focus + .inpuInfo { display: block; }
 
 #searchInput::-moz-placeholder  {  color  :  white;  }
 #searchInput::-ms-input-placeholder  {  color  :  white;  }
 #searchInput::-webkit-input-placeholder  {  color  :  white;  }
-
 #searchInput::placeholder  {  color  :  white;  }
 
 #searchSpecials  {
-
     position  :  absolute;
     top : -8.2ch;
-    // left  :  96%;
     left  :  90%;
     width: 15.38rem;
-    // padding : 2.31rem 3.08rem 2.69rem 2.08rem;
     padding : 2.31rem;
 
     font-size  :  0.82rem;
@@ -209,10 +187,7 @@
 
     pointer-events  :  auto;
     border-radius : 50%;
-    // // box-shadow: inset -0.77rem 0 7.7rem $bgColor;
-    // box-shadow: inset -0.77rem 0 7.7rem $bgColor;
     box-shadow: inset 0 0 3rem 1rem $bgColor;
-    // background-color: rgb(121, 120, 120);
     transition  :  all 500ms 1300ms;
 }
 
@@ -233,29 +208,10 @@
     padding: 0.1ch 0 0.5ch 0;
 }
 
-// .searchSpecialWrapper:nth-of-type(1) a {
-//   width: 300px;
-//   display: inline-block; 
-//   //  padding: 0.1ch 2.69rem 0.5ch 2.69rem;
-// }
-// .searchSpecialWrapper:nth-of-type(2) a {
-//    padding: 0.1ch 2.38rem 0.5ch 2.38rem;
-// }
-// .searchSpecialWrapper:nth-of-type(3) a {
-//     padding : 0.1ch 2ch 0.5ch 2ch;
-// }
-// .searchSpecialWrapper:nth-of-type(4) a {
-//    padding: 0.1ch 2.38rem 0.5ch 2.38rem;
-// }
-// .searchSpecialWrapper:nth-of-type(5) a {
-//    padding: 0.1ch 2.54rem 0.5ch 2.54rem;
-// }
-
 .searchSpecialWrapper a  {
     border : 0.077rem solid rgba(255,255,255,0.2);
     border-radius : 0.15rem;
     background-color : $genericButtonColor;
-
     box-shadow : 0 0 0.15rem rgba(0,0,0,0.5);
 
     cursor  :  pointer;
@@ -277,10 +233,8 @@
     justify-content  :  space-around;
     padding: 3.5rem 0;
     top : -6.9ch;
-    // left : 96%;
 }
 
-// #searchTerm lastQuery
 #searchTerm span {
   color: #96d4fd;
 }
@@ -291,30 +245,19 @@
 
 #results-panel  {
     opacity  :  0;
-    // opacity  :  1;
-
     position  :  relative;
-    // height  :  0;
     height  :  auto;
-    
     width : calc(100% + 10vw);
-    
     top : -8rem;
-    
     left : -10vw;
     margin  : 5.5ch 0 2ch 0;
     padding  :  0;
 
-    // order : 2;
     z-index: 0;
 
     border: none;
     box-shadow: none;
     background-color: transparent;
-
-    // transform-origin: middle left;    
-    // transform: scaleY(0);
-    // transition  :  all 1000ms;
 }
 
 #fakeResultsBox  {
@@ -336,15 +279,12 @@
 #closeResultsPanelButton, #closeOpenFamiliesButton  {
     position: relative;
     text-align: center;
-    // font-weight: bold;
-    
     color: white;
 
     border: 0.15rem solid $goldHighlightColor;
     border-radius: 50%;
     background-color: $panelColor;
 
-    // z-index: 2;
     cursor: pointer;
     transition: all 300ms;
   }
@@ -353,12 +293,9 @@
     left: 100%;
     width: 2.2rem;
     height: 2rem;
-    // padding: 0 0 0 0.04rem;
     padding: 0 0 0.08rem 0;
     
     text-align: center;
-    
-
     font-size  :  1.2rem;
     font-weight: 600;
     line-height: 1.2rem;
@@ -375,11 +312,8 @@
   left: 120%;
   top: -50%;
   width: auto;
-  // padding: 0.3rem 0.5rem 0.5rem 0.5rem;
-  // border-radius: 0.3rem;
+
   font-size: 0.9rem;
-  // background-color: $panelColor;
-  // box-shadow: 0 0 0 0.077rem rgb(255, 202, 202);
   transition: all 200ms 500ms ease-in-out;
 }
 
@@ -390,17 +324,15 @@
 #printerButton {
   position: absolute;
   top: calc(100% - 1rem);
-//   top: calc(100% - 2.4rem);
-
   left: calc(100% - 1rem);
-//   left: 100%;
   width: 2.2rem;
   height: 2.2rem;
+  padding: 0.077rem;
+  
   cursor: pointer;
   color: white;
   text-align: center;
   
-  padding: 0.077rem;
   border-radius: 50%;
   background-color: $panelColor;
   border : 0.15rem solid  $goldHighlightColor;
@@ -408,10 +340,6 @@
   box-shadow: 0 0 0 0.3rem $bgColor,
               0 -0.06rem 0 0.3rem $bgColor, -0.06rem 0 0 0.3rem $bgColor,  -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
               0.06rem -0.06rem 0 0.4rem $bgColor, -0.06rem -0.06rem 0 0.4rem $bgColor,  -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
-              
-    // box-shadow: 0 0 0 0.46rem $bgColor,
-    //           0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
-    //           0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
 }
 
 #printerButton::before  {
@@ -421,11 +349,7 @@
   left: 120%;
   top: -50%;
   width: auto;
-  // padding: 0.3rem 0.5rem 0.5rem 0.5rem;
-  // border-radius: 0.3rem;
   font-size: 0.9rem;
-  // background-color: $panelColor;
-  // box-shadow: 0 0 0 0.077rem rgb(255, 202, 202);
   transition: all 200ms 500ms ease-in-out;
 }
 
@@ -436,11 +360,9 @@
 #closeOpenFamiliesButton  {
     position: absolute;
     left: calc(100% - 1.31rem);
-    // top: 2.54rem;
     top: calc(100% - 1.75rem);
     width  :  3rem;
     height  :  3rem;
-    // padding  :  0.15rem 0 0 0;
     padding  :  0 0 0.3rem 0;
 
     font-size  :  1.8rem;
@@ -486,8 +408,6 @@
     left : 2ch;
     width : calc(100% - 4ch);
 
-    // font-size  :  1.15rem;
-    // font-size  :  1.15rem;
     font-variant  :  small-caps;
     color  :  $panelFlyoutFontColor;
     text-align  :  center;
@@ -513,7 +433,6 @@
     line-height  :  1rem;
 
     border: none;
-    // box-shadow : 0 -0.077rem 0 rgba(255,255,255,0.35);
     box-shadow : none;
 //  FIXME :
     -webkit-overflow-scrolling  :  touch;
@@ -527,17 +446,12 @@
     transition  :  all 350ms;
 }
 
-// TODO : (why two here?)
+// TODO : (why to here?)
 
 #searchResults.fadeIn  {
     opacity  :  1;
     transition  :  all 2s;
 }
-
-// #results-panel.fadeIn  {
-//     opacity  :  1;
-//     transition  :  all 2s;
-// }
 
 #searchResults li  {
     position : relative;
@@ -597,7 +511,8 @@
 }
 
 #searchResults li:not(.family) span:first-child  {
-    padding  :  0.23rem 0 0.23rem 1.2rem;
+    // padding  :  0.23rem 0 0.23rem 1.2rem;
+    padding  :  0.23rem 0 0.23rem 0.7rem;
 }
 
 #searchResults li.active  {
@@ -637,7 +552,8 @@
 // species scientific names only
 #searchResults span:not(.fsc):last-child  {
     position  :  absolute;
-    left  :  calc(52.8% + 1.15rem);
+    // left  :  calc(52.8% + 1.15rem);
+    left  :  calc(52.8% + 0.7rem);
 }
 
 .fsc  {
@@ -679,20 +595,10 @@
     font-size  :  0.8rem;
 }
 
-#searchResults .endemic,#searchResults .extinct,#searchResults .hy,#searchResults .va  {
+#searchResults .endemic, #searchResults .extinct, #searchResults .hy, #searchResults .va  {
     position  :  relative;
     left  :  -0.575rem;
 }
-
-// @media print {
-//     li {
-//       color:red;
-//    }
-//    .family, .familyOpen {
-//     // padding: 0.077rem 0 0.15rem 1.2rem;
-//     margin-top: 2ch;
-//   }
-// }
 
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
 // TODO : height already fixed (in script onload?) just translate down and opacity so height isn't changing
@@ -703,11 +609,8 @@
     width: calc(100% + 10vw);
     height: 0;
     top: 0;
-    // top: -15rem;
     left: -10vw;
-    // margin: 0;
     margin: 0 0 -20.5ch 0;
-    // padding :  5ch 0 0 0;
     padding :  5ch 0 0 0;
 
     z-index : 0;
@@ -715,29 +618,16 @@
     box-shadow: none;
     background-color: transparent;
 
-    // transition : all 750ms 1250ms;
     transform: translateY(-15rem);
-    // transition : transform 750ms 1250ms;
-    // transition : all 600ms 350ms;
 }
-
-// #tax-panel.setTaxPanelHeight  {
-//     opacity : 1;
-//     height: auto;
-//     margin: 0 0 7ch 0;
-// }
 
 #fakeTaxPageBox  {
     position : relative;
-    // top : 0;
     top : -1.5ch;
-    // height : auto;
     height : 100%;
     width : calc(100% - 10vw);
     left : 10vw;
-    // padding : 0 0 1ch 0;
     padding : 0 0 2ch 0;
-    // margin : 1ch 0 0 0;
 
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
@@ -750,15 +640,12 @@
 
 #taxPage  {
     position  :  relative;
-    // top: 0.77rem;
     top: -1.5ch;
     left  :  -10vw;
     width  :  calc(100% + 10vw + 1ch);
     height : 0;
     max-height  :  75vh;
-    // padding  :  0.5ch 0 0 10vw;
     padding  :  0 0 0 10vw;
-    // margin : 0 0 1ch 0;
     margin : 0;
 
     font-size  :  1rem;
@@ -883,14 +770,15 @@ to {
 
 /* target : familyOpen bird common names only */
 #tree .familyOpen  ul  li span:first-child {
-    // padding  :  0.077rem 0 0 2.1rem;
-    padding  :  0.077rem 0 0 2rem;
+    // padding  :  0.077rem 0 0 2rem;
+    padding  :  0.077rem 0 0 1.8rem;
 }
 
 /*target : familyOpen bird sci names only*/
 #tree .familyOpen .birds li span:last-child  {
     position  :  absolute;
-    left  :  52.8%;
+    // left  :  52.8%;
+    left  :  52.6%;
 }
 
 #taxPage.samTax .hy:before,#taxPage.samTax .va:before  {
@@ -931,7 +819,6 @@ to {
 }
 
 #tree .family:hover::before, #tree .familyOpen:hover::before {
-    // content: '\a0\a0';
     position : absolute;
     top : 0.15rem;
     left : -2.5vw;
@@ -943,7 +830,6 @@ to {
     position : absolute;
     left : -2.5vw;
     top : 0.15rem;
-
     font-size: 1.3rem;
 }
 

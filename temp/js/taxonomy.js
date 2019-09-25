@@ -263,7 +263,7 @@ function moveTaxPanel(whatIsOpening) {
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
       else {
-        var shift = 240 + "px";        
+        var shift = 220 + "px";        
         taxPanel.style.transform = "translateY(-" + shift + ")";        
       }
       break;
@@ -279,7 +279,7 @@ function getCountryData(data) {
   //  TODO  : tabindex="0" on all families and species !! ***
   taxPage.innerHTML = data;
 
-  // so "species" includes the family level and individual bird species
+  // so "species" includes the family level _and_ individual bird species
   species = document.getElementById("tree").getElementsByTagName("li");
 
   //  TODO  : (any need for familyOpen?)
@@ -287,23 +287,21 @@ function getCountryData(data) {
   families = taxPage.querySelectorAll("#tree .family");
   numFamilies = families.length;
 
-  if (lastQuery) searchTree(lastQuery);
+  if (lastQuery) searchTree(lastQuery); // TODO : memoize, set flag for new country?
 
   resetTaxPageHeight();
 }
 
 //  Caller :  ("#searchInput").on ("input change click textInput focusin", getQuery);    keyup removed
 function getQuery() {
-
-  var badIndex = searchInput.value.search(/[^"a-zñã'\s-]/i);
+  
+  // úáóíç are not used by SACC, and will be swapped later for 'uaoic'
+  var badIndex = searchInput.value.search(/[^"a-zñãúáóíç'\s-]/i);
 
   if (badIndex !== -1) {
-    // searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character '" + searchInput.value[badIndex] + "' not allowed </li><li></li>";
     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character not allowed </li><li></li>";
-    // if (!resultsPanelOpen) toggleSearchResultsPanel();
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();
-    
     return;
   }
 
@@ -311,9 +309,63 @@ function getQuery() {
   if (searchInput.value.length < 2) {
     return;
   }
-
-  searchTree(searchInput.value);
+  
+  var searcFormContents = document.querySelector(".searchForm_contents");
+  // keep a minimum of 20 ch's width in input field and add 1 ch width for every query.length > 8
+  if (searchInput.value.length > 6) {
+    searcFormContents.style.left = "-" + (searchInput.value.length - 6)/5 + "ch";
+    searchInput.size = 20 + (searchInput.value.length - 6);
+  }
+  
+  searchTree(searchInput.value); // memoize, set flag for same country
 }
+
+// going backward this is good, but also want to limit search going forward in searches
+// how to limit the cache or clear old values?
+
+// if searchInput.value.length is 1 more than last value && substring is the same,
+// then search using the old cached result: searchTree(search.cache[searchInput.value.subst(), query2)
+
+    // a memoized function
+// function sqrt(arg) {
+//   if (!sqrt.cache) {
+//       sqrt.cache = {}
+//   }
+//   if (!sqrt.cache[arg]) {
+//       return sqrt.cache[arg] = Math.sqrt(arg)
+//   }
+//   return sqrt.cache[arg]
+// }
+       // TODO : if same country!!!  else clear cache
+// function checkSearchCache(query, newCountry) {
+  
+// manage the cache: clear it if searchInput.value.length = 0 or 1
+//                 : array.shift (remove first element) if cache.length > someMagicNumber
+//                 : array.pop   (remove last element)  if going backwards 
+
+//   if (newCountry) {
+//      searchCache = {};
+//      return searchCache[query] = searchTree(species, query);
+//   }
+  
+//   if (!searchCache[query]) {  // if same country
+  
+//      searchCache.shift();  // even if ultimately find no matches? could look at return value
+
+//      if (query.substr(matches all but last character) === lastQuery) {  // going forward
+//        return searchCache[query] = searchTree(lastSearchResults, query);  // return searchResultsList
+//      }
+//            // going backwards should be in the cache, so this is a safety check
+//      else if (lastQuery.substr(matches all but last character) === query) SearchCache.pop();   // going backwards
+//        return searchCache[query] = searchTree(species, query);
+//      }
+
+//      return searchCache[query] = searchTree(species, query);
+//   }
+//   
+//   return searchCache[query];
+// }
+
 
 function getSearchSpecialsQuery(evt) {
 
@@ -338,19 +390,24 @@ function getSearchSpecialsQuery(evt) {
 
   // parentNode else if you click on "e" for example of extinct only the "e" is detected as the textContent of the target
   // var term = evt.target.parentNode.textContent.trim();
-  searchTree(term);
+  
+  searchTree(term);  // memoize: set flag for same country
 }
 
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 
+// function searchTree(subTree, query2) {  // memoize
 function searchTree(query2) {
 
+  // var species = subTree;  // memoize, but `species` is a global, so probably use a different local in searchTree()
+  
   var query;
   query2 = escapeRegExp(query2);
+  var originalQuery = query2;
 
-  document.querySelector(".colorKey").style.opacity = "0.9";
+  // document.querySelector(".colorKey").style.opacity = "0.9";
 
   var numFound = 0;
 
@@ -392,6 +449,8 @@ function searchTree(query2) {
     lastSpecies.classList.remove("active");
   }
 
+  // TODO : use `species` are a cached subset, for memoziation  
+  
   var matches = [];
   var j = 0;
   var entry;
@@ -433,20 +492,23 @@ function searchTree(query2) {
     query2 = query2.replace(/n/g, "(n|ñ)");
     query2 = query2.replace(/a/g, "(a|ã)");
 
-    query2 = query2.replace(/ú/g, "u");
-    query2 = query2.replace(/á/g, "a");
-    query2 = query2.replace(/ó/g, "o");
-    query2 = query2.replace(/í/g, "i");
-    query2 = query2.replace(/ç/g, "c");
+    if (query2.match(/[úáóíç]/) !== -1) {    
+      query2 = query2.replace(/ú/g, "u");
+      query2 = query2.replace(/á/g, "a");
+      query2 = query2.replace(/ó/g, "o");
+      query2 = query2.replace(/í/g, "i");
+      query2 = query2.replace(/ç/g, "c");
+    }
 
     // now database can have any number of spaces between genus and species
-    query2 = query2.replace(/\s+/g, "\\s+");
+    // TODO : fuzzy or not??
+    // query2 = query2.replace(/\s+/g, "\\s+"); // inserts a literal "\s+" but screws up fuzzy searching
 
     if (query2) {
       query = query2;
     }
     else {
-      query = searchInput.value.replace(/^\s+|\s+$/g, "");
+      query = searchInput.value.replace(/^\s+|\s+$/g, ""); // trim leading/trailing whitespace
       if (query === "type here") warning = true;
       else if (query === "") warning = true;
     }
@@ -455,14 +517,21 @@ function searchTree(query2) {
     if (warning) {
       searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
 
-      // if (!resultsPanelOpen) toggleSearchResultsPanel();
-
       resetSearchResultsHeight();
       if (!resultsPanelOpen) toggleSearchResultsPanel();
+  
+      // updateActivityData("search");
+      // updateActivityData("search", "warning");
       
       return;
     }
-
+    
+    //  TODO : use next 2 lines to enable fuzzy searching
+    // query = query.replace(/(\s+)/g, "");  // remove any spaces to do fuzzy search    
+    query = query.replace(/(\S|\s)/g, "$1.*?");   // add '.*?' behind every character, even spaces
+    
+    // query2 = query2.replace(/\s+/g, "\\s+"); // doesn't seem to make any difference?
+    
     var pattern = new RegExp(query, "i");
 
     // consider using array.filter(function()) in the future
@@ -515,7 +584,9 @@ function searchTree(query2) {
 
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();
-
+    
+    // updateActivityData("search");
+    updateActivityData("search", originalQuery);
     return;
   }
 
@@ -569,6 +640,9 @@ function searchTree(query2) {
   }
 
   searchResults.innerHTML = list;
+  
+  // updateActivityData("search");
+  updateActivityData("search", originalQuery);
 
   // "<li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></li><li data-i='2592' class='bird'><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>"
   

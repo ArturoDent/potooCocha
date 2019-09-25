@@ -19,16 +19,16 @@
 
             "type": "gulp",
             "task": "serve",
-            "problemMatcher": [
-                {
-                    // "base": "$tsc-watch",
-                    "background": {
-                      "activeOnStart": true,
-                      "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
-                      "endsPattern": "[Browsersync] Serving files from: ./"
-                    }
-                  }
-            ]
+            // "problemMatcher": [
+            //     {
+            //         // "base": "$tsc-watch",
+            //         "background": {
+            //         //   "activeOnStart": true,
+            //           "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
+            //           "endsPattern": "[Browsersync] Serving files from: ./"
+            //         }
+            //       }
+            // ]
         },
         {
             "label": "Gulp: watch",

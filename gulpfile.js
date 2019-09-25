@@ -131,7 +131,7 @@ const scriptOrder = [
   "./temp/js/simplebar.js",
   "./temp/js/main.js",
   "./temp/js/SouthAmerica.js",
-  "./temp/js/numLists.js",
+  "./temp/js/numList.js",
   "./temp/js/taxonomy.js",
   "./temp/js/birdMapFactory.js"
 ];
@@ -139,7 +139,7 @@ const scriptOrder = [
 function processJS() {
 
   return gulp.src(scriptOrder)
-    .pipe(stripdebug())
+    // .pipe(stripdebug())
     .pipe(stripComments())
     .pipe(concat("app.js"))
     .pipe(rename({
@@ -186,7 +186,7 @@ function processHTML() {
 function processCSS() {
   return gulp.src(paths.css.src)
     .pipe(autoprefixer({
-      browsers: ["last 2 versions"],
+      // browsers: ["last 2 versions"],
       cascade: false
     }))
     .pipe(cleanCSS())
@@ -274,7 +274,7 @@ function copyFLAGS() {
 const buildGlobs = {
   occurrences: '../BuildSACC/occurrences/occurrences.txt',
   countries: '../BuildSACC/Countries/*.*',
-  // numLists: '../BuildSACC/numLists/numLists.js'
+  // numLists: '../BuildSACC/numLists/numList.js'
 };
 
 function getBuildSACC_Data() {
@@ -293,9 +293,9 @@ function getBuildSACC_Countries() {
 
 // function getBuildSACC_NumLists() {
 //   return gulp.src(buildGlobs.numLists)
-//     .pipe(newer("./js/numLists.js"))
+//     .pipe(newer("./src/js/numList.js"))
 //     .pipe(print())
-//     .pipe(gulp.dest("./js"));
+//     .pipe(gulp.dest("./src/js"));
 // }
 
 // ************************   ftp to experimental.potoococha.net and potoococha.net    **********************  //
