@@ -22,20 +22,22 @@
 }
 
 .slideUpWrapper +  #searchForm    {
-    transform: translateY(-8rem);
+    // transform: translateY(-8rem);
+    transform: translateY(-7rem);
     transition: all 400ms 200ms ease-in-out;
 }
 
 .slideUpWrapper.closeInstructions +  #searchForm   {
     border-bottom-left-radius: 0;
-    transform: translateY(-23.3rem);
+    // transform: translateY(-23.3rem);
+    transform: translateY(-22rem);
     transition: all 400ms ease-in-out;
 }
 
 #results-panel    {
     transform-origin: top left;    
     transform: scaleY(0) translateY(0) !important;
-    transition: transform 400ms ease;
+    transition: transform 400ms ease-in;
 }
 
 #results-panel.closeInstructions:not(.resultsPanelBoolean)  {
@@ -81,7 +83,8 @@
     color  :  white;
     text-align  :  center;
 
-    border : 0.15rem solid  $goldHighlightColor;
+    // border : 0.15rem solid  $goldHighlightColor;
+    border : 0.15rem solid  $greenHighlightColor;
     border-radius  :  50%;
     background-color  :  $bgColor;
     box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
@@ -96,7 +99,7 @@
 
 .taxInstructionsButton.instructionsClosed .tooltip {
     width  :  10rem;
-    border : 0.15rem solid  $goldHighlightColor;
+    border : 0.15rem solid $greenHighlightColor;
     background-color: $panelColor;
     transform: rotate(0);
 }
@@ -345,11 +348,18 @@
 #printerButton::before  {
   opacity: 0;
   position: absolute;
-  content: "print";
-  left: 120%;
-  top: -50%;
-  width: auto;
+//   content: "print";
+  content: "print search results"; // newline = \000A, spaces or tabs don't seem to work
+  left: 125%;
+  top: -140%;
+//   width: auto;
+  width: 13ch;  // but this is really doing all the formatting of the `content`
   font-size: 0.9rem;
+  
+  padding:0.38rem;
+  border-radius: 0.6rem;
+  background-color: $panelColor;
+  box-shadow: 0 0 0.09rem rgb(0,0,0);
   transition: all 200ms 500ms ease-in-out;
 }
 
@@ -387,10 +397,10 @@
     top: 90%;
     width: 8vw;
     padding:0.38rem;
-    border-radius: 0.15rem;
+    border-radius: 0.6rem;
     font-size: 0.9rem;
     background-color: $panelColor;
-    box-shadow: 0 0 0 0.077rem rgb(115, 115, 115);
+    box-shadow: 0 0 0.09rem rgb(0,0,0);
     transition: all 200ms 500ms ease-in-out;
 }
 
@@ -434,7 +444,7 @@
 
     border: none;
     box-shadow : none;
-//  FIXME :
+    
     -webkit-overflow-scrolling  :  touch;
 
     // if no simpleBar, use overflow-y: auto;
@@ -446,7 +456,7 @@
     transition  :  all 350ms;
 }
 
-//  TODO : (why to here?)
+//  TODO : ?
 
 #searchResults.fadeIn  {
     opacity  :  1;
@@ -617,6 +627,8 @@
     border: none;
     box-shadow: none;
     background-color: transparent;
+    // overscroll-behavior: contain;  doesn't seem to work anywhere
+    // overscroll-behavior: none;
 
     transform: translateY(-15rem);
 }

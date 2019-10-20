@@ -69,8 +69,9 @@
     font-size  :  6rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  $bgColor;
-    text-shadow :  0 0 0.125rem white;
+    color  :  darken($bgColor, 1%);
+    // text-shadow :  0 0 0.125rem white;
+    text-shadow :  0 0 0.15rem $greenHighlightColor, 0 0 0.15rem gray;
     letter-spacing  :  0.2em;
 }
 
@@ -116,15 +117,16 @@
 #days {
     position  :  relative;
     top  :  0.62rem;
-    padding: 0;
-    height: 1.4rem;
+    // padding: 0 0 0.013rem 0;
+    height: 1.55rem;
     margin-right: 3ch;
 
+    color: lighten($greenHighlightColor, 10%);
     font-size  :  1rem;
     letter-spacing  :  0.1em;
     text-shadow : 0  0.077rem rgba(0,0,0,0.3);
 
-    border-bottom: 0.23rem solid #df6757;
+    border-bottom: 0.23rem solid lighten($greenHighlightColor, 10%);
     border-left: 2ch solid transparent;
 }
 
@@ -166,10 +168,12 @@
 #numDays > a:hover,#numDays > a:focus {
     outline: none;
     color : #fff;
-    background-color  :  $numDaysHoverColor;
+    background-color  :  $greenHighlightColor;
 }
 
 #numDays > a.highlight {
+    color : #fff;
     border-top-right-radius  :  1%;
     transform  :  scale(1.5);
+    background-color  :  $greenHighlightColor;
 }

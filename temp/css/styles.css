@@ -135,6 +135,9 @@ a {
 a:link {
   border-bottom: solid 0.077rem white; }
 
+a:visited {
+  background-color: #4db088; }
+
 #mainContent {
   position: relative;
   left: 10vw;
@@ -255,6 +258,9 @@ footer a:hover, footer a:focus {
 
 #mailLink a:hover, #mailLink a:focus {
   outline: none; }
+
+#mailLink a:visited {
+  background-color: #4db088; }
 
 #mailLink:hover .icon-paper-plane, #mailLink:focus-within .icon-paper-plane {
   outline: none;
@@ -435,10 +441,6 @@ footer a:hover, footer a:focus {
   -webkit-filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8));
   filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8)); }
 
-.drawing.active {
-  -webkit-filter: drop-shadow(0 0 0.23rem rgba(0, 0, 0, 0.8));
-  filter: drop-shadow(0 0 0.23rem rgba(0, 0, 0, 0.8)); }
-
 .colorKey {
   opacity: 0;
   position: absolute;
@@ -547,8 +549,8 @@ footer a:hover, footer a:focus {
   font-size: 6rem;
   font-weight: bold;
   font-variant: small-caps;
-  color: #53595d;
-  text-shadow: 0 0 0.125rem white;
+  color: #51565a;
+  text-shadow: 0 0 0.15rem #4db088, 0 0 0.15rem gray;
   letter-spacing: 0.2em; }
 
 #pdfButton, #csvButton {
@@ -583,13 +585,13 @@ footer a:hover, footer a:focus {
 #days {
   position: relative;
   top: 0.62rem;
-  padding: 0;
-  height: 1.4rem;
+  height: 1.55rem;
   margin-right: 3ch;
+  color: #70c0a0;
   font-size: 1rem;
   letter-spacing: 0.1em;
   text-shadow: 0 0.077rem rgba(0, 0, 0, 0.3);
-  border-bottom: 0.23rem solid #df6757;
+  border-bottom: 0.23rem solid #70c0a0;
   border-left: 2ch solid transparent; }
 
 #numDays > a {
@@ -622,11 +624,13 @@ footer a:hover, footer a:focus {
 #numDays > a:hover, #numDays > a:focus {
   outline: none;
   color: #fff;
-  background-color: #b1655f; }
+  background-color: #4db088; }
 
 #numDays > a.highlight {
+  color: #fff;
   border-top-right-radius: 1%;
-  transform: scale(1.5); }
+  transform: scale(1.5);
+  background-color: #4db088; }
 
 .optionsCheckboxes {
   list-style-type: none;
@@ -931,12 +935,6 @@ input[type='checkbox']:disabled ~ label {
 .numDays12 th {
   width: 1.85rem; }
 
-@keyframes days {
-  0% {
-    width: 0; }
-  100% {
-    width: inherit; } }
-
 .numDays11 th:nth-child(n+13) {
   display: none; }
 
@@ -1138,15 +1136,10 @@ input[type='checkbox']:disabled ~ label {
 
 #country-menu a:hover, #country-menu a:focus {
   outline: none;
-  background-color: #b38206;
-  color: black;
-  text-shadow: 0 0.077rem rgba(255, 255, 255, 0.2); }
+  background-color: #b38206; }
 
 #country-menu a.highlight {
-  background-color: #b38206;
-  color: black;
-  text-shadow: 0 0.077rem rgba(255, 255, 255, 0.2);
-  transition: all 450ms ease-out; }
+  background-color: #b38206; }
 
 #country-menu a.highlight:after {
   content: '';
@@ -1210,7 +1203,7 @@ input[type='checkbox']:disabled ~ label {
   padding: 1.15rem 0 0 0;
   line-height: 1.5rem; }
 
-#taxonomyArticle a.linkHighlight {
+.linkHighlight {
   padding: 0 0.23rem 0.077rem 0.31rem;
   border-radius: 0.15rem;
   border: solid 0.077rem transparent;
@@ -1218,9 +1211,12 @@ input[type='checkbox']:disabled ~ label {
   box-shadow: 0 0.077rem rgba(0, 0, 0, 0.5);
   transition: border 850ms; }
 
-#taxonomyArticle a.linkHighlight:hover, #taxonomyArticle a.linkHighlight:focus {
+.linkHighlight:hover, .linkHighlight:focus {
   outline: none;
   border: solid 0.077rem white; }
+
+.linkHighlight:visited {
+  background-color: #4db088; }
 
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 .slideUpWrapper {
@@ -1241,18 +1237,18 @@ input[type='checkbox']:disabled ~ label {
   opacity: 0; }
 
 .slideUpWrapper + #searchForm {
-  transform: translateY(-8rem);
+  transform: translateY(-7rem);
   transition: all 400ms 200ms ease-in-out; }
 
 .slideUpWrapper.closeInstructions + #searchForm {
   border-bottom-left-radius: 0;
-  transform: translateY(-23.3rem);
+  transform: translateY(-22rem);
   transition: all 400ms ease-in-out; }
 
 #results-panel {
   transform-origin: top left;
   transform: scaleY(0) translateY(0) !important;
-  transition: transform 400ms ease; }
+  transition: transform 400ms ease-in; }
 
 #results-panel.closeInstructions:not(.resultsPanelBoolean) {
   transform: scaleY(0) translateY(-13rem) !important; }
@@ -1288,7 +1284,7 @@ input[type='checkbox']:disabled ~ label {
   font-weight: bold;
   color: white;
   text-align: center;
-  border: 0.15rem solid rgba(255, 217, 0, 0.6);
+  border: 0.15rem solid #4db088;
   border-radius: 50%;
   background-color: #53595d;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #53595d;
@@ -1300,7 +1296,7 @@ input[type='checkbox']:disabled ~ label {
 
 .taxInstructionsButton.instructionsClosed .tooltip {
   width: 10rem;
-  border: 0.15rem solid rgba(255, 217, 0, 0.6);
+  border: 0.15rem solid #4db088;
   background-color: #474c50;
   transform: rotate(0); }
 
@@ -1512,11 +1508,15 @@ input[type='checkbox']:disabled ~ label {
 #printerButton::before {
   opacity: 0;
   position: absolute;
-  content: "print";
-  left: 120%;
-  top: -50%;
-  width: auto;
+  content: "print search results";
+  left: 125%;
+  top: -140%;
+  width: 13ch;
   font-size: 0.9rem;
+  padding: 0.38rem;
+  border-radius: 0.6rem;
+  background-color: #474c50;
+  box-shadow: 0 0 0.09rem black;
   transition: all 200ms 500ms ease-in-out; }
 
 #printerButton:hover::before, #printerButton:focus::before {
@@ -1546,10 +1546,10 @@ input[type='checkbox']:disabled ~ label {
   top: 90%;
   width: 8vw;
   padding: 0.38rem;
-  border-radius: 0.15rem;
+  border-radius: 0.6rem;
   font-size: 0.9rem;
   background-color: #474c50;
-  box-shadow: 0 0 0 0.077rem #737373;
+  box-shadow: 0 0 0.09rem black;
   transition: all 200ms 500ms ease-in-out; }
 
 #closeOpenFamiliesButton:hover::before, #closeOpenFamiliesButton:focus::before {
@@ -2043,8 +2043,8 @@ input[type='checkbox']:disabled ~ label {
   width: 14rem;
   letter-spacing: 0.2rem;
   background-color: transparent;
-  border: 0.12rem solid rgba(255, 217, 0, 0.6);
-  border-right: 0.2rem solid rgba(255, 217, 0, 0.6);
+  border: 0.12rem solid #4db088;
+  border-right: 0.2rem solid #4db088;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-4deg);
   -webkit-transform-origin: top left;
@@ -2096,7 +2096,7 @@ input[type='checkbox']:disabled ~ label {
   top: -0.125em;
   left: -2.25em;
   border-width: 0.98em;
-  border-color: transparent rgba(255, 217, 0, 0.6) transparent transparent;
+  border-color: transparent #4db088 transparent transparent;
   transition: border-color 200ms 500ms; }
 
 .saveMapButton .tooltip:after {
@@ -2113,9 +2113,7 @@ input[type='checkbox']:disabled ~ label {
   border-color: transparent transparent transparent white; }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {
-  color: black;
-  text-shadow: none;
-  box-shadow: inset -18.5rem 0 0.15rem rgba(255, 217, 0, 0.6), 0 0 1.15rem rgba(255, 217, 0, 0.6);
+  box-shadow: inset -18.5rem 0 0.15rem #4db088, 0 0 1.15rem #4db088;
   will-change: transform; }
 
 .saveMapButton.hasTooltip:hover .tooltip {

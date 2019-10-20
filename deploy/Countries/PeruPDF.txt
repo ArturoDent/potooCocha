@@ -38,7 +38,7 @@ DUCKS,ANATIDAE
 ,,Orinoco Goose,Oressochen jubatus
 5,,Andean Goose,O. melanopterus
 ,,Muscovy Duck,Cairina moschata
-,,Comb Duck,Sarkidiornis melanotos
+,,American Comb-Duck,Sarkidiornis sylvicola
 ,,Brazilian Teal,Amazonetta brasiliensis
 ,,Torrent Duck,Merganetta armata
 10,,Crested Duck,Lophonetta specularioides
@@ -92,32 +92,33 @@ GREBES,PODICIPEDIDAE
 PIGEONS,COLUMBIDAE
 ,,Rock Pigeon,Columba livia
 ,,Scaled Pigeon,Patagioenas speciosa
+,,Picazuro Pigeon,P. picazuro
 ,,Spot-winged Pigeon,P. maculosa
-,,Band-tailed Pigeon,P. fasciata
-5,,Pale-vented Pigeon,P. cayennensis
+5,,Band-tailed Pigeon,P. fasciata
+,,Pale-vented Pigeon,P. cayennensis
 ,,Peruvian Pigeon,P. oenops
 ,,Plumbeous Pigeon,P. plumbea
 ,,Ruddy Pigeon,P. subvinacea
-,,Sapphire Quail-Dove,Geotrygon saphirina
-10,,Ruddy Quail-Dove,G. montana
+10,,Sapphire Quail-Dove,Geotrygon saphirina
+,,Ruddy Quail-Dove,G. montana
 ,,Violaceous Quail-Dove,G. violacea
 ,,White-tipped Dove,Leptotila verreauxi
 ,,Ochre-bellied Dove,L. ochraceiventris
-,,Gray-fronted Dove,L. rufaxilla
-15,,Pallid Dove,L. pallida
+15,,Gray-fronted Dove,L. rufaxilla
+,,Pallid Dove,L. pallida
 ,,White-throated Quail-Dove,Zentrygon frenata
 ,,West Peruvian Dove,Zenaida meloda
 ,,Eared Dove,Z. auriculata
-,,Plain-breasted Ground Dove,Columbina minuta
-20,,Ruddy Ground Dove,C. talpacoti
-,,Ecuadorian Ground Dove,C. buckleyi
-,,Picui Ground Dove,C. picui
-,,Croaking Ground Dove,C. cruziana
-,,Blue Ground Dove,Claravis pretiosa
-25,,Maroon-chested Ground Dove,C. mondetoura
+20,,Blue Ground Dove,Claravis pretiosa
+,,Maroon-chested Ground Dove,Paraclaravis mondetoura
 ,,Bare-faced Ground Dove,Metriopelia ceciliae
 ,,Black-winged Ground Dove,M. melanoptera
 ,,Golden-spotted Ground Dove,M. aymara
+25,,Plain-breasted Ground Dove,Columbina minuta
+,,Ruddy Ground Dove,C. talpacoti
+,,Ecuadorian Ground Dove,C. buckleyi
+,,Picui Ground Dove,C. picui
+,,Croaking Ground Dove,C. cruziana
 CUCKOOS,CUCULIDAE
 ,,Greater Ani,Crotophaga major
 ,,Smooth-billed Ani,C. ani
@@ -552,10 +553,12 @@ HERONS,ARDEIDAE
 ,,Little Blue Heron,E. caerulea
 IBISES,THRESKIORNITHIDAE
 ,,White Ibis,Eudocimus albus
+,,Scarlet Ibis,E. ruber
 ,,Puna Ibis,Plegadis ridgwayi
 ,,Green Ibis,Mesembrinibis cayennensis
-,,Bare-faced Ibis,Phimosus infuscatus
-5,,Buff-necked Ibis,Theristicus caudatus
+5,,Bare-faced Ibis,Phimosus infuscatus
+,,Buff-necked Ibis,Theristicus caudatus
+,,Andean Ibis,T. branickii
 ,,Black-faced Ibis,T. melanopis
 ,,Roseate Spoonbill,Platalea ajaja
 NEW WORLD VULTURES,CATHARTIDAE
@@ -724,18 +727,19 @@ TOUCANS,RAMPHASTIDAE
 ,,Toco Toucan,Ramphastos toco
 ,,Yellow-throated Toucan,R. ambiguus
 ,,White-throated Toucan,R. tucanus
-,,Channel-billed Toucan,R. vitellinus
-5,,Emerald Toucanet,Aulacorhynchus prasinus
+,,Choco Toucan,R. brevis
+5,,Channel-billed Toucan,R. vitellinus
+,,Emerald Toucanet,Aulacorhynchus prasinus
 ,,Chestnut-tipped Toucanet,A. derbianus
 ,endemic,Yellow-browed Toucanet,A. huallagae
 ,,Blue-banded Toucanet,A. coeruleicinctis
-,,Gray-breasted Mountain-Toucan,Andigena hypoglauca
-10,,Hooded Mountain-Toucan,A. cucullata
+10,,Gray-breasted Mountain-Toucan,Andigena hypoglauca
+,,Hooded Mountain-Toucan,A. cucullata
 ,,Black-billed Mountain-Toucan,A. nigrirostris
 ,,Golden-collared Toucanet,Selenidera reinwardtii
 ,,Lettered Aracari,Pteroglossus inscriptus
-,,Collared Aracari,P. torquatus
-15,,Chestnut-eared Aracari,P. castanotis
+15,,Collared Aracari,P. torquatus
+,,Chestnut-eared Aracari,P. castanotis
 ,,Many-banded Aracari,P. pluricinctus
 ,,Ivory-billed Aracari,P. azara
 ,,Curl-crested Aracari,P. beauharnaesii
@@ -996,11 +1000,12 @@ ANTPITTAS,GRALLARIIDAE
 ,,Rufous Antpitta,G. rufula
 ,endemic,Chestnut Antpitta,G. blakei
 20,,Tawny Antpitta,G. quitensis
+,,Rufous-faced Antpitta,G. erythrotis
 ,,Spotted Antpitta,Hylopezus macularius
 ,,White-lored Antpitta,H. fulviventris
 ,,Amazonian Antpitta,H. berlepschi
-,,Thrush-like Antpitta,Myrmothera campanisona
-25,,Ochre-breasted Antpitta,Grallaricula flavirostris
+25,,Thrush-like Antpitta,Myrmothera campanisona
+,,Ochre-breasted Antpitta,Grallaricula flavirostris
 ,,Leymebamba Antpitta,G. leymebambae
 ,,Peruvian Antpitta,G. peruviana
 ,endemic,Ochre-fronted Antpitta,G. ochraceifrons
@@ -1099,17 +1104,17 @@ OVENBIRDS,FURNARIIDAE
 ,endemic,Surf Cinclodes,C. taczanowskii
 ,,Dusky-cheeked Foliage-gleaner,Anabazenops dorsalis
 ,,Rufous-rumped Foliage-gleaner,Philydor erythrocercum
-65,,Chestnut-winged Foliage-gleaner,P. erythropterum
-,,Buff-fronted Foliage-gleaner,P. rufum
-,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
+65,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
 ,,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,,Rufous-tailed Foliage-gleaner,A. ruficaudata
-70,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
+,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
 ,,Lineated Foliage-gleaner,S. subalaris
-,,Rufous-necked Foliage-gleaner,S. ruficollis
+70,,Rufous-necked Foliage-gleaner,S. ruficollis
 ,,Peruvian Recurvebill,S. ucayalae
 ,,Bolivian Recurvebill,S. striata
-75,,Chestnut-winged Hookbill,Ancistrops strigilatus
+,,Chestnut-winged Hookbill,Ancistrops strigilatus
+,,Buff-fronted Foliage-gleaner,Dendroma rufa
+75,,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,,Henna-hooded Foliage-gleaner,Clibanornis erythrocephalus
 ,,Ruddy Foliage-gleaner,C. rubiginosus
 ,,Flammulated Treehunter,Thripadectes flammulatus
@@ -1617,7 +1622,8 @@ THRUSHES,TURDIDAE
 ,,Glossy-black Thrush,T. serranus
 ,,White-necked Thrush,T. albicollis
 MOCKINGBIRDS,MIMIDAE
-,,Long-tailed Mockingbird,Mimus longicaudatus
+,,Tropical Mockingbird,Mimus gilvus
+,,Long-tailed Mockingbird,M. longicaudatus
 ,,White-banded Mockingbird,M. triurus
 ,,Brown-backed Mockingbird,M. dorsalis
 OLD WORLD SPARROWS,PASSERIDAE
@@ -1892,55 +1898,56 @@ TANAGERS,THRAUPIDAE
 ,,Bananaquit,Coereba flaveola
 ,,Dull-colored Grassquit,Asemospiza obscura
 135,,Orange-eared Tanager,Chlorochrysa calliparaea
-,,Red-capped Cardinal,Paroaria gularis
+,,Red-crested Cardinal,Paroaria coronata
+,,Red-capped Cardinal,P. gularis
 ,,Black-faced Tanager,Schistochlamys melanopis
 ,,Magpie Tanager,Cissopis leverianus
-,,Vermilion Tanager,Calochaetes coccineus
-140,,Yellow-throated Tanager,Iridosornis analis
+140,,Vermilion Tanager,Calochaetes coccineus
+,,Yellow-throated Tanager,Iridosornis analis
 ,,Golden-collared Tanager,I. jelskii
 ,,Golden-crowned Tanager,I. rufivertex
 ,endemic,Yellow-scarfed Tanager,I. reinhardti
-,,Fawn-breasted Tanager,Pipraeidea melanonota
-145,,Blue-and-yellow Tanager,P. bonariensis
+145,,Fawn-breasted Tanager,Pipraeidea melanonota
+,,Blue-and-yellow Tanager,P. bonariensis
 ,,Buff-breasted Mountain-Tanager,Dubusia taeniata
 ,,Chestnut-bellied Mountain-Tanager,D. castaneoventris
 ,,Lacrimose Mountain-Tanager,Anisognathus lacrymosus
-,,Scarlet-bellied Mountain-Tanager,A. igniventris
-150,,Blue-winged Mountain-Tanager,A. somptuosus
+150,,Scarlet-bellied Mountain-Tanager,A. igniventris
+,,Blue-winged Mountain-Tanager,A. somptuosus
 ,,Hooded Mountain-Tanager,Buthraupis montana
 ,,Masked Mountain-Tanager,Tephrophilus wetmorei
 ,,Blue-capped Tanager,Sporathraupis cyanocephala
-,,Grass-green Tanager,Chlorornis riefferii
-155,,Black-chested Mountain-Tanager,Cnemathraupis eximia
+155,,Grass-green Tanager,Chlorornis riefferii
+,,Black-chested Mountain-Tanager,Cnemathraupis eximia
 ,endemic,Golden-backed Mountain-Tanager,C. aureodorsalis
 ,,Orange-throated Tanager,Wetmorethraupis sterrhopteron
 ,,Golden-naped Tanager,Chalcothraupis ruficervix
-,,Silvery Tanager,Stilpnia viridicollis
-160,,Green-throated Tanager,S. argyrofenges
+160,,Silvery Tanager,Stilpnia viridicollis
+,,Green-throated Tanager,S. argyrofenges
 ,endemic,Sira Tanager,S. phillipsi
 ,,Green-capped Tanager,S. meyerdeschauenseei
 ,,Burnished-buff Tanager,S. cayana
-,,Masked Tanager,S. nigrocincta
-165,,Blue-necked Tanager,S. cyanicollis
+165,,Masked Tanager,S. nigrocincta
+,,Blue-necked Tanager,S. cyanicollis
 ,,Blue-and-black Tanager,Tangara vassorii
 ,,Beryl-spangled Tanager,T. nigroviridis
 ,,Metallic-green Tanager,T. labradorides
-,,Blue-browed Tanager,T. cyanotis
-170,,Turquoise Tanager,T. mexicana
+170,,Blue-browed Tanager,T. cyanotis
+,,Turquoise Tanager,T. mexicana
 ,,Paradise Tanager,T. chilensis
 ,,Opal-rumped Tanager,T. velia
 ,,Opal-crowned Tanager,T. callophrys
-,,Bay-headed Tanager,T. gyrola
-175,,Golden-eared Tanager,T. chrysotis
+175,,Bay-headed Tanager,T. gyrola
+,,Golden-eared Tanager,T. chrysotis
 ,,Saffron-crowned Tanager,T. xanthocephala
 ,,Flame-faced Tanager,T. parzudakii
 ,,Green-and-gold Tanager,T. schrankii
-,,Golden Tanager,T. arthus
-180,,Silver-throated Tanager,T. icterocephala
+180,,Golden Tanager,T. arthus
+,,Silver-throated Tanager,T. icterocephala
 ,,Blue-gray Tanager,Thraupis episcopus
 ,,Sayaca Tanager,T. sayaca
 ,,Palm Tanager,T. palmarum
-,,Dotted Tanager,Ixothraupis varia
-185,,Yellow-bellied Tanager,I. xanthogastra
+185,,Dotted Tanager,Ixothraupis varia
+,,Yellow-bellied Tanager,I. xanthogastra
 ,,Spotted Tanager,I. punctata
 ,,Red-billed Pied Tanager,Lamprospiza melanoleuca

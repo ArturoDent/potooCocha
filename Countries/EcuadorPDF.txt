@@ -23,7 +23,7 @@ DUCKS,ANATIDAE
 ,,Black-bellied Whistling-Duck,D. autumnalis
 ,,Orinoco Goose,Oressochen jubatus
 ,,Muscovy Duck,Cairina moschata
-5,,Comb Duck,Sarkidiornis melanotos
+5,,American Comb-Duck,Sarkidiornis sylvicola
 ,,Brazilian Teal,Amazonetta brasiliensis
 ,,Torrent Duck,Merganetta armata
 ,,Northern Shoveler,Spatula clypeata
@@ -91,14 +91,14 @@ PIGEONS,COLUMBIDAE
 ,,West Peruvian Dove,Zenaida meloda
 ,endemic,Galapagos Dove,Z. galapagoensis
 20,,Eared Dove,Z. auriculata
+,,Blue Ground Dove,Claravis pretiosa
+,,Maroon-chested Ground Dove,Paraclaravis mondetoura
+,,Black-winged Ground Dove,Metriopelia melanoptera
 ,,Common Ground Dove,Columbina passerina
-,,Plain-breasted Ground Dove,C. minuta
+25,,Plain-breasted Ground Dove,C. minuta
 ,,Ruddy Ground Dove,C. talpacoti
 ,,Ecuadorian Ground Dove,C. buckleyi
-25,,Croaking Ground Dove,C. cruziana
-,,Blue Ground Dove,Claravis pretiosa
-,,Maroon-chested Ground Dove,C. mondetoura
-,,Black-winged Ground Dove,Metriopelia melanoptera
+,,Croaking Ground Dove,C. cruziana
 CUCKOOS,CUCULIDAE
 ,,Greater Ani,Crotophaga major
 ,,Smooth-billed Ani,C. ani
@@ -365,32 +365,33 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Red Knot,Calidris canutus
 ,,Surfbird,C. virgata
 ,,Ruff,C. pugnax
-10,,Stilt Sandpiper,C. himantopus
+10,,Sharp-tailed Sandpiper,C. acuminata
+,,Stilt Sandpiper,C. himantopus
 ,,Curlew Sandpiper,C. ferruginea
 ,,Sanderling,C. alba
 ,,Dunlin,C. alpina
-,,Baird's Sandpiper,C. bairdii
-15,,Least Sandpiper,C. minutilla
+15,,Baird's Sandpiper,C. bairdii
+,,Least Sandpiper,C. minutilla
 ,,White-rumped Sandpiper,C. fuscicollis
 ,,Buff-breasted Sandpiper,C. subruficollis
 ,,Pectoral Sandpiper,C. melanotos
-,,Semipalmated Sandpiper,C. pusilla
-20,,Western Sandpiper,C. mauri
+20,,Semipalmated Sandpiper,C. pusilla
+,,Western Sandpiper,C. mauri
 ,,Short-billed Dowitcher,Limnodromus griseus
 ,,Long-billed Dowitcher,L. scolopaceus
 ,,Imperial Snipe,Gallinago imperialis
-,,Jameson's Snipe,G. jamesoni
-25,,Noble Snipe,G. nobilis
+25,,Jameson's Snipe,G. jamesoni
+,,Noble Snipe,G. nobilis
 ,,Wilson's Snipe,G. delicata
 ,,South American Snipe,G. paraguaiae
 ,,Puna Snipe,G. andina
-,,Wilson's Phalarope,Phalaropus tricolor
-30,,Red-necked Phalarope,P. lobatus
+30,,Wilson's Phalarope,Phalaropus tricolor
+,,Red-necked Phalarope,P. lobatus
 ,,Red Phalarope,P. fulicarius
 ,,Spotted Sandpiper,Actitis macularius
 ,,Solitary Sandpiper,Tringa solitaria
-,,Wandering Tattler,T. incana
-35,,Greater Yellowlegs,T. melanoleuca
+35,,Wandering Tattler,T. incana
+,,Greater Yellowlegs,T. melanoleuca
 ,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
 SEEDSNIPES,THINOCORIDAE
@@ -483,6 +484,7 @@ SHEARWATERS,PROCELLARIIDAE
 ,,Flesh-footed Shearwater,A. carneipes
 ,,Manx Shearwater,Puffinus puffinus
 ,endemic,Galapagos Shearwater,P. subalaris
+,,Peruvian Diving-Petrel,Pelecanoides garnotii
 STORKS,CICONIIDAE
 ,,Jabiru,Jabiru mycteria
 ,,Wood Stork,Mycteria americana
@@ -536,7 +538,7 @@ IBISES,THRESKIORNITHIDAE
 ,,Puna Ibis,P. ridgwayi
 5,,Green Ibis,Mesembrinibis cayennensis
 ,,Bare-faced Ibis,Phimosus infuscatus
-,,Black-faced Ibis,Theristicus melanopis
+,,Andean Ibis,Theristicus branickii
 ,,Roseate Spoonbill,Platalea ajaja
 NEW WORLD VULTURES,CATHARTIDAE
 ,,King Vulture,Sarcoramphus papa
@@ -1022,16 +1024,16 @@ OVENBIRDS,FURNARIIDAE
 50,,Dusky-cheeked Foliage-gleaner,Anabazenops dorsalis
 ,,Slaty-winged Foliage-gleaner,Philydor fuscipenne
 ,,Rufous-rumped Foliage-gleaner,P. erythrocercum
-,,Chestnut-winged Foliage-gleaner,P. erythropterum
-,,Buff-fronted Foliage-gleaner,P. rufum
-55,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
+,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
 ,,Montane Foliage-gleaner,Anabacerthia striaticollis
-,,Scaly-throated Foliage-gleaner,A. variegaticeps
+55,,Scaly-throated Foliage-gleaner,A. variegaticeps
 ,,Rufous-tailed Foliage-gleaner,A. ruficaudata
 ,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
-60,,Lineated Foliage-gleaner,S. subalaris
+,,Lineated Foliage-gleaner,S. subalaris
 ,,Rufous-necked Foliage-gleaner,S. ruficollis
-,,Chestnut-winged Hookbill,Ancistrops strigilatus
+60,,Chestnut-winged Hookbill,Ancistrops strigilatus
+,,Buff-fronted Foliage-gleaner,Dendroma rufa
+,,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,,Henna-hooded Foliage-gleaner,Clibanornis erythrocephalus
 ,,Ruddy Foliage-gleaner,C. rubiginosus
 65,,Uniform Treehunter,Thripadectes ignobilis

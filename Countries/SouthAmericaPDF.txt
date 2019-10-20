@@ -62,7 +62,7 @@ DUCKS,ANATIDAE
 ,,Ashy-headed Goose,C. poliocephala
 ,,Ruddy-headed Goose,C. rubidiceps
 ,,Muscovy Duck,Cairina moschata
-,,Comb Duck,Sarkidiornis melanotos
+,,American Comb-Duck,Sarkidiornis sylvicola
 15,,Ringed Teal,Callonetta leucophrys
 ,,Brazilian Teal,Amazonetta brasiliensis
 ,,Torrent Duck,Merganetta armata
@@ -212,6 +212,14 @@ PIGEONS,COLUMBIDAE
 ,endemic,Galapagos Dove,Z. galapagoensis
 ,,Eared Dove,Z. auriculata
 ,,Mourning Dove,Z. macroura
+,,Blue Ground Dove,Claravis pretiosa
+,,Long-tailed Ground Dove,Uropelia campestris
+,,Maroon-chested Ground Dove,Paraclaravis mondetoura
+,,Purple-winged Ground Dove,P. geoffroyi
+,,Bare-faced Ground Dove,Metriopelia ceciliae
+,endemic,Bare-eyed Ground Dove,M. morenoi
+,,Black-winged Ground Dove,M. melanoptera
+,,Golden-spotted Ground Dove,M. aymara
 ,,Common Ground Dove,Columbina passerina
 ,,Plain-breasted Ground Dove,C. minuta
 ,,Ruddy Ground Dove,C. talpacoti
@@ -220,14 +228,6 @@ PIGEONS,COLUMBIDAE
 ,,Picui Ground Dove,C. picui
 ,,Croaking Ground Dove,C. cruziana
 ,endemic,Blue-eyed Ground Dove,C. cyanopis
-,,Blue Ground Dove,Claravis pretiosa
-,,Maroon-chested Ground Dove,C. mondetoura
-,,Purple-winged Ground Dove,C. geoffroyi
-,,Bare-faced Ground Dove,Metriopelia ceciliae
-,endemic,Bare-eyed Ground Dove,M. morenoi
-,,Black-winged Ground Dove,M. melanoptera
-,,Golden-spotted Ground Dove,M. aymara
-,,Long-tailed Ground Dove,Uropelia campestris
 CUCKOOS,CUCULIDAE
 ,,Guira Cuckoo,Guira guira
 ,,Greater Ani,Crotophaga major
@@ -965,6 +965,7 @@ IBISES,THRESKIORNITHIDAE
 ,,Bare-faced Ibis,Phimosus infuscatus
 ,,Plumbeous Ibis,Theristicus caerulescens
 10,,Buff-necked Ibis,T. caudatus
+,,Andean Ibis,T. branickii
 ,,Black-faced Ibis,T. melanopis
 ,,Eurasian Spoonbill,Platalea leucorodia
 ,,Roseate Spoonbill,P. ajaja
@@ -1747,7 +1748,7 @@ ANTPITTAS,GRALLARIIDAE
 ,,Tawny Antpitta,G. quitensis
 30,endemic,Urrao Antpitta,G. urraoensis
 ,endemic,Brown-banded Antpitta,G. milleri
-,endemic,Rufous-faced Antpitta,G. erythrotis
+,,Rufous-faced Antpitta,G. erythrotis
 ,,Streak-chested Antpitta,Hylopezus perspicillatus
 ,,Spotted Antpitta,H. macularius
 35,endemic,Alta Floresta Antpitta,H. whittakeri
@@ -1962,25 +1963,25 @@ OVENBIRDS,FURNARIIDAE
 ,,Sharp-billed Treehunter,Heliobletus contaminatus
 ,,Slaty-winged Foliage-gleaner,Philydor fuscipenne
 ,,Rufous-rumped Foliage-gleaner,P. erythrocercum
-120,,Chestnut-winged Foliage-gleaner,P. erythropterum
-,endemic,Alagoas Foliage-gleaner,P. novaesi
+120,endemic,Alagoas Foliage-gleaner,P. novaesi
 ,,Black-capped Foliage-gleaner,P. atricapillus
-,,Buff-fronted Foliage-gleaner,P. rufum
 ,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
-125,,Montane Foliage-gleaner,Anabacerthia striaticollis
+,,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,,Scaly-throated Foliage-gleaner,A. variegaticeps
-,,Rufous-tailed Foliage-gleaner,A. ruficaudata
+125,,Rufous-tailed Foliage-gleaner,A. ruficaudata
 ,,White-browed Foliage-gleaner,A. amaurotis
 ,,Ochre-breasted Foliage-gleaner,A. lichtensteini
-130,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
+,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
 ,,Russet-mantled Foliage-gleaner,S. dimidiata
-,,White-throated Foliage-gleaner,S. roraimae
+130,,White-throated Foliage-gleaner,S. roraimae
 ,,Lineated Foliage-gleaner,S. subalaris
 ,,Rufous-necked Foliage-gleaner,S. ruficollis
-135,endemic,Guttulate Foliage-gleaner,S. guttulata
+,endemic,Guttulate Foliage-gleaner,S. guttulata
 ,,Peruvian Recurvebill,S. ucayalae
-,,Bolivian Recurvebill,S. striata
+135,,Bolivian Recurvebill,S. striata
 ,,Chestnut-winged Hookbill,Ancistrops strigilatus
+,,Buff-fronted Foliage-gleaner,Dendroma rufa
+,,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,,Chestnut-capped Foliage-gleaner,Clibanornis rectirostris
 140,,Canebrake Groundcreeper,C. dendrocolaptoides
 ,,Henna-hooded Foliage-gleaner,C. erythrocephalus

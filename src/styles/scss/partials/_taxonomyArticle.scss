@@ -40,7 +40,8 @@
     line-height: 1.5rem;
 }
 
-#taxonomyArticle a.linkHighlight {
+// #taxonomyArticle a.linkHighlight {
+.linkHighlight {
     padding : 0 0.23rem 0.077rem 0.31rem;
     border-radius: 0.15rem;
     border : solid 0.077rem transparent;
@@ -49,7 +50,11 @@
     transition: border 850ms;
 }
 
-#taxonomyArticle a.linkHighlight:hover, #taxonomyArticle a.linkHighlight:focus {
+.linkHighlight:hover, .linkHighlight:focus {
     outline: none;
     border: solid 0.077rem $panelFlyoutFontColor;
+}
+
+.linkHighlight:visited {
+    background-color: $greenHighlightColor;
 }

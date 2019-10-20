@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // onKeyUp listener for tabbing and entering
   numDaysButton.addEventListener('keyup', setNumDays);
 
-  numDaysButton.children.item(11).classList.add("highlight");
-  gNumDays = 10;  
+  numDaysButton.children.item(9).classList.add("highlight");
+  gNumDays = 8;  
   
   sampleTable = document.getElementById("sampleTable");
   sampleTable.classList.add("numDays" + String(gNumDays));
 
-  previousNumDaysClass = "numDays10";
+  previousNumDaysClass = "numDays8";
 
   pdfButton = document.getElementById("pdfButton");
   pdfButton.addEventListener("click", openChecklistPage);
@@ -242,11 +242,9 @@ function setCountry(evt) {
 
   evt.target.classList.add("highlight");
 
-  if (!currentCountry) {
-
-    // TODO : put code for scrolling page here
-    map.getElementsByClassName("drawing")[0].classList.add("active");
-  }
+  // if (!currentCountry) {
+  //   map.getElementsByClassName("drawing")[0].classList.add("active");
+  // }
 
   toggleCountryMenuLayer();
 
@@ -267,7 +265,9 @@ function setCountry(evt) {
 
 function setChecklistCountryAuthors(country) {
 
-  checklistFlyoutText.innerHTML = "Make a checklist for " + country;
+  if (country === "Falklands")
+    checklistFlyoutText.innerHTML = "Make a checklist for the " + country + " Islands";
+  else checklistFlyoutText.innerHTML = "Make a checklist for " + country;
 
   if (country === "French Guiana") selectedCountryFill("FrenchGuiana");
   else if (country !== "South America") selectedCountryFill(country);

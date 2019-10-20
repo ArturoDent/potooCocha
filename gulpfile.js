@@ -274,6 +274,7 @@ function copyFLAGS() {
 const buildGlobs = {
   occurrences: '../BuildSACC/occurrences/occurrences.txt',
   countries: '../BuildSACC/Countries/*.*',
+  // jsons: '../BuildSACC/JSON/*.*'
   // numLists: '../BuildSACC/numLists/numList.js'
 };
 
@@ -289,6 +290,13 @@ function getBuildSACC_Countries() {
     .pipe(newer("./Countries"))
     .pipe(print())
     .pipe(gulp.dest("./Countries"));
+}
+
+function getBuildSACC_JSON() {
+  return gulp.src(buildGlobs.jsons)
+    .pipe(newer("./"))
+    .pipe(print())
+    .pipe(gulp.dest("./"));
 }
 
 // function getBuildSACC_NumLists() {
@@ -366,13 +374,13 @@ exports.watch = gulp.series(watch);
 
 exports.production = gulp.series(moveJStoTemp, processJS);
 
-// TODO : (include php and logFileRequests.txt)
+// TODO : (include php and logFileRequests.txt) movePrintCSStoTemp? not used anymore - keep as backup?
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
                             copyPHP, copySVG, copyFLAGS, copyCitations, copyAuthors,
                             copyOccurrences, copyCountries, movePrintCSStoTemp);
 
 exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries);
-// exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_NumLists);    
+// exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON(, getBuildSACC_NumLists);    
 
 exports.deploy_E = gulp.series(deployExperimental);
 exports.deploy_P = gulp.series(deployPotoococha);

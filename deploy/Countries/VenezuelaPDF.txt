@@ -22,7 +22,7 @@ DUCKS,ANATIDAE
 ,,Black-bellied Whistling-Duck,D. autumnalis
 ,,Orinoco Goose,Oressochen jubatus
 5,,Muscovy Duck,Cairina moschata
-,,Comb Duck,Sarkidiornis melanotos
+,,American Comb-Duck,Sarkidiornis sylvicola
 ,,Brazilian Teal,Amazonetta brasiliensis
 ,,Torrent Duck,Merganetta armata
 ,,Northern Shoveler,Spatula clypeata
@@ -80,12 +80,12 @@ PIGEONS,COLUMBIDAE
 ,,Lined Quail-Dove,Zentrygon linearis
 15,,White-winged Dove,Zenaida asiatica
 ,,Eared Dove,Z. auriculata
-,,Common Ground Dove,Columbina passerina
-,,Plain-breasted Ground Dove,C. minuta
-,,Ruddy Ground Dove,C. talpacoti
-20,,Scaled Dove,C. squammata
 ,,Blue Ground Dove,Claravis pretiosa
-,,Maroon-chested Ground Dove,C. mondetoura
+,,Maroon-chested Ground Dove,Paraclaravis mondetoura
+,,Common Ground Dove,Columbina passerina
+20,,Plain-breasted Ground Dove,C. minuta
+,,Ruddy Ground Dove,C. talpacoti
+,,Scaled Dove,C. squammata
 CUCKOOS,CUCULIDAE
 ,,Greater Ani,Crotophaga major
 ,,Smooth-billed Ani,C. ani
@@ -823,14 +823,14 @@ OVENBIRDS,FURNARIIDAE
 ,,Pale-legged Hornero,Furnarius leucopus
 ,,Sharp-tailed Streamcreeper,Lochmias nematura
 ,,Chestnut-winged Cinclodes,Cinclodes albidiventris
-,,Chestnut-winged Foliage-gleaner,Philydor erythropterum
-45,,Buff-fronted Foliage-gleaner,P. rufum
-,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
-,,Montane Foliage-gleaner,Anabacerthia striaticollis
+,,Cinnamon-rumped Foliage-gleaner,Philydor pyrrhodes
+45,,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,,Rufous-tailed Foliage-gleaner,A. ruficaudata
 ,,White-throated Foliage-gleaner,Syndactyla roraimae
-50,,Lineated Foliage-gleaner,S. subalaris
+,,Lineated Foliage-gleaner,S. subalaris
 ,endemic,Guttulate Foliage-gleaner,S. guttulata
+50,,Buff-fronted Foliage-gleaner,Dendroma rufa
+,,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,,Ruddy Foliage-gleaner,Clibanornis rubiginosus
 ,,Flammulated Treehunter,Thripadectes flammulatus
 ,,Striped Treehunter,T. holostictus
@@ -992,48 +992,49 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Smoky Bush-Tyrant,M. fumigatus
 ,,Pied Water-Tyrant,Fluvicola pica
 ,,White-headed Marsh Tyrant,Arundinicola leucocephala
-,,Yellow-bellied Chat-Tyrant,Ochthoeca diadema
-125,,Slaty-backed Chat-Tyrant,O. cinnamomeiventris
+,,Crowned Chat-Tyrant,Ochthoeca frontalis
+125,,Yellow-bellied Chat-Tyrant,O. diadema
+,,Slaty-backed Chat-Tyrant,O. cinnamomeiventris
 ,,Rufous-breasted Chat-Tyrant,O. rufipectoralis
 ,,Brown-backed Chat-Tyrant,O. fumicolor
 ,,Long-tailed Tyrant,Colonia colonus
-,,Cattle Tyrant,Machetornis rixosa
-130,,Piratic Flycatcher,Legatus leucophaius
+130,,Cattle Tyrant,Machetornis rixosa
+,,Piratic Flycatcher,Legatus leucophaius
 ,,Rusty-margined Flycatcher,Myiozetetes cayanensis
 ,,Social Flycatcher,M. similis
 ,,Gray-capped Flycatcher,M. granadensis
-,,Dusky-chested Flycatcher,M. luteiventris
-135,,White-bearded Flycatcher,Phelpsia inornata
+135,,Dusky-chested Flycatcher,M. luteiventris
+,,White-bearded Flycatcher,Phelpsia inornata
 ,,Great Kiskadee,Pitangus sulphuratus
 ,,Lesser Kiskadee,P. lictor
 ,,Yellow-throated Flycatcher,Conopias parvus
-,,Three-striped Flycatcher,C. trivirgatus
-140,,Lemon-browed Flycatcher,C. cinchoneti
+140,,Three-striped Flycatcher,C. trivirgatus
+,,Lemon-browed Flycatcher,C. cinchoneti
 ,,Golden-crowned Flycatcher,Myiodynastes chrysocephalus
 ,,Sulphur-bellied Flycatcher,M. luteiventris
 ,,Streaked Flycatcher,M. maculatus
-,,Boat-billed Flycatcher,Megarynchus pitangua
-145,,Sulphury Flycatcher,Tyrannopsis sulphurea
+145,,Boat-billed Flycatcher,Megarynchus pitangua
+,,Sulphury Flycatcher,Tyrannopsis sulphurea
 ,,Variegated Flycatcher,Empidonomus varius
 ,,Crowned Slaty Flycatcher,E. aurantioatrocristatus
 ,,White-throated Kingbird,Tyrannus albogularis
-,,Tropical Kingbird,T. melancholicus
-150,,Fork-tailed Flycatcher,T. savana
+150,,Tropical Kingbird,T. melancholicus
+,,Fork-tailed Flycatcher,T. savana
 ,,Eastern Kingbird,T. tyrannus
 ,,Gray Kingbird,T. dominicensis
 ,,Grayish Mourner,Rhytipterna simplex
-,,Pale-bellied Mourner,R. immunda
-155,,White-rumped Sirystes,Sirystes albocinereus
+155,,Pale-bellied Mourner,R. immunda
+,,White-rumped Sirystes,Sirystes albocinereus
 ,,Dusky-capped Flycatcher,Myiarchus tuberculifer
 ,,Swainson's Flycatcher,M. swainsoni
 ,,Venezuelan Flycatcher,M. venezuelensis
-,,Panama Flycatcher,M. panamensis
-160,,Short-crested Flycatcher,M. ferox
+160,,Panama Flycatcher,M. panamensis
+,,Short-crested Flycatcher,M. ferox
 ,,Pale-edged Flycatcher,M. cephalotes
 ,,Great Crested Flycatcher,M. crinitus
 ,,Brown-crested Flycatcher,M. tyrannulus
-,,Large-headed Flatbill,Ramphotrigon megacephalum
-165,,Rufous-tailed Flatbill,R. ruficauda
+165,,Large-headed Flatbill,Ramphotrigon megacephalum
+,,Rufous-tailed Flatbill,R. ruficauda
 ,,Rufous-tailed Attila,Attila phoenicurus
 ,,Cinnamon Attila,A. cinnamomeus
 ,,Citron-bellied Attila,A. citriniventris
@@ -1474,27 +1475,28 @@ TANAGERS,THRAUPIDAE
 ,,Scarlet-bellied Mountain-Tanager,A. igniventris
 ,,Blue-winged Mountain-Tanager,A. somptuosus
 ,,Hooded Mountain-Tanager,Buthraupis montana
-100,,Blue-capped Tanager,Sporathraupis cyanocephala
+100,,Masked Mountain-Tanager,Tephrophilus wetmorei
+,,Blue-capped Tanager,Sporathraupis cyanocephala
 ,,Black-chested Mountain-Tanager,Cnemathraupis eximia
 ,,Black-headed Tanager,Stilpnia cyanoptera
 ,,Black-capped Tanager,S. heinei
-,,Burnished-buff Tanager,S. cayana
-105,,Scrub Tanager,S. vitriolina
+105,,Burnished-buff Tanager,S. cayana
+,,Scrub Tanager,S. vitriolina
 ,,Masked Tanager,S. nigrocincta
 ,,Blue-necked Tanager,S. cyanicollis
 ,,Blue-and-black Tanager,Tangara vassorii
-,,Beryl-spangled Tanager,T. nigroviridis
-110,,Turquoise Tanager,T. mexicana
+110,,Beryl-spangled Tanager,T. nigroviridis
+,,Turquoise Tanager,T. mexicana
 ,,Paradise Tanager,T. chilensis
 ,,Opal-rumped Tanager,T. velia
 ,,Bay-headed Tanager,T. gyrola
-,endemic,Rufous-cheeked Tanager,T. rufigenis
-115,,Saffron-crowned Tanager,T. xanthocephala
+115,endemic,Rufous-cheeked Tanager,T. rufigenis
+,,Saffron-crowned Tanager,T. xanthocephala
 ,,Flame-faced Tanager,T. parzudakii
 ,,Green-and-gold Tanager,T. schrankii
 ,,Golden Tanager,T. arthus
-,,Blue-gray Tanager,Thraupis episcopus
-120,,Glaucous Tanager,T. glaucocolpa
+120,,Blue-gray Tanager,Thraupis episcopus
+,,Glaucous Tanager,T. glaucocolpa
 ,,Palm Tanager,T. palmarum
 ,,Dotted Tanager,Ixothraupis varia
 ,,Speckled Tanager,I. guttata

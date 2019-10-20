@@ -61,15 +61,15 @@
 #country-menu a:hover, #country-menu a:focus  {
   outline: none;
   background-color:  $titleBannerColor;
-  color: black;
-  text-shadow : 0 0.077rem rgba(255,255,255,0.2);
+  // color: black;
+  // text-shadow : 0 0.077rem rgba(255,255,255,0.2);
 }
 
 #country-menu a.highlight   {
   background-color:  $titleBannerColor;
-  color: black;
-  text-shadow : 0 0.077rem rgba(255,255,255,0.2);
-  transition: all 450ms ease-out;
+  // color: black;
+  // text-shadow : 0 0.077rem rgba(255,255,255,0.2);
+  // transition: all 450ms ease-out;
 }
 
 #country-menu a.highlight:after {

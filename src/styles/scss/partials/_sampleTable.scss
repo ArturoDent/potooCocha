@@ -97,28 +97,6 @@
 #sampleTable th:not(:first-child) {
   background-color: transparent; }
 
-// .flashDays {
-  // animation-name: flashDays;
-  // animation-duration: 1s;
-  // so that applied styles in the animation are retained after the animation runs
-  // animation-fill-mode: both;
-  // animation-timing-function: ease-out;
-  // animation-delay: 0.2s;
-// }
-
-// @keyframes flashDays {
-  // 0% {
-    // background-color: black;
-  // }
-  // 80% {
-    // background-color: $genericButtonColor;
-    // color: white;
-  // }
-  // 100% {
-    // background-color: rgba(200, 200, 200, 0.5);
-  // }
-// }
-
 #sampleTable td.familyHidden { border: solid 0.077rem transparent; }
 
 #sampleTable td.familyHidden.show { border-bottom: solid 0.077rem #000; }
@@ -181,7 +159,6 @@
 
   font-size: 0.6rem;
   text-shadow: none;
-
   background-color: $sampleTableBGColor;
   }
 
@@ -215,7 +192,6 @@
 
   font-size: 0.6rem;
   text-shadow: none;
-
   background-color: $sampleTableBGColor;
 }
 
@@ -226,70 +202,30 @@
   width: 0;
   border: 0.077rem solid transparent; }
 
-.numDays1 th { width: 4.62rem; }
-
-.numDays2 th { width: 4.15rem; }
-
-.numDays3 th { width: 3.85rem; }
-
-.numDays4 th { width: 3.38rem; }
-
-.numDays5 th { width: 3.08rem; }
-
-.numDays6 th { width: 2.77rem; }
-
-.numDays7 th { width: 2.62rem; }
-
-.numDays8 th { width: 2.46rem; }
-
-.numDays9 th { width: 2.31rem; }
-
+.numDays1  th { width: 4.62rem; }
+.numDays2  th { width: 4.15rem; }
+.numDays3  th { width: 3.85rem; }
+.numDays4  th { width: 3.38rem; }
+.numDays5  th { width: 3.08rem; }
+.numDays6  th { width: 2.77rem; }
+.numDays7  th { width: 2.62rem; }
+.numDays8  th { width: 2.46rem; }
+.numDays9  th { width: 2.31rem; }
 .numDays10 th { width: 2.15rem; }
-
-.numDays11 th { width: 2rem; }
-
-.numDays12 th { width: 1.85rem;
-
-    // animation-name: days;
-    // animation-duration: 350ms;
-    // // so that applied styles in the animation are retained after the animation runs
-    // animation-fill-mode: both;
-    // animation-timing-function: ease-out;
-    // animation-delay: 0.2s;
-  }
-
-  @keyframes days {
-    0% {
-      // opacity: 0;
-      width: 0;
-    }
-    100% {
-      // opacity: 1;
-      width: inherit;
-    }
-  }
+.numDays11 th { width: 2rem;    }
+.numDays12 th { width: 1.85rem; }
 
 .numDays11 th:nth-child(n+13) { display: none; }
-
 .numDays10 th:nth-child(n+12) { display: none; }
-
-.numDays9 th:nth-child(n+11) { display: none; }
-
-.numDays8 th:nth-child(n+10) { display: none; }
-
-.numDays7 th:nth-child(n+9) { display: none; }
-
-.numDays6 th:nth-child(n+8) { display: none; }
-
-.numDays5 th:nth-child(n+7) { display: none; }
-
-.numDays4 th:nth-child(n+6) { display: none; }
-
-.numDays3 th:nth-child(n+5) { display: none; }
-
-.numDays2 th:nth-child(n+4) { display: none; }
-
-.numDays1 th:nth-child(n+3) { display: none; }
+.numDays9  th:nth-child(n+11) { display: none; }
+.numDays8  th:nth-child(n+10) { display: none; }
+.numDays7  th:nth-child(n+9)  { display: none; }
+.numDays6  th:nth-child(n+8)  { display: none; }
+.numDays5  th:nth-child(n+7)  { display: none; }
+.numDays4  th:nth-child(n+6)  { display: none; }
+.numDays3  th:nth-child(n+5)  { display: none; }
+.numDays2  th:nth-child(n+4)  { display: none; }
+.numDays1  th:nth-child(n+3)  { display: none; }
 
 .numDays0 th {
   display: none;
@@ -297,28 +233,17 @@
   border: 0.077rem solid transparent; }
 
 .numDays11 td:nth-child(n+15) { display: none; }
-
 .numDays10 td:nth-child(n+14) { display: none; }
-
-.numDays9 td:nth-child(n+13) { display: none; }
-
-.numDays8 td:nth-child(n+12) { display: none; }
-
-.numDays7 td:nth-child(n+11) { display: none; }
-
-.numDays6 td:nth-child(n+10) { display: none; }
-
-.numDays5 td:nth-child(n+9) { display: none; }
-
-.numDays4 td:nth-child(n+8) { display: none; }
-
-.numDays3 td:nth-child(n+7) { display: none; }
-
-.numDays2 td:nth-child(n+6) { display: none; }
-
-.numDays1 td:nth-child(n+5) { display: none; }
-
-.numDays0 td:nth-child(n+4) { display: none; }
+.numDays9  td:nth-child(n+13) { display: none; }
+.numDays8  td:nth-child(n+12) { display: none; }
+.numDays7  td:nth-child(n+11) { display: none; }
+.numDays6  td:nth-child(n+10) { display: none; }
+.numDays5  td:nth-child(n+9)  { display: none; }
+.numDays4  td:nth-child(n+8)  { display: none; }
+.numDays3  td:nth-child(n+7)  { display: none; }
+.numDays2  td:nth-child(n+6)  { display: none; }
+.numDays1  td:nth-child(n+5)  { display: none; }
+.numDays0  td:nth-child(n+4)  { display: none; }
 
 #sampleTable th:first-child {
   border: solid 0.077rem transparent;

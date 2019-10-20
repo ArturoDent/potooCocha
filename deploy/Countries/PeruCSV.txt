@@ -42,7 +42,7 @@
 ,Orinoco Goose,Oressochen jubatus
 ,Andean Goose,O. melanopterus
 ,Muscovy Duck,Cairina moschata
-,Comb Duck,Sarkidiornis melanotos
+,American Comb-Duck,Sarkidiornis sylvicola
 ,Brazilian Teal,Amazonetta brasiliensis
 ,Torrent Duck,Merganetta armata
 ,Crested Duck,Lophonetta specularioides
@@ -101,6 +101,7 @@ E,Junin Grebe,P. taczanowskii
 ,PIGEONS,COLUMBIDAE
 ,Rock Pigeon,Columba livia
 ,Scaled Pigeon,Patagioenas speciosa
+,Picazuro Pigeon,P. picazuro
 ,Spot-winged Pigeon,P. maculosa
 ,Band-tailed Pigeon,P. fasciata
 ,Pale-vented Pigeon,P. cayennensis
@@ -117,16 +118,16 @@ E,Junin Grebe,P. taczanowskii
 ,White-throated Quail-Dove,Zentrygon frenata
 ,West Peruvian Dove,Zenaida meloda
 ,Eared Dove,Z. auriculata
+,Blue Ground Dove,Claravis pretiosa
+,Maroon-chested Ground Dove,Paraclaravis mondetoura
+,Bare-faced Ground Dove,Metriopelia ceciliae
+,Black-winged Ground Dove,M. melanoptera
+,Golden-spotted Ground Dove,M. aymara
 ,Plain-breasted Ground Dove,Columbina minuta
 ,Ruddy Ground Dove,C. talpacoti
 ,Ecuadorian Ground Dove,C. buckleyi
 ,Picui Ground Dove,C. picui
 ,Croaking Ground Dove,C. cruziana
-,Blue Ground Dove,Claravis pretiosa
-,Maroon-chested Ground Dove,C. mondetoura
-,Bare-faced Ground Dove,Metriopelia ceciliae
-,Black-winged Ground Dove,M. melanoptera
-,Golden-spotted Ground Dove,M. aymara
 
 ,CUCKOOS,CUCULIDAE
 ,Greater Ani,Crotophaga major
@@ -597,10 +598,12 @@ E,Green-and-white Hummingbird,"A." viridicauda
 
 ,IBISES,THRESKIORNITHIDAE
 ,White Ibis,Eudocimus albus
+,Scarlet Ibis,E. ruber
 ,Puna Ibis,Plegadis ridgwayi
 ,Green Ibis,Mesembrinibis cayennensis
 ,Bare-faced Ibis,Phimosus infuscatus
 ,Buff-necked Ibis,Theristicus caudatus
+,Andean Ibis,T. branickii
 ,Black-faced Ibis,T. melanopis
 ,Roseate Spoonbill,Platalea ajaja
 
@@ -781,6 +784,7 @@ E,Scarlet-banded Barbet,C. wallacei
 ,Toco Toucan,Ramphastos toco
 ,Yellow-throated Toucan,R. ambiguus
 ,White-throated Toucan,R. tucanus
+,Choco Toucan,R. brevis
 ,Channel-billed Toucan,R. vitellinus
 ,Emerald Toucanet,Aulacorhynchus prasinus
 ,Chestnut-tipped Toucanet,A. derbianus
@@ -1060,6 +1064,7 @@ E,Red-and-white Antpitta,G. erythroleuca
 ,Rufous Antpitta,G. rufula
 E,Chestnut Antpitta,G. blakei
 ,Tawny Antpitta,G. quitensis
+,Rufous-faced Antpitta,G. erythrotis
 ,Spotted Antpitta,Hylopezus macularius
 ,White-lored Antpitta,H. fulviventris
 ,Amazonian Antpitta,H. berlepschi
@@ -1166,8 +1171,6 @@ E,White-bellied Cinclodes,C. palliatus
 E,Surf Cinclodes,C. taczanowskii
 ,Dusky-cheeked Foliage-gleaner,Anabazenops dorsalis
 ,Rufous-rumped Foliage-gleaner,Philydor erythrocercum
-,Chestnut-winged Foliage-gleaner,P. erythropterum
-,Buff-fronted Foliage-gleaner,P. rufum
 ,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
 ,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,Rufous-tailed Foliage-gleaner,A. ruficaudata
@@ -1177,6 +1180,8 @@ E,Surf Cinclodes,C. taczanowskii
 ,Peruvian Recurvebill,S. ucayalae
 ,Bolivian Recurvebill,S. striata
 ,Chestnut-winged Hookbill,Ancistrops strigilatus
+,Buff-fronted Foliage-gleaner,Dendroma rufa
+,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,Henna-hooded Foliage-gleaner,Clibanornis erythrocephalus
 ,Ruddy Foliage-gleaner,C. rubiginosus
 ,Flammulated Treehunter,Thripadectes flammulatus
@@ -1699,7 +1704,8 @@ E,Iquitos Gnatcatcher,P. clementsi
 ,White-necked Thrush,T. albicollis
 
 ,MOCKINGBIRDS,MIMIDAE
-,Long-tailed Mockingbird,Mimus longicaudatus
+,Tropical Mockingbird,Mimus gilvus
+,Long-tailed Mockingbird,M. longicaudatus
 ,White-banded Mockingbird,M. triurus
 ,Brown-backed Mockingbird,M. dorsalis
 
@@ -1982,7 +1988,8 @@ E,Little Inca-Finch,I. watkinsi
 ,Bananaquit,Coereba flaveola
 ,Dull-colored Grassquit,Asemospiza obscura
 ,Orange-eared Tanager,Chlorochrysa calliparaea
-,Red-capped Cardinal,Paroaria gularis
+,Red-crested Cardinal,Paroaria coronata
+,Red-capped Cardinal,P. gularis
 ,Black-faced Tanager,Schistochlamys melanopis
 ,Magpie Tanager,Cissopis leverianus
 ,Vermilion Tanager,Calochaetes coccineus

@@ -46,8 +46,8 @@ body::after {
 }
 
 a   {  color  :  inherit;   text-decoration  :  none;  }
-
 a:link  {  border-bottom  :  solid 0.077rem $panelFlyoutFontColor;  }
+a:visited {  background-color: #4db088;  }
 
 #mainContent {
     position : relative;
@@ -221,6 +221,10 @@ footer a:hover, footer a:focus {
 
 #mailLink a:hover, #mailLink a:focus {
     outline: none;
+}
+
+#mailLink a:visited {   // doesn't seem to do anything
+    background-color: #4db088;
 }
 
 #mailLink:hover .icon-paper-plane, #mailLink:focus-within .icon-paper-plane {

@@ -66,7 +66,7 @@ E,Chilean Tinamou,N. perdicaria
 ,Ashy-headed Goose,C. poliocephala
 ,Ruddy-headed Goose,C. rubidiceps
 ,Muscovy Duck,Cairina moschata
-,Comb Duck,Sarkidiornis melanotos
+,American Comb-Duck,Sarkidiornis sylvicola
 ,Ringed Teal,Callonetta leucophrys
 ,Brazilian Teal,Amazonetta brasiliensis
 ,Torrent Duck,Merganetta armata
@@ -222,6 +222,14 @@ E,Tolima Dove,L. conoveri
 E,Galapagos Dove,Z. galapagoensis
 ,Eared Dove,Z. auriculata
 ,Mourning Dove,Z. macroura
+,Blue Ground Dove,Claravis pretiosa
+,Long-tailed Ground Dove,Uropelia campestris
+,Maroon-chested Ground Dove,Paraclaravis mondetoura
+,Purple-winged Ground Dove,P. geoffroyi
+,Bare-faced Ground Dove,Metriopelia ceciliae
+E,Bare-eyed Ground Dove,M. morenoi
+,Black-winged Ground Dove,M. melanoptera
+,Golden-spotted Ground Dove,M. aymara
 ,Common Ground Dove,Columbina passerina
 ,Plain-breasted Ground Dove,C. minuta
 ,Ruddy Ground Dove,C. talpacoti
@@ -230,14 +238,6 @@ E,Galapagos Dove,Z. galapagoensis
 ,Picui Ground Dove,C. picui
 ,Croaking Ground Dove,C. cruziana
 E,Blue-eyed Ground Dove,C. cyanopis
-,Blue Ground Dove,Claravis pretiosa
-,Maroon-chested Ground Dove,C. mondetoura
-,Purple-winged Ground Dove,C. geoffroyi
-,Bare-faced Ground Dove,Metriopelia ceciliae
-E,Bare-eyed Ground Dove,M. morenoi
-,Black-winged Ground Dove,M. melanoptera
-,Golden-spotted Ground Dove,M. aymara
-,Long-tailed Ground Dove,Uropelia campestris
 
 ,CUCKOOS,CUCULIDAE
 ,Guira Cuckoo,Guira guira
@@ -1014,6 +1014,7 @@ E,Flightless Cormorant,P. harrisi
 ,Bare-faced Ibis,Phimosus infuscatus
 ,Plumbeous Ibis,Theristicus caerulescens
 ,Buff-necked Ibis,T. caudatus
+,Andean Ibis,T. branickii
 ,Black-faced Ibis,T. melanopis
 ,Eurasian Spoonbill,Platalea leucorodia
 ,Roseate Spoonbill,P. ajaja
@@ -1819,7 +1820,7 @@ E,Chestnut Antpitta,G. blakei
 ,Tawny Antpitta,G. quitensis
 E,Urrao Antpitta,G. urraoensis
 E,Brown-banded Antpitta,G. milleri
-E,Rufous-faced Antpitta,G. erythrotis
+,Rufous-faced Antpitta,G. erythrotis
 ,Streak-chested Antpitta,Hylopezus perspicillatus
 ,Spotted Antpitta,H. macularius
 E,Alta Floresta Antpitta,H. whittakeri
@@ -2037,10 +2038,8 @@ E,Pale-browed Treehunter,Cichlocolaptes leucophrus
 ,Sharp-billed Treehunter,Heliobletus contaminatus
 ,Slaty-winged Foliage-gleaner,Philydor fuscipenne
 ,Rufous-rumped Foliage-gleaner,P. erythrocercum
-,Chestnut-winged Foliage-gleaner,P. erythropterum
 E,Alagoas Foliage-gleaner,P. novaesi
 ,Black-capped Foliage-gleaner,P. atricapillus
-,Buff-fronted Foliage-gleaner,P. rufum
 ,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
 ,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,Scaly-throated Foliage-gleaner,A. variegaticeps
@@ -2056,6 +2055,8 @@ E,Guttulate Foliage-gleaner,S. guttulata
 ,Peruvian Recurvebill,S. ucayalae
 ,Bolivian Recurvebill,S. striata
 ,Chestnut-winged Hookbill,Ancistrops strigilatus
+,Buff-fronted Foliage-gleaner,Dendroma rufa
+,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,Chestnut-capped Foliage-gleaner,Clibanornis rectirostris
 ,Canebrake Groundcreeper,C. dendrocolaptoides
 ,Henna-hooded Foliage-gleaner,C. erythrocephalus
