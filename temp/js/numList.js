@@ -3,10 +3,10 @@
 
 var numFamiliesList = {
 
-  "Argentina": 87, "Aruba": 52, "Bolivia": 78, "Brazil": 94, "Chile": 68,
-  "Colombia": 93, "Curacao": 51, "Ecuador": 93, "French Guiana": 83,
-  "Guyana": 80, "Paraguay": 72, "Peru": 89, "Suriname": 81, "Trinidad": 71,
-  "Uruguay": 73, "Venezuela": 90, "Bonaire": 48, "Falklands": 49, "South America": 105
+  "Argentina": 87, "Aruba": 52, "Bolivia": 79, "Brazil": 95, "Chile": 68,
+  "Colombia": 94, "Curacao": 51, "Ecuador": 94, "French Guiana": 84,
+  "Guyana": 81, "Paraguay": 72, "Peru": 90, "Suriname": 82, "Trinidad": 71,
+  "Uruguay": 73, "Venezuela": 91, "Bonaire": 48, "Falklands": 49, "South America": 106
 };
 
 var numSpeciesList = {
