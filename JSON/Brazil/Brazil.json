@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "October 15, 2019",
+	"version": "October 28, 2019",
 	"birds": {
 		"families": [
 			{
@@ -9735,1732 +9735,285 @@
 				]
 			},
 			{
-				"Family": "TYRANNIDAE",
-				"FamilyCommon": "TYRANT FLYCATCHERS",
+				"Family": "PIPRIDAE",
+				"FamilyCommon": "MANAKINS",
 				"genera": [
 					{
-						"Genus": "Phyllomyias",
+						"Genus": "Tyranneutes",
 						"spp": [
 							{
-								"species": "burmeisteri",
+								"species": "stolzmanni",
 								"index": 2081,
-								"name": "Rough-legged Tyrannulet",
+								"name": "Dwarf Tyrant-Manakin",
 								"BR": "X"
 							},
 							{
 								"species": "virescens",
 								"index": 2082,
-								"name": "Greenish Tyrannulet",
+								"name": "Tiny Tyrant-Manakin",
 								"BR": "X"
-							},
+							}
+						]
+					},
+					{
+						"Genus": "Neopelma",
+						"spp": [
 							{
-								"species": "reiseri",
+								"species": "pallescens",
 								"index": 2083,
-								"name": "Reiser's Tyrannulet",
+								"name": "Pale-bellied Tyrant-Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "fasciatus",
+								"species": "chrysocephalum",
+								"index": 2084,
+								"name": "Saffron-crested Tyrant-Manakin",
+								"BR": "X"
+							},
+							{
+								"species": "aurifrons",
+								"index": 2085,
+								"name": "Wied's Tyrant-Manakin",
+								"BR": "X(e)"
+							},
+							{
+								"species": "chrysolophum",
+								"index": 2086,
+								"name": "Serra do Mar Tyrant-Manakin",
+								"BR": "X(e)"
+							},
+							{
+								"species": "sulphureiventer",
 								"index": 2087,
-								"name": "Planalto Tyrannulet",
+								"name": "Sulphur-bellied Tyrant-Manakin",
 								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Antilophia",
+						"spp": [
+							{
+								"species": "bokermanni",
+								"index": 2090,
+								"name": "Araripe Manakin",
+								"BR": "X(e)"
 							},
 							{
-								"species": "griseiceps",
-								"index": 2088,
-								"name": "Sooty-headed Tyrannulet",
+								"species": "galeata",
+								"index": 2091,
+								"name": "Helmeted Manakin",
 								"BR": "X"
-							},
+							}
+						]
+					},
+					{
+						"Genus": "Chiroxiphia",
+						"spp": [
 							{
-								"species": "griseocapilla",
+								"species": "pareola",
 								"index": 2093,
-								"name": "Gray-capped Tyrannulet",
-								"BR": "X(e)"
-							}
-						]
-					},
-					{
-						"Genus": "Tyrannulus",
-						"spp": [
-							{
-								"species": "elatus",
-								"index": 2094,
-								"name": "Yellow-crowned Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiopagis",
-						"spp": [
-							{
-								"species": "gaimardii",
-								"index": 2095,
-								"name": "Forest Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "caniceps",
-								"index": 2096,
-								"name": "Gray Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "flavivertex",
-								"index": 2099,
-								"name": "Yellow-crowned Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "viridicata",
-								"index": 2100,
-								"name": "Greenish Elaenia",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Elaenia",
-						"spp": [
-							{
-								"species": "flavogaster",
-								"index": 2101,
-								"name": "Yellow-bellied Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "spectabilis",
-								"index": 2103,
-								"name": "Large Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "ridleyana",
-								"index": 2104,
-								"name": "Noronha Elaenia",
-								"BR": "X(e)"
-							},
-							{
-								"species": "albiceps",
-								"index": 2105,
-								"name": "White-crested Elaenia",
-								"BR": "NB"
-							},
-							{
-								"species": "parvirostris",
-								"index": 2106,
-								"name": "Small-billed Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "mesoleuca",
-								"index": 2107,
-								"name": "Olivaceous Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "pelzelni",
-								"index": 2110,
-								"name": "Brownish Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "cristata",
-								"index": 2111,
-								"name": "Plain-crested Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "chiriquensis",
-								"index": 2112,
-								"name": "Lesser Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "ruficeps",
-								"index": 2114,
-								"name": "Rufous-crowned Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "olivina",
-								"index": 2116,
-								"name": "Tepui Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "dayi",
-								"index": 2118,
-								"name": "Great Elaenia",
-								"BR": "X"
-							},
-							{
-								"species": "sordida",
-								"index": 2119,
-								"name": "Small-headed Elaenia",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Ornithion",
-						"spp": [
-							{
-								"species": "inerme",
-								"index": 2122,
-								"name": "White-lored Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Camptostoma",
-						"spp": [
-							{
-								"species": "obsoletum",
-								"index": 2123,
-								"name": "Southern Beardless-Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Suiriri",
-						"spp": [
-							{
-								"species": "suiriri",
-								"index": 2124,
-								"name": "Suiriri Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "affinis",
-								"index": 2125,
-								"name": "Chapada Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Mecocerculus",
-						"spp": [
-							{
-								"species": "leucophrys",
-								"index": 2129,
-								"name": "White-throated Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Serpophaga",
-						"spp": [
-							{
-								"species": "hypoleuca",
-								"index": 2141,
-								"name": "River Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "nigricans",
-								"index": 2142,
-								"name": "Sooty Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "subcristata",
-								"index": 2143,
-								"name": "White-crested Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "munda",
-								"index": 2144,
-								"name": "White-bellied Tyrannulet",
-								"BR": "NB"
-							},
-							{
-								"species": "griseicapilla",
-								"index": 2145,
-								"name": "Straneck's Tyrannulet",
-								"BR": "NB"
-							}
-						]
-					},
-					{
-						"Genus": "Phaeomyias",
-						"spp": [
-							{
-								"species": "murina",
-								"index": 2146,
-								"name": "Mouse-colored Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Capsiempis",
-						"spp": [
-							{
-								"species": "flaveola",
-								"index": 2147,
-								"name": "Yellow Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Polystictus",
-						"spp": [
-							{
-								"species": "pectoralis",
-								"index": 2148,
-								"name": "Bearded Tachuri",
-								"BR": "X"
-							},
-							{
-								"species": "superciliaris",
-								"index": 2149,
-								"name": "Gray-backed Tachuri",
-								"BR": "X(e)"
-							}
-						]
-					},
-					{
-						"Genus": "Pseudocolopteryx",
-						"spp": [
-							{
-								"species": "sclateri",
-								"index": 2150,
-								"name": "Crested Doradito",
-								"BR": "X"
-							},
-							{
-								"species": "acutipennis",
-								"index": 2151,
-								"name": "Subtropical Doradito",
-								"BR": "NB"
-							},
-							{
-								"species": "dinelliana",
-								"index": 2152,
-								"name": "Dinelli's Doradito",
-								"BR": "H"
-							},
-							{
-								"species": "flaviventris",
-								"index": 2153,
-								"name": "Warbling Doradito",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Corythopis",
-						"spp": [
-							{
-								"species": "torquatus",
-								"index": 2158,
-								"name": "Ringed Antpipit",
-								"BR": "X"
-							},
-							{
-								"species": "delalandi",
-								"index": 2159,
-								"name": "Southern Antpipit",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Euscarthmus",
-						"spp": [
-							{
-								"species": "meloryphus",
-								"index": 2160,
-								"name": "Tawny-crowned Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "rufomarginatus",
-								"index": 2161,
-								"name": "Rufous-sided Pygmy-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Stigmatura",
-						"spp": [
-							{
-								"species": "napensis",
-								"index": 2163,
-								"name": "Lesser Wagtail-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "budytoides",
-								"index": 2164,
-								"name": "Greater Wagtail-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Zimmerius",
-						"spp": [
-							{
-								"species": "chicomendesi",
-								"index": 2172,
-								"name": "Chico's Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "gracilipes",
-								"index": 2173,
-								"name": "Slender-footed Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "acer",
-								"index": 2174,
-								"name": "Guianan Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Phylloscartes",
-						"spp": [
-							{
-								"species": "chapmani",
-								"index": 2178,
-								"name": "Chapman's Bristle-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "eximius",
-								"index": 2183,
-								"name": "Southern Bristle-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "ventralis",
-								"index": 2184,
-								"name": "Mottle-cheeked Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "kronei",
-								"index": 2185,
-								"name": "Restinga Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "beckeri",
-								"index": 2186,
-								"name": "Bahia Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "virescens",
-								"index": 2187,
-								"name": "Olive-green Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "nigrifrons",
-								"index": 2189,
-								"name": "Black-fronted Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "ceciliae",
-								"index": 2191,
-								"name": "Alagoas Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "roquettei",
-								"index": 2194,
-								"name": "Minas Gerais Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "paulista",
-								"index": 2195,
-								"name": "São Paulo Tyrannulet",
-								"BR": "X"
-							},
-							{
-								"species": "oustaleti",
-								"index": 2196,
-								"name": "Oustalet's Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "difficilis",
-								"index": 2197,
-								"name": "Serra do Mar Tyrannulet",
-								"BR": "X(e)"
-							},
-							{
-								"species": "sylviolus",
-								"index": 2198,
-								"name": "Bay-ringed Tyrannulet",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Mionectes",
-						"spp": [
-							{
-								"species": "oleagineus",
-								"index": 2201,
-								"name": "Ochre-bellied Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "macconnelli",
-								"index": 2202,
-								"name": "McConnell's Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "rufiventris",
-								"index": 2203,
-								"name": "Gray-hooded Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Leptopogon",
-						"spp": [
-							{
-								"species": "amaurocephalus",
-								"index": 2204,
-								"name": "Sepia-capped Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Sublegatus",
-						"spp": [
-							{
-								"species": "obscurior",
-								"index": 2209,
-								"name": "Amazonian Scrub-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "modestus",
-								"index": 2210,
-								"name": "Southern Scrub-Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Inezia",
-						"spp": [
-							{
-								"species": "inornata",
-								"index": 2212,
-								"name": "Plain Tyrannulet",
-								"BR": "NB"
-							},
-							{
-								"species": "subflava",
-								"index": 2213,
-								"name": "Amazonian Tyrannulet",
+								"name": "Blue-backed Manakin",
 								"BR": "X"
 							},
 							{
 								"species": "caudata",
-								"index": 2214,
-								"name": "Pale-tipped Tyrannulet",
+								"index": 2095,
+								"name": "Swallow-tailed Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Tachuris",
+						"Genus": "Ilicura",
 						"spp": [
 							{
-								"species": "rubrigastra",
-								"index": 2216,
-								"name": "Many-colored Rush Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Culicivora",
-						"spp": [
-							{
-								"species": "caudacuta",
-								"index": 2217,
-								"name": "Sharp-tailed Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiornis",
-						"spp": [
-							{
-								"species": "auricularis",
-								"index": 2218,
-								"name": "Eared Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "ecaudatus",
-								"index": 2221,
-								"name": "Short-tailed Pygmy-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Lophotriccus",
-						"spp": [
-							{
-								"species": "vitiosus",
-								"index": 2225,
-								"name": "Double-banded Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "eulophotes",
-								"index": 2226,
-								"name": "Long-crested Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "galeatus",
-								"index": 2227,
-								"name": "Helmeted Pygmy-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Atalotriccus",
-						"spp": [
-							{
-								"species": "pilaris",
-								"index": 2228,
-								"name": "Pale-eyed Pygmy-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Hemitriccus",
-						"spp": [
-							{
-								"species": "minor",
-								"index": 2229,
-								"name": "Snethlage's Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "cohnhafti",
-								"index": 2230,
-								"name": "Acre Tody-Tyrant",
-								"BR": "X(e)"
-							},
-							{
-								"species": "flammulatus",
-								"index": 2232,
-								"name": "Flammulated Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "diops",
-								"index": 2233,
-								"name": "Drab-breasted Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "obsoletus",
-								"index": 2234,
-								"name": "Brown-breasted Pygmy-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "josephinae",
-								"index": 2235,
-								"name": "Boat-billed Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "zosterops",
-								"index": 2236,
-								"name": "White-eyed Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "griseipectus",
-								"index": 2237,
-								"name": "White-bellied Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "orbitatus",
-								"index": 2238,
-								"name": "Eye-ringed Tody-Tyrant",
-								"BR": "X(e)"
-							},
-							{
-								"species": "iohannis",
-								"index": 2239,
-								"name": "Johannes's Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "striaticollis",
-								"index": 2240,
-								"name": "Stripe-necked Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "nidipendulus",
-								"index": 2241,
-								"name": "Hangnest Tody-Tyrant",
-								"BR": "X(e)"
-							},
-							{
-								"species": "margaritaceiventer",
-								"index": 2242,
-								"name": "Pearly-vented Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "inornatus",
-								"index": 2243,
-								"name": "Pelzeln's Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "minimus",
-								"index": 2244,
-								"name": "Zimmer's Tody-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "mirandae",
-								"index": 2247,
-								"name": "Buff-breasted Tody-Tyrant",
-								"BR": "X(e)"
-							},
-							{
-								"species": "kaempferi",
-								"index": 2248,
-								"name": "Kaempfer's Tody-Tyrant",
-								"BR": "X(e)"
-							},
-							{
-								"species": "furcatus",
-								"index": 2250,
-								"name": "Fork-tailed Pygmy-Tyrant",
+								"species": "militaris",
+								"index": 2096,
+								"name": "Pin-tailed Manakin",
 								"BR": "X(e)"
 							}
 						]
 					},
 					{
-						"Genus": "Poecilotriccus",
+						"Genus": "Corapipo",
 						"spp": [
 							{
-								"species": "albifacies",
-								"index": 2253,
-								"name": "White-cheeked Tody-Flycatcher",
+								"species": "gutturalis",
+								"index": 2100,
+								"name": "White-throated Manakin",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Xenopipo",
+						"spp": [
+							{
+								"species": "uniformis",
+								"index": 2101,
+								"name": "Olive Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "capitalis",
-								"index": 2254,
-								"name": "Black-and-white Tody-Flycatcher",
+								"species": "atronitens",
+								"index": 2102,
+								"name": "Black Manakin",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Lepidothrix",
+						"spp": [
+							{
+								"species": "coronata",
+								"index": 2104,
+								"name": "Blue-crowned Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "senex",
-								"index": 2255,
-								"name": "Buff-cheeked Tody-Flycatcher",
+								"species": "nattereri",
+								"index": 2105,
+								"name": "Snow-capped Manakin",
+								"BR": "X"
+							},
+							{
+								"species": "vilasboasi",
+								"index": 2106,
+								"name": "Golden-crowned Manakin",
 								"BR": "X(e)"
 							},
 							{
-								"species": "russatus",
-								"index": 2256,
-								"name": "Ruddy Tody-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "plumbeiceps",
-								"index": 2257,
-								"name": "Ochre-faced Tody-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "fumifrons",
-								"index": 2258,
-								"name": "Smoky-fronted Tody-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "latirostris",
-								"index": 2259,
-								"name": "Rusty-fronted Tody-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "sylvia",
-								"index": 2260,
-								"name": "Slate-headed Tody-Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Taeniotriccus",
-						"spp": [
-							{
-								"species": "andrei",
-								"index": 2263,
-								"name": "Black-chested Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Todirostrum",
-						"spp": [
-							{
-								"species": "maculatum",
-								"index": 2264,
-								"name": "Spotted Tody-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "poliocephalum",
-								"index": 2265,
-								"name": "Gray-headed Tody-Flycatcher",
+								"species": "iris",
+								"index": 2107,
+								"name": "Opal-crowned Manakin",
 								"BR": "X(e)"
 							},
 							{
-								"species": "cinereum",
-								"index": 2266,
-								"name": "Common Tody-Flycatcher",
+								"species": "suavissima",
+								"index": 2108,
+								"name": "Orange-bellied Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "pictum",
-								"index": 2269,
-								"name": "Painted Tody-Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "chrysocrotaphum",
-								"index": 2270,
-								"name": "Yellow-browed Tody-Flycatcher",
+								"species": "serena",
+								"index": 2109,
+								"name": "White-fronted Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Cnipodectes",
+						"Genus": "Heterocercus",
 						"spp": [
 							{
-								"species": "subbrunneus",
-								"index": 2271,
-								"name": "Brownish Twistwing",
+								"species": "aurantiivertex",
+								"index": 2112,
+								"name": "Orange-crowned Manakin",
+								"BR": "H"
+							},
+							{
+								"species": "flavivertex",
+								"index": 2113,
+								"name": "Yellow-crowned Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "superrufus",
-								"index": 2272,
-								"name": "Rufous Twistwing",
+								"species": "linteatus",
+								"index": 2114,
+								"name": "Flame-crowned Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Rhynchocyclus",
+						"Genus": "Manacus",
 						"spp": [
 							{
-								"species": "olivaceus",
-								"index": 2273,
-								"name": "Olivaceous Flatbill",
+								"species": "manacus",
+								"index": 2115,
+								"name": "White-bearded Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Tolmomyias",
+						"Genus": "Pipra",
 						"spp": [
 							{
-								"species": "sulphurescens",
-								"index": 2277,
-								"name": "Yellow-olive Flycatcher",
+								"species": "aureola",
+								"index": 2116,
+								"name": "Crimson-hooded Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "assimilis",
-								"index": 2279,
-								"name": "Yellow-margined Flycatcher",
+								"species": "filicauda",
+								"index": 2117,
+								"name": "Wire-tailed Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "poliocephalus",
-								"index": 2280,
-								"name": "Gray-crowned Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "flaviventris",
-								"index": 2281,
-								"name": "Yellow-breasted Flycatcher",
+								"species": "fasciicauda",
+								"index": 2118,
+								"name": "Band-tailed Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Calyptura",
+						"Genus": "Machaeropterus",
 						"spp": [
 							{
-								"species": "cristata",
-								"index": 2282,
-								"name": "Kinglet Calyptura",
-								"BR": "X(e)"
-							}
-						]
-					},
-					{
-						"Genus": "Neopipo",
-						"spp": [
-							{
-								"species": "cinnamomea",
-								"index": 2283,
-								"name": "Cinnamon Manakin-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Platyrinchus",
-						"spp": [
-							{
-								"species": "saturatus",
-								"index": 2284,
-								"name": "Cinnamon-crested Spadebill",
-								"BR": "X"
-							},
-							{
-								"species": "mystaceus",
-								"index": 2285,
-								"name": "White-throated Spadebill",
-								"BR": "X"
-							},
-							{
-								"species": "coronatus",
-								"index": 2286,
-								"name": "Golden-crowned Spadebill",
-								"BR": "X"
-							},
-							{
-								"species": "platyrhynchos",
-								"index": 2288,
-								"name": "White-crested Spadebill",
-								"BR": "X"
-							},
-							{
-								"species": "leucoryphus",
-								"index": 2289,
-								"name": "Russet-winged Spadebill",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Onychorhynchus",
-						"spp": [
-							{
-								"species": "coronatus",
-								"index": 2290,
-								"name": "Royal Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiophobus",
-						"spp": [
-							{
-								"species": "roraimae",
-								"index": 2294,
-								"name": "Roraiman Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "fasciatus",
-								"index": 2296,
-								"name": "Bran-colored Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiobius",
-						"spp": [
-							{
-								"species": "barbatus",
-								"index": 2298,
-								"name": "Sulphur-rumped Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "atricaudus",
-								"index": 2299,
-								"name": "Black-tailed Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Terenotriccus",
-						"spp": [
-							{
-								"species": "erythrurus",
-								"index": 2300,
-								"name": "Ruddy-tailed Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Hirundinea",
-						"spp": [
-							{
-								"species": "ferruginea",
-								"index": 2302,
-								"name": "Cliff Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Lathrotriccus",
-						"spp": [
-							{
-								"species": "euleri",
-								"index": 2306,
-								"name": "Euler's Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Cnemotriccus",
-						"spp": [
-							{
-								"species": "fuscatus",
-								"index": 2309,
-								"name": "Fuscous Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Empidonax",
-						"spp": [
-							{
-								"species": "alnorum",
-								"index": 2312,
-								"name": "Alder Flycatcher",
-								"BR": "NB"
-							}
-						]
-					},
-					{
-						"Genus": "Contopus",
-						"spp": [
-							{
-								"species": "cooperi",
-								"index": 2313,
-								"name": "Olive-sided Flycatcher",
-								"BR": "NB"
-							},
-							{
-								"species": "fumigatus",
-								"index": 2314,
-								"name": "Smoke-colored Pewee",
-								"BR": "X"
-							},
-							{
-								"species": "virens",
-								"index": 2316,
-								"name": "Eastern Wood-Pewee",
-								"BR": "NB"
-							},
-							{
-								"species": "cinereus",
-								"index": 2317,
-								"name": "Tropical Pewee",
-								"BR": "X"
-							},
-							{
-								"species": "albogularis",
-								"index": 2318,
-								"name": "White-throated Pewee",
-								"BR": "X"
-							},
-							{
-								"species": "nigrescens",
-								"index": 2319,
-								"name": "Blackish Pewee",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Pyrocephalus",
-						"spp": [
-							{
-								"species": "rubinus",
-								"index": 2323,
-								"name": "Vermilion Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Lessonia",
-						"spp": [
-							{
-								"species": "rufa",
-								"index": 2324,
-								"name": "Austral Negrito",
-								"BR": "NB"
-							}
-						]
-					},
-					{
-						"Genus": "Knipolegus",
-						"spp": [
-							{
-								"species": "orenocensis",
-								"index": 2326,
-								"name": "Riverside Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "poecilurus",
-								"index": 2327,
-								"name": "Rufous-tailed Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "poecilocercus",
-								"index": 2328,
-								"name": "Amazonian Black-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "franciscanus",
-								"index": 2329,
-								"name": "Caatinga Black-Tyrant",
+								"species": "regulus",
+								"index": 2122,
+								"name": "Kinglet Manakin",
 								"BR": "X(e)"
 							},
 							{
-								"species": "lophotes",
-								"index": 2330,
-								"name": "Crested Black-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "nigerrimus",
-								"index": 2331,
-								"name": "Velvety Black-Tyrant",
-								"BR": "X(e)"
-							},
-							{
-								"species": "cyanirostris",
-								"index": 2334,
-								"name": "Blue-billed Black-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "striaticeps",
-								"index": 2335,
-								"name": "Cinereous Tyrant",
-								"BR": "V"
-							},
-							{
-								"species": "aterrimus",
-								"index": 2336,
-								"name": "White-winged Black-Tyrant",
-								"BR": "V"
-							},
-							{
-								"species": "hudsoni",
-								"index": 2337,
-								"name": "Hudson's Black-Tyrant",
-								"BR": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Hymenops",
-						"spp": [
-							{
-								"species": "perspicillatus",
-								"index": 2338,
-								"name": "Spectacled Tyrant",
+								"species": "pyrocephalus",
+								"index": 2123,
+								"name": "Fiery-capped Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Ochthornis",
+						"Genus": "Dixiphia",
 						"spp": [
 							{
-								"species": "littoralis",
-								"index": 2339,
-								"name": "Drab Water Tyrant",
+								"species": "pipra",
+								"index": 2124,
+								"name": "White-crowned Manakin",
 								"BR": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Satrapa",
+						"Genus": "Ceratopipra",
 						"spp": [
 							{
-								"species": "icterophrys",
-								"index": 2340,
-								"name": "Yellow-browed Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Muscisaxicola",
-						"spp": [
-							{
-								"species": "fluviatilis",
-								"index": 2341,
-								"name": "Little Ground-Tyrant",
+								"species": "cornuta",
+								"index": 2125,
+								"name": "Scarlet-horned Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "maclovianus",
-								"index": 2349,
-								"name": "Dark-faced Ground-Tyrant",
-								"BR": "V"
-							},
-							{
-								"species": "capistratus",
-								"index": 2352,
-								"name": "Cinnamon-bellied Ground-Tyrant",
-								"BR": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Agriornis",
-						"spp": [
-							{
-								"species": "micropterus",
-								"index": 2357,
-								"name": "Gray-bellied Shrike-Tyrant",
-								"BR": "V"
-							},
-							{
-								"species": "murinus",
-								"index": 2358,
-								"name": "Lesser Shrike-Tyrant",
-								"BR": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Xolmis",
-						"spp": [
-							{
-								"species": "cinereus",
-								"index": 2360,
-								"name": "Gray Monjita",
+								"species": "erythrocephala",
+								"index": 2127,
+								"name": "Golden-headed Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "coronatus",
-								"index": 2361,
-								"name": "Black-crowned Monjita",
-								"BR": "NB"
-							},
-							{
-								"species": "velatus",
-								"index": 2362,
-								"name": "White-rumped Monjita",
+								"species": "rubrocapilla",
+								"index": 2128,
+								"name": "Red-headed Manakin",
 								"BR": "X"
 							},
 							{
-								"species": "irupero",
-								"index": 2363,
-								"name": "White Monjita",
-								"BR": "X"
-							},
-							{
-								"species": "rubetra",
-								"index": 2365,
-								"name": "Rusty-backed Monjita",
-								"BR": "V"
-							},
-							{
-								"species": "dominicanus",
-								"index": 2366,
-								"name": "Black-and-white Monjita",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Neoxolmis",
-						"spp": [
-							{
-								"species": "rufiventris",
-								"index": 2373,
-								"name": "Chocolate-vented Tyrant",
-								"BR": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Gubernetes",
-						"spp": [
-							{
-								"species": "yetapa",
-								"index": 2374,
-								"name": "Streamer-tailed Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Muscipipra",
-						"spp": [
-							{
-								"species": "vetula",
-								"index": 2375,
-								"name": "Shear-tailed Gray Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Fluvicola",
-						"spp": [
-							{
-								"species": "pica",
-								"index": 2376,
-								"name": "Pied Water-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "albiventer",
-								"index": 2377,
-								"name": "Black-backed Water-Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "nengeta",
-								"index": 2378,
-								"name": "Masked Water-Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Arundinicola",
-						"spp": [
-							{
-								"species": "leucocephala",
-								"index": 2379,
-								"name": "White-headed Marsh Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Alectrurus",
-						"spp": [
-							{
-								"species": "tricolor",
-								"index": 2380,
-								"name": "Cock-tailed Tyrant",
-								"BR": "X"
-							},
-							{
-								"species": "risora",
-								"index": 2381,
-								"name": "Strange-tailed Tyrant",
-								"BR": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Colonia",
-						"spp": [
-							{
-								"species": "colonus",
-								"index": 2394,
-								"name": "Long-tailed Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Machetornis",
-						"spp": [
-							{
-								"species": "rixosa",
-								"index": 2396,
-								"name": "Cattle Tyrant",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Legatus",
-						"spp": [
-							{
-								"species": "leucophaius",
-								"index": 2397,
-								"name": "Piratic Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiozetetes",
-						"spp": [
-							{
-								"species": "cayanensis",
-								"index": 2398,
-								"name": "Rusty-margined Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "similis",
-								"index": 2399,
-								"name": "Social Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "granadensis",
-								"index": 2400,
-								"name": "Gray-capped Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "luteiventris",
-								"index": 2401,
-								"name": "Dusky-chested Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Pitangus",
-						"spp": [
-							{
-								"species": "sulphuratus",
-								"index": 2403,
-								"name": "Great Kiskadee",
-								"BR": "X"
-							},
-							{
-								"species": "lictor",
-								"index": 2404,
-								"name": "Lesser Kiskadee",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Conopias",
-						"spp": [
-							{
-								"species": "parvus",
-								"index": 2406,
-								"name": "Yellow-throated Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "trivirgatus",
-								"index": 2407,
-								"name": "Three-striped Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiodynastes",
-						"spp": [
-							{
-								"species": "luteiventris",
-								"index": 2411,
-								"name": "Sulphur-bellied Flycatcher",
-								"BR": "V"
-							},
-							{
-								"species": "maculatus",
-								"index": 2412,
-								"name": "Streaked Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Megarynchus",
-						"spp": [
-							{
-								"species": "pitangua",
-								"index": 2413,
-								"name": "Boat-billed Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Tyrannopsis",
-						"spp": [
-							{
-								"species": "sulphurea",
-								"index": 2414,
-								"name": "Sulphury Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Empidonomus",
-						"spp": [
-							{
-								"species": "varius",
-								"index": 2415,
-								"name": "Variegated Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "aurantioatrocristatus",
-								"index": 2416,
-								"name": "Crowned Slaty Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Tyrannus",
-						"spp": [
-							{
-								"species": "albogularis",
-								"index": 2418,
-								"name": "White-throated Kingbird",
-								"BR": "X"
-							},
-							{
-								"species": "melancholicus",
-								"index": 2419,
-								"name": "Tropical Kingbird",
-								"BR": "X"
-							},
-							{
-								"species": "savana",
-								"index": 2420,
-								"name": "Fork-tailed Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "tyrannus",
-								"index": 2421,
-								"name": "Eastern Kingbird",
-								"BR": "NB"
-							},
-							{
-								"species": "dominicensis",
-								"index": 2422,
-								"name": "Gray Kingbird",
-								"BR": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Rhytipterna",
-						"spp": [
-							{
-								"species": "simplex",
-								"index": 2424,
-								"name": "Grayish Mourner",
-								"BR": "X"
-							},
-							{
-								"species": "immunda",
-								"index": 2425,
-								"name": "Pale-bellied Mourner",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Sirystes",
-						"spp": [
-							{
-								"species": "albocinereus",
-								"index": 2427,
-								"name": "White-rumped Sirystes",
-								"BR": "X"
-							},
-							{
-								"species": "subcanescens",
-								"index": 2428,
-								"name": "Todd's Sirystes",
-								"BR": "X"
-							},
-							{
-								"species": "sibilator",
-								"index": 2429,
-								"name": "Sibilant Sirystes",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Casiornis",
-						"spp": [
-							{
-								"species": "rufus",
-								"index": 2430,
-								"name": "Rufous Casiornis",
-								"BR": "X"
-							},
-							{
-								"species": "fuscus",
-								"index": 2431,
-								"name": "Ash-throated Casiornis",
-								"BR": "X(e)"
-							}
-						]
-					},
-					{
-						"Genus": "Myiarchus",
-						"spp": [
-							{
-								"species": "tuberculifer",
-								"index": 2433,
-								"name": "Dusky-capped Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "swainsoni",
-								"index": 2434,
-								"name": "Swainson's Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "ferox",
-								"index": 2437,
-								"name": "Short-crested Flycatcher",
-								"BR": "X"
-							},
-							{
-								"species": "tyrannulus",
-								"index": 2442,
-								"name": "Brown-crested Flycatcher",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Ramphotrigon",
-						"spp": [
-							{
-								"species": "megacephalum",
-								"index": 2444,
-								"name": "Large-headed Flatbill",
-								"BR": "X"
-							},
-							{
-								"species": "ruficauda",
-								"index": 2445,
-								"name": "Rufous-tailed Flatbill",
-								"BR": "X"
-							},
-							{
-								"species": "fuscicauda",
-								"index": 2446,
-								"name": "Dusky-tailed Flatbill",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Attila",
-						"spp": [
-							{
-								"species": "phoenicurus",
-								"index": 2447,
-								"name": "Rufous-tailed Attila",
-								"BR": "X"
-							},
-							{
-								"species": "cinnamomeus",
-								"index": 2448,
-								"name": "Cinnamon Attila",
-								"BR": "X"
-							},
-							{
-								"species": "citriniventris",
-								"index": 2450,
-								"name": "Citron-bellied Attila",
-								"BR": "X"
-							},
-							{
-								"species": "bolivianus",
-								"index": 2451,
-								"name": "Dull-capped Attila",
-								"BR": "X"
-							},
-							{
-								"species": "rufus",
-								"index": 2452,
-								"name": "Gray-hooded Attila",
-								"BR": "X(e)"
-							},
-							{
-								"species": "spadiceus",
-								"index": 2453,
-								"name": "Bright-rumped Attila",
-								"BR": "X"
-							}
-						]
-					}
-				]
-			},
-			{
-				"Family": "OXYRUNCIDAE",
-				"FamilyCommon": "SHARPBILL",
-				"genera": [
-					{
-						"Genus": "Oxyruncus",
-						"spp": [
-							{
-								"species": "cristatus",
-								"index": 2454,
-								"name": "Sharpbill",
+								"species": "chloromeros",
+								"index": 2129,
+								"name": "Round-tailed Manakin",
 								"BR": "X"
 							}
 						]
@@ -11476,13 +10029,13 @@
 						"spp": [
 							{
 								"species": "cucullata",
-								"index": 2455,
+								"index": 2130,
 								"name": "Hooded Berryeater",
 								"BR": "X(e)"
 							},
 							{
 								"species": "melanocephala",
-								"index": 2456,
+								"index": 2131,
 								"name": "Black-headed Berryeater",
 								"BR": "X(e)"
 							}
@@ -11493,7 +10046,7 @@
 						"spp": [
 							{
 								"species": "whitelyi",
-								"index": 2467,
+								"index": 2142,
 								"name": "Red-banded Fruiteater",
 								"BR": "H"
 							}
@@ -11504,7 +10057,7 @@
 						"spp": [
 							{
 								"species": "rutila",
-								"index": 2471,
+								"index": 2146,
 								"name": "White-tipped Plantcutter",
 								"BR": "V"
 							}
@@ -11515,7 +10068,7 @@
 						"spp": [
 							{
 								"species": "flavirostris",
-								"index": 2473,
+								"index": 2148,
 								"name": "Swallow-tailed Cotinga",
 								"BR": "X"
 							}
@@ -11526,13 +10079,13 @@
 						"spp": [
 							{
 								"species": "carnifex",
-								"index": 2478,
+								"index": 2153,
 								"name": "Guianan Red-Cotinga",
 								"BR": "X"
 							},
 							{
 								"species": "nigricollis",
-								"index": 2479,
+								"index": 2154,
 								"name": "Black-necked Red-Cotinga",
 								"BR": "X"
 							}
@@ -11543,7 +10096,7 @@
 						"spp": [
 							{
 								"species": "rupicola",
-								"index": 2480,
+								"index": 2155,
 								"name": "Guianan Cock-of-the-rock",
 								"BR": "X"
 							}
@@ -11554,7 +10107,7 @@
 						"spp": [
 							{
 								"species": "militaris",
-								"index": 2484,
+								"index": 2159,
 								"name": "Crimson Fruitcrow",
 								"BR": "X"
 							}
@@ -11565,7 +10118,7 @@
 						"spp": [
 							{
 								"species": "purpurata",
-								"index": 2485,
+								"index": 2160,
 								"name": "Purple-throated Fruitcrow",
 								"BR": "X"
 							}
@@ -11576,7 +10129,7 @@
 						"spp": [
 							{
 								"species": "scutatus",
-								"index": 2486,
+								"index": 2161,
 								"name": "Red-ruffed Fruitcrow",
 								"BR": "X"
 							}
@@ -11587,7 +10140,7 @@
 						"spp": [
 							{
 								"species": "ornatus",
-								"index": 2487,
+								"index": 2162,
 								"name": "Amazonian Umbrellabird",
 								"BR": "X"
 							}
@@ -11598,7 +10151,7 @@
 						"spp": [
 							{
 								"species": "tricolor",
-								"index": 2489,
+								"index": 2164,
 								"name": "Capuchinbird",
 								"BR": "X"
 							}
@@ -11609,25 +10162,25 @@
 						"spp": [
 							{
 								"species": "maynana",
-								"index": 2491,
+								"index": 2166,
 								"name": "Plum-throated Cotinga",
 								"BR": "X"
 							},
 							{
 								"species": "cotinga",
-								"index": 2492,
+								"index": 2167,
 								"name": "Purple-breasted Cotinga",
 								"BR": "X"
 							},
 							{
 								"species": "maculata",
-								"index": 2493,
+								"index": 2168,
 								"name": "Banded Cotinga",
 								"BR": "X(e)"
 							},
 							{
 								"species": "cayana",
-								"index": 2494,
+								"index": 2169,
 								"name": "Spangled Cotinga",
 								"BR": "X"
 							}
@@ -11638,19 +10191,19 @@
 						"spp": [
 							{
 								"species": "vociferans",
-								"index": 2499,
+								"index": 2174,
 								"name": "Screaming Piha",
 								"BR": "X"
 							},
 							{
 								"species": "lanioides",
-								"index": 2500,
+								"index": 2175,
 								"name": "Cinnamon-vented Piha",
 								"BR": "X(e)"
 							},
 							{
 								"species": "streptophorus",
-								"index": 2501,
+								"index": 2176,
 								"name": "Rose-collared Piha",
 								"BR": "X"
 							}
@@ -11661,13 +10214,13 @@
 						"spp": [
 							{
 								"species": "atra",
-								"index": 2502,
+								"index": 2177,
 								"name": "Black-and-gold Cotinga",
 								"BR": "X(e)"
 							},
 							{
 								"species": "condita",
-								"index": 2503,
+								"index": 2178,
 								"name": "Gray-winged Cotinga",
 								"BR": "X(e)"
 							}
@@ -11678,19 +10231,19 @@
 						"spp": [
 							{
 								"species": "albus",
-								"index": 2504,
+								"index": 2179,
 								"name": "White Bellbird",
 								"BR": "X"
 							},
 							{
 								"species": "averano",
-								"index": 2505,
+								"index": 2180,
 								"name": "Bearded Bellbird",
 								"BR": "X"
 							},
 							{
 								"species": "nudicollis",
-								"index": 2506,
+								"index": 2181,
 								"name": "Bare-throated Bellbird",
 								"BR": "X"
 							}
@@ -11701,7 +10254,7 @@
 						"spp": [
 							{
 								"species": "porphyrolaema",
-								"index": 2507,
+								"index": 2182,
 								"name": "Purple-throated Cotinga",
 								"BR": "X"
 							}
@@ -11712,19 +10265,19 @@
 						"spp": [
 							{
 								"species": "punicea",
-								"index": 2509,
+								"index": 2184,
 								"name": "Pompadour Cotinga",
 								"BR": "X"
 							},
 							{
 								"species": "lamellipennis",
-								"index": 2510,
+								"index": 2185,
 								"name": "White-tailed Cotinga",
 								"BR": "X(e)"
 							},
 							{
 								"species": "atropurpurea",
-								"index": 2511,
+								"index": 2186,
 								"name": "White-winged Cotinga",
 								"BR": "X(e)"
 							}
@@ -11735,7 +10288,7 @@
 						"spp": [
 							{
 								"species": "foetidus",
-								"index": 2512,
+								"index": 2187,
 								"name": "Bare-necked Fruitcrow",
 								"BR": "X"
 							}
@@ -11746,294 +10299,8 @@
 						"spp": [
 							{
 								"species": "mcilhennyi",
-								"index": 2513,
+								"index": 2188,
 								"name": "Black-faced Cotinga",
-								"BR": "X"
-							}
-						]
-					}
-				]
-			},
-			{
-				"Family": "PIPRIDAE",
-				"FamilyCommon": "MANAKINS",
-				"genera": [
-					{
-						"Genus": "Tyranneutes",
-						"spp": [
-							{
-								"species": "stolzmanni",
-								"index": 2514,
-								"name": "Dwarf Tyrant-Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "virescens",
-								"index": 2515,
-								"name": "Tiny Tyrant-Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Neopelma",
-						"spp": [
-							{
-								"species": "pallescens",
-								"index": 2516,
-								"name": "Pale-bellied Tyrant-Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "chrysocephalum",
-								"index": 2517,
-								"name": "Saffron-crested Tyrant-Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "aurifrons",
-								"index": 2518,
-								"name": "Wied's Tyrant-Manakin",
-								"BR": "X(e)"
-							},
-							{
-								"species": "chrysolophum",
-								"index": 2519,
-								"name": "Serra do Mar Tyrant-Manakin",
-								"BR": "X(e)"
-							},
-							{
-								"species": "sulphureiventer",
-								"index": 2520,
-								"name": "Sulphur-bellied Tyrant-Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Antilophia",
-						"spp": [
-							{
-								"species": "bokermanni",
-								"index": 2523,
-								"name": "Araripe Manakin",
-								"BR": "X(e)"
-							},
-							{
-								"species": "galeata",
-								"index": 2524,
-								"name": "Helmeted Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Chiroxiphia",
-						"spp": [
-							{
-								"species": "pareola",
-								"index": 2526,
-								"name": "Blue-backed Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "caudata",
-								"index": 2528,
-								"name": "Swallow-tailed Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Ilicura",
-						"spp": [
-							{
-								"species": "militaris",
-								"index": 2529,
-								"name": "Pin-tailed Manakin",
-								"BR": "X(e)"
-							}
-						]
-					},
-					{
-						"Genus": "Corapipo",
-						"spp": [
-							{
-								"species": "gutturalis",
-								"index": 2533,
-								"name": "White-throated Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Xenopipo",
-						"spp": [
-							{
-								"species": "uniformis",
-								"index": 2534,
-								"name": "Olive Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "atronitens",
-								"index": 2535,
-								"name": "Black Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Lepidothrix",
-						"spp": [
-							{
-								"species": "coronata",
-								"index": 2537,
-								"name": "Blue-crowned Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "nattereri",
-								"index": 2538,
-								"name": "Snow-capped Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "vilasboasi",
-								"index": 2539,
-								"name": "Golden-crowned Manakin",
-								"BR": "X(e)"
-							},
-							{
-								"species": "iris",
-								"index": 2540,
-								"name": "Opal-crowned Manakin",
-								"BR": "X(e)"
-							},
-							{
-								"species": "suavissima",
-								"index": 2541,
-								"name": "Orange-bellied Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "serena",
-								"index": 2542,
-								"name": "White-fronted Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Heterocercus",
-						"spp": [
-							{
-								"species": "aurantiivertex",
-								"index": 2545,
-								"name": "Orange-crowned Manakin",
-								"BR": "H"
-							},
-							{
-								"species": "flavivertex",
-								"index": 2546,
-								"name": "Yellow-crowned Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "linteatus",
-								"index": 2547,
-								"name": "Flame-crowned Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Manacus",
-						"spp": [
-							{
-								"species": "manacus",
-								"index": 2548,
-								"name": "White-bearded Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Pipra",
-						"spp": [
-							{
-								"species": "aureola",
-								"index": 2549,
-								"name": "Crimson-hooded Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "filicauda",
-								"index": 2550,
-								"name": "Wire-tailed Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "fasciicauda",
-								"index": 2551,
-								"name": "Band-tailed Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Machaeropterus",
-						"spp": [
-							{
-								"species": "regulus",
-								"index": 2555,
-								"name": "Kinglet Manakin",
-								"BR": "X(e)"
-							},
-							{
-								"species": "pyrocephalus",
-								"index": 2556,
-								"name": "Fiery-capped Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Dixiphia",
-						"spp": [
-							{
-								"species": "pipra",
-								"index": 2557,
-								"name": "White-crowned Manakin",
-								"BR": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Ceratopipra",
-						"spp": [
-							{
-								"species": "cornuta",
-								"index": 2558,
-								"name": "Scarlet-horned Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "erythrocephala",
-								"index": 2560,
-								"name": "Golden-headed Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "rubrocapilla",
-								"index": 2561,
-								"name": "Red-headed Manakin",
-								"BR": "X"
-							},
-							{
-								"species": "chloromeros",
-								"index": 2562,
-								"name": "Round-tailed Manakin",
 								"BR": "X"
 							}
 						]
@@ -12049,19 +10316,19 @@
 						"spp": [
 							{
 								"species": "inquisitor",
-								"index": 2563,
+								"index": 2189,
 								"name": "Black-crowned Tityra",
 								"BR": "X"
 							},
 							{
 								"species": "cayana",
-								"index": 2564,
+								"index": 2190,
 								"name": "Black-tailed Tityra",
 								"BR": "X"
 							},
 							{
 								"species": "semifasciata",
-								"index": 2565,
+								"index": 2191,
 								"name": "Masked Tityra",
 								"BR": "X"
 							}
@@ -12072,25 +10339,25 @@
 						"spp": [
 							{
 								"species": "major",
-								"index": 2566,
+								"index": 2192,
 								"name": "Varzea Schiffornis",
 								"BR": "X"
 							},
 							{
 								"species": "olivacea",
-								"index": 2569,
+								"index": 2195,
 								"name": "Olivaceous Schiffornis",
 								"BR": "X"
 							},
 							{
 								"species": "turdina",
-								"index": 2571,
+								"index": 2197,
 								"name": "Brown-winged Schiffornis",
 								"BR": "X"
 							},
 							{
 								"species": "virescens",
-								"index": 2572,
+								"index": 2198,
 								"name": "Greenish Schiffornis",
 								"BR": "X"
 							}
@@ -12101,7 +10368,7 @@
 						"spp": [
 							{
 								"species": "hypopyrra",
-								"index": 2574,
+								"index": 2200,
 								"name": "Cinereous Mourner",
 								"BR": "X"
 							}
@@ -12112,19 +10379,19 @@
 						"spp": [
 							{
 								"species": "isabellae",
-								"index": 2575,
+								"index": 2201,
 								"name": "White-browed Purpletuft",
 								"BR": "X"
 							},
 							{
 								"species": "fusca",
-								"index": 2576,
+								"index": 2202,
 								"name": "Dusky Purpletuft",
 								"BR": "X"
 							},
 							{
 								"species": "pipra",
-								"index": 2577,
+								"index": 2203,
 								"name": "Buff-throated Purpletuft",
 								"BR": "X(e)"
 							}
@@ -12135,7 +10402,7 @@
 						"spp": [
 							{
 								"species": "elegans",
-								"index": 2578,
+								"index": 2204,
 								"name": "Shrike-like Cotinga",
 								"BR": "X"
 							}
@@ -12146,7 +10413,7 @@
 						"spp": [
 							{
 								"species": "albinucha",
-								"index": 2579,
+								"index": 2205,
 								"name": "White-naped Xenopsaris",
 								"BR": "X"
 							}
@@ -12157,49 +10424,49 @@
 						"spp": [
 							{
 								"species": "viridis",
-								"index": 2580,
+								"index": 2206,
 								"name": "Green-backed Becard",
 								"BR": "X"
 							},
 							{
 								"species": "rufus",
-								"index": 2583,
+								"index": 2209,
 								"name": "Cinereous Becard",
 								"BR": "X"
 							},
 							{
 								"species": "castaneus",
-								"index": 2585,
+								"index": 2211,
 								"name": "Chestnut-crowned Becard",
 								"BR": "X"
 							},
 							{
 								"species": "polychopterus",
-								"index": 2586,
+								"index": 2212,
 								"name": "White-winged Becard",
 								"BR": "X"
 							},
 							{
 								"species": "marginatus",
-								"index": 2588,
+								"index": 2214,
 								"name": "Black-capped Becard",
 								"BR": "X"
 							},
 							{
 								"species": "surinamus",
-								"index": 2589,
+								"index": 2215,
 								"name": "Glossy-backed Becard",
 								"BR": "X"
 							},
 							{
 								"species": "minor",
-								"index": 2591,
+								"index": 2217,
 								"name": "Pink-throated Becard",
 								"BR": "X"
 							},
 							{
 								"species": "validus",
-								"index": 2592,
+								"index": 2218,
 								"name": "Crested Becard",
 								"BR": "X"
 							}
@@ -12208,22 +10475,1755 @@
 				]
 			},
 			{
-				"Family": "INCERTAE SEDIS",
-				"FamilyCommon": "INCERTAE SEDIS",
+				"Family": "OXYRUNCIDAE",
+				"FamilyCommon": "SHARPBILL",
+				"genera": [
+					{
+						"Genus": "Oxyruncus",
+						"spp": [
+							{
+								"species": "cristatus",
+								"index": 2219,
+								"name": "Sharpbill",
+								"BR": "X"
+							}
+						]
+					}
+				]
+			},
+			{
+				"Family": "ONYCHORHYNCHIDAE",
+				"FamilyCommon": "ROYAL FLYCATCHERS",
+				"genera": [
+					{
+						"Genus": "Onychorhynchus",
+						"spp": [
+							{
+								"species": "coronatus",
+								"index": 2220,
+								"name": "Royal Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Terenotriccus",
+						"spp": [
+							{
+								"species": "erythrurus",
+								"index": 2221,
+								"name": "Ruddy-tailed Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiobius",
+						"spp": [
+							{
+								"species": "barbatus",
+								"index": 2223,
+								"name": "Sulphur-rumped Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "atricaudus",
+								"index": 2224,
+								"name": "Black-tailed Flycatcher",
+								"BR": "X"
+							}
+						]
+					}
+				]
+			},
+			{
+				"Family": "TYRANNIDAE",
+				"FamilyCommon": "TYRANT FLYCATCHERS",
 				"genera": [
 					{
 						"Genus": "Piprites",
 						"spp": [
 							{
 								"species": "chloris",
-								"index": 2593,
+								"index": 2225,
 								"name": "Wing-barred Piprites",
 								"BR": "X"
 							},
 							{
 								"species": "pileata",
-								"index": 2594,
+								"index": 2226,
 								"name": "Black-capped Piprites",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Calyptura",
+						"spp": [
+							{
+								"species": "cristata",
+								"index": 2227,
+								"name": "Kinglet Calyptura",
+								"BR": "X(e)"
+							}
+						]
+					},
+					{
+						"Genus": "Neopipo",
+						"spp": [
+							{
+								"species": "cinnamomea",
+								"index": 2228,
+								"name": "Cinnamon Manakin-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Platyrinchus",
+						"spp": [
+							{
+								"species": "saturatus",
+								"index": 2229,
+								"name": "Cinnamon-crested Spadebill",
+								"BR": "X"
+							},
+							{
+								"species": "mystaceus",
+								"index": 2230,
+								"name": "White-throated Spadebill",
+								"BR": "X"
+							},
+							{
+								"species": "coronatus",
+								"index": 2231,
+								"name": "Golden-crowned Spadebill",
+								"BR": "X"
+							},
+							{
+								"species": "platyrhynchos",
+								"index": 2233,
+								"name": "White-crested Spadebill",
+								"BR": "X"
+							},
+							{
+								"species": "leucoryphus",
+								"index": 2234,
+								"name": "Russet-winged Spadebill",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Corythopis",
+						"spp": [
+							{
+								"species": "torquatus",
+								"index": 2238,
+								"name": "Ringed Antpipit",
+								"BR": "X"
+							},
+							{
+								"species": "delalandi",
+								"index": 2239,
+								"name": "Southern Antpipit",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Phylloscartes",
+						"spp": [
+							{
+								"species": "chapmani",
+								"index": 2241,
+								"name": "Chapman's Bristle-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "eximius",
+								"index": 2246,
+								"name": "Southern Bristle-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "ventralis",
+								"index": 2247,
+								"name": "Mottle-cheeked Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "kronei",
+								"index": 2248,
+								"name": "Restinga Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "beckeri",
+								"index": 2249,
+								"name": "Bahia Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "virescens",
+								"index": 2250,
+								"name": "Olive-green Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "nigrifrons",
+								"index": 2252,
+								"name": "Black-fronted Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "ceciliae",
+								"index": 2254,
+								"name": "Alagoas Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "roquettei",
+								"index": 2257,
+								"name": "Minas Gerais Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "paulista",
+								"index": 2258,
+								"name": "São Paulo Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "oustaleti",
+								"index": 2259,
+								"name": "Oustalet's Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "difficilis",
+								"index": 2260,
+								"name": "Serra do Mar Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "sylviolus",
+								"index": 2261,
+								"name": "Bay-ringed Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Mionectes",
+						"spp": [
+							{
+								"species": "oleagineus",
+								"index": 2264,
+								"name": "Ochre-bellied Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "macconnelli",
+								"index": 2265,
+								"name": "McConnell's Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "rufiventris",
+								"index": 2266,
+								"name": "Gray-hooded Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Leptopogon",
+						"spp": [
+							{
+								"species": "amaurocephalus",
+								"index": 2267,
+								"name": "Sepia-capped Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Taeniotriccus",
+						"spp": [
+							{
+								"species": "andrei",
+								"index": 2271,
+								"name": "Black-chested Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Cnipodectes",
+						"spp": [
+							{
+								"species": "subbrunneus",
+								"index": 2272,
+								"name": "Brownish Twistwing",
+								"BR": "X"
+							},
+							{
+								"species": "superrufus",
+								"index": 2273,
+								"name": "Rufous Twistwing",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Rhynchocyclus",
+						"spp": [
+							{
+								"species": "olivaceus",
+								"index": 2274,
+								"name": "Olivaceous Flatbill",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Tolmomyias",
+						"spp": [
+							{
+								"species": "sulphurescens",
+								"index": 2278,
+								"name": "Yellow-olive Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "assimilis",
+								"index": 2280,
+								"name": "Yellow-margined Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "poliocephalus",
+								"index": 2281,
+								"name": "Gray-crowned Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "flaviventris",
+								"index": 2282,
+								"name": "Yellow-breasted Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiornis",
+						"spp": [
+							{
+								"species": "auricularis",
+								"index": 2283,
+								"name": "Eared Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "ecaudatus",
+								"index": 2286,
+								"name": "Short-tailed Pygmy-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Lophotriccus",
+						"spp": [
+							{
+								"species": "vitiosus",
+								"index": 2290,
+								"name": "Double-banded Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "eulophotes",
+								"index": 2291,
+								"name": "Long-crested Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "galeatus",
+								"index": 2292,
+								"name": "Helmeted Pygmy-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Atalotriccus",
+						"spp": [
+							{
+								"species": "pilaris",
+								"index": 2293,
+								"name": "Pale-eyed Pygmy-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Hemitriccus",
+						"spp": [
+							{
+								"species": "minor",
+								"index": 2294,
+								"name": "Snethlage's Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "cohnhafti",
+								"index": 2295,
+								"name": "Acre Tody-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "flammulatus",
+								"index": 2297,
+								"name": "Flammulated Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "diops",
+								"index": 2298,
+								"name": "Drab-breasted Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "obsoletus",
+								"index": 2299,
+								"name": "Brown-breasted Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "josephinae",
+								"index": 2300,
+								"name": "Boat-billed Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "zosterops",
+								"index": 2301,
+								"name": "White-eyed Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "griseipectus",
+								"index": 2302,
+								"name": "White-bellied Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "orbitatus",
+								"index": 2303,
+								"name": "Eye-ringed Tody-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "iohannis",
+								"index": 2304,
+								"name": "Johannes's Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "striaticollis",
+								"index": 2305,
+								"name": "Stripe-necked Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "nidipendulus",
+								"index": 2306,
+								"name": "Hangnest Tody-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "margaritaceiventer",
+								"index": 2307,
+								"name": "Pearly-vented Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "inornatus",
+								"index": 2308,
+								"name": "Pelzeln's Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "minimus",
+								"index": 2309,
+								"name": "Zimmer's Tody-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "mirandae",
+								"index": 2312,
+								"name": "Buff-breasted Tody-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "kaempferi",
+								"index": 2313,
+								"name": "Kaempfer's Tody-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "furcatus",
+								"index": 2315,
+								"name": "Fork-tailed Pygmy-Tyrant",
+								"BR": "X(e)"
+							}
+						]
+					},
+					{
+						"Genus": "Poecilotriccus",
+						"spp": [
+							{
+								"species": "albifacies",
+								"index": 2318,
+								"name": "White-cheeked Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "capitalis",
+								"index": 2319,
+								"name": "Black-and-white Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "senex",
+								"index": 2320,
+								"name": "Buff-cheeked Tody-Flycatcher",
+								"BR": "X(e)"
+							},
+							{
+								"species": "russatus",
+								"index": 2321,
+								"name": "Ruddy Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "plumbeiceps",
+								"index": 2322,
+								"name": "Ochre-faced Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "fumifrons",
+								"index": 2323,
+								"name": "Smoky-fronted Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "latirostris",
+								"index": 2324,
+								"name": "Rusty-fronted Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "sylvia",
+								"index": 2325,
+								"name": "Slate-headed Tody-Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Todirostrum",
+						"spp": [
+							{
+								"species": "maculatum",
+								"index": 2328,
+								"name": "Spotted Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "poliocephalum",
+								"index": 2329,
+								"name": "Gray-headed Tody-Flycatcher",
+								"BR": "X(e)"
+							},
+							{
+								"species": "cinereum",
+								"index": 2330,
+								"name": "Common Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "pictum",
+								"index": 2333,
+								"name": "Painted Tody-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "chrysocrotaphum",
+								"index": 2334,
+								"name": "Yellow-browed Tody-Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Hirundinea",
+						"spp": [
+							{
+								"species": "ferruginea",
+								"index": 2339,
+								"name": "Cliff Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Zimmerius",
+						"spp": [
+							{
+								"species": "chicomendesi",
+								"index": 2348,
+								"name": "Chico's Tyrannulet",
+								"BR": "X(e)"
+							},
+							{
+								"species": "gracilipes",
+								"index": 2349,
+								"name": "Slender-footed Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "acer",
+								"index": 2350,
+								"name": "Guianan Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Stigmatura",
+						"spp": [
+							{
+								"species": "napensis",
+								"index": 2353,
+								"name": "Lesser Wagtail-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "budytoides",
+								"index": 2354,
+								"name": "Greater Wagtail-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Inezia",
+						"spp": [
+							{
+								"species": "inornata",
+								"index": 2356,
+								"name": "Plain Tyrannulet",
+								"BR": "NB"
+							},
+							{
+								"species": "subflava",
+								"index": 2357,
+								"name": "Amazonian Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "caudata",
+								"index": 2358,
+								"name": "Pale-tipped Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Euscarthmus",
+						"spp": [
+							{
+								"species": "meloryphus",
+								"index": 2359,
+								"name": "Tawny-crowned Pygmy-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "rufomarginatus",
+								"index": 2360,
+								"name": "Rufous-sided Pygmy-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Ornithion",
+						"spp": [
+							{
+								"species": "inerme",
+								"index": 2362,
+								"name": "White-lored Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Camptostoma",
+						"spp": [
+							{
+								"species": "obsoletum",
+								"index": 2363,
+								"name": "Southern Beardless-Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Elaenia",
+						"spp": [
+							{
+								"species": "flavogaster",
+								"index": 2364,
+								"name": "Yellow-bellied Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "spectabilis",
+								"index": 2366,
+								"name": "Large Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "ridleyana",
+								"index": 2367,
+								"name": "Noronha Elaenia",
+								"BR": "X(e)"
+							},
+							{
+								"species": "albiceps",
+								"index": 2368,
+								"name": "White-crested Elaenia",
+								"BR": "NB"
+							},
+							{
+								"species": "parvirostris",
+								"index": 2369,
+								"name": "Small-billed Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "mesoleuca",
+								"index": 2370,
+								"name": "Olivaceous Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "pelzelni",
+								"index": 2373,
+								"name": "Brownish Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "cristata",
+								"index": 2374,
+								"name": "Plain-crested Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "chiriquensis",
+								"index": 2375,
+								"name": "Lesser Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "ruficeps",
+								"index": 2377,
+								"name": "Rufous-crowned Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "olivina",
+								"index": 2379,
+								"name": "Tepui Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "dayi",
+								"index": 2381,
+								"name": "Great Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "sordida",
+								"index": 2382,
+								"name": "Small-headed Elaenia",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Tyrannulus",
+						"spp": [
+							{
+								"species": "elatus",
+								"index": 2384,
+								"name": "Yellow-crowned Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiopagis",
+						"spp": [
+							{
+								"species": "gaimardii",
+								"index": 2385,
+								"name": "Forest Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "caniceps",
+								"index": 2386,
+								"name": "Gray Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "flavivertex",
+								"index": 2389,
+								"name": "Yellow-crowned Elaenia",
+								"BR": "X"
+							},
+							{
+								"species": "viridicata",
+								"index": 2390,
+								"name": "Greenish Elaenia",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Suiriri",
+						"spp": [
+							{
+								"species": "suiriri",
+								"index": 2391,
+								"name": "Suiriri Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "affinis",
+								"index": 2392,
+								"name": "Chapada Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Capsiempis",
+						"spp": [
+							{
+								"species": "flaveola",
+								"index": 2393,
+								"name": "Yellow Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Phyllomyias",
+						"spp": [
+							{
+								"species": "burmeisteri",
+								"index": 2394,
+								"name": "Rough-legged Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "virescens",
+								"index": 2395,
+								"name": "Greenish Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "reiseri",
+								"index": 2396,
+								"name": "Reiser's Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "fasciatus",
+								"index": 2400,
+								"name": "Planalto Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "griseiceps",
+								"index": 2401,
+								"name": "Sooty-headed Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "griseocapilla",
+								"index": 2406,
+								"name": "Gray-capped Tyrannulet",
+								"BR": "X(e)"
+							}
+						]
+					},
+					{
+						"Genus": "Phaeomyias",
+						"spp": [
+							{
+								"species": "murina",
+								"index": 2407,
+								"name": "Mouse-colored Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Mecocerculus",
+						"spp": [
+							{
+								"species": "leucophrys",
+								"index": 2412,
+								"name": "White-throated Tyrannulet",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Polystictus",
+						"spp": [
+							{
+								"species": "pectoralis",
+								"index": 2421,
+								"name": "Bearded Tachuri",
+								"BR": "X"
+							},
+							{
+								"species": "superciliaris",
+								"index": 2422,
+								"name": "Gray-backed Tachuri",
+								"BR": "X(e)"
+							}
+						]
+					},
+					{
+						"Genus": "Culicivora",
+						"spp": [
+							{
+								"species": "caudacuta",
+								"index": 2423,
+								"name": "Sharp-tailed Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Pseudocolopteryx",
+						"spp": [
+							{
+								"species": "sclateri",
+								"index": 2424,
+								"name": "Crested Doradito",
+								"BR": "X"
+							},
+							{
+								"species": "acutipennis",
+								"index": 2425,
+								"name": "Subtropical Doradito",
+								"BR": "NB"
+							},
+							{
+								"species": "dinelliana",
+								"index": 2426,
+								"name": "Dinelli's Doradito",
+								"BR": "H"
+							},
+							{
+								"species": "flaviventris",
+								"index": 2427,
+								"name": "Warbling Doradito",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Serpophaga",
+						"spp": [
+							{
+								"species": "hypoleuca",
+								"index": 2430,
+								"name": "River Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "nigricans",
+								"index": 2431,
+								"name": "Sooty Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "subcristata",
+								"index": 2432,
+								"name": "White-crested Tyrannulet",
+								"BR": "X"
+							},
+							{
+								"species": "munda",
+								"index": 2433,
+								"name": "White-bellied Tyrannulet",
+								"BR": "NB"
+							},
+							{
+								"species": "griseicapilla",
+								"index": 2434,
+								"name": "Straneck's Tyrannulet",
+								"BR": "NB"
+							}
+						]
+					},
+					{
+						"Genus": "Attila",
+						"spp": [
+							{
+								"species": "phoenicurus",
+								"index": 2438,
+								"name": "Rufous-tailed Attila",
+								"BR": "X"
+							},
+							{
+								"species": "cinnamomeus",
+								"index": 2439,
+								"name": "Cinnamon Attila",
+								"BR": "X"
+							},
+							{
+								"species": "citriniventris",
+								"index": 2441,
+								"name": "Citron-bellied Attila",
+								"BR": "X"
+							},
+							{
+								"species": "bolivianus",
+								"index": 2442,
+								"name": "Dull-capped Attila",
+								"BR": "X"
+							},
+							{
+								"species": "rufus",
+								"index": 2443,
+								"name": "Gray-hooded Attila",
+								"BR": "X(e)"
+							},
+							{
+								"species": "spadiceus",
+								"index": 2444,
+								"name": "Bright-rumped Attila",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Legatus",
+						"spp": [
+							{
+								"species": "leucophaius",
+								"index": 2445,
+								"name": "Piratic Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Ramphotrigon",
+						"spp": [
+							{
+								"species": "megacephalum",
+								"index": 2446,
+								"name": "Large-headed Flatbill",
+								"BR": "X"
+							},
+							{
+								"species": "ruficauda",
+								"index": 2447,
+								"name": "Rufous-tailed Flatbill",
+								"BR": "X"
+							},
+							{
+								"species": "fuscicauda",
+								"index": 2448,
+								"name": "Dusky-tailed Flatbill",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Pitangus",
+						"spp": [
+							{
+								"species": "sulphuratus",
+								"index": 2449,
+								"name": "Great Kiskadee",
+								"BR": "X"
+							},
+							{
+								"species": "lictor",
+								"index": 2450,
+								"name": "Lesser Kiskadee",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Machetornis",
+						"spp": [
+							{
+								"species": "rixosa",
+								"index": 2451,
+								"name": "Cattle Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Tyrannopsis",
+						"spp": [
+							{
+								"species": "sulphurea",
+								"index": 2452,
+								"name": "Sulphury Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Megarynchus",
+						"spp": [
+							{
+								"species": "pitangua",
+								"index": 2453,
+								"name": "Boat-billed Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiodynastes",
+						"spp": [
+							{
+								"species": "luteiventris",
+								"index": 2456,
+								"name": "Sulphur-bellied Flycatcher",
+								"BR": "V"
+							},
+							{
+								"species": "maculatus",
+								"index": 2457,
+								"name": "Streaked Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiozetetes",
+						"spp": [
+							{
+								"species": "cayanensis",
+								"index": 2458,
+								"name": "Rusty-margined Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "similis",
+								"index": 2459,
+								"name": "Social Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "granadensis",
+								"index": 2460,
+								"name": "Gray-capped Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "luteiventris",
+								"index": 2461,
+								"name": "Dusky-chested Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Conopias",
+						"spp": [
+							{
+								"species": "parvus",
+								"index": 2463,
+								"name": "Yellow-throated Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "trivirgatus",
+								"index": 2464,
+								"name": "Three-striped Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Empidonomus",
+						"spp": [
+							{
+								"species": "varius",
+								"index": 2467,
+								"name": "Variegated Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "aurantioatrocristatus",
+								"index": 2468,
+								"name": "Crowned Slaty Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Tyrannus",
+						"spp": [
+							{
+								"species": "albogularis",
+								"index": 2470,
+								"name": "White-throated Kingbird",
+								"BR": "X"
+							},
+							{
+								"species": "melancholicus",
+								"index": 2471,
+								"name": "Tropical Kingbird",
+								"BR": "X"
+							},
+							{
+								"species": "savana",
+								"index": 2472,
+								"name": "Fork-tailed Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "tyrannus",
+								"index": 2473,
+								"name": "Eastern Kingbird",
+								"BR": "NB"
+							},
+							{
+								"species": "dominicensis",
+								"index": 2474,
+								"name": "Gray Kingbird",
+								"BR": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Rhytipterna",
+						"spp": [
+							{
+								"species": "simplex",
+								"index": 2476,
+								"name": "Grayish Mourner",
+								"BR": "X"
+							},
+							{
+								"species": "immunda",
+								"index": 2477,
+								"name": "Pale-bellied Mourner",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Casiornis",
+						"spp": [
+							{
+								"species": "rufus",
+								"index": 2478,
+								"name": "Rufous Casiornis",
+								"BR": "X"
+							},
+							{
+								"species": "fuscus",
+								"index": 2479,
+								"name": "Ash-throated Casiornis",
+								"BR": "X(e)"
+							}
+						]
+					},
+					{
+						"Genus": "Sirystes",
+						"spp": [
+							{
+								"species": "albocinereus",
+								"index": 2481,
+								"name": "White-rumped Sirystes",
+								"BR": "X"
+							},
+							{
+								"species": "subcanescens",
+								"index": 2482,
+								"name": "Todd's Sirystes",
+								"BR": "X"
+							},
+							{
+								"species": "sibilator",
+								"index": 2483,
+								"name": "Sibilant Sirystes",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiarchus",
+						"spp": [
+							{
+								"species": "tuberculifer",
+								"index": 2485,
+								"name": "Dusky-capped Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "swainsoni",
+								"index": 2486,
+								"name": "Swainson's Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "ferox",
+								"index": 2489,
+								"name": "Short-crested Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "tyrannulus",
+								"index": 2494,
+								"name": "Brown-crested Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Colonia",
+						"spp": [
+							{
+								"species": "colonus",
+								"index": 2496,
+								"name": "Long-tailed Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Myiophobus",
+						"spp": [
+							{
+								"species": "roraimae",
+								"index": 2500,
+								"name": "Roraiman Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "fasciatus",
+								"index": 2502,
+								"name": "Bran-colored Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Sublegatus",
+						"spp": [
+							{
+								"species": "obscurior",
+								"index": 2516,
+								"name": "Amazonian Scrub-Flycatcher",
+								"BR": "X"
+							},
+							{
+								"species": "modestus",
+								"index": 2517,
+								"name": "Southern Scrub-Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Pyrocephalus",
+						"spp": [
+							{
+								"species": "rubinus",
+								"index": 2518,
+								"name": "Vermilion Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Fluvicola",
+						"spp": [
+							{
+								"species": "pica",
+								"index": 2519,
+								"name": "Pied Water-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "albiventer",
+								"index": 2520,
+								"name": "Black-backed Water-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "nengeta",
+								"index": 2521,
+								"name": "Masked Water-Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Arundinicola",
+						"spp": [
+							{
+								"species": "leucocephala",
+								"index": 2522,
+								"name": "White-headed Marsh Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Gubernetes",
+						"spp": [
+							{
+								"species": "yetapa",
+								"index": 2523,
+								"name": "Streamer-tailed Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Alectrurus",
+						"spp": [
+							{
+								"species": "tricolor",
+								"index": 2524,
+								"name": "Cock-tailed Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "risora",
+								"index": 2525,
+								"name": "Strange-tailed Tyrant",
+								"BR": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Lessonia",
+						"spp": [
+							{
+								"species": "rufa",
+								"index": 2526,
+								"name": "Austral Negrito",
+								"BR": "NB"
+							}
+						]
+					},
+					{
+						"Genus": "Hymenops",
+						"spp": [
+							{
+								"species": "perspicillatus",
+								"index": 2528,
+								"name": "Spectacled Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Knipolegus",
+						"spp": [
+							{
+								"species": "orenocensis",
+								"index": 2529,
+								"name": "Riverside Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "poecilurus",
+								"index": 2530,
+								"name": "Rufous-tailed Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "poecilocercus",
+								"index": 2531,
+								"name": "Amazonian Black-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "franciscanus",
+								"index": 2532,
+								"name": "Caatinga Black-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "lophotes",
+								"index": 2533,
+								"name": "Crested Black-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "nigerrimus",
+								"index": 2534,
+								"name": "Velvety Black-Tyrant",
+								"BR": "X(e)"
+							},
+							{
+								"species": "cyanirostris",
+								"index": 2537,
+								"name": "Blue-billed Black-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "striaticeps",
+								"index": 2538,
+								"name": "Cinereous Tyrant",
+								"BR": "V"
+							},
+							{
+								"species": "aterrimus",
+								"index": 2539,
+								"name": "White-winged Black-Tyrant",
+								"BR": "V"
+							},
+							{
+								"species": "hudsoni",
+								"index": 2540,
+								"name": "Hudson's Black-Tyrant",
+								"BR": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Satrapa",
+						"spp": [
+							{
+								"species": "icterophrys",
+								"index": 2541,
+								"name": "Yellow-browed Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Muscisaxicola",
+						"spp": [
+							{
+								"species": "fluviatilis",
+								"index": 2542,
+								"name": "Little Ground-Tyrant",
+								"BR": "X"
+							},
+							{
+								"species": "maclovianus",
+								"index": 2550,
+								"name": "Dark-faced Ground-Tyrant",
+								"BR": "V"
+							},
+							{
+								"species": "capistratus",
+								"index": 2553,
+								"name": "Cinnamon-bellied Ground-Tyrant",
+								"BR": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Xolmis",
+						"spp": [
+							{
+								"species": "cinereus",
+								"index": 2558,
+								"name": "Gray Monjita",
+								"BR": "X"
+							},
+							{
+								"species": "coronatus",
+								"index": 2559,
+								"name": "Black-crowned Monjita",
+								"BR": "NB"
+							},
+							{
+								"species": "velatus",
+								"index": 2560,
+								"name": "White-rumped Monjita",
+								"BR": "X"
+							},
+							{
+								"species": "irupero",
+								"index": 2561,
+								"name": "White Monjita",
+								"BR": "X"
+							},
+							{
+								"species": "rubetra",
+								"index": 2563,
+								"name": "Rusty-backed Monjita",
+								"BR": "V"
+							},
+							{
+								"species": "dominicanus",
+								"index": 2564,
+								"name": "Black-and-white Monjita",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Agriornis",
+						"spp": [
+							{
+								"species": "micropterus",
+								"index": 2568,
+								"name": "Gray-bellied Shrike-Tyrant",
+								"BR": "V"
+							},
+							{
+								"species": "murinus",
+								"index": 2569,
+								"name": "Lesser Shrike-Tyrant",
+								"BR": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Neoxolmis",
+						"spp": [
+							{
+								"species": "rufiventris",
+								"index": 2570,
+								"name": "Chocolate-vented Tyrant",
+								"BR": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Ochthornis",
+						"spp": [
+							{
+								"species": "littoralis",
+								"index": 2575,
+								"name": "Drab Water Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Cnemotriccus",
+						"spp": [
+							{
+								"species": "fuscatus",
+								"index": 2576,
+								"name": "Fuscous Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Lathrotriccus",
+						"spp": [
+							{
+								"species": "euleri",
+								"index": 2578,
+								"name": "Euler's Flycatcher",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Empidonax",
+						"spp": [
+							{
+								"species": "alnorum",
+								"index": 2585,
+								"name": "Alder Flycatcher",
+								"BR": "NB"
+							}
+						]
+					},
+					{
+						"Genus": "Contopus",
+						"spp": [
+							{
+								"species": "cooperi",
+								"index": 2586,
+								"name": "Olive-sided Flycatcher",
+								"BR": "NB"
+							},
+							{
+								"species": "fumigatus",
+								"index": 2587,
+								"name": "Smoke-colored Pewee",
+								"BR": "X"
+							},
+							{
+								"species": "virens",
+								"index": 2589,
+								"name": "Eastern Wood-Pewee",
+								"BR": "NB"
+							},
+							{
+								"species": "cinereus",
+								"index": 2590,
+								"name": "Tropical Pewee",
+								"BR": "X"
+							},
+							{
+								"species": "albogularis",
+								"index": 2591,
+								"name": "White-throated Pewee",
+								"BR": "X"
+							},
+							{
+								"species": "nigrescens",
+								"index": 2592,
+								"name": "Blackish Pewee",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Muscipipra",
+						"spp": [
+							{
+								"species": "vetula",
+								"index": 2593,
+								"name": "Shear-tailed Gray Tyrant",
+								"BR": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Tachuris",
+						"spp": [
+							{
+								"species": "rubrigastra",
+								"index": 2594,
+								"name": "Many-colored Rush Tyrant",
 								"BR": "X"
 							}
 						]
@@ -12635,7 +12635,7 @@
 							{
 								"species": "platensis",
 								"index": 2676,
-								"name": "Sedge Wren",
+								"name": "Grass Wren",
 								"BR": "X"
 							}
 						]
@@ -14210,10 +14210,10 @@
 						]
 					},
 					{
-						"Genus": "Islerothraupis",
+						"Genus": "Loriotus",
 						"spp": [
 							{
-								"species": "cristata",
+								"species": "cristatus",
 								"index": 3150,
 								"name": "Flame-crested Tanager",
 								"BR": "X"
@@ -14225,7 +14225,7 @@
 								"BR": "X"
 							},
 							{
-								"species": "luctuosa",
+								"species": "luctuosus",
 								"index": 3152,
 								"name": "White-shouldered Tanager",
 								"BR": "X"

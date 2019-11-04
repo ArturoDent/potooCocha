@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "October 15, 2019",
+	"version": "October 28, 2019",
 	"birds": {
 		"families": [
 			{
@@ -3520,15 +3520,43 @@
 				]
 			},
 			{
+				"Family": "COTINGIDAE",
+				"FamilyCommon": "COTINGAS",
+				"genera": [
+					{
+						"Genus": "Phytotoma",
+						"spp": [
+							{
+								"species": "rara",
+								"index": 2147,
+								"name": "Rufous-tailed Plantcutter",
+								"CL": "X"
+							}
+						]
+					}
+				]
+			},
+			{
 				"Family": "TYRANNIDAE",
 				"FamilyCommon": "TYRANT FLYCATCHERS",
 				"genera": [
+					{
+						"Genus": "Hirundinea",
+						"spp": [
+							{
+								"species": "ferruginea",
+								"index": 2339,
+								"name": "Cliff Flycatcher",
+								"CL": "H"
+							}
+						]
+					},
 					{
 						"Genus": "Elaenia",
 						"spp": [
 							{
 								"species": "albiceps",
-								"index": 2105,
+								"index": 2368,
 								"name": "White-crested Elaenia",
 								"CL": "X"
 							}
@@ -3539,25 +3567,25 @@
 						"spp": [
 							{
 								"species": "reguloides",
-								"index": 2133,
+								"index": 2416,
 								"name": "Pied-crested Tit-Tyrant",
 								"CL": "X"
 							},
 							{
 								"species": "flavirostris",
-								"index": 2135,
+								"index": 2418,
 								"name": "Yellow-billed Tit-Tyrant",
 								"CL": "X"
 							},
 							{
 								"species": "parulus",
-								"index": 2136,
+								"index": 2419,
 								"name": "Tufted Tit-Tyrant",
 								"CL": "X"
 							},
 							{
 								"species": "fernandezianus",
-								"index": 2137,
+								"index": 2420,
 								"name": "Juan Fernandez Tit-Tyrant",
 								"CL": "X(e)"
 							}
@@ -3568,269 +3596,8 @@
 						"spp": [
 							{
 								"species": "citreola",
-								"index": 2154,
+								"index": 2428,
 								"name": "Ticking Doradito",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Tachuris",
-						"spp": [
-							{
-								"species": "rubrigastra",
-								"index": 2216,
-								"name": "Many-colored Rush Tyrant",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Myiophobus",
-						"spp": [
-							{
-								"species": "fasciatus",
-								"index": 2296,
-								"name": "Bran-colored Flycatcher",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Hirundinea",
-						"spp": [
-							{
-								"species": "ferruginea",
-								"index": 2302,
-								"name": "Cliff Flycatcher",
-								"CL": "H"
-							}
-						]
-					},
-					{
-						"Genus": "Contopus",
-						"spp": [
-							{
-								"species": "sordidulus",
-								"index": 2315,
-								"name": "Western Wood-Pewee",
-								"CL": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Pyrocephalus",
-						"spp": [
-							{
-								"species": "rubinus",
-								"index": 2323,
-								"name": "Vermilion Flycatcher",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Lessonia",
-						"spp": [
-							{
-								"species": "rufa",
-								"index": 2324,
-								"name": "Austral Negrito",
-								"CL": "X"
-							},
-							{
-								"species": "oreas",
-								"index": 2325,
-								"name": "Andean Negrito",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Knipolegus",
-						"spp": [
-							{
-								"species": "aterrimus",
-								"index": 2336,
-								"name": "White-winged Black-Tyrant",
-								"CL": "H"
-							}
-						]
-					},
-					{
-						"Genus": "Hymenops",
-						"spp": [
-							{
-								"species": "perspicillatus",
-								"index": 2338,
-								"name": "Spectacled Tyrant",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Muscisaxicola",
-						"spp": [
-							{
-								"species": "maculirostris",
-								"index": 2342,
-								"name": "Spot-billed Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "juninensis",
-								"index": 2344,
-								"name": "Puna Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "cinereus",
-								"index": 2345,
-								"name": "Cinereous Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "albifrons",
-								"index": 2346,
-								"name": "White-fronted Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "flavinucha",
-								"index": 2347,
-								"name": "Ochre-naped Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "rufivertex",
-								"index": 2348,
-								"name": "Rufous-naped Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "maclovianus",
-								"index": 2349,
-								"name": "Dark-faced Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "albilora",
-								"index": 2350,
-								"name": "White-browed Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "capistratus",
-								"index": 2352,
-								"name": "Cinnamon-bellied Ground-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "frontalis",
-								"index": 2353,
-								"name": "Black-fronted Ground-Tyrant",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Agriornis",
-						"spp": [
-							{
-								"species": "montanus",
-								"index": 2354,
-								"name": "Black-billed Shrike-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "albicauda",
-								"index": 2355,
-								"name": "White-tailed Shrike-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "lividus",
-								"index": 2356,
-								"name": "Great Shrike-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "micropterus",
-								"index": 2357,
-								"name": "Gray-bellied Shrike-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "murinus",
-								"index": 2358,
-								"name": "Lesser Shrike-Tyrant",
-								"CL": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Xolmis",
-						"spp": [
-							{
-								"species": "pyrope",
-								"index": 2359,
-								"name": "Fire-eyed Diucon",
-								"CL": "X"
-							},
-							{
-								"species": "coronatus",
-								"index": 2361,
-								"name": "Black-crowned Monjita",
-								"CL": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Polioxolmis",
-						"spp": [
-							{
-								"species": "rufipennis",
-								"index": 2372,
-								"name": "Rufous-webbed Bush-Tyrant",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Neoxolmis",
-						"spp": [
-							{
-								"species": "rufiventris",
-								"index": 2373,
-								"name": "Chocolate-vented Tyrant",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Ochthoeca",
-						"spp": [
-							{
-								"species": "oenanthoides",
-								"index": 2390,
-								"name": "d'Orbigny's Chat-Tyrant",
-								"CL": "X"
-							},
-							{
-								"species": "leucophrys",
-								"index": 2392,
-								"name": "White-browed Chat-Tyrant",
-								"CL": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Colorhamphus",
-						"spp": [
-							{
-								"species": "parvirostris",
-								"index": 2393,
-								"name": "Patagonian Tyrant",
 								"CL": "X"
 							}
 						]
@@ -3840,19 +3607,8 @@
 						"spp": [
 							{
 								"species": "brevicauda",
-								"index": 2395,
+								"index": 2437,
 								"name": "Short-tailed Field Tyrant",
-								"CL": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Machetornis",
-						"spp": [
-							{
-								"species": "rixosa",
-								"index": 2396,
-								"name": "Cattle Tyrant",
 								"CL": "V"
 							}
 						]
@@ -3862,8 +3618,19 @@
 						"spp": [
 							{
 								"species": "sulphuratus",
-								"index": 2403,
+								"index": 2449,
 								"name": "Great Kiskadee",
+								"CL": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Machetornis",
+						"spp": [
+							{
+								"species": "rixosa",
+								"index": 2451,
+								"name": "Cattle Tyrant",
 								"CL": "V"
 							}
 						]
@@ -3873,13 +3640,13 @@
 						"spp": [
 							{
 								"species": "luteiventris",
-								"index": 2411,
+								"index": 2456,
 								"name": "Sulphur-bellied Flycatcher",
 								"CL": "V"
 							},
 							{
 								"species": "maculatus",
-								"index": 2412,
+								"index": 2457,
 								"name": "Streaked Flycatcher",
 								"CL": "V"
 							}
@@ -3890,7 +3657,7 @@
 						"spp": [
 							{
 								"species": "aurantioatrocristatus",
-								"index": 2416,
+								"index": 2468,
 								"name": "Crowned Slaty Flycatcher",
 								"CL": "V"
 							}
@@ -3901,19 +3668,19 @@
 						"spp": [
 							{
 								"species": "melancholicus",
-								"index": 2419,
+								"index": 2471,
 								"name": "Tropical Kingbird",
 								"CL": "V"
 							},
 							{
 								"species": "savana",
-								"index": 2420,
+								"index": 2472,
 								"name": "Fork-tailed Flycatcher",
 								"CL": "V"
 							},
 							{
 								"species": "tyrannus",
-								"index": 2421,
+								"index": 2473,
 								"name": "Eastern Kingbird",
 								"CL": "V"
 							}
@@ -3924,25 +3691,258 @@
 						"spp": [
 							{
 								"species": "rufus",
-								"index": 2430,
+								"index": 2478,
 								"name": "Rufous Casiornis",
 								"CL": "V"
 							}
 						]
-					}
-				]
-			},
-			{
-				"Family": "COTINGIDAE",
-				"FamilyCommon": "COTINGAS",
-				"genera": [
+					},
 					{
-						"Genus": "Phytotoma",
+						"Genus": "Myiophobus",
 						"spp": [
 							{
-								"species": "rara",
-								"index": 2472,
-								"name": "Rufous-tailed Plantcutter",
+								"species": "fasciatus",
+								"index": 2502,
+								"name": "Bran-colored Flycatcher",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Colorhamphus",
+						"spp": [
+							{
+								"species": "parvirostris",
+								"index": 2503,
+								"name": "Patagonian Tyrant",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Ochthoeca",
+						"spp": [
+							{
+								"species": "oenanthoides",
+								"index": 2511,
+								"name": "d'Orbigny's Chat-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "leucophrys",
+								"index": 2513,
+								"name": "White-browed Chat-Tyrant",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Pyrocephalus",
+						"spp": [
+							{
+								"species": "rubinus",
+								"index": 2518,
+								"name": "Vermilion Flycatcher",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Lessonia",
+						"spp": [
+							{
+								"species": "rufa",
+								"index": 2526,
+								"name": "Austral Negrito",
+								"CL": "X"
+							},
+							{
+								"species": "oreas",
+								"index": 2527,
+								"name": "Andean Negrito",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Hymenops",
+						"spp": [
+							{
+								"species": "perspicillatus",
+								"index": 2528,
+								"name": "Spectacled Tyrant",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Knipolegus",
+						"spp": [
+							{
+								"species": "aterrimus",
+								"index": 2539,
+								"name": "White-winged Black-Tyrant",
+								"CL": "H"
+							}
+						]
+					},
+					{
+						"Genus": "Muscisaxicola",
+						"spp": [
+							{
+								"species": "maculirostris",
+								"index": 2543,
+								"name": "Spot-billed Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "juninensis",
+								"index": 2545,
+								"name": "Puna Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "cinereus",
+								"index": 2546,
+								"name": "Cinereous Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "albifrons",
+								"index": 2547,
+								"name": "White-fronted Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "flavinucha",
+								"index": 2548,
+								"name": "Ochre-naped Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "rufivertex",
+								"index": 2549,
+								"name": "Rufous-naped Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "maclovianus",
+								"index": 2550,
+								"name": "Dark-faced Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "albilora",
+								"index": 2551,
+								"name": "White-browed Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "capistratus",
+								"index": 2553,
+								"name": "Cinnamon-bellied Ground-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "frontalis",
+								"index": 2554,
+								"name": "Black-fronted Ground-Tyrant",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Polioxolmis",
+						"spp": [
+							{
+								"species": "rufipennis",
+								"index": 2556,
+								"name": "Rufous-webbed Bush-Tyrant",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Xolmis",
+						"spp": [
+							{
+								"species": "pyrope",
+								"index": 2557,
+								"name": "Fire-eyed Diucon",
+								"CL": "X"
+							},
+							{
+								"species": "coronatus",
+								"index": 2559,
+								"name": "Black-crowned Monjita",
+								"CL": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Agriornis",
+						"spp": [
+							{
+								"species": "montanus",
+								"index": 2565,
+								"name": "Black-billed Shrike-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "albicauda",
+								"index": 2566,
+								"name": "White-tailed Shrike-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "lividus",
+								"index": 2567,
+								"name": "Great Shrike-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "micropterus",
+								"index": 2568,
+								"name": "Gray-bellied Shrike-Tyrant",
+								"CL": "X"
+							},
+							{
+								"species": "murinus",
+								"index": 2569,
+								"name": "Lesser Shrike-Tyrant",
+								"CL": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Neoxolmis",
+						"spp": [
+							{
+								"species": "rufiventris",
+								"index": 2570,
+								"name": "Chocolate-vented Tyrant",
+								"CL": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Contopus",
+						"spp": [
+							{
+								"species": "sordidulus",
+								"index": 2588,
+								"name": "Western Wood-Pewee",
+								"CL": "V"
+							}
+						]
+					},
+					{
+						"Genus": "Tachuris",
+						"spp": [
+							{
+								"species": "rubrigastra",
+								"index": 2594,
+								"name": "Many-colored Rush Tyrant",
 								"CL": "X"
 							}
 						]
@@ -4099,7 +4099,7 @@
 							{
 								"species": "platensis",
 								"index": 2676,
-								"name": "Sedge Wren",
+								"name": "Grass Wren",
 								"CL": "X"
 							}
 						]
