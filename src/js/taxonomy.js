@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 var lastQuery;
 var lastSpecies;
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
 
-  searchInput.addEventListener("input", getQuery);
+  // searchInput.addEventListener("input", getQuery);
   // "change", "click", "textInput", "focusin"
 
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
@@ -189,7 +189,7 @@ function loadCountryTaxonomy(country) {
   
   if (country === "French Guiana") {
     // getTEXT("Countries/FrenchGuianaSACC.html", getCountryHTML);
-    getJSON("JSON/French Guiana/French Guiana.json", getCountryJSON);
+    getJSON("JSON/FrenchGuiana/FrenchGuiana.json", getCountryJSON);
   }
   // because Curaçao is accented here but not in filenames
   else if (country === "Curaçao") {
@@ -198,7 +198,7 @@ function loadCountryTaxonomy(country) {
   }
   else if (country === "South America") {
     // getTEXT("Countries/SouthAmericaSACC.html", getCountryHTML);
-    getJSON("JSON/South America/South America.json", getCountryJSON);
+    getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
     // so hypotheticals and vagrants aren't selectable if South America is chosen
@@ -670,6 +670,7 @@ function printElem (evt) {
   // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';
   
   html += '</head><body>';
+  //  TODO  :  normalize lastQuery (remove accented regex)
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += content;
   html += '</body></html>';

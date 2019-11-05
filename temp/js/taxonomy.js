@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 var lastQuery;
 var lastSpecies;
@@ -11,7 +11,7 @@ var numFamilies;
 var birds;
 
 var searchCountryText;
-var taxTreeArticleOpen = false;
+// var taxTreeArticleOpen = false;
 
 var taxPage;
 var taxPanel;
@@ -19,6 +19,7 @@ var searchSpecials;
 var resultsPanel;
 var searchResults;
 
+// eslint-disable-next-line no-unused-vars
 var simpleBarResults;
 var simpleBarTaxPage;
 
@@ -27,8 +28,8 @@ var printerButton;
 var closeOpenFamiliesButton;
 
 var searchInput;
-var searchCache = {};
-var previousSearchResults;
+// var searchCache = {};
+// var previousSearchResults;
 
 var lastResultsSpecies;
 var lastIndex;
@@ -38,7 +39,7 @@ var taxInstructionsButton;
 var searchInstructionsOpen = true;
 
 
-/* global  SimpleBar  currentMap  currentCountry  */
+/* global   currentMap  currentCountry  */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -58,12 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
   searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
 
-  // (are all of these necessary?)  (especially "click" and "focusin"?)
-  searchInput.addEventListener("input", getQuery);
+  // searchInput.addEventListener("input", getQuery);
   // "change", "click", "textInput", "focusin"
 
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
-  searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);  
+  searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);
 
   taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
@@ -77,11 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
   taxPanel = document.getElementById("tax-panel");
   
   // preloading the file occurrences.txt
-  getAjax("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
+  getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
 });
 
-function getAjax(url, success) {
+// fetch() not supported by IE11
+// const response = await fetch('http://example.com/movies.json');
+// const myJson = await response.json();
+// console.log(JSON.stringify(myJson));
 
+function getTEXT(url, success) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url);
   xhr.onreadystatechange = function () {
@@ -90,6 +94,22 @@ function getAjax(url, success) {
   xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.send();
   return xhr;
+}
+
+function getJSON(url, success) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'json';
+  xhr.onload = function() {
+    var status = xhr.status;
+    if (status === 200) {
+      success(xhr.response);
+    }
+    else {
+      throw new Error("getJSON failed : " + xhr.responseText);
+    }
+  };
+  xhr.send();
 }
 
 
@@ -114,7 +134,6 @@ function loadOccurrences(data) {
 
 function toggleSearchInstructions() {
 
-  // TODO : (merge these below)  
   var taxInstructionTooltip = document.querySelector(".taxInstructionsButton .tooltip");
   
   if (!searchInstructionsOpen) taxInstructionTooltip.innerHTML = "Close";
@@ -123,8 +142,8 @@ function toggleSearchInstructions() {
   //  do only once, hence no toggle
   if (!taxInstructionsButton.classList.contains("instructionsClosed")) taxInstructionsButton.classList.add("instructionsClosed");
   
-  searchSlideUpWrapper.classList.toggle("closeInstructions");  
-  resultsPanel.classList.toggle("closeInstructions");  
+  searchSlideUpWrapper.classList.toggle("closeInstructions");
+  resultsPanel.classList.toggle("closeInstructions");
   
   if (searchInstructionsOpen) moveTaxPanel("searchInstructionsClosing");
   else moveTaxPanel("searchInstructionsOpening");
@@ -151,8 +170,7 @@ function enableSearchSpecials() {
 function loadCountryTaxonomy(country) {
 
   if (searchSpecials.classList.contains("grayed")) {
-    enableSearchSpecials();    
-    
+    enableSearchSpecials();
     closeOpenFamiliesButton.setAttribute("tabindex", "0");
   }
 
@@ -166,40 +184,50 @@ function loadCountryTaxonomy(country) {
     searchResults.classList.remove("samTax");
     taxPage.classList.remove("samTax");
   }
+  
 //  -----------------------------------------------------------------------------------------------
-  if (country === "French Guiana") getAjax("Countries/FrenchGuianaSACC.html", getCountryData);
+  
+  if (country === "French Guiana") {
+    // getTEXT("Countries/FrenchGuianaSACC.html", getCountryHTML);
+    getJSON("JSON/FrenchGuiana/FrenchGuiana.json", getCountryJSON);
+  }
   // because Curaçao is accented here but not in filenames
-  else if (country === "Curaçao") getAjax("Countries/CuracaoSACC.html", getCountryData);
+  else if (country === "Curaçao") {
+    // getTEXT("Countries/CuracaoSACC.html", getCountryHTML);
+    getJSON("JSON/Curacao/Curacao.json", getCountryJSON);
+  }
   else if (country === "South America") {
-    getAjax("Countries/SouthAmericaSACC.html", getCountryData);
+    // getTEXT("Countries/SouthAmericaSACC.html", getCountryHTML);
+    getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
     // so hypotheticals and vagrants aren't selectable if South America is chosen
     searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
-    searchSpecials.querySelector("div:nth-of-type(5)").classList.add("notAvailable");
+    searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
 
     searchSpecials.classList.add("SAM");
     taxPage.classList.add("samTax");
   }
-  else if (country) getAjax("Countries/" + country + "SACC.html", getCountryData);
-  //  TODO  : gwtAjax the JSON file
+  else if (country) {
+    // getTEXT("Countries/" + country + "SACC.html", getCountryHTML);
+    getJSON("JSON/" + country + "/" + country + ".json", getCountryJSON);
+  }
+  
 //  -----------------------------------------------------------------------------------------------
   
-
   if (country !== "South America") {
     searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
-    searchSpecials.querySelector("div:nth-of-type(5)").classList.remove("notAvailable");
+    searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
     searchSpecials.classList.remove("SAM");
   }
+  
+  var specials = /extinct|endemic|hypothetical|vagrant/;
 
   if (!lastQuery) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
     document.querySelector(".colorKey").style.opacity = "0.9";
   }
-
-  else if (lastQuery === "endemic" || lastQuery === "hypothetical" || lastQuery === "vagrant" ||
-    lastQuery === "incertae" || lastQuery === "extinct") {
-
+  else if (specials.test(lastQuery)) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
   }
 
@@ -211,6 +239,7 @@ function loadCountryTaxonomy(country) {
   else document.querySelector("#treeIntroText").innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
 }
 
+// eslint-disable-next-line no-unused-vars
 function toggleSearchResultsPanel() {
   
   resultsPanel.classList.toggle("resultsPanelBoolean");
@@ -220,7 +249,7 @@ function toggleSearchResultsPanel() {
     printerButton.setAttribute("tabindex", "0");
   }
   else {                        // results-panel was open
-    moveTaxPanel("searchResultsClosing");    
+    moveTaxPanel("searchResultsClosing");
     printerButton.setAttribute("tabindex", "-1");
   }
 
@@ -233,482 +262,125 @@ function moveTaxPanel(whatIsOpening) {
   //    "searchInstructionsClosing", "searchInstructionsOpening"
   
   var instructionsHeight = searchSlideUpWrapper.style.height;
+  var shift;
   // transform: translateY(-15rem);  // the initial state
   
   switch (whatIsOpening) {
     
-    case "searchResultsOpening":
-      if (searchInstructionsOpen) {
-        taxPanel.style.transform = "translateY(-128px)";
-      }
-      else {
-        var shift = 100 + parseInt(instructionsHeight) + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")"; 
-      }
-      break;
-    
-    case "searchInstructionsClosing":
-      if (resultsPanelOpen) {
-        var shift = 100 + parseInt(instructionsHeight) + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      else {
-        var shift = 200 + parseInt(instructionsHeight) + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      break;
-    
-    case "searchInstructionsOpening":
-      if (resultsPanelOpen)  {
-        var shift = -100 + parseInt(instructionsHeight) + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      else {
-        var shift = 220 + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      break;
+  case "searchResultsOpening":
+    if (searchInstructionsOpen) {
+      taxPanel.style.transform = "translateY(-128px)";
+    }
+    else {
+      shift = 100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
   
-    default:
-      break;
+  case "searchInstructionsClosing":
+    if (resultsPanelOpen) {
+      shift = 100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    else {
+      shift = 200 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
+  
+  case "searchInstructionsOpening":
+    if (resultsPanelOpen)  {
+      shift = -100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    else {
+      shift = 220 + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
+
+  default:
+    break;
   }
 }
 
-function getCountryData(data) {
+// eslint-disable-next-line no-unused-vars
+// function getCountryHTML(data) {
 
-  // <ul id='tree'>
-  //  TODO  : tabindex="0" on all families and species !! ***
-  taxPage.innerHTML = data;
+//   // <ul id='tree'>
+//   //  TODO  : tabindex="0" on all families and species !!
+//   taxPage.innerHTML = data;
+
+//   // so "species" includes the family level _and_ individual bird species
+//   species = document.getElementById("tree").getElementsByTagName("li");
+
+//   resetTaxPageHeight();
+// }
+
+function buildTaxTree(thisCountryFamilies, country) {
+  
+  var occ = "";
+  var json2html = {
+    "V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endemic",
+	  "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
+
+  var results = `<ul id='tree'>\n\n`;
+
+  thisCountryFamilies.forEach(function(family) {    // forEach is okay, there will be no `break`s
+  
+  //   <li class='family'><span class='fTitle'><span class='fco'>FLAMINGOS</span><span class='fsc'>PHOENICOPTERIDAE</span></span>
+	//     <ul class='birds'></ul>
+  
+    results += `<li class='family'><span class='fTitle'><span class='fco'>${family.FamilyCommon}</span>`;
+    results += `<span class='fsc'>${family.Family}</span></span>\n`;
+    results += `  <ul class='birds'>\n\n`;
+    
+    family.genera.forEach(function (genus) {
+    
+      genus.spp.forEach(function (bird) {
+      
+        // <li data-i='160'><span>Chilean Flamingo</span><span>Phoenicopterus chilensis</span></li>
+        // <li data-i='162'><span class='nb'>Andean Flamingo</span><span>Phoenicoparrus andinus</span></li>
+        
+        occ = bird[country];
+        if (occ && occ !== "X")
+          results += `  <li data-i='${bird.index}'><span class='${json2html[bird[country]]}'>${bird.name}</span>`;
+        else
+          results += `  <li data-i='${bird.index}'><span>${bird.name}</span>`;
+          
+        results += `<span>${genus.Genus} ${bird.species}</span></li>\n`;
+      });
+    });
+    results += `  </ul></li>\n\n`;
+  });
+  
+  results += `</ul>\n`;
+  
+  taxPage.innerHTML = results;
 
   // so "species" includes the family level _and_ individual bird species
   species = document.getElementById("tree").getElementsByTagName("li");
-  // for memoize, could loop through families instead of all species
-
-  //  TODO  : (any need for familyOpen?)
-  families = taxPage.querySelectorAll("#tree .family");
-  numFamilies = families.length;
-
-  if (lastQuery) searchTree(lastQuery); //  TODO  : memoize, set flag for new country here?
 
   resetTaxPageHeight();
 }
 
-//  Caller :  ("#searchInput").on ("input change click textInput focusin", getQuery);    keyup removed
-function getQuery() { 
+
+function getCountryJSON(data) {
   
-  // úáóíç are not used by SACC, and will be swapped later for 'uaoic'
-  var badIndex = searchInput.value.search(/[^"a-zñãúáóíç'\s-]/i);
-
-  if (badIndex !== -1) {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character not allowed </li><li></li>";
-    resetSearchResultsHeight();
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
-    return;
-  }
-
-  // wait for at least two characters
-  if (searchInput.value.length < 2) {
-    return;
-  }
+  families = data.birds.families;
+  numFamilies = families.length;
   
-  var searcFormContents = document.querySelector(".searchForm_contents");
-  // keep a minimum of 20 ch's width in input field and add 1 ch width for every query.length > 8
-  if (searchInput.value.length > 6) {
-    searcFormContents.style.left = "-" + (searchInput.value.length - 6)/5 + "ch";
-    searchInput.size = 20 + (searchInput.value.length - 6);
-  }
-  
-  searchTree(searchInput.value); // memoize, set flag for same country
-}
-
-// going backward this is good, but also want to limit search going forward in searches
-// how to limit the cache or clear old values?
-
-// if searchInput.value.length is 1 more than last value && substring is the same,
-// then search using the old cached result: searchTree(search.cache[searchInput.value.subst(), query2)
-
-    // a memoized function
-// function sqrt(arg) {
-//   if (!sqrt.cache) {
-//       sqrt.cache = {}
-//   }
-//   if (!sqrt.cache[arg]) {
-//       return sqrt.cache[arg] = Math.sqrt(arg)
-//   }
-//   return sqrt.cache[arg]
-// }
-
-/**
- * @desc Memoization - build and check cache for new searches
- *
- * @param {string} query - searchInput.value
- * @param {boolean} newCountry - clear cache if true
- **/
-function checkSearchCache(query, newCountry) {
-  
-// manage the cache: clear it if searchInput.value.length = 0 or 1
-//                 : array.shift (remove first element) if cache.length > someMagicNumber
-//                 : array.pop   (remove last element)  if going backwards 
-
-  if (newCountry) {
-     searchCache = {};
-    searchCache[query] = searchTree(species, query);
-    return;
-  }
-  
-  if (!searchCache[query]) {  // if same country
-  
-     searchCache.shift();  // even if ultimately find no matches? could look at return value
-
-     if (query.slice(0,-1) === lastQuery) {  // going forward
-       searchCache[query] = searchTree(previousSearchResults, query);  // return searchResultsList
-       return;
-     }
-           // going backwards should be in the cache, so this is a safety check
-     else if (lastQuery.slice(0, -1) === query) {
-       SearchCache.pop();   // going backwards
-       searchCache[query] = searchTree(species, query);
-       return;
-     }
-
-    searchCache[query] = searchTree(species, query);
-    return;
-  }
-  
-  searchCache[query];
-  return;
-}
-
-
-function getSearchSpecialsQuery(evt) {
-
-  // <div id="searchSpecials" class="grayed">
-  //    <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
-  //    <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
-  
-   // KeyboardEvent, type keyup, 13 === Enter
-   if (evt.type === "keyup" && evt.keyCode !== 13) {
-    return;
-  }
-
-  var term;
-
-  // clear the input
-  searchInput.value = "";
-
-  if (evt.target.id === "searchSpecials") return;     // clicked in #searchSpecials but not on a button area
-  else if (evt.target.className === "searchSpecialWrapper")
-    term = evt.target.textContent.trim();    // clicked between "visible" buttons but on their background, i.e., "searchSpecialWrapper"
-  else term = evt.target.parentNode.textContent.trim();
-
-  // parentNode else if you click on "e" for example of extinct only the "e" is detected as the textContent of the target
-  // var term = evt.target.parentNode.textContent.trim();
-  
-  searchTree(term);  // memoize: set flag for same country
-}
-
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
-}
-
-// function searchTree(subTree, query2) {  // memoize
-function searchTree(query2) {
-
-  // var species = subTree;  // memoize, but `species` is a global, so probably use a different local in searchTree()
-  
-  var query;
-  query2 = escapeRegExp(query2);
-  var originalQuery = query2;
-
-  var numFound = 0;
-
-  // if (!resultsPanelOpen) toggleSearchResultsPanel();
-
-  lastQuery = query2;
-
   if (lastQuery) {
-    document.getElementById("countrySearch").classList.remove("closed");
-    // could limit lastQuery.slice(0, 24) first 25 characters for example
-    if (currentCountry === "Falklands") {
-      document.getElementById("searchTerm").innerHTML = "Falklands/Malvinas" + " : '<span>" + lastQuery + "</span>'";
-    }
-    else document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + lastQuery + "</span>'";
-  }
-  else {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
-
-    resetSearchResultsHeight();
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
+    var results = {};
+    var specials = /extinct|endemic|hypothetical|vagrant/;
+    if (specials.test(lastQuery)) results = specialSearch(families, lastQuery);
+    // false will avoid modifyQuery()  sanitize, add accents, etc. - has already been done on the lastQuery
+    else results = searchRegexTree(families, lastQuery, countries2Postals[currentCountry]), false;
     
-    return;
-  }
-
-  // animateScrollTop(searchResults);
-
-  // reset all families.cloned to false, used to insert new families into searchResults
-  for (var i = 0; i < numFamilies; i++) {
-    families[i].cloned = false;
-  }
-
-  // boolean that search input term was bad or missing
-  var warning = false;
-
-  if (lastSpecies && lastSpecies.classList.contains("active")) {
-    lastSpecies.classList.remove("active");
-  }
-
-  //  TODO : use `species` as a cached subset, for memoziation  
-  
-  var matches = [];
-  var j = 0;
-  var entry;
-  var eClass;
-  var sL = species.length;
-
-  if (query2 === "endemic" || query2 === "hypothetical" || query2 === "vagrant" ||
-    query2 === "incertae" || query2 === "extinct") {
-
-    var special;
-
-    if (query2 === "endemic") special = document.getElementById("tree").getElementsByClassName("endemic");
-    else if (query2 === "extinct") special = document.getElementById("tree").getElementsByClassName("extinct");
-    else if (query2 === "hypothetical") special = document.getElementById("tree").getElementsByClassName("hy");
-    else if (query2 === "vagrant") special = document.getElementById("tree").getElementsByClassName("va");
-    else if (query2 === "incertae") special = document.getElementById("tree").getElementsByClassName("ince");
-
-    for (var k = 0; k < special.length; k++) {
-
-      // check if family has already been cloned
-      if (special[k].parentNode.parentNode.parentNode.cloned !== true) {
-
-        matches[j++] = special[k].parentNode.parentNode.parentNode.cloneNode(true);
-        special[k].parentNode.parentNode.parentNode.cloned = true;
-      }
-      matches[j++] = special[k].parentNode.cloneNode(true);
-    }
-  }
-  // not endemic, extinct, hypothetical, vagrant or incertae
-  else {
-
-    query2 = query2.replace(/^\s+|\s+$/g, "");
-
-    //  wildcards * and ? ::
-    // query2 = query2.replace(/\\\*/g, "[a-zA-Z'ñã\\s-]+");
-    // query2 = query2.replace(/\\\?/g, "[a-zA-Z'ñã\\s-]");
-
-    // SACC only uses ñ and São, no other accented characters
-    query2 = query2.replace(/n/g, "(n|ñ)");
-    query2 = query2.replace(/a/g, "(a|ã)");
-
-    if (query2.match(/[úáóíç]/) !== -1) {    
-      query2 = query2.replace(/ú/g, "u");
-      query2 = query2.replace(/á/g, "a");
-      query2 = query2.replace(/ó/g, "o");
-      query2 = query2.replace(/í/g, "i");
-      query2 = query2.replace(/ç/g, "c");
-    }
-
-    // now database can have any number of spaces between genus and species
-    //   TODO  : fuzzy or not?
-    // query2 = query2.replace(/\s+/g, "\\s+"); // inserts a literal "\s+" but screws up fuzzy searching
-
-    if (query2) {
-      query = query2;
-    }
-    else {
-      query = searchInput.value.replace(/^\s+|\s+$/g, ""); // trim leading/trailing whitespace
-      if (query === "type here") warning = true;
-      else if (query === "") warning = true;
-    }
-
-    // bad or missing search term
-    if (warning) {
-      searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
-
-      resetSearchResultsHeight();
-      if (!resultsPanelOpen) toggleSearchResultsPanel();
-  
-      // updateActivityData("search");
-      // updateActivityData("search", "warning");
-      
-      return;
-    }
-    
-    //  TODO : use next 2 lines to enable fuzzy searching
-    // query = query.replace(/(\s+)/g, "");  // remove any spaces to do fuzzy search    
-    // query = query.replace(/(\S|\s)/g, "$1.*?");   // add '.*?' behind every character, even spaces
-    
-    // query = query.replace(/(\S|\s)/g, "$1[a-z' -]*?");   // add '.*?' behind every character, even spaces
-    
-    // query = query.replace(/(\S|\s)/g, "$1.{2}?");   // to limit the possible characters between inputs, sorta weird
-    
-    // query2 = query2.replace(/\s+/g, "\\s+"); // doesn't seem to make any difference?
-    
-    var pattern = new RegExp(query, "i");
-
-    // consider using array.filter(function()) in the future
-
-    // nodes must be cloned otherwise they are removed from the tree !!
-
-    for (i = 0; i < sL; i++) {
-
-      entry = species[i];
-      eClass = entry.className;
-      var eParPar = entry.parentNode.parentNode;
-
-      // "<li class="family"><span class="fTitle"><span class="fco">RHEAS</span><span class="fsc">RHEIDAE</span></span>
-      //    <ul class="birds">
-
-      //      <li data-i="0"><span>Greater Rhea</span><span>Rhea americana</span></li>
-      //      <li data-i="1"><span>Lesser Rhea</span><span>Rhea pennata</span></li>
-      //    </ul>
-      //  </li>"
-
-      if (eClass) {  // eClass === "family" || eClass === "familyOpen"
-
-        // match family scientific and common names separately
-        if (entry.firstChild.firstChild.textContent.match(pattern) || entry.firstChild.lastChild.textContent.match(pattern)) {
-          entry.cloned = true;
-          matches[j++] = entry.cloneNode(true);
-        }
-      }
-
-      else {  // "<li data-i="0"><span>Greater Rhea</span><span>Rhea americana</span></li>"
-
-        // match species common and scientific names respectively
-        if (entry.firstChild.textContent.match(pattern) || entry.childNodes[1].textContent.match(pattern)) {
-
-          // if the family is not already cloned and added to the match list, add it
-          if (eParPar.cloned !== true) {
-            matches[j++] = eParPar.cloneNode(true);
-            eParPar.cloned = true;
-          }
-          matches[j++] = entry.cloneNode(true);
-        }
-      }
-    }
-  }
-
-  if (matches.length === 0) {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no matching results found</li><li></li>";
-
-    // if (!resultsPanelOpen) toggleSearchResultsPanel();
-
-    resetSearchResultsHeight();
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
-    
-    // updateActivityData("search");
-    updateActivityData("search", originalQuery);
-    return;
+    loadSearchResults(results);
   }
   
-  // console.log(matches);
-
-  var z;
-  var matchClass;
-  // if list isn't set to "", it defaults to undefined
-  var list = "";
-
-  for (k = 0; k < matches.length; k++) {
-
-    matchClass = matches[k].className;
-    
-    //  TODO  : tabindex="0" for each family and species !! ***
-
-    if (matchClass === "family" || matchClass === "familyOpen") {
-
-      list += "<li class='family'><span class='fco'>";
-      list += matches[k].firstChild.firstChild.textContent + "</span><span class='fsc'>";
-
-      // <li class="family"><span class='fTitle'><span class="fcommon">INCERTAE SEDIS</span><span class="fscientific"> </span></span>
-      
-      // <li class='family'><span class='fTitle'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></span>
-      // must have space between the spans
-      // or handle as below
-
-      list += (matches[k].firstChild.lastChild) ? matches[k].firstChild.childNodes[1].textContent : " ";
-      list += "</span></li>";  
-      
-      // "<li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></li>"
-
-      // only matched one family, get all its species and add them to list
-      if (matches.length === 1) {
-        
-        for (z = 0; z < matches[0].children[1].children.length; z++) {
-
-          list += "<li data-i='" + matches[0].children[1].children[z].getAttribute("data-i") + "' class='bird'>" + matches[0].children[1].children[z].innerHTML + "</li>";
-        }
-        numFound = z;
-      }
-    }  // end of family/familyOpen
-
-    else if (matchClass === "fsc") {  /* do nothing */ }
-
-    else {
-      matches[k].style.textShadow = "none";  // *** ?
-      list += "<li data-i='" + matches[k].getAttribute("data-i") + "' class='bird'>" + matches[k].innerHTML + "</li>";
-      numFound++;
-    }
-  }
-
-  searchResults.innerHTML = list;
-  previousSearchResults = list;  // for memoization
-  
-  // console.log(previousSearchResults);
-  
-  // updateActivityData("search");
-  updateActivityData("search", originalQuery);
-
-  // lastQuery = lastQuery.replace(/\\\*/g, "*");
-  // lastQuery = lastQuery.replace(/\\\?/g, "?");
-
-  // lastQuery.slice(0, 24)
-  if (currentCountry === "Falklands") {
-    document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + " : '<span>" + lastQuery + "</span>'&nbsp;&nbsp;   [ " + numFound + " species ]";
-  }
-  else {
-    document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + lastQuery + "</span>'&nbsp;&nbsp;&nbsp;   [ " + numFound + " species ]";
-  }
-  
-  // if (!resultsPanelOpen) toggleSearchResultsPanel();
-  resetSearchResultsHeight();
-  if (!resultsPanelOpen) toggleSearchResultsPanel();
-}
-
-function resetSearchResultsHeight() {
-
-  searchResults.style.height = "auto";
-
-  simpleBarResults = new SimpleBar(document.getElementById("searchResults"), { autoHide: false });
-
-  var elem;
-
-  if (searchResults.scrollHeight >= 300) {
-    searchResults.style.height = "25rem";
-    elem = simpleBarResults.getScrollElement();
-    elem.style.height = "25rem";
-  }
-  else {
-    // 25px added due to Chrome-only bug, 
-    //   it makes the searchResults height too short, even two species do not fit w/o scrolling
-    searchResults.style.height = searchResults.scrollHeight + 25 + "px";
-    elem = simpleBarResults.getScrollElement();
-    elem.style.height = searchResults.scrollHeight + 25 + "px";
-  }
-  // simpleBarResults.recalculate();
-}
-
-function resetTaxPageHeight() {
-
-  simpleBarTaxPage = new SimpleBar(taxPage, { autoHide: false });
-
-  var elem;
-
-  taxPage.style.height = "75vh";
-  elem = simpleBarTaxPage.getScrollElement();
-  elem.style.height = "75vh";
-
-  simpleBarTaxPage.recalculate();
+  buildTaxTree(families, countries2Postals[currentCountry]);
 }
 
 // <ul id="searchResults"></ul>
@@ -801,7 +473,6 @@ function gotoMatch(e) {
     }
 
     // match in family, fcommon, fscientific  ||
-    // "INCERTAE SEDIS " for some reason eText returns a space at the end of the INCERTAE SEDIS's
 
     /*<li class='family'><span class='fTitle'><span class='fco'>SCREAMERS</span><span class='fsc'>ANHIMIDAE</span></span>
 	    <ul class='birds'>
@@ -903,7 +574,6 @@ function toggleFamilyOpen(event) {
         taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
     }
     //  show family and numSpecies in that family
-    // INCERTAE SEDIS
     var scientificFamily = familyTarget.parentNode.firstChild.children[1].textContent;
     if (!scientificFamily) scientificFamily = familyTarget.parentNode.firstChild.children[0].textContent;
 
@@ -986,7 +656,7 @@ function printElem (evt) {
   var html = '<html><head><title></title><head>';
 
   var css = "<style>";
-  css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }"
+  css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }";
   css += "h3 { margin: 0 0 3ch 0; text-align: center; }";
   css += ".family, .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
   css += ".fsc { position: absolute; left: 50%; }";
@@ -997,9 +667,10 @@ function printElem (evt) {
   
   // html += '<link rel="stylesheet" href="./printCSS/printSearchresults.css" />';  old online version that works
   // use below for working in gulp sync
-  // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';  
+  // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';
   
   html += '</head><body>';
+  //  TODO  :  normalize lastQuery (remove accented regex)
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += content;
   html += '</body></html>';
@@ -1010,7 +681,7 @@ function printElem (evt) {
   setTimeout(function() {
     printWindow.print();
     printWindow.close();
-   }, 1000);
+  }, 1000);
 
   return true;
 }

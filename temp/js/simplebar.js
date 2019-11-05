@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * SimpleBar.js - v3.0.0-beta.3
  * Scrollbars, simpler.
@@ -10,8 +12,8 @@
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.SimpleBar = factory());
+    typeof define === 'function' && define.amd ? define(factory) :
+ (global.SimpleBar = factory());
 }(this, (function () { 'use strict';
 
   var _isObject = function (it) {

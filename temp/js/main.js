@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 var sampleTable;
 var leftCheck;
@@ -25,19 +25,19 @@ var csvButton;
 var requested;
 
 var mailLink;
-var observer;
-var target;
+// var target;
 // var upLoadData = new FormData();
+// eslint-disable-next-line no-unused-vars
 var activityData = [];
 
 var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
-		"Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
-		"Guyana": "GY", "Paraguay": "PY", "Peru": "PE", "Suriname": "SU", "Trinidad": "TT",
-		"Uruguay": "UY", "Venezuela": "VE", "Bonaire": "BQ", "Falklands": "FK",
-		"South America": "SAM"
+  "Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
+  "Guyana": "GY", "Paraguay": "PY", "Peru": "PE", "Suriname": "SU", "Trinidad": "TT",
+  "Uruguay": "UY", "Venezuela": "VE", "Bonaire": "BQ", "Falklands": "FK",
+  "South America": "SAM"
 };
 
-/* global  map loadCountryTaxonomy selectedCountryFill getAjax currentMap fillSAMmap  */
+/* global  loadCountryTaxonomy selectedCountryFill getTEXT fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log("window.width = " + window.innerWidth);
@@ -48,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
   titleBanner = document.getElementById("titleBanner");
 
   numDaysButton = document.getElementById("numDays");
-  numDaysButton.addEventListener("click", setNumDays)
+  numDaysButton.addEventListener("click", setNumDays);
   // onKeyUp listener for tabbing and entering
   numDaysButton.addEventListener('keyup', setNumDays);
 
   numDaysButton.children.item(9).classList.add("highlight");
-  gNumDays = 8;  
+  gNumDays = 8;
   
   sampleTable = document.getElementById("sampleTable");
   sampleTable.classList.add("numDays" + String(gNumDays));
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   checklistFlyoutText = document.getElementById("checklistFlyoutText");
 
   document.querySelector("#country-menu").addEventListener("click", setCountry);
-  document.querySelector("#country-menu").addEventListener("keyup", setCountry);  
+  document.querySelector("#country-menu").addEventListener("keyup", setCountry);
   
   leftCheck.checked = true;
 
@@ -97,18 +97,18 @@ document.addEventListener("DOMContentLoaded", function () {
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
 
-  target = document.getElementById("checklistArticle");
+  // target = document.getElementById("checklistArticle");
   
   // updateActivityData("start");
 });
 
-window.addEventListener("load", function (event) { 
+window.addEventListener("load", function () {
   updateActivityData("start");
- });
+});
 
-window.addEventListener("unload", function (event) { 
+window.addEventListener("unload", function () {
   updateActivityData("stop");
- });
+});
 
 //   *******************   end of  (document).ready(function()   ******************************************
 
@@ -274,15 +274,15 @@ function setChecklistCountryAuthors(country) {
   else fillSAMmap("");
 
   if (country === "Curaçao") {
-    getAjax("Authors/" + "Curacao.txt", setChecklistAuthors);
+    getTEXT("Authors/" + "Curacao.txt", setChecklistAuthors);
   }
   else if (country === "French Guiana") {
-    getAjax("Authors/" + "FrenchGuiana.txt", setChecklistAuthors);
+    getTEXT("Authors/" + "FrenchGuiana.txt", setChecklistAuthors);
   }
   else if (country === "South America") {
-    getAjax("Authors/" + "SouthAmerica.txt", setChecklistAuthors);
+    getTEXT("Authors/" + "SouthAmerica.txt", setChecklistAuthors);
   }
-  else getAjax("Authors/" + country + ".txt", setChecklistAuthors);
+  else getTEXT("Authors/" + country + ".txt", setChecklistAuthors);
 }
 
 function setChecklistAuthors(data) {
@@ -440,6 +440,7 @@ function openChecklistPage() {
   window.open("../php/makePDF.php" + vars, "_blank");
 }
 
+// eslint-disable-next-line no-unused-vars
 function uploadDownloads() {
 
   if (!navigator.sendBeacon) {
@@ -462,34 +463,34 @@ function updateActivityData(stage, query) {
   
   switch (stage) {
     
-    case "start":
-      action.push("start");
-      break;
+  case "start":
+    action.push("start");
+    break;
     
-    case "select":
-      action.push("select");
-      action.push(currentCountry);
-      break;
+  case "select":
+    action.push("select");
+    action.push(currentCountry);
+    break;
 
-    case "search":
-      action.push("search");
-      if (query)  action.push(query);
-      break;
+  case "search":
+    action.push("search");
+    if (query)  action.push(query);
+    break;
     
-    case "download":
-      action.push("download");
-      action.push(requested);
-      break;
+  case "download":
+    action.push("download");
+    action.push(requested);
+    break;
     
-    case "stop":
-      action.push("stop");
-      break;
+  case "stop":
+    action.push("stop");
+    break;
   
-    default:
-      break;
+  default:
+    break;
   }
   
- uploadActivity(action);
+  uploadActivity(action);
 }
 
 function uploadActivity(action) {

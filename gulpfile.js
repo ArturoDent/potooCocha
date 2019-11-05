@@ -17,7 +17,7 @@ const addVersionString = require("gulp-version-number");
 const print = require('gulp-print').default;
 
 
-function serve (done) {        // serve:    ./home.html 
+function serve (done) {        // serve:    ./home.html
   browserSync.init({
     port: 3000,
     server: {
@@ -29,7 +29,7 @@ function serve (done) {        // serve:    ./home.html
   done();
 }
 
-function serveDeploy (done) {      // serve:    deploy/home.html 
+function serveDeploy (done) {      // serve:    deploy/home.html
   browserSync.init({
     server: {
       baseDir: "deploy",
@@ -38,7 +38,7 @@ function serveDeploy (done) {      // serve:    deploy/home.html
     ghostMode: false
   });
   done();
-};
+}
 
 const paths = {
   html: {
@@ -60,6 +60,10 @@ const paths = {
   countries: {
     src: "Countries/*.*",
     deploy: "./deploy/Countries"
+  },
+  json: {
+    src: "JSON/**/*.json",
+    deploy: "./deploy/JSON"
   },
   sass: {
     src: "./src/styles/scss/**/*.scss",
@@ -132,7 +136,15 @@ const scriptOrder = [
   "./temp/js/main.js",
   "./temp/js/SouthAmerica.js",
   "./temp/js/numList.js",
+  
+  // "./temp/js/taxonomy.js",
+  "./temp/js/search/search_entry.js",
+  "./temp/js/search/search_handleQuery.js",
+  "./temp/js/search/search_functions.js",
+  "./temp/js/search/search_handleResults.js",
+  
   "./temp/js/taxonomy.js",
+  
   "./temp/js/birdMapFactory.js"
 ];
 
@@ -165,7 +177,7 @@ const versionConfig = {
     "key": "v",
     "to": ["css", "js"],
   },
-}
+};
 
 function processHTML() {
   return gulp.src(paths.html.src)
@@ -186,7 +198,6 @@ function processHTML() {
 function processCSS() {
   return gulp.src(paths.css.src)
     .pipe(autoprefixer({
-      // browsers: ["last 2 versions"],
       cascade: false
     }))
     .pipe(cleanCSS())
@@ -200,7 +211,7 @@ function processCSS() {
 // # last 2 versions: the last 2 versions for each browser.
 // # defaults: Browserslist’s default browsers (> 0.5%, last 2 versions, Firefox ESR, not dead).
 
-// Using browsers option cause some error. Browserslist config 
+// Using browsers option cause some error. Browserslist config
 // can be used for Babel, Autoprefixer, postcss-normalize and other tools.
 
 // If you really need to use option, rename it to overrideBrowserslist.
@@ -254,6 +265,13 @@ function copyCountries() {
     .pipe(newer(paths.countries.deploy))
     .pipe(print())
     .pipe(gulp.dest(paths.countries.deploy));
+}
+
+function copyJSON() {
+  return gulp.src(paths.json.src)
+    .pipe(newer(paths.json.deploy))
+    .pipe(print())
+    .pipe(gulp.dest(paths.json.deploy));
 }
 
 // function processImages() {
@@ -325,6 +343,7 @@ const ftpGlobs = [
   'deploy/Authors/*.txt',
   'deploy/occurrences/occurrences.txt',
   'deploy/Countries/*.*',
+  'deploy/JSON/**/*.json',
   '!ftpConfig.js'
 ];
 
@@ -332,20 +351,20 @@ const gulpftp = require('./ftpConfig.js');
 
 function deployExperimental() {
 
-    const conn = ftp.create({
-      host: gulpftp.config.host,
-      user: gulpftp.config.user,
-      password: gulpftp.config.pass,
-      parallel: 3,
-      log: gutil.log
-    });
+  const conn = ftp.create({
+    host: gulpftp.config.host,
+    user: gulpftp.config.user,
+    password: gulpftp.config.pass,
+    parallel: 3,
+    log: gutil.log
+  });
 
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance
-    return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
-      .pipe(conn.newer('./experimental.net'))
-      .pipe(conn.dest('./experimental.net'));
-    }
+  return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
+    .pipe(conn.newer('./experimental.net'))
+    .pipe(conn.dest('./experimental.net'));
+}
 
 function deployPotoococha() {
 
@@ -376,8 +395,8 @@ exports.production = gulp.series(moveJStoTemp, processJS);
 
 // TODO : (include php and logFileRequests.txt) movePrintCSStoTemp? not used anymore - keep as backup?
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
-                            copyPHP, copySVG, copyFLAGS, copyCitations, copyAuthors,
-                            copyOccurrences, copyCountries, movePrintCSStoTemp);
+  copyPHP, copySVG, copyFLAGS, copyCitations, copyAuthors,
+  copyOccurrences, copyCountries, copyJSON, movePrintCSStoTemp);
 
 exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON);
 // exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON, getBuildSACC_NumLists);

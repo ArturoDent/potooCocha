@@ -1,5 +1,6 @@
 "use strict";
 
+// eslint-disable-next-line no-unused-vars
 var map;
 
 var countries = {
@@ -202,56 +203,56 @@ function highlightSAMmap(index, current) {
       // cList[countries["Ecuador"]] = 7, so 8th item in the cList
     switch (cList[countries[country]]) {
 
-      case "X(e)":
+    case "X(e)":
 
-        newFillColor(cc, endemicColor);
-        newStrokeColor(cc, baseStrokeColor)
-        break;
+      newFillColor(cc, endemicColor);
+      newStrokeColor(cc, baseStrokeColor);
+      break;
 
-      case "X":
+    case "X":
 
-        newFillColor(cc, residentColor);
-        newStrokeColor(cc, baseStrokeColor)
-        break;
+      newFillColor(cc, residentColor);
+      newStrokeColor(cc, baseStrokeColor);
+      break;
 
-      case "NB":
+    case "NB":
 
-        newFillColor(cc, nonBreederColor);
-        newStrokeColor(cc, baseStrokeColor)
-        break;
+      newFillColor(cc, nonBreederColor);
+      newStrokeColor(cc, baseStrokeColor);
+      break;
 
-      case "V":
+    case "V":
 
-        newFillColor(cc, vagrantColor);
+      newFillColor(cc, vagrantColor);
         // newStrokeColor(cc, darkerStrokeColor);
-        break;
+      break;
 
-      case "H":
-        newFillColor(cc, hypotheticalColor);
-        newStrokeColor(cc, darkerStrokeColor)
-        break;
+    case "H":
+      newFillColor(cc, hypotheticalColor);
+      newStrokeColor(cc, darkerStrokeColor);
+      break;
 
-      case "IN":
+    case "IN":
 
-        newFillColor(cc, introducedColor);
-        newStrokeColor(cc, darkerStrokeColor)
-        break;
+      newFillColor(cc, introducedColor);
+      newStrokeColor(cc, darkerStrokeColor);
+      break;
 
-      case "EX":
+    case "EX":
 
-        newFillColor(cc, extinctColor);
-        newStrokeColor(cc, baseStrokeColor)        
-        break;
+      newFillColor(cc, extinctColor);
+      newStrokeColor(cc, baseStrokeColor);
+      break;
 
-      case "EX(e)":
+    case "EX(e)":
 
-        newFillColor(cc, extinctColor);
-        newStrokeColor(cc, baseStrokeColor)        
-        break;
+      newFillColor(cc, extinctColor);
+      newStrokeColor(cc, baseStrokeColor);
+      break;
 
-      default:
-        newFillColor(cc, baseColor);
-        newStrokeColor(cc, baseStrokeColor)
+    default:
+      newFillColor(cc, baseColor);
+      newStrokeColor(cc, baseStrokeColor);
     }
     // removed so little maps get the right strokeColors
     // if (current !== "currentMap") newStrokeColor(cc, "#fff");

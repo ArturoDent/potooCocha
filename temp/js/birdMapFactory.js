@@ -176,15 +176,9 @@ function deleteAllMaps(evt) {
   evt.stopPropagation();
 
   revealMapsCollection();  // toggle off
-
+  
   var maps = mapsCollection.getElementsByClassName("smallBird");
   var len = maps.length;
-
-  for (var i = 1; i <= len; i++) {
-    // TODO: remove eventListeners?
-    
-    mapsCollection.removeChild(mapsCollection.childNodes[3]);
-  }
 
   mapsCollection.classList.remove("namesOnlySeen");
   mapsCollection.removeEventListener("click", revealMapsCollection);
@@ -193,4 +187,13 @@ function deleteAllMaps(evt) {
   numDaysButton.classList.remove("mapCollectionShowing");
 
   map.querySelector(".saveMapButton").style.display = "block";
+  
+  // delay so mapsCollection closing is smooth, before children are removed
+  setTimeout(function(){  
+    for (var i = 1; i <= len; i++) {
+      // TODO: remove eventListeners?      
+      mapsCollection.removeChild(mapsCollection.childNodes[3]);
+    }
+  }, 1000);
+  
 }
