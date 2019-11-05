@@ -1,3 +1,4 @@
+"use strict";
 
 function resetSearchResultsHeight() {
 
@@ -13,7 +14,7 @@ function resetSearchResultsHeight() {
     elem.style.height = "25rem";
   }
   else {
-    // 25px added due to Chrome-only bug, 
+    // 25px added due to Chrome-only bug,
     //   it makes the searchResults height too short, even two species do not fit w/o scrolling
     searchResults.style.height = searchResults.scrollHeight + 25 + "px";
     elem = simpleBarResults.getScrollElement();
@@ -22,6 +23,7 @@ function resetSearchResultsHeight() {
   // simpleBarResults.recalculate();
 }
 
+// eslint-disable-next-line no-unused-vars
 function resetTaxPageHeight() {
 
   simpleBarTaxPage = new SimpleBar(taxPage, { autoHide: false });
@@ -35,13 +37,14 @@ function resetTaxPageHeight() {
   simpleBarTaxPage.recalculate();
 }
 
-function loadSearchresults(results) {
+// eslint-disable-next-line no-unused-vars
+function loadSearchResults(results) {
 
   var term = lastQuery;
   
   // remove accented characters and surrounding regex from the displayed query: (n|ñ) and/or (a|ã)
   if (lastQuery) {
-    var regex = /[ãñ()|]/g;    
+    var regex = /[ãñ()|]/g;
     term = lastQuery.replace(regex, "");
   }
   
@@ -52,10 +55,9 @@ function loadSearchresults(results) {
     document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + term + "</span>'&nbsp;&nbsp;&nbsp;   [ " + results.numSpecies + " species ]";
   }
   
-  // if (matches.length === 0) {
   if (!results.numSpecies) {
     
-    searchResults.innerHTML = "<li></li><br/><li> &nbsp; &nbsp; &nbsp; &nbsp; no matches found</li><li></li>";
+    searchResults.innerHTML = "<li></li><br/><br/><li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no matches found</li><li></li>";
 
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();
@@ -68,40 +70,6 @@ function loadSearchresults(results) {
   
   searchResults.innerHTML = results.list;
   
-  // console.log(results.list);
-//   previousSearchResults = list;  // for memoization
-//   updateActivityData("search", originalQuery);
-  
-  // if (currentCountry === "Falklands") {
-  //   document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + " : '<span>" + lastQuery + "</span>'&nbsp;&nbsp;   [ " + results.numSpecies + " species ]";
-  // }
-  // else {
-  //   document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + lastQuery + "</span>'&nbsp;&nbsp;&nbsp;   [ " + results.numSpecies + " species ]";
-  // }
-  
   resetSearchResultsHeight();
   if (!resultsPanelOpen) toggleSearchResultsPanel();
 }
-
-
-// function loadLastQuery() {
-
-//   lastQuery = query2;
-
-//   if (lastQuery) {
-//     document.getElementById("countrySearch").classList.remove("closed");
-//     // could limit lastQuery.slice(0, 24) first 25 characters for example
-//     if (currentCountry === "Falklands") {
-//       document.getElementById("searchTerm").innerHTML = "Falklands/Malvinas" + " : '<span>" + lastQuery + "</span>'";
-//     }
-//     else document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + lastQuery + "</span>'";
-//   }
-//   else {
-//     searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
-
-//     resetSearchResultsHeight();
-//     if (!resultsPanelOpen) toggleSearchResultsPanel();
-  
-//     return;
-//   }
-// }

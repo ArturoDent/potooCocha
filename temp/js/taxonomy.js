@@ -211,7 +211,7 @@ function loadCountryTaxonomy(country) {
   else document.querySelector("#treeIntroText").innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
 }
 
-function toggleSearchResultsPanel() {  
+function toggleSearchResultsPanel() {
   
   resultsPanel.classList.toggle("resultsPanelBoolean");
     

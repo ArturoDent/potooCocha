@@ -252,7 +252,7 @@
     position  :  relative;
     height  :  auto;
     width : calc(100% + 10vw);
-    top : -8rem;
+    top : -7rem;
     left : -10vw;
     margin  : 5.5ch 0 2ch 0;
     padding  :  0;
@@ -631,7 +631,7 @@
     // overscroll-behavior: contain;  doesn't seem to work anywhere
     // overscroll-behavior: none;
 
-    transform: translateY(-15rem);
+    transform: translateY(-13rem);
 }
 
 #fakeTaxPageBox  {

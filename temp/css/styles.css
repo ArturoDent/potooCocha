@@ -496,7 +496,7 @@ footer a:hover, footer a:focus {
 #checklistArticle {
   position: relative;
   width: 90%;
-  margin: 0;
+  margin: 5rem 0 0 0;
   order: 4;
   overflow: visible; }
 
@@ -1427,7 +1427,7 @@ input[type='checkbox']:disabled ~ label {
   position: relative;
   height: auto;
   width: calc(100% + 10vw);
-  top: -8rem;
+  top: -7rem;
   left: -10vw;
   margin: 5.5ch 0 2ch 0;
   padding: 0;
@@ -1720,7 +1720,7 @@ input[type='checkbox']:disabled ~ label {
   border: none;
   box-shadow: none;
   background-color: transparent;
-  transform: translateY(-15rem); }
+  transform: translateY(-13rem); }
 
 #fakeTaxPageBox {
   position: relative;

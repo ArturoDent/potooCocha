@@ -11,7 +11,7 @@ var numFamilies;
 var birds;
 
 var searchCountryText;
-var taxTreeArticleOpen = false;
+// var taxTreeArticleOpen = false;
 
 var taxPage;
 var taxPanel;
@@ -19,6 +19,7 @@ var searchSpecials;
 var resultsPanel;
 var searchResults;
 
+// eslint-disable-next-line no-unused-vars
 var simpleBarResults;
 var simpleBarTaxPage;
 
@@ -38,7 +39,7 @@ var taxInstructionsButton;
 var searchInstructionsOpen = true;
 
 
-/* global  SimpleBar  currentMap  currentCountry  */
+/* global   currentMap  currentCountry  */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -58,12 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
   searchInput = document.getElementById("searchInput");
   searchSpecials = document.getElementById("searchSpecials");
 
-  // (are all of these necessary?)  (especially "click" and "focusin"?)
   searchInput.addEventListener("input", getQuery);
   // "change", "click", "textInput", "focusin"
 
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
-  searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);  
+  searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);
 
   taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
@@ -77,11 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
   taxPanel = document.getElementById("tax-panel");
   
   // preloading the file occurrences.txt
-  getAjax("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
+  getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
 });
 
-function getAjax(url, success) {
+// fetch() not supported by IE11
+// const response = await fetch('http://example.com/movies.json');
+// const myJson = await response.json();
+// console.log(JSON.stringify(myJson));
 
+function getTEXT(url, success) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url);
   xhr.onreadystatechange = function () {
@@ -92,21 +96,21 @@ function getAjax(url, success) {
   return xhr;
 }
 
-function getJSON(url, callback) {
+function getJSON(url, success) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
   xhr.responseType = 'json';
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      callback(xhr.response);
-    } else {
-      callback(xhr.response);
-      //  TODO  :  throw new Error()
+      success(xhr.response);
+    }
+    else {
+      throw new Error("getJSON failed : " + xhr.responseText);
     }
   };
   xhr.send();
-};
+}
 
 
 /**
@@ -130,7 +134,6 @@ function loadOccurrences(data) {
 
 function toggleSearchInstructions() {
 
-  // TODO : (merge these below)  
   var taxInstructionTooltip = document.querySelector(".taxInstructionsButton .tooltip");
   
   if (!searchInstructionsOpen) taxInstructionTooltip.innerHTML = "Close";
@@ -139,8 +142,8 @@ function toggleSearchInstructions() {
   //  do only once, hence no toggle
   if (!taxInstructionsButton.classList.contains("instructionsClosed")) taxInstructionsButton.classList.add("instructionsClosed");
   
-  searchSlideUpWrapper.classList.toggle("closeInstructions");  
-  resultsPanel.classList.toggle("closeInstructions");  
+  searchSlideUpWrapper.classList.toggle("closeInstructions");
+  resultsPanel.classList.toggle("closeInstructions");
   
   if (searchInstructionsOpen) moveTaxPanel("searchInstructionsClosing");
   else moveTaxPanel("searchInstructionsOpening");
@@ -167,7 +170,7 @@ function enableSearchSpecials() {
 function loadCountryTaxonomy(country) {
 
   if (searchSpecials.classList.contains("grayed")) {
-    enableSearchSpecials();    
+    enableSearchSpecials();
     closeOpenFamiliesButton.setAttribute("tabindex", "0");
   }
 
@@ -185,16 +188,16 @@ function loadCountryTaxonomy(country) {
 //  -----------------------------------------------------------------------------------------------
   
   if (country === "French Guiana") {
-    getAjax("Countries/FrenchGuianaSACC.html", getCountryHTML);
+    // getTEXT("Countries/FrenchGuianaSACC.html", getCountryHTML);
     getJSON("JSON/French Guiana/French Guiana.json", getCountryJSON);
   }
   // because Curaçao is accented here but not in filenames
   else if (country === "Curaçao") {
-    getAjax("Countries/CuracaoSACC.html", getCountryHTML);
+    // getTEXT("Countries/CuracaoSACC.html", getCountryHTML);
     getJSON("JSON/Curacao/Curacao.json", getCountryJSON);
   }
   else if (country === "South America") {
-    getAjax("Countries/SouthAmericaSACC.html", getCountryHTML);
+    // getTEXT("Countries/SouthAmericaSACC.html", getCountryHTML);
     getJSON("JSON/South America/South America.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
@@ -206,7 +209,7 @@ function loadCountryTaxonomy(country) {
     taxPage.classList.add("samTax");
   }
   else if (country) {
-    getAjax("Countries/" + country + "SACC.html", getCountryHTML);
+    // getTEXT("Countries/" + country + "SACC.html", getCountryHTML);
     getJSON("JSON/" + country + "/" + country + ".json", getCountryJSON);
   }
   
@@ -225,9 +228,6 @@ function loadCountryTaxonomy(country) {
     document.querySelector(".colorKey").style.opacity = "0.9";
   }
   else if (specials.test(lastQuery)) {
-          // else if (lastQuery === "endemic" || lastQuery === "hypothetical" || lastQuery === "vagrant"
-          //   || lastQuery === "extinct") {
-
     currentMap.querySelector(".saveMapButton").style.display = "none";
   }
 
@@ -239,7 +239,8 @@ function loadCountryTaxonomy(country) {
   else document.querySelector("#treeIntroText").innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
 }
 
-function toggleSearchResultsPanel() {  
+// eslint-disable-next-line no-unused-vars
+function toggleSearchResultsPanel() {
   
   resultsPanel.classList.toggle("resultsPanelBoolean");
     
@@ -248,7 +249,7 @@ function toggleSearchResultsPanel() {
     printerButton.setAttribute("tabindex", "0");
   }
   else {                        // results-panel was open
-    moveTaxPanel("searchResultsClosing");    
+    moveTaxPanel("searchResultsClosing");
     printerButton.setAttribute("tabindex", "-1");
   }
 
@@ -261,63 +262,111 @@ function moveTaxPanel(whatIsOpening) {
   //    "searchInstructionsClosing", "searchInstructionsOpening"
   
   var instructionsHeight = searchSlideUpWrapper.style.height;
+  var shift;
   // transform: translateY(-15rem);  // the initial state
   
   switch (whatIsOpening) {
     
-    case "searchResultsOpening":
-      if (searchInstructionsOpen) {
-        taxPanel.style.transform = "translateY(-128px)";
-      }
-      else {
-        var shift = 100 + parseInt(instructionsHeight) + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")"; 
-      }
-      break;
-    
-    case "searchInstructionsClosing":
-      if (resultsPanelOpen) {
-        var shift = 100 + parseInt(instructionsHeight) + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      else {
-        var shift = 200 + parseInt(instructionsHeight) + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      break;
-    
-    case "searchInstructionsOpening":
-      if (resultsPanelOpen)  {
-        var shift = -100 + parseInt(instructionsHeight) + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      else {
-        var shift = 220 + "px";        
-        taxPanel.style.transform = "translateY(-" + shift + ")";        
-      }
-      break;
+  case "searchResultsOpening":
+    if (searchInstructionsOpen) {
+      taxPanel.style.transform = "translateY(-128px)";
+    }
+    else {
+      shift = 100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
   
-    default:
-      break;
+  case "searchInstructionsClosing":
+    if (resultsPanelOpen) {
+      shift = 100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    else {
+      shift = 200 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
+  
+  case "searchInstructionsOpening":
+    if (resultsPanelOpen)  {
+      shift = -100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    else {
+      shift = 220 + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
+
+  default:
+    break;
   }
 }
 
-function getCountryHTML(data) {
+// eslint-disable-next-line no-unused-vars
+// function getCountryHTML(data) {
 
-  // <ul id='tree'>
-  //  TODO  : tabindex="0" on all families and species !! ***
-  taxPage.innerHTML = data;
+//   // <ul id='tree'>
+//   //  TODO  : tabindex="0" on all families and species !!
+//   taxPage.innerHTML = data;
+
+//   // so "species" includes the family level _and_ individual bird species
+//   species = document.getElementById("tree").getElementsByTagName("li");
+
+//   resetTaxPageHeight();
+// }
+
+function buildTaxTree(thisCountryFamilies, country) {
+  
+  var occ = "";
+  var json2html = {
+    "V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endemic",
+	  "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
+
+  var results = `<ul id='tree'>\n\n`;
+
+  thisCountryFamilies.forEach(function(family) {    // forEach is okay, there will be no `break`s
+  
+  //   <li class='family'><span class='fTitle'><span class='fco'>FLAMINGOS</span><span class='fsc'>PHOENICOPTERIDAE</span></span>
+	//     <ul class='birds'></ul>
+  
+    results += `<li class='family'><span class='fTitle'><span class='fco'>${family.FamilyCommon}</span>`;
+    results += `<span class='fsc'>${family.Family}</span></span>\n`;
+    results += `  <ul class='birds'>\n\n`;
+    
+    family.genera.forEach(function (genus) {
+    
+      genus.spp.forEach(function (bird) {
+      
+        // <li data-i='160'><span>Chilean Flamingo</span><span>Phoenicopterus chilensis</span></li>
+        // <li data-i='162'><span class='nb'>Andean Flamingo</span><span>Phoenicoparrus andinus</span></li>
+        
+        occ = bird[country];
+        if (occ && occ !== "X")
+          results += `  <li data-i='${bird.index}'><span class='${json2html[bird[country]]}'>${bird.name}</span>`;
+        else
+          results += `  <li data-i='${bird.index}'><span>${bird.name}</span>`;
+          
+        results += `<span>${genus.Genus} ${bird.species}</span></li>\n`;
+      });
+    });
+    results += `  </ul></li>\n\n`;
+  });
+  
+  results += `</ul>\n`;
+  
+  taxPage.innerHTML = results;
 
   // so "species" includes the family level _and_ individual bird species
   species = document.getElementById("tree").getElementsByTagName("li");
 
-  // var htmlFamilies = taxPage.querySelectorAll("#tree .family");
-  // numFamilies = htmlFamilies.length;
-
   resetTaxPageHeight();
 }
 
+
 function getCountryJSON(data) {
+  
   families = data.birds.families;
   numFamilies = families.length;
   
@@ -325,68 +374,13 @@ function getCountryJSON(data) {
     var results = {};
     var specials = /extinct|endemic|hypothetical|vagrant/;
     if (specials.test(lastQuery)) results = specialSearch(families, lastQuery);
+    // false will avoid modifyQuery()  sanitize, add accents, etc. - has already been done on the lastQuery
     else results = searchRegexTree(families, lastQuery, countries2Postals[currentCountry]), false;
     
-    loadSearchresults(results);
-  }
-}
-
-// going backward this is good, but also want to limit search going forward in searches
-// how to limit the cache or clear old values?
-
-// if searchInput.value.length is 1 more than last value && substring is the same,
-// then search using the old cached result: searchTree(search.cache[searchInput.value.subst(), query2)
-
-    // a memoized function
-// function sqrt(arg) {
-//   if (!sqrt.cache) {
-//       sqrt.cache = {}
-//   }
-//   if (!sqrt.cache[arg]) {
-//       return sqrt.cache[arg] = Math.sqrt(arg)
-//   }
-//   return sqrt.cache[arg]
-// }
-
-/**
- * @desc Memoization - build and check cache for new searches
- *
- * @param {string} query - searchInput.value
- * @param {boolean} newCountry - clear cache if true
- **/
-function checkSearchCache(query, newCountry) {
-  
-// manage the cache: clear it if searchInput.value.length = 0 or 1
-//                 : array.shift (remove first element) if cache.length > someMagicNumber
-//                 : array.pop   (remove last element)  if going backwards 
-
-  if (newCountry) {
-     searchCache = {};
-    searchCache[query] = searchTree(species, query);
-    return;
+    loadSearchResults(results);
   }
   
-  if (!searchCache[query]) {  // if same country
-  
-     searchCache.shift();  // even if ultimately find no matches? could look at return value
-
-     if (query.slice(0,-1) === lastQuery) {  // going forward
-       searchCache[query] = searchTree(previousSearchResults, query);  // return searchResultsList
-       return;
-     }
-           // going backwards should be in the cache, so this is a safety check
-     else if (lastQuery.slice(0, -1) === query) {
-       SearchCache.pop();   // going backwards
-       searchCache[query] = searchTree(species, query);
-       return;
-     }
-
-    searchCache[query] = searchTree(species, query);
-    return;
-  }
-  
-  searchCache[query];
-  return;
+  buildTaxTree(families, countries2Postals[currentCountry]);
 }
 
 // <ul id="searchResults"></ul>
@@ -662,7 +656,7 @@ function printElem (evt) {
   var html = '<html><head><title></title><head>';
 
   var css = "<style>";
-  css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }"
+  css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }";
   css += "h3 { margin: 0 0 3ch 0; text-align: center; }";
   css += ".family, .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
   css += ".fsc { position: absolute; left: 50%; }";
@@ -673,7 +667,7 @@ function printElem (evt) {
   
   // html += '<link rel="stylesheet" href="./printCSS/printSearchresults.css" />';  old online version that works
   // use below for working in gulp sync
-  // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';  
+  // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';
   
   html += '</head><body>';
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
@@ -686,7 +680,7 @@ function printElem (evt) {
   setTimeout(function() {
     printWindow.print();
     printWindow.close();
-   }, 1000);
+  }, 1000);
 
   return true;
 }

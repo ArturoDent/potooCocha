@@ -32,11 +32,11 @@
           }
         ],
 
-      "multiline-comment-style": ["error", "starred-block"],
+      "multiline-comment-style": ["off", "starred-block"],
 
     "no-console": 0,
-    "no-undef": "error",
     "no-unused-vars": "warn",
+    "no-undef": "off",
     "no-shadow": ["error", { "allow": ["i", "j"] }],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
@@ -45,7 +45,7 @@
     "indent": ["error", 2, { "ignoreComments": true }],
 
     "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-    "no-trailing-spaces": ["warning", { "skipBlankLines": true }],
+    "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "eqeqeq": 2,
     "no-cond-assign": ["error", "always"],
     "default-case": "error",

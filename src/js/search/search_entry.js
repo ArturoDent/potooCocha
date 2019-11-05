@@ -1,12 +1,5 @@
 "use strict";
-// const S = require('./search_functions');
-// const R = require('./search_handleResults');
 
-// var searchSpecials;
-// var searchInput;
-// var searchCountryText;
-
-// var families;
 var results = {}; // {numSpecies: numSpecies, list: results}
 
 var html2json = {	"vagrant": "V", "hypothetical": "H", "endemic": "X(e)",
@@ -30,13 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
 //  ------------------------------------------------------------------------------------------------------------  //
 
 //  Caller :  ("#searchInput").on ("input change click textInput focusin", getQuery);    keyup removed
+// eslint-disable-next-line no-unused-vars
 function getQuery() {
   
   // úáóíç are not used by SACC, and will be swapped later for 'uaoic'
   var badIndex = searchInput.value.search(/[^"a-zñãúáóíç'\s-]/i);
 
   if (badIndex !== -1) {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; character not allowed </li><li></li>";
+    searchResults.innerHTML = "<li></li><br/><br/><li> &nbsp; &nbsp; &nbsp; &nbsp; character not allowed </li><li></li>";
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();
     return;
@@ -54,14 +48,14 @@ function getQuery() {
     searchInput.size = 20 + (searchInput.value.length - 6);
   }
   
-  // searchTree(searchInput.value); // memoize, set flag for same country
-  // results = searchRegexTree(families, searchInput.value, currentCountry);
+  // true: will run the query through handleQuery() to cleanse, etc.
   results = searchRegexTree(families, searchInput.value, countries2Postals[currentCountry], true);
-  loadSearchresults(results);  
+  loadSearchResults(results);
 }
 
 //  ------------------------------------------------------------------------------------------------------------  //
 
+// eslint-disable-next-line no-unused-vars
 function getSearchSpecialsQuery(evt) {
 
   // <div id="searchSpecials" class="grayed">
@@ -69,7 +63,7 @@ function getSearchSpecialsQuery(evt) {
   //    <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
   
    // KeyboardEvent, type keyup, 13 === Enter
-   if (evt.type === "keyup" && evt.keyCode !== 13) {
+  if (evt.type === "keyup" && evt.keyCode !== 13) {
     return;
   }
 
@@ -80,12 +74,12 @@ function getSearchSpecialsQuery(evt) {
 
   if (evt.target.id === "searchSpecials") return;     // clicked in #searchSpecials but not on a button area
   else if (evt.target.className === "searchSpecialWrapper")
-    special = evt.target.textContent.trim();    // clicked between "visible" buttons but on their background, i.e., "searchSpecialWrapper"
+    special = evt.target.textContent.trim();    // clicked between "visible" buttons on "searchSpecialWrapper"
   else special = evt.target.parentNode.textContent.trim();
-  // parentNode else if you click on "e" for example of extinct only the "e" is detected as the textContent of the target
+  // parentNode else if you click on "e" of extinct only the "e" is detected as the textContent of the target
   
   results = specialSearch(families, special);  // country is a postalCode
-  loadSearchresults(results);
+  loadSearchResults(results);
 }
 
 //  ------------------------------------------------------------------------------------------------------------  //
@@ -93,13 +87,11 @@ function getSearchSpecialsQuery(evt) {
 function specialSearch(families, special) {
   
   lastQuery = special;
-      // vagrant("V"), hypothetical("H"), endemic("X(e)"), extinct("EX")
-  special = html2json[special];
+  special = html2json[special];  // vagrant("V"), hypothetical("H"), endemic("X(e)"), extinct("EX")
   
   if (special) {
     
     if (currentCountry === "SAM") return searchExtinctOrEndemicSAM(families, special);    // SAM : extinct and endemics
-    else return searchCountrySpecials(families, special, countries2Postals[currentCountry])     // countries: hypothetical, vagrant, extinct and endemic
+    else return searchCountrySpecials(families, special, countries2Postals[currentCountry]);     // countries: hypothetical, vagrant, extinct and endemic
   }
-  // console.log("numSpecies = " + results.numSpecies);
 }
