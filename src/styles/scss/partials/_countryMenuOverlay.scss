@@ -26,34 +26,33 @@
 
 #countryButton {
   position: fixed;  // smoother w/o this ???
-  // top: 8rem;
   top: 2.35rem;
-  // right: 4.8vw;
   right: 3vw;
-  transform: translateX(-25vw);
+  // transform: translateY(-25vw);
+  transform: translate(-35vw, 10vh) scale(2);
   
   width: 14ch;
   height: 14ch;
   padding : 0.5ch 0 0.9ch 1ch;
   
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align  :  center;
   cursor: pointer;
   z-index: 3;
    
-  border: 0.2rem solid $titleBannerColor;
+  // border: 0.2rem solid $titleBannerColor;
+  border: 0.2rem solid white;
   border-radius: 50%;
-  // border-top-right-radius: 0;
-  // border-bottom-right-radius: 0;
   background-color: $bgColor;  // #4db088 a nice green
   
-  box-shadow  :  inset 0 0 0 0.03rem black, 0 0 0 0.03rem black;  // smoother w/o this?
+  box-shadow  :  inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
   // transition  :  background-color 400ms, transform 400ms ease-out;
   will-change: transform;
 }
 
 #countryButton.slideLeft {  
-  transform: translateX(0);
+  transform:  translateX(0);
+  // transform: translateX(0);
   transition: transform 500ms 200ms ease-in-out;  // same, does disabling this help fluidity??, see above
 }
 
@@ -65,13 +64,14 @@
   height: 4.5rem;
   padding : 0;
   color: #eee;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   text-align  :  center;
-  background-color: $bgColor;
-  border: 0.2rem solid $titleBannerColor;
-  
+  background-color: #000;
+  border: 0.2rem solid transparent;
   border-radius: 50%;
-  box-shadow: inset 0 0 0.03rem 0.03rem rgba(0,0,0, 0.1);
+  box-shadow: 0 0 0.0125rem #ccc, 0 0 0 0.35rem $bgColor;
+  
+  // transform: rotate(10deg);
 }
 
 // #countryButton:after {
@@ -90,7 +90,7 @@
   content  :  '';
   position  :  absolute;
   top  :  0.2rem;
-  left  :  111%;
+  left  :  115%;
   border-style  :  solid;
   border-width  :  1.7rem;
   border-color  :  transparent transparent transparent $titleBannerColor;
@@ -99,6 +99,9 @@
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  border-color: rgb(184, 183, 183);
+  // border-color: rgb(184, 183, 183);
+  // border: $titleBannerColor;
+  box-shadow: 0 0 0 0.1rem #fff;
+  
   background-color: #333;
 }

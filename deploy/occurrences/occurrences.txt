@@ -50,7 +50,7 @@ X--X-X-------X-V---X---
 X-V-X-X-V-X--X-X-X-X-X-NB-NB-X-X-V-
 X-V-X-X-V-X-V--V-X-X-V-NB-NB-X-X--V
 X-NB-X-X-V-X-X-X-X-X-X-X-X-X--X-V-
-IN-----------------IN
+I-----------------IN
 X---X-X----------X---X
 X--V-X-X------X----X---X
 X--X-X--X--X--X-V-X----X--
@@ -73,7 +73,7 @@ X----X-------------V
 X--X--X-H------X------
 X--X-X-X------X----X---X
 X--NB-X-X------NB-NB---X---V
-V-NB-H---NB-NB-NB-V---V--NB--X-NB-
+V-NB-H---NB-NB-NB-V---V--V--X-NB-
 V-NB-NB-V-V-NB-NB-NB-NB-NB-H-NB-NB-NB-V-NB-NB-
 X-V-NB-V-X-X--X---NB-X---X-NB--X
 -------------V--H--
@@ -88,7 +88,7 @@ X--X-X-X------V-X---X---X
 H---X--X--X---H-X-V-V--X--
 X--NB-X-X------X-V---X---V
 -V----V-V-V-V----V-NB--NB-V-
--NB----NB-NB-NB-V----V-NB--NB-NB-
+-NB----NB-NB-NB-V----V-V--NB-NB-
 X---X-------EX-------
 X--NB-X-X------X----X---V
 X--X-X--X-V-X-X-X-X-X-X-X-X-X-V-
@@ -223,7 +223,7 @@ X--X-X--X-----X---V--X--
 X--X-X-X-NB-----X-NB---X---
 ----X-X--X----X------
 ---X(e)--------------
-X--X-X---V----X----X---
+X--X-X---V----X-V---X---
 X-V-X-X--X-H-X-X-X-X-X-X-X-X-X--
 X-V-X-X--X--X-X-X-X-X-X-X-X-X--
 X-X---X-X-X-X----X----X-X-
@@ -237,7 +237,7 @@ X--X-X--X--X-X-X-X-X-X---X--
 ---X--X--H----X------
 --X-X--X--X-X-X-H-X-X-X--X--
 ---H--X--X--------X--
-X--NB-X--H-----X-H---X---
+X--NB-X--H-----X-V---X---
 X--X-X--X--X-X-X-X-X-X-X-X-X--
 --X-X--X--X-X-X--X-X---X--
 X--X-X-V-X--X-NB-NB-X-NB-NB-V-X-X--V
@@ -365,7 +365,7 @@ X--X-X-X-X--X--H--X----X--
 X--X-X-------X-------
 -----X--X----------
 --X-X---------X-----
------X--X----H------
+-----X--X----X------
 --X-X--X--X-X-X--X-X---X--
 X--X-X--X---X-X-X-X-X-X--X--
 ---------H------X(e)--
@@ -506,7 +506,7 @@ X--X-X--X--H---X----X---
 -----X--------NB--X--
 -------X----X------
 X--X---------------
-X--X-X--X--X-X-X-X-X-X---X--
+X--X-X--X--X-X-X-X-X-X-V--X--
 -----X--X----------
 -----X--X----------
 -----X----------X--
@@ -669,7 +669,7 @@ H---H-V-NB--V----NB--NB--NB--
 NB-NB-V-NB-NB-NB-NB-NB-NB-NB-V-NB-NB-NB-NB-NB-NB-V
 NB-V-H-NB-NB-NB-V-V-NB-NB-NB-NB-NB-NB-NB-NB-NB-V
 NB----NB-NB--NB----NB------V
----V--V--V-NB---H-V-NB--H--
+---V--V--V-NB---H-V-V--H--
 --V-----H----------
 NB-NB-NB-NB-NB-NB-NB-NB-NB-H-NB-NB-NB-NB-NB-NB-NB-V
 V---V-V---V-H---V--V----
@@ -752,7 +752,7 @@ X--X-X--X--X-NB-X-X-X-X-NB-X-X--
 ----X---NB----X------
 X-V-X-X-H-X--X-NB-X-X-X-X-X-X-X--
 X-NB--X-V-X-NB-X-NB-NB-V-NB-NB-NB-X-NB-NB-
--V----NB-V-V------NB--NB-V-
+-V----NB-V-V----V--NB--NB-V-
 ----X-H--NB----X------
 ----------V-------
 V-NB--NB-V-NB-V-NB-NB-H--NB-NB-NB-V-NB-V-
@@ -895,7 +895,7 @@ X--X-X--X--X-X-X-X-X-X-X--X-V-
 --X-X--X--X-X-X--X-X---X--
 X-V-X-X--X--X-X-X-X-H-X-X-X-X--
 X-NB-X-X-V-X-V-X-X-X-X-X-X-X--NB--
-X--X-X-X-X--H-X-X-X-H-NB-X-X-X--
+X--X-X-X-X--H-X-X-X-V-NB-X-X-X--
 X-NB-X-X-X-X-NB-X-X-X-X-X-X-X-X-X-NB-X
 -X--X-V-X-X-X-X-X--X-X-X--X-X-
 H-X----NB-X-NB-----V-X--NB-X-
@@ -2016,7 +2016,7 @@ X---X-----------X---
 X---X-----------X---
 -----------X(e)------
 --X---------X------
---X-X--X----H-X-H----X--
+--X-X--X----H-X-X----X--
 --X-X----X----X------
 -----X----------X--
 X--X-X-------X----X---
@@ -2367,7 +2367,7 @@ X--X-X--X--X-X-X-X-X-X-X-V-X--
 X--X-X--NB--NB---X-NB---X---
 ---X(e)--------------
 X--X-NB-X-X--X---NB-X---NB---V
-X-V-X-X--NB--NB-NB-NB-X-NB-NB-V-X-NB--
+X-V-X-X--NB--NB-NB-NB-X-NB-NB-NB-X-NB--
 X---X-------X----X---
 X--X---NB--V----NB--V--NB--
 --X---X--X----X------
@@ -2974,7 +2974,7 @@ H-NB--V-V-NB-NB-NB-NB-NB--NB-NB-NB--NB-NB-
 -V----NB----------H--
 -NB-H---NB-NB-NB----V-V-NB--NB-NB-
 -NB--H--NB-NB-NB-NB-NB---NB-NB--NB-NB-
--V---V-NB-V-NB------V--NB-NB-
+-V---V-NB-V-NB----V--V--NB-NB-
 -V-V-V--NB-NB-V----NB----NB-NB-
 X--X-X-V-X--X-X-X-X-X-X-X-X-X--
 -----NB-V-NB--------NB--
@@ -2991,12 +2991,12 @@ X--X-X-V-X--X-X-X-X-X-X-X-X-X--
 -V----NB-V-NB--H----NB--NB-V-
 -V-H-NB-V-NB-V-NB-NB-H--NB-H-NB--NB-NB-
 H-X-V-NB--NB-X-X-NB-NB--X-NB-NB--X-X-
--NB----NB--H------NB--NB-NB-
+-NB----NB--H------V--NB-NB-
 V-NB-H-NB-V-NB-NB-NB-NB-NB--NB-NB-NB-V-NB-NB-
 -V----V--V------NB--NB-NB-
 -V----H-V-----V----V-V-
 -V----V-V-------NB--V-NB-
------V------------
+-----V----------H--
 -V----V-V-------NB----
 -----V------------
 -V--V-V-V-V-H------NB--NB-NB-
@@ -3050,7 +3050,7 @@ X--X-X--X--X---X-X--X--X--
 -----X--X----------
 -----X--X----X----X--
 X--X-V-V-X--X---X-X----X--
--V--V--NB-NB-NB-H---NB--NB--NB-NB-
+-V--V--NB-NB-NB-H---V--NB--NB-NB-
 --X-X--X---X-X---X---X--
 -----X----------X--
 ---X--X---X-X---X---X--

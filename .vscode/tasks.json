@@ -116,6 +116,16 @@
             ],
             "type": "shell"
         },
+        
+        {
+            "label": "run npm test",
+            "command": "npm",
+            "args": [
+                "test",
+                // "workspaceFolder = ${workspaceFolder}"
+            ],
+            "type": "shell"
+        },
         // {
         //     "label": "Split Editor",
         //     "command": "vscode.commands.executeCommand",

@@ -18,6 +18,7 @@
     text-align: center;
     letter-spacing: 0;
     border-radius : 0.3rem;
+    background-color: rgba(60,60,60, 0.8);
 }
 
 #checklistAuthorsPanel  {
@@ -69,9 +70,9 @@
     font-size  :  6rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  darken($bgColor, 1%);
+    color  :  darken($bgColor, 2%);
     // text-shadow :  0 0 0.125rem white;
-    text-shadow :  0 0 0.15rem $greenHighlightColor, 0 0 0.15rem gray;
+    text-shadow :   0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af;
     letter-spacing  :  0.2em;
 }
 
@@ -86,12 +87,12 @@
 }
 
 #pdfButton {
-    right  :  -30%;
+    left  :  90%;
     bottom  :  45%;
 }
 
 #csvButton {
-    right : -30%;
+    left : 90%;
     bottom  :  15%;
 }
 
@@ -121,7 +122,8 @@
     height: 1.55rem;
     margin-right: 3ch;
 
-    color: lighten($greenHighlightColor, 10%);
+    // color: lighten($greenHighlightColor, 10%);
+    color: white;
     font-size  :  1rem;
     letter-spacing  :  0.1em;
     text-shadow : 0  0.077rem rgba(0,0,0,0.3);

@@ -13,7 +13,7 @@ var numSpeciesList = {
 
   "Argentina": 1007, "Aruba": 219, "Bolivia": 1384, "Brazil": 1818, "Chile": 506,
   "Colombia": 1851, "Curacao": 217, "Ecuador": 1634, "French Guiana": 698,
-  "Guyana": 784, "Paraguay": 694, "Peru": 1810, "Suriname": 731, "Trinidad": 470,
+  "Guyana": 784, "Paraguay": 694, "Peru": 1817, "Suriname": 731, "Trinidad": 471,
   "Uruguay": 448, "Venezuela": 1393, "Bonaire": 208, "Falklands": 227, "South America": 3414
 };
 

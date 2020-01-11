@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "October 28, 2019",
+	"version": "January 06, 2020",
 	"birds": {
 		"families": [
 			{
@@ -980,6 +980,17 @@
 				"FamilyCommon": "CUCKOOS",
 				"genera": [
 					{
+						"Genus": "Guira",
+						"spp": [
+							{
+								"species": "guira",
+								"index": 225,
+								"name": "Guira Cuckoo",
+								"PE": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Crotophaga",
 						"spp": [
 							{
@@ -1060,7 +1071,7 @@
 								"species": "cinerea",
 								"index": 239,
 								"name": "Ash-colored Cuckoo",
-								"PE": "H"
+								"PE": "V"
 							}
 						]
 					},
@@ -1683,7 +1694,7 @@
 								"species": "barroti",
 								"index": 367,
 								"name": "Purple-crowned Fairy",
-								"PE": "H"
+								"PE": "X"
 							},
 							{
 								"species": "auritus",
@@ -3621,6 +3632,17 @@
 						]
 					},
 					{
+						"Genus": "Hydroprogne",
+						"spp": [
+							{
+								"species": "caspia",
+								"index": 754,
+								"name": "Caspian Tern",
+								"PE": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Larosterna",
 						"spp": [
 							{
@@ -4400,7 +4422,7 @@
 								"species": "involucris",
 								"index": 897,
 								"name": "Stripe-backed Bittern",
-								"PE": "H"
+								"PE": "V"
 							}
 						]
 					},
@@ -9263,7 +9285,7 @@
 								"species": "vulpina",
 								"index": 2018,
 								"name": "Rusty-backed Spinetail",
-								"PE": "H"
+								"PE": "X"
 							},
 							{
 								"species": "vulpecula",
@@ -13621,6 +13643,17 @@
 						]
 					},
 					{
+						"Genus": "Leiothlypis",
+						"spp": [
+							{
+								"species": "peregrina",
+								"index": 2976,
+								"name": "Tennessee Warbler",
+								"PE": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Oporornis",
 						"spp": [
 							{
@@ -13869,7 +13902,7 @@
 								"species": "ludovicianus",
 								"index": 3052,
 								"name": "Rose-breasted Grosbeak",
-								"PE": "NB"
+								"PE": "V"
 							}
 						]
 					},

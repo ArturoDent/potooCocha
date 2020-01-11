@@ -7,8 +7,6 @@
 
   <title>potoococha</title>
 
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; child-src 'none';"> -->
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src https:"> -->
 
@@ -19,7 +17,7 @@
   <meta name="url" content="https://www.potoococha.net" />
   <meta http-equiv="cache-control" content="no-cache" />
 
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="manifest" href="/manifest.webmanifest" />
 
   <!-- <link rel="icon" href="/favicon.ico"> don't use = unnecessary -->
   <!--<link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
@@ -27,6 +25,7 @@
   <link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
   <link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
   <link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="image/png">-->
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
   <!-- More info: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
 
   <style>
@@ -88,8 +87,8 @@
       <symbol id="icon-mag-glass" viewBox="0 0 512 512">
         <title>magnifying glass</title>
         <g>
-          <path style="fill:#55a3d3" d="M496.13,435.69L374.85,332.55c-12.53-11.28-25.94-16.46-36.77-15.96C366.70,283.05,384,239.55,384,192 C384,85.96,298.03,0,192,0C85.96,0,0,85.96,0,192s85.96,192,192,192c47.54,0,91.05-17.29,124.58-45.92   c-0.5,10.83,4.68,24.23,15.96,36.77L435.69,496.13c17.66,19.62,46.51,21.27,64.10,3.67   C517.40,482.20,515.75,453.35,496.13,435.69z M192,320c-70.69,0-128-57.30-128-128c0-70.69,57.30-128,128-128   c70.69,0,128,57.30,128,128C320,262.69,262.69,320,192,320z" />
-          <circle style="fill:#50565a;fill-opacity:0.4" cx="191.5" cy="191.5" r="129.5" />
+          <path style="fill:#96f1fd" d="M496.13,435.69L374.85,332.55c-12.53-11.28-25.94-16.46-36.77-15.96C366.70,283.05,384,239.55,384,192 C384,85.96,298.03,0,192,0C85.96,0,0,85.96,0,192s85.96,192,192,192c47.54,0,91.05-17.29,124.58-45.92   c-0.5,10.83,4.68,24.23,15.96,36.77L435.69,496.13c17.66,19.62,46.51,21.27,64.10,3.67   C517.40,482.20,515.75,453.35,496.13,435.69z M192,320c-70.69,0-128-57.30-128-128c0-70.69,57.30-128,128-128   c70.69,0,128,57.30,128,128C320,262.69,262.69,320,192,320z" />
+          <circle style="fill:#96f1fd;fill-opacity:0.2" cx="191.5" cy="191.5" r="129.5" />
         </g>
       </symbol>
 
@@ -133,16 +132,16 @@
     
       <article id="taxonomyArticle">
         
-        <button class="taxInstructionsButton hasTooltip">?<span class="tooltip">Close instructions</span></button>
+        <button class="taxInstructionsButton hasTooltip"  type="button" aria-label="Close these search instructions">?<span class="tooltip">Close instructions</span></button>
 
         <h1 class="searchWord">Search the South American Classification Committee's avian <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
-            target="_blank" rel="noopener">taxonomy</a> for <span id="searchCountryText">South America
-            (Oct. 25, 2019)</span>.</h1>
+            target="_blank" rel="noopener noreferrer">taxonomy</a> for <span id="searchCountryText">South America
+            (January 1, 2020)</span>.</h1>
 
         <div class="slideUpWrapper panel">
 
           <div class="taxArticleMain">
-            Type part of a word like "xantho" or "caprimul".<br><br>
+            Type part of a word like "xantho" or "potoo".<br><br>
             
             <!-- The searches are <a class="linkHighlight" href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank" rel="noopener">fuzzy</a>. &nbsp;No need to accent or capitalize.<br><br> -->
 
@@ -178,7 +177,7 @@
             <span class="grayed searchGroup">
               <label for="searchInput">search &nbsp;: &nbsp; </label>
               <input name="searchField" id="searchInput" size="20" type="text" autocomplete="off" autocorrect="off"
-                autocapitalize="off" spellcheck="false" tabindex="-1">
+                autocapitalize="off" spellcheck="false" tabindex="-1" list="input-search-terms">
               <svg class="icon icon-mag-glass">
                 <use xlink:href="#icon-mag-glass"></use>
               </svg>
@@ -209,7 +208,7 @@
             <li></li>
           </ul>
 
-          <button id="printerButton" tabindex="-1">
+          <button id="printerButton"  type="button" aria-label="Print these search results" tabindex="-1">
             <svg class="icon icon-printer">
               <use xlink:href="#icon-printer"></use>
             </svg>
@@ -223,7 +222,7 @@
           
           <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>
           <div id='taxPage' contenteditable='false'></div>
-          <button id='closeOpenFamiliesButton' tabindex="-1">▲</button>
+          <button id='closeOpenFamiliesButton'  type="button" aria-label="Close Open Families" tabindex="-1">▲</button>
           <!-- ˄⁞↑ↆ▲⸽ꜛ -->
         </div>
       </article>
@@ -358,14 +357,14 @@
               <label for="sciNames" tabindex="0">No scientific names</la</li>
           </ul>
           
-          <button id="pdfButton" class="genericButton">
+          <button id="pdfButton" class="genericButton"  type="button" aria-label="Create pdf file">
             checklist&nbsp;
             <svg class="icon icon-download">
               <use xlink:href="#icon-download"></use>
             </svg>
           </button>
 
-          <button id="csvButton" class="genericButton">
+          <button id="csvButton" class="genericButton"  type="button" aria-label="Create a comma-separated file">
             &nbsp;csv file&nbsp;&nbsp;
             <svg class="icon icon-download">
               <use xlink:href="#icon-download"></use>
@@ -375,7 +374,7 @@
         </div>
 
         <div id="numDays">
-          <span id="days"># Days</span>
+          <span id="days"># Days :</span>
           <a tabindex="0">0</a>
           <a tabindex="0">1</a>
           <a tabindex="0">2</a>
@@ -409,18 +408,18 @@
         </svg>
 
         <!-- TODO:   tabindex="-1" -->
-        <button class="tooltip" tabindex="-1">delete</button>
+        <button class="tooltip"   type="button" aria-label="Delete this map" tabindex="-1">delete</button>
       </div>
 
       <div id="currentBirdMap" class="drawing">
         
         <!-- preload may do nothing here, but is available on <object. -->
-        <object rel="preload"  aria-labelledby="Map of South America" role="presentation" id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" onload="initCurrentMap();" tabindex="-1"></object>
+        <object rel="preload"  aria-label="Map of South America" role="presentation" id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" onload="initCurrentMap();" tabindex="-1"></object>
       </div>
 
       <div class="mapButtons saveMapButton hasTooltip">
         <!-- TODO:   tabindex="-1" -->
-        <button class="tooltip" tabindex="-1">Keep</button>
+        <button class="tooltip"   type="button" aria-label="Save this map" tabindex="-1">Keep</button>
       </div>
 
       <div class="colorKey">
@@ -440,11 +439,11 @@
 
   <article id='mapsCollection'>
     <div id='mapsHeader'>
-      <button id='deleteAllMapsButton' tabindex="-1">delete all</button>
+      <button id='deleteAllMapsButton'  type="button" aria-label="Delete all maps" tabindex="-1">delete all</button>
     </div>
   </article>
 
-  <button id="countryButton" class="genericButton slideLeft" tabindex="0">select country</button>
+  <button id="countryButton" class="genericButton slideLeft"  type="button" aria-label="Select a country" tabindex="0">select country</button>
     
   <div id="countryMenuLayer">
 

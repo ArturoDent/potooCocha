@@ -4,6 +4,7 @@ const reload = browserSync.reload;
 
 const newer = require('gulp-newer');
 const sass = require("gulp-sass");
+// const sourcemaps = require("gulp-sourcemaps");
 
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
@@ -11,7 +12,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 
 const stripComments = require("gulp-strip-comments");
-const stripdebug = require("gulp-strip-debug");
+// const stripdebug = require("gulp-strip-debug");
 const modifyHTMLlinks = require("gulp-processhtml");  // or try gulp-useref
 const addVersionString = require("gulp-version-number");
 const print = require('gulp-print').default;
@@ -29,16 +30,16 @@ function serve (done) {        // serve:    ./home.html
   done();
 }
 
-function serveDeploy (done) {      // serve:    deploy/home.html
-  browserSync.init({
-    server: {
-      baseDir: "deploy",
-      index: "home.html"
-    },
-    ghostMode: false
-  });
-  done();
-}
+// function serveDeploy (done) {      // serve:    deploy/home.html
+//   browserSync.init({
+//     server: {
+//       baseDir: "deploy",
+//       index: "home.html"
+//     },
+//     ghostMode: false
+//   });
+//   done();
+// }
 
 const paths = {
   html: {
@@ -109,9 +110,11 @@ function watch() {
 }
 
 function sass2css() {
-  return gulp.src(paths.sass.stylesFile)
+  return gulp.src(paths.sass.stylesFile, { sourcemaps: true })
+    // .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest(paths.css.temp))
+    // .pipe(sourcemaps.write("./temp"))
+    .pipe(gulp.dest(paths.css.temp),  { sourcemaps: true })
     .pipe(reload({ stream: true }));
 }
 
@@ -205,25 +208,10 @@ function processCSS() {
     .pipe(gulp.dest(paths.css.deploy));
 }
 
-// Replace Autoprefixer browsers option to Browserslist config.
-// Use browserslist key in package.json or .browserslistrc file.
-
-// # last 2 versions: the last 2 versions for each browser.
-// # defaults: Browserslist’s default browsers (> 0.5%, last 2 versions, Firefox ESR, not dead).
-
-// Using browsers option cause some error. Browserslist config
-// can be used for Babel, Autoprefixer, postcss-normalize and other tools.
-
-// If you really need to use option, rename it to overrideBrowserslist.
-
-// Learn more at:
-// https://github.com/browserslist/browserslist#readme
-// https://twitter.com/browserslist
-
-function processPrintCSS() {
-  return gulp.src(paths.css.src)
-    .pipe(gulp.dest(paths.printCSS.deploy));
-}
+// function processPrintCSS() {
+//   return gulp.src(paths.css.src)
+//     .pipe(gulp.dest(paths.printCSS.deploy));
+// }
 
 function copyPHP() {
   return gulp.src(paths.php.src)

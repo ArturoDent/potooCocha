@@ -45,7 +45,7 @@
 
             "preLaunchTask": "Gulp: watch",
             // "preLaunchTask": "Echo vars",
-            // "postDebugTask": "postdebugKill"
+            "postDebugTask": "postdebugKill"
         },
         {
             "type": "node",
@@ -63,19 +63,22 @@
             "request": "launch",
             "url": "http://localhost:3000",
             // "url": "$env:url", does not work
-            "webRoot": "${workspaceRoot}",
+            "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
             "runtimeArgs": [
               "--remote-debugging-port=9222"
             ],
             // "preLaunchTask": "Gulp: Start server only"   // gulp serve
+            // "preLaunchTask": "run npm test",
+            
+            
         },
         {
             "name": "Chrome : Launch without sourcemaps",
             // doesn't work'
             "type": "chrome",
             "request": "launch",
-            "file": "${workspaceRoot}",
+            "file": "${workspaceFolder}",
             "runtimeArgs": [
               "--remote-debugging-port=9222"
             ]
@@ -96,8 +99,24 @@
             "request": "attach",
             "port": 9222,
             "url": "http://localhost:3000",
-            "webRoot": "${workspaceRoot}"
+            "webRoot": "${workspaceFolder}"
         },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "launch",
+            "name": "Launch Microsoft Edge and open the Elements tool",
+            "url": "http://localhost:3000",
+            // "url": "$env:url", does not work
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+        },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "request": "attach",
+            "name": "Attach to Microsoft Edge and open the Elements tool",
+            "url": "http://localhost:3000/",
+            "webRoot": "${workspaceFolder}"
+        }
       //   {
       //     "type": "browser-preview",
       //     "request": "attach",

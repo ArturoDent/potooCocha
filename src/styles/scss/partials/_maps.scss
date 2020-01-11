@@ -137,11 +137,12 @@
 #currentMap {
     opacity  :  1;
     position  :  fixed;
-    
-    //  TODO : use rem's instead?    
     top  :  28vh;
     left  :  71vw;
     margin  :  0 0 0 0.38rem;
+    
+    //  TODO : use rem's instead?    
+
 
     transform : translateY(0);
     -webkit-transform-origin  :  0 0;
@@ -150,6 +151,7 @@
          -o-transform-origin  :  0 0;
             transform-origin  :  0 0;
     transition  : transform 500ms;
+    will-change: transform;
 }
 
 #SAMsvg  {

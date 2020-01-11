@@ -257,7 +257,10 @@ function setCountry(evt) {
   if (!titleBanner.classList.contains("countryChosen")) titleBanner.classList.add("countryChosen");
   
   if (!countryButton.classList.contains("countryChosen")) countryButton.classList.add("countryChosen");
-  countryButton.innerHTML = countries2Postals[currentCountry];
+  // countryButton.innerHTML = countries2Postals[currentCountry];
+  
+  if (currentCountry === "South America") countryButton.innerHTML = "SA";
+  else countryButton.innerHTML = countries2Postals[currentCountry];
 
   setChecklistCountryAuthors(currentCountry);
   loadCountryTaxonomy(currentCountry);

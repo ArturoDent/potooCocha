@@ -31,7 +31,8 @@
     border-bottom-left-radius: 0;
     // transform: translateY(-23.3rem);
     // transform: translateY(-22rem);
-    transform: translateY(-20rem);
+    // transform: translateY(-20rem);
+    transform: translateY(-19rem);
     transition: all 400ms ease-in-out;
 }
 
@@ -162,7 +163,7 @@
     text-align:  center;
     text-shadow:  0.077rem 0.077rem 0.15rem rgba(0,0,0,0.3);
 
-    border: none;
+    border: 1px solid transparent;
     background-color: #333;
 
     -webkit-user-select: text;
@@ -171,7 +172,7 @@
     user-select : text;
 }
 
-#searchInput:focus  {  outline: none;  }
+#searchInput:focus  {  outline: none;      border: 1px solid white;  }
 #searchInput:focus + .inpuInfo { display: block; }
 
 #searchInput::-moz-placeholder  {  color  :  white;  }
@@ -182,7 +183,7 @@
 #searchSpecials  {
     position  :  absolute;
     top : -7.2ch;
-    left  :  90%;
+    left  :  83%;
     width: 15.38rem;
     padding : 2.31rem;
 
@@ -240,7 +241,7 @@
 }
 
 #searchTerm span {
-  color: #96d4fd;
+  color: $turquoiseHighlightColor;
 }
 
 .highlightSpecial { border-bottom: 0.077rem solid white; }
@@ -251,9 +252,9 @@
     opacity  :  0;
     position  :  relative;
     height  :  auto;
-    width : calc(100% + 10vw);
+    width : calc(100% + 7vw);
     top : -7rem;
-    left : -10vw;
+    left : -7vw;
     margin  : 5.5ch 0 2ch 0;
     padding  :  0;
 
@@ -269,8 +270,8 @@
     top : 0;
     height : 100%;
 
-    width : calc(100% - 10vw);
-    left : 10vw;
+    width : calc(100% - 7vw);
+    left : 7vw;
     padding: 0 0 1ch 0;
     overflow-x : visible;
 
@@ -280,55 +281,44 @@
     box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
 }
 
-#closeResultsPanelButton, #closeOpenFamiliesButton  {
-    position: relative;
-    text-align: center;
-    color: white;
-
-    border: 0.15rem solid $goldHighlightColor;
-    border-radius: 50%;
-    background-color: $panelColor;
-
-    cursor: pointer;
-    transition: all 300ms;
-  }
-
-  #closeResultsPanelButton  {
-    left: 100%;
-    width: 2.2rem;
-    height: 2rem;
-    padding: 0 0 0.08rem 0;
+//   #closeResultsPanelButton  {
+//     left: 100%;
+//     width: 2.2rem;
+//     height: 2rem;
+//     padding: 0 0 0.08rem 0;
     
-    text-align: center;
-    font-size  :  1.2rem;
-    font-weight: 600;
-    line-height: 1.2rem;
+//     text-align: center;
+//     font-size  :  1.2rem;
+//     font-weight: 600;
+//     line-height: 1.2rem;
 
-    box-shadow: 0 0 0 0.46rem $bgColor,
-                0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
-                0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
-}
+//     box-shadow: 0 0 0 0.46rem $bgColor,
+//                 0.077rem 0.077rem 0 0.40rem $bgColor, 0.077rem -0.077rem 0 0.40rem $bgColor,-0.077rem 0 0 0.40rem rgba(0,0,0, 1),
+//                 0.077rem 0.077rem 0 0.5rem $bgColor, 0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem -0.077rem 0 0.5rem $bgColor, -0.077rem 0 0 0.5rem rgba(255,255,255, 0.25);
+// }
 
-#closeResultsPanelButton::before  {
-  opacity: 0;
-  position: absolute;
-  content: "close";
-  left: 120%;
-  top: -50%;
-  width: auto;
+// #closeResultsPanelButton::before  {
+//   opacity: 0;
+//   position: absolute;
+//   content: "close";
+//   left: 120%;
+//   top: -50%;
+//   width: auto;
 
-  font-size: 0.9rem;
-  transition: all 200ms 500ms ease-in-out;
-}
+//   font-size: 0.9rem;
+//   transition: all 200ms 500ms ease-in-out;
+// }
 
-#closeResultsPanelButton:hover::before, #closeResultsPanelButton:focus::before  {
-  opacity: 1;
-}
+// #closeResultsPanelButton:hover::before, #closeResultsPanelButton:focus::before  {
+//   opacity: 1;
+// }
+
 
 #printerButton {
   position: absolute;
   top: calc(100% - 1rem);
   left: calc(100% - 1rem);
+//   left: calc(100%);
   width: 2.2rem;
   height: 2.2rem;
   padding: 0.077rem;
@@ -338,34 +328,48 @@
   text-align: center;
   
   border-radius: 50%;
-  background-color: $panelColor;
-  border : 0.15rem solid  $goldHighlightColor;
+  background-color: rgb(34, 34, 34);
+  border : 0.13rem solid $turquoiseHighlightColor;
   
   box-shadow: 0 0 0 0.3rem $bgColor,
-              0 -0.06rem 0 0.3rem $bgColor, -0.06rem 0 0 0.3rem $bgColor,  -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
-              0.06rem -0.06rem 0 0.4rem $bgColor, -0.06rem -0.06rem 0 0.4rem $bgColor,  -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
+  
+              0.06rem -0.06rem 0 0.25rem rgba(0,0,0, 1),
+              -0.06rem -0.06rem 0 0.35rem $bgColor, 
+              0.06rem 0.06rem 0 0.4rem $bgColor,  
+              0.06rem -0.05rem 0 0.35rem rgba(255,255,255, 0.2),
+  
+              0 -0.06rem 0 0.3rem $bgColor, 
+              -0.06rem 0 0 0.3rem $bgColor,  
+              -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
+              0.06rem -0.06rem 0 0.4rem $bgColor, 
+              -0.06rem -0.06rem 0 0.4rem $bgColor,  
+              -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
 }
 
 #printerButton::before  {
-  opacity: 0;
+//   opacity: 0;
   position: absolute;
-//   content: "print";
   content: "print search results"; // newline = \000A, spaces or tabs don't seem to work
-  left: 125%;
-  top: -140%;
+//   left: 70%;
+  left: 94%;
+//   top: -128%;
+  top: -138%;
 //   width: auto;
   width: 13ch;  // but this is really doing all the formatting of the `content`
+  z-index: -1;
   font-size: 0.9rem;
   
   padding:0.38rem;
+  border: 1px solid $bgColor;
   border-radius: 0.6rem;
-  background-color: $panelColor;
+  background-color: rgb(34, 34, 34);
   box-shadow: 0 0 0.09rem rgb(0,0,0);
-  transition: all 200ms 500ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 #printerButton:hover::before, #printerButton:focus::before  {
-  opacity: 1;
+    border-right-color: white;
+    border-top-color: white;
 }
 
 #closeOpenFamiliesButton  {
@@ -377,36 +381,60 @@
     padding  :  0 0 0.3rem 0;
 
     font-size  :  1.8rem;
-
-    border : 0.15rem solid  $goldHighlightColor;
+    text-align: center;
+    color: white;
+    
+    background-color: rgb(34, 34, 34);
+    border : 0.13rem solid  $turquoiseHighlightColor;
+    border-radius: 50%;
+     
     box-shadow: 0 0 0 0.62rem $bgColor,
-                0 -0.077rem 0 0.62rem $bgColor, -0.077rem 0 0 0.62rem $bgColor,  -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),
-                0.077rem -0.077rem 0 0.69rem $bgColor, -0.077rem -0.077rem 0 0.69rem $bgColor,  -0.077rem -0.077rem 0 0.69rem rgba(255,255,255, 0.25);
+    
+                0 -0.077rem 0 0.62rem $bgColor, 
+                -0.077rem 0 0 0.62rem $bgColor,  
+                -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),                
+                0.077rem -0.077rem 0 0.69rem $bgColor, 
+                -0.077rem -0.077rem 0 0.69rem $bgColor,  
+                -0.077rem -0.077rem 0 0.69rem rgba(255,255,255, 0.25),
+                
+                // 0 0.077rem 0 0.62rem $bgColor, 
+                // 0.077rem 0 0 0.62rem $bgColor, 
+ 
+                0.077rem 0 0 0.7rem $bgColor,
+                -0.2rem 0.03rem 0 0.66rem rgba(0,0,0, 0.4),
+                0.077rem -0.077rem 0 0.69rem $bgColor, 
+                0.077rem 0.077rem 0 0.69rem $bgColor,
+                -0.2rem 0.05rem 0 0.66rem rgba(255,255,255, 0.3);
+    transition: all 300ms;
+    cursor: pointer;
 }
 
-#closeResultsPanelButton:hover, #closeOpenFamiliesButton:hover, #printerButton:hover,
-#closeResultsPanelButton:focus, #closeOpenFamiliesButton:focus, #printerButton:focus  {
+#closeOpenFamiliesButton:hover, #printerButton:hover,
+#closeOpenFamiliesButton:focus, #printerButton:focus  {
     outline: none;
-    background-color: rgb(34, 34, 34);
+    border-color: white;
 }
 
 #closeOpenFamiliesButton::before  {
-    opacity: 0;
+    // opacity: 0;
     position: absolute;
     content: "close open families";
-    left: -8vw;
+    left: -7vw;
     top: 90%;
     width: 8vw;
-    padding:0.38rem;
+    padding: 0.38rem 1.3rem 0.38rem 0;
+    border: 1px solid $bgColor;
     border-radius: 0.6rem;
     font-size: 0.9rem;
-    background-color: $panelColor;
-    box-shadow: 0 0 0.09rem rgb(0,0,0);
-    transition: all 200ms 500ms ease-in-out;
+    z-index: -1;
+    background-color: rgb(34, 34, 34);
+    box-shadow: 0 0 0.09rem hsl(0, 0%, 0%);
+    transition: all 200ms ease-in-out;
 }
 
 #closeOpenFamiliesButton:hover::before, #closeOpenFamiliesButton:focus::before  {
-    opacity: 1;
+    border-left-color: white;
+    border-bottom-color: white;
 }
 
 #countrySearch  {
@@ -434,11 +462,11 @@
 #searchResults  {
     opacity  :  1;
     position  :  relative;
-    left  :  -10vw;
-    width  :  calc(100% + 10vw + 1.1ch);
+    left  :  -7vw;
+    width  :  calc(100% + 7vw + 1.1ch);
     height  :  auto;
     max-height  :  28.5rem;
-    padding  :  0 0 0 10vw;
+    padding  :  0 0 0 7vw;
 
     font-size  :  1rem;
     line-height  :  1rem;
@@ -456,8 +484,6 @@
 
     transition  :  all 350ms;
 }
-
-//  TODO : ?
 
 #searchResults.fadeIn  {
     opacity  :  1;
@@ -504,9 +530,9 @@
     position : absolute;
     border-left : 0.54rem solid white;
     top: -0.077rem;
-    left : -10vw;
+    left : -7vw;
     height : calc(100% + 0.15rem);
-    width : 10vw;
+    width : 7vw;
 
     border-right : 0 solid $birdRolloverColor;
     background-color: $birdRolloverColor;
@@ -535,9 +561,9 @@
     position : absolute;
     content : '\a0\a0';
     top: -0.077rem;
-    left : -10vw;
+    left : -7vw;
     height : calc(100% + 0.15rem);
-    width : 10vw;
+    width : 7vw;
 
     border-right : 0 solid $birdRolloverColor;
     background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
@@ -547,17 +573,17 @@
 }
 
 #searchResults li.active:hover::before  {
-    border-right : 10vw solid $birdRolloverColor;
+    border-right : 7vw solid $birdRolloverColor;
 }
 
 #searchResults .family      {
     margin  :  0.38rem 0 0 0;
-    padding: 0.077rem 0 0.15rem 1.2rem;
+    padding : 0.077rem 0 0.15rem 1.2rem;
 }
 
 #searchResults .familyOpen  {
     margin  :  0.38rem 0 0 0;
-    padding: 0.077rem 0 0.15rem 1.2rem;
+    padding : 0.077rem 0 0.15rem 1.2rem;
 }
 
 // species scientific names only
@@ -617,10 +643,10 @@
     
     opacity: 0;
     position: relative;
-    width: calc(100% + 10vw);
+    width: calc(100% + 7vw);
     height: 0;
     top: 0;
-    left: -10vw;
+    left: -7vw;
     margin: 0 0 -20.5ch 0;
     padding :  5ch 0 0 0;
 
@@ -638,8 +664,8 @@
     position : relative;
     top : -1.5ch;
     height : 100%;
-    width : calc(100% - 10vw);
-    left : 10vw;
+    width : calc(100% - 7vw);
+    left : 7vw;
     padding : 0 0 2ch 0;
 
     border  :  0.077rem solid rgba(255,255,255,0.15);
@@ -654,11 +680,11 @@
 #taxPage  {
     position  :  relative;
     top: -1.5ch;
-    left  :  -10vw;
-    width  :  calc(100% + 10vw + 1ch);
+    left  :  -7vw;
+    width  :  calc(100% + 7vw + 1ch);
     height : 0;
     max-height  :  75vh;
-    padding  :  0 0 0 10vw;
+    padding  :  0 0 0 7vw;
     margin : 0;
 
     font-size  :  1rem;
@@ -697,7 +723,7 @@
 
 #tree .fsc  {
     position  :  absolute;
-    left  :  50%;
+    left  :  52.3%;
 
     font-weight  :  bold;
     font-style  :  normal;
@@ -739,6 +765,7 @@ to {
 /*target : family common name only*/
 #tree li.family > span:nth-child(1)  {
     padding  :  0.077rem 0 0.15rem 1.15rem;
+
 }
 
 /*target : familyOpen family common and sci names for families that are open  */
@@ -747,7 +774,7 @@ to {
 }
 
 // all family names whether open or not
-.fTitle  {
+.fTitle  {    
     display: inline-block;
     width: calc(100% - 0.62rem);
     border-top : 0.077rem solid transparent;
@@ -791,7 +818,7 @@ to {
 #tree .familyOpen .birds li span:last-child  {
     position  :  absolute;
     // left  :  52.8%;
-    left  :  52.6%;
+    left  :  54.5%;
 }
 
 #taxPage.samTax .hy:before,#taxPage.samTax .va:before  {
@@ -891,10 +918,10 @@ to {
 #tree ul li.active::before {
     position : absolute;
     top : -0.077rem;
-    left : -10vw;
+    left : -7vw;
     content : '';
     height : calc(100% + 0.15rem);
-    width : 10vw;
+    width : 7vw;
 
     border-right : 0 solid $birdActiveColor;
     background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
@@ -904,5 +931,5 @@ to {
 }
 
 #tree ul li.active:hover::before  {
-    border-right : 10vw solid $birdRolloverColor;
+    border-right : 7vw solid $birdRolloverColor;
 }

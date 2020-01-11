@@ -17,7 +17,7 @@ var html2json = {	"vagrant": "V", "hypothetical": "H", "endemic": "X(e)",
 // results = searchSpecials(families, "extinct", "EC");
 
 document.addEventListener("DOMContentLoaded", function () {
-  var searchInput = document.getElementById("searchInput");  
+  var searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", getQuery);
 });
 

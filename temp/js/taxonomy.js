@@ -145,10 +145,29 @@ function toggleSearchInstructions() {
   searchSlideUpWrapper.classList.toggle("closeInstructions");
   resultsPanel.classList.toggle("closeInstructions");
   
-  if (searchInstructionsOpen) moveTaxPanel("searchInstructionsClosing");
-  else moveTaxPanel("searchInstructionsOpening");
+  if (searchInstructionsOpen) {
+    moveTaxPanel("searchInstructionsClosing");
+    toggleFooterFocusable(true);  // remove tab focus to citations/potoococha links
+  }
+  else {
+    moveTaxPanel("searchInstructionsOpening");
+    toggleFooterFocusable(false);  // add tab focus to citations/potoococha links
+  }
   
   searchInstructionsOpen = !searchInstructionsOpen;
+}
+
+//  TODO  : will this work non-arrrays? No, detect if typeof array, or pass as array?
+function toggleFooterFocusable(disable) {
+  
+  var links = document.querySelectorAll("footer a");
+  
+  if (disable) {
+    links.forEach(function (link) { link.setAttribute("tabindex", "-1"); });
+  }
+  else {
+    links.forEach(function (link) { link.setAttribute("tabindex", "0"); });
+  }
 }
 
 function enableSearchSpecials() {
