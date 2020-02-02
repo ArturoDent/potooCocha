@@ -157,7 +157,6 @@ function toggleSearchInstructions() {
   searchInstructionsOpen = !searchInstructionsOpen;
 }
 
-//  TODO  : will this work non-arrrays? No, detect if typeof array, or pass as array?
 function toggleFooterFocusable(disable) {
   
   var links = document.querySelectorAll("footer a");
@@ -411,7 +410,7 @@ function gotoMatch(e) {
     lastSpecies.classList.remove("active");
   }
 
-  //  TODO  : (element.closest()? with polyfill)
+  //  TODO  : element.closest()? [closest parent] with polyfill
   var ev = e || window.event;  // window.event for IE8-
   var clicked = ev.target;
 
@@ -689,8 +688,15 @@ function printElem (evt) {
   // html += '<link rel="stylesheet" href="src/printCSS/printSearchResults.css" />';
   
   html += '</head><body>';
-  //  TODO  :  normalize lastQuery (remove accented regex)
-  html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
+  
+  // `normalize lastQuery (remove accented regex's):: South America : 's(a|ã)o' 2 species
+  //          'm(a|ã)r(a|ã)(n|ñ)o(n|ñ)'
+  var normalizedQuery = lastQuery.replace(/\(a\|ã\)/gi, "a").replace(/\(n\|ñ\)/gi, "n");
+  
+  console.log(normalizedQuery);
+  
+  // html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
+  html += '<h3>' + currentCountry + ' : &nbsp;\'' + normalizedQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += content;
   html += '</body></html>';
 

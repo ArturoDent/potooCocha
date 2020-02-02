@@ -189,9 +189,9 @@ function deleteAllMaps(evt) {
   map.querySelector(".saveMapButton").style.display = "block";
   
   // delay so mapsCollection closing is smooth, before children are removed
-  setTimeout(function(){  
+  setTimeout(function(){
     for (var i = 1; i <= len; i++) {
-      // TODO: remove eventListeners?      
+      //  TODO  : remove eventListeners?
       mapsCollection.removeChild(mapsCollection.childNodes[3]);
     }
   }, 1000);

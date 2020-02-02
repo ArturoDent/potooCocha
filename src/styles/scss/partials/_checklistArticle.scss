@@ -1,24 +1,27 @@
 #checklistArticle {
     position  :  relative;
     width: 90%;
-    margin  : 5rem 0 0 0;
+    // margin  : 5rem 0 0 0;
+    margin  : 6rem 0 0 0;
     order : 4;
     overflow  :  visible;
 }
 
-#checklistArticle .topFlyoutPanel  {
+// #checklistArticle .topFlyoutPanel  {
+#checklistArticle .flyoutPanel  {
     position: relative;
-    top: 0;
+    top: -1.6rem;
     left : 2.5%;
     // min-width : calc(90% - 4rem);
     width : auto;
     height  :  auto;
     padding : 0.8ch 5% 1.5ch 0;
-
+    margin-top: 1.5rem;
+    
     text-align: center;
     letter-spacing: 0;
-    border-radius : 0.3rem;
-    background-color: rgba(60,60,60, 0.8);
+    
+    // background-color: rgba(121, 120, 120, 0.9);
 }
 
 #checklistAuthorsPanel  {
@@ -64,15 +67,16 @@
 .checklistTitle  {
     position  :  relative;
     // top  : -0.5rem;
-    top : 1.7rem;
+    // top : 1.7rem;
+    top : 0.2rem;
     left : -4vw;
 
     font-size  :  6rem;
     font-weight  :  bold;
     font-variant  :  small-caps;
-    color  :  darken($bgColor, 2%);
+    color  :  darken($bgColor, 4%);
     // text-shadow :  0 0 0.125rem white;
-    text-shadow :   0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af;
+    text-shadow :   0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af,  0 -1px 2px #75d6af;
     letter-spacing  :  0.2em;
 }
 

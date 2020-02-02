@@ -6,16 +6,6 @@ var html2json = {	"vagrant": "V", "hypothetical": "H", "endemic": "X(e)",
   "extinct": "EX"
 };  // note 'extinct` is an array: 2 values to search for EX(e)
   
-//  TODO  : need country2postalCodes here??
-
-// var json = require('../JSON/Ecuador/Ecuador 2019-10-22.json');
-// var json = require('../JSON/South America/South America 2019-10-22.json');
-
-// families = json.birds.families;
-
-// results = S.searchRegexTree(families, "xantho", "EC");
-// results = searchSpecials(families, "extinct", "EC");
-
 document.addEventListener("DOMContentLoaded", function () {
   var searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", getQuery);
@@ -49,7 +39,7 @@ function getQuery() {
     searchInput.size = 20 + (searchInput.value.length - 6);
   }
   
-  // true: will run the query through handleQuery() to cleanse, etc.
+  // 'true': will run the query through handleQuery() to cleanse, etc.
   results = searchRegexTree(families, searchInput.value, countries2Postals[currentCountry], true);
   loadSearchResults(results);
 }

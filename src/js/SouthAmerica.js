@@ -20,9 +20,7 @@ var residentColor = "#fc8d59";
 var nonBreederColor = "#579ac4";
 
 var vagrantColor = "#54ca30";
-// var hypotheticalColor = "url(#pattern-vertStripes)";
 var hypotheticalColor = "#ddd";
-// var introducedColor = "url(#pattern-circles)";
 var introducedColor = "#fee090";
 
 var baseColor = "​#535b5f";
@@ -38,22 +36,13 @@ function initCurrentMap() {
   prepareSVGstyles("SAMsvg");
 
   map = document.getElementById("currentMap");
-  // map.style.opacity = "1";
 }
 
 //  TODO : (is this necessary? Straight to setSVGstyles()?)
 // eslint-disable-next-line
 function prepareSVGstyles(obj) {
 
-  // var svg;
   var svg = document.getElementById(obj);
-
-  // if (evt.target && evt.target.id === "SAMsvg") {
-  //   svg = document.getElementById("SAMsvg");
-  // }
-  // else {
-  //   svg = document.getElementById(evt);
-  // }
 
   var svgDoc = svg.contentDocument;
 
@@ -77,7 +66,6 @@ function setSVGstyles(obj) {
   }
 
   else if (obj.parentNode.nodeName === "g") {
-    // obj.parentNode.style.filter = "blur(1.54rem)";
 
     var paths = obj.querySelectorAll("path");
     var len = paths.length;
@@ -110,10 +98,8 @@ function newFillColor(obj, newColor) {
     //  HACK : (why does this have to be hardcoded? And below.)
     if (newColor === baseColor) {
       obj.style.fill = "#535b5f";
-      // obj.style.fill = "url(#circles)";
     }
     else obj.style.fill = newColor;
-    // obj.style.fill = newColor;
 
     if (newColor !== residentColor) obj.style.stroke = baseStrokeColor;
   }
@@ -127,10 +113,8 @@ function newFillColor(obj, newColor) {
 
       if (newColor === baseColor) {
         paths[i].style.fill = "#535b5f";
-        // paths[i].style.fill = "url(#circles)";
       }
       else paths[i].style.fill = newColor;
-      // paths[i].style.fill = newColor;
 
       if (newColor !== residentColor) paths[i].style.stroke = baseStrokeColor;
     }
@@ -145,17 +129,14 @@ function selectedCountryFill(selectedCountry) {
 
   var cc = svgDoc.getElementById(selectedCountry);
 
-  // if (cc) {
   fillSAMmap(cc);
   newFillColor(cc, selectedCountryFillColor);
   newStrokeColor(cc, baseStrokeColor);
-  // }
-  // else fillSAMmap(baseColor, selectedCountry);
 }
 
 function newStrokeColor(obj, newColor) {
 
-  // TODO : (boost the Falklands stroke color?)
+  // TODO : (reduce the Falklands filter dropShadow if possible?)
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
     obj.style.stroke = newColor;
   }
@@ -179,7 +160,6 @@ function newStrokeColor(obj, newColor) {
 /* global  mapsCollection saveMapButton  */
 // eslint-disable-next-line
 function highlightSAMmap(index, current) {
-  // console.log("in highlightSAMmap, index = " + index);
   var svg;
 
   if (current === "currentMap") {
@@ -224,7 +204,6 @@ function highlightSAMmap(index, current) {
     case "V":
 
       newFillColor(cc, vagrantColor);
-        // newStrokeColor(cc, darkerStrokeColor);
       break;
 
     case "H":
@@ -254,8 +233,6 @@ function highlightSAMmap(index, current) {
       newFillColor(cc, baseColor);
       newStrokeColor(cc, baseStrokeColor);
     }
-    // removed so little maps get the right strokeColors
-    // if (current !== "currentMap") newStrokeColor(cc, "#fff");
   }
 
   if ((current === "currentMap") && (mapsCollection.children.length < 5)) { saveMapButton.style.display = "block"; }

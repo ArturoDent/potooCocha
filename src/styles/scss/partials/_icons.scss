@@ -51,15 +51,12 @@
     -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
         -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
             filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
-
-    // transform : translate(-0.2rem, -0.4rem);
     transform : rotate(10deg) translate(-0.2rem, -0.4rem);
-    transition : translate 2s;
+    // transition : fill-opacity 750ms;
 }
 
 .icon-delete  {
     transform: scale(2,1.8);
-
     -webkit-filter  : none;
         -ms-filter  : none;
             filter  : none;

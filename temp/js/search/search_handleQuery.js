@@ -35,10 +35,10 @@ function modifyQuery(term) {
   }
 
   // now database can have any number of spaces between genus and species
-  //   TODO  : fuzzy or not?
+  //  : fuzzy or not?
   // term = term.replace(/\s+/g, "\\s+"); // inserts a literal "\s+" but screws up fuzzy searching
   
-  //  TODO : use next 2 lines to enable fuzzy searching
+  //  : use next 2 lines to enable fuzzy searching
   //   but gets very weird with the accented characters
     // query = query.replace(/(\S|\s)/g, "$1.*?");   // add '.*?' behind every character, even spaces
     // term = term.replace(/(\S|\s)/g, "$1[a-z' -]*?");   // add '.*?' behind every character, even spaces
@@ -54,62 +54,4 @@ function modifyQuery(term) {
 // eslint-disable-next-line no-unused-vars
 function escapeRegExp(string) {
   return string.replace(/[.*+?^@#!+=_${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
-}
-
-//  ---------------------------------------------------------------------------------------------------------  //
-
-
-// eslint-disable-next-line no-unused-vars
-function searchTree(query) {
-
-  // var originalQuery = query;
-  
-  lastQuery = query;
-
-  //  TODO  :  call a setSerachTermField() here
-  
-  if (lastQuery) {
-    document.getElementById("countrySearch").classList.remove("closed");
-    // could limit lastQuery.slice(0, 24) first 25 characters for example
-    if (currentCountry === "Falklands") {
-      document.getElementById("searchTerm").innerHTML = "Falklands/Malvinas" + " : '<span>" + lastQuery + "</span>'";
-    }
-    else document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + lastQuery + "</span>'";
-  }
-  
-  //  TODO  : can you ever get here?
-  else {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; search results will appear here</li><li></li>";
-    resetSearchResultsHeight();
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
-    return;
-  }
-
-  // animateScrollTop(searchResults);
-
-  // boolean that search input term was bad or missing
-  var warning = false;
-
-  if (lastSpecies && lastSpecies.classList.contains("active")) {
-    lastSpecies.classList.remove("active");
-  }
-  
-  if (!query) {
-    query = searchInput.value.replace(/^\s+|\s+$/g, ""); // trim leading/trailing whitespace
-    if (query === "type here") warning = true;
-    else if (query === "") warning = true;
-  }
-
-  // bad or missing search term
-  if (warning) {
-    searchResults.innerHTML = "<li></li><li> &nbsp; &nbsp; no search term entered</li><li></li>";
-
-    resetSearchResultsHeight();
-    if (!resultsPanelOpen) toggleSearchResultsPanel();
-
-    // updateActivityData("search");
-    // updateActivityData("search", "warning");
-    
-    return;
-  }
 }

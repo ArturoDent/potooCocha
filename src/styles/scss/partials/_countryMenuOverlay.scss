@@ -28,14 +28,21 @@
   position: fixed;  // smoother w/o this ???
   top: 2.35rem;
   right: 3vw;
-  // transform: translateY(-25vw);
-  transform: translate(-35vw, 10vh) scale(2);
+  // transform: translate(-25vw, 8vh);
+  transform: translateX(-25vw);
   
-  width: 14ch;
-  height: 14ch;
-  padding : 0.5ch 0 0.9ch 1ch;
+  // width: 14ch;
+  // height: 14ch;
   
-  font-size: 1.1rem;
+  width: 12ch;
+  height: 12ch;
+  
+  // padding : 0.5ch 0 0.9ch 1ch;
+  padding : 0 0 0 0.3ch;
+  
+  // font-size: 1.1rem;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
   text-align  :  center;
   cursor: pointer;
   z-index: 3;
@@ -43,17 +50,21 @@
   // border: 0.2rem solid $titleBannerColor;
   border: 0.2rem solid white;
   border-radius: 50%;
-  background-color: $bgColor;  // #4db088 a nice green
+  // border-bottom-right-radius: 2rem;
+  // border-bottom-left-radius: 2rem;
+  
+  // background-color: $bgColor;
+  background-color: darken($titleBannerColor, 5%);
   
   box-shadow  :  inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
-  // transition  :  background-color 400ms, transform 400ms ease-out;
+  transition  :  transform 350ms ease-in-out;
   will-change: transform;
 }
 
 #countryButton.slideLeft {  
   transform:  translateX(0);
   // transform: translateX(0);
-  transition: transform 500ms 200ms ease-in-out;  // same, does disabling this help fluidity??, see above
+  transition: transform 350ms 300ms ease-in-out;  // same, does disabling this help fluidity??, see above
 }
 
 #countryButton.countryChosen {  
@@ -69,7 +80,9 @@
   background-color: #000;
   border: 0.2rem solid transparent;
   border-radius: 50%;
-  box-shadow: 0 0 0.0125rem #ccc, 0 0 0 0.35rem $bgColor;
+  box-shadow: 0 0 0 0.45rem $bgColor;
+  
+  transition: all 300ms;
   
   // transform: rotate(10deg);
 }
@@ -90,18 +103,47 @@
   content  :  '';
   position  :  absolute;
   top  :  0.2rem;
-  left  :  115%;
+  left  :  112%;
   border-style  :  solid;
   border-width  :  1.7rem;
-  border-color  :  transparent transparent transparent $titleBannerColor;
-  filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.4));
+  border-color  :  transparent transparent transparent black;
+  filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.8));
+  transition: all 300ms ease-in-out;
 }
 
 #countryButton:hover, #countryButton:focus {
   outline: none;
-  // border-color: rgb(184, 183, 183);
-  // border: $titleBannerColor;
-  box-shadow: 0 0 0 0.1rem #fff;
-  
-  background-color: #333;
+  color: #000;
+  text-shadow: none;
+  background-color: #ccc;
+  box-shadow: 0 0 0 0.1rem $bgColor, 0 0 0 0.2rem white, 0 0 0 0.45rem $bgColor;
+}
+
+#countryButton:hover:after, #countryButton:focus:after {
+  left  :  122%;
+  border-color  :  transparent transparent transparent white;
+  filter: drop-shadow(0.1rem 0 0.1rem black);
+  transition: all 300ms 200ms ease-in-out;  
+}
+
+#countryButton:before  {
+  opacity: 0;
+  content  :  '';
+  position  :  absolute;
+  top  :  0.2rem;
+  left  :  129%;
+  border-style  :  solid;
+  border-width  :  1.7rem;
+  border-color  :  transparent transparent transparent white;
+  filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.8));
+  transition: all 300ms 300ms ease-in-out;  
+}
+
+#countryButton.countryChosen:before {
+  opacity: 1;
+}
+
+#countryButton:hover:before, #countryButton:focus:before {
+  left  :  135%;
+  // border-color  :  transparent transparent transparent white;
 }

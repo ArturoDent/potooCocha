@@ -3,13 +3,15 @@
 .slideUpWrapper  {
     position: relative;
     top: -8rem;
+    left: -3vw;
     overflow-y: hidden;
     max-height: 27rem;
 
     border-top: none;
     border-bottom: none;
+    background-color: darken($bgColor, 15%);
     transform: translateY(0) scaleY(100%);
-    transition: opacity 450ms, transform 600ms 250ms ease-in-out;
+    transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out;
 }
 
 .slideUpWrapper.panel  {
@@ -17,18 +19,24 @@
 }
 
 .slideUpWrapper.closeInstructions  {
-    transform: scaleY(0) translateY(-27rem);
+    // transform: scaleY(0) translateY(-27rem);
+    transform: translateY(-27rem);
     opacity: 0;
+    transition: opacity 450ms, transform 600ms 250ms ease-in-out;
+    
 }
 
 .slideUpWrapper +  #searchForm    {
     // transform: translateY(-8rem);
+    
     transform: translateY(-7rem);
     transition: all 400ms 200ms ease-in-out;
 }
 
 .slideUpWrapper.closeInstructions +  #searchForm   {
     border-bottom-left-radius: 0;
+    // border: 1px solid rgba(255,255,255,0.5);    
+    border: 1px solid rgba(0,0,0,0.1);
     // transform: translateY(-23.3rem);
     // transform: translateY(-22rem);
     // transform: translateY(-20rem);
@@ -73,7 +81,7 @@
     display: inline-block;
     
     top : -2.6rem;
-    left : -4vw;
+    left : -6vw;
     width  :  3rem;
     height  :  3rem;
 
@@ -88,7 +96,7 @@
     // border : 0.15rem solid  $goldHighlightColor;
     border : 0.15rem solid  $greenHighlightColor;
     border-radius  :  50%;
-    background-color  :  $bgColor;
+    background-color  :  darken($bgColor, 3%);
     box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
 
     cursor  :  pointer;
@@ -108,7 +116,12 @@
 
 #searchForm  {
     position  :  relative;
+    left: 2%;
+    width : 80%;
     padding  : 0 0 1.8ch 0;
+    
+    border: 1px solid transparent;
+    background-color: darken($bgColor, 15%);    
     
     border-bottom-left-radius: 6.9rem;
     -webkit-transition  :  all 850ms ease-in-out;
@@ -117,9 +130,9 @@
             transition  :  all 850ms ease-in-out;
 }
 
-#searchForm:focus-within  {
-    background-color: rgb(99, 98, 98);
-}
+// #searchForm:focus-within  {
+//     background-color: rgb(99, 98, 98);
+// }
 
 .searchForm_contents  {
     position: relative;
@@ -127,7 +140,7 @@
     height : auto;
     left: 0;
     margin  : 0;
-
+    
     pointer-events  :  auto;
 
     -webkit-transition  :  all 2s;
@@ -139,7 +152,7 @@
 #searchForm span.searchGroup  {
     position : relative;
     margin: 1.92rem 0 2.31rem 0;
-    left: 20%;
+    left: 22%;
     opacity  :  1;
 }
 
@@ -182,18 +195,20 @@
 
 #searchSpecials  {
     position  :  absolute;
-    top : -7.2ch;
-    left  :  83%;
-    width: 15.38rem;
-    padding : 2.31rem;
+    top : -5ch;
+    left  :  100%;
+    // width: 15.38rem;
+    width: 10.5rem;    
+    padding : 0.5rem 0;
 
     font-size  :  0.82rem;
     text-shadow : 0.077rem 0.077rem 0.077rem rgba(0,0,0,0.5);
 
     pointer-events  :  auto;
-    border-radius : 50%;
-    box-shadow: inset 0 0 3rem 1rem $bgColor;
+    border-radius : 3px;
+    box-shadow: inset 0 0 3rem rgba(226, 225, 225, 0.5);
     transition  :  all 500ms 1300ms;
+    border: 1px solid rgb(136, 135, 135);
 }
 
 #searchSpecials.grayed  {
@@ -230,14 +245,16 @@
     box-shadow : 0 0 0.15rem rgba(0,0,0,1);
 }
 
-#searchSpecials.SAM .searchSpecialWrapper  {  padding : 0.75ch 0 0.75ch 0;  }
+// #searchSpecials.SAM .searchSpecialWrapper  {  padding : 0.2ch 0 0.2ch 0;  }
 
 #searchSpecials div.notAvailable  {  display : none;  }
 
 #searchSpecials.SAM  {
     justify-content  :  space-around;
-    padding: 3.5rem 0;
-    top : -6.3ch;
+    // padding: 3.5rem 0;
+    padding: 1.3rem 0;
+    // top : -5.8ch;
+    top : -2.1ch;
 }
 
 #searchTerm span {
@@ -331,19 +348,20 @@
   background-color: rgb(34, 34, 34);
   border : 0.13rem solid $turquoiseHighlightColor;
   
-  box-shadow: 0 0 0 0.3rem $bgColor,
+  box-shadow: 
   
-              0.06rem -0.06rem 0 0.25rem rgba(0,0,0, 1),
-              -0.06rem -0.06rem 0 0.35rem $bgColor, 
-              0.06rem 0.06rem 0 0.4rem $bgColor,  
-              0.06rem -0.05rem 0 0.35rem rgba(255,255,255, 0.2),
-  
-              0 -0.06rem 0 0.3rem $bgColor, 
-              -0.06rem 0 0 0.3rem $bgColor,  
-              -0.06rem -0.06rem 0 0.3rem rgba(0,0,0, 0.5),
-              0.06rem -0.06rem 0 0.4rem $bgColor, 
-              -0.06rem -0.06rem 0 0.4rem $bgColor,  
-              -0.06rem -0.06rem 0 0.4rem rgba(255,255,255, 0.25);
+    0.25rem -0.05rem 0 0.24rem $bgColor,
+    0.2rem -0.1rem 0 0.24rem $bgColor,
+    0.3rem 0.1rem 0 0.24rem $bgColor,
+    0.25rem -0.05rem 0 0.27rem rgba(0,0,0, 0.6),
+    
+    0.25rem -0.05rem 0 0.35rem $bgColor,
+    0 0 0 0.3rem $bgColor,
+    0.02rem -0.04rem 0 0.3rem $bgColor,
+    -0.02rem 0.04rem 0 0.3rem $bgColor,
+    -0.04rem 0.04rem 0 0.32rem $bgColor,
+    -0.04rem -0.04rem 0 0.3rem rgba(0,0,0, 0.6),
+    -0.05rem -0.05rem 0 0.34rem rgb(114, 114, 114);
 }
 
 #printerButton::before  {
@@ -351,9 +369,9 @@
   position: absolute;
   content: "print search results"; // newline = \000A, spaces or tabs don't seem to work
 //   left: 70%;
-  left: 94%;
+  left: 95%;
 //   top: -128%;
-  top: -138%;
+  top: -115%;
 //   width: auto;
   width: 13ch;  // but this is really doing all the formatting of the `content`
   z-index: -1;
@@ -444,6 +462,7 @@
     padding : 1ch 0 0 0;
     height : 4ch;
     margin: -0.77rem 0 1ch 0;
+    // top: -0.7rem;
     left : 2ch;
     width : calc(100% - 4ch);
 
@@ -452,11 +471,8 @@
     text-align  :  center;
     letter-spacing  :  0.1em;
 
-    border  :  0.077rem solid rgba(255,255,255,0.25);
-    border-top  :  0.077rem solid rgba(0,0,0,0.25);
-    border-radius: 0.38rem;
-    background-color  :  $panelFlyoutColor;
-    box-shadow : none;
+    // background-color  :  $panelFlyoutColor;
+    // box-shadow : none;
 }
 
 #searchResults  {
@@ -666,7 +682,8 @@
     height : 100%;
     width : calc(100% - 7vw);
     left : 7vw;
-    padding : 0 0 2ch 0;
+    // padding : 0 0 2ch 0;
+    padding : 1ch 0 2ch 0;
 
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;

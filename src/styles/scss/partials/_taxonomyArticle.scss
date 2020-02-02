@@ -24,23 +24,28 @@
     text-align: center;
     color: $panelFlyoutFontColor;
 
-    background-color  :  $searchHeaderColor;
-    border-top-left-radius: 3.85rem;
-    border-bottom-left-radius: 6.9rem;
+    // background-color  :  $searchHeaderColor;
+    background-color  :  $titleBannerColor;
+    // background-color  :  rgb(89, 97, 97);
+    
+    // border-top-left-radius: 3.85rem;
+    border-top-left-radius: 2rem;
+    // border-bottom-left-radius: 6.9rem;
+    border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 0.77rem;
     border-top-right-radius: 0.77rem;
 
     border  :  0.077rem solid rgba(255,255,255,0.1);
     border-top : 0.077rem solid transparent;
-    box-shadow : inset 0 -0.077rem 0.077rem -0.077rem rgba(0,0,0,0.4), inset 0 0 0.077rem rgba(0,0,0,0.4);
+    box-shadow : inset 0 0 1.15rem rgba(0,0,0, 0.2), inset 0 -0.077rem 0.077rem -0.077rem rgba(0,0,0,0.4), inset 0 0 0.077rem rgba(0,0,0,0.4);
 }
 
 .taxArticleMain {
     padding  : 1.15rem 0 0 0;
     line-height: 1.5rem;
+    text-align: center;
 }
 
-// #taxonomyArticle a.linkHighlight {
 .linkHighlight {
     padding : 0 0.23rem 0.077rem 0.31rem;
     border-radius: 0.15rem;

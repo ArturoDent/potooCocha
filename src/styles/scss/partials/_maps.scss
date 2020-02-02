@@ -227,13 +227,15 @@
     position  :  relative;
     text-shadow  :  none;
     -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
+        -ms-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
             filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
 }
 
-// .drawing.active  {
-//     -webkit-filter  :  drop-shadow( 0 0 0.23rem rgba(0, 0, 0, 0.8) );
-//             filter  :  drop-shadow( 0 0 0.23rem rgba(0, 0, 0, 0.8) );
+// <g id="Falklands">
+// #SAMsvg #Falklands   {
+//     filter  :  drop-shadow( 0 0 0.077rem rgb(173, 4, 4) ) drop-shadow( 0 0 0.31rem rgba(17, 221, 17, 0.8) );
 // }
+//  TODO  : possible to filter:none the Falklands, other islands??
 
 .colorKey {
     opacity  :  0;
