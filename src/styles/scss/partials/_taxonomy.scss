@@ -11,7 +11,8 @@
     border-bottom: none;
     background-color: darken($bgColor, 15%);
     transform: translateY(0) scaleY(100%);
-    transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out;
+    // transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out;
+    transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out;
 }
 
 .slideUpWrapper.panel  {
@@ -217,7 +218,7 @@
 }
 
 .searchSpecialWrapper {
-    padding: 0.5ch 0;
+    padding: 0.3ch 0;
     text-align: center;
     transition  :  all 1000ms;
 }
@@ -490,8 +491,6 @@
     border: none;
     box-shadow : none;
     
-    -webkit-overflow-scrolling  :  touch;
-
     // if no simpleBar, use overflow-y: auto;
     // overflow-y  :  auto;
 

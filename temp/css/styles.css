@@ -1051,12 +1051,12 @@ input[type='checkbox']:disabled ~ label {
   border-radius: 50%;
   background-color: #356470;
   box-shadow: inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
-  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, background-color 1s;
   will-change: transform; }
 
 #countryButton.slideLeft {
   transform: translateX(0);
-  transition: transform 350ms 300ms ease-in-out; }
+  transition: transform 350ms 300ms ease-in-out, background-color 1s; }
 
 #countryButton.countryChosen {
   top: 1.25rem;
@@ -1080,8 +1080,8 @@ input[type='checkbox']:disabled ~ label {
   left: 112%;
   border-style: solid;
   border-width: 1.7rem;
-  border-color: transparent transparent transparent black;
-  filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.8));
+  border-color: transparent transparent transparent #9c9c9c;
+  filter: drop-shadow(0.1rem 0 0.1rem rgba(0, 0, 0, 0.7));
   transition: all 300ms ease-in-out; }
 
 #countryButton:hover, #countryButton:focus {
@@ -1258,7 +1258,7 @@ input[type='checkbox']:disabled ~ label {
   border-bottom: none;
   background-color: #444a4e;
   transform: translateY(0) scaleY(100%);
-  transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out; }
+  transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out; }
 
 .slideUpWrapper.panel {
   padding: 0 2.5ch 0 2.5ch; }
@@ -1424,7 +1424,7 @@ input[type='checkbox']:disabled ~ label {
   pointer-events: none; }
 
 .searchSpecialWrapper {
-  padding: 0.5ch 0;
+  padding: 0.3ch 0;
   text-align: center;
   transition: all 1000ms; }
 
@@ -1589,7 +1589,6 @@ input[type='checkbox']:disabled ~ label {
   line-height: 1rem;
   border: none;
   box-shadow: none;
-  -webkit-overflow-scrolling: touch;
   overflow: hidden;
   transition: all 350ms; }
 
@@ -2043,11 +2042,11 @@ input[type='checkbox']:disabled ~ label {
   position: absolute;
   top: 0;
   left: 5rem;
-  padding: 0 0 0.15rem 0;
+  padding: 0 0 0.1rem 0;
   width: 14rem;
   letter-spacing: 0.1rem;
   font-size: 0.9rem;
-  font-weight: 900;
+  font-weight: 700;
   text-shadow: 0 0.05rem black;
   background-color: #60696f;
   border: 0.12rem solid #4db088;
@@ -2083,7 +2082,7 @@ input[type='checkbox']:disabled ~ label {
   letter-spacing: 0.2rem;
   text-shadow: 0 0.03rem black;
   opacity: 1;
-  border: 0.077rem solid rgba(255, 255, 255, 0.5);
+  border: 0.077rem solid white;
   background-color: #677177;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-20deg);
@@ -2101,7 +2100,7 @@ input[type='checkbox']:disabled ~ label {
   border-style: solid; }
 
 .taxInstructionsButton .tooltip:after {
-  top: -0.22em;
+  top: -0.28em;
   left: -2.35em;
   border-width: 0.98em;
   border-color: transparent #4db088 transparent transparent;
@@ -2109,7 +2108,7 @@ input[type='checkbox']:disabled ~ label {
 
 .saveMapButton .tooltip:after {
   top: -0.06rem;
-  left: 102.3%;
+  left: 103%;
   border-width: 0.91em;
   border-color: transparent transparent transparent #fff;
   transition: all 350ms; }
@@ -2131,7 +2130,7 @@ input[type='checkbox']:disabled ~ label {
 
 .saveMapButton.hasTooltip:hover .tooltip:after {
   top: -0.17rem;
-  left: 104%;
+  left: 105%;
   border-width: 1.1em; }
 
 .deleteMapButton.hasTooltip.hover .tooltip {

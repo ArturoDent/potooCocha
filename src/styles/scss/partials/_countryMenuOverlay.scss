@@ -57,14 +57,15 @@
   background-color: darken($titleBannerColor, 5%);
   
   box-shadow  :  inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
-  transition  :  transform 350ms ease-in-out;
+  transition  :  transform 350ms ease-in-out, background-color 1s;
+  // transition  :  transform 350ms ease-in-out  box-shadow 1s;
   will-change: transform;
 }
 
 #countryButton.slideLeft {  
   transform:  translateX(0);
   // transform: translateX(0);
-  transition: transform 350ms 300ms ease-in-out;  // same, does disabling this help fluidity??, see above
+  transition: transform 350ms 300ms ease-in-out, background-color 1s;  // same, does disabling this help fluidity??, see above
 }
 
 #countryButton.countryChosen {  
@@ -106,8 +107,8 @@
   left  :  112%;
   border-style  :  solid;
   border-width  :  1.7rem;
-  border-color  :  transparent transparent transparent black;
-  filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.8));
+  border-color  :  transparent transparent transparent rgb(156, 156, 156);
+  filter: drop-shadow(0.1rem 0 0.1rem rgba(0, 0, 0, 0.7));
   transition: all 300ms ease-in-out;
 }
 
@@ -117,6 +118,7 @@
   text-shadow: none;
   background-color: #ccc;
   box-shadow: 0 0 0 0.1rem $bgColor, 0 0 0 0.2rem white, 0 0 0 0.45rem $bgColor;
+  // transition  :  all 1s ease-in-out;
 }
 
 #countryButton:hover:after, #countryButton:focus:after {
@@ -133,6 +135,7 @@
   top  :  0.2rem;
   left  :  129%;
   border-style  :  solid;
+  // border-style  :  inset;
   border-width  :  1.7rem;
   border-color  :  transparent transparent transparent white;
   filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.8));

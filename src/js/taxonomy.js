@@ -675,7 +675,7 @@ function printElem (evt) {
 
   var css = "<style>";
   css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }";
-  css += "h3 { margin: 0 0 3ch 0; text-align: center; }";
+  css += "h3 { margin: 0 0 3ch 0; text-align: left; padding-left: 80px; }";
   css += ".family, .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
   css += ".fsc { position: absolute; left: 50%; }";
   css += ".bird>span { padding-left: 10px;}";
@@ -693,7 +693,7 @@ function printElem (evt) {
   //          'm(a|ã)r(a|ã)(n|ñ)o(n|ñ)'
   var normalizedQuery = lastQuery.replace(/\(a\|ã\)/gi, "a").replace(/\(n\|ñ\)/gi, "n");
   
-  console.log(normalizedQuery);
+  // console.log(normalizedQuery);
   
   // html += '<h3>' + currentCountry + ' : &nbsp;\'' + lastQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + normalizedQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';

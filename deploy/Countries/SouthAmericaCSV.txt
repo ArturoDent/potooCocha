@@ -37,6 +37,7 @@ E,Yellow-legged Tinamou,C. noctivagus
 ,Ornate Tinamou,N. ornata
 E,Chilean Tinamou,N. perdicaria
 ,Brushland Tinamou,N. cinerascens
+,Andean Tinamou,N. pentlandii
 ,Curve-billed Tinamou,N. curvirostris
 ,White-bellied Nothura,Nothura boraquira
 ,Lesser Nothura,N. minor
@@ -49,6 +50,7 @@ E,Chilean Tinamou,N. perdicaria
 ,Patagonian Tinamou,T. ingoufi
 
 ,SCREAMERS,ANHIMIDAE
+,Horned Screamer,Anhima cornuta
 ,Southern Screamer,Chauna torquata
 ,Northern Screamer,C. chavaria
 
@@ -95,6 +97,7 @@ E,White-headed Steamer-Duck,T. leucocephalus
 ,Rosy-billed Pochard,N. peposaca
 ,Ring-necked Duck,Aythya collaris
 ,Lesser Scaup,A. affinis
+,Brazilian Merganser,Mergus octosetaceus
 ,Black-headed Duck,Heteronetta atricapilla
 ,Masked Duck,Nomonyx dominicus
 ,Ruddy Duck,Oxyura jamaicensis
@@ -154,6 +157,7 @@ E,Horned Curassow,P. unicornis
 ,Crested Bobwhite,Colinus cristatus
 ,California Quail,Callipepla californica
 ,Marbled Wood-Quail,Odontophorus gujanensis
+,Spot-winged Wood-Quail,O. capueira
 ,Black-fronted Wood-Quail,O. atrifrons
 ,Rufous-fronted Wood-Quail,O. erythrops
 E,Chestnut Wood-Quail,O. hyperythrus
@@ -190,6 +194,7 @@ E,Junin Grebe,P. taczanowskii
 ,Rock Pigeon,Columba livia
 ,White-crowned Pigeon,Patagioenas leucocephala
 ,Scaled Pigeon,P. speciosa
+,Scaly-naped Pigeon,P. squamosa
 ,Picazuro Pigeon,P. picazuro
 ,Bare-eyed Pigeon,P. corensis
 ,Spot-winged Pigeon,P. maculosa
@@ -638,7 +643,8 @@ E,Galapagos Rail,L. spilonota
 ,Rufous-faced Crake,L. xenopterus
 ,Speckled Rail,Coturnicops notatus
 ,Ocellated Crake,Micropygia schomburgkii
-,Colombian Crake,Mustelirallus colombianus
+,Ash-throated Crake,Mustelirallus albicollis
+,Colombian Crake,M. colombianus
 ,Paint-billed Crake,M. erythrops
 ,Spotted Rail,Pardirallus maculatus
 ,Blackish Rail,P. nigricans
@@ -661,6 +667,7 @@ E,Little Wood-Rail,A. mangle
 ,Horned Coot,F. cornuta
 ,Giant Coot,F. gigantea
 ,Red-gartered Coot,F. armillata
+,American Coot,F. americana
 ,Slate-colored Coot,F. ardesiaca
 ,White-winged Coot,F. leucoptera
 
@@ -709,7 +716,8 @@ E,Little Wood-Rail,A. mangle
 
 ,SANDPIPERS,SCOLOPACIDAE
 ,Upland Sandpiper,Bartramia longicauda
-,Whimbrel,Numenius phaeopus
+,Eskimo Curlew,Numenius borealis
+,Whimbrel,N. phaeopus
 ,Long-billed Curlew,N. americanus
 ,Eurasian Curlew,N. arquatus
 ,Bar-tailed Godwit,Limosa lapponica
@@ -736,6 +744,7 @@ E,Little Wood-Rail,A. mangle
 ,Long-billed Dowitcher,L. scolopaceus
 ,Imperial Snipe,Gallinago imperialis
 ,Jameson's Snipe,G. jamesoni
+,Fuegian Snipe,G. stricklandii
 ,Noble Snipe,G. nobilis
 ,Giant Snipe,G. undulata
 ,Wilson's Snipe,G. delicata
@@ -1053,6 +1062,7 @@ E,White-collared Kite,L. forbesi
 ,Mississippi Kite,Ictinia mississippiensis
 ,Plumbeous Kite,I. plumbea
 ,Northern Harrier,Circus hudsonius
+,Cinereous Harrier,C. cinereus
 ,Long-winged Harrier,C. buffoni
 ,Gray-bellied Hawk,Accipiter poliogaster
 ,Tiny Hawk,A. superciliosus
@@ -1070,6 +1080,7 @@ E,White-collared Kite,L. forbesi
 E,White-necked Hawk,B. lacernulatus
 ,Great Black Hawk,B. urubitinga
 ,Solitary Eagle,B. solitarius
+,Chaco Eagle,B. coronatus
 ,Barred Hawk,Morphnarchus princeps
 ,Roadside Hawk,Rupornis magnirostris
 ,Harris's Hawk,Parabuteo unicinctus
@@ -1077,7 +1088,8 @@ E,White-necked Hawk,B. lacernulatus
 ,White-tailed Hawk,Geranoaetus albicaudatus
 ,Variable Hawk,G. polyosoma
 ,Black-chested Buzzard-Eagle,G. melanoleucus
-,White Hawk,Pseudastur albicollis
+,Mantled Hawk,Pseudastur polionotus
+,White Hawk,P. albicollis
 ,Gray-backed Hawk,P. occidentalis
 ,Semiplumbeous Hawk,Leucopternis semiplumbeus
 ,Black-faced Hawk,L. melanops
@@ -1155,6 +1167,7 @@ E,Long-whiskered Owlet,Xenoglaux loweryi
 ,Amazonian Trogon,T. ramonianus
 ,Guianan Trogon,T. violaceus
 ,Blue-crowned Trogon,T. curucui
+,Surucua Trogon,T. surrucura
 ,Black-throated Trogon,T. rufus
 ,Collared Trogon,T. collaris
 ,Masked Trogon,T. personatus
@@ -1464,6 +1477,7 @@ E,Red-spectacled Parrot,A. pretrei
 ,Blue-cheeked Parrot,A. dufresniana
 E,Red-browed Parrot,A. rhodocorytha
 ,Yellow-crowned Parrot,A. ochrocephala
+,Yellow-shouldered Parrot,A. barbadensis
 ,Turquoise-fronted Parrot,A. aestiva
 ,Mealy Parrot,A. farinosa
 E,Kawall's Parrot,A. kawalli
@@ -1517,13 +1531,15 @@ E,Jandaya Parakeet,A. jandaya
 E,Golden-capped Parakeet,A. auricapillus
 ,Spix's Macaw,Cyanopsitta spixii
 ,Red-bellied Macaw,Orthopsittaca manilatus
-,Blue-headed Macaw,Primolius couloni
+,Blue-winged Macaw,Primolius maracana
+,Blue-headed Macaw,P. couloni
 ,Yellow-collared Macaw,P. auricollis
 ,Blue-and-yellow Macaw,Ara ararauna
 E,Blue-throated Macaw,A. glaucogularis
 ,Military Macaw,A. militaris
 ,Great Green Macaw,A. ambiguus
 ,Scarlet Macaw,A. macao
+,Red-and-green Macaw,A. chloropterus
 E,Red-fronted Macaw,A. rubrogenys
 ,Chestnut-fronted Macaw,A. severus
 ,Golden-plumed Parakeet,Leptosittaca branickii
@@ -1893,6 +1909,7 @@ E,Caracas Tapaculo,S. caracae
 ,Spillmann's Tapaculo,S. spillmanni
 ,Chusquea Tapaculo,S. parkeri
 E,Brasilia Tapaculo,S. novacapitalis
+,Magellanic Tapaculo,S. magellanicus
 ,Pale-bellied Tapaculo,S. griseicollis
 E,Neblina Tapaculo,S. altirostris
 E,Ancash Tapaculo,S. affinis
@@ -2668,6 +2685,8 @@ E,Tumbes Tyrant,Tumbezia salvini
 ,Masked Water-Tyrant,F. nengeta
 ,White-headed Marsh Tyrant,Arundinicola leucocephala
 ,Streamer-tailed Tyrant,Gubernetes yetapa
+,Cock-tailed Tyrant,Alectrurus tricolor
+,Strange-tailed Tyrant,A. risora
 ,Austral Negrito,Lessonia rufa
 ,Andean Negrito,L. oreas
 ,Spectacled Tyrant,Hymenops perspicillatus
@@ -2910,6 +2929,7 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,Pale-eyed Thrush,Turdus leucops
 ,Austral Thrush,T. falcklandii
 ,Plumbeous-backed Thrush,T. reevei
+,Yellow-legged Thrush,T. flavipes
 ,Pale-breasted Thrush,T. leucomelas
 ,Cocoa Thrush,T. fumigatus
 ,Hauxwell's Thrush,T. hauxwelli
@@ -2952,6 +2972,7 @@ E,Floreana Mockingbird,M. trifasciatus
 E,Española Mockingbird,M. macdonaldi
 E,San Cristobal Mockingbird,M. melanotis
 ,Brown Thrasher,Toxostoma rufum
+,Pearly-eyed Thrasher,Margarops fuscatus
 
 ,STARLINGS,STURNIDAE
 ,Crested Myna,Acridotheres cristatellus
@@ -2986,6 +3007,7 @@ E,San Cristobal Mockingbird,M. melanotis
 ,European Goldfinch,Carduelis carduelis
 ,Andean Siskin,Spinus spinescens
 E,Yellow-faced Siskin,S. yarrellii
+,Red Siskin,S. cucullatus
 ,Thick-billed Siskin,S. crassirostris
 ,Hooded Siskin,S. magellanicus
 ,Saffron Siskin,S. siemiradzkii
@@ -3032,7 +3054,8 @@ E,Velvet-fronted Euphonia,E. concinna
 ,Yellow-green Chlorospingus,C. flavovirens
 ,Tumbes Sparrow,Rhynchospiza stolzmanni
 ,Stripe-capped Sparrow,R. strigiceps
-,Grassland Sparrow,Ammodramus humeralis
+,Grasshopper Sparrow,Ammodramus savannarum
+,Grassland Sparrow,A. humeralis
 ,Yellow-browed Sparrow,A. aurifrons
 ,Black-striped Sparrow,Arremonops conirostris
 ,Tocuyo Sparrow,A. tocuyensis
@@ -3311,6 +3334,7 @@ E,Carbonated Sierra Finch,P. carbonaria
 ,White-winged Diuca Finch,I. speculifera
 ,Short-tailed Finch,I. brachyurus
 ,White-bridled Finch,Melanodera melanodera
+,Yellow-bridled Finch,M. xanthogramma
 ,Band-tailed Seedeater,Catamenia analis
 ,Plain-colored Seedeater,C. inornata
 ,Paramo Seedeater,C. homochroa
@@ -3392,9 +3416,12 @@ E,Black-legged Dacnis,D. nigripes
 ,Chestnut Seedeater,S. cinnamomea
 E,Black-bellied Seedeater,S. melanogaster
 ,Thick-billed Seed-Finch,S. funerea
+,Chestnut-bellied Seed-Finch,S. angolensis
 ,Great-billed Seed-Finch,S. maximiliani
+,Large-billed Seed-Finch,S. crassirostris
 ,Black-billed Seed-Finch,S. atrirostris
 ,Variable Seedeater,S. corvina
+,Gray Seedeater,S. intermedia
 ,Wing-barred Seedeater,S. americana
 ,Caqueta Seedeater,S. murallae
 ,White-naped Seedeater,S. fringilloides

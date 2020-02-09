@@ -76,7 +76,7 @@ class PDF extends TCPDF {
 		$this->italics     =  ($Si  === 'true')  ? true : false;
 		$this->country     =  $where;
 
-		$this->daysInMonth   =  array(31,28,31,30,31,30,31,31,30,31,30,31);
+		$this->daysInMonth   =  array(31,29,31,30,31,30,31,31,30,31,30,31);  // 2020 is a leap year
 
 		if ($this->endemics || $this->lineNos || $this->leftChecks)  {
 			$this->endemicCellWidth = 13;
@@ -401,7 +401,7 @@ error_reporting(0);
 
 $country     =  filter_var($_GET['country'],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 $num_days    =  filter_var($_GET['num_days'],  FILTER_SANITIZE_NUMBER_INT);
-$start_date    =  filter_var($_GET['start_date'],  FILTER_SANITIZE_NUMBER_INT);
+$start_date  =  filter_var($_GET['start_date'],  FILTER_SANITIZE_NUMBER_INT);
 
 $line_nos    =  filter_var($_GET['line_nos'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 $left_check  =  filter_var($_GET['left_check'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
@@ -445,7 +445,7 @@ $pdf->AddPage();
   					
 $pdf->MakeTable($birds);
 
-// must flush [error] output before creting the pdf
+// must flush [error] output before creating the pdf
 ob_clean();
 
 $pdf->Output($country . '-SACC-Checklist.pdf', 'I');
