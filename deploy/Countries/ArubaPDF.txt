@@ -2,16 +2,18 @@ DUCKS,ANATIDAE
 ,,Fulvous Whistling-Duck,Dendrocygna bicolor
 ,,White-faced Whistling-Duck,D. viduata
 ,,Black-bellied Whistling-Duck,D. autumnalis
-,,American Comb-Duck,Sarkidiornis sylvicola
-5,,Northern Shoveler,Spatula clypeata
+,,Muscovy Duck,Cairina moschata
+5,,American Comb-Duck,Sarkidiornis sylvicola
+,,Northern Shoveler,Spatula clypeata
 ,,Blue-winged Teal,S. discors
 ,,Cinnamon Teal,S. cyanoptera
 ,,American Wigeon,Mareca americana
-,,White-cheeked Pintail,Anas bahamensis
-10,,Northern Pintail,A. acuta
+10,,White-cheeked Pintail,Anas bahamensis
+,,Northern Pintail,A. acuta
 ,,Green-winged Teal,A. crecca
 ,,Ring-necked Duck,Aythya collaris
 ,,Lesser Scaup,A. affinis
+,,Masked Duck,Nomonyx dominicus
 NEW WORLD QUAILS,ODONTOPHORIDAE
 ,,Crested Bobwhite,Colinus cristatus
 FLAMINGOS,PHOENICOPTERIDAE
@@ -35,10 +37,14 @@ OILBIRD,STEATORNITHIDAE
 ,,Oilbird,Steatornis caripensis
 NIGHTJARS,CAPRIMULGIDAE
 ,,Common Nighthawk,Chordeiles minor
+,,Antillean Nighthawk,C. gundlachii
+,,Little Nightjar,Setopagis parvula
 ,,White-tailed Nightjar,Hydropsalis cayennensis
 ,,Chuck-will's-widow,Antrostomus carolinensis
 SWIFTS,APODIDAE
-,,Chimney Swift,Chaetura pelagica
+,,White-collared Swift,Streptoprocne zonaris
+,,Vaux's Swift,Chaetura vauxi
+,,Chimney Swift,C. pelagica
 HUMMINGBIRDS,TROCHILIDAE
 ,,White-necked Jacobin,Florisuga mellivora
 ,,Ruby-topaz Hummingbird,Chrysolampis mosquitus
@@ -69,27 +75,30 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Hudsonian Godwit,Limosa haemastica
 ,,Ruddy Turnstone,Arenaria interpres
 5,,Red Knot,Calidris canutus
+,,Ruff,C. pugnax
 ,,Stilt Sandpiper,C. himantopus
+,,Curlew Sandpiper,C. ferruginea
 ,,Sanderling,C. alba
-,,Baird's Sandpiper,C. bairdii
+10,,Baird's Sandpiper,C. bairdii
 ,,Least Sandpiper,C. minutilla
-10,,White-rumped Sandpiper,C. fuscicollis
+,,White-rumped Sandpiper,C. fuscicollis
 ,,Buff-breasted Sandpiper,C. subruficollis
 ,,Pectoral Sandpiper,C. melanotos
-,,Semipalmated Sandpiper,C. pusilla
+15,,Semipalmated Sandpiper,C. pusilla
 ,,Western Sandpiper,C. mauri
-15,,Short-billed Dowitcher,Limnodromus griseus
+,,Short-billed Dowitcher,Limnodromus griseus
 ,,Long-billed Dowitcher,L. scolopaceus
 ,,Wilson's Snipe,Gallinago delicata
-,,Spotted Sandpiper,Actitis macularius
+20,,Spotted Sandpiper,Actitis macularius
 ,,Solitary Sandpiper,Tringa solitaria
-20,,Greater Yellowlegs,T. melanoleuca
+,,Greater Yellowlegs,T. melanoleuca
 ,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
 JACANAS,JACANIDAE
 ,,Wattled Jacana,Jacana jacana
 SKUAS,STERCORARIIDAE
-,,Pomarine Jaeger,Stercorarius pomarinus
+,,South Polar Skua,Stercorarius maccormicki
+,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
 SKIMMERS,RYNCHOPIDAE
@@ -112,6 +121,7 @@ GULLS,LARIDAE
 15,,Black Tern,Chlidonias niger
 ,,Common Tern,Sterna hirundo
 ,,Roseate Tern,S. dougallii
+,,Forster's Tern,S. forsteri
 ,,Sandwich Tern,Thalasseus sandvicensis
 ,,Royal Tern,T. maximus
 TROPICBIRDS,PHAETHONTIDAE
@@ -121,6 +131,7 @@ SOUTHERN STORM-PETRELS,OCEANITIDAE
 SHEARWATERS,PROCELLARIIDAE
 ,,Black-capped Petrel,Pterodroma hasitata
 ,,Bulwer's Petrel,Bulweria bulwerii
+,,Cory's Shearwater,Calonectris diomedea
 ,,Audubon's Shearwater,Puffinus lherminieri
 STORKS,CICONIIDAE
 ,,Wood Stork,Mycteria americana
@@ -141,11 +152,12 @@ HERONS,ARDEIDAE
 ,,Black-crowned Night-Heron,Nycticorax nycticorax
 ,,Yellow-crowned Night-Heron,Nyctanassa violacea
 5,,Green Heron,Butorides virescens
+,,Striated Heron,B. striata
 ,,Cattle Egret,Bubulcus ibis
 ,,Great Blue Heron,Ardea herodias
 ,,Great Egret,A. alba
-,,Whistling Heron,Syrigma sibilatrix
-10,,Tricolored Heron,Egretta tricolor
+10,,Whistling Heron,Syrigma sibilatrix
+,,Tricolored Heron,Egretta tricolor
 ,,Reddish Egret,E. rufescens
 ,,Little Egret,E. garzetta
 ,,Snowy Egret,E. thula
@@ -164,6 +176,8 @@ OSPREY,PANDIONIDAE
 HAWKS,ACCIPITRIDAE
 ,,White-tailed Kite,Elanus leucurus
 ,,Swallow-tailed Kite,Elanoides forficatus
+,,Snail Kite,Rostrhamus sociabilis
+,,Northern Harrier,Circus hudsonius
 ,,White-tailed Hawk,Geranoaetus albicaudatus
 OWLS,STRIGIDAE
 ,,Burrowing Owl,Athene cunicularia
@@ -175,9 +189,13 @@ WOODPECKERS,PICIDAE
 ,,Yellow-bellied Sapsucker,Sphyrapicus varius
 FALCONS,FALCONIDAE
 ,,Crested Caracara,Caracara cheriway
+,,Yellow-headed Caracara,Milvago chimachima
 ,,American Kestrel,Falco sparverius
 ,,Merlin,F. columbarius
+,,Aplomado Falcon,F. femoralis
 ,,Peregrine Falcon,F. peregrinus
+OLD WORLD PARROTS,PSITTACULIDAE
+,,Rose-ringed Parakeet,Psittacula krameri
 PARROTS,PSITTACIDAE
 ,,Brown-throated Parakeet,Eupsittula pertinax
 TYRANT FLYCATCHERS,TYRANNIDAE
@@ -193,31 +211,38 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 10,,Brown-crested Flycatcher,M. tyrannulus
 ,,Northern Scrub-Flycatcher,Sublegatus arenarum
 ,,Vermilion Flycatcher,Pyrocephalus rubinus
+,,Willow Flycatcher,Empidonax traillii
 ,,Eastern Wood-Pewee,Contopus virens
 VIREOS,VIREONIDAE
 ,,Yellow-throated Vireo,Vireo flavifrons
 ,,Philadelphia Vireo,V. philadelphicus
 ,,Red-eyed Vireo,V. olivaceus
+,,Yellow-green Vireo,V. flavoviridis
 ,,Black-whiskered Vireo,V. altiloquus
 SWALLOWS,HIRUNDINIDAE
 ,,Southern Rough-winged Swallow,Stelgidopteryx ruficollis
 ,,Brown-chested Martin,Progne tapera
 ,,Purple Martin,P. subis
 ,,Caribbean Martin,P. dominicensis
-5,,Bank Swallow,Riparia riparia
+5,,Cuban Martin,P. cryptoleuca
+,,Bank Swallow,Riparia riparia
 ,,Barn Swallow,Hirundo rustica
 ,,Cliff Swallow,Petrochelidon pyrrhonota
+,,Cave Swallow,P. fulva
 WAXWINGS,BOMBYCILLIDAE
 ,,Cedar Waxwing,Bombycilla cedrorum
 THRUSHES,TURDIDAE
 ,,Veery,Catharus fuscescens
 ,,Wood Thrush,Hylocichla mustelina
 MOCKINGBIRDS,MIMIDAE
+,,Gray Catbird,Dumetella carolinensis
 ,,Tropical Mockingbird,Mimus gilvus
 STARLINGS,STURNIDAE
 ,,European Starling,Sturnus vulgaris
 WEAVERS,PLOCEIDAE
 ,,Village Weaver,Ploceus cucullatus
+ESTRILDIDS,ESTRILDIDAE
+,,Tricolored Munia,Lonchura malacca
 OLD WORLD SPARROWS,PASSERIDAE
 ,,House Sparrow,Passer domesticus
 SPARROWS,PASSERELLIDAE
@@ -237,32 +262,36 @@ WOOD-WARBLERS,PARULIDAE
 ,,Ovenbird,Seiurus aurocapilla
 ,,Northern Waterthrush,Parkesia noveboracensis
 ,,Louisiana Waterthrush,P. motacilla
-,,Blue-winged Warbler,Vermivora cyanoptera
-5,,Black-and-white Warbler,Mniotilta varia
+,,Golden-winged Warbler,Vermivora chrysoptera
+5,,Blue-winged Warbler,V. cyanoptera
+,,Black-and-white Warbler,Mniotilta varia
 ,,Prothonotary Warbler,Protonotaria citrea
 ,,Tennessee Warbler,Leiothlypis peregrina
 ,,Connecticut Warbler,Oporornis agilis
-,,Kentucky Warbler,Geothlypis formosa
-10,,Common Yellowthroat,G. trichas
+10,,Kentucky Warbler,Geothlypis formosa
+,,Common Yellowthroat,G. trichas
 ,,Hooded Warbler,Setophaga citrina
 ,,American Redstart,S. ruticilla
 ,,Cape May Warbler,S. tigrina
-,,Northern Parula,S. americana
-15,,Magnolia Warbler,S. magnolia
+15,,Northern Parula,S. americana
+,,Magnolia Warbler,S. magnolia
 ,,Bay-breasted Warbler,S. castanea
 ,,Blackburnian Warbler,S. fusca
 ,,Yellow Warbler,S. petechia
-,,Chestnut-sided Warbler,S. pensylvanica
-20,,Blackpoll Warbler,S. striata
+20,,Chestnut-sided Warbler,S. pensylvanica
+,,Blackpoll Warbler,S. striata
 ,,Black-throated Blue Warbler,S. caerulescens
 ,,Palm Warbler,S. palmarum
 ,,Yellow-rumped Warbler,S. coronata
-,,Prairie Warbler,S. discolor
+25,,Prairie Warbler,S. discolor
 ,,Black-throated Green Warbler,S. virens
+,,Canada Warbler,Cardellina  canadensis
 CARDINAL GROSBEAKS,CARDINALIDAE
-,,Scarlet Tanager,Piranga olivacea
+,,Summer Tanager,Piranga rubra
+,,Scarlet Tanager,P. olivacea
 ,,Rose-breasted Grosbeak,Pheucticus ludovicianus
-,,Indigo Bunting,Passerina cyanea
+,,Blue Grosbeak,Passerina caerulea
+,,Indigo Bunting,P. cyanea
 ,,Dickcissel,Spiza americana
 TANAGERS,THRAUPIDAE
 ,,Saffron Finch,Sicalis flaveola

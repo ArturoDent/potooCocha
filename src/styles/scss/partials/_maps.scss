@@ -4,7 +4,6 @@
     width : 100vw;
     // height: calc(100vw / 4.5 - 1.3rem);
     height: auto;
-    // transform: translateY(0);
 
     background-color: $mapCollectionColor;
     box-shadow  :  0 -0.6px 0.6px rgba(0,0,0,0.2);
@@ -21,7 +20,7 @@
 
     border-top : 0.077rem solid $titleBannerColor;
     border-bottom : 0.077rem solid $titleBannerColor;
-    background-color : darken($mapCollectionColor, 5%);
+    background-color : darken($mapCollectionColor, 10%);
 }
 
 #mapsCollection.namesOnlySeen  {
@@ -29,7 +28,6 @@
 }
 
 #mapsCollection.open  {
-    // transform : translateY(-100%);
     transform : translateY(-93%);
 }
 
@@ -55,9 +53,9 @@
 }
 
 .smallBird .drawing  {
-    -webkit-filter : drop-shadow( -0.46rem 0 0.46rem rgba(0,0,0,0.3) ) drop-shadow( 0.46rem 0 0.46rem rgba(0,0,0,0.3) );
-    -ms-filter : drop-shadow( -0.46rem 0 0.46rem rgba(0,0,0,0.3) ) drop-shadow( 0.46rem 0 0.46rem rgba(0,0,0,0.3) );
-    filter  :  drop-shadow( -0.46rem 0 0.46rem rgba(0,0,0,0.3) ) drop-shadow( 0.46rem 0 0.46rem rgba(0,0,0,0.3) );
+    -webkit-filter : drop-shadow( -0.2rem 0 0.2rem rgba(0,0,0,0.2) ) drop-shadow( 0.2rem 0 0.2rem rgba(0,0,0,0.2) );
+    -ms-filter : drop-shadow( -0.2rem 0 0.2rem rgba(0,0,0,0.2) ) drop-shadow( 0.2rem 0 0.2rem rgba(0,0,0,0.2) );
+    filter  :  drop-shadow( -0.2rem 0 0.2rem rgba(0,0,0,0.2) ) drop-shadow( 0.2rem 0 0.2rem rgba(0,0,0,0.2) );
 }
 
 .smallBirdText   {
@@ -114,6 +112,9 @@
     border-color  :  transparent transparent transparent #f00;
 }
 
+#deleteAllMapsButton:focus-within  { outline: none; }
+
+
 .birdName  {
     position  :  absolute;
     left : -30%;
@@ -140,8 +141,8 @@
     top  :  28vh;
     left  :  71vw;
     margin  :  0 0 0 0.38rem;
-    
-    //  TODO : use rem's instead?    
+
+    //  TODO : use rem's instead?
 
 
     transform : translateY(0);
@@ -161,7 +162,7 @@
     //   TODO : use max-height and/or rem's instead of vh
     height: 50vh;
     // height: 40rem;
-    
+
     width: auto;
 }
 
@@ -170,7 +171,7 @@
 }
 
 #currentMap.shiftUp  {
-    //   TODO : use  rem's instead of vh
+    //   TODO : use  rem's instead of vh?
     transform: translateY(-15vh);
 }
 
@@ -215,6 +216,9 @@
     transform: scale(0.9);
 }
 
+.deleteMapButton:focus-within .tooltip { outline: none; }
+
+
 .saveMapButton  {
     display  :  none;
     position  :  absolute;
@@ -223,12 +227,15 @@
     background-color  :  transparent;
 }
 
+.saveMapButton:focus-within .tooltip { outline: none; }
+
 .drawing  {
     position  :  relative;
     text-shadow  :  none;
-    -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
-        -ms-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
-            filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
+    -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.6) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.5) );
+        -ms-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.6) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.5) );
+            // filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
+            filter  :  drop-shadow( -0.03rem 0 0.08rem rgba(255,255,255,1) )  drop-shadow( 0 0 0.25rem rgba(0,0,0,0.7) );
 }
 
 // <g id="Falklands">

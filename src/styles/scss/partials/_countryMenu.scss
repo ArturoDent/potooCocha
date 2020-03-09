@@ -7,20 +7,20 @@
   flex-direction  :  column;
 
   -webkit-flex-wrap  :  nowrap;
-  flex-wrap  :  nowrap; 
+  flex-wrap  :  nowrap;
 
   top: 0;
   left: 75vw;
-  width: 22ch;  
+  width: 22ch;
   padding: 0.5rem 0;
   justify-content: space-around;
   height: 100vh;
-  
+
   font-size: 0.9rem;
   border: none;
   border-left: 0.01rem solid rgb(187, 185, 185);
   border-right: 0.01rem solid rgb(187, 185, 185);
-  
+
   background: rgb(49, 49, 49);
   box-shadow  :  0 0 0 0.025rem rgba(255,255,255,0.5), 0 0 0 0.0125rem black;
   // overflow: hidden;
@@ -88,7 +88,7 @@
   border-width  :  1.5rem;
   border-color  :  transparent white transparent transparent;
   filter: drop-shadow(0 0 0.077rem rgba(0,0,0,1));
-  
+
   transition : left 700ms ease-in-out;
 }
 

@@ -96,7 +96,7 @@
         <title>paper-plane</title>
         <path d="M31.5 0.19q0.58 0.42 0.48 1.14l-4.57 27.42q-0.08 0.51-0.57 0.80-0.25 0.14-0.55 0.14-0.19 0-0.42-0.08l-9.41-3.83-5.32 5.83q-0.32 0.37-0.83 0.37-0.25 0-0.41-0.07-0.33-0.12-0.53-0.42t-0.19-0.65v-8.07l-8.42-3.44q-0.66-0.25-0.71-0.98-0.05-0.69 0.57-1.05l29.71-17.14q0.62-0.37 1.21 0.03zM25.39 26.96l3.94-23.62-25.60 14.76 6 2.44 15.41-11.41-8.53 14.23z"></path>
       </symbol>
-      
+
       <symbol id="icon-camera" viewBox="0 0 512 512">
         <title>camera</title>
         <g>
@@ -128,21 +128,21 @@
 
   <main id='mainContent'>
 
-    <section class="articles"> 
-    
+    <section class="articles">
+
       <article id="taxonomyArticle">
-        
+
         <button class="taxInstructionsButton hasTooltip"  type="button" aria-label="Close these search instructions">?<span class="tooltip">Close instructions</span></button>
 
-        <h1 class="searchWord">Search the South American Classification Committee's avian <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
+        <h1 class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
             target="_blank" rel="noopener noreferrer">taxonomy</a> for <span id="searchCountryText">South America
-            (January 30, 2020)</span>.</h1>
+            (February 20, 2020)</span>.</h1>
 
         <div class="slideUpWrapper panel">
 
           <div class="taxArticleMain">
             Type part of a word like "xantho" or "potoo".<br><br>
-            
+
             <!-- The searches are <a class="linkHighlight" href="https://en.wikipedia.org/wiki/Approximate_string_matching" target="_blank" rel="noopener">fuzzy</a>. &nbsp;No need to accent or capitalize.<br><br> -->
 
             Select an item in the search results or the taxonomic tree.<br><br>
@@ -156,7 +156,7 @@
 
             <!-- Island nations are not shown to scale.<br><br>  -->
           </div>
-          
+
           <footer class="footerDiv">
 
             <span><a href="citations.html" target="_blank" rel="noopener">citations</a></span>
@@ -194,10 +194,10 @@
 
         </form>
       </article>
-      
+
       <article class='panel' id='results-panel'>
         <div id='fakeResultsBox'>
-          
+
           <!-- <button id="closeResultsPanelButton" tabindex="-1">X</button> -->
           <div id='countrySearch' class='closed flyoutPanel'>
             <span id='searchTerm'></span>
@@ -219,7 +219,7 @@
 
       <article class='panel' id='tax-panel'>
         <div id='fakeTaxPageBox'>
-          
+
           <div id='treeIntroText' class='flyoutPanel topFlyoutPanel'>&nbsp; numFamilies Families, numSpecies species</div>
           <div id='taxPage' contenteditable='false'></div>
           <button id='closeOpenFamiliesButton'  type="button" aria-label="Close Open Families" tabindex="-1">▲</button>
@@ -228,7 +228,7 @@
       </article>
 
       <article id="checklistArticle">
-        
+
         <h1 class="checklistTitle">CHECKLISTS</h1>
 
         <div class="flyoutPanel"><span id="checklistFlyoutText">Make checklists for any country in South
@@ -338,15 +338,15 @@
           <div id="checklistAuthorsPanel"></div>
 
         </div>
-        
+
 
         <div id="checklistOptions" class='panel'>
 
           <!-- <input id="startDate" type="date"><label for="startDate">Start Date</label><br><br> -->
-          
+
           <ul class="optionsCheckboxes">
             <li><input id="lineNumbers" type="checkbox" class="hideCheckBox" tabindex="-1">
-              <label for="lineNumbers" tabindex="0">Line numbers</label></li>          
+              <label for="lineNumbers" tabindex="0">Line numbers</label></li>
             <li><input id="showEndemics" type="checkbox" class="hideCheckBox" tabindex="-1">
               <label for="showEndemics" tabindex="0">Show endemics</label></li>
             <li><input id="leftCheck" type="checkbox" class="hideCheckBox" tabindex="-1">
@@ -356,7 +356,7 @@
             <li><input id="sciNames" type="checkbox" class="hideCheckBox" tabindex="-1">
               <label for="sciNames" tabindex="0">No scientific names</la</li>
           </ul>
-          
+
           <button id="pdfButton" class="genericButton"  type="button" aria-label="Create pdf file">
             checklist&nbsp;
             <svg class="icon icon-download">
@@ -412,14 +412,14 @@
       </div>
 
       <div id="currentBirdMap" class="drawing">
-        
+
         <!-- preload may do nothing here, but is available on <object. -->
         <object rel="preload"  aria-label="Map of South America" role="presentation" id="SAMsvg" type="image/svg+xml" data="svg/SouthAmerica.svg" onload="initCurrentMap();" tabindex="-1"></object>
       </div>
 
       <div class="mapButtons saveMapButton hasTooltip">
         <!-- TODO:   tabindex="-1" -->
-        <button class="tooltip"   type="button" aria-label="Save this map" tabindex="-1">Keep</button>
+        <button class="tooltip"  type="button" aria-label="Save this map" tabindex="-1">Keep</button>
       </div>
 
       <div class="colorKey">
@@ -443,8 +443,8 @@
     </div>
   </article>
 
-  <button id="countryButton" class="genericButton slideLeft"  type="button" aria-label="Select a country" tabindex="0">select country</button>
-    
+  <button id="countryButton" class="genericButton slideRight"  type="button" aria-label="Select a country" tabindex="0">select country</button>
+
   <div id="countryMenuLayer">
 
       <nav id="country-menu" contenteditable="false">
@@ -474,7 +474,7 @@
         </div>
         <div class="countryItem"><a tabindex="0">Venezuela</a>
           <div class="flag"><img src="../../../flags/32/Venezuela.png" alt="Flag of Venezuela"></div>
-        </div>      
+        </div>
         <div class="countryItem"><a tabindex="0">Colombia</a>
           <div class="flag"><img src="../../../flags/32/Colombia.png" alt="Flag of Colombia"></div>
         </div>
@@ -507,7 +507,7 @@
           <div class="flag"><img src="../../../flags/32/Paraguay.png" alt="Flag of Paraguay"></div>
         </div>
       </nav>
-  
+
     </div>
 
 
@@ -522,12 +522,12 @@
   <!-- /build -->
 
   <!-- build:remove -->
-  <script src="src/js/numList.js"></script>  
-  <script src="src/js/taxonomy.js"></script>  
+  <script src="src/js/numList.js"></script>
+  <script src="src/js/taxonomy.js"></script>
   <script src="src/js/search/search_entry.js"></script>
   <script src="src/js/search/search_handleQuery.js"></script>
   <script src="src/js/search/search_functions.js"></script>
-  <script src="src/js/search/search_handleResults.js"></script>  
+  <script src="src/js/search/search_handleResults.js"></script>
   <script src="src/js/birdMapFactory.js"></script>
   <!-- /build -->
 

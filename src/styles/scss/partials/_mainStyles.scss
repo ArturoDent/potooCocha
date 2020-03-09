@@ -16,7 +16,7 @@ body {
 
     // height: 100%;
 
-    font-family  :  Verdana, Georgia, sans-serif;    
+    font-family  :  Verdana, Georgia, sans-serif;
     font-size  :  1rem;
     font-weight  :  600;
     color : white;
@@ -45,9 +45,9 @@ body::after {
     pointer-events: none;
 }
 
-a   {  
-    color  :  inherit;   
-    text-decoration  :  none;  
+a   {
+    color  :  inherit;
+    text-decoration  :  none;
     // text-decoration-skip-ink: auto;
     // text-underline-offset: 3px;
 }
@@ -78,7 +78,7 @@ a:visited {  background-color: #4db088;  }
 
     background-color  :  $titleBannerColor;
     // background-color  :  rgba(60,60,60,1);
-    box-shadow: inset 0 0 1.15rem rgba(0,0,0, 0.1), 0 0 1.15rem rgba(0,0,0, 0.2);
+    box-shadow: inset 0 0 0.15rem rgba(255,255,255, 0.2), inset 0 0 1.15rem rgba(0,0,0, 0.1), 0 0 1.15rem rgba(0,0,0, 0.2);
 }
 
 #titleBanner.countryChosen {
@@ -118,7 +118,7 @@ a:visited {  background-color: #4db088;  }
     left  :  0;
     // width : 60ch;
     // max-width : 60ch;
-    
+
     // width : 42vw;
     width : 45vw;
     // max-width : 42vw;
@@ -145,7 +145,8 @@ article {
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
+    // box-shadow: 0 -0.02rem 0.02rem rgba(255,255,255,0.7), 0 0 0.15rem rgba(0,0,0,0.7);
+    box-shadow: -0.015rem 0 0.015rem rgba(255,255,255,0.7), 0 -0.02rem 0.02rem rgba(255,255,255,0.7), 0 0 0.15rem rgba(0,0,0,0.7);
 
     -webkit-transition  :  opacity 2s;
        -moz-transition  :  opacity 2s;
@@ -157,7 +158,7 @@ article {
     position: relative;
     // top : 0;
     top: -0.7rem;
-    
+
     height : 4.2ch;
     margin : 0;
     padding : 1ch 0 0 0;
@@ -173,7 +174,7 @@ article {
     border: 1px solid rgb(200,200,200);
     border-top: 1px solid rgb(141, 140, 140);
     border-radius : 0.3rem;
-    
+
     background-color  :  $panelFlyoutColor;
     box-shadow : 0 0.077rem 0.077rem rgba(0,0,0,0.3);
 }
@@ -243,7 +244,7 @@ footer a:hover, footer a:focus {
   outline: none;
 //   transform: translate(1.7rem, -1.5rem) rotate(15deg);
   fill-opacity: 0;
-  transform: translate(13rem, -10rem) rotate(35deg);
+  transform: translate(12rem, -9rem) rotate(35deg);
   transition: transform 750ms 150ms ease-in, fill-opacity 750ms 500ms;
 }
 

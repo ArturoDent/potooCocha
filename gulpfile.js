@@ -139,15 +139,15 @@ const scriptOrder = [
   "./temp/js/main.js",
   "./temp/js/SouthAmerica.js",
   "./temp/js/numList.js",
-  
+
   // "./temp/js/taxonomy.js",
   "./temp/js/search/search_entry.js",
   "./temp/js/search/search_handleQuery.js",
   "./temp/js/search/search_functions.js",
   "./temp/js/search/search_handleResults.js",
-  
+
   "./temp/js/taxonomy.js",
-  
+
   "./temp/js/birdMapFactory.js"
 ];
 
@@ -194,7 +194,7 @@ function processHTML() {
 
     // add ?v=dateTime stamp to css and js links
     .pipe(addVersionString(versionConfig))
-    
+
     .pipe(gulp.dest(paths.html.deploy));
 }
 

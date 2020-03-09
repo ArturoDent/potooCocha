@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   countryButton = document.getElementById("countryButton");
   countryButton.addEventListener("click", toggleCountryMenuLayer);
-  
+
   titleBanner = document.getElementById("titleBanner");
 
   numDaysButton = document.getElementById("numDays");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   numDaysButton.children.item(9).classList.add("highlight");
   gNumDays = 8;
-  
+
   sampleTable = document.getElementById("sampleTable");
   sampleTable.classList.add("numDays" + String(gNumDays));
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showEndemics.addEventListener("click", toggleSampleTableShowEndemics);
   sciNames.addEventListener("click", toggleSampleTableSciNames);
   italics.addEventListener("click", toggleSampleTableItalics);
-  
+
   lineNumbers.nextElementSibling.addEventListener("keyup", toggleSampleTableLineNumbers);
   leftCheck.nextElementSibling.addEventListener("keyup", toggleSampleTableLeftChecks);
   showEndemics.nextElementSibling.addEventListener("keyup", toggleSampleTableShowEndemics);
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector("#country-menu").addEventListener("click", setCountry);
   document.querySelector("#country-menu").addEventListener("keyup", setCountry);
-  
+
   leftCheck.checked = true;
 
   countryMenuLayer = document.getElementById("countryMenuLayer");
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   mailLink.addEventListener("click", sendEmail);
 
   // target = document.getElementById("checklistArticle");
-  
+
   // updateActivityData("start");
 });
 
@@ -140,17 +140,18 @@ function sendEmail() {
 function toggleCountryMenuLayer(evt) {
 
   countryMenuLayer.classList.toggle("show");
-  countryButton.classList.toggle("slideLeft");
-  
+  countryButton.classList.toggle("slideRight");
+  countryMenuLayer.classList.toggle("slideRight");
+
   // if (!countryButton.classList.contains("wasOpened")) countryButton.classList.add("wasOpened");
 
   if (evt) evt.stopPropagation();
-  
-  document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
+
+  // document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 }
 
 function toggleSampleTableShowEndemics(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup") {
     if (evt.keyCode !== 13) {
@@ -165,7 +166,7 @@ function toggleSampleTableShowEndemics(evt) {
 }
 
 function toggleSampleTableSciNames(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup") {
     if (evt.keyCode !== 13) {
@@ -181,7 +182,7 @@ function toggleSampleTableSciNames(evt) {
 }
 
 function toggleSampleTableItalics(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup") {
     if (evt.keyCode !== 13) {
@@ -196,7 +197,7 @@ function toggleSampleTableItalics(evt) {
 }
 
 function toggleSampleTableLeftChecks(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup") {
     if (evt.keyCode !== 13) {
@@ -208,14 +209,14 @@ function toggleSampleTableLeftChecks(evt) {
   }
 
   var list = sampleTable.querySelectorAll(".leftCheckBox, .familyHidden");
-  
+
   Array.prototype.forEach.call(list, function (item) {
     item.classList.toggle("show");
   });
 }
 
 function toggleSampleTableLineNumbers(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup") {
     if (evt.keyCode !== 13) {
@@ -230,11 +231,13 @@ function toggleSampleTableLineNumbers(evt) {
 }
 
 function setCountry(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup" && evt.keyCode !== 13) {
     return;
   }
+
+  if (!currentCountry) document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 
   // find and remove the previous highlighted Country
   var previousHighlightedCountry = evt.target.parentNode.parentNode.querySelector(".highlight");
@@ -242,23 +245,17 @@ function setCountry(evt) {
 
   evt.target.classList.add("highlight");
 
-  // if (!currentCountry) {
-  //   map.getElementsByClassName("drawing")[0].classList.add("active");
-  // }
-
   toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
   updateActivityData("select");
-  
+
   // uploadActivity();
-  // countryButton.innerHTML = currentCountry;
-  
+
   if (!titleBanner.classList.contains("countryChosen")) titleBanner.classList.add("countryChosen");
-  
   if (!countryButton.classList.contains("countryChosen")) countryButton.classList.add("countryChosen");
-  // countryButton.innerHTML = countries2Postals[currentCountry];
-  
+  if (!countryMenuLayer.classList.contains("countryChosen")) countryMenuLayer.classList.add("countryChosen");
+
   if (currentCountry === "South America") countryButton.innerHTML = "SA";
   else countryButton.innerHTML = countries2Postals[currentCountry];
 
@@ -321,12 +318,12 @@ function setChecklistAuthors(data) {
 }
 
 function setNumDays(evt) {
-  
+
   // KeyboardEvent, type keyup, 13 === Enter
   if (evt.type === "keyup" && evt.keyCode !== 13) {
     return;
   }
-  
+
   var day = evt.target;
   var list;   // will be a NodeList of th/td's with cds class applies to them
 
@@ -461,15 +458,15 @@ function uploadDownloads() {
 }
 
 function updateActivityData(stage, query) {
-  
+
   var action = [];
-  
+
   switch (stage) {
-    
+
   case "start":
     action.push("start");
     break;
-    
+
   case "select":
     action.push("select");
     action.push(currentCountry);
@@ -479,20 +476,20 @@ function updateActivityData(stage, query) {
     action.push("search");
     if (query)  action.push(query);
     break;
-    
+
   case "download":
     action.push("download");
     action.push(requested);
     break;
-    
+
   case "stop":
     action.push("stop");
     break;
-  
+
   default:
     break;
   }
-  
+
   uploadActivity(action);
 }
 
@@ -502,15 +499,15 @@ function uploadActivity(action) {
     return true;
   }
   var activityURL = "./php/collectActivity.php";
-  
+
   // var JSONstringData = JSON.stringify(["start"]);
   // var JSONstringData = JSON.stringify(["select", currentCountry]);
   // var JSONstringData = JSON.stringify(["search"]);
   // var JSONstringData = JSON.stringify(["download", "checklist"]);
   // var JSONstringData = JSON.stringify(["stop"]);
-  
+
   var JSONstringData = JSON.stringify(action);
-  
+
   var downloadData = new FormData();
   downloadData.append('action', JSONstringData);
   navigator.sendBeacon(activityURL, downloadData);

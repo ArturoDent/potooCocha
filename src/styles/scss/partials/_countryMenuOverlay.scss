@@ -1,113 +1,89 @@
 #countryMenuLayer {
   opacity: 0;
   position: fixed;
-  // position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: $overlayColor;
-  // transform: translateX(100vw);
-  
+
   pointer-events: none;
   z-index: 2;
-  
-  // transition: opacity 300ms 200ms ease-in-out;
-  transition: all 300ms 200ms ease-in-out;
+
+  transition: all 300ms ease-in-out 300ms;
   will-change: opacity;
 }
 
 #countryMenuLayer.show {
   opacity: 1;
-  // transform: translateX(0vw);
   pointer-events: all;
-  transition: opacity 300ms  ease-in-out;  // does disabling this help fluidity?
+}
+
+#countryMenuLayer.countryChosen:not(.slideRight) {
+  transition: opacity 300ms ease-in-out;  // does disabling this help fluidity?
+}
+
+#countryMenuLayer.countryChosen.slideRight {
+  transition: opacity 300ms ease-in-out 220ms;  // does disabling this help fluidity?
 }
 
 #countryButton {
   position: fixed;  // smoother w/o this ???
   top: 2.35rem;
-  right: 3vw;
-  // transform: translate(-25vw, 8vh);
-  transform: translateX(-25vw);
-  
-  // width: 14ch;
-  // height: 14ch;
-  
+  transform: translateX(65vw);
+
+
   width: 12ch;
   height: 12ch;
-  
-  // padding : 0.5ch 0 0.9ch 1ch;
   padding : 0 0 0 0.3ch;
-  
-  // font-size: 1.1rem;
+
   font-size: 1rem;
   letter-spacing: 0.1rem;
   text-align  :  center;
   cursor: pointer;
   z-index: 3;
-   
-  // border: 0.2rem solid $titleBannerColor;
+
   border: 0.2rem solid white;
   border-radius: 50%;
-  // border-bottom-right-radius: 2rem;
-  // border-bottom-left-radius: 2rem;
-  
-  // background-color: $bgColor;
   background-color: darken($titleBannerColor, 5%);
-  
   box-shadow  :  inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
-  transition  :  transform 350ms ease-in-out, background-color 1s;
-  // transition  :  transform 350ms ease-in-out  box-shadow 1s;
+  transition  :  transform 500ms ease-in-out 100ms, background-color 1s;
   will-change: transform;
 }
 
-#countryButton.slideLeft {  
-  transform:  translateX(0);
-  // transform: translateX(0);
-  transition: transform 350ms 300ms ease-in-out, background-color 1s;  // same, does disabling this help fluidity??, see above
+#countryButton.slideRight {
+  transform:  translateX(87vw);
+  transition: transform 500ms 250ms ease-in-out, background-color 1s;
 }
 
-#countryButton.countryChosen {  
-  top: 1.25rem;
+#countryButton.countryChosen {
+  // top: 1.25rem;
   // TODO : figure out proper calc for right
-  right: 5vw;
   width: 5.3rem;
   height: 4.5rem;
   padding : 0;
   color: #eee;
   font-size: 1.7rem;
   text-align  :  center;
-  background-color: #000;
+  background-color: #444;
   border: 0.2rem solid transparent;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.45rem $bgColor;
-  
-  transition: all 300ms;
-  
-  // transform: rotate(10deg);
+  box-shadow: 0 0 0 0.1rem $bgColor, 0 0 0 0.2rem #444, 0 0 0 0.43rem #888;
+
+  transition: all 600ms ease-in-out;
 }
 
-// #countryButton:after {
-//   content  :  '';
-//   position  :  absolute;
-//   top  :  2rem;
-//   left  :  104%;
-//   border-style  :  solid;
-//   border-width  :  1.7rem;
-//   border-color  :  transparent transparent transparent #ccc;
-//   // border-color  :  transparent transparent transparent $titleBannerColor;
-//   filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.4));
-// }
+#countryButton.countryChosen.slideRight {
+  transform:  translateX(89vw);
+}
 
 #countryButton.countryChosen:after {
   content  :  '';
   position  :  absolute;
   top  :  0.2rem;
-  left  :  112%;
+  left  :  116%;
   border-style  :  solid;
   border-width  :  1.7rem;
-  border-color  :  transparent transparent transparent rgb(156, 156, 156);
+  border-color  :  transparent transparent transparent rgb(196, 195, 195);
   filter: drop-shadow(0.1rem 0 0.1rem rgba(0, 0, 0, 0.7));
   transition: all 300ms ease-in-out;
 }
@@ -116,16 +92,15 @@
   outline: none;
   color: #000;
   text-shadow: none;
-  background-color: #ccc;
-  box-shadow: 0 0 0 0.1rem $bgColor, 0 0 0 0.2rem white, 0 0 0 0.45rem $bgColor;
-  // transition  :  all 1s ease-in-out;
+  background-color: #ddd;
+  box-shadow: 0 0 0 0.1rem $bgColor, 0 0 0 0.2rem #ddd, 0 0 0 0.45rem $bgColor;
 }
 
 #countryButton:hover:after, #countryButton:focus:after {
-  left  :  122%;
+  left  :  127%;
   border-color  :  transparent transparent transparent white;
   filter: drop-shadow(0.1rem 0 0.1rem black);
-  transition: all 300ms 200ms ease-in-out;  
+  transition: all 300ms 200ms ease-in-out;
 }
 
 #countryButton:before  {
@@ -133,13 +108,12 @@
   content  :  '';
   position  :  absolute;
   top  :  0.2rem;
-  left  :  129%;
+  left  :  133%;
   border-style  :  solid;
-  // border-style  :  inset;
   border-width  :  1.7rem;
   border-color  :  transparent transparent transparent white;
   filter: drop-shadow(0.05rem 0 0.05rem rgba(0, 0, 0, 0.8));
-  transition: all 300ms 300ms ease-in-out;  
+  transition: all 300ms 300ms ease-in-out;
 }
 
 #countryButton.countryChosen:before {
@@ -147,6 +121,5 @@
 }
 
 #countryButton:hover:before, #countryButton:focus:before {
-  left  :  135%;
-  // border-color  :  transparent transparent transparent white;
+  left  :  144%;
 }

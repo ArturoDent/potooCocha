@@ -4,6 +4,7 @@
     font-size  :  0.8rem;
     color  :  #fff;
     line-height  :  1.2rem;
+    letter-spacing: 0.1rem;
     text-align  :  center;
 
     z-index : 100;
@@ -22,20 +23,13 @@
 
     letter-spacing: 0.1rem;
     font-size  :  0.9rem;
-    // font-weight: bold;
     font-weight: 700;
-    // text-shadow : none;
     text-shadow : 0 0.05rem black;
-    
 
-    background-color  :  darken($bgColor, 3%);
-    // border : 0.12rem solid  $goldHighlightColor;
-    // border-right : 0.2rem solid $goldHighlightColor;
-    
     border : 0.12rem solid  $greenHighlightColor;
     border-right : 0.2rem solid $greenHighlightColor;
+    background-color  :  darken($bgColor, 3%);
     box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
-    
 
     transform  :  rotate(-4deg);
     -webkit-transform-origin  :  top left;
@@ -99,13 +93,11 @@
     left  :  -2.35em;
     border-width  :  0.98em;
     border-color  :  transparent  $greenHighlightColor transparent transparent;
-    // transform: rotate(-30deg);
     transition : border-color 200ms 500ms;
 }
 
 .saveMapButton .tooltip:after {
     top  :  -0.06rem;
-    // left  :  102.3%;
     left  :  103%;
     border-width  :  0.91em;
     border-color  :  transparent transparent transparent #fff;
@@ -120,9 +112,7 @@
 }
 
 .taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {
-    // color: black;
     text-shadow: none;
-    // box-shadow : inset -18.5rem 0 0.15rem $greenHighlightColor, 0 0 1.15rem $greenHighlightColor;
     box-shadow : inset -18.5rem 0 0.15rem $greenHighlightColor;
     color: black;
 
@@ -136,12 +126,14 @@
 
 .saveMapButton.hasTooltip:hover .tooltip {
     background-color  :  #333;
+    outline: none;
 }
 
-.saveMapButton.hasTooltip:hover .tooltip:after {
+.saveMapButton.hasTooltip:hover .tooltip::after {
     top  :  -0.17rem;
     left  :  105%;
     border-width  :  1.1em;
+    outline: none;
 }
 
 .deleteMapButton.hasTooltip.hover .tooltip {

@@ -96,7 +96,7 @@
 html {
   min-height: 100%;
   font-size: 15.3px;
-  background-color: #677177; }
+  background-color: #6a7377; }
 
 *:focus {
   background-color: red; }
@@ -111,7 +111,7 @@ body {
   color: white;
   text-shadow: 0 0.077rem rgba(0, 0, 0, 0.5);
   letter-spacing: 0.04em;
-  background-color: #677177;
+  background-color: #6a7377;
   overflow-x: hidden;
   overflow-y: auto; }
 
@@ -156,7 +156,7 @@ a:visited {
   letter-spacing: 0.1em;
   text-shadow: 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   background-color: #3d7481;
-  box-shadow: inset 0 0 1.15rem rgba(0, 0, 0, 0.1), 0 0 1.15rem rgba(0, 0, 0, 0.2); }
+  box-shadow: inset 0 0 0.15rem rgba(255, 255, 255, 0.2), inset 0 0 1.15rem rgba(0, 0, 0, 0.1), 0 0 1.15rem rgba(0, 0, 0, 0.2); }
 
 #titleBanner.countryChosen {
   width: calc(91vw - 1.9rem);
@@ -199,8 +199,8 @@ article {
   pointer-events: auto;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
-  background-color: #444a4e;
-  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.7);
+  background-color: #52595c;
+  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.7), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.7), 0 0 0.15rem rgba(0, 0, 0, 0.7);
   -webkit-transition: opacity 2s;
   -moz-transition: opacity 2s;
   -o-transition: opacity 2s;
@@ -221,7 +221,7 @@ article {
   border: 1px solid #c8c8c8;
   border-top: 1px solid #8d8c8c;
   border-radius: 0.3rem;
-  background-color: #444a4e;
+  background-color: #52595c;
   box-shadow: 0 0.077rem 0.077rem rgba(0, 0, 0, 0.3); }
 
 .topFlyoutPanel {
@@ -264,7 +264,7 @@ footer a:hover, footer a:focus {
 #mailLink:hover .icon-paper-plane, #mailLink:focus-within .icon-paper-plane {
   outline: none;
   fill-opacity: 0;
-  transform: translate(13rem, -10rem) rotate(35deg);
+  transform: translate(12rem, -9rem) rotate(35deg);
   transition: transform 750ms 150ms ease-in, fill-opacity 750ms 500ms; }
 
 #mapsCollection {
@@ -272,7 +272,7 @@ footer a:hover, footer a:focus {
   top: 100vh;
   width: 100vw;
   height: auto;
-  background-color: #444a4e;
+  background-color: #6a7377;
   box-shadow: 0 -0.6px 0.6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 10;
@@ -284,7 +284,7 @@ footer a:hover, footer a:focus {
   width: 100%;
   border-top: 0.077rem solid #3d7481;
   border-bottom: 0.077rem solid #3d7481;
-  background-color: #383d40; }
+  background-color: #52595c; }
 
 #mapsCollection.namesOnlySeen {
   transform: translateY(-3.2rem); }
@@ -309,9 +309,9 @@ footer a:hover, footer a:focus {
   width: auto; }
 
 .smallBird .drawing {
-  -webkit-filter: drop-shadow(-0.46rem 0 0.46rem rgba(0, 0, 0, 0.3)) drop-shadow(0.46rem 0 0.46rem rgba(0, 0, 0, 0.3));
-  -ms-filter: drop-shadow(-0.46rem 0 0.46rem rgba(0, 0, 0, 0.3)) drop-shadow(0.46rem 0 0.46rem rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(-0.46rem 0 0.46rem rgba(0, 0, 0, 0.3)) drop-shadow(0.46rem 0 0.46rem rgba(0, 0, 0, 0.3)); }
+  -webkit-filter: drop-shadow(-0.2rem 0 0.2rem rgba(0, 0, 0, 0.2)) drop-shadow(0.2rem 0 0.2rem rgba(0, 0, 0, 0.2));
+  -ms-filter: drop-shadow(-0.2rem 0 0.2rem rgba(0, 0, 0, 0.2)) drop-shadow(0.2rem 0 0.2rem rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(-0.2rem 0 0.2rem rgba(0, 0, 0, 0.2)) drop-shadow(0.2rem 0 0.2rem rgba(0, 0, 0, 0.2)); }
 
 .smallBirdText {
   position: absolute;
@@ -356,6 +356,9 @@ footer a:hover, footer a:focus {
 #deleteAllMapsButton:hover::after {
   left: 105%;
   border-color: transparent transparent transparent #f00; }
+
+#deleteAllMapsButton:focus-within {
+  outline: none; }
 
 .birdName {
   position: absolute;
@@ -430,6 +433,9 @@ footer a:hover, footer a:focus {
   width: auto;
   transform: scale(0.9); }
 
+.deleteMapButton:focus-within .tooltip {
+  outline: none; }
+
 .saveMapButton {
   display: none;
   position: absolute;
@@ -437,12 +443,15 @@ footer a:hover, footer a:focus {
   left: -35%;
   background-color: transparent; }
 
+.saveMapButton:focus-within .tooltip {
+  outline: none; }
+
 .drawing {
   position: relative;
   text-shadow: none;
-  -webkit-filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8));
-  -ms-filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8));
-  filter: drop-shadow(0 0 0.077rem white) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.8)); }
+  -webkit-filter: drop-shadow(0 0 0.077rem rgba(255, 255, 255, 0.6)) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.5));
+  -ms-filter: drop-shadow(0 0 0.077rem rgba(255, 255, 255, 0.6)) drop-shadow(0 0 0.31rem rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(-0.03rem 0 0.08rem white) drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.7)); }
 
 .colorKey {
   opacity: 0;
@@ -463,7 +472,7 @@ footer a:hover, footer a:focus {
   letter-spacing: 0.13em;
   text-shadow: rgba(0, 0, 0, 0.5) 0.077rem 0.077rem 0.077rem;
   list-style-type: none;
-  background: linear-gradient(to right, #5b6469 0%, #505050 100%); }
+  background: linear-gradient(to right, #5e666a 0%, #505050 100%); }
 
 .colorKey ul li:nth-child(1) {
   /* extinct       */
@@ -552,7 +561,7 @@ footer a:hover, footer a:focus {
   font-size: 6rem;
   font-weight: bold;
   font-variant: small-caps;
-  color: #5e676c;
+  color: #60696c;
   text-shadow: 0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af,  0 -1px 2px #75d6af;
   letter-spacing: 0.2em; }
 
@@ -688,7 +697,7 @@ input[type='checkbox']:disabled ~ label:hover, input[type='checkbox']:disabled ~
   outline: none;
   border: none;
   border-radius: 0.38rem;
-  background-color: #677177;
+  background-color: #6a7377;
   cursor: default; }
 
 input[type='checkbox']:disabled ~ label::before {
@@ -1023,22 +1032,26 @@ input[type='checkbox']:disabled ~ label {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #677177;
+  background-color: #6a7377;
   pointer-events: none;
   z-index: 2;
-  transition: all 300ms 200ms ease-in-out;
+  transition: all 300ms ease-in-out 300ms;
   will-change: opacity; }
 
 #countryMenuLayer.show {
   opacity: 1;
-  pointer-events: all;
-  transition: opacity 300ms  ease-in-out; }
+  pointer-events: all; }
+
+#countryMenuLayer.countryChosen:not(.slideRight) {
+  transition: opacity 300ms ease-in-out; }
+
+#countryMenuLayer.countryChosen.slideRight {
+  transition: opacity 300ms ease-in-out 220ms; }
 
 #countryButton {
   position: fixed;
   top: 2.35rem;
-  right: 3vw;
-  transform: translateX(-25vw);
+  transform: translateX(65vw);
   width: 12ch;
   height: 12ch;
   padding: 0 0 0 0.3ch;
@@ -1051,36 +1064,36 @@ input[type='checkbox']:disabled ~ label {
   border-radius: 50%;
   background-color: #356470;
   box-shadow: inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
-  transition: transform 350ms ease-in-out, background-color 1s;
+  transition: transform 500ms ease-in-out 100ms, background-color 1s;
   will-change: transform; }
 
-#countryButton.slideLeft {
-  transform: translateX(0);
-  transition: transform 350ms 300ms ease-in-out, background-color 1s; }
+#countryButton.slideRight {
+  transform: translateX(87vw);
+  transition: transform 500ms 250ms ease-in-out, background-color 1s; }
 
 #countryButton.countryChosen {
-  top: 1.25rem;
-  right: 5vw;
   width: 5.3rem;
   height: 4.5rem;
   padding: 0;
   color: #eee;
   font-size: 1.7rem;
   text-align: center;
-  background-color: #000;
+  background-color: #444;
   border: 0.2rem solid transparent;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.45rem #677177;
-  transition: all 300ms; }
+  box-shadow: 0 0 0 0.1rem #6a7377, 0 0 0 0.2rem #444, 0 0 0 0.43rem #888;
+  transition: all 600ms ease-in-out; }
+
+#countryButton.countryChosen.slideRight {
+  transform: translateX(89vw); }
 
 #countryButton.countryChosen:after {
   content: '';
   position: absolute;
   top: 0.2rem;
-  left: 112%;
+  left: 116%;
   border-style: solid;
   border-width: 1.7rem;
-  border-color: transparent transparent transparent #9c9c9c;
+  border-color: transparent transparent transparent #c4c3c3;
   filter: drop-shadow(0.1rem 0 0.1rem rgba(0, 0, 0, 0.7));
   transition: all 300ms ease-in-out; }
 
@@ -1088,11 +1101,11 @@ input[type='checkbox']:disabled ~ label {
   outline: none;
   color: #000;
   text-shadow: none;
-  background-color: #ccc;
-  box-shadow: 0 0 0 0.1rem #677177, 0 0 0 0.2rem white, 0 0 0 0.45rem #677177; }
+  background-color: #ddd;
+  box-shadow: 0 0 0 0.1rem #6a7377, 0 0 0 0.2rem #ddd, 0 0 0 0.45rem #6a7377; }
 
 #countryButton:hover:after, #countryButton:focus:after {
-  left: 122%;
+  left: 127%;
   border-color: transparent transparent transparent white;
   filter: drop-shadow(0.1rem 0 0.1rem black);
   transition: all 300ms 200ms ease-in-out; }
@@ -1102,7 +1115,7 @@ input[type='checkbox']:disabled ~ label {
   content: '';
   position: absolute;
   top: 0.2rem;
-  left: 129%;
+  left: 133%;
   border-style: solid;
   border-width: 1.7rem;
   border-color: transparent transparent transparent white;
@@ -1113,7 +1126,7 @@ input[type='checkbox']:disabled ~ label {
   opacity: 1; }
 
 #countryButton:hover:before, #countryButton:focus:before {
-  left: 135%; }
+  left: 144%; }
 
 #country-menu {
   position: relative;
@@ -1225,7 +1238,7 @@ input[type='checkbox']:disabled ~ label {
   border-top-right-radius: 0.77rem;
   border: 0.077rem solid rgba(255, 255, 255, 0.1);
   border-top: 0.077rem solid transparent;
-  box-shadow: inset 0 0 1.15rem rgba(0, 0, 0, 0.2), inset 0 -0.077rem 0.077rem -0.077rem rgba(0, 0, 0, 0.4), inset 0 0 0.077rem rgba(0, 0, 0, 0.4); }
+  box-shadow: inset 0 0 0.15rem rgba(255, 255, 255, 0.2), inset 0 0 1.15rem rgba(0, 0, 0, 0.1), 0 0 1.15rem rgba(0, 0, 0, 0.2); }
 
 .taxArticleMain {
   padding: 1.15rem 0 0 0;
@@ -1251,12 +1264,14 @@ input[type='checkbox']:disabled ~ label {
 .slideUpWrapper {
   position: relative;
   top: -8rem;
-  left: -3vw;
+  left: -0.5vw;
   overflow-y: hidden;
   max-height: 27rem;
+  width: 90%;
   border-top: none;
   border-bottom: none;
-  background-color: #444a4e;
+  border-bottom-right-radius: 22%;
+  background-color: #464c4f;
   transform: translateY(0) scaleY(100%);
   transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out; }
 
@@ -1279,30 +1294,23 @@ input[type='checkbox']:disabled ~ label {
   transition: all 400ms ease-in-out; }
 
 #results-panel {
-  transform-origin: top left;
-  transform: scaleY(0) translateY(0) !important;
-  transition: transform 400ms ease-in; }
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10rem) !important;
+  transition: transform 500ms ease-in-out 100ms, opacity 400ms 300ms; }
 
 #results-panel.closeInstructions:not(.resultsPanelBoolean) {
-  transform: scaleY(0) translateY(-10rem) !important; }
+  transform: translateY(-10rem) !important; }
 
 #results-panel.closeInstructions.resultsPanelBoolean {
+  pointer-events: all;
   opacity: 1;
-  height: 100%;
-  transform: scaleY(1) translateY(-10rem) !important; }
+  transform: translateY(-10rem) !important; }
 
 #results-panel.resultsPanelBoolean:not(.closeInstructions) {
+  pointer-events: all;
   opacity: 1;
-  height: 100%;
-  transform: scaleY(1) translateY(0) !important; }
-
-#tax-panel {
-  transition: all 400ms ease-in-out; }
-
-#tax-panel.setTaxPanelHeight {
-  opacity: 1;
-  height: auto;
-  margin: 1ch 0 -10ch 0; }
+  transform: translateY(0) !important; }
 
 .taxInstructionsButton {
   position: absolute;
@@ -1319,18 +1327,20 @@ input[type='checkbox']:disabled ~ label {
   text-align: center;
   border: 0.15rem solid #4db088;
   border-radius: 50%;
-  background-color: #60696f;
-  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #677177;
-  cursor: pointer; }
+  background-color: #636b6f;
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #6a7377;
+  cursor: pointer;
+  transition: background-color 300ms; }
 
 .taxInstructionsButton:hover, .taxInstructionsButton:focus {
   outline: none;
-  background-color: black; }
+  background-color: black;
+  transition: background-color 300ms 250ms; }
 
 .taxInstructionsButton.instructionsClosed .tooltip {
   width: 10rem;
   border: 0.15rem solid #4db088;
-  background-color: #444a4e;
+  background-color: #52595c;
   transform: rotate(0); }
 
 #searchForm {
@@ -1339,7 +1349,7 @@ input[type='checkbox']:disabled ~ label {
   width: 80%;
   padding: 0 0 1.8ch 0;
   border: 1px solid transparent;
-  background-color: #444a4e;
+  background-color: #464c4f;
   border-bottom-left-radius: 6.9rem;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
@@ -1407,24 +1417,19 @@ input[type='checkbox']:disabled ~ label {
 
 #searchSpecials {
   position: absolute;
-  top: -5ch;
-  left: 100%;
-  width: 10.5rem;
-  padding: 0.5rem 0;
+  top: -3.5ch;
+  left: 105%;
   font-size: 0.82rem;
   text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   pointer-events: auto;
-  border-radius: 3px;
-  box-shadow: inset 0 0 3rem rgba(226, 225, 225, 0.5);
-  transition: all 500ms 1300ms;
-  border: 1px solid #888787; }
+  transition: all 500ms 1300ms; }
 
 #searchSpecials.grayed {
   opacity: 0.5;
   pointer-events: none; }
 
 .searchSpecialWrapper {
-  padding: 0.3ch 0;
+  padding: 0.5ch 0;
   text-align: center;
   transition: all 1000ms; }
 
@@ -1456,18 +1461,19 @@ input[type='checkbox']:disabled ~ label {
   top: -2.1ch; }
 
 #searchTerm span {
-  color: #96f1fd; }
+  color: #fcb928;
+  text-decoration-line: overline;
+  text-shadow: 0.2px 0.2px white; }
 
 .highlightSpecial {
   border-bottom: 0.077rem solid white; }
 
 /*  -----------------------   searchResults  panel  ----------------------  */
 #results-panel {
-  opacity: 0;
   position: relative;
   height: auto;
   width: calc(100% + 7vw);
-  top: -7rem;
+  top: -5rem;
   left: -7vw;
   margin: 5.5ch 0 2ch 0;
   padding: 0;
@@ -1486,8 +1492,8 @@ input[type='checkbox']:disabled ~ label {
   overflow-x: visible;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
-  background-color: #444a4e;
-  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.7); }
+  background-color: #52595c;
+  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7); }
 
 #printerButton {
   position: absolute;
@@ -1502,26 +1508,27 @@ input[type='checkbox']:disabled ~ label {
   border-radius: 50%;
   background-color: #222222;
   border: 0.13rem solid #96f1fd;
-  box-shadow: 0.25rem -0.05rem 0 0.24rem #677177, 0.2rem -0.1rem 0 0.24rem #677177, 0.3rem 0.1rem 0 0.24rem #677177, 0.25rem -0.05rem 0 0.27rem rgba(0, 0, 0, 0.6), 0.25rem -0.05rem 0 0.35rem #677177, 0 0 0 0.3rem #677177, 0.02rem -0.04rem 0 0.3rem #677177, -0.02rem 0.04rem 0 0.3rem #677177, -0.04rem 0.04rem 0 0.32rem #677177, -0.04rem -0.04rem 0 0.3rem rgba(0, 0, 0, 0.6), -0.05rem -0.05rem 0 0.34rem #727272; }
+  box-shadow: 0.25rem -0.05rem 0 0.24rem #6a7377, 0.2rem -0.1rem 0 0.24rem #6a7377, 0.3rem 0.1rem 0 0.24rem #6a7377, 0.25rem -0.05rem 0 0.27rem rgba(0, 0, 0, 0.6), 0.25rem -0.05rem 0 0.35rem #6a7377, 0 0 0 0.3rem #6a7377, 0.02rem -0.04rem 0 0.3rem #6a7377, -0.02rem 0.04rem 0 0.3rem #6a7377, -0.04rem 0.04rem 0 0.32rem #6a7377, -0.04rem -0.04rem 0 0.3rem rgba(0, 0, 0, 0.6), -0.05rem -0.05rem 0 0.34rem #727272; }
 
 #printerButton::before {
   position: absolute;
-  content: "print search results";
+  content: "print search\Aresults";
+  white-space: pre;
   left: 95%;
   top: -115%;
-  width: 13ch;
+  width: auto;
   z-index: -1;
   font-size: 0.9rem;
-  padding: 0.38rem;
-  border: 1px solid #677177;
+  letter-spacing: 0.05rem;
+  padding: 0.38rem 0.8rem 0.38rem 1rem;
+  border: 1px solid #6a7377;
   border-radius: 0.6rem;
   background-color: #222222;
   box-shadow: 0 0 0.09rem black;
   transition: all 100ms ease-in-out; }
 
 #printerButton:hover::before, #printerButton:focus::before {
-  border-right-color: white;
-  border-top-color: white; }
+  border-color: white; }
 
 #closeOpenFamiliesButton {
   position: absolute;
@@ -1531,12 +1538,13 @@ input[type='checkbox']:disabled ~ label {
   height: 3rem;
   padding: 0 0 0.3rem 0;
   font-size: 1.8rem;
+  letter-spacing: 0.05rem;
   text-align: center;
   color: white;
   background-color: #222222;
   border: 0.13rem solid #96f1fd;
   border-radius: 50%;
-  box-shadow: 0 0 0 0.62rem #677177, 0 -0.077rem 0 0.62rem #677177, -0.077rem 0 0 0.62rem #677177, -0.077rem -0.077rem 0 0.62rem rgba(0, 0, 0, 0.5), 0.077rem -0.077rem 0 0.69rem #677177, -0.077rem -0.077rem 0 0.69rem #677177, -0.077rem -0.077rem 0 0.69rem rgba(255, 255, 255, 0.25), 0.077rem 0 0 0.7rem #677177, -0.2rem 0.03rem 0 0.66rem rgba(0, 0, 0, 0.4), 0.077rem -0.077rem 0 0.69rem #677177, 0.077rem 0.077rem 0 0.69rem #677177, -0.2rem 0.05rem 0 0.66rem rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.62rem #6a7377, 0 -0.077rem 0 0.62rem #6a7377, -0.077rem 0 0 0.62rem #6a7377, -0.077rem -0.077rem 0 0.62rem rgba(0, 0, 0, 0.5), 0.077rem -0.077rem 0 0.69rem #6a7377, -0.077rem -0.077rem 0 0.69rem #6a7377, -0.077rem -0.077rem 0 0.69rem rgba(255, 255, 255, 0.25), 0.077rem 0 0 0.7rem #6a7377, -0.2rem 0.03rem 0 0.66rem rgba(0, 0, 0, 0.4), 0.077rem -0.077rem 0 0.69rem #6a7377, 0.077rem 0.077rem 0 0.69rem #6a7377, -0.2rem 0.05rem 0 0.66rem rgba(255, 255, 255, 0.3);
   transition: all 300ms;
   cursor: pointer; }
 
@@ -1547,12 +1555,13 @@ input[type='checkbox']:disabled ~ label {
 
 #closeOpenFamiliesButton::before {
   position: absolute;
-  content: "close open families";
-  left: -7vw;
+  content: "close open\A families";
+  white-space: pre;
+  left: -6.8vw;
   top: 90%;
-  width: 8vw;
-  padding: 0.38rem 1.3rem 0.38rem 0;
-  border: 1px solid #677177;
+  width: auto;
+  padding: 0.38rem 1.5rem 0.38rem 1rem;
+  border: 1px solid #6a7377;
   border-radius: 0.6rem;
   font-size: 0.9rem;
   z-index: -1;
@@ -1561,8 +1570,7 @@ input[type='checkbox']:disabled ~ label {
   transition: all 200ms ease-in-out; }
 
 #closeOpenFamiliesButton:hover::before, #closeOpenFamiliesButton:focus::before {
-  border-left-color: white;
-  border-bottom-color: white; }
+  border-color: white; }
 
 #countrySearch {
   opacity: 1;
@@ -1722,7 +1730,7 @@ input[type='checkbox']:disabled ~ label {
   position: relative;
   width: calc(100% + 7vw);
   height: 0;
-  top: 0;
+  top: 2rem;
   left: -7vw;
   margin: 0 0 -20.5ch 0;
   padding: 5ch 0 0 0;
@@ -1730,7 +1738,13 @@ input[type='checkbox']:disabled ~ label {
   border: none;
   box-shadow: none;
   background-color: transparent;
-  transform: translateY(-13rem); }
+  transform: translateY(-13rem);
+  transition: all 400ms ease-in-out; }
+
+#tax-panel.setTaxPanelHeight {
+  opacity: 1;
+  height: auto;
+  margin: 1ch 0 -10ch 0; }
 
 #fakeTaxPageBox {
   position: relative;
@@ -1741,8 +1755,8 @@ input[type='checkbox']:disabled ~ label {
   padding: 1ch 0 2ch 0;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
-  background-color: #444a4e;
-  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.7);
+  background-color: #52595c;
+  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
   overflow-x: visible; }
 
 /*  -----------------------------   #taxPage panel  ---------------------  */
@@ -2031,6 +2045,7 @@ input[type='checkbox']:disabled ~ label {
   font-size: 0.8rem;
   color: #fff;
   line-height: 1.2rem;
+  letter-spacing: 0.1rem;
   text-align: center;
   z-index: 100;
   border-radius: 0;
@@ -2048,9 +2063,9 @@ input[type='checkbox']:disabled ~ label {
   font-size: 0.9rem;
   font-weight: 700;
   text-shadow: 0 0.05rem black;
-  background-color: #60696f;
   border: 0.12rem solid #4db088;
   border-right: 0.2rem solid #4db088;
+  background-color: #636b6f;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-4deg);
   -webkit-transform-origin: top left;
@@ -2083,7 +2098,7 @@ input[type='checkbox']:disabled ~ label {
   text-shadow: 0 0.03rem black;
   opacity: 1;
   border: 0.077rem solid white;
-  background-color: #677177;
+  background-color: #6a7377;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-20deg);
   -webkit-transform-origin: middle right;
@@ -2126,12 +2141,14 @@ input[type='checkbox']:disabled ~ label {
   will-change: transform; }
 
 .saveMapButton.hasTooltip:hover .tooltip {
-  background-color: #333; }
+  background-color: #333;
+  outline: none; }
 
-.saveMapButton.hasTooltip:hover .tooltip:after {
+.saveMapButton.hasTooltip:hover .tooltip::after {
   top: -0.17rem;
   left: 105%;
-  border-width: 1.1em; }
+  border-width: 1.1em;
+  outline: none; }
 
 .deleteMapButton.hasTooltip.hover .tooltip {
   opacity: 1; }

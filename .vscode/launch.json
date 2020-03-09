@@ -41,7 +41,6 @@
                 "action": "debugWithChrome",
                 // "webroot": "${workspaceFolder}"
           },
-            
 
             "preLaunchTask": "Gulp: watch",
             // "preLaunchTask": "Echo vars",
@@ -56,7 +55,7 @@
                 "watch"
             ],
         },
-        
+
         {
             "name": "Chrome : Launch with sourcemaps",
             "type": "chrome",
@@ -70,8 +69,8 @@
             ],
             // "preLaunchTask": "Gulp: Start server only"   // gulp serve
             // "preLaunchTask": "run npm test",
-            
-            
+
+
         },
         {
             "name": "Chrome : Launch without sourcemaps",

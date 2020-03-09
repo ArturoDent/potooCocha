@@ -23,9 +23,11 @@ var vagrantColor = "#54ca30";
 var hypotheticalColor = "#ddd";
 var introducedColor = "#fee090";
 
-var baseColor = "​#535b5f";
-var baseStrokeColor = "#fff";
-var darkerStrokeColor = "#444";
+// var baseColor = "​#535b5f";
+var baseColor = "​#535B5F";
+var baseStrokeColor = "#bbb";
+var highlightStrokeColor = "#6a7377";
+var darkerStrokeColor = "#555";
 var selectedCountryFillColor = "#f33";
 
 /* global addBirdNameToMap birds currentMap */
@@ -97,7 +99,7 @@ function newFillColor(obj, newColor) {
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
     //  HACK : (why does this have to be hardcoded? And below.)
     if (newColor === baseColor) {
-      obj.style.fill = "#535b5f";
+      obj.style.fill = "#535B5F";
     }
     else obj.style.fill = newColor;
 
@@ -112,7 +114,7 @@ function newFillColor(obj, newColor) {
     for (var i = 0; i < len; i++) {
 
       if (newColor === baseColor) {
-        paths[i].style.fill = "#535b5f";
+        paths[i].style.fill = "#535B5F";
       }
       else paths[i].style.fill = newColor;
 
@@ -192,29 +194,35 @@ function highlightSAMmap(index, current) {
     case "X":
 
       newFillColor(cc, residentColor);
-      newStrokeColor(cc, baseStrokeColor);
+      // newStrokeColor(cc, baseStrokeColor);
+      newStrokeColor(cc, darkerStrokeColor);
       break;
 
     case "NB":
 
       newFillColor(cc, nonBreederColor);
-      newStrokeColor(cc, baseStrokeColor);
+      // newStrokeColor(cc, baseStrokeColor);
+      newStrokeColor(cc, darkerStrokeColor);
       break;
 
     case "V":
 
       newFillColor(cc, vagrantColor);
+      newStrokeColor(cc, darkerStrokeColor);
+
       break;
 
     case "H":
       newFillColor(cc, hypotheticalColor);
-      newStrokeColor(cc, darkerStrokeColor);
+      // newStrokeColor(cc, darkerStrokeColor);
+      newStrokeColor(cc, highlightStrokeColor);
       break;
 
     case "IN":
 
       newFillColor(cc, introducedColor);
-      newStrokeColor(cc, darkerStrokeColor);
+      // newStrokeColor(cc, darkerStrokeColor);
+      newStrokeColor(cc, highlightStrokeColor);
       break;
 
     case "EX":

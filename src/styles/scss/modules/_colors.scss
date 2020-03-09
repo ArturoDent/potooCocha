@@ -1,5 +1,5 @@
-// $bgColor  :  #53595d;
-$bgColor  :  #677177;
+// $bgColor  :  #677177;
+$bgColor  :  #6a7377;
 
 $titleTextFontColor : #fff;
 // $titleBannerColor : rgb(186, 141, 30);
@@ -8,9 +8,9 @@ $titleBannerColor : rgb(61, 116, 129);
 $bodyBorderColor : $titleBannerColor;
 
 // $panelColor : darken($bgColor, 5%);
-$panelColor : darken($bgColor, 15%);
+$panelColor : darken($bgColor, 10%);
 
-$slateHoverColor : rgb(56, 61, 61); 
+$slateHoverColor : rgb(56, 61, 61);
 
 $greenHighlightColor: #4db088;
 $searchHeaderColor : rgb(89, 97, 97);
@@ -20,11 +20,10 @@ $turquoiseHighlightColor : #96f1fd;
 $goldHighlightColor : rgba(255, 217, 0, 0.6);
 
 $genericButtonColor  :  #a65751;
-// $genericButtonColor  :  #f38714;
 
 $genericButtonHighlightColor : darken($bgColor, 7%);
 
-$panelFlyoutColor : darken($bgColor, 15%);
+$panelFlyoutColor : darken($bgColor, 10%);
 $panelFlyoutFontColor : white;
 
 $familyOpenColor : $bgColor;
@@ -44,7 +43,8 @@ $overlayColor : $bgColor;
 
 $overlayInfoColor : #ce402e;
 
-$mapCollectionColor: $panelFlyoutColor;
+// $mapCollectionColor: $panelFlyoutColor;
+$mapCollectionColor: $bgColor;
 
 $sampleTableBGColor: #fefefe;
 // $sampleTableTextColor: #53595d;

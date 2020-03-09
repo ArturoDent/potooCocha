@@ -3,12 +3,15 @@
 .slideUpWrapper  {
     position: relative;
     top: -8rem;
-    left: -3vw;
+    // left: -3vw;
+    left: -0.5vw;
     overflow-y: hidden;
     max-height: 27rem;
+    width: 90%;
 
     border-top: none;
     border-bottom: none;
+    border-bottom-right-radius: 22%;
     background-color: darken($bgColor, 15%);
     transform: translateY(0) scaleY(100%);
     // transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out;
@@ -24,19 +27,19 @@
     transform: translateY(-27rem);
     opacity: 0;
     transition: opacity 450ms, transform 600ms 250ms ease-in-out;
-    
+
 }
 
 .slideUpWrapper +  #searchForm    {
     // transform: translateY(-8rem);
-    
+
     transform: translateY(-7rem);
     transition: all 400ms 200ms ease-in-out;
 }
 
 .slideUpWrapper.closeInstructions +  #searchForm   {
     border-bottom-left-radius: 0;
-    // border: 1px solid rgba(255,255,255,0.5);    
+    // border: 1px solid rgba(255,255,255,0.5);
     border: 1px solid rgba(0,0,0,0.1);
     // transform: translateY(-23.3rem);
     // transform: translateY(-22rem);
@@ -46,41 +49,42 @@
 }
 
 #results-panel    {
-    transform-origin: top left;    
-    transform: scaleY(0) translateY(0) !important;
-    transition: transform 400ms ease-in;
+    pointer-events: none;
+    opacity  :  0;
+    // transform-origin: top left;
+    // transform: scaleY(0) translateY(0) !important;
+    // transform: translateY(0) !important;
+    transform: translateY(-10rem) !important;
+    // transition: transform 400ms ease-in;
+    transition: transform 500ms ease-in-out 100ms, opacity 400ms 300ms;
 }
 
 #results-panel.closeInstructions:not(.resultsPanelBoolean)  {
-    transform: scaleY(0) translateY(-10rem) !important;
+    // transform: scaleY(0) translateY(-10rem) !important;
+    transform: translateY(-10rem) !important;
 }
 
 #results-panel.closeInstructions.resultsPanelBoolean  {
+    pointer-events: all;
+
     opacity : 1;
-    height : 100%;
-    transform: scaleY(1) translateY(-10rem) !important;
+    // height : 100%;
+    // transform: scaleY(1) translateY(-10rem) !important;
+    transform: translateY(-10rem) !important;
 }
 
 #results-panel.resultsPanelBoolean:not(.closeInstructions)  {
-    opacity : 1;
-    height : 100%;
-    transform: scaleY(1) translateY(0) !important;
-}
+    pointer-events: all;
 
-#tax-panel  {
-    transition: all 400ms ease-in-out;
-}
-
-#tax-panel.setTaxPanelHeight  {
     opacity : 1;
-    height: auto;
-    margin: 1ch 0 -10ch 0;
+    // height : 100%;
+    transform: translateY(0) !important;
 }
 
 .taxInstructionsButton  {
     position  :  absolute;
     display: inline-block;
-    
+
     top : -2.6rem;
     left : -6vw;
     width  :  3rem;
@@ -101,11 +105,13 @@
     box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
 
     cursor  :  pointer;
+    transition: background-color 300ms;
 }
 
 .taxInstructionsButton:hover, .taxInstructionsButton:focus {
     outline: none;
     background-color  :  black;
+    transition: background-color 300ms 250ms;
 }
 
 .taxInstructionsButton.instructionsClosed .tooltip {
@@ -120,10 +126,10 @@
     left: 2%;
     width : 80%;
     padding  : 0 0 1.8ch 0;
-    
+
     border: 1px solid transparent;
-    background-color: darken($bgColor, 15%);    
-    
+    background-color: darken($bgColor, 15%);
+
     border-bottom-left-radius: 6.9rem;
     -webkit-transition  :  all 850ms ease-in-out;
        -moz-transition  :  all 850ms ease-in-out;
@@ -141,7 +147,7 @@
     height : auto;
     left: 0;
     margin  : 0;
-    
+
     pointer-events  :  auto;
 
     -webkit-transition  :  all 2s;
@@ -196,20 +202,21 @@
 
 #searchSpecials  {
     position  :  absolute;
-    top : -5ch;
-    left  :  100%;
+    top : -3.5ch;
+    left  :  105%;
     // width: 15.38rem;
-    width: 10.5rem;    
-    padding : 0.5rem 0;
+    // width: 10.5rem;
+    // padding : 0.5rem 0;
 
     font-size  :  0.82rem;
     text-shadow : 0.077rem 0.077rem 0.077rem rgba(0,0,0,0.5);
 
     pointer-events  :  auto;
-    border-radius : 3px;
-    box-shadow: inset 0 0 3rem rgba(226, 225, 225, 0.5);
+    // border-radius : 3px;
+    // box-shadow: inset 0 0 3rem rgba(226, 225, 225, 0.5);
     transition  :  all 500ms 1300ms;
-    border: 1px solid rgb(136, 135, 135);
+    // border: 1px solid rgb(136, 135, 135);
+    // border: 1px solid transparent;
 }
 
 #searchSpecials.grayed  {
@@ -218,13 +225,13 @@
 }
 
 .searchSpecialWrapper {
-    padding: 0.3ch 0;
+    padding: 0.5ch 0;
     text-align: center;
     transition  :  all 1000ms;
 }
 
 .searchSpecialWrapper a {
-    display: inline-block; 
+    display: inline-block;
     width: 14ch;
     padding: 0.1ch 0 0.5ch 0;
 }
@@ -258,8 +265,12 @@
     top : -2.1ch;
 }
 
-#searchTerm span {
-  color: $turquoiseHighlightColor;
+
+#searchTerm  span {
+  color: rgb(252, 185, 40);
+ //   color: $titleBannerColor;
+  text-decoration-line: overline;
+  text-shadow: 0.2px 0.2px white;
 }
 
 .highlightSpecial { border-bottom: 0.077rem solid white; }
@@ -267,11 +278,12 @@
 /*  -----------------------   searchResults  panel  ----------------------  */
 
 #results-panel  {
-    opacity  :  0;
+    // opacity  :  0;
     position  :  relative;
     height  :  auto;
     width : calc(100% + 7vw);
-    top : -7rem;
+    // top : -7rem;
+    top : -5rem;
     left : -7vw;
     margin  : 5.5ch 0 2ch 0;
     padding  :  0;
@@ -296,7 +308,8 @@
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
+    // box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
+    box-shadow: -0.015rem 0 0.015rem rgba(255,255,255,0.5), 0 -0.02rem 0.02rem rgba(255,255,255,0.5), 0 0 0.15rem rgba(0,0,0,0.7);
 }
 
 //   #closeResultsPanelButton  {
@@ -304,7 +317,7 @@
 //     width: 2.2rem;
 //     height: 2rem;
 //     padding: 0 0 0.08rem 0;
-    
+
 //     text-align: center;
 //     font-size  :  1.2rem;
 //     font-weight: 600;
@@ -340,22 +353,22 @@
   width: 2.2rem;
   height: 2.2rem;
   padding: 0.077rem;
-  
+
   cursor: pointer;
   color: white;
   text-align: center;
-  
+
   border-radius: 50%;
   background-color: rgb(34, 34, 34);
   border : 0.13rem solid $turquoiseHighlightColor;
-  
-  box-shadow: 
-  
+
+  box-shadow:
+
     0.25rem -0.05rem 0 0.24rem $bgColor,
     0.2rem -0.1rem 0 0.24rem $bgColor,
     0.3rem 0.1rem 0 0.24rem $bgColor,
     0.25rem -0.05rem 0 0.27rem rgba(0,0,0, 0.6),
-    
+
     0.25rem -0.05rem 0 0.35rem $bgColor,
     0 0 0 0.3rem $bgColor,
     0.02rem -0.04rem 0 0.3rem $bgColor,
@@ -366,19 +379,19 @@
 }
 
 #printerButton::before  {
-//   opacity: 0;
   position: absolute;
-  content: "print search results"; // newline = \000A, spaces or tabs don't seem to work
-//   left: 70%;
+  content: "print search\Aresults"; // newline = \A, spaces or tabs don't seem to work
+  white-space: pre; // newlines won't work w/o white-space: pre-wrap; or white-space: pre;
   left: 95%;
-//   top: -128%;
   top: -115%;
-//   width: auto;
-  width: 13ch;  // but this is really doing all the formatting of the `content`
+  width: auto; // only works with 'white-space: pre;'
+//   width: 13.5ch;  // but this is really doing all the formatting of the `content`
+
   z-index: -1;
   font-size: 0.9rem;
-  
-  padding:0.38rem;
+  letter-spacing: 0.05rem;
+
+  padding:  0.38rem 0.8rem 0.38rem 1rem;
   border: 1px solid $bgColor;
   border-radius: 0.6rem;
   background-color: rgb(34, 34, 34);
@@ -387,8 +400,7 @@
 }
 
 #printerButton:hover::before, #printerButton:focus::before  {
-    border-right-color: white;
-    border-top-color: white;
+    border-color: white;
 }
 
 #closeOpenFamiliesButton  {
@@ -400,28 +412,29 @@
     padding  :  0 0 0.3rem 0;
 
     font-size  :  1.8rem;
+    letter-spacing: 0.05rem;
     text-align: center;
     color: white;
-    
+
     background-color: rgb(34, 34, 34);
     border : 0.13rem solid  $turquoiseHighlightColor;
     border-radius: 50%;
-     
+
     box-shadow: 0 0 0 0.62rem $bgColor,
-    
-                0 -0.077rem 0 0.62rem $bgColor, 
-                -0.077rem 0 0 0.62rem $bgColor,  
-                -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),                
-                0.077rem -0.077rem 0 0.69rem $bgColor, 
-                -0.077rem -0.077rem 0 0.69rem $bgColor,  
+
+                0 -0.077rem 0 0.62rem $bgColor,
+                -0.077rem 0 0 0.62rem $bgColor,
+                -0.077rem -0.077rem 0 0.62rem rgba(0,0,0, 0.5),
+                0.077rem -0.077rem 0 0.69rem $bgColor,
+                -0.077rem -0.077rem 0 0.69rem $bgColor,
                 -0.077rem -0.077rem 0 0.69rem rgba(255,255,255, 0.25),
-                
-                // 0 0.077rem 0 0.62rem $bgColor, 
-                // 0.077rem 0 0 0.62rem $bgColor, 
- 
+
+                // 0 0.077rem 0 0.62rem $bgColor,
+                // 0.077rem 0 0 0.62rem $bgColor,
+
                 0.077rem 0 0 0.7rem $bgColor,
                 -0.2rem 0.03rem 0 0.66rem rgba(0,0,0, 0.4),
-                0.077rem -0.077rem 0 0.69rem $bgColor, 
+                0.077rem -0.077rem 0 0.69rem $bgColor,
                 0.077rem 0.077rem 0 0.69rem $bgColor,
                 -0.2rem 0.05rem 0 0.66rem rgba(255,255,255, 0.3);
     transition: all 300ms;
@@ -437,11 +450,14 @@
 #closeOpenFamiliesButton::before  {
     // opacity: 0;
     position: absolute;
-    content: "close open families";
-    left: -7vw;
+    content: "close open\A families";
+    white-space: pre; // newlines won't work w/o white-space: pre-wrap; or white-space: wrap;
+
+    left: -6.8vw;
     top: 90%;
-    width: 8vw;
-    padding: 0.38rem 1.3rem 0.38rem 0;
+    // width: 8vw;
+    width: auto;
+    padding: 0.38rem 1.5rem 0.38rem 1rem;
     border: 1px solid $bgColor;
     border-radius: 0.6rem;
     font-size: 0.9rem;
@@ -452,8 +468,7 @@
 }
 
 #closeOpenFamiliesButton:hover::before, #closeOpenFamiliesButton:focus::before  {
-    border-left-color: white;
-    border-bottom-color: white;
+    border-color: white;
 }
 
 #countrySearch  {
@@ -490,7 +505,7 @@
 
     border: none;
     box-shadow : none;
-    
+
     // if no simpleBar, use overflow-y: auto;
     // overflow-y  :  auto;
 
@@ -655,14 +670,15 @@
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
 // TODO : height already fixed (in script onload?) just translate down and opacity so height isn't changing
 #tax-panel  {
-    
+
     opacity: 0;
     position: relative;
     width: calc(100% + 7vw);
     height: 0;
-    top: 0;
+    top: 2rem;
     left: -7vw;
     margin: 0 0 -20.5ch 0;
+    // margin: 0 0 -18.5ch 0;
     padding :  5ch 0 0 0;
 
     z-index : 0;
@@ -673,6 +689,13 @@
     // overscroll-behavior: none;
 
     transform: translateY(-13rem);
+    transition: all 400ms ease-in-out;
+}
+
+#tax-panel.setTaxPanelHeight  {
+    opacity : 1;
+    height: auto;
+    margin: 1ch 0 -10ch 0;
 }
 
 #fakeTaxPageBox  {
@@ -687,7 +710,9 @@
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
+    // box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
+    box-shadow: -0.015rem 0 0.015rem rgba(255,255,255,0.5), 0 -0.02rem 0.02rem rgba(255,255,255,0.5), 0 0 0.15rem rgba(0,0,0,0.7);
+
     overflow-x : visible;
 }
 
@@ -790,7 +815,7 @@ to {
 }
 
 // all family names whether open or not
-.fTitle  {    
+.fTitle  {
     display: inline-block;
     width: calc(100% - 0.62rem);
     border-top : 0.077rem solid transparent;

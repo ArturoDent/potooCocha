@@ -41,35 +41,35 @@ function resetTaxPageHeight() {
 function loadSearchResults(results) {
 
   var term = lastQuery;
-  
+
   // remove accented characters and surrounding regex from the displayed query: (n|ñ) and/or (a|ã)
   if (lastQuery) {
     var regex = /[ãñ()|]/g;
     term = lastQuery.replace(regex, "");
   }
-  
+
   if (currentCountry === "Falklands") {
-    document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + " : '<span>" + term + "</span>'&nbsp;&nbsp;   [ " + results.numSpecies + " species ]";
+    document.getElementById("searchTerm").innerHTML = "Malvinas/Falklands" + "&nbsp;&nbsp; :&nbsp;&nbsp; <span>" + term + "</span>&nbsp;&nbsp;» &nbsp;" + results.numSpecies + " species";
   }
   else {
-    document.getElementById("searchTerm").innerHTML = currentCountry + " : '<span>" + term + "</span>'&nbsp;&nbsp;&nbsp;   [ " + results.numSpecies + " species ]";
+    document.getElementById("searchTerm").innerHTML = currentCountry + "&nbsp;&nbsp; :&nbsp;&nbsp; <span>" + term + "</span>&nbsp;&nbsp;&nbsp;» &nbsp;" + results.numSpecies + " species";
   }
-  
+
   if (!results.numSpecies) {
-    
+
     searchResults.innerHTML = "<li></li><br/><br/><li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no matches found</li><li></li>";
 
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();
-    
+
     // updateActivityData("search", originalQuery);
     return;
   }
-  
+
   document.getElementById("countrySearch").classList.remove("closed");
-  
+
   searchResults.innerHTML = results.list;
-  
+
   resetSearchResultsHeight();
   if (!resultsPanelOpen) toggleSearchResultsPanel();
 }
