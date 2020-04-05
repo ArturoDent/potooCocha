@@ -56,8 +56,7 @@ DUCKS,ANATIDAE
 ,,Yellow-billed Teal,A. flavirostris
 ,,Southern Pochard,Netta erythrophthalma
 ,,Rosy-billed Pochard,N. peposaca
-35,,Brazilian Merganser,Mergus octosetaceus
-,,Black-headed Duck,Heteronetta atricapilla
+35,,Black-headed Duck,Heteronetta atricapilla
 ,,Masked Duck,Nomonyx dominicus
 ,,Ruddy Duck,Oxyura jamaicensis
 ,,Lake Duck,O. vittata
@@ -156,6 +155,7 @@ SWIFTS,APODIDAE
 ,,Sick's Swift,C. meridionalis
 ,,White-tipped Swift,Aeronautes montivagus
 ,,Andean Swift,A. andecolus
+,,Fork-tailed Palm-Swift,Tachornis squamata
 HUMMINGBIRDS,TROCHILIDAE
 ,,White-necked Jacobin,Florisuga mellivora
 ,,Black Jacobin,F. fusca
@@ -251,36 +251,36 @@ MAGELLANIC PLOVER,PLUVIANELLIDAE
 ,,Magellanic Plover,Pluvianellus socialis
 SANDPIPERS,SCOLOPACIDAE
 ,,Upland Sandpiper,Bartramia longicauda
-,,Eskimo Curlew,Numenius borealis
-,,Whimbrel,N. phaeopus
+,,Whimbrel,Numenius phaeopus
 ,,Eurasian Curlew,N. arquatus
-5,,Hudsonian Godwit,Limosa haemastica
-,,Marbled Godwit,L. fedoa
+,,Hudsonian Godwit,Limosa haemastica
+5,,Marbled Godwit,L. fedoa
 ,,Ruddy Turnstone,Arenaria interpres
 ,,Red Knot,Calidris canutus
 ,,Surfbird,C. virgata
-10,,Stilt Sandpiper,C. himantopus
-,,Curlew Sandpiper,C. ferruginea
+,,Stilt Sandpiper,C. himantopus
+10,,Curlew Sandpiper,C. ferruginea
 ,,Sanderling,C. alba
 ,,Dunlin,C. alpina
 ,,Baird's Sandpiper,C. bairdii
-15,,Least Sandpiper,C. minutilla
-,,White-rumped Sandpiper,C. fuscicollis
+,,Least Sandpiper,C. minutilla
+15,,White-rumped Sandpiper,C. fuscicollis
 ,,Buff-breasted Sandpiper,C. subruficollis
 ,,Pectoral Sandpiper,C. melanotos
 ,,Semipalmated Sandpiper,C. pusilla
-20,,Short-billed Dowitcher,Limnodromus griseus
-,,Long-billed Dowitcher,L. scolopaceus
+,,Short-billed Dowitcher,Limnodromus griseus
+20,,Long-billed Dowitcher,L. scolopaceus
 ,,Fuegian Snipe,Gallinago stricklandii
 ,,Giant Snipe,G. undulata
 ,,South American Snipe,G. paraguaiae
-25,,Puna Snipe,G. andina
-,,Wilson's Phalarope,Phalaropus tricolor
+,,Puna Snipe,G. andina
+25,,Wilson's Phalarope,Phalaropus tricolor
 ,,Red-necked Phalarope,P. lobatus
 ,,Red Phalarope,P. fulicarius
 ,,Terek Sandpiper,Xenus cinereus
-30,,Spotted Sandpiper,Actitis macularius
-,,Solitary Sandpiper,Tringa solitaria
+,,Spotted Sandpiper,Actitis macularius
+30,,Solitary Sandpiper,Tringa solitaria
+,,Common Greenshank,T. nebularia
 ,,Greater Yellowlegs,T. melanoleuca
 ,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
@@ -317,12 +317,13 @@ GULLS,LARIDAE
 ,,Large-billed Tern,Phaetusa simplex
 ,,Gull-billed Tern,Gelochelidon nilotica
 ,,Black Tern,Chlidonias niger
-15,,Common Tern,Sterna hirundo
+15,,White-winged Tern,C. leucopterus
+,,Common Tern,Sterna hirundo
 ,,Roseate Tern,S. dougallii
 ,,Arctic Tern,S. paradisaea
 ,,South American Tern,S. hirundinacea
-,,Antarctic Tern,S. vittata
-20,,Forster's Tern,S. forsteri
+20,,Antarctic Tern,S. vittata
+,,Forster's Tern,S. forsteri
 ,,Snowy-crowned Tern,S. trudeaui
 ,,Sandwich Tern,Thalasseus sandvicensis
 ,,Royal Tern,T. maximus
@@ -345,6 +346,7 @@ ALBATROSSES,DIOMEDEIDAE
 5,,Yellow-nosed Albatross,Thalassarche chlororhynchos
 ,,Black-browed Albatross,T. melanophris
 ,,Gray-headed Albatross,T. chrysostoma
+,,Buller's Albatross,T. bulleri
 ,,White-capped Albatross,T. cauta
 ,,Salvin's Albatross,T. salvini
 SOUTHERN STORM-PETRELS,OCEANITIDAE
@@ -358,28 +360,30 @@ SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Northern Giant-Petrel,M. halli
 ,,Southern Fulmar,Fulmarus glacialoides
-,,Antarctic Petrel,Thalassoica antarctica
-5,,Cape Petrel,Daption capense
-,,Kerguelen Petrel,Aphrodroma brevirostris
+,,Cape Petrel,Daption capense
+5,,Kerguelen Petrel,Aphrodroma brevirostris
 ,,Soft-plumaged Petrel,Pterodroma mollis
 ,,Atlantic Petrel,P. incerta
 ,,White-headed Petrel,P. lessonii
-10,,Trindade Petrel,P. arminjoniana
-,,Blue Petrel,Halobaena caerulea
-,,Antarctic Prion,Pachyptila desolata
+,,Trindade Petrel,P. arminjoniana
+10,,Blue Petrel,Halobaena caerulea
+,,Fairy Prion,Pachyptila turtur
+,,Antarctic Prion,P. desolata
 ,,Slender-billed Prion,P. belcheri
 ,,Gray Petrel,Procellaria cinerea
 15,,White-chinned Petrel,P. aequinoctialis
 ,,Spectacled Petrel,P. conspicillata
+,,Parkinson's Petrel,P. parkinsoni
 ,,Westland Petrel,P. westlandica
 ,,Cory's Shearwater,Calonectris diomedea
-,,Cape Verde Shearwater,C. edwardsii
-20,,Sooty Shearwater,Ardenna grisea
+20,,Cape Verde Shearwater,C. edwardsii
+,,Sooty Shearwater,Ardenna grisea
 ,,Great Shearwater,A. gravis
 ,,Pink-footed Shearwater,A. creatopus
 ,,Manx Shearwater,Puffinus puffinus
-,,Little Shearwater,P. assimilis
+25,,Little Shearwater,P. assimilis
 ,,Common Diving-Petrel,Pelecanoides urinatrix
+,,South Georgia Diving-Petrel,P. georgicus
 ,,Magellanic Diving-Petrel,P. magellani
 STORKS,CICONIIDAE
 ,,Maguari Stork,Ciconia maguari
@@ -882,22 +886,23 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Fire-eyed Diucon,Xolmis pyrope
 ,,Gray Monjita,X. cinereus
 ,,Black-crowned Monjita,X. coronatus
-115,,White Monjita,X. irupero
+115,,White-rumped Monjita,X. velatus
+,,White Monjita,X. irupero
 ,endemic,Salinas Monjita,X. salinarum
 ,endemic,Rusty-backed Monjita,X. rubetra
 ,,Black-and-white Monjita,X. dominicanus
-,,Black-billed Shrike-Tyrant,Agriornis montanus
-120,,White-tailed Shrike-Tyrant,A. albicauda
+120,,Black-billed Shrike-Tyrant,Agriornis montanus
+,,White-tailed Shrike-Tyrant,A. albicauda
 ,,Great Shrike-Tyrant,A. lividus
 ,,Gray-bellied Shrike-Tyrant,A. micropterus
 ,,Lesser Shrike-Tyrant,A. murinus
-,,Chocolate-vented Tyrant,Neoxolmis rufiventris
-125,,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
+125,,Chocolate-vented Tyrant,Neoxolmis rufiventris
+,,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
 ,,Fuscous Flycatcher,Cnemotriccus fuscatus
 ,,Euler's Flycatcher,Lathrotriccus euleri
 ,,Black Phoebe,Sayornis nigricans
-,,Alder Flycatcher,Empidonax alnorum
-130,,Olive-sided Flycatcher,Contopus cooperi
+130,,Alder Flycatcher,Empidonax alnorum
+,,Olive-sided Flycatcher,Contopus cooperi
 ,,Smoke-colored Pewee,C. fumigatus
 ,,Eastern Wood-Pewee,C. virens
 ,,Tropical Pewee,C. cinereus

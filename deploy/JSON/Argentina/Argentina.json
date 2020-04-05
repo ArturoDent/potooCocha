@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "March 06, 2020",
+	"version": "April 03, 2020",
 	"birds": {
 		"families": [
 			{
@@ -497,7 +497,7 @@
 								"species": "octosetaceus",
 								"index": 91,
 								"name": "Brazilian Merganser",
-								"AR": "X"
+								"AR": "EX"
 							}
 						]
 					},
@@ -803,7 +803,7 @@
 								"species": "plumbea",
 								"index": 184,
 								"name": "Plumbeous Pigeon",
-								"AR": "X"
+								"AR": "V"
 							}
 						]
 					},
@@ -991,7 +991,7 @@
 								"species": "sulcirostris",
 								"index": 228,
 								"name": "Groove-billed Ani",
-								"AR": "X"
+								"AR": "V"
 							}
 						]
 					},
@@ -1339,6 +1339,17 @@
 								"AR": "X"
 							}
 						]
+					},
+					{
+						"Genus": "Tachornis",
+						"spp": [
+							{
+								"species": "squamata",
+								"index": 312,
+								"name": "Fork-tailed Palm-Swift",
+								"AR": "V"
+							}
+						]
 					}
 				]
 			},
@@ -1415,7 +1426,7 @@
 								"species": "mosquitus",
 								"index": 373,
 								"name": "Ruby-topaz Hummingbird",
-								"AR": "X"
+								"AR": "V"
 							}
 						]
 					},
@@ -2172,7 +2183,7 @@
 								"species": "borealis",
 								"index": 662,
 								"name": "Eskimo Curlew",
-								"AR": "NB"
+								"AR": "EX"
 							},
 							{
 								"species": "phaeopus",
@@ -2289,7 +2300,7 @@
 								"species": "pusilla",
 								"index": 684,
 								"name": "Semipalmated Sandpiper",
-								"AR": "H"
+								"AR": "V"
 							}
 						]
 					},
@@ -2392,6 +2403,12 @@
 								"index": 701,
 								"name": "Solitary Sandpiper",
 								"AR": "NB"
+							},
+							{
+								"species": "nebularia",
+								"index": 703,
+								"name": "Common Greenshank",
+								"AR": "H"
 							},
 							{
 								"species": "melanoleuca",
@@ -2673,6 +2690,12 @@
 								"index": 759,
 								"name": "Black Tern",
 								"AR": "V"
+							},
+							{
+								"species": "leucopterus",
+								"index": 760,
+								"name": "White-winged Tern",
+								"AR": "V"
 							}
 						]
 					},
@@ -2804,7 +2827,7 @@
 								"species": "sclateri",
 								"index": 783,
 								"name": "Erect-crested Penguin",
-								"AR": "H"
+								"AR": "V"
 							},
 							{
 								"species": "chrysolophus",
@@ -2888,6 +2911,12 @@
 								"AR": "NB"
 							},
 							{
+								"species": "bulleri",
+								"index": 796,
+								"name": "Buller's Albatross",
+								"AR": "V"
+							},
+							{
 								"species": "cauta",
 								"index": 797,
 								"name": "White-capped Albatross",
@@ -2948,7 +2977,7 @@
 								"species": "nereis",
 								"index": 805,
 								"name": "Gray-backed Storm-Petrel",
-								"AR": "V"
+								"AR": "NB"
 							}
 						]
 					},
@@ -2998,17 +3027,6 @@
 						]
 					},
 					{
-						"Genus": "Thalassoica",
-						"spp": [
-							{
-								"species": "antarctica",
-								"index": 818,
-								"name": "Antarctic Petrel",
-								"AR": "H"
-							}
-						]
-					},
-					{
 						"Genus": "Daption",
 						"spp": [
 							{
@@ -3026,7 +3044,7 @@
 								"species": "brevirostris",
 								"index": 821,
 								"name": "Kerguelen Petrel",
-								"AR": "V"
+								"AR": "NB"
 							}
 						]
 					},
@@ -3074,6 +3092,12 @@
 						"Genus": "Pachyptila",
 						"spp": [
 							{
+								"species": "turtur",
+								"index": 840,
+								"name": "Fairy Prion",
+								"AR": "H"
+							},
+							{
 								"species": "desolata",
 								"index": 842,
 								"name": "Antarctic Prion",
@@ -3107,6 +3131,12 @@
 								"index": 847,
 								"name": "Spectacled Petrel",
 								"AR": "NB"
+							},
+							{
+								"species": "parkinsoni",
+								"index": 848,
+								"name": "Parkinson's Petrel",
+								"AR": "H"
 							},
 							{
 								"species": "westlandica",
@@ -3181,6 +3211,12 @@
 								"index": 864,
 								"name": "Common Diving-Petrel",
 								"AR": "NB"
+							},
+							{
+								"species": "georgicus",
+								"index": 865,
+								"name": "South Georgia Diving-Petrel",
+								"AR": "H"
 							},
 							{
 								"species": "magellani",
@@ -3491,7 +3527,7 @@
 								"species": "pileatus",
 								"index": 912,
 								"name": "Capped Heron",
-								"AR": "H"
+								"AR": "V"
 							}
 						]
 					},
@@ -3660,7 +3696,7 @@
 								"species": "melambrotus",
 								"index": 938,
 								"name": "Greater Yellow-headed Vulture",
-								"AR": "H"
+								"AR": "NB"
 							}
 						]
 					}
@@ -7260,7 +7296,7 @@
 								"species": "nengeta",
 								"index": 2525,
 								"name": "Masked Water-Tyrant",
-								"AR": "NB"
+								"AR": "X"
 							}
 						]
 					},
@@ -7469,6 +7505,12 @@
 								"AR": "X"
 							},
 							{
+								"species": "velatus",
+								"index": 2564,
+								"name": "White-rumped Monjita",
+								"AR": "V"
+							},
+							{
 								"species": "irupero",
 								"index": 2565,
 								"name": "White Monjita",
@@ -7631,7 +7673,7 @@
 								"species": "vetula",
 								"index": 2597,
 								"name": "Shear-tailed Gray Tyrant",
-								"AR": "X"
+								"AR": "NB"
 							}
 						]
 					},

@@ -60,7 +60,6 @@ E,White-headed Steamer-Duck,T. leucocephalus
 ,Yellow-billed Teal,A. flavirostris
 ,Southern Pochard,Netta erythrophthalma
 ,Rosy-billed Pochard,N. peposaca
-,Brazilian Merganser,Mergus octosetaceus
 ,Black-headed Duck,Heteronetta atricapilla
 ,Masked Duck,Nomonyx dominicus
 ,Ruddy Duck,Oxyura jamaicensis
@@ -170,6 +169,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Sick's Swift,C. meridionalis
 ,White-tipped Swift,Aeronautes montivagus
 ,Andean Swift,A. andecolus
+,Fork-tailed Palm-Swift,Tachornis squamata
 
 ,HUMMINGBIRDS,TROCHILIDAE
 ,White-necked Jacobin,Florisuga mellivora
@@ -275,8 +275,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 
 ,SANDPIPERS,SCOLOPACIDAE
 ,Upland Sandpiper,Bartramia longicauda
-,Eskimo Curlew,Numenius borealis
-,Whimbrel,N. phaeopus
+,Whimbrel,Numenius phaeopus
 ,Eurasian Curlew,N. arquatus
 ,Hudsonian Godwit,Limosa haemastica
 ,Marbled Godwit,L. fedoa
@@ -305,6 +304,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Terek Sandpiper,Xenus cinereus
 ,Spotted Sandpiper,Actitis macularius
 ,Solitary Sandpiper,Tringa solitaria
+,Common Greenshank,T. nebularia
 ,Greater Yellowlegs,T. melanoleuca
 ,Willet,T. semipalmata
 ,Lesser Yellowlegs,T. flavipes
@@ -347,6 +347,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Large-billed Tern,Phaetusa simplex
 ,Gull-billed Tern,Gelochelidon nilotica
 ,Black Tern,Chlidonias niger
+,White-winged Tern,C. leucopterus
 ,Common Tern,Sterna hirundo
 ,Roseate Tern,S. dougallii
 ,Arctic Tern,S. paradisaea
@@ -377,6 +378,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Yellow-nosed Albatross,Thalassarche chlororhynchos
 ,Black-browed Albatross,T. melanophris
 ,Gray-headed Albatross,T. chrysostoma
+,Buller's Albatross,T. bulleri
 ,White-capped Albatross,T. cauta
 ,Salvin's Albatross,T. salvini
 
@@ -392,7 +394,6 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Southern Giant-Petrel,Macronectes giganteus
 ,Northern Giant-Petrel,M. halli
 ,Southern Fulmar,Fulmarus glacialoides
-,Antarctic Petrel,Thalassoica antarctica
 ,Cape Petrel,Daption capense
 ,Kerguelen Petrel,Aphrodroma brevirostris
 ,Soft-plumaged Petrel,Pterodroma mollis
@@ -400,11 +401,13 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,White-headed Petrel,P. lessonii
 ,Trindade Petrel,P. arminjoniana
 ,Blue Petrel,Halobaena caerulea
-,Antarctic Prion,Pachyptila desolata
+,Fairy Prion,Pachyptila turtur
+,Antarctic Prion,P. desolata
 ,Slender-billed Prion,P. belcheri
 ,Gray Petrel,Procellaria cinerea
 ,White-chinned Petrel,P. aequinoctialis
 ,Spectacled Petrel,P. conspicillata
+,Parkinson's Petrel,P. parkinsoni
 ,Westland Petrel,P. westlandica
 ,Cory's Shearwater,Calonectris diomedea
 ,Cape Verde Shearwater,C. edwardsii
@@ -414,6 +417,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Manx Shearwater,Puffinus puffinus
 ,Little Shearwater,P. assimilis
 ,Common Diving-Petrel,Pelecanoides urinatrix
+,South Georgia Diving-Petrel,P. georgicus
 ,Magellanic Diving-Petrel,P. magellani
 
 ,STORKS,CICONIIDAE
@@ -951,6 +955,7 @@ E,White-throated Cacholote,P. gutturalis
 ,Fire-eyed Diucon,Xolmis pyrope
 ,Gray Monjita,X. cinereus
 ,Black-crowned Monjita,X. coronatus
+,White-rumped Monjita,X. velatus
 ,White Monjita,X. irupero
 E,Salinas Monjita,X. salinarum
 E,Rusty-backed Monjita,X. rubetra
