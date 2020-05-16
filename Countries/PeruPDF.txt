@@ -96,7 +96,7 @@ PIGEONS,COLUMBIDAE
 ,,Spot-winged Pigeon,P. maculosa
 5,,Band-tailed Pigeon,P. fasciata
 ,,Pale-vented Pigeon,P. cayennensis
-,,Peruvian Pigeon,P. oenops
+,endemic,Peruvian Pigeon,P. oenops
 ,,Plumbeous Pigeon,P. plumbea
 ,,Ruddy Pigeon,P. subvinacea
 10,,Sapphire Quail-Dove,Geotrygon saphirina
@@ -268,7 +268,7 @@ HUMMINGBIRDS,TROCHILIDAE
 ,,Green-backed Hillstar,Urochroa leucura
 ,,Rufous-vented Whitetip,Urosticte ruficrissa
 85,,Pink-throated Brilliant,Heliodoxa gularis
-,,Rufous-webbed Brilliant,H. branickii
+,endemic,Rufous-webbed Brilliant,H. branickii
 ,,Black-throated Brilliant,H. schreibersii
 ,,Gould's Jewelfront,H. aurescens
 ,,Fawn-breasted Brilliant,H. rubinoides
@@ -480,7 +480,7 @@ NORTHERN STORM-PETRELS,HYDROBATIDAE
 ,,Band-rumped Storm-Petrel,O. castro
 ,,Leach's Storm-Petrel,O. leucorhoa
 5,,Markham's Storm-Petrel,O. markhami
-,,Ringed Storm-Petrel,O. hornbyi
+,,Hornby's Storm-Petrel,O. hornbyi
 ,,Black Storm-Petrel,O. melania
 SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
@@ -759,13 +759,13 @@ WOODPECKERS,PICIDAE
 ,,White Woodpecker,Melanerpes candidus
 ,,Yellow-tufted Woodpecker,M. cruentatus
 ,,Black-cheeked Woodpecker,M. pucherani
-,,Smoky-brown Woodpecker,Picoides fumigatus
-15,,Red-rumped Woodpecker,Veniliornis kirkii
-,,Little Woodpecker,V. passerinus
-,,Scarlet-backed Woodpecker,V. callonotus
-,,Yellow-vented Woodpecker,V. dignus
-,,Bar-bellied Woodpecker,V. nigriceps
-20,,Red-stained Woodpecker,V. affinis
+,,Smoky-brown Woodpecker,Dryobates fumigatus
+15,,Red-rumped Woodpecker,D. kirkii
+,,Little Woodpecker,D. passerinus
+,,Scarlet-backed Woodpecker,D. callonotus
+,,Yellow-vented Woodpecker,D. dignus
+,,Bar-bellied Woodpecker,D. nigriceps
+20,,Red-stained Woodpecker,D. affinis
 ,,Powerful Woodpecker,Campephilus pollens
 ,,Crimson-bellied Woodpecker,C. haematogaster
 ,,Red-necked Woodpecker,C. rubricollis
@@ -1213,7 +1213,7 @@ MANAKINS,PIPRIDAE
 ,,Striolated Manakin,Machaeropterus striolatus
 ,endemic,Painted Manakin,M. eckelberryi
 20,,Fiery-capped Manakin,M. pyrocephalus
-,,White-crowned Manakin,Dixiphia pipra
+,,White-crowned Manakin,Pseudopipra pipra
 ,,Golden-headed Manakin,Ceratopipra erythrocephala
 ,,Red-headed Manakin,C. rubrocapilla
 ,,Round-tailed Manakin,C. chloromeros
@@ -1752,6 +1752,8 @@ WOOD-WARBLERS,PARULIDAE
 ,,Canada Warbler,Cardellina  canadensis
 ,,Slate-throated Redstart,Myioborus miniatus
 ,,Spectacled Redstart,M. melanocephalus
+MITROSPINGIDS,MITROSPINGIDAE
+,,Red-billed Pied Tanager,Lamprospiza melanoleuca
 CARDINAL GROSBEAKS,CARDINALIDAE
 ,,Hepatic Tanager,Piranga flava
 ,,Summer Tanager,P. rubra
@@ -1954,4 +1956,3 @@ TANAGERS,THRAUPIDAE
 185,,Dotted Tanager,Ixothraupis varia
 ,,Yellow-bellied Tanager,I. xanthogastra
 ,,Spotted Tanager,I. punctata
-,,Red-billed Pied Tanager,Lamprospiza melanoleuca

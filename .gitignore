@@ -28,18 +28,6 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# file history extension ignore
-.history/*
-
-.vscode/*
-!.vscode/experimental-snippets.code-snippets
-!.vscode/jsconfig.json
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-
 .htaccess
-
-.csscomb.json
 
 ftpConfig.js

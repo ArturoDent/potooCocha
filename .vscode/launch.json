@@ -7,7 +7,7 @@
     "compounds": [
         {
             "name": "Start gulp sync and chrome debugger",
-            "configurations": ["Gulp: serve", "Chrome : Launch with sourcemaps" ]
+            "configurations": ["Gulp: serve", "Chrome : Launch with sourcemaps" ],
         }
     ],
     "configurations": [
@@ -61,7 +61,6 @@
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:3000",
-            // "url": "$env:url", does not work
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
             "runtimeArgs": [

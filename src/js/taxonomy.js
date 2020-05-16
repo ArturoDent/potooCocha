@@ -198,7 +198,7 @@ function loadCountryTaxonomy(country) {
     document.getElementById("searchTerm").innerHTML = country + " : <span>" + lastQuery + "</span>";
   }
 
-  if (country !== "South America") {
+  if (country !== "South America") {  
     searchResults.classList.remove("samTax");
     taxPage.classList.remove("samTax");
   }

@@ -188,7 +188,7 @@ E,Venezuelan Wood-Quail,O. columbianus
 ,Colombian Grebe,P. andinus
 ,Silvery Grebe,P. occipitalis
 E,Junin Grebe,P. taczanowskii
-,Hooded Grebe,P. gallardoi
+E,Hooded Grebe,P. gallardoi
 
 ,PIGEONS,COLUMBIDAE
 ,Rock Pigeon,Columba livia
@@ -201,7 +201,7 @@ E,Junin Grebe,P. taczanowskii
 ,Band-tailed Pigeon,P. fasciata
 ,Chilean Pigeon,P. araucana
 ,Pale-vented Pigeon,P. cayennensis
-,Peruvian Pigeon,P. oenops
+E,Peruvian Pigeon,P. oenops
 ,Plumbeous Pigeon,P. plumbea
 ,Ruddy Pigeon,P. subvinacea
 ,Short-billed Pigeon,P. nigrirostris
@@ -512,7 +512,7 @@ E,Dusky Starfrontlet,C. orina
 ,Rufous-vented Whitetip,U. ruficrissa
 ,Velvet-browed Brilliant,Heliodoxa xanthogonys
 ,Pink-throated Brilliant,H. gularis
-,Rufous-webbed Brilliant,H. branickii
+E,Rufous-webbed Brilliant,H. branickii
 ,Black-throated Brilliant,H. schreibersii
 ,Gould's Jewelfront,H. aurescens
 ,Fawn-breasted Brilliant,H. rubinoides
@@ -890,7 +890,7 @@ E,Galapagos Penguin,S. mendiculus
 ,Band-rumped Storm-Petrel,O. castro
 ,Leach's Storm-Petrel,O. leucorhoa
 ,Markham's Storm-Petrel,O. markhami
-,Ringed Storm-Petrel,O. hornbyi
+,Hornby's Storm-Petrel,O. hornbyi
 ,Black Storm-Petrel,O. melania
 
 ,SHEARWATERS,PROCELLARIIDAE
@@ -1311,6 +1311,7 @@ E,Yellow-browed Toucanet,A. huallagae
 ,Ecuadorian Piculet,P. sclateri
 ,Scaled Piculet,P. squamulatus
 ,White-bellied Piculet,P. spilogaster
+E,Ochraceous Piculet,P. limae
 E,Arrowhead Piculet,P. minutissimus
 E,Spotted Piculet,P. pygmaeus
 E,Speckle-chested Piculet,P. steindachneri
@@ -1321,8 +1322,6 @@ E,Varzea Piculet,P. varzeae
 ,White-wedged Piculet,P. albosquamatus
 ,Rusty-necked Piculet,P. fuscus
 ,Rufous-breasted Piculet,P. rufiventris
-E,Tawny Piculet,P. fulvescens
-E,Ochraceous Piculet,P. limae
 ,Mottled Piculet,P. nebulosus
 ,Plain-breasted Piculet,P. castelnau
 ,Fine-barred Piculet,P. subtilis
@@ -1338,21 +1337,21 @@ E,Beautiful Woodpecker,M. pulcher
 ,Black-cheeked Woodpecker,M. pucherani
 ,White-fronted Woodpecker,M. cactorum
 ,Red-crowned Woodpecker,M. rubricapillus
-,Smoky-brown Woodpecker,Picoides fumigatus
-,Red-rumped Woodpecker,Veniliornis kirkii
-,Golden-collared Woodpecker,V. cassini
-,White-spotted Woodpecker,V. spilogaster
-,Checkered Woodpecker,V. mixtus
-,Striped Woodpecker,V. lignarius
-,Blood-colored Woodpecker,V. sanguineus
-,Little Woodpecker,V. passerinus
-,Dot-fronted Woodpecker,V. frontalis
-,Scarlet-backed Woodpecker,V. callonotus
-,Yellow-vented Woodpecker,V. dignus
-,Bar-bellied Woodpecker,V. nigriceps
-,Red-stained Woodpecker,V. affinis
-,Choco Woodpecker,V. chocoensis
-E,Yellow-eared Woodpecker,V. maculifrons
+,Smoky-brown Woodpecker,Dryobates fumigatus
+,Red-rumped Woodpecker,D. kirkii
+,Golden-collared Woodpecker,D. cassini
+,White-spotted Woodpecker,D. spilogaster
+,Checkered Woodpecker,D. mixtus
+,Striped Woodpecker,D. lignarius
+,Blood-colored Woodpecker,D. sanguineus
+,Little Woodpecker,D. passerinus
+,Dot-fronted Woodpecker,D. frontalis
+,Scarlet-backed Woodpecker,D. callonotus
+,Yellow-vented Woodpecker,D. dignus
+,Bar-bellied Woodpecker,D. nigriceps
+,Red-stained Woodpecker,D. affinis
+,Choco Woodpecker,D. chocoensis
+E,Yellow-eared Woodpecker,D. maculifrons
 ,Powerful Woodpecker,Campephilus pollens
 ,Crimson-bellied Woodpecker,C. haematogaster
 ,Red-necked Woodpecker,C. rubricollis
@@ -1511,7 +1510,7 @@ E,Santa Marta Parakeet,P. viridicata
 ,Maroon-tailed Parakeet,P. melanura
 E,El Oro Parakeet,P. orcesi
 ,Black-capped Parakeet,P. rupicola
-,White-necked Parakeet,P. albipectus
+E,White-necked Parakeet,P. albipectus
 E,Brown-breasted Parakeet,P. calliptera
 E,Red-eared Parakeet,P. hoematotis
 E,Rose-headed Parakeet,P. rhodocephala
@@ -1798,7 +1797,7 @@ E,Pale-faced Bare-eye,P. borbae
 ,GNATEATERS,CONOPOPHAGIDAE
 ,Black-crowned Antpitta,Pittasoma michleri
 ,Rufous-crowned Antpitta,P. rufopileatum
-,Black-bellied Gnateater,Conopophaga melanogaster
+E,Black-bellied Gnateater,Conopophaga melanogaster
 E,Black-cheeked Gnateater,C. melanops
 ,Chestnut-belted Gnateater,C. aurita
 ,Ash-throated Gnateater,C. peruviana
@@ -1826,7 +1825,7 @@ E,Cundinamarca Antpitta,G. kaestneri
 ,Stripe-headed Antpitta,G. andicolus
 E,Gray-naped Antpitta,G. griseonucha
 ,Bicolored Antpitta,G. rufocinerea
-,Jocotoco Antpitta,G. ridgelyi
+E,Jocotoco Antpitta,G. ridgelyi
 ,Chestnut-naped Antpitta,G. nuchalis
 E,Pale-billed Antpitta,G. carrikeri
 ,White-throated Antpitta,G. albigula
@@ -2277,7 +2276,7 @@ E,Cerulean-capped Manakin,L. coeruleocapilla
 E,Painted Manakin,M. eckelberryi
 E,Kinglet Manakin,M. regulus
 ,Fiery-capped Manakin,M. pyrocephalus
-,White-crowned Manakin,Dixiphia pipra
+,White-crowned Manakin,Pseudopipra pipra
 ,Scarlet-horned Manakin,Ceratopipra cornuta
 ,Red-capped Manakin,C. mentalis
 ,Golden-headed Manakin,C. erythrocephala
@@ -2429,6 +2428,7 @@ E,Serra do Mar Tyrannulet,P. difficilis
 ,Olive-striped Flycatcher,M. olivaceus
 ,Ochre-bellied Flycatcher,M. oleagineus
 ,McConnell's Flycatcher,M. macconnelli
+E,Sierra de Lema Flycatcher,M. roraimae
 ,Gray-hooded Flycatcher,M. rufiventris
 ,Sepia-capped Flycatcher,Leptopogon amaurocephalus
 ,Slaty-capped Flycatcher,L. superciliaris
@@ -2998,7 +2998,7 @@ E,San Cristobal Mockingbird,M. melanotis
 ,Yellowish Pipit,A. lutescens
 ,Short-billed Pipit,A. furcatus
 ,Peruvian Pipit,A. peruvianus
-,Pampas Pipit,A. chacoensis
+E,Pampas Pipit,A. chacoensis
 ,Correndera Pipit,A. correndera
 ,Ochre-breasted Pipit,A. nattereri
 ,Hellmayr's Pipit,A. hellmayri
@@ -3078,6 +3078,7 @@ E,Half-collared Sparrow,A. semitorquatus
 ,Chestnut-capped Brushfinch,A. brunneinucha
 ,Sooty-faced Finch,A. crassirostris
 ,Olive Finch,A. castaneiceps
+,Clay-colored Sparrow,Spizella pallida
 ,Rufous-collared Sparrow,Zonotrichia capensis
 ,Lincoln's Sparrow,Melospiza lincolnii
 ,White-naped Brushfinch,Atlapetes albinucha
@@ -3247,6 +3248,8 @@ E,Saffron-breasted Redstart,M. cardonai
 ,MITROSPINGIDS,MITROSPINGIDAE
 ,Dusky-faced Tanager,Mitrospingus cassinii
 ,Olive-backed Tanager,M. oleagineus
+,Red-billed Pied Tanager,Lamprospiza melanoleuca
+E,Olive-green Tanager,Orthogonys chloricterus
 
 ,CARDINAL GROSBEAKS,CARDINALIDAE
 ,Hepatic Tanager,Piranga flava
@@ -3626,5 +3629,3 @@ E,Golden-chevroned Tanager,T. ornata
 ,Speckled Tanager,I. guttata
 ,Yellow-bellied Tanager,I. xanthogastra
 ,Spotted Tanager,I. punctata
-E,Olive-green Tanager,Orthogonys chloricterus
-,Red-billed Pied Tanager,Lamprospiza melanoleuca

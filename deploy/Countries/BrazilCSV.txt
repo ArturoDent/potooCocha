@@ -773,6 +773,7 @@ E,Brown-chested Barbet,C. brunneipectus
 ,Lafresnaye's Piculet,P. lafresnayi
 ,Golden-spangled Piculet,P. exilis
 ,White-bellied Piculet,P. spilogaster
+E,Ochraceous Piculet,P. limae
 E,Spotted Piculet,P. pygmaeus
 E,Varzea Piculet,P. varzeae
 ,White-barred Piculet,P. cirratus
@@ -780,8 +781,6 @@ E,Varzea Piculet,P. varzeae
 ,White-wedged Piculet,P. albosquamatus
 ,Rusty-necked Piculet,P. fuscus
 ,Rufous-breasted Piculet,P. rufiventris
-E,Tawny Piculet,P. fulvescens
-E,Ochraceous Piculet,P. limae
 ,Mottled Piculet,P. nebulosus
 ,Plain-breasted Piculet,P. castelnau
 ,Fine-barred Piculet,P. subtilis
@@ -789,13 +788,13 @@ E,Ochraceous Piculet,P. limae
 ,Yellow-tufted Woodpecker,M. cruentatus
 ,Yellow-fronted Woodpecker,M. flavifrons
 ,White-fronted Woodpecker,M. cactorum
-,Red-rumped Woodpecker,Veniliornis kirkii
-,Golden-collared Woodpecker,V. cassini
-,White-spotted Woodpecker,V. spilogaster
-,Checkered Woodpecker,V. mixtus
-,Little Woodpecker,V. passerinus
-,Red-stained Woodpecker,V. affinis
-E,Yellow-eared Woodpecker,V. maculifrons
+,Red-rumped Woodpecker,Dryobates kirkii
+,Golden-collared Woodpecker,D. cassini
+,White-spotted Woodpecker,D. spilogaster
+,Checkered Woodpecker,D. mixtus
+,Little Woodpecker,D. passerinus
+,Red-stained Woodpecker,D. affinis
+E,Yellow-eared Woodpecker,D. maculifrons
 ,Red-necked Woodpecker,Campephilus rubricollis
 ,Robust Woodpecker,C. robustus
 ,Crimson-crested Woodpecker,C. melanoleucos
@@ -1114,7 +1113,7 @@ E,Pale-faced Bare-eye,P. borbae
 ,Collared Crescentchest,Melanopareia torquata
 
 ,GNATEATERS,CONOPOPHAGIDAE
-,Black-bellied Gnateater,Conopophaga melanogaster
+E,Black-bellied Gnateater,Conopophaga melanogaster
 E,Black-cheeked Gnateater,C. melanops
 ,Chestnut-belted Gnateater,C. aurita
 ,Ash-throated Gnateater,C. peruviana
@@ -1344,7 +1343,7 @@ E,Opal-crowned Manakin,L. iris
 ,Band-tailed Manakin,P. fasciicauda
 E,Kinglet Manakin,Machaeropterus regulus
 ,Fiery-capped Manakin,M. pyrocephalus
-,White-crowned Manakin,Dixiphia pipra
+,White-crowned Manakin,Pseudopipra pipra
 ,Scarlet-horned Manakin,Ceratopipra cornuta
 ,Golden-headed Manakin,C. erythrocephala
 ,Red-headed Manakin,C. rubrocapilla
@@ -1855,6 +1854,8 @@ E,White-striped Warbler,Myiothlypis  leucophrys
 
 ,MITROSPINGIDS,MITROSPINGIDAE
 ,Olive-backed Tanager,Mitrospingus oleagineus
+,Red-billed Pied Tanager,Lamprospiza melanoleuca
+E,Olive-green Tanager,Orthogonys chloricterus
 
 ,CARDINAL GROSBEAKS,CARDINALIDAE
 ,Hepatic Tanager,Piranga flava
@@ -2025,5 +2026,3 @@ E,Golden-chevroned Tanager,T. ornata
 ,Speckled Tanager,I. guttata
 ,Yellow-bellied Tanager,I. xanthogastra
 ,Spotted Tanager,I. punctata
-E,Olive-green Tanager,Orthogonys chloricterus
-,Red-billed Pied Tanager,Lamprospiza melanoleuca
