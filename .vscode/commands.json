@@ -1,0 +1,68 @@
+{
+  "commands": [
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "gulp deploy_P\u000d"}],
+      "text": "Deploy to PotooCocha",
+      "tooltip": "Deploy to potoococha.net",
+      "alignment": "left",
+      "priority": 5,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "gulp deploy_E\u000d"}],
+      "text": "Deploy to Experimental",
+      "tooltip": "Deploy to experimental.potoococha.net",
+      "alignment": "left",
+      "priority": 4,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "gulp build\u000d"}],
+      "text": "Build All",
+      "tooltip": "Build and process all files",
+      "alignment": "left",
+      "priority": 3,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "gulp getSACC\u000d"}],
+      "text": "Get SACC",
+      "tooltip": "Get the SACC data",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "debug.startFromConfig",
+      "arguments": [{
+        "name": "Chrome : Launch with sourcemaps",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}",
+        "sourceMaps": true,
+        "runtimeArgs": [
+          "--remote-debugging-port=9222"
+        ]
+      }],
+      "text": "Launch Debug",
+      "tooltip": "Launch Chrome debugger",
+      "alignment": "left",
+      "priority": 1,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "gulp sync\u000d"}],
+      "text": "Gulp Sync",
+      "tooltip": "Start the gulp server",
+      "alignment": "left",
+      "priority": 0,
+      "color": "#fff"
+    }
+  ]
+}
