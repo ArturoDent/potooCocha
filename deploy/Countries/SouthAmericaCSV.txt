@@ -334,8 +334,8 @@ E,Cayenne Nightjar,S. maculosa
 ,Vaux's Swift,C. vauxi
 ,Chimney Swift,C. pelagica
 ,Chapman's Swift,C. chapmani
-,Amazonian Swift,C. viridipennis
 ,Sick's Swift,C. meridionalis
+,Ashy-tailed Swift,C. andrei
 ,Short-tailed Swift,C. brachyura
 ,White-tipped Swift,Aeronautes montivagus
 ,Andean Swift,A. andecolus
@@ -734,6 +734,7 @@ E,Little Wood-Rail,A. mangle
 ,Sanderling,C. alba
 ,Dunlin,C. alpina
 ,Baird's Sandpiper,C. bairdii
+,Little Stint,C. minuta
 ,Least Sandpiper,C. minutilla
 ,White-rumped Sandpiper,C. fuscicollis
 ,Buff-breasted Sandpiper,C. subruficollis
@@ -885,13 +886,13 @@ E,Galapagos Penguin,S. mendiculus
 ,White-faced Storm-Petrel,Pelagodroma marina
 
 ,NORTHERN STORM-PETRELS,HYDROBATIDAE
-,Least Storm-Petrel,Oceanodroma microsoma
-,Wedge-rumped Storm-Petrel,O. tethys
-,Band-rumped Storm-Petrel,O. castro
-,Leach's Storm-Petrel,O. leucorhoa
-,Markham's Storm-Petrel,O. markhami
-,Hornby's Storm-Petrel,O. hornbyi
-,Black Storm-Petrel,O. melania
+,Least Storm-Petrel,Hydrobates microsoma
+,Wedge-rumped Storm-Petrel,H. tethys
+,Band-rumped Storm-Petrel,H. castro
+,Leach's Storm-Petrel,H. leucorhous
+,Markham's Storm-Petrel,H. markhami
+,Hornby's Storm-Petrel,H. hornbyi
+,Black Storm-Petrel,H. melania
 
 ,SHEARWATERS,PROCELLARIIDAE
 ,Southern Giant-Petrel,Macronectes giganteus
@@ -1223,7 +1224,7 @@ E,Sooty-capped Puffbird,B. noanamae
 ,Collared Puffbird,B. capensis
 ,Barred Puffbird,Nystalus radiatus
 ,Western Striolated-Puffbird,N. obamai
-E,Eastern Striolated-Puffbird,N. striolatus
+,Eastern Striolated-Puffbird,N. striolatus
 ,White-eared Puffbird,N. chacuru
 ,Spot-backed Puffbird,N. maculatus
 ,Russet-throated Puffbird,Hypnelus ruficollis
@@ -1840,19 +1841,7 @@ E,Chestnut Antpitta,G. blakei
 E,Urrao Antpitta,G. urraoensis
 E,Brown-banded Antpitta,G. milleri
 ,Rufous-faced Antpitta,G. erythrotis
-,Streak-chested Antpitta,Hylopezus perspicillatus
-,Spotted Antpitta,H. macularius
-E,Alta Floresta Antpitta,H. whittakeri
-E,Snethlage's Antpitta,H. paraensis
-E,Masked Antpitta,H. auricularis
-,Thicket Antpitta,H. dives
-,White-lored Antpitta,H. fulviventris
-,Amazonian Antpitta,H. berlepschi
-E,White-browed Antpitta,H. ochroleucus
-,Speckle-breasted Antpitta,H. nattereri
-,Thrush-like Antpitta,Myrmothera campanisona
-,Tepui Antpitta,M. simplex
-E,Tapajos Antpitta,M. subcanescens
+,Speckle-breasted Antpitta,Cryptopezus nattereri
 ,Ochre-breasted Antpitta,Grallaricula flavirostris
 ,Crescent-faced Antpitta,G. lineifrons
 ,Leymebamba Antpitta,G. leymebambae
@@ -1863,6 +1852,18 @@ E,Ochre-fronted Antpitta,G. ochraceifrons
 ,Rusty-breasted Antpitta,G. ferrugineipectus
 ,Slate-crowned Antpitta,G. nana
 E,Sucre Antpitta,G. cumanensis
+E,Masked Antpitta,Hylopezus auricularis
+E,White-browed Antpitta,H. ochroleucus
+,Streak-chested Antpitta,H. perspicillatus
+,Spotted Antpitta,H. macularius
+E,Alta Floresta Antpitta,H. whittakeri
+E,Snethlage's Antpitta,H. paraensis
+,White-lored Antpitta,Myrmothera fulviventris
+,Amazonian Antpitta,M. berlepschi
+,Thicket Antpitta,M. dives
+,Thrush-like Antpitta,M. campanisona
+,Tepui Antpitta,M. simplex
+E,Tapajos Antpitta,M. subcanescens
 
 ,TAPACULOS,RHINOCRYPTIDAE
 ,Spotted Bamboowren,Psilorhamphus guttatus
@@ -2782,6 +2783,7 @@ E,Gray-eyed Greenlet,Hylophilus amaurocephalus
 ,Choco Vireo,V. masteri
 ,Tepui Vireo,V. sclateri
 ,Philadelphia Vireo,V. philadelphicus
+,Warbling Vireo,V. gilvus
 ,Brown-capped Vireo,V. leucophrys
 ,Red-eyed Vireo,V. olivaceus
 E,Noronha Vireo,V. gracilirostris
@@ -2950,7 +2952,8 @@ E,Unicolored Thrush,T. haplochrous
 ,Marañon Thrush,T. maranonicus
 ,Chestnut-bellied Thrush,T. fulviventris
 ,Black-hooded Thrush,T. olivater
-,Slaty Thrush,T. nigriceps
+,Andean Slaty Thrush,T. nigriceps
+,Blacksmith Thrush,T. subalaris
 ,Great Thrush,T. fuscater
 ,Chiguanco Thrush,T. chiguanco
 ,Glossy-black Thrush,T. serranus
@@ -3055,7 +3058,8 @@ E,Velvet-fronted Euphonia,E. concinna
 ,Dusky Chlorospingus,C. semifuscus
 ,Yellow-green Chlorospingus,C. flavovirens
 ,Tumbes Sparrow,Rhynchospiza stolzmanni
-,Stripe-capped Sparrow,R. strigiceps
+,Yungas Sparrow,R. dabennei
+,Chaco Sparrow,R. strigiceps
 ,Grasshopper Sparrow,Ammodramus savannarum
 ,Grassland Sparrow,A. humeralis
 ,Yellow-browed Sparrow,A. aurifrons

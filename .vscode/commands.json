@@ -20,11 +20,20 @@
     },
     {
       "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "gulp sync\u000d"}],
+      "text": "Gulp Sync",
+      "tooltip": "Start the gulp server",
+      "alignment": "left",
+      "priority": 3,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
       "arguments": [{"text": "gulp build\u000d"}],
       "text": "Build All",
       "tooltip": "Build and process all files",
       "alignment": "left",
-      "priority": 3,
+      "priority": 2,
       "color": "#fff"
     },
     {
@@ -33,7 +42,7 @@
       "text": "Get SACC",
       "tooltip": "Get the SACC data",
       "alignment": "left",
-      "priority": 2,
+      "priority": 1,
       "color": "#fff"
     },
     {
@@ -52,17 +61,9 @@
       "text": "Launch Debug",
       "tooltip": "Launch Chrome debugger",
       "alignment": "left",
-      "priority": 1,
-      "color": "#fff"
-    },
-    {
-      "command": "workbench.action.terminal.sendSequence",
-      "arguments": [{"text": "gulp sync\u000d"}],
-      "text": "Gulp Sync",
-      "tooltip": "Start the gulp server",
-      "alignment": "left",
       "priority": 0,
       "color": "#fff"
     }
+
   ]
 }

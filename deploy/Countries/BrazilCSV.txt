@@ -201,7 +201,6 @@ E,Pygmy Nightjar,N. hirundinaceus
 ,Pale-rumped Swift,C. egregia
 ,Chimney Swift,C. pelagica
 ,Chapman's Swift,C. chapmani
-,Amazonian Swift,C. viridipennis
 ,Sick's Swift,C. meridionalis
 ,Short-tailed Swift,C. brachyura
 ,White-tipped Swift,Aeronautes montivagus
@@ -380,6 +379,7 @@ E,Little Wood-Rail,A. mangle
 ,Curlew Sandpiper,C. ferruginea
 ,Sanderling,C. alba
 ,Baird's Sandpiper,C. bairdii
+,Little Stint,C. minuta
 ,Least Sandpiper,C. minutilla
 ,White-rumped Sandpiper,C. fuscicollis
 ,Buff-breasted Sandpiper,C. subruficollis
@@ -479,8 +479,8 @@ E,Little Wood-Rail,A. mangle
 ,White-faced Storm-Petrel,Pelagodroma marina
 
 ,NORTHERN STORM-PETRELS,HYDROBATIDAE
-,Band-rumped Storm-Petrel,Oceanodroma castro
-,Leach's Storm-Petrel,O. leucorhoa
+,Band-rumped Storm-Petrel,Hydrobates castro
+,Leach's Storm-Petrel,H. leucorhous
 
 ,SHEARWATERS,PROCELLARIIDAE
 ,Southern Giant-Petrel,Macronectes giganteus
@@ -718,7 +718,7 @@ E,Three-toed Jacamar,Jacamaralcyon tridactyla
 ,Spotted Puffbird,B. tamatia
 ,Collared Puffbird,B. capensis
 ,Western Striolated-Puffbird,Nystalus obamai
-E,Eastern Striolated-Puffbird,N. striolatus
+,Eastern Striolated-Puffbird,N. striolatus
 ,White-eared Puffbird,N. chacuru
 ,Spot-backed Puffbird,N. maculatus
 ,White-chested Puffbird,Malacoptila fusca
@@ -1124,13 +1124,13 @@ E,Hooded Gnateater,C. roberti
 ,ANTPITTAS,GRALLARIIDAE
 ,Variegated Antpitta,Grallaria varia
 ,Elusive Antpitta,G. eludens
-,Spotted Antpitta,Hylopezus macularius
+,Speckle-breasted Antpitta,Cryptopezus nattereri
+E,White-browed Antpitta,Hylopezus ochroleucus
+,Spotted Antpitta,H. macularius
 E,Alta Floresta Antpitta,H. whittakeri
 E,Snethlage's Antpitta,H. paraensis
-,Amazonian Antpitta,H. berlepschi
-E,White-browed Antpitta,H. ochroleucus
-,Speckle-breasted Antpitta,H. nattereri
-,Thrush-like Antpitta,Myrmothera campanisona
+,Amazonian Antpitta,Myrmothera berlepschi
+,Thrush-like Antpitta,M. campanisona
 ,Tepui Antpitta,M. simplex
 E,Tapajos Antpitta,M. subcanescens
 
@@ -1732,7 +1732,7 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,Creamy-bellied Thrush,T. amaurochalinus
 ,Black-billed Thrush,T. ignobilis
 ,Black-hooded Thrush,T. olivater
-,Slaty Thrush,T. nigriceps
+,Blacksmith Thrush,T. subalaris
 ,White-necked Thrush,T. albicollis
 
 ,MOCKINGBIRDS,MIMIDAE

@@ -319,8 +319,8 @@ SWIFTS,APODIDAE
 15,,Vaux's Swift,C. vauxi
 ,,Chimney Swift,C. pelagica
 ,,Chapman's Swift,C. chapmani
-,,Amazonian Swift,C. viridipennis
 ,,Sick's Swift,C. meridionalis
+,,Ashy-tailed Swift,C. andrei
 20,,Short-tailed Swift,C. brachyura
 ,,White-tipped Swift,Aeronautes montivagus
 ,,Andean Swift,A. andecolus
@@ -706,32 +706,33 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Sanderling,C. alba
 ,,Dunlin,C. alpina
 ,,Baird's Sandpiper,C. bairdii
-20,,Least Sandpiper,C. minutilla
+20,,Little Stint,C. minuta
+,,Least Sandpiper,C. minutilla
 ,,White-rumped Sandpiper,C. fuscicollis
 ,,Buff-breasted Sandpiper,C. subruficollis
 ,,Pectoral Sandpiper,C. melanotos
-,,Semipalmated Sandpiper,C. pusilla
-25,,Western Sandpiper,C. mauri
+25,,Semipalmated Sandpiper,C. pusilla
+,,Western Sandpiper,C. mauri
 ,,Short-billed Dowitcher,Limnodromus griseus
 ,,Long-billed Dowitcher,L. scolopaceus
 ,,Imperial Snipe,Gallinago imperialis
-,,Jameson's Snipe,G. jamesoni
-30,,Fuegian Snipe,G. stricklandii
+30,,Jameson's Snipe,G. jamesoni
+,,Fuegian Snipe,G. stricklandii
 ,,Noble Snipe,G. nobilis
 ,,Giant Snipe,G. undulata
 ,,Wilson's Snipe,G. delicata
-,,South American Snipe,G. paraguaiae
-35,,Puna Snipe,G. andina
+35,,South American Snipe,G. paraguaiae
+,,Puna Snipe,G. andina
 ,,Wilson's Phalarope,Phalaropus tricolor
 ,,Red-necked Phalarope,P. lobatus
 ,,Red Phalarope,P. fulicarius
-,,Terek Sandpiper,Xenus cinereus
-40,,Spotted Sandpiper,Actitis macularius
+40,,Terek Sandpiper,Xenus cinereus
+,,Spotted Sandpiper,Actitis macularius
 ,,Solitary Sandpiper,Tringa solitaria
 ,,Wandering Tattler,T. incana
 ,,Common Greenshank,T. nebularia
-,,Greater Yellowlegs,T. melanoleuca
-45,,Willet,T. semipalmata
+45,,Greater Yellowlegs,T. melanoleuca
+,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
 ,,Wood Sandpiper,T. glareola
 SEEDSNIPES,THINOCORIDAE
@@ -845,13 +846,13 @@ SOUTHERN STORM-PETRELS,OCEANITIDAE
 ,,Gray-backed Storm-Petrel,Garrodia nereis
 ,,White-faced Storm-Petrel,Pelagodroma marina
 NORTHERN STORM-PETRELS,HYDROBATIDAE
-,,Least Storm-Petrel,Oceanodroma microsoma
-,,Wedge-rumped Storm-Petrel,O. tethys
-,,Band-rumped Storm-Petrel,O. castro
-,,Leach's Storm-Petrel,O. leucorhoa
-5,,Markham's Storm-Petrel,O. markhami
-,,Hornby's Storm-Petrel,O. hornbyi
-,,Black Storm-Petrel,O. melania
+,,Least Storm-Petrel,Hydrobates microsoma
+,,Wedge-rumped Storm-Petrel,H. tethys
+,,Band-rumped Storm-Petrel,H. castro
+,,Leach's Storm-Petrel,H. leucorhous
+5,,Markham's Storm-Petrel,H. markhami
+,,Hornby's Storm-Petrel,H. hornbyi
+,,Black Storm-Petrel,H. melania
 SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Northern Giant-Petrel,M. halli
@@ -1164,7 +1165,7 @@ PUFFBIRDS,BUCCONIDAE
 10,,Collared Puffbird,B. capensis
 ,,Barred Puffbird,Nystalus radiatus
 ,,Western Striolated-Puffbird,N. obamai
-,endemic,Eastern Striolated-Puffbird,N. striolatus
+,,Eastern Striolated-Puffbird,N. striolatus
 ,,White-eared Puffbird,N. chacuru
 15,,Spot-backed Puffbird,N. maculatus
 ,,Russet-throated Puffbird,Hypnelus ruficollis
@@ -1768,29 +1769,29 @@ ANTPITTAS,GRALLARIIDAE
 30,endemic,Urrao Antpitta,G. urraoensis
 ,endemic,Brown-banded Antpitta,G. milleri
 ,,Rufous-faced Antpitta,G. erythrotis
-,,Streak-chested Antpitta,Hylopezus perspicillatus
-,,Spotted Antpitta,H. macularius
-35,endemic,Alta Floresta Antpitta,H. whittakeri
-,endemic,Snethlage's Antpitta,H. paraensis
-,endemic,Masked Antpitta,H. auricularis
-,,Thicket Antpitta,H. dives
-,,White-lored Antpitta,H. fulviventris
-40,,Amazonian Antpitta,H. berlepschi
-,endemic,White-browed Antpitta,H. ochroleucus
-,,Speckle-breasted Antpitta,H. nattereri
-,,Thrush-like Antpitta,Myrmothera campanisona
-,,Tepui Antpitta,M. simplex
-45,endemic,Tapajos Antpitta,M. subcanescens
+,,Speckle-breasted Antpitta,Cryptopezus nattereri
 ,,Ochre-breasted Antpitta,Grallaricula flavirostris
-,,Crescent-faced Antpitta,G. lineifrons
+35,,Crescent-faced Antpitta,G. lineifrons
 ,,Leymebamba Antpitta,G. leymebambae
 ,endemic,Scallop-breasted Antpitta,G. loricata
-50,,Hooded Antpitta,G. cucullata
+,,Hooded Antpitta,G. cucullata
 ,,Peruvian Antpitta,G. peruviana
-,endemic,Ochre-fronted Antpitta,G. ochraceifrons
+40,endemic,Ochre-fronted Antpitta,G. ochraceifrons
 ,,Rusty-breasted Antpitta,G. ferrugineipectus
 ,,Slate-crowned Antpitta,G. nana
 ,endemic,Sucre Antpitta,G. cumanensis
+,endemic,Masked Antpitta,Hylopezus auricularis
+45,endemic,White-browed Antpitta,H. ochroleucus
+,,Streak-chested Antpitta,H. perspicillatus
+,,Spotted Antpitta,H. macularius
+,endemic,Alta Floresta Antpitta,H. whittakeri
+,endemic,Snethlage's Antpitta,H. paraensis
+50,,White-lored Antpitta,Myrmothera fulviventris
+,,Amazonian Antpitta,M. berlepschi
+,,Thicket Antpitta,M. dives
+,,Thrush-like Antpitta,M. campanisona
+,,Tepui Antpitta,M. simplex
+,endemic,Tapajos Antpitta,M. subcanescens
 TAPACULOS,RHINOCRYPTIDAE
 ,,Spotted Bamboowren,Psilorhamphus guttatus
 ,,Rusty-belted Tapaculo,Liosceles thoracicus
@@ -2700,9 +2701,10 @@ VIREOS,VIREONIDAE
 20,,Choco Vireo,V. masteri
 ,,Tepui Vireo,V. sclateri
 ,,Philadelphia Vireo,V. philadelphicus
+,,Warbling Vireo,V. gilvus
 ,,Brown-capped Vireo,V. leucophrys
-,,Red-eyed Vireo,V. olivaceus
-25,endemic,Noronha Vireo,V. gracilirostris
+25,,Red-eyed Vireo,V. olivaceus
+,endemic,Noronha Vireo,V. gracilirostris
 ,,Yellow-green Vireo,V. flavoviridis
 ,,Black-whiskered Vireo,V. altiloquus
 JAYS,CORVIDAE
@@ -2859,7 +2861,8 @@ THRUSHES,TURDIDAE
 ,,Marañon Thrush,T. maranonicus
 ,,Chestnut-bellied Thrush,T. fulviventris
 ,,Black-hooded Thrush,T. olivater
-35,,Slaty Thrush,T. nigriceps
+35,,Andean Slaty Thrush,T. nigriceps
+,,Blacksmith Thrush,T. subalaris
 ,,Great Thrush,T. fuscater
 ,,Chiguanco Thrush,T. chiguanco
 ,,Glossy-black Thrush,T. serranus
@@ -2954,57 +2957,58 @@ SPARROWS,PASSERELLIDAE
 ,,Dusky Chlorospingus,C. semifuscus
 ,,Yellow-green Chlorospingus,C. flavovirens
 ,,Tumbes Sparrow,Rhynchospiza stolzmanni
-10,,Stripe-capped Sparrow,R. strigiceps
+10,,Yungas Sparrow,R. dabennei
+,,Chaco Sparrow,R. strigiceps
 ,,Grasshopper Sparrow,Ammodramus savannarum
 ,,Grassland Sparrow,A. humeralis
 ,,Yellow-browed Sparrow,A. aurifrons
-,,Black-striped Sparrow,Arremonops conirostris
-15,,Tocuyo Sparrow,A. tocuyensis
+15,,Black-striped Sparrow,Arremonops conirostris
+,,Tocuyo Sparrow,A. tocuyensis
 ,endemic,Sierra Nevada Brushfinch,Arremon basilicus
 ,,Perija Brushfinch,A. perijanus
 ,,Black-headed Brushfinch,A. atricapillus
-,endemic,Caracas Brushfinch,A. phaeopleurus
-20,endemic,Paria Brushfinch,A. phygas
+20,endemic,Caracas Brushfinch,A. phaeopleurus
+,endemic,Paria Brushfinch,A. phygas
 ,,Gray-browed Brushfinch,A. assimilis
 ,,White-browed Brushfinch,A. torquatus
 ,,Orange-billed Sparrow,A. aurantiirostris
-,,Black-capped Sparrow,A. abeillei
-25,,Golden-winged Sparrow,A. schlegeli
+25,,Black-capped Sparrow,A. abeillei
+,,Golden-winged Sparrow,A. schlegeli
 ,,Pectoral Sparrow,A. taciturnus
 ,endemic,São Francisco Sparrow,A. franciscanus
 ,endemic,Half-collared Sparrow,A. semitorquatus
-,,Saffron-billed Sparrow,A. flavirostris
-30,,Chestnut-capped Brushfinch,A. brunneinucha
+30,,Saffron-billed Sparrow,A. flavirostris
+,,Chestnut-capped Brushfinch,A. brunneinucha
 ,,Sooty-faced Finch,A. crassirostris
 ,,Olive Finch,A. castaneiceps
 ,,Clay-colored Sparrow,Spizella pallida
-,,Rufous-collared Sparrow,Zonotrichia capensis
-35,,Lincoln's Sparrow,Melospiza lincolnii
+35,,Rufous-collared Sparrow,Zonotrichia capensis
+,,Lincoln's Sparrow,Melospiza lincolnii
 ,,White-naped Brushfinch,Atlapetes albinucha
 ,,Moustached Brushfinch,A. albofrenatus
 ,,Tepui Brushfinch,A. personatus
-,endemic,Santa Marta Brushfinch,A. melanocephalus
-40,,Ochre-breasted Brushfinch,A. semirufus
+40,endemic,Santa Marta Brushfinch,A. melanocephalus
+,,Ochre-breasted Brushfinch,A. semirufus
 ,endemic,Yellow-headed Brushfinch,A. flaviceps
 ,endemic,Dusky-headed Brushfinch,A. fuscoolivaceus
 ,,White-rimmed Brushfinch,A. leucopis
-,,White-headed Brushfinch,A. albiceps
-45,endemic,Rufous-eared Brushfinch,A. rufigenis
+45,,White-headed Brushfinch,A. albiceps
+,endemic,Rufous-eared Brushfinch,A. rufigenis
 ,,Tricolored Brushfinch,A. tricolor
 ,,Slaty Brushfinch,A. schistaceus
 ,,Pale-naped Brushfinch,A. pallidinucha
-,endemic,Antioquia Brushfinch,A. blancae
-50,,Yellow-breasted Brushfinch,A. latinuchus
+50,endemic,Antioquia Brushfinch,A. blancae
+,,Yellow-breasted Brushfinch,A. latinuchus
 ,,White-winged Brushfinch,A. leucopterus
 ,endemic,Pale-headed Brushfinch,A. pallidiceps
 ,,Bay-crowned Brushfinch,A. seebohmi
-,endemic,Rusty-bellied Brushfinch,A. nationi
-55,endemic,Apurimac Brushfinch,A. forbesi
+55,endemic,Rusty-bellied Brushfinch,A. nationi
+,endemic,Apurimac Brushfinch,A. forbesi
 ,endemic,Black-spectacled Brushfinch,A. melanopsis
 ,endemic,Vilcabamba Brushfinch,A. terborghi
 ,endemic,Cuzco Brushfinch,A. canigenis
-,,Black-faced Brushfinch,A. melanolaemus
-60,endemic,Bolivian Brushfinch,A. rufinucha
+60,,Black-faced Brushfinch,A. melanolaemus
+,endemic,Bolivian Brushfinch,A. rufinucha
 ,,Fulvous-headed Brushfinch,A. fulviceps
 ,endemic,Yellow-striped Brushfinch,A. citrinellus
 BLACKBIRDS,ICTERIDAE

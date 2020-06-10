@@ -460,13 +460,13 @@ SOUTHERN STORM-PETRELS,OCEANITIDAE
 ,,Elliot's Storm-Petrel,O. gracilis
 ,,White-faced Storm-Petrel,Pelagodroma marina
 NORTHERN STORM-PETRELS,HYDROBATIDAE
-,,Least Storm-Petrel,Oceanodroma microsoma
-,,Wedge-rumped Storm-Petrel,O. tethys
-,,Band-rumped Storm-Petrel,O. castro
-,,Leach's Storm-Petrel,O. leucorhoa
-5,,Markham's Storm-Petrel,O. markhami
-,,Hornby's Storm-Petrel,O. hornbyi
-,,Black Storm-Petrel,O. melania
+,,Least Storm-Petrel,Hydrobates microsoma
+,,Wedge-rumped Storm-Petrel,H. tethys
+,,Band-rumped Storm-Petrel,H. castro
+,,Leach's Storm-Petrel,H. leucorhous
+5,,Markham's Storm-Petrel,H. markhami
+,,Hornby's Storm-Petrel,H. hornbyi
+,,Black Storm-Petrel,H. melania
 SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Southern Fulmar,Fulmarus glacialoides
@@ -940,14 +940,14 @@ ANTPITTAS,GRALLARIIDAE
 ,,White-bellied Antpitta,G. hypoleuca
 ,,Rufous Antpitta,G. rufula
 15,,Tawny Antpitta,G. quitensis
-,,Streak-chested Antpitta,Hylopezus perspicillatus
-,,White-lored Antpitta,H. fulviventris
-,,Thrush-like Antpitta,Myrmothera campanisona
 ,,Ochre-breasted Antpitta,Grallaricula flavirostris
-20,,Crescent-faced Antpitta,G. lineifrons
+,,Crescent-faced Antpitta,G. lineifrons
 ,,Leymebamba Antpitta,G. leymebambae
 ,,Peruvian Antpitta,G. peruviana
-,,Slate-crowned Antpitta,G. nana
+20,,Slate-crowned Antpitta,G. nana
+,,Streak-chested Antpitta,Hylopezus perspicillatus
+,,White-lored Antpitta,Myrmothera fulviventris
+,,Thrush-like Antpitta,M. campanisona
 TAPACULOS,RHINOCRYPTIDAE
 ,,Rusty-belted Tapaculo,Liosceles thoracicus
 ,,Ocellated Tapaculo,Acropternis orthonyx
@@ -1363,6 +1363,7 @@ VIREOS,VIREONIDAE
 10,,Yellow-throated Vireo,Vireo flavifrons
 ,,Choco Vireo,V. masteri
 ,,Philadelphia Vireo,V. philadelphicus
+,,Warbling Vireo,V. gilvus
 ,,Brown-capped Vireo,V. leucophrys
 ,,Red-eyed Vireo,V. olivaceus
 ,,Yellow-green Vireo,V. flavoviridis
@@ -1447,7 +1448,7 @@ THRUSHES,TURDIDAE
 ,,Black-billed Thrush,T. ignobilis
 15,,Marañon Thrush,T. maranonicus
 ,,Chestnut-bellied Thrush,T. fulviventris
-,,Slaty Thrush,T. nigriceps
+,,Andean Slaty Thrush,T. nigriceps
 ,,Great Thrush,T. fuscater
 ,,Chiguanco Thrush,T. chiguanco
 20,,Glossy-black Thrush,T. serranus

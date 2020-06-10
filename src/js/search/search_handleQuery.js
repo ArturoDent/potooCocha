@@ -9,7 +9,7 @@ function modifyQuery(term) {
   // keep a minimum of 20 ch's width in input field and add 1 ch width for every query.length > 8
   if (term.length > 6) {
     searcFormContents.style.left = "-" + (term.length - 6)/5 + "ch";
-    searchInput.size = 20 + (term.length - 6);
+    searchInput.size = 20 + (term.length - 6); 
   }
   
   term = term.replace(/^\s+|\s+$/g, ""); // strip trailing and leading whitespaces

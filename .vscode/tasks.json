@@ -25,16 +25,31 @@
       "label": "Gulp: Start server only",
       "type": "gulp",
       "task": "serve",
-      // "problemMatcher": [
-      //     {
-      //         // "base": "$tsc-watch",
-      //         "background": {
-      //         //   "activeOnStart": true,
-      //           "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
-      //           "endsPattern": "[Browsersync] Serving files from: ./"
-      //         }
-      //       }
-      // ]
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          // "base": "$tsc-watch",
+          // "fileLocation": "autoDetect", 
+
+          // "owner": "typescript",
+          "fileLocation": "relative",
+          "pattern": {
+            "regexp": "^([^\\s].*)\\((\\d+|\\d+,\\d+|\\d+,\\d+,\\d+,\\d+)\\):\\s+(error|warning|info)\\s+(TS\\d+)\\s*:\\s*(.*)$",
+            "file": 1,
+            "location": 2,
+            "severity": 3,
+            "code": 4,
+            "message": 5
+          },
+
+          "background": {
+            "activeOnStart": true,
+            // "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
+            "beginsPattern": "Using gulpfile ~\\OneDrive\\experimental\\gulpfile\\.js",
+            "endsPattern": "[Browsersync] Serving files from: \\./"
+          }
+        }
+      ]
     },
     {
       "label": "Gulp: watch",
@@ -54,10 +69,10 @@
     },
     {
       "label": "Gulp: Start server and watch",
-      // "dependsOn": ["Gulp: Start server only", "Gulp: watch"]
-      "dependsOn": [
-        "Gulp: Start server only"
-      ]
+      "dependsOn": ["Gulp: Start server only", "Gulp: watch"]
+      // "dependsOn": [
+      //   "Gulp: Start server only"
+      // ]
     },
     {
       "label": "postdebugKill",

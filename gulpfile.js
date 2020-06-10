@@ -15,7 +15,7 @@ const stripComments = require("gulp-strip-comments");
 // const stripdebug = require("gulp-strip-debug");
 const modifyHTMLlinks = require("gulp-processhtml");  // or try gulp-useref
 const addVersionString = require("gulp-version-number");
-const print = require('gulp-print').default;
+const print = require('gulp-print').default; 
 
 
 function serve (done) {        // serve:    ./home.html

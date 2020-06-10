@@ -187,9 +187,8 @@ SWIFTS,APODIDAE
 ,,Pale-rumped Swift,C. egregia
 ,,Chimney Swift,C. pelagica
 ,,Chapman's Swift,C. chapmani
-,,Amazonian Swift,C. viridipennis
-15,,Sick's Swift,C. meridionalis
-,,Short-tailed Swift,C. brachyura
+,,Sick's Swift,C. meridionalis
+15,,Short-tailed Swift,C. brachyura
 ,,White-tipped Swift,Aeronautes montivagus
 ,,Fork-tailed Palm-Swift,Tachornis squamata
 ,,Lesser Swallow-tailed Swift,Panyptila cayennensis
@@ -354,19 +353,20 @@ SANDPIPERS,SCOLOPACIDAE
 10,,Curlew Sandpiper,C. ferruginea
 ,,Sanderling,C. alba
 ,,Baird's Sandpiper,C. bairdii
+,,Little Stint,C. minuta
 ,,Least Sandpiper,C. minutilla
-,,White-rumped Sandpiper,C. fuscicollis
-15,,Buff-breasted Sandpiper,C. subruficollis
+15,,White-rumped Sandpiper,C. fuscicollis
+,,Buff-breasted Sandpiper,C. subruficollis
 ,,Pectoral Sandpiper,C. melanotos
 ,,Semipalmated Sandpiper,C. pusilla
 ,,Short-billed Dowitcher,Limnodromus griseus
-,,Giant Snipe,Gallinago undulata
-20,,South American Snipe,G. paraguaiae
+20,,Giant Snipe,Gallinago undulata
+,,South American Snipe,G. paraguaiae
 ,,Wilson's Phalarope,Phalaropus tricolor
 ,,Red-necked Phalarope,P. lobatus
 ,,Red Phalarope,P. fulicarius
-,,Terek Sandpiper,Xenus cinereus
-25,,Spotted Sandpiper,Actitis macularius
+25,,Terek Sandpiper,Xenus cinereus
+,,Spotted Sandpiper,Actitis macularius
 ,,Solitary Sandpiper,Tringa solitaria
 ,,Greater Yellowlegs,T. melanoleuca
 ,,Willet,T. semipalmata
@@ -441,8 +441,8 @@ SOUTHERN STORM-PETRELS,OCEANITIDAE
 ,,Wilson's Storm-Petrel,Oceanites oceanicus
 ,,White-faced Storm-Petrel,Pelagodroma marina
 NORTHERN STORM-PETRELS,HYDROBATIDAE
-,,Band-rumped Storm-Petrel,Oceanodroma castro
-,,Leach's Storm-Petrel,O. leucorhoa
+,,Band-rumped Storm-Petrel,Hydrobates castro
+,,Leach's Storm-Petrel,H. leucorhous
 SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Northern Giant-Petrel,M. halli
@@ -661,7 +661,7 @@ PUFFBIRDS,BUCCONIDAE
 ,,Spotted Puffbird,B. tamatia
 ,,Collared Puffbird,B. capensis
 ,,Western Striolated-Puffbird,Nystalus obamai
-10,endemic,Eastern Striolated-Puffbird,N. striolatus
+10,,Eastern Striolated-Puffbird,N. striolatus
 ,,White-eared Puffbird,N. chacuru
 ,,Spot-backed Puffbird,N. maculatus
 ,,White-chested Puffbird,Malacoptila fusca
@@ -1057,13 +1057,13 @@ GNATEATERS,CONOPOPHAGIDAE
 ANTPITTAS,GRALLARIIDAE
 ,,Variegated Antpitta,Grallaria varia
 ,,Elusive Antpitta,G. eludens
-,,Spotted Antpitta,Hylopezus macularius
+,,Speckle-breasted Antpitta,Cryptopezus nattereri
+,endemic,White-browed Antpitta,Hylopezus ochroleucus
+5,,Spotted Antpitta,H. macularius
 ,endemic,Alta Floresta Antpitta,H. whittakeri
-5,endemic,Snethlage's Antpitta,H. paraensis
-,,Amazonian Antpitta,H. berlepschi
-,endemic,White-browed Antpitta,H. ochroleucus
-,,Speckle-breasted Antpitta,H. nattereri
-,,Thrush-like Antpitta,Myrmothera campanisona
+,endemic,Snethlage's Antpitta,H. paraensis
+,,Amazonian Antpitta,Myrmothera berlepschi
+,,Thrush-like Antpitta,M. campanisona
 ,,Tepui Antpitta,M. simplex
 ,endemic,Tapajos Antpitta,M. subcanescens
 TAPACULOS,RHINOCRYPTIDAE
@@ -1649,7 +1649,7 @@ THRUSHES,TURDIDAE
 ,,Creamy-bellied Thrush,T. amaurochalinus
 15,,Black-billed Thrush,T. ignobilis
 ,,Black-hooded Thrush,T. olivater
-,,Slaty Thrush,T. nigriceps
+,,Blacksmith Thrush,T. subalaris
 ,,White-necked Thrush,T. albicollis
 MOCKINGBIRDS,MIMIDAE
 ,,Tropical Mockingbird,Mimus gilvus

@@ -46,6 +46,20 @@
             // "preLaunchTask": "Echo vars",
             "postDebugTask": "postdebugKill"
         },
+
+        {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Debug with Chrome SO test",
+          "url": "http://localhost:3000",
+          "webRoot": "${workspaceFolder}",
+          "runtimeArgs": [
+            "--remote-debugging-port=9222"
+          ],
+          "preLaunchTask": "Gulp: Start server only",
+          "postDebugTask": "postdebugKill", //<----error
+        },
+
         {
             "type": "node",
             "request": "launch",
