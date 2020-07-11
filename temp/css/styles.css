@@ -96,7 +96,7 @@
 html {
   min-height: 100%;
   font-size: 15.3px;
-  background-color: #6a7377; }
+  background-color: #807f7f; }
 
 *:focus {
   background-color: red; }
@@ -111,7 +111,7 @@ body {
   color: white;
   text-shadow: 0 0.077rem rgba(0, 0, 0, 0.5);
   letter-spacing: 0.04em;
-  background-color: #6a7377;
+  background-color: #807f7f;
   overflow-x: hidden;
   overflow-y: auto; }
 
@@ -199,7 +199,7 @@ article {
   pointer-events: auto;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
-  background-color: #52595c;
+  background-color: #666666;
   box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.7), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.7), 0 0 0.15rem rgba(0, 0, 0, 0.7);
   -webkit-transition: opacity 2s;
   -moz-transition: opacity 2s;
@@ -221,7 +221,7 @@ article {
   border: 1px solid #c8c8c8;
   border-top: 1px solid #8d8c8c;
   border-radius: 0.3rem;
-  background-color: #52595c;
+  background-color: #666666;
   box-shadow: 0 0.077rem 0.077rem rgba(0, 0, 0, 0.3); }
 
 .topFlyoutPanel {
@@ -272,7 +272,7 @@ footer a:hover, footer a:focus {
   top: 100vh;
   width: 100vw;
   height: auto;
-  background-color: #6a7377;
+  background-color: #807f7f;
   box-shadow: 0 -0.6px 0.6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 10;
@@ -284,7 +284,7 @@ footer a:hover, footer a:focus {
   width: 100%;
   border-top: 0.077rem solid #3d7481;
   border-bottom: 0.077rem solid #3d7481;
-  background-color: #52595c; }
+  background-color: #666666; }
 
 #mapsCollection.namesOnlySeen {
   transform: translateY(-3.2rem); }
@@ -472,7 +472,7 @@ footer a:hover, footer a:focus {
   letter-spacing: 0.13em;
   text-shadow: rgba(0, 0, 0, 0.5) 0.077rem 0.077rem 0.077rem;
   list-style-type: none;
-  background: linear-gradient(to right, #5e666a 0%, #505050 100%); }
+  background: linear-gradient(to right, #737272 0%, #505050 100%); }
 
 .colorKey ul li:nth-child(1) {
   /* extinct       */
@@ -525,7 +525,6 @@ footer a:hover, footer a:focus {
 
 #checklistAuthorsPanel {
   position: relative;
-  opacity: 0;
   height: auto;
   width: 100%;
   top: 0;
@@ -538,9 +537,6 @@ footer a:hover, footer a:focus {
   line-height: 1.1rem;
   background-color: #fefefe;
   transition: opacity 550ms 400ms; }
-
-#checklistAuthorsPanel.show {
-  opacity: 1; }
 
 #checklistOptions.panel {
   position: relative;
@@ -561,7 +557,7 @@ footer a:hover, footer a:focus {
   font-size: 6rem;
   font-weight: bold;
   font-variant: small-caps;
-  color: #60696c;
+  color: #767575;
   text-shadow: 0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af,  0 -1px 2px #75d6af;
   letter-spacing: 0.2em; }
 
@@ -697,7 +693,7 @@ input[type='checkbox']:disabled ~ label:hover, input[type='checkbox']:disabled ~
   outline: none;
   border: none;
   border-radius: 0.38rem;
-  background-color: #6a7377;
+  background-color: #807f7f;
   cursor: default; }
 
 input[type='checkbox']:disabled ~ label::before {
@@ -1032,10 +1028,10 @@ input[type='checkbox']:disabled ~ label {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #6a7377;
+  background-color: #807f7f;
   pointer-events: none;
   z-index: 2;
-  transition: all 300ms ease-in-out 300ms;
+  transition: opacity 300ms ease-in-out 300ms;
   will-change: opacity; }
 
 #countryMenuLayer.show {
@@ -1064,14 +1060,15 @@ input[type='checkbox']:disabled ~ label {
   border-radius: 50%;
   background-color: #356470;
   box-shadow: inset 0 0 0 0.03rem black, 0 0 0 0.05rem black;
-  transition: transform 500ms ease-in-out 100ms, background-color 1s;
+  transition: transform 500ms ease-in-out 100ms;
   will-change: transform; }
 
 #countryButton.slideRight {
   transform: translateX(87vw);
-  transition: transform 500ms 250ms ease-in-out, background-color 1s; }
+  transition: transform 500ms 250ms ease-in-out; }
 
 #countryButton.countryChosen {
+  transform: translateX(65vw);
   width: 5.3rem;
   height: 4.5rem;
   padding: 0;
@@ -1080,8 +1077,8 @@ input[type='checkbox']:disabled ~ label {
   text-align: center;
   background-color: #444;
   border: 0.2rem solid transparent;
-  box-shadow: 0 0 0 0.1rem #6a7377, 0 0 0 0.2rem #444, 0 0 0 0.43rem #888;
-  transition: all 600ms ease-in-out; }
+  box-shadow: 0 0 0 0.1rem #807f7f, 0 0 0 0.2rem #444, 0 0 0 0.43rem #888;
+  transition: transform 600ms ease-in-out; }
 
 #countryButton.countryChosen.slideRight {
   transform: translateX(89vw); }
@@ -1102,7 +1099,7 @@ input[type='checkbox']:disabled ~ label {
   color: #000;
   text-shadow: none;
   background-color: #ddd;
-  box-shadow: 0 0 0 0.1rem #6a7377, 0 0 0 0.2rem #ddd, 0 0 0 0.45rem #6a7377; }
+  box-shadow: 0 0 0 0.1rem #807f7f, 0 0 0 0.2rem #ddd, 0 0 0 0.45rem #807f7f; }
 
 #countryButton:hover:after, #countryButton:focus:after {
   left: 127%;
@@ -1271,7 +1268,7 @@ input[type='checkbox']:disabled ~ label {
   border-top: none;
   border-bottom: none;
   border-bottom-right-radius: 22%;
-  background-color: #464c4f;
+  background-color: #5a5959;
   transform: translateY(0) scaleY(100%);
   transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out; }
 
@@ -1327,8 +1324,8 @@ input[type='checkbox']:disabled ~ label {
   text-align: center;
   border: 0.15rem solid #4db088;
   border-radius: 50%;
-  background-color: #636b6f;
-  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #6a7377;
+  background-color: #787777;
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #807f7f;
   cursor: pointer;
   transition: background-color 300ms; }
 
@@ -1340,7 +1337,7 @@ input[type='checkbox']:disabled ~ label {
 .taxInstructionsButton.instructionsClosed .tooltip {
   width: 10rem;
   border: 0.15rem solid #4db088;
-  background-color: #52595c;
+  background-color: #666666;
   transform: rotate(0); }
 
 #searchForm {
@@ -1349,7 +1346,7 @@ input[type='checkbox']:disabled ~ label {
   width: 80%;
   padding: 0 0 1.8ch 0;
   border: 1px solid transparent;
-  background-color: #464c4f;
+  background-color: #5a5959;
   border-bottom-left-radius: 6.9rem;
   -webkit-transition: all 850ms ease-in-out;
   -moz-transition: all 850ms ease-in-out;
@@ -1492,7 +1489,7 @@ input[type='checkbox']:disabled ~ label {
   overflow-x: visible;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
-  background-color: #52595c;
+  background-color: #666666;
   box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7); }
 
 #printerButton {
@@ -1508,7 +1505,7 @@ input[type='checkbox']:disabled ~ label {
   border-radius: 50%;
   background-color: #222222;
   border: 0.13rem solid #96f1fd;
-  box-shadow: 0.25rem -0.05rem 0 0.24rem #6a7377, 0.2rem -0.1rem 0 0.24rem #6a7377, 0.3rem 0.1rem 0 0.24rem #6a7377, 0.25rem -0.05rem 0 0.27rem rgba(0, 0, 0, 0.6), 0.25rem -0.05rem 0 0.35rem #6a7377, 0 0 0 0.3rem #6a7377, 0.02rem -0.04rem 0 0.3rem #6a7377, -0.02rem 0.04rem 0 0.3rem #6a7377, -0.04rem 0.04rem 0 0.32rem #6a7377, -0.04rem -0.04rem 0 0.3rem rgba(0, 0, 0, 0.6), -0.05rem -0.05rem 0 0.34rem #727272; }
+  box-shadow: 0.25rem -0.05rem 0 0.24rem #807f7f, 0.2rem -0.1rem 0 0.24rem #807f7f, 0.3rem 0.1rem 0 0.24rem #807f7f, 0.25rem -0.05rem 0 0.27rem rgba(0, 0, 0, 0.6), 0.25rem -0.05rem 0 0.35rem #807f7f, 0 0 0 0.3rem #807f7f, 0.02rem -0.04rem 0 0.3rem #807f7f, -0.02rem 0.04rem 0 0.3rem #807f7f, -0.04rem 0.04rem 0 0.32rem #807f7f, -0.04rem -0.04rem 0 0.3rem rgba(0, 0, 0, 0.6), -0.05rem -0.05rem 0 0.34rem #727272; }
 
 #printerButton::before {
   position: absolute;
@@ -1521,7 +1518,7 @@ input[type='checkbox']:disabled ~ label {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
   padding: 0.38rem 0.8rem 0.38rem 1rem;
-  border: 1px solid #6a7377;
+  border: 1px solid #807f7f;
   border-radius: 0.6rem;
   background-color: #222222;
   box-shadow: 0 0 0.09rem black;
@@ -1544,7 +1541,7 @@ input[type='checkbox']:disabled ~ label {
   background-color: #222222;
   border: 0.13rem solid #96f1fd;
   border-radius: 50%;
-  box-shadow: 0 0 0 0.62rem #6a7377, 0 -0.077rem 0 0.62rem #6a7377, -0.077rem 0 0 0.62rem #6a7377, -0.077rem -0.077rem 0 0.62rem rgba(0, 0, 0, 0.5), 0.077rem -0.077rem 0 0.69rem #6a7377, -0.077rem -0.077rem 0 0.69rem #6a7377, -0.077rem -0.077rem 0 0.69rem rgba(255, 255, 255, 0.25), 0.077rem 0 0 0.7rem #6a7377, -0.2rem 0.03rem 0 0.66rem rgba(0, 0, 0, 0.4), 0.077rem -0.077rem 0 0.69rem #6a7377, 0.077rem 0.077rem 0 0.69rem #6a7377, -0.2rem 0.05rem 0 0.66rem rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 0.62rem #807f7f, 0 -0.077rem 0 0.62rem #807f7f, -0.077rem 0 0 0.62rem #807f7f, -0.077rem -0.077rem 0 0.62rem rgba(0, 0, 0, 0.5), 0.077rem -0.077rem 0 0.69rem #807f7f, -0.077rem -0.077rem 0 0.69rem #807f7f, -0.077rem -0.077rem 0 0.69rem rgba(255, 255, 255, 0.25), 0.077rem 0 0 0.7rem #807f7f, -0.2rem 0.03rem 0 0.66rem rgba(0, 0, 0, 0.4), 0.077rem -0.077rem 0 0.69rem #807f7f, 0.077rem 0.077rem 0 0.69rem #807f7f, -0.2rem 0.05rem 0 0.66rem rgba(255, 255, 255, 0.3);
   transition: all 300ms;
   cursor: pointer; }
 
@@ -1561,7 +1558,7 @@ input[type='checkbox']:disabled ~ label {
   top: 90%;
   width: auto;
   padding: 0.38rem 1.5rem 0.38rem 1rem;
-  border: 1px solid #6a7377;
+  border: 1px solid #807f7f;
   border-radius: 0.6rem;
   font-size: 0.9rem;
   z-index: -1;
@@ -1755,7 +1752,7 @@ input[type='checkbox']:disabled ~ label {
   padding: 1ch 0 2ch 0;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
-  background-color: #52595c;
+  background-color: #666666;
   box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
   overflow-x: visible; }
 
@@ -2065,7 +2062,7 @@ input[type='checkbox']:disabled ~ label {
   text-shadow: 0 0.05rem black;
   border: 0.12rem solid #4db088;
   border-right: 0.2rem solid #4db088;
-  background-color: #636b6f;
+  background-color: #787777;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-4deg);
   -webkit-transform-origin: top left;
@@ -2098,7 +2095,7 @@ input[type='checkbox']:disabled ~ label {
   text-shadow: 0 0.03rem black;
   opacity: 1;
   border: 0.077rem solid white;
-  background-color: #6a7377;
+  background-color: #807f7f;
   box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
   transform: rotate(-20deg);
   -webkit-transform-origin: middle right;

@@ -280,8 +280,8 @@ function copyFLAGS() {
 const buildGlobs = {
   occurrences: '../BuildSACC/occurrences/occurrences.txt',
   countries: '../BuildSACC/Countries/*.*',
-  jsons: '../BuildSACC/JSON/**/*.json'
-  // numLists: '../BuildSACC/numLists/numList.js'
+  jsons: '../BuildSACC/JSON/**/*.json',
+  numLists: '../BuildSACC/numLists/numList.js'
 };
 
 function getBuildSACC_Data() {
@@ -305,12 +305,12 @@ function getBuildSACC_JSON() {
     .pipe(gulp.dest("./JSON"));
 }
 
-// function getBuildSACC_NumLists() {
-//   return gulp.src(buildGlobs.numLists)
-//     .pipe(newer("./src/js/numList.js"))
-//     .pipe(print())
-//     .pipe(gulp.dest("./src/js"));
-// }
+function getBuildSACC_NumLists() {
+  return gulp.src(buildGlobs.numLists)
+    .pipe(newer("./src/js/numList.js"))
+    .pipe(print())
+    .pipe(gulp.dest("./src/js"));
+}
 
 // ************************   ftp to experimental.potoococha.net and potoococha.net    **********************  //
 
@@ -386,8 +386,8 @@ exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
   copyPHP, copySVG, copyFLAGS, copyCitations, copyAuthors,
   copyOccurrences, copyCountries, copyJSON, movePrintCSStoTemp);
 
-exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON);
-// exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON, getBuildSACC_NumLists);
+// exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON);
+exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON, getBuildSACC_NumLists);
 
 exports.deploy_E = gulp.series(deployExperimental);
 exports.deploy_P = gulp.series(deployPotoococha);

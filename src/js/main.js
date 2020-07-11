@@ -8,7 +8,9 @@ var lineNumbers;
 var showEndemics;
 
 var currentCountry;
+var previousHighlightedCountryNode;  //  a node
 var checklistAuthorsPanel;
+var AuthorsAbridged;
 var checklistFlyoutText;
 
 var titleBanner;
@@ -97,10 +99,21 @@ document.addEventListener("DOMContentLoaded", function () {
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
 
+  // preload the AuthorsAbridged.json
+  getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
+
+  console.log(AuthorsAbridged);
+
   // target = document.getElementById("checklistArticle");
 
   // updateActivityData("start");
 });
+
+function assignAuthorsJSON(data) {
+
+  AuthorsAbridged = data;
+  // console.log(AuthorsAbridged);
+}
 
 window.addEventListener("load", function () {
   updateActivityData("start");
@@ -146,6 +159,26 @@ function toggleCountryMenuLayer(evt) {
   // if (!countryButton.classList.contains("wasOpened")) countryButton.classList.add("wasOpened");
 
   if (evt) evt.stopPropagation();
+
+  var list = document.querySelectorAll(".countryItem");
+
+  // if (list.hidden == "true") {
+  //   list.hidden = false;
+  // }
+  // else list.hidden = true;
+
+  //   // set tabIndex from -1 to 0 so tabbing through works after country is chosen
+
+  if (countryMenuLayer.classList.contains("show")) {        // country menu shown, should disable all elements on main page
+    list.forEach(function(element) {
+      element.setAttribute("tabindex", "1");
+    });
+  }
+  else {
+    list.forEach(function(element) {
+      element.setAttribute("tabindex", "-1");
+    });
+  }
 
   // document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 }
@@ -240,15 +273,17 @@ function setCountry(evt) {
   if (!currentCountry) document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 
   // find and remove the previous highlighted Country
-  var previousHighlightedCountry = evt.target.parentNode.parentNode.querySelector(".highlight");
-  if (previousHighlightedCountry) previousHighlightedCountry.classList.remove("highlight");
+  // var previousHighlightedCountry = evt.target.parentNode.parentNode.querySelector(".highlight");
+  // if (previousHighlightedCountry) previousHighlightedCountry.classList.remove("highlight");
 
+  if (previousHighlightedCountryNode) previousHighlightedCountryNode.classList.remove("highlight");
   evt.target.classList.add("highlight");
+  previousHighlightedCountryNode = evt.target;
 
   toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
-  updateActivityData("select");
+  updateActivityData("select");  // TODO could this be delayed?
 
   // uploadActivity();
 
@@ -273,16 +308,23 @@ function setChecklistCountryAuthors(country) {
   else if (country !== "South America") selectedCountryFill(country);
   else fillSAMmap("");
 
-  if (country === "Curaçao") {
-    getTEXT("Authors/" + "Curacao.txt", setChecklistAuthors);
-  }
-  else if (country === "French Guiana") {
-    getTEXT("Authors/" + "FrenchGuiana.txt", setChecklistAuthors);
-  }
-  else if (country === "South America") {
-    getTEXT("Authors/" + "SouthAmerica.txt", setChecklistAuthors);
-  }
-  else getTEXT("Authors/" + country + ".txt", setChecklistAuthors);
+  checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
+  // console.log(AuthorsAbridged[currentCountry]);
+  // checklistAuthorsPanel.classList.add("show");
+
+      // preload all these??
+  // setChecklistAuthors();
+
+  // if (country === "Curaçao") {
+  //   getTEXT("Authors/" + "Curacao.txt", setChecklistAuthors);
+  // }
+  // else if (country === "French Guiana") {
+  //   getTEXT("Authors/" + "FrenchGuiana.txt", setChecklistAuthors);
+  // }
+  // else if (country === "South America") {
+  //   getTEXT("Authors/" + "SouthAmerica.txt", setChecklistAuthors);
+  // }
+  // else getTEXT("Authors/" + country + ".txt", setChecklistAuthors);
 }
 
 function setChecklistAuthors(data) {
@@ -290,17 +332,16 @@ function setChecklistAuthors(data) {
   // Remsen, J. V., Jr., J. I. Areta, C. D. Cadena, S. Claramunt, A. Jaramillo, J. F. Pacheco, M. B. Robbins, F. G. Stiles, D. F. Stotz, and K. J. Zimmer.
   // Version 21 June 2018. A classification of the bird species of South America.American Ornithologists' Union.
 
-  var authors;
+  // var authors;
 
-  if (currentCountry === "South America") {
-    // authors = data.replace(/^.*(Version.*)$/g, "$1");
-    authors = data.replace(/^.*Version(.*)$/g, "Remsen, et al. $1");
-  }
+  // if (currentCountry === "South America") {
+  //   authors = data.replace(/^.*Version(.*)$/g, "Remsen, et al. $1");
+  // }
 
-  else if (currentCountry === "Colombia") {
-    authors = data.replace(/^(.*)\s+\(.*\).*Version(.*)$/g, "$1. $2");
-    // authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
-  }
+  // else if (currentCountry === "Colombia") {
+  //   authors = data.replace(/^(.*)\s+\(.*\).*Version(.*)$/g, "$1. $2");
+  //   // authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
+  // }
 
   // Asociación Colombiana de Ornitología checklist committee (Jorge E. Avendaño, Clara I. Bohórquez, Loreta Rosselli, Diana Arzuza-Buelvas,
   // Felipe A.Estela, Andrés M.Cuervo, F.Gary Stiles, and Luis Miguel Renjifo). 2018.
@@ -309,12 +350,15 @@ function setChecklistAuthors(data) {
   // Freile, J. F., R. Ahlman, R. S. Ridgely, A. Solano-Ugalde, D. Brinkhuizen, L. Navarrete, and P. J. Greenfield.
   // 2018. Species lists of birds for South American countries and territories: Ecuador. Version 15 February 2017.
 
-  else {
-    authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
-  }
+  // else {
+  //   authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
+  // }
 
-  checklistAuthorsPanel.innerHTML = authors;
-  checklistAuthorsPanel.classList.add("show");
+  // checklistAuthorsPanel.innerHTML = authors;
+
+  // checklistAuthorsPanel.innerHTML = AuthorsAbridged[currentCountry];
+  // console.log(AuthorsAbridged[currentCountry]);
+  // checklistAuthorsPanel.classList.add("show");
 }
 
 function setNumDays(evt) {

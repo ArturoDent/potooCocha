@@ -26,7 +26,8 @@
 
 #checklistAuthorsPanel  {
     position: relative;
-    opacity: 0;
+    // opacity: 0;
+
     height : auto;
     width: 100%;
     top : 0;
@@ -43,9 +44,9 @@
     transition : opacity 550ms 400ms;
 }
 
-#checklistAuthorsPanel.show  {
-    opacity: 1;
-}
+// #checklistAuthorsPanel.show  {
+//     opacity: 1;
+// }
 
 #checklistOptions.panel {
     position  :  relative;
