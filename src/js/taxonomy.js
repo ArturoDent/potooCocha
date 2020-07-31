@@ -76,6 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
   taxPage.addEventListener("click", toggleFamilyOpen);
   taxPanel = document.getElementById("tax-panel");
 
+    // preload the AuthorsAbridged.json
+  getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
+
   // preloading the file occurrences.txt
   // getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
   getTEXT("../occurrences/occurrences.txt", loadOccurrences);
@@ -112,7 +115,7 @@ function getJSON(url, success) {
       success(xhr.response);
     }
     else {
-      throw new Error("getJSON failed : " + xhr.responseText);
+      throw new Error("getJSON failed : " + xhr.response);
     }
   };
   xhr.send();
@@ -256,7 +259,7 @@ function loadCountryTaxonomy(country) {
   }
 
   
-  if (country === "South America") searchCountryText.innerHTML = "South America (June 14, 2020)<br>or a single country";
+  if (country === "South America") searchCountryText.innerHTML = "South America (July 30, 2020)<br>or a single country";
   else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 

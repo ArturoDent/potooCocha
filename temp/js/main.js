@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
 
-  // preload the AuthorsAbridged.json
-  getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
+  // // preload the AuthorsAbridged.json
+  // getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
 
   // target = document.getElementById("checklistArticle");
 
@@ -313,27 +313,13 @@ function setChecklistCountryAuthors(country) {
   else if (country !== "South America") selectedCountryFill(country);
   else fillSAMmap("");
 
+  // if (country === "South America")
+  //   checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;30&nbsp;July&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  // else checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
 
-
-  if (country === "South America")
-    checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;14&nbsp;June&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
-  else checklistAuthorsPanel.innerHTML = AuthorsAbridged[ country ];
-  // console.log(AuthorsAbridged[currentCountry]);
-  // checklistAuthorsPanel.classList.add("show");
-
-      // preload all these??
-  // setChecklistAuthors();
-
-  // if (country === "Curaçao") {
-  //   getTEXT("Authors/" + "Curacao.txt", setChecklistAuthors);
-  // }
-  // else if (country === "French Guiana") {
-  //   getTEXT("Authors/" + "FrenchGuiana.txt", setChecklistAuthors);
-  // }
-  // else if (country === "South America") {
-  //   getTEXT("Authors/" + "SouthAmerica.txt", setChecklistAuthors);
-  // }
-  // else getTEXT("Authors/" + country + ".txt", setChecklistAuthors);
+    // check because AuthorsAbridged hasn't been downloaded yet
+  if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;30&nbsp;July&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 // function setChecklistAuthors(data) {

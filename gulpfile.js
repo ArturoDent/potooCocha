@@ -51,7 +51,7 @@ const paths = {
     src: "citations.html"
   },
   authors: {
-    src: "Authors/*.txt",
+    src: "Authors/*.{txt,json}",
     deploy: "./deploy/Authors"
   },
   occurrences: {
