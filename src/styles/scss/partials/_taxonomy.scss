@@ -255,15 +255,16 @@
 
 // #searchSpecials.SAM .searchSpecialWrapper  {  padding : 0.2ch 0 0.2ch 0;  }
 
-#searchSpecials div.notAvailable  {  display : none;  }
+// #searchSpecials div.notAvailable  {  display : none;  }
+#searchSpecials div.notAvailable  {  pointer-events: none;  opacity: 0.5; }
 
-#searchSpecials.SAM  {
-    justify-content  :  space-around;
-    // padding: 3.5rem 0;
-    padding: 1.3rem 0;
-    // top : -5.8ch;
-    top : -2.1ch;
-}
+// #searchSpecials.SAM  {
+//     // justify-content  :  space-around;
+//     // padding: 1.3rem 0;
+//     // top : -2.1ch;
+
+    
+// }
 
 
 #searchTerm  span {

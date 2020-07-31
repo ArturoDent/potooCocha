@@ -68,7 +68,7 @@ E,Chilean Tinamou,N. perdicaria
 ,Ashy-headed Goose,C. poliocephala
 ,Ruddy-headed Goose,C. rubidiceps
 ,Muscovy Duck,Cairina moschata
-,American Comb-Duck,Sarkidiornis sylvicola
+,Comb Duck,Sarkidiornis sylvicola
 ,Ringed Teal,Callonetta leucophrys
 ,Brazilian Teal,Amazonetta brasiliensis
 ,Torrent Duck,Merganetta armata
@@ -427,8 +427,9 @@ E,Coppery Thorntail,D. letitiae
 E,Frilled Coquette,L. magnificus
 ,Rufous-crested Coquette,L. delattrei
 ,Spangled Coquette,L. stictolophus
+,Butterfly Coquette,L. verreauxii
 ,Festive Coquette,L. chalybeus
-,Peacock Coquette,L. pavoninus
+E,Peacock Coquette,L. pavoninus
 ,Ecuadorian Piedtail,Phlogophilus hemileucurus
 E,Peruvian Piedtail,P. harterti
 ,Speckled Hummingbird,Adelomyia melanogenys
@@ -455,7 +456,7 @@ E,Black-backed Thornbill,Ramphomicron dorsale
 ,Blue-mantled Thornbill,C. stanleyi
 ,Bronze-tailed Thornbill,C. heteropogon
 ,Rainbow-bearded Thornbill,C. herrani
-E,Buffy Helmetcrest,Oxypogon stubelii
+E,Buffy Helmetcrest,Oxypogon stuebelii
 E,Blue-bearded Helmetcrest,O. cyanolaemus
 E,White-bearded Helmetcrest,O. lindenii
 E,Green-bearded Helmetcrest,O. guerinii
@@ -556,6 +557,7 @@ E,Santa Marta Blossomcrown,Anthocephala floriceps
 E,Tolima Blossomcrown,A. berlepschi
 ,Gray-breasted Sabrewing,Campylopterus largipennis
 E,Outcrop Sabrewing,C. calcirupicola
+E,Diamantina Sabrewing,C. diamantinensis
 ,Rufous-breasted Sabrewing,C. hyperythrus
 ,White-tailed Sabrewing,C. ensipennis
 ,Lazuline Sabrewing,C. falcatus
@@ -579,7 +581,7 @@ E,Spot-throated Hummingbird,T. taczanowskii
 E,Sombre Hummingbird,E. cirrochloris
 ,Olive-spotted Hummingbird,Talaphorus chlorocercus
 E,Chestnut-bellied Hummingbird,Saucerottia castaneiventris
-,Steely-vented Hummingbird,S. saucerottei
+,undefined,S. saucerottei
 E,Indigo-capped Hummingbird,S. cyanifrons
 ,Snowy-bellied Hummingbird,S. edward
 ,Green-bellied Hummingbird,S. viridigaster
@@ -719,7 +721,7 @@ E,Little Wood-Rail,A. mangle
 ,Eskimo Curlew,Numenius borealis
 ,Whimbrel,N. phaeopus
 ,Long-billed Curlew,N. americanus
-,Eurasian Curlew,N. arquatus
+,Eurasian Curlew,N. arquata
 ,Bar-tailed Godwit,Limosa lapponica
 ,Black-tailed Godwit,L. limosa
 ,Hudsonian Godwit,L. haemastica
@@ -1891,6 +1893,7 @@ E,Diamantina Tapaculo,S. diamantinensis
 E,Rock Tapaculo,S. petrophilus
 ,Planalto Tapaculo,S. pachecoi
 E,Marsh Tapaculo,S. iraiensis
+E,Utcubamba Tapaculo,S. intermedius
 E,Large-footed Tapaculo,S. macropus
 E,Santa Marta Tapaculo,S. sanctaemartae
 ,Long-tailed Tapaculo,S. micropterus
@@ -1914,6 +1917,8 @@ E,Brasilia Tapaculo,S. novacapitalis
 ,Magellanic Tapaculo,S. magellanicus
 ,Pale-bellied Tapaculo,S. griseicollis
 E,Neblina Tapaculo,S. altirostris
+E,Jalca Tapaculo,S. frankeae
+E,White-winged Tapaculo,S. krabbei
 E,Ancash Tapaculo,S. affinis
 E,Tschudi's Tapaculo,S. acutirostris
 E,Vilcabamba Tapaculo,S. urubambae
@@ -1923,6 +1928,8 @@ E,White-browed Tapaculo,S. superciliaris
 E,Dusky Tapaculo,S. fuscus
 E,Paramillo Tapaculo,S. canus
 ,Paramo Tapaculo,S. opacus
+,Loja Tapaculo,S. androstictus
+E,Ampay Tapaculo,S. whitneyi
 ,Diademed Tapaculo,S. schulenbergi
 E,Junin Tapaculo,S. gettyae
 
@@ -1940,7 +1947,7 @@ E,Such's Antthrush,C. meruloides
 ,Barred Antthrush,C. mollissima
 
 ,OVENBIRDS,FURNARIIDAE
-,Tawny-throated Leaftosser,Sclerurus mexicanus
+,South American Leaftosser,Sclerurus obscurior
 ,Short-billed Leaftosser,S. rufigularis
 ,Scaly-throated Leaftosser,S. guatemalensis
 ,Black-tailed Leaftosser,S. caudacutus
@@ -3022,28 +3029,28 @@ E,Yellow-faced Siskin,S. yarrellii
 ,Yellow-rumped Siskin,S. uropygialis
 ,Black-chinned Siskin,S. barbatus
 ,Lesser Goldfinch,S. psaltria
-,Plumbeous Euphonia,Euphonia plumbea
-,Purple-throated Euphonia,E. chlorotica
-,Trinidad Euphonia,E. trinitatis
-E,Velvet-fronted Euphonia,E. concinna
-,Orange-crowned Euphonia,E. saturata
-,Finsch's Euphonia,E. finschi
-,Violaceous Euphonia,E. violacea
-,Thick-billed Euphonia,E. laniirostris
-,Green-throated Euphonia,E. chalybea
-,Golden-rumped Euphonia,E. cyanocephala
-,Fulvous-vented Euphonia,E. fulvicrissa
-,Golden-bellied Euphonia,E. chrysopasta
-,Bronze-green Euphonia,E. mesochrysa
-,White-vented Euphonia,E. minuta
-,Tawny-capped Euphonia,E. anneae
-,Orange-bellied Euphonia,E. xanthogaster
-,Rufous-bellied Euphonia,E. rufiventris
-,Golden-sided Euphonia,E. cayennensis
-,Chestnut-bellied Euphonia,E. pectoralis
-,Blue-naped Chlorophonia,Chlorophonia cyanea
+,Golden-rumped Euphonia,Chlorophonia cyanocephala
+,Blue-naped Chlorophonia,C. cyanea
 ,Chestnut-breasted Chlorophonia,C. pyrrhophrys
 ,Yellow-collared Chlorophonia,C. flavirostris
+,Orange-crowned Euphonia,Euphonia saturata
+,Plumbeous Euphonia,E. plumbea
+,Purple-throated Euphonia,E. chlorotica
+,Finsch's Euphonia,E. finschi
+E,Velvet-fronted Euphonia,E. concinna
+,Trinidad Euphonia,E. trinitatis
+,Golden-bellied Euphonia,E. chrysopasta
+,White-vented Euphonia,E. minuta
+,Green-throated Euphonia,E. chalybea
+,Violaceous Euphonia,E. violacea
+,Thick-billed Euphonia,E. laniirostris
+,Fulvous-vented Euphonia,E. fulvicrissa
+,Tawny-capped Euphonia,E. anneae
+,Orange-bellied Euphonia,E. xanthogaster
+,Bronze-green Euphonia,E. mesochrysa
+,Golden-sided Euphonia,E. cayennensis
+,Rufous-bellied Euphonia,E. rufiventris
+,Chestnut-bellied Euphonia,E. pectoralis
 
 ,THRUSH-TANAGER,RHODINOCICHLIDAE
 ,Rosy Thrush-Tanager,Rhodinocichla rosea
@@ -3056,9 +3063,8 @@ E,Velvet-fronted Euphonia,E. concinna
 ,Common Chlorospingus,C. flavopectus
 ,Tacarcuna Chlorospingus,C. tacarcunae
 ,Dusky Chlorospingus,C. semifuscus
-,Yellow-green Chlorospingus,C. flavovirens
 ,Tumbes Sparrow,Rhynchospiza stolzmanni
-,Yungas Sparrow,R. dabennei
+,Yungas Sparrow,R. dabbennei
 ,Chaco Sparrow,R. strigiceps
 ,Grasshopper Sparrow,Ammodramus savannarum
 ,Grassland Sparrow,A. humeralis
@@ -3118,7 +3124,7 @@ E,Yellow-striped Brushfinch,A. citrinellus
 ,Eastern Meadowlark,Sturnella magna
 ,Red-breasted Meadowlark,Leistes militaris
 ,White-browed Meadowlark,L. superciliaris
-,Peruvian Meadowlark,L. bellicosa
+,Peruvian Meadowlark,L. bellicosus
 ,Pampas Meadowlark,L. defilippii
 ,Long-tailed Meadowlark,L. loyca
 ,Yellow-billed Cacique,Amblycercus holosericeus
@@ -3340,7 +3346,7 @@ E,Carbonated Sierra Finch,P. carbonaria
 ,Blue Finch,P. caerulescens
 ,Red-backed Sierra Finch,Idiopsar dorsalis
 ,White-throated Sierra Finch,I. erythronotus
-,White-winged Diuca Finch,I. speculifera
+,White-winged Diuca Finch,I. speculifer
 ,Short-tailed Finch,I. brachyurus
 ,White-bridled Finch,Melanodera melanodera
 ,Yellow-bridled Finch,M. xanthogramma
@@ -3561,7 +3567,7 @@ E,Cinnamon Tanager,S. ruficapillus
 ,Golden-crowned Tanager,I. rufivertex
 E,Yellow-scarfed Tanager,I. reinhardti
 ,Fawn-breasted Tanager,Pipraeidea melanonota
-,Blue-and-yellow Tanager,P. bonariensis
+,Blue-and-yellow Tanager,Rauenia bonariensis
 ,Rufous-bellied Mountain-Tanager,Pseudosaltator rufiventris
 ,Buff-breasted Mountain-Tanager,Dubusia taeniata
 ,Chestnut-bellied Mountain-Tanager,D. castaneoventris
@@ -3582,6 +3588,7 @@ E,Black-and-gold Tanager,B. melanochlamys
 ,Golden-chested Tanager,B. rothschildi
 ,Moss-backed Tanager,B. edwardsi
 E,Gold-ringed Tanager,B. aureocincta
+,Yellow-green Tanager,B. flavovirens
 ,Golden-naped Tanager,Chalcothraupis ruficervix
 ,Gray-and-gold Tanager,Poecilostreptus palmeri
 ,Black-headed Tanager,Stilpnia cyanoptera

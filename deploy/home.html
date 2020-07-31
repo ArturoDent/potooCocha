@@ -22,7 +22,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/styles.min.css?v=20200609205501">
+  <link rel="stylesheet" href="css/styles.min.css?v=20200730224329">
 
 </head>
 
@@ -114,8 +114,7 @@
         <button class="taxInstructionsButton hasTooltip"  type="button" aria-label="Close these search instructions">?<span class="tooltip">Close instructions</span></button>
 
         <h1 class="searchWord">Search the South American Classification Committee's <a class="linkHighlight" href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
-            target="_blank" rel="noopener noreferrer">taxonomy</a> for <span id="searchCountryText">South America
-            (June 8, 2020)</span>.</h1>
+            target="_blank" rel="noopener noreferrer">taxonomy</a> for <span id="searchCountryText">South America (July 30, 2020)<br>or another country</span>. </h1>
 
         <div class="slideUpWrapper panel">
 
@@ -143,21 +142,21 @@
         <form id="searchForm" class='panel'>
 
           <div class="searchForm_contents">
-            <span class="grayed searchGroup">
+            <span class="searchGroup">
               <label for="searchInput">search &nbsp;: &nbsp; </label>
               <input name="searchField" id="searchInput" size="20" type="text" autocomplete="off" autocorrect="off"
-                autocapitalize="off" spellcheck="false" tabindex="-1" list="input-search-terms">
+                autocapitalize="off" spellcheck="false" tabindex="0" list="input-search-terms">
               <svg class="icon icon-mag-glass">
                 <use xlink:href="#icon-mag-glass"></use>
               </svg>
             </span>
           </div>
 
-          <div id="searchSpecials" class="grayed">
-            <div class="searchSpecialWrapper"><a tabindex="-1">e<span class="highlightSpecial">x</span>tinct</a></div>
-            <div class="searchSpecialWrapper"><a tabindex="-1"><span class="highlightSpecial">e</span>ndemic</a></div>
-            <div class="searchSpecialWrapper"><a tabindex="-1"><span class="highlightSpecial">h</span>ypothetical</a></div>
-            <div class="searchSpecialWrapper"><a tabindex="-1"><span class="highlightSpecial">v</span>agrant</a></div>
+          <div id="searchSpecials">
+            <div class="searchSpecialWrapper"><a tabindex="0">e<span class="highlightSpecial">x</span>tinct</a></div>
+            <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">e</span>ndemic</a></div>
+            <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">h</span>ypothetical</a></div>
+            <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">v</span>agrant</a></div>
           </div>
 
         </form>
@@ -166,7 +165,7 @@
       <article class='panel' id='results-panel'>
         <div id='fakeResultsBox'>
 
-          <div id='countrySearch' class='closed flyoutPanel'>
+          <div id='countrySearch' class='flyoutPanel'>
             <span id='searchTerm'></span>
           </div>
           <ul id='searchResults' contenteditable='false'>
@@ -404,66 +403,66 @@
     </div>
   </article>
 
-  <button id="countryButton" class="genericButton slideRight"  type="button" aria-label="Select a country" tabindex="0">select country</button>
+  <button id="countryButton" class="genericButton slideRight"  type="button" aria-label="Select a country" tabindex="1">SA</button>
 
   <div id="countryMenuLayer">
 
-      <nav id="country-menu" contenteditable="false">
-        <div class="countryItem"><a tabindex="0">South America</a>
+      <nav id="country-menu" hidden="true" contenteditable="false">
+        <div class="countryItem"><a id="SAM" tabindex="-1">South America</a>
           <div class="flag"><img src="../../../flags/32/South-America-min.png" alt="Continent of South America"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Aruba</a>
+        <div class="countryItem"><a tabindex="-1">Aruba</a>
           <div class="flag"><img src="../../../flags/32/Aruba.png" alt="Flag of Aruba"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Curaçao</a>
+        <div class="countryItem"><a tabindex="-1">Curaçao</a>
           <div class="flag"><img src="../../../flags/32/Curacao.png" alt="Flag of Curacao"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Bonaire</a>
+        <div class="countryItem"><a tabindex="-1">Bonaire</a>
           <div class="flag"><img src="../../../flags/32/Bonaire.png" alt="Flag of Bonaire"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Trinidad</a>
+        <div class="countryItem"><a tabindex="-1">Trinidad</a>
           <div class="flag"><img src="../../../flags/32/Trinidad-and-tobago.png" alt="Flag of Trinidad and Tobago"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">French Guiana</a>
+        <div class="countryItem"><a tabindex="-1">French Guiana</a>
           <div class="flag"><img src="../../../flags/32/French-Southern.png" alt="Flag of French Guiana"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Suriname</a>
+        <div class="countryItem"><a tabindex="-1">Suriname</a>
           <div class="flag"><img src="../../../flags/32/Suriname.png" alt="Flag of Suriname"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Guyana</a>
+        <div class="countryItem"><a tabindex="-1">Guyana</a>
           <div class="flag"><img src="../../../flags/32/Guyana.png" alt="Flag of Guyana"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Venezuela</a>
+        <div class="countryItem"><a tabindex="-1">Venezuela</a>
           <div class="flag"><img src="../../../flags/32/Venezuela.png" alt="Flag of Venezuela"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Colombia</a>
+        <div class="countryItem"><a tabindex="-1">Colombia</a>
           <div class="flag"><img src="../../../flags/32/Colombia.png" alt="Flag of Colombia"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Ecuador</a>
+        <div class="countryItem"><a tabindex="-1">Ecuador</a>
           <div class="flag"><img src="../../../flags/32/Ecuador.png" alt="Flag of Ecuador"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Peru</a>
+        <div class="countryItem"><a tabindex="-1">Peru</a>
           <div class="flag"><img src="../../../flags/32/Peru.png" alt="Flag of Peru"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Bolivia</a>
+        <div class="countryItem"><a tabindex="-1">Bolivia</a>
           <div class="flag"><img src="../../../flags/32/Bolivia.png" alt="Flag of Bolivia"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Chile</a>
+        <div class="countryItem"><a tabindex="-1">Chile</a>
           <div class="flag"><img src="../../../flags/32/Chile.png" alt="Flag of Chile"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Argentina</a>
+        <div class="countryItem"><a tabindex="-1">Argentina</a>
           <div class="flag"><img src="../../../flags/32/Argentina.png" alt="Flag of Argentina"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Falklands</a>
+        <div class="countryItem"><a tabindex="-1">Falklands</a>
           <div class="flag"><img src="../../../flags/32/Falkland-islands.png" alt="Flag of British Falkland Islands"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Brazil</a>
+        <div class="countryItem"><a tabindex="-1">Brazil</a>
           <div class="flag"><img src="../../../flags/32/Brazil.png" alt="Flag of Brazil"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Uruguay</a>
+        <div class="countryItem"><a tabindex="-1">Uruguay</a>
           <div class="flag"><img src="../../../flags/32/Uruguay.png" alt="Flag of Uruguay"></div>
         </div>
-        <div class="countryItem"><a tabindex="0">Paraguay</a>
+        <div class="countryItem"><a tabindex="-1">Paraguay</a>
           <div class="flag"><img src="../../../flags/32/Paraguay.png" alt="Flag of Paraguay"></div>
         </div>
       </nav>
@@ -471,7 +470,7 @@
     </div>
 
 
-  <script src="js/app.min.js?v=20200609205501"></script>
+  <script src="js/app.min.js?v=20200730224329"></script>
 
 </body>
 

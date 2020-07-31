@@ -102,11 +102,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // preload the AuthorsAbridged.json
   getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
 
-  console.log(AuthorsAbridged);
-
   // target = document.getElementById("checklistArticle");
 
   // updateActivityData("start");
+
+  // var SAMTarget = document.getElementById( "SAM" );
+  // var evt = new Event("click", {"bubbles":true, "cancelable":false});
+
+  // SAMTarget.dispatchEvent(evt);
+
+  // setCountry(eventTarget);
 });
 
 function assignAuthorsJSON(data) {
@@ -308,7 +313,11 @@ function setChecklistCountryAuthors(country) {
   else if (country !== "South America") selectedCountryFill(country);
   else fillSAMmap("");
 
-  checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
+
+
+  if (country === "South America")
+    checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;14&nbsp;June&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = AuthorsAbridged[ country ];
   // console.log(AuthorsAbridged[currentCountry]);
   // checklistAuthorsPanel.classList.add("show");
 
@@ -327,7 +336,7 @@ function setChecklistCountryAuthors(country) {
   // else getTEXT("Authors/" + country + ".txt", setChecklistAuthors);
 }
 
-function setChecklistAuthors(data) {
+// function setChecklistAuthors(data) {
 
   // Remsen, J. V., Jr., J. I. Areta, C. D. Cadena, S. Claramunt, A. Jaramillo, J. F. Pacheco, M. B. Robbins, F. G. Stiles, D. F. Stotz, and K. J. Zimmer.
   // Version 21 June 2018. A classification of the bird species of South America.American Ornithologists' Union.
@@ -359,7 +368,7 @@ function setChecklistAuthors(data) {
   // checklistAuthorsPanel.innerHTML = AuthorsAbridged[currentCountry];
   // console.log(AuthorsAbridged[currentCountry]);
   // checklistAuthorsPanel.classList.add("show");
-}
+// }
 
 function setNumDays(evt) {
 

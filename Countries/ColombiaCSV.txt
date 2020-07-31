@@ -28,7 +28,7 @@
 ,Black-bellied Whistling-Duck,D. autumnalis
 ,Orinoco Goose,Oressochen jubatus
 ,Muscovy Duck,Cairina moschata
-,American Comb-Duck,Sarkidiornis sylvicola
+,Comb Duck,Sarkidiornis sylvicola
 ,Brazilian Teal,Amazonetta brasiliensis
 ,Torrent Duck,Merganetta armata
 ,Puna Teal,Spatula puna
@@ -259,7 +259,7 @@ E,Bogota Sunangel,H. zusii
 ,Racket-tipped Thorntail,D. longicaudus
 ,Rufous-crested Coquette,Lophornis delattrei
 ,Spangled Coquette,L. stictolophus
-,Festive Coquette,L. chalybeus
+,Butterfly Coquette,L. verreauxii
 ,Ecuadorian Piedtail,Phlogophilus hemileucurus
 ,Speckled Hummingbird,Adelomyia melanogenys
 ,Long-tailed Sylph,Aglaiocercus kingii
@@ -274,7 +274,7 @@ E,Black-backed Thornbill,Ramphomicron dorsale
 ,Blue-mantled Thornbill,C. stanleyi
 ,Bronze-tailed Thornbill,C. heteropogon
 ,Rainbow-bearded Thornbill,C. herrani
-E,Buffy Helmetcrest,Oxypogon stubelii
+E,Buffy Helmetcrest,Oxypogon stuebelii
 E,Blue-bearded Helmetcrest,O. cyanolaemus
 E,Green-bearded Helmetcrest,O. guerinii
 ,Tyrian Metaltail,Metallura tyrianthina
@@ -355,7 +355,6 @@ E,Santa Marta Sabrewing,C. phainopeplus
 ,Many-spotted Hummingbird,Taphrospilus hypostictus
 ,Olive-spotted Hummingbird,Talaphorus chlorocercus
 E,Chestnut-bellied Hummingbird,Saucerottia castaneiventris
-,Steely-vented Hummingbird,S. saucerottei
 E,Indigo-capped Hummingbird,S. cyanifrons
 ,Snowy-bellied Hummingbird,S. edward
 ,Green-bellied Hummingbird,S. viridigaster
@@ -1148,7 +1147,7 @@ E,Paramillo Tapaculo,S. canus
 ,Barred Antthrush,C. mollissima
 
 ,OVENBIRDS,FURNARIIDAE
-,Tawny-throated Leaftosser,Sclerurus mexicanus
+,South American Leaftosser,Sclerurus obscurior
 ,Short-billed Leaftosser,S. rufigularis
 ,Scaly-throated Leaftosser,S. guatemalensis
 ,Black-tailed Leaftosser,S. caudacutus
@@ -1714,23 +1713,23 @@ E,Munchique Wood-Wren,H. negreti
 ,Hooded Siskin,S. magellanicus
 ,Yellow-bellied Siskin,S. xanthogastrus
 ,Lesser Goldfinch,S. psaltria
-,Plumbeous Euphonia,Euphonia plumbea
-,Purple-throated Euphonia,E. chlorotica
-,Trinidad Euphonia,E. trinitatis
-E,Velvet-fronted Euphonia,E. concinna
-,Orange-crowned Euphonia,E. saturata
-,Thick-billed Euphonia,E. laniirostris
-,Golden-rumped Euphonia,E. cyanocephala
-,Fulvous-vented Euphonia,E. fulvicrissa
-,Golden-bellied Euphonia,E. chrysopasta
-,Bronze-green Euphonia,E. mesochrysa
-,White-vented Euphonia,E. minuta
-,Tawny-capped Euphonia,E. anneae
-,Orange-bellied Euphonia,E. xanthogaster
-,Rufous-bellied Euphonia,E. rufiventris
-,Blue-naped Chlorophonia,Chlorophonia cyanea
+,Golden-rumped Euphonia,Chlorophonia cyanocephala
+,Blue-naped Chlorophonia,C. cyanea
 ,Chestnut-breasted Chlorophonia,C. pyrrhophrys
 ,Yellow-collared Chlorophonia,C. flavirostris
+,Orange-crowned Euphonia,Euphonia saturata
+,Plumbeous Euphonia,E. plumbea
+,Purple-throated Euphonia,E. chlorotica
+E,Velvet-fronted Euphonia,E. concinna
+,Trinidad Euphonia,E. trinitatis
+,Golden-bellied Euphonia,E. chrysopasta
+,White-vented Euphonia,E. minuta
+,Thick-billed Euphonia,E. laniirostris
+,Fulvous-vented Euphonia,E. fulvicrissa
+,Tawny-capped Euphonia,E. anneae
+,Orange-bellied Euphonia,E. xanthogaster
+,Bronze-green Euphonia,E. mesochrysa
+,Rufous-bellied Euphonia,E. rufiventris
 
 ,THRUSH-TANAGER,RHODINOCICHLIDAE
 ,Rosy Thrush-Tanager,Rhodinocichla rosea
@@ -1743,7 +1742,6 @@ E,Velvet-fronted Euphonia,E. concinna
 ,Common Chlorospingus,C. flavopectus
 ,Tacarcuna Chlorospingus,C. tacarcunae
 ,Dusky Chlorospingus,C. semifuscus
-,Yellow-green Chlorospingus,C. flavovirens
 ,Grasshopper Sparrow,Ammodramus savannarum
 ,Grassland Sparrow,A. humeralis
 ,Yellow-browed Sparrow,A. aurifrons
@@ -1778,7 +1776,7 @@ E,Antioquia Brushfinch,A. blancae
 ,Bobolink,Dolichonyx oryzivorus
 ,Eastern Meadowlark,Sturnella magna
 ,Red-breasted Meadowlark,Leistes militaris
-,Peruvian Meadowlark,L. bellicosa
+,Peruvian Meadowlark,L. bellicosus
 ,Yellow-billed Cacique,Amblycercus holosericeus
 ,Russet-backed Oropendola,Psarocolius angustifrons
 ,Green Oropendola,P. viridis
@@ -2038,6 +2036,7 @@ E,Black-and-gold Tanager,B. melanochlamys
 ,Golden-chested Tanager,B. rothschildi
 ,Moss-backed Tanager,B. edwardsi
 E,Gold-ringed Tanager,B. aureocincta
+,Yellow-green Tanager,B. flavovirens
 ,Golden-naped Tanager,Chalcothraupis ruficervix
 ,Gray-and-gold Tanager,Poecilostreptus palmeri
 ,Black-headed Tanager,Stilpnia cyanoptera

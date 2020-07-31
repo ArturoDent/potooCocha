@@ -77,7 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
   taxPanel = document.getElementById("tax-panel");
 
   // preloading the file occurrences.txt
-  getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
+  // getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
+  getTEXT("../occurrences/occurrences.txt", loadOccurrences);
+
+  var SAMTarget = document.getElementById( "SAM" );
+  var evt = new Event("click", { "bubbles": true, "cancelable": false });
+  SAMTarget.dispatchEvent( evt );
+  toggleCountryMenuLayer();
 });
 
 // fetch() not supported by IE11
@@ -169,36 +175,36 @@ function toggleFooterFocusable(disable) {
   }
 }
 
-function enableSearchSpecials() {
+// function enableSearchSpecials() {
 
-  document.querySelector("#searchForm span.grayed").classList.remove("grayed");
-  searchSpecials.classList.remove("grayed");
+  // document.querySelector("#searchForm span.grayed").classList.remove("grayed");
+  // searchSpecials.classList.remove("grayed");
 
-  var list = searchSpecials.querySelectorAll("a");
-    // set tabIndex from -1 to 0 so tabbing works through searchSpecials after country is chosen
+  // var list = searchSpecials.querySelectorAll("a");
+  //   // set tabIndex from -1 to 0 so tabbing works through searchSpecials after country is chosen
 
-  list.forEach(function(element) {
-    element.setAttribute("tabindex", "0");
-  });
+  // list.forEach(function(element) {
+  //   element.setAttribute("tabindex", "0");
+  // });
 
-  searchInput.setAttribute("tabindex", "0");
-}
+  // searchInput.setAttribute("tabindex", "0");
+// }
 
 // eslint-disable-next-line
 function loadCountryTaxonomy(country) {
 
-  if (searchSpecials.classList.contains("grayed")) {
-    enableSearchSpecials();
-    closeOpenFamiliesButton.setAttribute("tabindex", "0");
-  }
+  // if (searchSpecials.classList.contains("grayed")) {
+  //   enableSearchSpecials();
+  //   closeOpenFamiliesButton.setAttribute("tabindex", "0");
+  // }
 
   // lastQuery.slice(0, 24) to limit lastQuery length in the searchTerm flyout
   if (lastQuery) {
-    document.getElementById("countrySearch").classList.remove("closed");
+    // document.getElementById("countrySearch").classList.remove("closed");
     document.getElementById("searchTerm").innerHTML = country + " : <span>" + lastQuery + "</span>";
   }
 
-  if (country !== "South America") {  
+  if (country !== "South America") {
     searchResults.classList.remove("samTax");
     taxPage.classList.remove("samTax");
   }
@@ -223,7 +229,7 @@ function loadCountryTaxonomy(country) {
     searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
     searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
 
-    searchSpecials.classList.add("SAM");
+    // searchSpecials.classList.add("SAM");
     taxPage.classList.add("samTax");
   }
   else if (country) {
@@ -236,7 +242,7 @@ function loadCountryTaxonomy(country) {
   if (country !== "South America") {
     searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
     searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
-    searchSpecials.classList.remove("SAM");
+    // searchSpecials.classList.remove("SAM");
   }
 
   var specials = /extinct|endemic|hypothetical|vagrant/;
@@ -249,7 +255,9 @@ function loadCountryTaxonomy(country) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
   }
 
-  if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
+  
+  if (country === "South America") searchCountryText.innerHTML = "South America (June 14, 2020)<br>or a single country";
+  else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 
   if (country === "Falklands")
@@ -337,6 +345,8 @@ function moveTaxPanel(whatIsOpening) {
 
 function buildTaxTree(thisCountryFamilies, country) {
 
+  // why building this here instead of using the *SACC.html file?
+
   var occ = "";
   var json2html = {
     "V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endemic",
@@ -398,6 +408,7 @@ function getCountryJSON(data) {
     loadSearchResults(results);
   }
 
+  //  just pre-download all the country.json's and build each taxTree?  delayed somehow?
   buildTaxTree(families, countries2Postals[currentCountry]);
 }
 

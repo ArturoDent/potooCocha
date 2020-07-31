@@ -1450,12 +1450,8 @@ input[type='checkbox']:disabled ~ label {
   box-shadow: 0 0 0.15rem black; }
 
 #searchSpecials div.notAvailable {
-  display: none; }
-
-#searchSpecials.SAM {
-  justify-content: space-around;
-  padding: 1.3rem 0;
-  top: -2.1ch; }
+  pointer-events: none;
+  opacity: 0.5; }
 
 #searchTerm span {
   color: #fcb928;

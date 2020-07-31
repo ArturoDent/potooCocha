@@ -79,6 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // preloading the file occurrences.txt
   // getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
   getTEXT("../occurrences/occurrences.txt", loadOccurrences);
+
+  var SAMTarget = document.getElementById( "SAM" );
+  var evt = new Event("click", { "bubbles": true, "cancelable": false });
+  SAMTarget.dispatchEvent( evt );
+  toggleCountryMenuLayer();
 });
 
 // fetch() not supported by IE11
@@ -224,7 +229,7 @@ function loadCountryTaxonomy(country) {
     searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
     searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
 
-    searchSpecials.classList.add("SAM");
+    // searchSpecials.classList.add("SAM");
     taxPage.classList.add("samTax");
   }
   else if (country) {
@@ -237,7 +242,7 @@ function loadCountryTaxonomy(country) {
   if (country !== "South America") {
     searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
     searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
-    searchSpecials.classList.remove("SAM");
+    // searchSpecials.classList.remove("SAM");
   }
 
   var specials = /extinct|endemic|hypothetical|vagrant/;
@@ -250,7 +255,9 @@ function loadCountryTaxonomy(country) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
   }
 
-  if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
+  
+  if (country === "South America") searchCountryText.innerHTML = "South America (June 14, 2020)<br>or a single country";
+  else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 
   if (country === "Falklands")

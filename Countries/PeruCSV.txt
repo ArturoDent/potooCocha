@@ -42,7 +42,7 @@
 ,Orinoco Goose,Oressochen jubatus
 ,Andean Goose,O. melanopterus
 ,Muscovy Duck,Cairina moschata
-,American Comb-Duck,Sarkidiornis sylvicola
+,Comb Duck,Sarkidiornis sylvicola
 ,Brazilian Teal,Amazonetta brasiliensis
 ,Torrent Duck,Merganetta armata
 ,Crested Duck,Lophonetta specularioides
@@ -236,7 +236,7 @@ E,Koepcke's Hermit,P. koepckeae
 ,Black-bellied Thorntail,D. langsdorffi
 ,Rufous-crested Coquette,Lophornis delattrei
 ,Spangled Coquette,L. stictolophus
-,Festive Coquette,L. chalybeus
+,Butterfly Coquette,L. verreauxii
 ,Ecuadorian Piedtail,Phlogophilus hemileucurus
 E,Peruvian Piedtail,P. harterti
 ,Speckled Hummingbird,Adelomyia melanogenys
@@ -1084,6 +1084,7 @@ E,Ochre-fronted Antpitta,G. ochraceifrons
 ,Blackish Tapaculo,Scytalopus latrans
 E,Unicolored Tapaculo,S. unicolor
 ,Trilling Tapaculo,S. parvirostris
+E,Utcubamba Tapaculo,S. intermedius
 E,Large-footed Tapaculo,S. macropus
 ,Long-tailed Tapaculo,S. micropterus
 E,Rufous-vented Tapaculo,S. femoralis
@@ -1091,11 +1092,14 @@ E,Rufous-vented Tapaculo,S. femoralis
 ,Bolivian Tapaculo,S. bolivianus
 ,Chusquea Tapaculo,S. parkeri
 E,Neblina Tapaculo,S. altirostris
+E,Jalca Tapaculo,S. frankeae
+E,White-winged Tapaculo,S. krabbei
 E,Ancash Tapaculo,S. affinis
 E,Tschudi's Tapaculo,S. acutirostris
 E,Vilcabamba Tapaculo,S. urubambae
 ,Puna Tapaculo,S. simonsi
-,Paramo Tapaculo,S. opacus
+,Loja Tapaculo,S. androstictus
+E,Ampay Tapaculo,S. whitneyi
 ,Diademed Tapaculo,S. schulenbergi
 E,Junin Tapaculo,S. gettyae
 
@@ -1109,7 +1113,7 @@ E,Junin Tapaculo,S. gettyae
 ,Barred Antthrush,C. mollissima
 
 ,OVENBIRDS,FURNARIIDAE
-,Tawny-throated Leaftosser,Sclerurus mexicanus
+,South American Leaftosser,Sclerurus obscurior
 ,Short-billed Leaftosser,S. rufigularis
 ,Black-tailed Leaftosser,S. caudacutus
 ,Gray-throated Leaftosser,S. albigularis
@@ -1732,18 +1736,18 @@ E,Iquitos Gnatcatcher,P. clementsi
 ,Black Siskin,S. atratus
 ,Yellow-rumped Siskin,S. uropygialis
 ,Lesser Goldfinch,S. psaltria
-,Plumbeous Euphonia,Euphonia plumbea
-,Purple-throated Euphonia,E. chlorotica
-,Orange-crowned Euphonia,E. saturata
-,Thick-billed Euphonia,E. laniirostris
-,Golden-rumped Euphonia,E. cyanocephala
-,Golden-bellied Euphonia,E. chrysopasta
-,Bronze-green Euphonia,E. mesochrysa
-,White-vented Euphonia,E. minuta
-,Orange-bellied Euphonia,E. xanthogaster
-,Rufous-bellied Euphonia,E. rufiventris
-,Blue-naped Chlorophonia,Chlorophonia cyanea
+,Golden-rumped Euphonia,Chlorophonia cyanocephala
+,Blue-naped Chlorophonia,C. cyanea
 ,Chestnut-breasted Chlorophonia,C. pyrrhophrys
+,Orange-crowned Euphonia,Euphonia saturata
+,Plumbeous Euphonia,E. plumbea
+,Purple-throated Euphonia,E. chlorotica
+,Golden-bellied Euphonia,E. chrysopasta
+,White-vented Euphonia,E. minuta
+,Thick-billed Euphonia,E. laniirostris
+,Orange-bellied Euphonia,E. xanthogaster
+,Bronze-green Euphonia,E. mesochrysa
+,Rufous-bellied Euphonia,E. rufiventris
 
 ,SPARROWS,PASSERELLIDAE
 ,Yellow-throated Chlorospingus,Chlorospingus flavigularis
@@ -1781,7 +1785,7 @@ E,Cuzco Brushfinch,A. canigenis
 ,Bobolink,Dolichonyx oryzivorus
 ,Red-breasted Meadowlark,Leistes militaris
 ,White-browed Meadowlark,L. superciliaris
-,Peruvian Meadowlark,L. bellicosa
+,Peruvian Meadowlark,L. bellicosus
 ,Yellow-billed Cacique,Amblycercus holosericeus
 ,Russet-backed Oropendola,Psarocolius angustifrons
 ,Dusky-green Oropendola,P. atrovirens
@@ -1892,7 +1896,7 @@ E,Selva Cacique,C. koepckeae
 ,Ash-breasted Sierra Finch,G. plebejus
 ,Band-tailed Sierra Finch,Porphyrospiza alaudina
 ,White-throated Sierra Finch,Idiopsar erythronotus
-,White-winged Diuca Finch,I. speculifera
+,White-winged Diuca Finch,I. speculifer
 ,Short-tailed Finch,I. brachyurus
 ,Band-tailed Seedeater,Catamenia analis
 ,Plain-colored Seedeater,C. inornata
@@ -2005,7 +2009,7 @@ E,Little Inca-Finch,I. watkinsi
 ,Golden-crowned Tanager,I. rufivertex
 E,Yellow-scarfed Tanager,I. reinhardti
 ,Fawn-breasted Tanager,Pipraeidea melanonota
-,Blue-and-yellow Tanager,P. bonariensis
+,Blue-and-yellow Tanager,Rauenia bonariensis
 ,Buff-breasted Mountain-Tanager,Dubusia taeniata
 ,Chestnut-bellied Mountain-Tanager,D. castaneoventris
 ,Lacrimose Mountain-Tanager,Anisognathus lacrymosus
