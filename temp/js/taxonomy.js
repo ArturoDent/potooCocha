@@ -259,7 +259,7 @@ function loadCountryTaxonomy(country) {
   }
 
   
-  if (country === "South America") searchCountryText.innerHTML = "South America (July 30, 2020)<br>or a single country";
+  if (country === "South America") searchCountryText.innerHTML = "South America (August 1, )<br>or a single country";
   else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 
@@ -296,40 +296,40 @@ function moveTaxPanel(whatIsOpening) {
 
   switch (whatIsOpening) {
 
-  case "searchResultsOpening":
-    if (searchInstructionsOpen) {
-      taxPanel.style.transform = "translateY(-128px)";
-    }
-    else {
-      shift = 100 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    break;
+    case "searchResultsOpening":
+      if (searchInstructionsOpen) {
+        taxPanel.style.transform = "translateY(-128px)";
+      }
+      else {
+        shift = 100 + parseInt(instructionsHeight) + "px";
+        taxPanel.style.transform = "translateY(-" + shift + ")";
+      }
+      break;
 
-  case "searchInstructionsClosing":
-    if (resultsPanelOpen) {
-      shift = 100 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    else {
-      shift = 200 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    break;
+    case "searchInstructionsClosing":
+      if (resultsPanelOpen) {
+        shift = 100 + parseInt(instructionsHeight) + "px";
+        taxPanel.style.transform = "translateY(-" + shift + ")";
+      }
+      else {
+        shift = 200 + parseInt(instructionsHeight) + "px";
+        taxPanel.style.transform = "translateY(-" + shift + ")";
+      }
+      break;
 
-  case "searchInstructionsOpening":
-    if (resultsPanelOpen)  {
-      shift = -100 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    else {
-      shift = 220 + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    break;
+    case "searchInstructionsOpening":
+      if (resultsPanelOpen)  {
+        shift = -100 + parseInt(instructionsHeight) + "px";
+        taxPanel.style.transform = "translateY(-" + shift + ")";
+      }
+      else {
+        shift = 220 + "px";
+        taxPanel.style.transform = "translateY(-" + shift + ")";
+      }
+      break;
 
-  default:
-    break;
+    default:
+      break;
   }
 }
 
