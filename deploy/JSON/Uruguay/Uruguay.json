@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "August 03, 2010",
+	"version": "September 22, 2020",
 	"birds": {
 		"families": [
 			{
@@ -105,6 +105,12 @@
 								"species": "viduata",
 								"index": 50,
 								"name": "White-faced Whistling-Duck",
+								"UY": "X"
+							},
+							{
+								"species": "autumnalis",
+								"index": 51,
+								"name": "Black-bellied Whistling-Duck",
 								"UY": "X"
 							}
 						]
@@ -354,6 +360,17 @@
 								"UY": "NB"
 							}
 						]
+					},
+					{
+						"Genus": "Phoenicoparrus",
+						"spp": [
+							{
+								"species": "andinus",
+								"index": 162,
+								"name": "Andean Flamingo",
+								"UY": "V"
+							}
+						]
 					}
 				]
 			},
@@ -402,6 +419,12 @@
 								"index": 168,
 								"name": "Great Grebe",
 								"UY": "X"
+							},
+							{
+								"species": "occipitalis",
+								"index": 170,
+								"name": "Silvery Grebe",
+								"UY": "V"
 							}
 						]
 					}
@@ -442,6 +465,17 @@
 								"index": 182,
 								"name": "Pale-vented Pigeon",
 								"UY": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Geotrygon",
+						"spp": [
+							{
+								"species": "montana",
+								"index": 190,
+								"name": "Ruddy Quail-Dove",
+								"UY": "V"
 							}
 						]
 					},
@@ -704,6 +738,17 @@
 						]
 					},
 					{
+						"Genus": "Anthracothorax",
+						"spp": [
+							{
+								"species": "nigricollis",
+								"index": 376,
+								"name": "Black-throated Mango",
+								"UY": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Heliomaster",
 						"spp": [
 							{
@@ -733,6 +778,17 @@
 								"index": 539,
 								"name": "Violet-capped Woodnymph",
 								"UY": "H"
+							}
+						]
+					},
+					{
+						"Genus": "Eupetomena",
+						"spp": [
+							{
+								"species": "macroura",
+								"index": 547,
+								"name": "Swallow-tailed Hummingbird",
+								"UY": "V"
 							}
 						]
 					},
@@ -843,7 +899,7 @@
 								"species": "albicollis",
 								"index": 607,
 								"name": "Ash-throated Crake",
-								"UY": "V"
+								"UY": "X"
 							}
 						]
 					},
@@ -1001,7 +1057,7 @@
 								"species": "semipalmatus",
 								"index": 644,
 								"name": "Semipalmated Plover",
-								"UY": "H"
+								"UY": "NB"
 							},
 							{
 								"species": "collaris",
@@ -1146,6 +1202,12 @@
 								"UY": "NB"
 							},
 							{
+								"species": "ferruginea",
+								"index": 678,
+								"name": "Curlew Sandpiper",
+								"UY": "V"
+							},
+							{
 								"species": "alba",
 								"index": 679,
 								"name": "Sanderling",
@@ -1179,7 +1241,13 @@
 								"species": "pusilla",
 								"index": 687,
 								"name": "Semipalmated Sandpiper",
-								"UY": "H"
+								"UY": "V"
+							},
+							{
+								"species": "mauri",
+								"index": 688,
+								"name": "Western Sandpiper",
+								"UY": "V"
 							}
 						]
 					},
@@ -1517,6 +1585,12 @@
 						"Genus": "Thalasseus",
 						"spp": [
 							{
+								"species": "elegans",
+								"index": 771,
+								"name": "Elegant Tern",
+								"UY": "V"
+							},
+							{
 								"species": "sandvicensis",
 								"index": 772,
 								"name": "Sandwich Tern",
@@ -1562,6 +1636,12 @@
 						"Genus": "Eudyptes",
 						"spp": [
 							{
+								"species": "chrysolophus",
+								"index": 787,
+								"name": "Macaroni Penguin",
+								"UY": "V"
+							},
+							{
 								"species": "chrysocome",
 								"index": 789,
 								"name": "Rockhopper Penguin",
@@ -1599,7 +1679,7 @@
 								"species": "fusca",
 								"index": 794,
 								"name": "Sooty Albatross",
-								"UY": "H"
+								"UY": "V"
 							}
 						]
 					},
@@ -1625,6 +1705,12 @@
 								"UY": "H"
 							},
 							{
+								"species": "bulleri",
+								"index": 799,
+								"name": "Buller's Albatross",
+								"UY": "V"
+							},
+							{
 								"species": "cauta",
 								"index": 800,
 								"name": "White-capped Albatross",
@@ -1642,6 +1728,12 @@
 						"Genus": "Fregetta",
 						"spp": [
 							{
+								"species": "grallaria",
+								"index": 803,
+								"name": "White-bellied Storm-Petrel",
+								"UY": "V"
+							},
+							{
 								"species": "tropica",
 								"index": 804,
 								"name": "Black-bellied Storm-Petrel",
@@ -1657,6 +1749,17 @@
 								"index": 805,
 								"name": "Wilson's Storm-Petrel",
 								"UY": "NB"
+							}
+						]
+					},
+					{
+						"Genus": "Garrodia",
+						"spp": [
+							{
+								"species": "nereis",
+								"index": 808,
+								"name": "Gray-backed Storm-Petrel",
+								"UY": "V"
 							}
 						]
 					}
@@ -1809,7 +1912,7 @@
 								"species": "conspicillata",
 								"index": 850,
 								"name": "Spectacled Petrel",
-								"UY": "H"
+								"UY": "V"
 							}
 						]
 					},
@@ -1893,7 +1996,7 @@
 								"species": "mycteria",
 								"index": 871,
 								"name": "Jabiru",
-								"UY": "H"
+								"UY": "V"
 							}
 						]
 					},
@@ -1931,6 +2034,17 @@
 				"Family": "SULIDAE",
 				"FamilyCommon": "BOOBIES",
 				"genera": [
+					{
+						"Genus": "Morus",
+						"spp": [
+							{
+								"species": "capensis",
+								"index": 877,
+								"name": "Cape Gannet",
+								"UY": "V"
+							}
+						]
+					},
 					{
 						"Genus": "Sula",
 						"spp": [
@@ -2107,7 +2221,7 @@
 								"species": "caerulea",
 								"index": 921,
 								"name": "Little Blue Heron",
-								"UY": "H"
+								"UY": "NB"
 							}
 						]
 					}
@@ -2265,6 +2379,17 @@
 								"index": 956,
 								"name": "Snail Kite",
 								"UY": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Ictinia",
+						"spp": [
+							{
+								"species": "mississippiensis",
+								"index": 960,
+								"name": "Mississippi Kite",
+								"UY": "V"
 							}
 						]
 					},
@@ -2512,7 +2637,7 @@
 								"species": "surrucura",
 								"index": 1062,
 								"name": "Surucua Trogon",
-								"UY": "EX"
+								"UY": "X"
 							}
 						]
 					}
@@ -2642,7 +2767,7 @@
 								"species": "aurulentus",
 								"index": 1257,
 								"name": "White-browed Woodpecker",
-								"UY": "H"
+								"UY": "X"
 							}
 						]
 					},
@@ -3245,6 +3370,17 @@
 								"UY": "NB"
 							}
 						]
+					},
+					{
+						"Genus": "Pyroderus",
+						"spp": [
+							{
+								"species": "scutatus",
+								"index": 2172,
+								"name": "Red-ruffed Fruitcrow",
+								"UY": "V"
+							}
+						]
 					}
 				]
 			},
@@ -3496,7 +3632,7 @@
 								"species": "griseicapilla",
 								"index": 2446,
 								"name": "Straneck's Tyrannulet",
-								"UY": "H"
+								"UY": "NB"
 							}
 						]
 					},
@@ -3575,6 +3711,12 @@
 								"index": 2484,
 								"name": "Fork-tailed Flycatcher",
 								"UY": "X"
+							},
+							{
+								"species": "tyrannus",
+								"index": 2485,
+								"name": "Eastern Kingbird",
+								"UY": "V"
 							}
 						]
 					},
@@ -3741,6 +3883,12 @@
 								"index": 2562,
 								"name": "Dark-faced Ground-Tyrant",
 								"UY": "NB"
+							},
+							{
+								"species": "albilora",
+								"index": 2563,
+								"name": "White-browed Ground-Tyrant",
+								"UY": "V"
 							}
 						]
 					},
@@ -3786,7 +3934,7 @@
 								"species": "murinus",
 								"index": 2581,
 								"name": "Lesser Shrike-Tyrant",
-								"UY": "H"
+								"UY": "V"
 							}
 						]
 					},
@@ -3798,6 +3946,17 @@
 								"index": 2582,
 								"name": "Chocolate-vented Tyrant",
 								"UY": "NB"
+							}
+						]
+					},
+					{
+						"Genus": "Cnemotriccus",
+						"spp": [
+							{
+								"species": "fuscatus",
+								"index": 2588,
+								"name": "Fuscous Flycatcher",
+								"UY": "X"
 							}
 						]
 					},
@@ -3966,7 +4125,7 @@
 								"species": "riparia",
 								"index": 2673,
 								"name": "Bank Swallow",
-								"UY": "H"
+								"UY": "V"
 							}
 						]
 					},
@@ -3977,7 +4136,7 @@
 								"species": "rustica",
 								"index": 2674,
 								"name": "Barn Swallow",
-								"UY": "NB"
+								"UY": "X"
 							}
 						]
 					},
@@ -4068,6 +4227,12 @@
 								"species": "amaurochalinus",
 								"index": 2774,
 								"name": "Creamy-bellied Thrush",
+								"UY": "X"
+							},
+							{
+								"species": "subalaris",
+								"index": 2781,
+								"name": "Blacksmith Thrush",
 								"UY": "X"
 							},
 							{
@@ -4233,7 +4398,7 @@
 								"species": "chlorotica",
 								"index": 2840,
 								"name": "Purple-throated Euphonia",
-								"UY": "H"
+								"UY": "X"
 							}
 						]
 					}
@@ -4272,6 +4437,17 @@
 				"FamilyCommon": "BLACKBIRDS",
 				"genera": [
 					{
+						"Genus": "Dolichonyx",
+						"spp": [
+							{
+								"species": "oryzivorus",
+								"index": 2919,
+								"name": "Bobolink",
+								"UY": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Leistes",
 						"spp": [
 							{
@@ -4301,6 +4477,12 @@
 								"species": "chrysopterus",
 								"index": 2936,
 								"name": "Golden-winged Cacique",
+								"UY": "X"
+							},
+							{
+								"species": "haemorrhous",
+								"index": 2943,
+								"name": "Red-rumped Cacique",
 								"UY": "X"
 							}
 						]
@@ -4369,6 +4551,12 @@
 					{
 						"Genus": "Agelasticus",
 						"spp": [
+							{
+								"species": "cyanopus",
+								"index": 2977,
+								"name": "Unicolored Blackbird",
+								"UY": "V"
+							},
 							{
 								"species": "thilius",
 								"index": 2978,
@@ -4530,11 +4718,11 @@
 						]
 					},
 					{
-						"Genus": "Phrygilus",
+						"Genus": "Rhopospina",
 						"spp": [
 							{
 								"species": "fruticeti",
-								"index": 3129,
+								"index": 3131,
 								"name": "Mourning Sierra Finch",
 								"UY": "V"
 							}
@@ -4587,6 +4775,12 @@
 					{
 						"Genus": "Sporophila",
 						"spp": [
+							{
+								"species": "leucoptera",
+								"index": 3206,
+								"name": "White-bellied Seedeater",
+								"UY": "V"
+							},
 							{
 								"species": "pileata",
 								"index": 3214,
@@ -4740,6 +4934,17 @@
 								"species": "albifrons",
 								"index": 3305,
 								"name": "Long-tailed Reed Finch",
+								"UY": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Coereba",
+						"spp": [
+							{
+								"species": "flaveola",
+								"index": 3311,
+								"name": "Bananaquit",
 								"UY": "X"
 							}
 						]

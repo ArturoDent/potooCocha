@@ -26,17 +26,18 @@
     font-weight: 700;
     text-shadow : 0 0.05rem black;
 
-    border : 0.12rem solid  $greenHighlightColor;
+    border : 0.07rem solid  $greenHighlightColor;
     border-right : 0.2rem solid $greenHighlightColor;
     background-color  :  darken($bgColor, 3%);
-    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+    // box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.3px white;
 
-    transform  :  rotate(-4deg);
-    -webkit-transform-origin  :  top left;
-       -moz-transform-origin  :  top left;
-        -ms-transform-origin  :  top left;
-         -o-transform-origin  :  top left;
-            transform-origin  :  top left;
+    // transform  :  rotate(-4deg);
+    // -webkit-transform-origin  :  top left;
+    //    -moz-transform-origin  :  top left;
+    //     -ms-transform-origin  :  top left;
+    //      -o-transform-origin  :  top left;
+    //         transform-origin  :  top left;
 
     transition: all 450ms;
 }
@@ -92,8 +93,8 @@
     top  : -0.28em;
     left  :  -2.35em;
     border-width  :  0.98em;
-    border-color  :  transparent  $greenHighlightColor transparent transparent;
-    transition : border-color 200ms 500ms;
+    border-color  :  transparent  lighten($titleBannerColor, 15%) transparent transparent;
+    transition : border-color 200ms 200ms;
 }
 
 .saveMapButton .tooltip:after {
@@ -113,16 +114,16 @@
 
 .taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {
     text-shadow: none;
-    box-shadow : inset -18.5rem 0 0.15rem $greenHighlightColor;
+    // box-shadow : inset -18.5rem 0 0.15rem $greenHighlightColor;
+    background-color: #ddd;
     color: black;
-
     will-change: transform;
 }
 
     // makes the arrow of the tooltip (.tooltip:after) change color upon hover
-    // .taxInstructionsButton.hasTooltip:hover .tooltip:after {
-    //     border-color  :  transparent #fff transparent transparent;
-    // }
+  .taxInstructionsButton.hasTooltip:hover .tooltip:after {
+    border-color  :  transparent #fff transparent transparent;
+  }
 
 .saveMapButton.hasTooltip:hover .tooltip {
     background-color  :  #333;

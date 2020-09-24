@@ -20,7 +20,8 @@
 
     border-top : 0.077rem solid $titleBannerColor;
     border-bottom : 0.077rem solid $titleBannerColor;
-    background-color : darken($mapCollectionColor, 10%);
+    // background-color : darken($mapCollectionColor, 10%);
+    background-color : darken($mapCollectionColor, 20%);
 }
 
 #mapsCollection.namesOnlySeen  {
@@ -114,7 +115,6 @@
 
 #deleteAllMapsButton:focus-within  { outline: none; }
 
-
 .birdName  {
     position  :  absolute;
     left : -30%;
@@ -166,9 +166,9 @@
     width: auto;
 }
 
-#SAMsvg g, #SAMsvg p {
-    transition  : fill 1.2s;
-}
+// #SAMsvg g, #SAMsvg p {
+//     // transition  : fill 1.2s;
+// }
 
 #currentMap.shiftUp  {
     //   TODO : use  rem's instead of vh?
@@ -232,12 +232,11 @@
 .drawing  {
     position  :  relative;
     text-shadow  :  none;
-    -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.6) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.5) );
-        -ms-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.6) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.5) );
-            // filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,1) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.8) );
-            filter  :  drop-shadow( -0.03rem 0 0.08rem rgba(255,255,255,1) )  drop-shadow( 0 0 0.25rem rgba(0,0,0,0.7) );
+    -webkit-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.5) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.5) );
+        -ms-filter  :  drop-shadow( 0 0 0.077rem rgba(255,255,255,0.5) ) drop-shadow( 0 0 0.31rem rgba(0,0,0,0.5) );
+            filter  :  drop-shadow( -0.03rem 0 0.08rem rgba(255,255,255,0.5) )  drop-shadow( 0 0 0.25rem rgba(0,0,0,0.5) );
 }
-
+            
 // <g id="Falklands">
 // #SAMsvg #Falklands   {
 //     filter  :  drop-shadow( 0 0 0.077rem rgb(173, 4, 4) ) drop-shadow( 0 0 0.31rem rgba(17, 221, 17, 0.8) );
@@ -267,37 +266,69 @@
     text-shadow  :  rgba(0,0,0,0.5) 0.077rem 0.077rem 0.077rem;
     list-style-type  :  none;
 
-    background: linear-gradient(to right, darken($bgColor, 5%) 0%, rgb(80,80,80) 100%);
+    // background: linear-gradient(to right, darken($bgColor, 5%) 0%, rgb(80,80,80) 100%);
+    background: linear-gradient(to right, darken($bgColor, 2%) 0%, darken($bgColor, 10%) 100%);
 }
 
+.colorKey ul li::after {    /* extinct       */
+    content: '';
+    content  :  '';
+    position  :  absolute;
+    top  :  0;
+    left  :  -1%;
+
+    border-width  :  0.75em;
+    border-style  :  solid;
+}
 
 .colorKey ul li:nth-child(1) {    /* extinct       */
     margin-bottom: 0;
-    border-left: 1.3rem solid #000;
+    border-left: 1.2rem solid #000;
+}
+.colorKey ul li:nth-child(1)::after {    /* extinct       */
+    border-color  :  transparent transparent transparent #000;
 }
 
 .colorKey ul li:nth-child(2) {    /* vagrant       */
-    border-left: 1.3rem solid #54ca30;
+    border-left: 1.2rem solid #54ca30;
+}
+.colorKey ul li:nth-child(2)::after {    /* vagrant       */
+    border-color  :  transparent transparent transparent #54ca30;
 }
 
 .colorKey ul li:nth-child(3) {    /* endemic       */
-    border-left: 1.3rem solid #d73027;
+    border-left: 1.2rem solid #d73027;
+}
+.colorKey ul li:nth-child(3)::after {    /* extinct       */
+    border-color  :  transparent transparent transparent #d73027;
 }
 
 .colorKey ul li:nth-child(4) {    /* resident      */
-    border-left: 1.3rem solid #fc8d59;
+    border-left: 1.2rem solid #fc8d59;
+}
+.colorKey ul li:nth-child(4)::after {    /* endemic       */
+    border-color  :  transparent transparent transparent #fc8d59;
 }
 
 .colorKey ul li:nth-child(5) {    /* introduced  */
-    border-left: 1.3rem solid #fee090;
+    border-left: 1.2rem solid #fee090;
+}
+.colorKey ul li:nth-child(5)::after {    /* introduced       */
+    border-color  :  transparent transparent transparent #fee090;
 }
 
 .colorKey ul li:nth-child(6) {    /* nonbreeder    */
     position: relative;
-    border-left: 1.3rem solid #579ac4;
+    border-left: 1.2rem solid #579ac4;
+}
+.colorKey ul li:nth-child(6)::after {    /* nonbreeder       */
+    border-color  :  transparent transparent transparent #579ac4;
 }
 
 .colorKey ul li:nth-child(7) {    /* hypothetical  */
     margin-top  :  0.4rem;
-    border-left: 1.3rem solid #f3f3f3;
+    border-left: 1.2rem solid #f3f3f3;
+}
+.colorKey ul li:nth-child(7)::after {    /* hypothetical       */
+    border-color  :  transparent transparent transparent #f3f3f3;
 }

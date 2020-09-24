@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   taxInstructionsButton = document.querySelector(".taxInstructionsButton");
 
   printerButton = document.getElementById("printerButton");
-  printerButton.addEventListener("click", printElem);
+  printerButton.addEventListener("click", printSearchResults);
 
   closeOpenFamiliesButton = document.getElementById("closeOpenFamiliesButton");
   closeOpenFamiliesButton.addEventListener("click", closeAllFamilies);
@@ -259,7 +259,7 @@ function loadCountryTaxonomy(country) {
   }
 
   
-  if (country === "South America") searchCountryText.innerHTML = "South America (August 1, )<br>or a single country";
+  if (country === "South America") searchCountryText.innerHTML = "South America (September 2, 2020)<br>or a single country";
   else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 
@@ -418,48 +418,27 @@ function getCountryJSON(data) {
 // <ul id="searchResults"></ul>
 function gotoMatch(e) {
 
-  currentMap.querySelector(".colorKey").style.opacity = "0.9";
+  // currentMap.querySelector(".colorKey").style.opacity = "0.9";
 
   if (lastSpecies && lastSpecies.classList.contains("active")) {
     lastSpecies.classList.remove("active");
   }
 
-  //  TODO  : element.closest()? [closest parent] with polyfill
+  // <li class="family"><span class="fco">HUMMINGBIRDS</span><span class="fsc">TROCHILIDAE</span></li>
+  // <li data-i="316" class="bird"><span>Fiery Topaz</span><span>Topaza pyra</span></li>
+
   var ev = e || window.event;  // window.event for IE8-
-  var clicked = ev.target;
+  var clicked = ev.target.closest("li");  // works
 
-  var clickedPar = clicked.parentNode;
-  var clickedClass = clicked.className;
+  if (clicked) var clickedClass = clicked.className;
+  else return;  // clicked was null so clicked on scrollBar or outside the searchResults
 
-  if (clicked.className.indexOf("simplebar") !== -1) return;
-  if (clicked.className.indexOf("fadeIn") !== -1) return;
+  var clickedcontent = clicked.textContent.replace(/^\s+|\s+$/g, "");
 
-  if (clicked.textContent.replace(/^\s+|\s+$/g, "") === "no matching results found") return;
-  else if (clicked.textContent.replace(/^\s+|\s+$/g, "") === "no search term entered") return;
-  else if (clicked.textContent.replace(/^\s+|\s+$/g, "") === "search results will appear here") return;
-  else if (clicked.textContent.replace(/^\s+|\s+$/g, "") === "") return;
-
-  // goto family level else to <li>commom scientific
-  if (clickedClass === "family") {
-    clicked = ev.target;
-  }
-  else if (clickedClass === "fco") {
-    clicked = clickedPar;
-    clickedClass = "family";
-  }
-  else if (clickedClass === "fsc") {
-    clicked = clickedPar;
-    clickedClass = "family";
-  }
-  else if (clickedClass.match(/co/) !== null) {
-    clicked = clickedPar;
-  }
-  else if (clickedClass === "bird") {
-    clicked = ev.target;
-  }
-  else {
-    clicked = clickedPar;
-  }
+  if (clickedcontent === "no matches found") return;
+  else if (clickedcontent === "character not allowed") return;
+  // else if (clickedcontent === "search results will appear here") return;
+  else if (clickedcontent === "") return;  // necessary?
 
   var sLen = species.length;
   var entry;
@@ -483,17 +462,18 @@ function gotoMatch(e) {
         familyTemp.parentNode.className = "familyOpen";
       }
 
-      // put highlighted bird at top of taxPage
-      // entry.scrollIntoView(true);
-
+      // put highlighted bird at "top" (100px down) of taxPage
+      // entry.scrollIntoView(true);  //  TODO : might work now w/o IE, test on edge
       elem = simpleBarTaxPage.getScrollElement();
-
-      elem.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
+      // elem.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
+      
+      // a little buggy on firefox for some reason
+      elem.scroll({top: familyTemp.parentNode.offsetTop + entry.offsetTop - 100, behavior: 'smooth'});
 
       entry.className = "active";
 
       lastSpecies = entry;
-      lastIndex = Number(entry.getAttribute("data-i"));
+      lastIndex = Number(entry.dataset.i);
       highlightSAMmap(lastIndex, "currentMap");
 
       if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
@@ -504,34 +484,30 @@ function gotoMatch(e) {
       break;
     }
 
-    // match in family, fcommon, fscientific  ||
+    // match in family, fcommon, fscientific
 
-    /*<li class='family'><span class='fTitle'><span class='fco'>SCREAMERS</span><span class='fsc'>ANHIMIDAE</span></span>
-	    <ul class='birds'>
-	      <li data-i='47'><span>Horned Screamer</span><span>Anhima cornuta</span></li>
-	      <li data-i='49'><span>Northern Screamer</span><span>Chauna chavaria</span></li>
-      </ul>
-    </li>*/
+    // <li class='family'><span class='fTitle'><span class='fco'>SCREAMERS</span><span class='fsc'>ANHIMIDAE</span></span>
+	  //   <ul class='birds'>
+	  //     <li data-i='47'><span>Horned Screamer</span><span>Anhima cornuta</span></li>
+	  //     <li data-i='49'><span>Northern Screamer</span><span>Chauna chavaria</span></li>
+    //   </ul>
+    // </li>
 
-
-    //
     else if (entryTextTrimmed === eText && clickedClass === "family") {
 
-      elem = simpleBarTaxPage.getScrollElement();
-      elem.scrollTop = entry.offsetTop;
-
-      // family clicked on in searchResults
-      //    put family at top of taxPage
-      //   entry.scrollIntoView(true);  screws up IE
-
-      // on a new search put lastSpecies if a family at top of taxPage?
-      lastSpecies = entry.firstChild;
-      lastSpecies.classList.toggle("active");
-
       if (lastResultsSpecies) {
-        lastResultsSpecies.classList.toggle("active");
+        lastResultsSpecies.classList.remove("active");
         lastResultsSpecies = null;
       }
+
+      elem = simpleBarTaxPage.getScrollElement();
+      // family clicked on in searchResults
+          //    put family at top of taxPage
+          //   entry.scrollIntoView(true);  screws up IE
+      elem.scroll({top: entry.offsetTop, behavior: 'smooth'});  // ssems to work
+
+      lastSpecies = entry.firstChild;
+      lastSpecies.classList.add("active");
       break;
     }
   }
@@ -555,102 +531,95 @@ function addBirdNameToMap(name) {
 function toggleFamilyOpen(event) {
 
   if (event.target.className.indexOf("simplebar") !== -1) return;
-
   if (event.target.id === "taxPage") return;
 
   // taxPage is not open yet
   if (!numFamilies) return;
 
-  document.querySelector(".colorKey").style.opacity = "0.9";
-
   event = event || window.event;  // window.event for IE8-
-  var familyTarget;
-  var thisSpecies = event.target;
-  var speciesClass = thisSpecies.className;
 
-  // want familyTarget to = <ul class="birds"> to toggle display
-  if (speciesClass === "family" || speciesClass === "familyOpen") {
-    familyTarget = event.target.childNodes[1].nextSibling;
-  }
-  else if (speciesClass === "fco") {
-    familyTarget = event.target.parentNode.nextSibling.nextSibling;
-  }
-  else if (speciesClass === "fsc") {
-    familyTarget = event.target.parentNode.nextSibling.nextSibling;
-  }
-  else if (speciesClass === "fTitle" || speciesClass === "fTitle active") {
-    familyTarget = event.target.nextSibling.nextSibling;
+  var familyUList;
+  var familyHeader;
+  var speciesTarget;
+  
+  if (event.target.closest("ul.birds")) speciesTarget = event.target.closest("ul.birds li");
+  else {
+    familyHeader = event.target.closest("li.family, li.familyOpen");
+    familyUList = familyHeader.childNodes[1].nextSibling;
+    // want familyUList to == <ul class="birds [open]"> to toggle display
   }
 
-  if (familyTarget && !familyTarget.classList.contains("open")) {
+  //  <ul id="tree">
+  //    <li class="familyOpen"><span class="fTitle"><span class="fco">RHEAS</span><span class="fsc">RHEIDAE</span></span>
+  //      <ul class="birds open">
 
-    familyTarget.classList.add("open");
+  //         <li data-i="0"><span>Greater Rhea</span><span>Rhea americana</span></li>
+  //         <li data-i="1"><span>Lesser Rhea</span><span>Rhea pennata</span></li>
+  //      </ul></li>
 
-    familyTarget.parentNode.className = "familyOpen";
+  if (familyUList && !familyUList.classList.contains("open")) {  // not open
+
+    familyUList.classList.add("open");
+
+    familyHeader.className = "familyOpen";
 
     // clicked on a closed family
     // check to see if family at bottom of taxPage, if so, open and move up ?*
 
-    // Element.scrollIntoViewIfNeeded()  webkit only
-
     var taxPageHeight = taxPage.getBoundingClientRect().height;
 
-    if (familyTarget.offsetTop - taxPage.scrollTop > taxPageHeight - 24) {
+    if (familyUList.offsetTop - taxPage.scrollTop > taxPageHeight - 24) {
 
       //  will the entire family fit in taxPage ?
 
-      if (familyTarget.parentNode.clientHeight > taxPageHeight)
-        taxPage.scrollTop = familyTarget.parentNode.offsetTop;
+      if (familyHeader.clientHeight > taxPageHeight)
+        taxPage.scrollTop = familyHeader.offsetTop;
 
       else
-        taxPage.scrollTop += familyTarget.lastElementChild.offsetTop + familyTarget.lastElementChild.clientHeight;
+        taxPage.scrollTop += familyUList.lastElementChild.offsetTop + familyUList.lastElementChild.clientHeight;
     }
     //  show family and numSpecies in that family
-    var scientificFamily = familyTarget.parentNode.firstChild.children[1].textContent;
-    if (!scientificFamily) scientificFamily = familyTarget.parentNode.firstChild.children[0].textContent;
+    var scientificFamily = familyHeader.firstChild.children[1].textContent;
+    if (!scientificFamily) scientificFamily = familyHeader.firstChild.children[0].textContent;
 
-    document.querySelector("#treeIntroText").innerHTML = currentCountry + "  &nbsp; : &nbsp; " + scientificFamily + " has " + familyTarget.children.length + " species";
+    document.querySelector("#treeIntroText").innerHTML = currentCountry + "  &nbsp; : &nbsp; " + scientificFamily + " has " + familyUList.children.length + " species";
   }
 
-  else if (familyTarget) {
-    familyTarget.classList.remove("open");
-    familyTarget.parentNode.className = "family";
+  else if (familyUList) {    // was open
+    familyUList.classList.remove("open");
+    familyHeader.className = "family";
 
-    var reset = familyTarget.parentNode.querySelectorAll(".active");
+    var reset = familyHeader.querySelectorAll(".active");
 
     if (reset.length) {
       reset[0].classList.remove("active");
     }
     document.querySelector("#treeIntroText").innerHTML = currentCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species";
   }
+
   //   clicked on a species in the taxTree
-  if (!familyTarget) {
-    // clicked in between common and scientific names in an open family, i.e., the LI element, not a DIV/SPAN
+  if (!familyUList) {
 
-    //    <ul class="span">
-    //    <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
+    //    <ul class="birds open">
+    //      <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
 
-    if (thisSpecies.parentNode.classList.contains("birds")) {
-      thisSpecies = thisSpecies.firstChild;
-    }
+    speciesTarget.className = "active";
 
-    thisSpecies.parentNode.className = "active";
-
-    if (thisSpecies.parentNode !== lastSpecies) {
+    if (speciesTarget !== lastSpecies) {
 
       if (lastSpecies && lastSpecies.classList.contains("active")) {
         lastSpecies.classList.remove("active");
       }
     }
 
-    lastSpecies = thisSpecies.parentNode;
+    lastSpecies = speciesTarget;
     if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
     lastResultsSpecies = null;
 
-    addBirdNameToMap(thisSpecies.parentNode);
+    addBirdNameToMap(speciesTarget);
 
-    lastIndex = Number(thisSpecies.parentNode.getAttribute("data-i"));
-    highlightSAMmap(lastIndex, "currentMap");
+    lastIndex = Number(speciesTarget.dataset.i);
+    highlightSAMmap(lastIndex, "currentMap"); 
 
     document.querySelector("#treeIntroText").innerHTML = currentCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
   }
@@ -668,13 +637,13 @@ function closeAllFamilies() {
     openedFamilies[i].classList.remove("open");
     openedFamilies[i].classList.add("closed");
 
-    openedFamilies[i].parentNode.className = "family";
+    openedFamilies[i].parentNode.className = "family";  // TODO :  why not removing .familyOpen here?
   }
   // **** reset families and species of country
   document.querySelector("#treeIntroText").innerHTML = currentCountry + "   &nbsp; : " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
 }
 
-function printElem (evt) {
+function printSearchResults (evt) {
 
   // if no search results do nothing
   var numSpecies = document.getElementsByClassName("bird").length;

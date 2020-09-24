@@ -101,7 +101,8 @@
     // border : 0.15rem solid  $goldHighlightColor;
     border : 0.15rem solid  $greenHighlightColor;
     border-radius  :  50%;
-    background-color  :  darken($bgColor, 3%);
+    // background-color  :  darken($bgColor, 3%);
+    background-color  :  lighten($titleBannerColor, 5%);
     box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
 
     cursor  :  pointer;
@@ -116,8 +117,10 @@
 
 .taxInstructionsButton.instructionsClosed .tooltip {
     width  :  10rem;
-    border : 0.15rem solid $greenHighlightColor;
-    background-color: $panelColor;
+    // border : 0.15rem solid $greenHighlightColor;
+    border : 0.1rem solid $greenHighlightColor;
+    // background-color: $panelColor;
+    background-color: $turquoiseHighlightColor;
     transform: rotate(0);
 }
 
@@ -203,12 +206,14 @@
 #searchSpecials  {
     position  :  absolute;
     top : -3.5ch;
-    left  :  105%;
+    left  :  107%;
     // width: 15.38rem;
     // width: 10.5rem;
     // padding : 0.5rem 0;
 
-    font-size  :  0.82rem;
+    // font-size  :  0.82rem;
+    font-size  :  0.87rem;
+    letter-spacing: 0.09rem;
     text-shadow : 0.077rem 0.077rem 0.077rem rgba(0,0,0,0.5);
 
     pointer-events  :  auto;
@@ -524,7 +529,7 @@
 #searchResults li  {
     position : relative;
     padding  :  0.077rem 0 0.12rem 1.23rem;
-    width: calc(100% - 0.69rem);
+    width: calc(100% - 0.55rem);
 
     list-style-type  :  none;
     cursor  :  pointer;
@@ -593,13 +598,18 @@
     content : '\a0\a0';
     top: -0.077rem;
     left : -7vw;
-    height : calc(100% + 0.15rem);
+    height : calc(100% + 0.12rem);
     width : 7vw;
 
     border-right : 0 solid $birdRolloverColor;
-    background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
-    background: -webkit-linear-gradient(left, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
-    background: linear-gradient(to right, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
+    // background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
+    // background: -webkit-linear-gradient(left, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
+    // background: linear-gradient(to right, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
+
+    background: -moz-linear-gradient(left, rgba(60,60,60,0) 0%, rgba(60,60,60,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
+    background: linear-gradient(to right, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
+
     transition: border-right 650ms;
 }
 
@@ -620,7 +630,6 @@
 // species scientific names only
 #searchResults span:not(.fsc):last-child  {
     position  :  absolute;
-    // left  :  calc(52.8% + 1.15rem);
     left  :  calc(52.8% + 0.7rem);
 }
 
@@ -679,7 +688,6 @@
     top: 2rem;
     left: -7vw;
     margin: 0 0 -20.5ch 0;
-    // margin: 0 0 -18.5ch 0;
     padding :  5ch 0 0 0;
 
     z-index : 0;
@@ -705,13 +713,11 @@
     height : 100%;
     width : calc(100% - 7vw);
     left : 7vw;
-    // padding : 0 0 2ch 0;
     padding : 1ch 0 2ch 0;
 
     border  :  0.077rem solid rgba(255,255,255,0.15);
     border-radius  :  0.23rem;
     background-color  :  $panelColor;
-    // box-shadow: 0 0 0.15rem rgba(0,0,0,0.7);
     box-shadow: -0.015rem 0 0.015rem rgba(255,255,255,0.5), 0 -0.02rem 0.02rem rgba(255,255,255,0.5), 0 0 0.15rem rgba(0,0,0,0.7);
 
     overflow-x : visible;
@@ -807,7 +813,6 @@ to {
 /*target : family common name only*/
 #tree li.family > span:nth-child(1)  {
     padding  :  0.077rem 0 0.15rem 1.15rem;
-
 }
 
 /*target : familyOpen family common and sci names for families that are open  */
@@ -818,33 +823,26 @@ to {
 // all family names whether open or not
 .fTitle  {
     display: inline-block;
-    width: calc(100% - 0.62rem);
+    width: calc(100% - 0.55rem);
     border-top : 0.077rem solid transparent;
     border-bottom : 0.077rem solid transparent;
     background-color: transparent;
 }
 
-.family .fTitle:hover {
-    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
-    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
+// all family names whether open or not
+.fTitle:hover {
+    border-top : 0.077rem solid $panelColor;
+    border-bottom : 0.077rem solid $panelColor;
     background-color  :  $birdRolloverColor;
 }
 
-// hover: family names only
-.familyOpen .fTitle:hover {
-    background-color  :  $birdRolloverColor;
-    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
-    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
-}
-
-.family .fTitle.active  {
+.fTitle.active  {
     background-color  :  $birdRolloverColor;
 }
 
 // just the species within a family (that is open)
 #tree .familyOpen  ul  {
-    width: calc(100% - 0.62rem);
-    margin-top: -0.15rem;
+    width: calc(100% - 0.55rem);
     padding: 0;
     font-size  :  0.9rem;
     line-height  :  1rem;
@@ -852,14 +850,12 @@ to {
 
 /* target : familyOpen bird common names only */
 #tree .familyOpen  ul  li span:first-child {
-    // padding  :  0.077rem 0 0 2rem;
     padding  :  0.077rem 0 0 1.8rem;
 }
 
 /*target : familyOpen bird sci names only*/
 #tree .familyOpen .birds li span:last-child  {
     position  :  absolute;
-    // left  :  52.8%;
     left  :  54.5%;
 }
 
@@ -929,8 +925,8 @@ to {
 #tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover  {
     padding : 0.15rem 0 0.15rem 0;
     background-color  :  $birdRolloverColor;
-    border-top : 0.077rem solid darken($birdRolloverColor, 10%);
-    border-bottom : 0.077rem solid darken($birdRolloverColor, 10%);
+    border-top : 0.077rem solid $panelColor;
+    border-bottom : 0.077rem solid $panelColor;
     transition: background-color 450ms;
 }
 
@@ -962,13 +958,15 @@ to {
     top : -0.077rem;
     left : -7vw;
     content : '';
-    height : calc(100% + 0.15rem);
+    height : calc(100% + 0.12rem);
     width : 7vw;
 
     border-right : 0 solid $birdActiveColor;
-    background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
-    background: -webkit-linear-gradient(left, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
-    background: linear-gradient(to right, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
+
+    background: -moz-linear-gradient(left, rgba(60,60,60,0) 0%, rgba(60,60,60,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
+    background: linear-gradient(to right, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
+
     transition: border-right 650ms;
 }
 

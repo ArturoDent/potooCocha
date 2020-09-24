@@ -24,11 +24,15 @@ var hypotheticalColor = "#ddd";
 var introducedColor = "#fee090";
 
 // var baseColor = "​#535b5f";
-var baseColor = "​#535B5F";
-var baseStrokeColor = "#bbb";
+var baseColor = "​#8a8a7c";
+// var baseStrokeColor = "#bbb";
+// var baseStrokeColor = "#333";
+var baseStrokeColor = "#eee";
 var highlightStrokeColor = "#6a7377";
-var darkerStrokeColor = "#555";
+var darkerStrokeColor = "#333";
 var selectedCountryFillColor = "#f33";
+
+// loaded map was #737b7f and #333b3f
 
 /* global addBirdNameToMap birds currentMap */
 
@@ -63,7 +67,6 @@ function setSVGstyles(obj) {
 
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
 
-    // obj.style.transition = "fill 1s, stroke 1s";
     obj.style.transition = "fill 1s";
   }
 
@@ -99,7 +102,8 @@ function newFillColor(obj, newColor) {
   if (obj.nodeName === "path" || obj.nodeName === "circle") {
     //  HACK : (why does this have to be hardcoded? And below.)
     if (newColor === baseColor) {
-      obj.style.fill = "#535B5F";
+      // obj.style.fill = "#535B5F";
+      obj.style.fill = "#8a8a7c";
     }
     else obj.style.fill = newColor;
 
@@ -114,7 +118,8 @@ function newFillColor(obj, newColor) {
     for (var i = 0; i < len; i++) {
 
       if (newColor === baseColor) {
-        paths[i].style.fill = "#535B5F";
+        // paths[i].style.fill = "#535B5F";
+        paths[i].style.fill = "#8a8a7c";
       }
       else paths[i].style.fill = newColor;
 
@@ -151,7 +156,7 @@ function newStrokeColor(obj, newColor) {
     for (var i = 0; i < len; i++) {
 
       if (obj.id === "Falklands") {
-        paths[i].style.stroke = "#fff";
+        paths[i].style.stroke = "#ddd";
       }
 
       else paths[i].style.stroke = newColor;

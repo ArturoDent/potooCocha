@@ -14,6 +14,7 @@
 ,DUCKS,ANATIDAE
 ,Fulvous Whistling-Duck,Dendrocygna bicolor
 ,White-faced Whistling-Duck,D. viduata
+,Black-bellied Whistling-Duck,D. autumnalis
 ,Black-necked Swan,Cygnus melancoryphus
 ,Coscoroba Swan,Coscoroba coscoroba
 ,Upland Goose,Chloephaga picta
@@ -42,18 +43,21 @@
 
 ,FLAMINGOS,PHOENICOPTERIDAE
 ,Chilean Flamingo,Phoenicopterus chilensis
+,Andean Flamingo,Phoenicoparrus andinus
 
 ,GREBES,PODICIPEDIDAE
 ,White-tufted Grebe,Rollandia rolland
 ,Least Grebe,Tachybaptus dominicus
 ,Pied-billed Grebe,Podilymbus podiceps
 ,Great Grebe,Podiceps major
+,Silvery Grebe,P. occipitalis
 
 ,PIGEONS,COLUMBIDAE
 ,Rock Pigeon,Columba livia
 ,Picazuro Pigeon,Patagioenas picazuro
 ,Spot-winged Pigeon,P. maculosa
 ,Pale-vented Pigeon,P. cayennensis
+,Ruddy Quail-Dove,Geotrygon montana
 ,White-tipped Dove,Leptotila verreauxi
 ,Gray-fronted Dove,L. rufaxilla
 ,Eared Dove,Zenaida auriculata
@@ -87,9 +91,11 @@
 
 ,HUMMINGBIRDS,TROCHILIDAE
 ,Black Jacobin,Florisuga fusca
+,Black-throated Mango,Anthracothorax nigricollis
 ,Blue-tufted Starthroat,Heliomaster furcifer
 ,Glittering-bellied Emerald,Chlorostilbon lucidus
 ,Violet-capped Woodnymph,Thalurania glaucopis
+,Swallow-tailed Hummingbird,Eupetomena macroura
 ,undefined,Saucerottia saucerottei Saucerottia saucerottei
 ,White-throated Hummingbird,Leucochloris albicollis
 ,Gilded Hummingbird,Hylocharis chrysura
@@ -143,12 +149,14 @@
 ,Ruddy Turnstone,Arenaria interpres
 ,Red Knot,Calidris canutus
 ,Stilt Sandpiper,C. himantopus
+,Curlew Sandpiper,C. ferruginea
 ,Sanderling,C. alba
 ,Baird's Sandpiper,C. bairdii
 ,White-rumped Sandpiper,C. fuscicollis
 ,Buff-breasted Sandpiper,C. subruficollis
 ,Pectoral Sandpiper,C. melanotos
 ,Semipalmated Sandpiper,C. pusilla
+,Western Sandpiper,C. mauri
 ,Giant Snipe,Gallinago undulata
 ,South American Snipe,G. paraguaiae
 ,Wilson's Phalarope,Phalaropus tricolor
@@ -195,13 +203,15 @@
 ,South American Tern,S. hirundinacea
 ,Antarctic Tern,S. vittata
 ,Snowy-crowned Tern,S. trudeaui
-,Sandwich Tern,Thalasseus sandvicensis
+,Elegant Tern,Thalasseus elegans
+,Sandwich Tern,T. sandvicensis
 ,Royal Tern,T. maximus
 
 ,PENGUINS,SPHENISCIDAE
 ,King Penguin,Aptenodytes patagonicus
 ,Magellanic Penguin,Spheniscus magellanicus
-,Rockhopper Penguin,Eudyptes chrysocome
+,Macaroni Penguin,Eudyptes chrysolophus
+,Rockhopper Penguin,E. chrysocome
 
 ,ALBATROSSES,DIOMEDEIDAE
 ,Royal Albatross,Diomedea epomophora
@@ -210,11 +220,14 @@
 ,Yellow-nosed Albatross,Thalassarche chlororhynchos
 ,Black-browed Albatross,T. melanophris
 ,Gray-headed Albatross,T. chrysostoma
+,Buller's Albatross,T. bulleri
 ,White-capped Albatross,T. cauta
 
 ,SOUTHERN STORM-PETRELS,OCEANITIDAE
-,Black-bellied Storm-Petrel,Fregetta tropica
+,White-bellied Storm-Petrel,Fregetta grallaria
+,Black-bellied Storm-Petrel,F. tropica
 ,Wilson's Storm-Petrel,Oceanites oceanicus
+,Gray-backed Storm-Petrel,Garrodia nereis
 
 ,NORTHERN STORM-PETRELS,HYDROBATIDAE
 ,Leach's Storm-Petrel,Hydrobates leucorhous
@@ -251,6 +264,7 @@
 ,Magnificent Frigatebird,Fregata magnificens
 
 ,BOOBIES,SULIDAE
+,Cape Gannet,Morus capensis
 ,Masked Booby,Sula dactylatra
 ,Brown Booby,S. leucogaster
 
@@ -295,6 +309,7 @@
 ,Swallow-tailed Kite,Elanoides forficatus
 ,Black-collared Hawk,Busarellus nigricollis
 ,Snail Kite,Rostrhamus sociabilis
+,Mississippi Kite,Ictinia mississippiensis
 ,Cinereous Harrier,Circus cinereus
 ,Long-winged Harrier,C. buffoni
 ,Sharp-shinned Hawk,Accipiter striatus
@@ -324,6 +339,7 @@
 ,Short-eared Owl,A. flammeus
 
 ,TROGONS,TROGONIDAE
+,Surucua Trogon,Trogon surrucura
 
 ,KINGFISHERS,ALCEDINIDAE
 ,Ringed Kingfisher,Megaceryle torquata
@@ -413,6 +429,7 @@
 
 ,COTINGAS,COTINGIDAE
 ,White-tipped Plantcutter,Phytotoma rutila
+,Red-ruffed Fruitcrow,Pyroderus scutatus
 
 ,TITYRAS,TITYRIDAE
 ,White-naped Xenopsaris,Xenopsaris albinucha
@@ -452,6 +469,7 @@
 ,Crowned Slaty Flycatcher,E. aurantioatrocristatus
 ,Tropical Kingbird,Tyrannus melancholicus
 ,Fork-tailed Flycatcher,T. savana
+,Eastern Kingbird,T. tyrannus
 ,Rufous Casiornis,Casiornis rufus
 ,Swainson's Flycatcher,Myiarchus swainsoni
 ,Brown-crested Flycatcher,M. tyrannulus
@@ -467,6 +485,7 @@
 ,Blue-billed Black-Tyrant,K. cyanirostris
 ,Yellow-browed Tyrant,Satrapa icterophrys
 ,Dark-faced Ground-Tyrant,Muscisaxicola maclovianus
+,White-browed Ground-Tyrant,M. albilora
 ,Gray Monjita,Xolmis cinereus
 ,Black-crowned Monjita,X. coronatus
 ,White Monjita,X. irupero
@@ -474,6 +493,7 @@
 ,Gray-bellied Shrike-Tyrant,Agriornis micropterus
 ,Lesser Shrike-Tyrant,A. murinus
 ,Chocolate-vented Tyrant,Neoxolmis rufiventris
+,Fuscous Flycatcher,Cnemotriccus fuscatus
 ,Euler's Flycatcher,Lathrotriccus euleri
 ,Many-colored Rush Tyrant,Tachuris rubrigastra
 
@@ -511,6 +531,7 @@
 ,Pale-breasted Thrush,T. leucomelas
 ,Rufous-bellied Thrush,T. rufiventris
 ,Creamy-bellied Thrush,T. amaurochalinus
+,Blacksmith Thrush,T. subalaris
 ,White-necked Thrush,T. albicollis
 
 ,MOCKINGBIRDS,MIMIDAE
@@ -542,17 +563,20 @@
 ,Rufous-collared Sparrow,Zonotrichia capensis
 
 ,BLACKBIRDS,ICTERIDAE
+,Bobolink,Dolichonyx oryzivorus
 ,White-browed Meadowlark,Leistes superciliaris
 ,Pampas Meadowlark,L. defilippii
 ,Solitary Black Cacique,Cacicus solitarius
 ,Golden-winged Cacique,C. chrysopterus
+,Red-rumped Cacique,C. haemorrhous
 ,Variable Oriole,Icterus pyrrhopterus
 ,Screaming Cowbird,Molothrus rufoaxillaris
 ,Shiny Cowbird,M. bonariensis
 ,Scarlet-headed Blackbird,Amblyramphus holosericeus
 ,Chopi Blackbird,Gnorimopsar chopi
 ,Grayish Baywing,Agelaioides badius
-,Yellow-winged Blackbird,Agelasticus thilius
+,Unicolored Blackbird,Agelasticus cyanopus
+,Yellow-winged Blackbird,A. thilius
 ,Chestnut-capped Blackbird,Chrysomus ruficapillus
 ,Saffron-cowled Blackbird,Xanthopsar flavus
 ,Yellow-rumped Marshbird,Pseudoleistes guirahuro
@@ -573,12 +597,13 @@
 ,TANAGERS,THRAUPIDAE
 ,Saffron Finch,Sicalis flaveola
 ,Grassland Yellow-Finch,S. luteola
-,Mourning Sierra Finch,Phrygilus fruticeti
+,Mourning Sierra Finch,Rhopospina fruticeti
 ,Blue-black Grassquit,Volatinia jacarina
 ,Ruby-crowned Tanager,Tachyphonus coronatus
 ,Black-goggled Tanager,Trichothraupis melanops
 ,Red-crested Finch,Coryphospingus cucullatus
-,Pearly-bellied Seedeater,Sporophila pileata
+,White-bellied Seedeater,Sporophila leucoptera
+,Pearly-bellied Seedeater,S. pileata
 ,Tawny-bellied Seedeater,S. hypoxantha
 ,Dark-throated Seedeater,S. ruficollis
 ,Marsh Seedeater,S. palustris
@@ -598,6 +623,7 @@
 ,Gray-throated Warbling Finch,Microspingus cabanisi
 ,Black-capped Warbling Finch,M. melanoleucus
 ,Long-tailed Reed Finch,Donacospiza albifrons
+,Bananaquit,Coereba flaveola
 ,Common Diuca-Finch,Diuca diuca
 ,Yellow Cardinal,Gubernatrix cristata
 ,Red-crested Cardinal,Paroaria coronata

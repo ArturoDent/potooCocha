@@ -65,7 +65,8 @@ a:visited {  background-color: #4db088;  }
     position  :  relative;
     top : 1.25rem;
     left : calc(4vw - 1.25rem);   // half of the width of vertical scroll bar
-    width : 94vw;
+    // width : 94vw;
+    width : calc(91vw - 1.9rem);
     height: 4.5rem;
     padding: 0.4ch 5% 0.5ch 0;
 
@@ -76,16 +77,19 @@ a:visited {  background-color: #4db088;  }
     letter-spacing  :  0.1em;
     text-shadow: 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
 
+    border-radius: 0.3rem;
+
     background-color  :  $titleBannerColor;
     // background-color  :  rgba(60,60,60,1);
     box-shadow: inset 0 0 0.15rem rgba(255,255,255, 0.2), inset 0 0 1.15rem rgba(0,0,0, 0.1), 0 0 1.15rem rgba(0,0,0, 0.2);
+    // box-shadow: inset 0 0 1.5rem rgba(0,0,0, 0.1), inset 0 0 1.5rem rgba(0,0,0, 0.1), 0 0 1.5rem rgba(0,0,0, 0.2);
 }
 
-#titleBanner.countryChosen {
-    width : calc(91vw - 1.9rem);
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-}
+// #titleBanner.countryChosen {
+//     // width : calc(91vw - 1.9rem);
+//     // border-top-right-radius: 0.3rem;
+//     // border-bottom-right-radius: 0.3rem;
+// }
 
 .titleBanner_spacer  {
     position  :  relative;

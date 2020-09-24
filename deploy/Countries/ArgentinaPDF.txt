@@ -356,6 +356,8 @@ SOUTHERN STORM-PETRELS,OCEANITIDAE
 ,,Pincoya Storm-Petrel,O. pincoyae
 ,,Gray-backed Storm-Petrel,Garrodia nereis
 ,,White-faced Storm-Petrel,Pelagodroma marina
+NORTHERN STORM-PETRELS,HYDROBATIDAE
+,,Hornby's Storm-Petrel,Hydrobates hornbyi
 SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Northern Giant-Petrel,M. halli
@@ -413,13 +415,14 @@ HERONS,ARDEIDAE
 5,,Least Bittern,Ixobrychus exilis
 ,,Stripe-backed Bittern,I. involucris
 ,,Black-crowned Night-Heron,Nycticorax nycticorax
+,,Yellow-crowned Night-Heron,Nyctanassa violacea
 ,,Green Heron,Butorides virescens
-,,Striated Heron,B. striata
-10,,Cattle Egret,Bubulcus ibis
+10,,Striated Heron,B. striata
+,,Cattle Egret,Bubulcus ibis
 ,,Cocoi Heron,Ardea cocoi
 ,,Great Egret,A. alba
 ,,Whistling Heron,Syrigma sibilatrix
-,,Capped Heron,Pilherodius pileatus
+15,,Capped Heron,Pilherodius pileatus
 ,,Snowy Egret,Egretta thula
 ,,Little Blue Heron,E. caerulea
 IBISES,THRESKIORNITHIDAE
@@ -1043,9 +1046,10 @@ WOOD-WARBLERS,PARULIDAE
 ,,Brown-capped Redstart,Myioborus brunniceps
 CARDINAL GROSBEAKS,CARDINALIDAE
 ,,Hepatic Tanager,Piranga flava
+,,Scarlet Tanager,P. olivacea
 ,,Red-crowned Ant-Tanager,Habia rubica
 ,,Black-backed Grosbeak,Pheucticus aureoventris
-,,Blackish-blue Seedeater,Amaurospiza moesta
+5,,Blackish-blue Seedeater,Amaurospiza moesta
 ,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
 ,,Ultramarine Grosbeak,C. brissonii
 TANAGERS,THRAUPIDAE
@@ -1067,11 +1071,11 @@ TANAGERS,THRAUPIDAE
 ,,Black-hooded Sierra Finch,Phrygilus atriceps
 ,,Gray-hooded Sierra Finch,P. gayi
 ,,Patagonian Sierra Finch,P. patagonicus
-,,Mourning Sierra Finch,P. fruticeti
-20,,Plumbeous Sierra Finch,Geospizopsis unicolor
-,,Ash-breasted Sierra Finch,G. plebejus
-,,Band-tailed Sierra Finch,Porphyrospiza alaudina
-,endemic,Carbonated Sierra Finch,P. carbonaria
+,,Plumbeous Sierra Finch,Geospizopsis unicolor
+20,,Ash-breasted Sierra Finch,G. plebejus
+,,Mourning Sierra Finch,Rhopospina fruticeti
+,,Band-tailed Sierra Finch,R. alaudina
+,endemic,Carbonated Sierra Finch,R. carbonaria
 ,,Red-backed Sierra Finch,Idiopsar dorsalis
 25,,White-winged Diuca Finch,I. speculifer
 ,,Short-tailed Finch,I. brachyurus
@@ -1101,54 +1105,55 @@ TANAGERS,THRAUPIDAE
 50,,Marsh Seedeater,S. palustris
 ,,Rufous-rumped Seedeater,S. hypochroma
 ,,Chestnut Seedeater,S. cinnamomea
+,,Black-bellied Seedeater,S. melanogaster
 ,,Chestnut-bellied Seed-Finch,S. angolensis
-,,Yellow-bellied Seedeater,S. nigricollis
-55,,Double-collared Seedeater,S. caerulescens
+55,,Yellow-bellied Seedeater,S. nigricollis
+,,Double-collared Seedeater,S. caerulescens
 ,,Temminck's Seedeater,S. falcirostris
 ,,Buffy-fronted Seedeater,S. frontalis
 ,,Plumbeous Seedeater,S. plumbea
-,,Rusty-collared Seedeater,S. collaris
-60,,Many-colored Chaco Finch,Saltatricula multicolor
+60,,Rusty-collared Seedeater,S. collaris
+,,Many-colored Chaco Finch,Saltatricula multicolor
 ,,Grayish Saltator,Saltator coerulescens
 ,,Green-winged Saltator,S. similis
 ,,Thick-billed Saltator,S. maxillosus
-,,Golden-billed Saltator,S. aurantiirostris
-65,,Black-throated Grosbeak,S. fuliginosus
+65,,Golden-billed Saltator,S. aurantiirostris
+,,Black-throated Grosbeak,S. fuliginosus
 ,,Black-masked Finch,Coryphaspiza melanotis
 ,,Great Pampa-Finch,Embernagra platensis
 ,,Wedge-tailed Grass-Finch,Emberizoides herbicola
-,,Lesser Grass-Finch,E. ypiranganus
-70,,Bolivian Warbling Finch,Poospiza boliviana
+70,,Lesser Grass-Finch,E. ypiranganus
+,,Bolivian Warbling Finch,Poospiza boliviana
 ,endemic,Cinnamon Warbling Finch,P. ornata
 ,,Black-and-chestnut Warbling Finch,P. whitii
 ,,Black-and-rufous Warbling Finch,P. nigrorufa
-,endemic,Tucuman Mountain Finch,P. baeri
-75,,Rufous-sided Warbling Finch,Poospizopsis hypochondria
+75,endemic,Tucuman Mountain Finch,P. baeri
+,,Rufous-sided Warbling Finch,Poospizopsis hypochondria
 ,,Orange-headed Tanager,Thlypopsis sordida
 ,,Chestnut-headed Tanager,T. pyrrhocoma
 ,,Rust-and-yellow Tanager,T. ruficeps
-,,Rusty-browed Warbling Finch,Microspingus erythrophrys
-80,,Gray-throated Warbling Finch,M. cabanisi
+80,,Rusty-browed Warbling Finch,Microspingus erythrophrys
+,,Gray-throated Warbling Finch,M. cabanisi
 ,,Ringed Warbling Finch,M. torquatus
 ,,Black-capped Warbling Finch,M. melanoleucus
 ,,Long-tailed Reed Finch,Donacospiza albifrons
-,,Bananaquit,Coereba flaveola
-85,,Dull-colored Grassquit,Asemospiza obscura
+85,,Bananaquit,Coereba flaveola
+,,Dull-colored Grassquit,Asemospiza obscura
 ,,Sooty Grassquit,A. fuliginosa
 ,,Black-crested Finch,Lophospingus pusillus
 ,,Gray-crested Finch,L. griseocristatus
-,,Common Diuca-Finch,Diuca diuca
-90,,Yellow Cardinal,Gubernatrix cristata
+90,,Common Diuca-Finch,Diuca diuca
+,,Yellow Cardinal,Gubernatrix cristata
 ,,Red-crested Cardinal,Paroaria coronata
 ,,Yellow-billed Cardinal,P. capitata
 ,,Diademed Tanager,Stephanophorus diadematus
-,,Cinnamon Tanager,Schistochlamys ruficapillus
-95,,Magpie Tanager,Cissopis leverianus
+95,,Cinnamon Tanager,Schistochlamys ruficapillus
+,,Magpie Tanager,Cissopis leverianus
 ,,Fawn-breasted Tanager,Pipraeidea melanonota
 ,,Blue-and-yellow Tanager,Rauenia bonariensis
 ,,Rufous-bellied Mountain-Tanager,Pseudosaltator rufiventris
-,,Black-backed Tanager,Stilpnia peruviana
-100,,Chestnut-backed Tanager,S. preciosa
+100,,Black-backed Tanager,Stilpnia peruviana
+,,Chestnut-backed Tanager,S. preciosa
 ,,Burnished-buff Tanager,S. cayana
 ,,Green-headed Tanager,Tangara seledon
 ,,Red-necked Tanager,T. cyanocephala

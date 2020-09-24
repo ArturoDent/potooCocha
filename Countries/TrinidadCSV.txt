@@ -37,7 +37,6 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Rock Pigeon,Columba livia
 ,Scaled Pigeon,Patagioenas speciosa
 ,Scaly-naped Pigeon,P. squamosa
-,Band-tailed Pigeon,P. fasciata
 ,Pale-vented Pigeon,P. cayennensis
 ,Ruddy Quail-Dove,Geotrygon montana
 ,White-tipped Dove,Leptotila verreauxi
@@ -55,6 +54,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Smooth-billed Ani,C. ani
 ,Striped Cuckoo,Tapera naevia
 ,Little Cuckoo,Coccycua minuta
+,Dwarf Cuckoo,C. pumila
 ,Squirrel Cuckoo,Piaya cayana
 ,Dark-billed Cuckoo,Coccyzus melacoryphus
 ,Yellow-billed Cuckoo,C. americanus
@@ -80,6 +80,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,White-collared Swift,S. zonaris
 ,Band-rumped Swift,Chaetura spinicaudus
 ,Gray-rumped Swift,C. cinereiventris
+,Vaux's Swift,C. vauxi
 ,Chapman's Swift,C. chapmani
 ,Short-tailed Swift,C. brachyura
 ,Fork-tailed Palm-Swift,Tachornis squamata
@@ -173,6 +174,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Terek Sandpiper,Xenus cinereus
 ,Spotted Sandpiper,Actitis macularius
 ,Solitary Sandpiper,Tringa solitaria
+,Common Greenshank,T. nebularia
 ,Greater Yellowlegs,T. melanoleuca
 ,Willet,T. semipalmata
 ,Lesser Yellowlegs,T. flavipes
@@ -213,6 +215,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Black Tern,Chlidonias niger
 ,Common Tern,Sterna hirundo
 ,Roseate Tern,S. dougallii
+,Arctic Tern,S. paradisaea
 ,Sandwich Tern,Thalasseus sandvicensis
 ,Royal Tern,T. maximus
 
@@ -229,6 +232,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,SHEARWATERS,PROCELLARIIDAE
 ,Bulwer's Petrel,Bulweria bulwerii
 ,Cory's Shearwater,Calonectris diomedea
+,Cape Verde Shearwater,C. edwardsii
 ,Sooty Shearwater,Ardenna grisea
 ,Great Shearwater,A. gravis
 ,Manx Shearwater,Puffinus puffinus
@@ -268,6 +272,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
 ,Green Heron,Butorides virescens
 ,Striated Heron,B. striata
+,Squacco Heron,Ardeola ralloides
 ,Cattle Egret,Bubulcus ibis
 ,Gray Heron,Ardea cinerea
 ,Great Blue Heron,A. herodias
@@ -275,6 +280,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Purple Heron,A. purpurea
 ,Great Egret,A. alba
 ,Whistling Heron,Syrigma sibilatrix
+,Capped Heron,Pilherodius pileatus
 ,Tricolored Heron,Egretta tricolor
 ,Reddish Egret,E. rufescens
 ,Western Reef-Heron,E. gularis
@@ -307,6 +313,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Ornate Hawk-Eagle,S. ornatus
 ,Black-collared Hawk,Busarellus nigricollis
 ,Snail Kite,Rostrhamus sociabilis
+,Slender-billed Kite,Helicolestes hamatus
 ,Double-toothed Kite,Harpagus bidentatus
 ,Plumbeous Kite,Ictinia plumbea
 ,Long-winged Harrier,Circus buffoni
@@ -315,6 +322,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Rufous Crab Hawk,B. aequinoctialis
 ,Savanna Hawk,B. meridionalis
 ,Great Black Hawk,B. urubitinga
+,Roadside Hawk,Rupornis magnirostris
 ,White-tailed Hawk,Geranoaetus albicaudatus
 ,White Hawk,Pseudastur albicollis
 ,Gray-lined Hawk,Buteo nitidus
@@ -333,6 +341,7 @@ E,Trinidad Piping-Guan,Pipile pipile
 ,Ferruginous Pygmy-Owl,Glaucidium brasilianum
 ,Burrowing Owl,Athene cunicularia
 ,Striped Owl,Asio clamator
+,Stygian Owl,A. stygius
 ,Short-eared Owl,A. flammeus
 
 ,TROGONS,TROGONIDAE
@@ -386,6 +395,7 @@ E,Trinidad Motmot,Momotus bahamensis
 ,Red-bellied Macaw,Orthopsittaca manilatus
 ,Blue-and-yellow Macaw,Ara ararauna
 ,Scarlet Macaw,A. macao
+,Red-and-green Macaw,A. chloropterus
 ,White-eyed Parakeet,Psittacara leucophthalmus
 
 ,ANTBIRDS,THAMNOPHILIDAE
@@ -507,6 +517,9 @@ E,Trinidad Motmot,Momotus bahamensis
 ,MOCKINGBIRDS,MIMIDAE
 ,Tropical Mockingbird,Mimus gilvus
 
+,WEAVERS,PLOCEIDAE
+,Village Weaver,Ploceus cucullatus
+
 ,ESTRILDIDS,ESTRILDIDAE
 ,Common Waxbill,Estrilda astrild
 ,Tricolored Munia,Lonchura malacca
@@ -514,9 +527,11 @@ E,Trinidad Motmot,Momotus bahamensis
 ,OLD WORLD SPARROWS,PASSERIDAE
 ,House Sparrow,Passer domesticus
 
+,PIPITS and WAGTAILS,MOTACILLIDAE
+,White Wagtail,Motacilla alba
+
 ,FINCHES,FRINGILLIDAE
 ,Lesser Goldfinch,Spinus psaltria
-,Golden-rumped Euphonia,Chlorophonia cyanocephala
 ,Trinidad Euphonia,Euphonia trinitatis
 ,Violaceous Euphonia,E. violacea
 
@@ -525,7 +540,8 @@ E,Trinidad Motmot,Momotus bahamensis
 ,Red-breasted Meadowlark,Leistes militaris
 ,Crested Oropendola,Psarocolius decumanus
 ,Yellow-rumped Cacique,Cacicus cela
-,Orchard Oriole,Icterus spurius
+,Epaulet Oriole,Icterus cayanensis
+,Orchard Oriole,I. spurius
 ,Baltimore Oriole,I. galbula
 ,Yellow Oriole,I. nigrogularis
 ,Giant Cowbird,Molothrus oryzivorus
@@ -589,9 +605,7 @@ E,Trinidad Motmot,Momotus bahamensis
 ,Lesson's Seedeater,Sporophila bouvronides
 ,Lined Seedeater,S. lineola
 ,Ruddy-breasted Seedeater,S. minuta
-,Wing-barred Seedeater,S. americana
 ,Yellow-bellied Seedeater,S. nigricollis
-,Slate-colored Seedeater,S. schistacea
 ,Grayish Saltator,Saltator coerulescens
 ,Streaked Saltator,S. striatipectus
 ,Bananaquit,Coereba flaveola

@@ -27,7 +27,6 @@ var csvButton;
 var requested;
 
 var mailLink;
-// var target;
 // var upLoadData = new FormData();
 // eslint-disable-next-line no-unused-vars
 var activityData = [];
@@ -98,26 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
-
-  // // preload the AuthorsAbridged.json
-  // getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
-
-  // target = document.getElementById("checklistArticle");
-
-  // updateActivityData("start");
-
-  // var SAMTarget = document.getElementById( "SAM" );
-  // var evt = new Event("click", {"bubbles":true, "cancelable":false});
-
-  // SAMTarget.dispatchEvent(evt);
-
-  // setCountry(eventTarget);
 });
 
 function assignAuthorsJSON(data) {
-
   AuthorsAbridged = data;
-  // console.log(AuthorsAbridged);
 }
 
 window.addEventListener("load", function () {
@@ -128,28 +111,6 @@ window.addEventListener("unload", function () {
   updateActivityData("stop");
 });
 
-//   *******************   end of  (document).ready(function()   ******************************************
-
-// function setUpMapBodyIntersectionObserver() {
-//   var options = {
-
-//     root: null,
-//     // root: document.getElementsByTagName("body")[0],
-//     rootMargin: "0px",
-//     // rootMargin: "0% 0% 50% 0%",
-//     threshold: 0.4
-//   };
-
-//   observer = new IntersectionObserver(fadeMap, options);
-//   observer.observe(target);
-// }
-
-// function fadeMap(entries, observer) {
-
-//   var map = document.getElementById("currentMap");
-//   map.classList.toggle("fadeMap");
-// }
-
 function sendEmail() {
   // TODO : can this be obfuscated?  unicode??
   window.location.href = "mailto:mark@potoococha.net";
@@ -159,22 +120,12 @@ function toggleCountryMenuLayer(evt) {
 
   countryMenuLayer.classList.toggle("show");
   countryButton.classList.toggle("slideRight");
-  countryMenuLayer.classList.toggle("slideRight");
-
-  // if (!countryButton.classList.contains("wasOpened")) countryButton.classList.add("wasOpened");
 
   if (evt) evt.stopPropagation();
 
   var list = document.querySelectorAll(".countryItem");
 
-  // if (list.hidden == "true") {
-  //   list.hidden = false;
-  // }
-  // else list.hidden = true;
-
-  //   // set tabIndex from -1 to 0 so tabbing through works after country is chosen
-
-  if (countryMenuLayer.classList.contains("show")) {        // country menu shown, should disable all elements on main page
+  if (countryMenuLayer.classList.contains("show")) {  // country menu shown, should disable all elements on main page
     list.forEach(function(element) {
       element.setAttribute("tabindex", "1");
     });
@@ -184,8 +135,6 @@ function toggleCountryMenuLayer(evt) {
       element.setAttribute("tabindex", "-1");
     });
   }
-
-  // document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 }
 
 function toggleSampleTableShowEndemics(evt) {
@@ -199,7 +148,6 @@ function toggleSampleTableShowEndemics(evt) {
       evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
     }
   }
-
   sampleTable.querySelector("td.endemical").classList.toggle("showEndemics");
 }
 
@@ -277,10 +225,6 @@ function setCountry(evt) {
 
   if (!currentCountry) document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
 
-  // find and remove the previous highlighted Country
-  // var previousHighlightedCountry = evt.target.parentNode.parentNode.querySelector(".highlight");
-  // if (previousHighlightedCountry) previousHighlightedCountry.classList.remove("highlight");
-
   if (previousHighlightedCountryNode) previousHighlightedCountryNode.classList.remove("highlight");
   evt.target.classList.add("highlight");
   previousHighlightedCountryNode = evt.target;
@@ -292,9 +236,7 @@ function setCountry(evt) {
 
   // uploadActivity();
 
-  if (!titleBanner.classList.contains("countryChosen")) titleBanner.classList.add("countryChosen");
-  if (!countryButton.classList.contains("countryChosen")) countryButton.classList.add("countryChosen");
-  if (!countryMenuLayer.classList.contains("countryChosen")) countryMenuLayer.classList.add("countryChosen");
+  console.log(currentCountry);
 
   if (currentCountry === "South America") countryButton.innerHTML = "SA";
   else countryButton.innerHTML = countries2Postals[currentCountry];
@@ -313,48 +255,10 @@ function setChecklistCountryAuthors(country) {
   else if (country !== "South America") selectedCountryFill(country);
   else fillSAMmap("");
 
-  // if (country === "South America")
-  //   checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;30&nbsp;July&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
-  // else checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-
-    // check because AuthorsAbridged hasn't been downloaded yet
+        // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;1&nbsp;August&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;2&nbsp;September&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
-
-// function setChecklistAuthors(data) {
-
-  // Remsen, J. V., Jr., J. I. Areta, C. D. Cadena, S. Claramunt, A. Jaramillo, J. F. Pacheco, M. B. Robbins, F. G. Stiles, D. F. Stotz, and K. J. Zimmer.
-  // Version 21 June 2018. A classification of the bird species of South America.American Ornithologists' Union.
-
-  // var authors;
-
-  // if (currentCountry === "South America") {
-  //   authors = data.replace(/^.*Version(.*)$/g, "Remsen, et al. $1");
-  // }
-
-  // else if (currentCountry === "Colombia") {
-  //   authors = data.replace(/^(.*)\s+\(.*\).*Version(.*)$/g, "$1. $2");
-  //   // authors = "Asociación Colombiana de Ornitología checklist committee. 16 Feb. 2018.";
-  // }
-
-  // Asociación Colombiana de Ornitología checklist committee (Jorge E. Avendaño, Clara I. Bohórquez, Loreta Rosselli, Diana Arzuza-Buelvas,
-  // Felipe A.Estela, Andrés M.Cuervo, F.Gary Stiles, and Luis Miguel Renjifo). 2018.
-  // Species lists of birds for South American countries and territories: Colombia.Version 16 February 2018.
-
-  // Freile, J. F., R. Ahlman, R. S. Ridgely, A. Solano-Ugalde, D. Brinkhuizen, L. Navarrete, and P. J. Greenfield.
-  // 2018. Species lists of birds for South American countries and territories: Ecuador. Version 15 February 2017.
-
-  // else {
-  //   authors = data.replace(/^(.*\.) \d\d\d\d\..*Version(.*$)/g, "$1 $2");
-  // }
-
-  // checklistAuthorsPanel.innerHTML = authors;
-
-  // checklistAuthorsPanel.innerHTML = AuthorsAbridged[currentCountry];
-  // console.log(AuthorsAbridged[currentCountry]);
-  // checklistAuthorsPanel.classList.add("show");
-// }
 
 function setNumDays(evt) {
 

@@ -77,7 +77,8 @@
     font-variant  :  small-caps;
     color  :  darken($bgColor, 4%);
     // text-shadow :  0 0 0.125rem white;
-    text-shadow :   0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af,  0 -1px 2px #75d6af;
+    // text-shadow :   0 0 1px #fff,  0 0 2px #75d6af, 1px 1px 1px #75d6af,  0 -1px 2px #75d6af;
+    text-shadow :   0 0 1px #fff,  0 0 2px white, 1px 1px 1px white,  0 -1px 2px white;
     letter-spacing  :  0.2em;
 }
 

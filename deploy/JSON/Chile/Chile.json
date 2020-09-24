@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "August 03, 2010",
+	"version": "September 22, 2020",
 	"birds": {
 		"families": [
 			{
@@ -4615,12 +4615,6 @@
 								"index": 3128,
 								"name": "Patagonian Sierra Finch",
 								"CL": "X"
-							},
-							{
-								"species": "fruticeti",
-								"index": 3129,
-								"name": "Mourning Sierra Finch",
-								"CL": "X"
 							}
 						]
 					},
@@ -4629,21 +4623,27 @@
 						"spp": [
 							{
 								"species": "unicolor",
-								"index": 3130,
+								"index": 3129,
 								"name": "Plumbeous Sierra Finch",
 								"CL": "X"
 							},
 							{
 								"species": "plebejus",
-								"index": 3131,
+								"index": 3130,
 								"name": "Ash-breasted Sierra Finch",
 								"CL": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Porphyrospiza",
+						"Genus": "Rhopospina",
 						"spp": [
+							{
+								"species": "fruticeti",
+								"index": 3131,
+								"name": "Mourning Sierra Finch",
+								"CL": "X"
+							},
 							{
 								"species": "alaudina",
 								"index": 3132,

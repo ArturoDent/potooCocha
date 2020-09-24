@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "August 03, 2010",
+	"version": "September 22, 2020",
 	"birds": {
 		"families": [
 			{
@@ -126,6 +126,12 @@
 						"Genus": "Mareca",
 						"spp": [
 							{
+								"species": "penelope",
+								"index": 78,
+								"name": "Eurasian Wigeon",
+								"SU": "V"
+							},
+							{
 								"species": "americana",
 								"index": 79,
 								"name": "American Wigeon",
@@ -146,6 +152,12 @@
 								"species": "acuta",
 								"index": 82,
 								"name": "Northern Pintail",
+								"SU": "V"
+							},
+							{
+								"species": "crecca",
+								"index": 84,
+								"name": "Green-winged Teal",
 								"SU": "V"
 							}
 						]
