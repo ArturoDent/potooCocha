@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "September 22, 2020",
+	"version": "October 12, 2020",
 	"birds": {
 		"families": [
 			{
@@ -3831,21 +3831,12 @@
 								"index": 550,
 								"name": "Chestnut-bellied Hummingbird",
 								"SAM": "X(e)"
-							}
-						]
-					},
-					{
-						"Genus": "Saucerottia saucerottei",
-						"spp": [
+							},
 							{
-								"species": "Saucerottia saucerottei",
-								"index": 551
-							}
-						]
-					},
-					{
-						"Genus": "Saucerottia",
-						"spp": [
+								"species": "saucerottei",
+								"index": 551,
+								"name": "Steely-vented Hummingbird"
+							},
 							{
 								"species": "cyanifrons",
 								"index": 552,
@@ -6751,22 +6742,22 @@
 				"FamilyCommon": "HAWKS",
 				"genera": [
 					{
-						"Genus": "Elanus",
-						"spp": [
-							{
-								"species": "leucurus",
-								"index": 943,
-								"name": "White-tailed Kite"
-							}
-						]
-					},
-					{
 						"Genus": "Gampsonyx",
 						"spp": [
 							{
 								"species": "swainsonii",
-								"index": 944,
+								"index": 943,
 								"name": "Pearl Kite"
+							}
+						]
+					},
+					{
+						"Genus": "Elanus",
+						"spp": [
+							{
+								"species": "leucurus",
+								"index": 944,
+								"name": "White-tailed Kite"
 							}
 						]
 					},
