@@ -319,8 +319,8 @@ E,Spot-throated Hummingbird,T. taczanowskii
 ,Glittering-throated Emerald,Chionomesa fimbriata
 ,Sapphire-spangled Emerald,C. lactea
 ,Rufous-throated Sapphire,Hylocharis sapphirina
-,White-bellied Hummingbird,"Amazilia" chionogaster
-E,Green-and-white Hummingbird,"A." viridicauda
+,White-bellied Hummingbird,Elliotomyia chionogaster
+E,Green-and-white Hummingbird,E. viridicauda
 ,White-chinned Sapphire,Chlorestes cyanus
 ,Violet-bellied Hummingbird,C. julie
 ,Blue-chinned Sapphire,C. notata
@@ -853,8 +853,7 @@ E,Black-necked Woodpecker,C. atricollis
 ,Slaty-backed Forest-Falcon,M. mirandollei
 ,Collared Forest-Falcon,M. semitorquatus
 ,Buckley's Forest-Falcon,M. buckleyi
-,Crested Caracara,Caracara cheriway
-,Southern Caracara,C. plancus
+,Crested Caracara,Caracara plancus
 ,Red-throated Caracara,Ibycter americanus
 ,Mountain Caracara,Phalcoboenus megalopterus
 ,Black Caracara,Daptrius ater
@@ -909,10 +908,10 @@ E,Yellow-faced Parrotlet,F. xanthops
 ,Red-bellied Macaw,Orthopsittaca manilatus
 ,Blue-headed Macaw,Primolius couloni
 ,Blue-and-yellow Macaw,Ara ararauna
+,Chestnut-fronted Macaw,A. severus
 ,Military Macaw,A. militaris
 ,Scarlet Macaw,A. macao
 ,Red-and-green Macaw,A. chloropterus
-,Chestnut-fronted Macaw,A. severus
 ,Golden-plumed Parakeet,Leptosittaca branickii
 ,Red-shouldered Macaw,Diopsittaca nobilis
 ,Scarlet-fronted Parakeet,Psittacara wagleri
@@ -950,7 +949,7 @@ E,Yellow-faced Parrotlet,F. xanthops
 ,Acre Antshrike,T. divisorius
 ,Pearly Antshrike,Megastictus margaritatus
 ,Black Bushbird,Neoctantes niger
-,Russet Antshrike,Thamnistes anabatinus
+,Rufescent Antshrike,Thamnistes rufescens
 ,Plain Antvireo,Dysithamnus mentalis
 ,Bicolored Antvireo,D. occidentalis
 ,White-streaked Antvireo,D. leucostictus
@@ -962,6 +961,7 @@ E,Yellow-faced Parrotlet,F. xanthops
 ,Spot-winged Antshrike,Pygiptila stellaris
 ,White-eyed Stipplethroat,Epinecrophylla leucophthalma
 ,Rufous-backed Stipplethroat,E. haematonota
+,Rio Madeira Stipplethroat,E. amazonica
 ,Foothill Stipplethroat,E. spodionota
 ,Ornate Stipplethroat,E. ornata
 ,Rufous-tailed Stipplethroat,E. erythrura
@@ -1252,6 +1252,7 @@ E,Cactus Canastero,Pseudasthenes cactorum
 ,Marañon Spinetail,S. maranonica
 E,Great Spinetail,S. hypochondriaca
 ,Necklaced Spinetail,S. stictothorax
+E,Chinchipe Spinetail,S. chinchipensis
 E,Russet-bellied Spinetail,S. zimmeri
 ,Slaty Spinetail,S. brachyura
 ,Dusky Spinetail,S. moesta
@@ -1316,9 +1317,9 @@ E,Bay-vented Cotinga,Doliornis sclateri
 ,Plum-throated Cotinga,Cotinga maynana
 ,Purple-breasted Cotinga,C. cotinga
 ,Spangled Cotinga,C. cayana
-,Dusky Piha,Lipaugus fuscocinereus
+,Screaming Piha,Lipaugus vociferans
+,Dusky Piha,L. fuscocinereus
 ,Scimitar-winged Piha,L. uropygialis
-,Screaming Piha,L. vociferans
 ,Purple-throated Cotinga,Porphyrolaema porphyrolaema
 ,Pompadour Cotinga,Xipholena punicea
 ,Bare-necked Fruitcrow,Gymnoderus foetidus
@@ -1563,8 +1564,8 @@ E,Piura Chat-Tyrant,O. piurae
 ,White-winged Black-Tyrant,K. aterrimus
 ,Hudson's Black-Tyrant,K. hudsoni
 ,Yellow-browed Tyrant,Satrapa icterophrys
-,Little Ground-Tyrant,Muscisaxicola fluviatilis
-,Spot-billed Ground-Tyrant,M. maculirostris
+,Little Ground-Tyrant,Syrtidicola fluviatilis
+,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
 ,Taczanowski's Ground-Tyrant,M. griseus
 ,Puna Ground-Tyrant,M. juninensis
 ,Cinereous Ground-Tyrant,M. cinereus
@@ -1577,8 +1578,8 @@ E,Piura Chat-Tyrant,O. piurae
 ,Cinnamon-bellied Ground-Tyrant,M. capistratus
 ,Black-fronted Ground-Tyrant,M. frontalis
 ,Red-rumped Bush-Tyrant,Cnemarchus erythropygius
-,Rufous-webbed Bush-Tyrant,Polioxolmis rufipennis
-,Gray Monjita,Xolmis cinereus
+,Rufous-webbed Bush-Tyrant,C. rufipennis
+,Gray Monjita,Nengetus cinereus
 ,Black-billed Shrike-Tyrant,Agriornis montanus
 ,White-tailed Shrike-Tyrant,A. albicauda
 ,Gray-bellied Shrike-Tyrant,A. micropterus
@@ -1689,7 +1690,7 @@ E,Iquitos Gnatcatcher,P. clementsi
 ,THRUSHES,TURDIDAE
 ,Andean Solitaire,Myadestes ralloides
 ,Slaty-backed Nightingale-Thrush,Catharus fuscater
-,Spotted Nightingale-Thrush,C. dryas
+,Speckled Nightingale-Thrush,C. maculatus
 ,Veery,C. fuscescens
 ,Gray-cheeked Thrush,C. minimus
 ,Swainson's Thrush,C. ustulatus
@@ -1899,7 +1900,7 @@ E,Selva Cacique,C. koepckeae
 ,Mourning Sierra Finch,Rhopospina fruticeti
 ,Band-tailed Sierra Finch,R. alaudina
 ,White-throated Sierra Finch,Idiopsar erythronotus
-,White-winged Diuca Finch,I. speculifer
+,Glacier Finch,I. speculifer
 ,Short-tailed Finch,I. brachyurus
 ,Band-tailed Seedeater,Catamenia analis
 ,Plain-colored Seedeater,C. inornata

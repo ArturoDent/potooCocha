@@ -1,15 +1,6 @@
 {
   "version": "2.0.0",
   "tasks": [
-    //{
-    //  "label": "gulp sync",
-    //  "type": "shell",
-    //  "command": "gulp",
-    //  "args": [
-    //    "sync",
-    //  ],
-    //  "problemMatcher": []
-    //},
     {
       "label": "Start server and process files",
       "command": "gulp",
@@ -18,7 +9,7 @@
       ],
       "type": "shell",
       "options": {
-        "cwd": "${workspaceRoot}",
+        "cwd": "${workspaceRoot}"
       }
     },
     {
@@ -28,10 +19,6 @@
       "isBackground": true,
       "problemMatcher": [
         {
-          // "base": "$tsc-watch",
-          // "fileLocation": "autoDetect", 
-
-          // "owner": "typescript",
           "fileLocation": "relative",
           "pattern": {
             "regexp": "^([^\\s].*)\\((\\d+|\\d+,\\d+|\\d+,\\d+,\\d+,\\d+)\\):\\s+(error|warning|info)\\s+(TS\\d+)\\s*:\\s*(.*)$",
@@ -41,10 +28,8 @@
             "code": 4,
             "message": 5
           },
-
           "background": {
             "activeOnStart": true,
-            // "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
             "beginsPattern": "Using gulpfile ~\\OneDrive\\experimental\\gulpfile\\.js",
             "endsPattern": "[Browsersync] Serving files from: \\./"
           }
@@ -65,45 +50,23 @@
             "endsPattern": "Starting 'watch'..."
           }
         }
-      ],
+      ]
     },
     {
       "label": "Gulp: Start server and watch",
-      "dependsOn": ["Gulp: Start server only", "Gulp: watch"]
-      // "dependsOn": [
-      //   "Gulp: Start server only"
-      // ]
+      "dependsOn": [
+        "Gulp: Start server only",
+        "Gulp: watch"
+      ]
     },
     {
       "label": "postdebugKill",
       "type": "process",
       "command": [
         "${command:workbench.action.tasks.terminate}",
-        "${command:workbench.action.acceptSelectedQuickOpenItem}",
-      ],
+        "${command:workbench.action.acceptSelectedQuickOpenItem}"
+      ]
     },
-    // {
-    //     "label": "Gulp: Start server only",
-    //     "command": "gulp",
-    //     "args": [
-    //         "serve"
-    //     ],
-    //     "type": "shell",
-    //     "options": {
-    //         "cwd": "${workspaceRoot}"
-    //     }
-    // },
-    // {
-    //     "label": "Gulp: watch",
-    //     "command": "gulp",
-    //     "args": [
-    //         "watch"
-    //     ],
-    //     "type": "shell",
-    //     "options": {
-    //         "cwd": "${workspaceRoot}"
-    //     }
-    // },
     {
       "label": "node -v",
       "command": "node",
@@ -140,28 +103,25 @@
       "label": "run npm test",
       "command": "npm",
       "args": [
-        "test",
-        // "workspaceFolder = ${workspaceFolder}"
+        "test"
       ],
       "type": "shell"
     },
-    // {
-    //     "label": "Split Editor",
-    //     "command": "vscode.commands.executeCommand",
-    //     "args": [
-    //         "vscode.workbench.action.terminal.split"
-    //     ],
-    //     // "dependsOn": [
-    //     //     "Split Editor"
-    //     // ],
-    //     // "type": "shell"
-    //     // "type": "process"
-    // },
-    // {
-    //     "type": "gulp",
-    //     "task": "sync",
-    //     "problemMatcher": []
-    // }
-    // commands.executeCommand('vscode.openFolder', uri);
+    {
+      "label": "Gulp: watch",
+      "type": "gulp",
+      "task": "watch",
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "base": "$tsc-watch",
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "Using gulpfile c:\\Users\\Mark\\OneDrive\\experimental\\gulpfile.js",
+            "endsPattern": "Starting 'watch'..."
+          }
+        }
+      ]
+    }
   ]
 }

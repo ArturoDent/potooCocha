@@ -259,7 +259,7 @@ function loadCountryTaxonomy(country) {
   }
 
   
-  if (country === "South America") searchCountryText.innerHTML = "South America (September 2, 2020)<br>or a single country";
+  if (country === "South America") searchCountryText.innerHTML = "South America";
   else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 

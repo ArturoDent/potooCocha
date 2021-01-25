@@ -46,6 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
   countryButton = document.getElementById("countryButton");
   countryButton.addEventListener("click", toggleCountryMenuLayer);
 
+  // countryButton.addEventListener('click', e => { e.data })
+
+
   titleBanner = document.getElementById("titleBanner");
 
   numDaysButton = document.getElementById("numDays");
@@ -257,7 +260,7 @@ function setChecklistCountryAuthors(country) {
 
         // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. &nbsp;2&nbsp;September&nbsp;2020. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;20&nbsp;January&nbsp;2021. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {

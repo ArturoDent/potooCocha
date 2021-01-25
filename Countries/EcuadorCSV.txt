@@ -165,8 +165,8 @@ E,Galapagos Dove,Z. galapagoensis
 ,White-chested Swift,C. lemosi
 ,Chestnut-collared Swift,Streptoprocne rutila
 ,White-collared Swift,S. zonaris
-,Band-rumped Swift,Chaetura spinicaudus
-,Gray-rumped Swift,C. cinereiventris
+,Gray-rumped Swift,Chaetura cinereiventris
+,Band-rumped Swift,C. spinicaudus
 ,Pale-rumped Swift,C. egregia
 ,Chimney Swift,C. pelagica
 ,Chapman's Swift,C. chapmani
@@ -282,7 +282,7 @@ E,Black-breasted Puffleg,Eriocnemis nigrivestis
 E,Esmeraldas Woodstar,C. berlepschi
 ,Short-tailed Woodstar,Myrmia micrura
 ,Amethyst Woodstar,Calliphlox amethystina
-,Purple-throated Woodstar,C. mitchellii
+,Purple-throated Woodstar,Philodice mitchellii
 ,Western Emerald,Chlorostilbon melanorhynchus
 ,Blue-tailed Emerald,C. mellisugus
 ,Violet-headed Hummingbird,Klais guimeti
@@ -333,6 +333,7 @@ E,Esmeraldas Woodstar,C. berlepschi
 ,White-throated Crake,L. albigularis
 ,Gray-breasted Crake,L. exilis
 E,Galapagos Rail,L. spilonota
+,Ocellated Crake,Micropygia schomburgkii
 ,Ash-throated Crake,Mustelirallus albicollis
 ,Colombian Crake,M. colombianus
 ,Paint-billed Crake,M. erythrops
@@ -505,10 +506,12 @@ E,Galapagos Penguin,S. mendiculus
 
 ,SHEARWATERS,PROCELLARIIDAE
 ,Southern Giant-Petrel,Macronectes giganteus
+,Northern Giant-Petrel,M. halli
 ,Southern Fulmar,Fulmarus glacialoides
 ,Cape Petrel,Daption capense
 ,Mottled Petrel,Pterodroma inexpectata
 ,Galapagos Petrel,P. phaeopygia
+,Juan Fernandez Petrel,P. externa
 ,Antarctic Prion,Pachyptila desolata
 ,White-chinned Petrel,Procellaria aequinoctialis
 ,Parkinson's Petrel,P. parkinsoni
@@ -818,7 +821,7 @@ E,Galapagos Hawk,B. galapagoensis
 ,Slaty-backed Forest-Falcon,M. mirandollei
 ,Collared Forest-Falcon,M. semitorquatus
 ,Buckley's Forest-Falcon,M. buckleyi
-,Crested Caracara,Caracara cheriway
+,Crested Caracara,Caracara plancus
 ,Red-throated Caracara,Ibycter americanus
 ,Carunculated Caracara,Phalcoboenus carunculatus
 ,Mountain Caracara,P. megalopterus
@@ -844,7 +847,6 @@ E,Galapagos Hawk,B. galapagoensis
 ,Rusty-faced Parrot,Hapalopsittaca amazonina
 ,Red-faced Parrot,H. pyrrhops
 ,Rose-faced Parrot,Pyrilia pulchra
-,Saffron-headed Parrot,P. pyrilia
 ,Orange-cheeked Parrot,P. barrabandi
 ,Red-billed Parrot,Pionus sordidus
 ,Speckle-faced Parrot,P. tumultuosus
@@ -869,11 +871,11 @@ E,White-necked Parakeet,P. albipectus
 ,Dusky-headed Parakeet,Aratinga weddellii
 ,Red-bellied Macaw,Orthopsittaca manilatus
 ,Blue-and-yellow Macaw,Ara ararauna
+,Chestnut-fronted Macaw,A. severus
 ,Military Macaw,A. militaris
 ,Great Green Macaw,A. ambiguus
 ,Scarlet Macaw,A. macao
 ,Red-and-green Macaw,A. chloropterus
-,Chestnut-fronted Macaw,A. severus
 ,Golden-plumed Parakeet,Leptosittaca branickii
 ,Yellow-eared Parrot,Ognorhynchus icterotis
 ,Scarlet-fronted Parakeet,Psittacara wagleri
@@ -906,6 +908,7 @@ E,White-necked Parakeet,P. albipectus
 ,Pearly Antshrike,Megastictus margaritatus
 ,Black Bushbird,Neoctantes niger
 ,Russet Antshrike,Thamnistes anabatinus
+,Rufescent Antshrike,T. rufescens
 ,Plain Antvireo,Dysithamnus mentalis
 ,Spot-crowned Antvireo,D. puncticeps
 ,Bicolored Antvireo,D. occidentalis
@@ -1186,9 +1189,9 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Blue Cotinga,Cotinga nattererii
 ,Plum-throated Cotinga,C. maynana
 ,Spangled Cotinga,C. cayana
-,Dusky Piha,Lipaugus fuscocinereus
-,Rufous Piha,L. unirufus
+,Rufous Piha,Lipaugus unirufus
 ,Screaming Piha,L. vociferans
+,Dusky Piha,L. fuscocinereus
 ,Purple-throated Cotinga,Porphyrolaema porphyrolaema
 ,Black-tipped Cotinga,Carpodectes hopkei
 ,Pompadour Cotinga,Xipholena punicea
@@ -1400,8 +1403,8 @@ E,Galapagos Flycatcher,M. magnirostris
 ,Rufous-tailed Tyrant,K. poecilurus
 ,Amazonian Black-Tyrant,K. poecilocercus
 ,Jelski's Black-Tyrant,K. signatus
-,Little Ground-Tyrant,Muscisaxicola fluviatilis
-,Spot-billed Ground-Tyrant,M. maculirostris
+,Little Ground-Tyrant,Syrtidicola fluviatilis
+,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
 ,Dark-faced Ground-Tyrant,M. maclovianus
 ,White-browed Ground-Tyrant,M. albilora
 ,Plain-capped Ground-Tyrant,M. alpinus
@@ -1467,6 +1470,7 @@ E,Galapagos Martin,P. modesta
 ,Tree Swallow,Tachycineta bicolor
 ,Tumbes Swallow,T. stolzmanni
 ,White-winged Swallow,T. albiventer
+,White-rumped Swallow,T. leucorrhoa
 ,Bank Swallow,Riparia riparia
 ,Barn Swallow,Hirundo rustica
 ,Cliff Swallow,Petrochelidon pyrrhonota
@@ -1518,7 +1522,7 @@ E,Galapagos Martin,P. modesta
 ,THRUSHES,TURDIDAE
 ,Andean Solitaire,Myadestes ralloides
 ,Slaty-backed Nightingale-Thrush,Catharus fuscater
-,Spotted Nightingale-Thrush,C. dryas
+,Speckled Nightingale-Thrush,C. maculatus
 ,Gray-cheeked Thrush,C. minimus
 ,Swainson's Thrush,C. ustulatus
 ,Black Solitaire,Entomodestes coracinus
@@ -1678,6 +1682,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,Hepatic Tanager,Piranga flava
 ,Summer Tanager,P. rubra
 ,Scarlet Tanager,P. olivacea
+,Western Tanager,P. ludoviciana
 ,Red-hooded Tanager,P. rubriceps
 ,White-winged Tanager,P. leucoptera
 ,Red-crowned Ant-Tanager,Habia rubica

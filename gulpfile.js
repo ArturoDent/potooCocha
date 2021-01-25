@@ -328,7 +328,8 @@ const ftpGlobs = [
   // 'deploy/flags/*.png',
   'deploy/home.html',
   'deploy/citations.html',
-  'deploy/Authors/*.txt',
+  'deploy/Authors/*.{txt,json}',
+  // 'deploy/Authors/*.json',
   'deploy/occurrences/occurrences.txt',
   'deploy/Countries/*.*',
   'deploy/JSON/**/*.json',
@@ -391,8 +392,6 @@ exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuil
 
 exports.deploy_E = gulp.series(deployExperimental);
 exports.deploy_P = gulp.series(deployPotoococha);
-
-
 
 // *************************** not used ************************************ //
 

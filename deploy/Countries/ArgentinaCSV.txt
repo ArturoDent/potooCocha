@@ -68,6 +68,7 @@ E,White-headed Steamer-Duck,T. leucocephalus
 ,GUANS,CRACIDAE
 ,Rusty-margined Guan,Penelope superciliaris
 ,Red-faced Guan,P. dabbenei
+,Yungas Guan,P. bridgesi
 ,Dusky-legged Guan,P. obscura
 ,Black-fronted Piping-Guan,Pipile jacutinga
 ,Chaco Chachalaca,Ortalis canicollis
@@ -206,7 +207,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Sapphire-spangled Emerald,Chionomesa lactea
 ,Rufous-throated Sapphire,Hylocharis sapphirina
 ,Gilded Hummingbird,H. chrysura
-,White-bellied Hummingbird,"Amazilia" chionogaster
+,White-bellied Hummingbird,Elliotomyia chionogaster
 ,White-chinned Sapphire,Chlorestes cyanus
 
 ,LIMPKIN,ARAMIDAE
@@ -477,6 +478,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Bare-faced Ibis,Phimosus infuscatus
 ,Plumbeous Ibis,Theristicus caerulescens
 ,Buff-necked Ibis,T. caudatus
+,Andean Ibis,T. branickii
 ,Black-faced Ibis,T. melanopis
 ,Roseate Spoonbill,Platalea ajaja
 
@@ -631,7 +633,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Barred Forest-Falcon,Micrastur ruficollis
 ,Collared Forest-Falcon,M. semitorquatus
 ,Spot-winged Falconet,Spiziapteryx circumcincta
-,Southern Caracara,Caracara plancus
+,Crested Caracara,Caracara plancus
 ,Mountain Caracara,Phalcoboenus megalopterus
 ,White-throated Caracara,P. albogularis
 ,Striated Caracara,P. australis
@@ -917,7 +919,8 @@ E,White-throated Cacholote,P. gutturalis
 ,Three-striped Flycatcher,Conopias trivirgatus
 ,Variegated Flycatcher,Empidonomus varius
 ,Crowned Slaty Flycatcher,E. aurantioatrocristatus
-,Tropical Kingbird,Tyrannus melancholicus
+,White-throated Kingbird,Tyrannus albogularis
+,Tropical Kingbird,T. melancholicus
 ,Fork-tailed Flycatcher,T. savana
 ,Eastern Kingbird,T. tyrannus
 ,Rufous Casiornis,Casiornis rufus
@@ -937,6 +940,7 @@ E,White-throated Cacholote,P. gutturalis
 ,Masked Water-Tyrant,F. nengeta
 ,White-headed Marsh Tyrant,Arundinicola leucocephala
 ,Streamer-tailed Tyrant,Gubernetes yetapa
+,Black-and-white Monjita,Heteroxolmis dominicana
 ,Strange-tailed Tyrant,Alectrurus risora
 ,Austral Negrito,Lessonia rufa
 ,Andean Negrito,L. oreas
@@ -956,21 +960,20 @@ E,White-throated Cacholote,P. gutturalis
 ,White-browed Ground-Tyrant,M. albilora
 ,Cinnamon-bellied Ground-Tyrant,M. capistratus
 ,Black-fronted Ground-Tyrant,M. frontalis
-,Rufous-webbed Bush-Tyrant,Polioxolmis rufipennis
-,Fire-eyed Diucon,Xolmis pyrope
-,Gray Monjita,X. cinereus
-,Black-crowned Monjita,X. coronatus
-,White-rumped Monjita,X. velatus
+,Rufous-webbed Bush-Tyrant,Cnemarchus rufipennis
+,White-rumped Monjita,Xolmis velatus
 ,White Monjita,X. irupero
-E,Salinas Monjita,X. salinarum
-E,Rusty-backed Monjita,X. rubetra
-,Black-and-white Monjita,X. dominicanus
+,Fire-eyed Diucon,Pyrope pyrope
+,Gray Monjita,Nengetus cinereus
+,Black-crowned Monjita,Neoxolmis coronatus
+,Chocolate-vented Tyrant,N. rufiventris
+E,Salinas Monjita,N. salinarum
+E,Rusty-backed Monjita,N. rubetra
 ,Black-billed Shrike-Tyrant,Agriornis montanus
 ,White-tailed Shrike-Tyrant,A. albicauda
 ,Great Shrike-Tyrant,A. lividus
 ,Gray-bellied Shrike-Tyrant,A. micropterus
 ,Lesser Shrike-Tyrant,A. murinus
-,Chocolate-vented Tyrant,Neoxolmis rufiventris
 ,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
 ,Fuscous Flycatcher,Cnemotriccus fuscatus
 ,Euler's Flycatcher,Lathrotriccus euleri
@@ -1027,7 +1030,7 @@ E,Rusty-backed Monjita,X. rubetra
 ,Rufous-throated Dipper,Cinclus schulzii
 
 ,THRUSHES,TURDIDAE
-,Spotted Nightingale-Thrush,Catharus dryas
+,Speckled Nightingale-Thrush,Catharus maculatus
 ,Veery,C. fuscescens
 ,Swainson's Thrush,C. ustulatus
 ,Austral Thrush,Turdus falcklandii
@@ -1087,6 +1090,7 @@ E,Pampas Pipit,A. chacoensis
 ,Grassland Sparrow,Ammodramus humeralis
 ,Yellow-browed Sparrow,A. aurifrons
 ,White-browed Brushfinch,Arremon torquatus
+,Moss-backed Sparrow,A. dorbignii
 ,Saffron-billed Sparrow,A. flavirostris
 ,Rufous-collared Sparrow,Zonotrichia capensis
 ,Fulvous-headed Brushfinch,Atlapetes fulviceps
@@ -1166,7 +1170,7 @@ E,Monte Yellow-Finch,S. mendozae
 ,Band-tailed Sierra Finch,R. alaudina
 E,Carbonated Sierra Finch,R. carbonaria
 ,Red-backed Sierra Finch,Idiopsar dorsalis
-,White-winged Diuca Finch,I. speculifer
+,Glacier Finch,I. speculifer
 ,Short-tailed Finch,I. brachyurus
 ,White-bridled Finch,Melanodera melanodera
 ,Yellow-bridled Finch,M. xanthogramma
@@ -1231,7 +1235,7 @@ E,Tucuman Mountain Finch,P. baeri
 ,Sooty Grassquit,A. fuliginosa
 ,Black-crested Finch,Lophospingus pusillus
 ,Gray-crested Finch,L. griseocristatus
-,Common Diuca-Finch,Diuca diuca
+,Diuca Finch,Diuca diuca
 ,Yellow Cardinal,Gubernatrix cristata
 ,Red-crested Cardinal,Paroaria coronata
 ,Yellow-billed Cardinal,P. capitata
