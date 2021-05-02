@@ -3,7 +3,7 @@ const browserSync = require("browser-sync").create("index.html");
 const reload = browserSync.reload;
 
 const newer = require('gulp-newer');
-const sass = require("gulp-sass");
+const sass = require("gulp-dart-sass");
 // const sourcemaps = require("gulp-sourcemaps");
 
 const concat = require("gulp-concat");
@@ -15,7 +15,7 @@ const stripComments = require("gulp-strip-comments");
 // const stripdebug = require("gulp-strip-debug");
 const modifyHTMLlinks = require("gulp-processhtml");  // or try gulp-useref
 const addVersionString = require("gulp-version-number");
-const print = require('gulp-print').default; 
+const print = require('gulp-print').default;
 
 
 function serve (done) {        // serve:    ./home.html

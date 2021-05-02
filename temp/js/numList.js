@@ -13,8 +13,8 @@ var numSpeciesList = {
 
 		"Argentina": 1027, "Aruba": 245, "Bolivia": 1400, "Brazil": 1823, "Chile": 509,
 		"Colombia": 1852, "Curaçao": 217, "Ecuador": 1651, "French Guiana": 698,
-		"Guyana": 784, "Paraguay": 694, "Peru": 1829, "Suriname": 733, "Trinidad": 486,
-		"Uruguay": 484, "Venezuela": 1397, "Bonaire": 208, "Falklands": 227, "South America": 3436
+		"Guyana": 784, "Paraguay": 694, "Peru": 1829, "Suriname": 735, "Trinidad": 486,
+		"Uruguay": 484, "Venezuela": 1398, "Bonaire": 208, "Falklands": 227, "South America": 3436
 };
 
 // numSpecies does not include hypotheticals, from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
