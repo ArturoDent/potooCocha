@@ -733,7 +733,7 @@ TOUCANS,RAMPHASTIDAE
 ,,White-throated Toucan,R. tucanus
 ,,Choco Toucan,R. brevis
 5,,Channel-billed Toucan,R. vitellinus
-,,Emerald Toucanet,Aulacorhynchus prasinus
+,,Southern Emerald-Toucanet,Aulacorhynchus albivitta
 ,,Chestnut-tipped Toucanet,A. derbianus
 ,endemic,Yellow-browed Toucanet,A. huallagae
 ,,Blue-banded Toucanet,A. coeruleicinctis
@@ -746,7 +746,7 @@ TOUCANS,RAMPHASTIDAE
 ,,Chestnut-eared Aracari,P. castanotis
 ,,Many-banded Aracari,P. pluricinctus
 ,,Ivory-billed Aracari,P. azara
-,,Curl-crested Aracari,P. beauharnaesii
+,,Curl-crested Aracari,P. beauharnaisii
 WOODPECKERS,PICIDAE
 ,,Bar-breasted Piculet,Picumnus aurifrons
 ,,Lafresnaye's Piculet,P. lafresnayi
@@ -832,30 +832,31 @@ PARROTS,PSITTACIDAE
 ,,Orange-winged Parrot,A. amazonica
 25,,Scaly-naped Parrot,A. mercenarius
 ,,Dusky-billed Parrotlet,Forpus modestus
-,,Blue-winged Parrotlet,F. xanthopterygius
+,,Riparian Parrotlet,F. crassirostris
 ,,Pacific Parrotlet,F. coelestis
 ,endemic,Yellow-faced Parrotlet,F. xanthops
-30,,Black-headed Parrot,Pionites melanocephalus
+30,,Cobalt-rumped Parrotlet,F. xanthopterygius
+,,Black-headed Parrot,Pionites melanocephalus
 ,,White-bellied Parrot,P. leucogaster
 ,,Red-fan Parrot,Deroptyus accipitrinus
 ,,Bonaparte's Parakeet,Pyrrhura lucianii
-,,Rose-fronted Parakeet,P. roseifrons
-35,,Maroon-tailed Parakeet,P. melanura
+35,,Rose-fronted Parakeet,P. roseifrons
+,,Maroon-tailed Parakeet,P. melanura
 ,,Black-capped Parakeet,P. rupicola
 ,,White-necked Parakeet,P. albipectus
 ,,Peach-fronted Parakeet,Eupsittula aurea
-,,Dusky-headed Parakeet,Aratinga weddellii
-40,,Red-bellied Macaw,Orthopsittaca manilatus
+40,,Dusky-headed Parakeet,Aratinga weddellii
+,,Red-bellied Macaw,Orthopsittaca manilatus
 ,,Blue-headed Macaw,Primolius couloni
 ,,Blue-and-yellow Macaw,Ara ararauna
 ,,Chestnut-fronted Macaw,A. severus
-,,Military Macaw,A. militaris
-45,,Scarlet Macaw,A. macao
+45,,Military Macaw,A. militaris
+,,Scarlet Macaw,A. macao
 ,,Red-and-green Macaw,A. chloropterus
 ,,Golden-plumed Parakeet,Leptosittaca branickii
 ,,Red-shouldered Macaw,Diopsittaca nobilis
-,,Scarlet-fronted Parakeet,Psittacara wagleri
-50,,Mitred Parakeet,P. mitratus
+50,,Scarlet-fronted Parakeet,Psittacara wagleri
+,,Mitred Parakeet,P. mitratus
 ,,Red-masked Parakeet,P. erythrogenys
 ,,White-eyed Parakeet,P. leucophthalmus
 ANTBIRDS,THAMNOPHILIDAE
@@ -1018,27 +1019,27 @@ TAPACULOS,RHINOCRYPTIDAE
 ,,Rusty-belted Tapaculo,Liosceles thoracicus
 ,,Ocellated Tapaculo,Acropternis orthonyx
 ,,Ash-colored Tapaculo,Myornis senilis
-,,Blackish Tapaculo,Scytalopus latrans
-5,endemic,Unicolored Tapaculo,S. unicolor
+,endemic,Ancash Tapaculo,Scytalopus affinis
+5,endemic,White-winged Tapaculo,S. krabbei
+,,Loja Tapaculo,S. androstictus
+,,Puna Tapaculo,S. simonsi
+,,Diademed Tapaculo,S. schulenbergi
+,endemic,Vilcabamba Tapaculo,S. urubambae
+10,endemic,Ampay Tapaculo,S. whitneyi
+,endemic,Jalca Tapaculo,S. frankeae
+,endemic,Neblina Tapaculo,S. altirostris
 ,,Trilling Tapaculo,S. parvirostris
+,,Bolivian Tapaculo,S. bolivianus
+15,,White-crowned Tapaculo,S. atratus
+,,Long-tailed Tapaculo,S. micropterus
+,endemic,Rufous-vented Tapaculo,S. femoralis
 ,endemic,Utcubamba Tapaculo,S. intermedius
 ,endemic,Large-footed Tapaculo,S. macropus
-,,Long-tailed Tapaculo,S. micropterus
-10,endemic,Rufous-vented Tapaculo,S. femoralis
-,,White-crowned Tapaculo,S. atratus
-,,Bolivian Tapaculo,S. bolivianus
-,,Chusquea Tapaculo,S. parkeri
-,endemic,Neblina Tapaculo,S. altirostris
-15,endemic,Jalca Tapaculo,S. frankeae
-,endemic,White-winged Tapaculo,S. krabbei
-,endemic,Ancash Tapaculo,S. affinis
+20,endemic,Junin Tapaculo,S. gettyae
+,endemic,Unicolored Tapaculo,S. unicolor
 ,endemic,Tschudi's Tapaculo,S. acutirostris
-,endemic,Vilcabamba Tapaculo,S. urubambae
-20,,Puna Tapaculo,S. simonsi
-,,Loja Tapaculo,S. androstictus
-,endemic,Ampay Tapaculo,S. whitneyi
-,,Diademed Tapaculo,S. schulenbergi
-,endemic,Junin Tapaculo,S. gettyae
+,,Blackish Tapaculo,S. latrans
+,,Chusquea Tapaculo,S. parkeri
 ANTTHRUSHES,FORMICARIIDAE
 ,,Rufous-capped Antthrush,Formicarius colma
 ,,Black-faced Antthrush,F. analis
@@ -1810,7 +1811,7 @@ TANAGERS,THRAUPIDAE
 ,,Band-tailed Sierra Finch,R. alaudina
 ,,White-throated Sierra Finch,Idiopsar erythronotus
 ,,Glacier Finch,I. speculifer
-,,Short-tailed Finch,I. brachyurus
+,,Boulder Finch,I. brachyurus
 35,,Band-tailed Seedeater,Catamenia analis
 ,,Plain-colored Seedeater,C. inornata
 ,,Paramo Seedeater,C. homochroa
@@ -1923,17 +1924,17 @@ TANAGERS,THRAUPIDAE
 ,endemic,Yellow-scarfed Tanager,I. reinhardti
 145,,Fawn-breasted Tanager,Pipraeidea melanonota
 ,,Blue-and-yellow Tanager,Rauenia bonariensis
-,,Buff-breasted Mountain-Tanager,Dubusia taeniata
-,,Chestnut-bellied Mountain-Tanager,D. castaneoventris
-,,Lacrimose Mountain-Tanager,Anisognathus lacrymosus
-150,,Scarlet-bellied Mountain-Tanager,A. igniventris
-,,Blue-winged Mountain-Tanager,A. somptuosus
-,,Hooded Mountain-Tanager,Buthraupis montana
-,,Masked Mountain-Tanager,Tephrophilus wetmorei
+,,Buff-breasted Mountain Tanager,Dubusia taeniata
+,,Chestnut-bellied Mountain Tanager,D. castaneoventris
+,,Lacrimose Mountain Tanager,Anisognathus lacrymosus
+150,,Scarlet-bellied Mountain Tanager,A. igniventris
+,,Blue-winged Mountain Tanager,A. somptuosus
+,,Hooded Mountain Tanager,Buthraupis montana
+,,Masked Mountain Tanager,Tephrophilus wetmorei
 ,,Blue-capped Tanager,Sporathraupis cyanocephala
 155,,Grass-green Tanager,Chlorornis riefferii
-,,Black-chested Mountain-Tanager,Cnemathraupis eximia
-,endemic,Golden-backed Mountain-Tanager,C. aureodorsalis
+,,Black-chested Mountain Tanager,Cnemathraupis eximia
+,endemic,Golden-backed Mountain Tanager,C. aureodorsalis
 ,,Orange-throated Tanager,Wetmorethraupis sterrhopteron
 ,,Golden-naped Tanager,Chalcothraupis ruficervix
 160,,Silvery Tanager,Stilpnia viridicollis

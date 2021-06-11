@@ -260,7 +260,7 @@ function setChecklistCountryAuthors(country) {
 
         // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;29&nbsp;April&nbsp;2021. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;23&nbsp;May&nbsp;2021. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {
