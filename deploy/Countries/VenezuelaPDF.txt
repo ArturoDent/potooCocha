@@ -329,7 +329,7 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Noble Snipe,G. nobilis
 ,,Giant Snipe,G. undulata
 25,,Wilson's Snipe,G. delicata
-,,South American Snipe,G. paraguaiae
+,,Pantanal Snipe,G. paraguaiae
 ,,Wilson's Phalarope,Phalaropus tricolor
 ,,Red-necked Phalarope,P. lobatus
 ,,Spotted Sandpiper,Actitis macularius
@@ -353,20 +353,21 @@ GULLS,LARIDAE
 ,,Laughing Gull,Leucophaeus atricilla
 ,,Franklin's Gull,L. pipixcan
 5,,Ring-billed Gull,Larus delawarensis
+,,Kelp Gull,L. dominicanus
 ,,Lesser Black-backed Gull,L. fuscus
 ,,Herring Gull,L. argentatus
 ,,Brown Noddy,Anous stolidus
-,,Black Noddy,A. minutus
-10,,Sooty Tern,Onychoprion fuscatus
+10,,Black Noddy,A. minutus
+,,Sooty Tern,Onychoprion fuscatus
 ,,Bridled Tern,O. anaethetus
 ,,Least Tern,Sternula antillarum
 ,,Yellow-billed Tern,S. superciliaris
-,,Large-billed Tern,Phaetusa simplex
-15,,Gull-billed Tern,Gelochelidon nilotica
+15,,Large-billed Tern,Phaetusa simplex
+,,Gull-billed Tern,Gelochelidon nilotica
 ,,Caspian Tern,Hydroprogne caspia
 ,,Black Tern,Chlidonias niger
 ,,Common Tern,Sterna hirundo
-,,Roseate Tern,S. dougallii
+20,,Roseate Tern,S. dougallii
 ,,Sandwich Tern,Thalasseus sandvicensis
 ,,Royal Tern,T. maximus
 SUNBITTERN,EURYPYGIDAE
@@ -694,31 +695,31 @@ ANTBIRDS,THAMNOPHILIDAE
 ,,Streak-backed Antshrike,T. insignis
 ,,Pearly Antshrike,Megastictus margaritatus
 ,,Recurve-billed Bushbird,Clytoctantes alixii
-,,Rufescent Antshrike,Thamnistes rufescens
+,,Russet Antshrike,Thamnistes anabatinus
 20,,Plain Antvireo,Dysithamnus mentalis
 ,,White-streaked Antvireo,D. leucostictus
+,,Spot-tailed Antwren,Herpsilochmus sticturus
+,,Todd's Antwren,H. stictocephalus
+,,Spot-backed Antwren,H. dorsimaculatus
+25,,Roraiman Antwren,H. roraimae
+,,Rufous-margined Antwren,H. frater
 ,,Dusky-throated Antshrike,Thamnomanes ardesiacus
 ,,Cinereous Antshrike,T. caesius
 ,,Rufous-bellied Antwren,Isleria guttata
-25,,Spot-winged Antshrike,Pygiptila stellaris
+30,,Spot-winged Antshrike,Pygiptila stellaris
 ,,Brown-bellied Stipplethroat,Epinecrophylla gutturalis
 ,,Rufous-backed Stipplethroat,E. haematonota
 ,,Pygmy Antwren,Myrmotherula brachyura
 ,,Yellow-throated Antwren,M. ambigua
-30,,Guianan Streaked-Antwren,M. surinamensis
+35,,Guianan Streaked-Antwren,M. surinamensis
 ,,Amazonian Streaked-Antwren,M. multostriata
 ,,Cherrie's Antwren,M. cherriei
 ,,White-flanked Antwren,M. axillaris
 ,,Slaty Antwren,M. schisticolor
-35,,Long-winged Antwren,M. longipennis
+40,,Long-winged Antwren,M. longipennis
 ,,Plain-winged Antwren,M. behni
 ,,Gray Antwren,M. menetriesii
 ,,Banded Antbird,Dichrozona cincta
-,,Spot-tailed Antwren,Herpsilochmus sticturus
-40,,Todd's Antwren,H. stictocephalus
-,,Spot-backed Antwren,H. dorsimaculatus
-,,Roraiman Antwren,H. roraimae
-,,Rufous-winged Antwren,H. rufimarginatus
 ,,White-fringed Antwren,Formicivora grisea
 45,,Klages's Antbird,Drymophila klagesi
 ,,Guianan Warbling-Antbird,Hypocnemis cantator
@@ -1010,7 +1011,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Slender-billed Tyrannulet,Inezia tenuirostris
 ,,Amazonian Tyrannulet,I. subflava
 ,,Pale-tipped Tyrannulet,I. caudata
-60,,Tawny-crowned Pygmy-Tyrant,Euscarthmus meloryphus
+60,,Fulvous-crowned Scrub-Tyrant,Euscarthmus meloryphus
 ,,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,,White-lored Tyrannulet,O. inerme
 ,,Southern Beardless-Tyrannulet,Camptostoma obsoletum
@@ -1137,6 +1138,7 @@ VIREOS,VIREONIDAE
 ,,Tepui Vireo,V. sclateri
 ,,Brown-capped Vireo,V. leucophrys
 ,,Red-eyed Vireo,V. olivaceus
+,,Chivi Vireo,V. chivi
 ,,Yellow-green Vireo,V. flavoviridis
 ,,Black-whiskered Vireo,V. altiloquus
 JAYS,CORVIDAE
@@ -1158,10 +1160,11 @@ SWALLOWS,HIRUNDINIDAE
 ,,Brown-chested Martin,Progne tapera
 10,,Purple Martin,P. subis
 ,,Caribbean Martin,P. dominicensis
+,,Cuban Martin,P. cryptoleuca
 ,,Gray-breasted Martin,P. chalybea
 ,,Southern Martin,P. elegans
-,,Tree Swallow,Tachycineta bicolor
-15,,White-winged Swallow,T. albiventer
+15,,Tree Swallow,Tachycineta bicolor
+,,White-winged Swallow,T. albiventer
 ,,Bank Swallow,Riparia riparia
 ,,Barn Swallow,Hirundo rustica
 ,,Cliff Swallow,Petrochelidon pyrrhonota
@@ -1230,7 +1233,7 @@ ESTRILDIDS,ESTRILDIDAE
 OLD WORLD SPARROWS,PASSERIDAE
 ,,House Sparrow,Passer domesticus
 PIPITS and WAGTAILS,MOTACILLIDAE
-,,Yellowish Pipit,Anthus lutescens
+,,Yellowish Pipit,Anthus chii
 ,,Paramo Pipit,A. bogotensis
 FINCHES,FRINGILLIDAE
 ,,Andean Siskin,Spinus spinescens

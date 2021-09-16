@@ -14,6 +14,7 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Spectacled Duck,Speculanas specularis
 ,Silver Teal,Spatula versicolor
 ,Red Shoveler,S. platalea
+,Blue-winged Teal,S. discors
 ,Cinnamon Teal,S. cyanoptera
 ,Chiloe Wigeon,Mareca sibilatrix
 ,White-cheeked Pintail,Anas bahamensis
@@ -33,9 +34,11 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Silvery Grebe,P. occipitalis
 
 ,PIGEONS,COLUMBIDAE
-,Chilean Pigeon,Patagioenas araucana
+,Picazuro Pigeon,Patagioenas picazuro
+,Chilean Pigeon,P. araucana
 ,Eared Dove,Zenaida auriculata
 ,Blue Ground Dove,Claravis pretiosa
+,Black-winged Ground Dove,Metriopelia melanoptera
 ,Ruddy Ground Dove,Columbina talpacoti
 
 ,CUCKOOS,CUCULIDAE
@@ -47,8 +50,7 @@ E,Falkland Steamer-Duck,T. brachypterus
 
 ,SWIFTS,APODIDAE
 ,White-collared Swift,Streptoprocne zonaris
-,Vaux's Swift,Chaetura vauxi
-,Sick's Swift,C. meridionalis
+,Sick's Swift,Chaetura meridionalis
 
 ,HUMMINGBIRDS,TROCHILIDAE
 ,Green-backed Firecrown,Sephanoides sephaniodes
@@ -64,6 +66,7 @@ E,Falkland Steamer-Duck,T. brachypterus
 
 ,PLOVERS,CHARADRIIDAE
 ,American Golden-Plover,Pluvialis dominica
+,Black-bellied Plover,P. squatarola
 ,Tawny-throated Dotterel,Oreopholus ruficollis
 ,Southern Lapwing,Vanellus chilensis
 ,Rufous-chested Dotterel,Charadrius modestus
@@ -96,9 +99,10 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,White-rumped Sandpiper,C. fuscicollis
 ,Pectoral Sandpiper,C. melanotos
 ,Semipalmated Sandpiper,C. pusilla
-,South American Snipe,Gallinago paraguaiae
+,Pantanal Snipe,Gallinago paraguaiae
 ,Wilson's Phalarope,Phalaropus tricolor
 ,Red Phalarope,P. fulicarius
+,Spotted Sandpiper,Actitis macularius
 ,Greater Yellowlegs,Tringa melanoleuca
 ,Lesser Yellowlegs,T. flavipes
 
@@ -122,7 +126,7 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Dolphin Gull,Leucophaeus scoresbii
 ,Gray Gull,L. modestus
 ,Franklin's Gull,L. pipixcan
-,Belcher's Gull,Larus belcheri
+,Olrog's Gull,Larus atlanticus
 ,Kelp Gull,L. dominicanus
 ,Black Noddy,Anous minutus
 ,Sooty Tern,Onychoprion fuscatus
@@ -174,7 +178,8 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Cape Petrel,Daption capense
 ,Snow Petrel,Pagodroma nivea
 ,Kerguelen Petrel,Aphrodroma brevirostris
-,Soft-plumaged Petrel,Pterodroma mollis
+,Great-winged Petrel,Pterodroma macroptera
+,Soft-plumaged Petrel,P. mollis
 ,Atlantic Petrel,P. incerta
 ,White-headed Petrel,P. lessonii
 ,Trindade Petrel,P. arminjoniana
@@ -191,6 +196,7 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Cory's Shearwater,Calonectris diomedea
 ,Sooty Shearwater,Ardenna grisea
 ,Great Shearwater,A. gravis
+,Flesh-footed Shearwater,A. carneipes
 ,Manx Shearwater,Puffinus puffinus
 ,Little Shearwater,P. assimilis
 ,Common Diving-Petrel,Pelecanoides urinatrix
@@ -225,8 +231,8 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Turkey Vulture,Cathartes aura
 
 ,HAWKS,ACCIPITRIDAE
-,Long-winged Harrier,Circus buffoni
-,Sharp-shinned Hawk,Accipiter striatus
+,Cinereous Harrier,Circus cinereus
+,Long-winged Harrier,C. buffoni
 ,Variable Hawk,Geranoaetus polyosoma
 
 ,BARN OWLS,TYTONIDAE
@@ -267,6 +273,7 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Crowned Slaty Flycatcher,Empidonomus aurantioatrocristatus
 ,Fork-tailed Flycatcher,Tyrannus savana
 ,Eastern Kingbird,T. tyrannus
+,Vermilion Flycatcher,Pyrocephalus rubinus
 ,Austral Negrito,Lessonia rufa
 ,Dark-faced Ground-Tyrant,Muscisaxicola maclovianus
 ,White-browed Ground-Tyrant,M. albilora
@@ -289,16 +296,21 @@ E,Falkland Steamer-Duck,T. brachypterus
 ,Cliff Swallow,Petrochelidon pyrrhonota
 
 ,WRENS,TROGLODYTIDAE
-E,Cobb's Wren,Troglodytes cobbi
+,House Wren,Troglodytes aedon
+E,Cobb's Wren,T. cobbi
 ,Grass Wren,Cistothorus platensis
 
 ,THRUSHES,TURDIDAE
 ,Wood Thrush,Hylocichla mustelina
 ,Austral Thrush,Turdus falcklandii
+,Creamy-bellied Thrush,T. amaurochalinus
 
 ,MOCKINGBIRDS,MIMIDAE
 ,Patagonian Mockingbird,Mimus patagonicus
 ,White-banded Mockingbird,M. triurus
+
+,STARLINGS,STURNIDAE
+,European Starling,Sturnus vulgaris
 
 ,OLD WORLD SPARROWS,PASSERIDAE
 ,House Sparrow,Passer domesticus
@@ -315,10 +327,17 @@ E,Cobb's Wren,Troglodytes cobbi
 ,BLACKBIRDS,ICTERIDAE
 ,Long-tailed Meadowlark,Leistes loyca
 ,Shiny Cowbird,Molothrus bonariensis
+,Yellow-winged Blackbird,Agelasticus thilius
+
+,WOOD-WARBLERS,PARULIDAE
+,American Redstart,Setophaga ruticilla
+,Tropical Parula,S. pitiayumi
 
 ,TANAGERS,THRAUPIDAE
 ,Patagonian Yellow-Finch,Sicalis lebruni
+,Grassland Yellow-Finch,S. luteola
 ,Patagonian Sierra Finch,Phrygilus patagonicus
 ,Mourning Sierra Finch,Rhopospina fruticeti
 ,White-bridled Finch,Melanodera melanodera
 ,Double-collared Seedeater,Sporophila caerulescens
+,Diuca Finch,Diuca diuca

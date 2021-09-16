@@ -167,6 +167,7 @@ E,Scaled Ground-Cuckoo,N. squamiger
 ,Sand-colored Nighthawk,C. rupestris
 ,Lesser Nighthawk,C. acutipennis
 ,Common Nighthawk,C. minor
+,Antillean Nighthawk,C. gundlachii
 ,Short-tailed Nighthawk,Lurocalis semitorquatus
 ,Band-tailed Nighthawk,Nyctiprogne leucopyga
 E,Bahian Nighthawk,N. vielliardi
@@ -388,9 +389,10 @@ E,Little Wood-Rail,A. mangle
 ,Buff-breasted Sandpiper,C. subruficollis
 ,Pectoral Sandpiper,C. melanotos
 ,Semipalmated Sandpiper,C. pusilla
+,Western Sandpiper,C. mauri
 ,Short-billed Dowitcher,Limnodromus griseus
 ,Giant Snipe,Gallinago undulata
-,South American Snipe,G. paraguaiae
+,Pantanal Snipe,G. paraguaiae
 ,Wilson's Phalarope,Phalaropus tricolor
 ,Red-necked Phalarope,P. lobatus
 ,Red Phalarope,P. fulicarius
@@ -400,6 +402,7 @@ E,Little Wood-Rail,A. mangle
 ,Greater Yellowlegs,T. melanoleuca
 ,Willet,T. semipalmata
 ,Lesser Yellowlegs,T. flavipes
+,Wood Sandpiper,T. glareola
 
 ,SEEDSNIPES,THINOCORIDAE
 ,Least Seedsnipe,Thinocorus rumicivorus
@@ -426,7 +429,9 @@ E,Little Wood-Rail,A. mangle
 ,Sabine's Gull,Xema sabini
 ,Brown-hooded Gull,Chroicocephalus maculipennis
 ,Gray-hooded Gull,C. cirrocephalus
-,Laughing Gull,Leucophaeus atricilla
+,Black-headed Gull,C. ridibundus
+,Gray Gull,Leucophaeus modestus
+,Laughing Gull,L. atricilla
 ,Franklin's Gull,L. pipixcan
 ,Olrog's Gull,Larus atlanticus
 ,Ring-billed Gull,L. delawarensis
@@ -626,6 +631,7 @@ E,White-collared Kite,L. forbesi
 ,Savanna Hawk,B. meridionalis
 E,White-necked Hawk,B. lacernulatus
 ,Great Black Hawk,B. urubitinga
+,Solitary Eagle,B. solitarius
 ,Chaco Eagle,B. coronatus
 ,Roadside Hawk,Rupornis magnirostris
 ,Harris's Hawk,Parabuteo unicinctus
@@ -944,8 +950,8 @@ E,Golden Parakeet,Guaruba guarouba
 ,Undulated Antshrike,F. unduliger
 ,Great Antshrike,Taraba major
 ,Black-crested Antshrike,Sakesphorus canadensis
-E,Silvery-cheeked Antshrike,S. cristatus
 E,Glossy Antshrike,S. luctuosus
+E,Caatinga Antwren,Radinopsyche sellowi
 ,White-bearded Antshrike,Biatas nigropectus
 ,Barred Antshrike,Thamnophilus doliatus
 ,Rufous-capped Antshrike,T. ruficapillus
@@ -970,10 +976,23 @@ E,Star-throated Antwren,Rhopias gularis
 ,Pearly Antshrike,Megastictus margaritatus
 ,Black Bushbird,Neoctantes niger
 E,Rondonia Bushbird,Clytoctantes atrogularis
+E,Silvery-cheeked Antshrike,Sakesphoroides cristatus
 E,Spot-breasted Antvireo,Dysithamnus stictothorax
 ,Plain Antvireo,D. mentalis
 E,Rufous-backed Antvireo,D. xanthopterus
 E,Plumbeous Antvireo,D. plumbeus
+E,Predicted Antwren,Herpsilochmus praedictus
+E,Aripuana Antwren,H. stotzi
+,Black-capped Antwren,H. atricapillus
+E,Bahia Antwren,H. pileatus
+,Spot-tailed Antwren,H. sticturus
+,Todd's Antwren,H. stictocephalus
+,Spot-backed Antwren,H. dorsimaculatus
+,Roraiman Antwren,H. roraimae
+E,Pectoral Antwren,H. pectoralis
+,Large-billed Antwren,H. longirostris
+,Rufous-margined Antwren,H. frater
+,Rusty-winged Antwren,H. rufimarginatus
 ,Dusky-throated Antshrike,Thamnomanes ardesiacus
 ,Saturnine Antshrike,T. saturninus
 ,Cinereous Antshrike,T. caesius
@@ -1009,18 +1028,6 @@ E,Alagoas Antwren,M. snowi
 ,Leaden Antwren,M. assimilis
 ,Banded Antbird,Dichrozona cincta
 ,Stripe-backed Antbird,Myrmorchilus strigilatus
-E,Caatinga Antwren,Herpsilochmus sellowi
-E,Predicted Antwren,H. praedictus
-E,Aripuana Antwren,H. stotzi
-,Black-capped Antwren,H. atricapillus
-E,Bahia Antwren,H. pileatus
-,Spot-tailed Antwren,H. sticturus
-,Todd's Antwren,H. stictocephalus
-,Spot-backed Antwren,H. dorsimaculatus
-,Roraiman Antwren,H. roraimae
-E,Pectoral Antwren,H. pectoralis
-,Large-billed Antwren,H. longirostris
-,Rufous-winged Antwren,H. rufimarginatus
 ,Dot-winged Antwren,Microrhopias quixensis
 E,Narrow-billed Antwren,Formicivora iheringi
 E,Black-hooded Antwren,F. erythronotos
@@ -1126,8 +1133,10 @@ E,Hooded Gnateater,C. roberti
 
 ,ANTPITTAS,GRALLARIIDAE
 ,Variegated Antpitta,Grallaria varia
+,Scaled Antpitta,G. guatimalensis
 ,Elusive Antpitta,G. eludens
 ,Speckle-breasted Antpitta,Cryptopezus nattereri
+,Slate-crowned Antpitta,Grallaricula nana
 E,White-browed Antpitta,Hylopezus ochroleucus
 ,Spotted Antpitta,H. macularius
 E,Alta Floresta Antpitta,H. whittakeri
@@ -1345,7 +1354,8 @@ E,Opal-crowned Manakin,L. iris
 ,Crimson-hooded Manakin,Pipra aureola
 ,Wire-tailed Manakin,P. filicauda
 ,Band-tailed Manakin,P. fasciicauda
-E,Kinglet Manakin,Machaeropterus regulus
+,Striolated Manakin,Machaeropterus striolatus
+E,Kinglet Manakin,M. regulus
 ,Fiery-capped Manakin,M. pyrocephalus
 ,White-crowned Manakin,Pseudopipra pipra
 ,Scarlet-horned Manakin,Ceratopipra cornuta
@@ -1445,6 +1455,7 @@ E,Serra do Mar Tyrannulet,P. difficilis
 ,Bay-ringed Tyrannulet,P. sylviolus
 ,Ochre-bellied Flycatcher,Mionectes oleagineus
 ,McConnell's Flycatcher,M. macconnelli
+,Sierra de Lema Flycatcher,M. roraimae
 ,Gray-hooded Flycatcher,M. rufiventris
 ,Sepia-capped Flycatcher,Leptopogon amaurocephalus
 ,Black-chested Tyrant,Taeniotriccus andrei
@@ -1501,8 +1512,8 @@ E,Chico's Tyrannulet,Zimmerius chicomendesi
 ,Plain Tyrannulet,Inezia inornata
 ,Amazonian Tyrannulet,I. subflava
 ,Pale-tipped Tyrannulet,I. caudata
-,Tawny-crowned Pygmy-Tyrant,Euscarthmus meloryphus
-,Rufous-sided Pygmy-Tyrant,E. rufomarginatus
+,Fulvous-crowned Scrub-Tyrant,Euscarthmus meloryphus
+,Rufous-sided Scrub-Tyrant,E. rufomarginatus
 ,White-lored Tyrannulet,Ornithion inerme
 ,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,Yellow-bellied Elaenia,Elaenia flavogaster
@@ -1528,6 +1539,7 @@ E,Noronha Elaenia,E. ridleyana
 ,Rough-legged Tyrannulet,Phyllomyias burmeisteri
 ,Greenish Tyrannulet,P. virescens
 ,Reiser's Tyrannulet,P. reiseri
+,Yungas Tyrannulet,P. weedeni
 ,Planalto Tyrannulet,P. fasciatus
 ,Sooty-headed Tyrannulet,P. griseiceps
 E,Gray-capped Tyrannulet,P. griseocapilla
@@ -1615,7 +1627,8 @@ E,Velvety Black-Tyrant,K. nigerrimus
 ,Hudson's Black-Tyrant,K. hudsoni
 ,Yellow-browed Tyrant,Satrapa icterophrys
 ,Little Ground-Tyrant,Syrtidicola fluviatilis
-,Dark-faced Ground-Tyrant,Muscisaxicola maclovianus
+,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
+,Dark-faced Ground-Tyrant,M. maclovianus
 ,Cinnamon-bellied Ground-Tyrant,M. capistratus
 ,White-rumped Monjita,Xolmis velatus
 ,White Monjita,X. irupero
@@ -1631,6 +1644,7 @@ E,Velvety Black-Tyrant,K. nigerrimus
 ,Alder Flycatcher,Empidonax alnorum
 ,Olive-sided Flycatcher,Contopus cooperi
 ,Smoke-colored Pewee,C. fumigatus
+,Western Wood-Pewee,C. sordidulus
 ,Eastern Wood-Pewee,C. virens
 ,Tropical Pewee,C. cinereus
 ,White-throated Pewee,C. albogularis
@@ -1652,6 +1666,7 @@ E,Gray-eyed Greenlet,Hylophilus amaurocephalus
 ,Buff-cheeked Greenlet,P. muscicapina
 ,Tepui Vireo,Vireo sclateri
 ,Red-eyed Vireo,V. olivaceus
+,Chivi Vireo,V. chivi
 E,Noronha Vireo,V. gracilirostris
 ,Yellow-green Vireo,V. flavoviridis
 ,Black-whiskered Vireo,V. altiloquus
@@ -1676,6 +1691,7 @@ E,White-naped Jay,C. cyanopogon
 ,Brown-chested Martin,Progne tapera
 ,Purple Martin,P. subis
 ,Caribbean Martin,P. dominicensis
+,Cuban Martin,P. cryptoleuca
 ,Gray-breasted Martin,P. chalybea
 ,Southern Martin,P. elegans
 ,White-winged Swallow,Tachycineta albiventer
@@ -1720,7 +1736,8 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,Black-capped Donacobius,Donacobius atricapilla
 
 ,THRUSHES,TURDIDAE
-,Veery,Catharus fuscescens
+,Orange-billed Nightingale-Thrush,Catharus aurantiirostris
+,Veery,C. fuscescens
 ,Gray-cheeked Thrush,C. minimus
 ,Swainson's Thrush,C. ustulatus
 ,Rufous-brown Solitaire,Cichlopsis leucogenys
@@ -1733,8 +1750,10 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,Spectacled Thrush,T. nudigenis
 ,Varzea Thrush,T. sanchezorum
 ,Lawrence's Thrush,T. lawrencii
+,Pantepui Thrush,T. murinus
 ,Creamy-bellied Thrush,T. amaurochalinus
 ,Black-billed Thrush,T. ignobilis
+,Campina Thrush,T. arthuri
 ,Black-hooded Thrush,T. olivater
 ,Blacksmith Thrush,T. subalaris
 ,White-necked Thrush,T. albicollis
@@ -1754,7 +1773,7 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,House Sparrow,Passer domesticus
 
 ,PIPITS and WAGTAILS,MOTACILLIDAE
-,Yellowish Pipit,Anthus lutescens
+,Yellowish Pipit,Anthus chii
 ,Short-billed Pipit,A. furcatus
 ,Correndera Pipit,A. correndera
 ,Ochre-breasted Pipit,A. nattereri
@@ -1812,6 +1831,7 @@ E,Half-collared Sparrow,A. semitorquatus
 E,Campo Troupial,I. jamacaii
 ,Epaulet Oriole,I. cayanensis
 ,Variable Oriole,I. pyrrhopterus
+,Baltimore Oriole,I. galbula
 ,Yellow Oriole,I. nigrogularis
 ,Screaming Cowbird,Molothrus rufoaxillaris
 ,Giant Cowbird,M. oryzivorus
@@ -1835,7 +1855,10 @@ E,Pale Baywing,A. fringillarius
 
 ,WOOD-WARBLERS,PARULIDAE
 ,Northern Waterthrush,Parkesia noveboracensis
+,Louisiana Waterthrush,P. motacilla
+,Black-and-white Warbler,Mniotilta varia
 ,Prothonotary Warbler,Protonotaria citrea
+,Tennessee Warbler,Leiothlypis peregrina
 ,Connecticut Warbler,Oporornis agilis
 ,Masked Yellowthroat,Geothlypis aequinoctialis
 ,American Redstart,Setophaga ruticilla
