@@ -140,14 +140,15 @@ CUCKOOS,CUCULIDAE
 ,,Pearly-breasted Cuckoo,C. euleri
 ,,Mangrove Cuckoo,C. minor
 ,,Black-billed Cuckoo,C. erythropthalmus
+,,Common Cuckoo,Cuculus canorus
 OILBIRD,STEATORNITHIDAE
 ,,Oilbird,Steatornis caripensis
 POTOOS,NYCTIBIIDAE
+,,Rufous Potoo,Phyllaemulor bracteatus
 ,,Great Potoo,Nyctibius grandis
 ,,Long-tailed Potoo,N. aethereus
 ,,Common Potoo,N. griseus
 ,,White-winged Potoo,N. leucopterus
-,,Rufous Potoo,N. bracteatus
 NIGHTJARS,CAPRIMULGIDAE
 ,,Nacunda Nighthawk,Chordeiles nacunda
 ,,Least Nighthawk,C. pusillus
@@ -192,7 +193,7 @@ SWIFTS,APODIDAE
 ,,Sick's Swift,C. meridionalis
 15,,Short-tailed Swift,C. brachyura
 ,,White-tipped Swift,Aeronautes montivagus
-,,Fork-tailed Palm-Swift,Tachornis squamata
+,,Fork-tailed Palm Swift,Tachornis squamata
 ,,Lesser Swallow-tailed Swift,Panyptila cayennensis
 HUMMINGBIRDS,TROCHILIDAE
 ,,Crimson Topaz,Topaza pella
@@ -247,7 +248,7 @@ HUMMINGBIRDS,TROCHILIDAE
 50,,Velvet-browed Brilliant,Heliodoxa xanthogonys
 ,,Black-throated Brilliant,H. schreibersii
 ,,Gould's Jewelfront,H. aurescens
-,endemic,Brazilian Ruby,Clytolaema rubricauda
+,endemic,Brazilian Ruby,H. rubricauda
 ,,Long-billed Starthroat,Heliomaster longirostris
 55,endemic,Stripe-breasted Starthroat,H. squamosus
 ,,Blue-tufted Starthroat,H. furcifer
@@ -376,6 +377,7 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Greater Yellowlegs,T. melanoleuca
 30,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
+,,Common Redshank,T. totanus
 ,,Wood Sandpiper,T. glareola
 SEEDSNIPES,THINOCORIDAE
 ,,Least Seedsnipe,Thinocorus rumicivorus
@@ -383,6 +385,8 @@ JACANAS,JACANIDAE
 ,,Wattled Jacana,Jacana jacana
 PAINTED-SNIPE,ROSTRATULIDAE
 ,,South American Painted-snipe,Nycticryphes semicollaris
+PRATINCOLES,GLAREOLIDAE
+,,Collared Pratincole,Glareola pratincola
 SKUAS,STERCORARIIDAE
 ,,Great Skua,Stercorarius skua
 ,,Chilean Skua,S. chilensis
@@ -570,9 +574,9 @@ HAWKS,ACCIPITRIDAE
 ,,Cinereous Harrier,Circus cinereus
 20,,Long-winged Harrier,C. buffoni
 ,,Gray-bellied Hawk,Accipiter poliogaster
-,,Tiny Hawk,A. superciliosus
 ,,Sharp-shinned Hawk,A. striatus
 ,,Bicolored Hawk,A. bicolor
+,,Tiny Hawk,Microspizias superciliosus
 25,,Black Kite,Milvus migrans
 ,,Crane Hawk,Geranospiza caerulescens
 ,,Slate-colored Hawk,Buteogallus schistaceus
@@ -611,8 +615,8 @@ OWLS,STRIGIDAE
 ,,Tawny-browed Owl,P. koeniswaldiana
 ,,Great Horned Owl,Bubo virginianus
 10,,Rusty-barred Owl,Strix hylophila
-,,Mottled Owl,Ciccaba virgata
-,,Black-banded Owl,C. huhula
+,,Mottled Owl,S. virgata
+,,Black-banded Owl,S. huhula
 ,,Amazonian Pygmy-Owl,Glaucidium hardyi
 ,endemic,Pernambuco Pygmy-Owl,G. mooreorum
 15,endemic,Least Pygmy-Owl,G. minutissimum
@@ -936,12 +940,12 @@ ANTBIRDS,THAMNOPHILIDAE
 60,,Plain-throated Antwren,Isleria hauxwelli
 ,,Rufous-bellied Antwren,I. guttata
 ,,Spot-winged Antshrike,Pygiptila stellaris
-,,Brown-bellied Stipplethroat,Epinecrophylla gutturalis
-,,White-eyed Stipplethroat,E. leucophthalma
-65,,Rufous-backed Stipplethroat,E. haematonota
-,,Rio Madeira Stipplethroat,E. amazonica
-,,Ornate Stipplethroat,E. ornata
+,,Ornate Stipplethroat,Epinecrophylla ornata
 ,,Rufous-tailed Stipplethroat,E. erythrura
+65,,White-eyed Stipplethroat,E. leucophthalma
+,,Brown-bellied Stipplethroat,E. gutturalis
+,,Rufous-backed Stipplethroat,E. haematonota
+,,Rio Madeira Stipplethroat,E. amazonica
 ,,Pygmy Antwren,Myrmotherula brachyura
 70,,Moustached Antwren,M. ignota
 ,,Yellow-throated Antwren,M. ambigua
@@ -1172,86 +1176,85 @@ OVENBIRDS,FURNARIIDAE
 ,endemic,Pale-browed Treehunter,Cichlocolaptes leucophrus
 70,,Sharp-billed Treehunter,Heliobletus contaminatus
 ,,Rufous-rumped Foliage-gleaner,Philydor erythrocercum
-,endemic,Alagoas Foliage-gleaner,P. novaesi
 ,,Black-capped Foliage-gleaner,P. atricapillus
 ,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
-75,,Rufous-tailed Foliage-gleaner,Anabacerthia ruficaudata
-,,White-browed Foliage-gleaner,A. amaurotis
+,,Rufous-tailed Foliage-gleaner,Anabacerthia ruficaudata
+75,,White-browed Foliage-gleaner,A. amaurotis
 ,,Ochre-breasted Foliage-gleaner,A. lichtensteini
 ,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
 ,,Russet-mantled Foliage-gleaner,S. dimidiata
-80,,White-throated Foliage-gleaner,S. roraimae
-,,Peruvian Recurvebill,S. ucayalae
+,,White-throated Foliage-gleaner,S. roraimae
+80,,Peruvian Recurvebill,S. ucayalae
 ,,Chestnut-winged Hookbill,Ancistrops strigilatus
 ,,Buff-fronted Foliage-gleaner,Dendroma rufa
 ,,Chestnut-winged Foliage-gleaner,D. erythroptera
-85,,Chestnut-capped Foliage-gleaner,Clibanornis rectirostris
-,,Canebrake Groundcreeper,C. dendrocolaptoides
+,,Chestnut-capped Foliage-gleaner,Clibanornis rectirostris
+85,,Canebrake Groundcreeper,C. dendrocolaptoides
 ,,Ruddy Foliage-gleaner,C. rubiginosus
 ,,Chestnut-crowned Foliage-gleaner,Automolus rufipileatus
 ,,Brown-rumped Foliage-gleaner,A. melanopezus
-90,,Buff-throated Foliage-gleaner,A. ochrolaemus
-,,Striped Woodhaunter,A. subulatus
+,,Buff-throated Foliage-gleaner,A. ochrolaemus
+90,,Striped Woodhaunter,A. subulatus
 ,,Olive-backed Foliage-gleaner,A. infuscatus
 ,endemic,Para Foliage-gleaner,A. paraensis
 ,endemic,Pernambuco Foliage-gleaner,A. lammi
-95,,White-eyed Foliage-gleaner,A. leucophthalmus
-,,Tufted Tit-Spinetail,Leptasthenura platensis
+,,White-eyed Foliage-gleaner,A. leucophthalmus
+95,,Tufted Tit-Spinetail,Leptasthenura platensis
 ,endemic,Striolated Tit-Spinetail,L. striolata
 ,,Araucaria Tit-Spinetail,L. setaria
 ,,Rufous-fronted Thornbird,Phacellodomus rufifrons
-100,,Little Thornbird,P. sibilatrix
-,,Freckle-breasted Thornbird,P. striaticollis
+,,Little Thornbird,P. sibilatrix
+100,,Freckle-breasted Thornbird,P. striaticollis
 ,,Greater Thornbird,P. ruber
 ,endemic,Orange-eyed Thornbird,P. erythrophthalmus
 ,,Orange-breasted Thornbird,P. ferrugineigula
-105,,Firewood-gatherer,Anumbius annumbi
-,,Lark-like Brushrunner,Coryphistera alaudina
+,,Firewood-gatherer,Anumbius annumbi
+105,,Lark-like Brushrunner,Coryphistera alaudina
 ,,Short-billed Canastero,Asthenes baeri
 ,endemic,Cipo Canastero,A. luizae
 ,,Hudson's Canastero,A. hudsoni
-110,endemic,Itatiaia Spinetail,A. moreirae
-,,Sharp-billed Canastero,A. pyrrholeuca
+,endemic,Itatiaia Spinetail,A. moreirae
+110,,Sharp-billed Canastero,A. pyrrholeuca
 ,endemic,Pink-legged Graveteiro,Acrobatornis fonsecai
 ,,Orange-fronted Plushcrown,Metopothrix aurantiaca
 ,,Roraiman Barbtail,Roraimia adusta
-115,endemic,Striated Softtail,Thripophaga macroura
-,,Plain Softtail,T. fusciceps
+,endemic,Striated Softtail,Thripophaga macroura
+115,,Plain Softtail,T. fusciceps
 ,,Straight-billed Reedhaunter,Limnoctites rectirostris
 ,,Sulphur-bearded Reedhaunter,L. sulphuriferus
 ,,Rusty-backed Spinetail,Cranioleuca vulpina
-120,,Parker's Spinetail,C. vulpecula
-,,Stripe-crowned Spinetail,C. pyrrhophia
+,,Parker's Spinetail,C. vulpecula
+120,,Stripe-crowned Spinetail,C. pyrrhophia
 ,,Olive Spinetail,C. obsoleta
 ,endemic,Pallid Spinetail,C. pallida
 ,endemic,Gray-headed Spinetail,C. semicinerea
-125,,Tepui Spinetail,C. demissa
-,,Speckled Spinetail,C. gutturata
+,,Tepui Spinetail,C. demissa
+125,,Speckled Spinetail,C. gutturata
 ,endemic,Scaled Spinetail,C. muelleri
 ,,Bay-capped Wren-Spinetail,Spartonoica maluroides
 ,endemic,Caatinga Cacholote,Pseudoseisura cristata
-130,,Rufous Cacholote,P. unirufa
-,,Brown Cacholote,P. lophotes
+,,Rufous Cacholote,P. unirufa
+130,,Brown Cacholote,P. lophotes
 ,,Yellow-chinned Spinetail,Certhiaxis cinnamomeus
 ,,Red-and-white Spinetail,C. mustelinus
 ,,White-bellied Spinetail,Mazaria propinqua
-135,,Chotoy Spinetail,Schoeniophylax phryganophilus
-,,Ochre-cheeked Spinetail,Synallaxis scutata
+,,Chotoy Spinetail,Schoeniophylax phryganophilus
+135,,Ochre-cheeked Spinetail,Synallaxis scutata
 ,,Gray-bellied Spinetail,S. cinerascens
 ,,Plain-crowned Spinetail,S. gujanensis
 ,,White-lored Spinetail,S. albilora
-140,endemic,Red-shouldered Spinetail,S. hellmayri
-,,Rufous-capped Spinetail,S. ruficapilla
+,endemic,Red-shouldered Spinetail,S. hellmayri
+140,,Rufous-capped Spinetail,S. ruficapilla
 ,endemic,Bahia Spinetail,S. cinerea
 ,endemic,Pinto's Spinetail,S. infuscata
 ,,McConnell's Spinetail,S. macconnelli
-145,,Cabanis's Spinetail,S. cabanisi
-,,Cinereous-breasted Spinetail,S. hypospodia
+,,Cabanis's Spinetail,S. cabanisi
+145,,Cinereous-breasted Spinetail,S. hypospodia
 ,,Spix's Spinetail,S. spixi
 ,,Dark-breasted Spinetail,S. albigularis
 ,,Pale-breasted Spinetail,S. albescens
-150,,Sooty-fronted Spinetail,S. frontalis
-,,Hoary-throated Spinetail,S. kollari
+,,Sooty-fronted Spinetail,S. frontalis
+150,,Hoary-throated Spinetail,S. kollari
 ,,Ruddy Spinetail,S. rutilans
 ,,Chestnut-throated Spinetail,S. cherriei
 MANAKINS,PIPRIDAE
@@ -1270,7 +1273,7 @@ MANAKINS,PIPRIDAE
 ,,White-throated Manakin,Corapipo gutturalis
 ,,Olive Manakin,Xenopipo uniformis
 15,,Black Manakin,X. atronitens
-,,Blue-crowned Manakin,Lepidothrix coronata
+,,Blue-capped Manakin,Lepidothrix coronata
 ,,Snow-capped Manakin,L. nattereri
 ,endemic,Golden-crowned Manakin,L. vilasboasi
 ,endemic,Opal-crowned Manakin,L. iris
@@ -1529,9 +1532,9 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Amazonian Scrub-Flycatcher,Sublegatus obscurior
 175,,Southern Scrub-Flycatcher,S. modestus
 ,,Vermilion Flycatcher,Pyrocephalus rubinus
-,,Pied Water-Tyrant,Fluvicola pica
-,,Black-backed Water-Tyrant,F. albiventer
-,,Masked Water-Tyrant,F. nengeta
+,,Pied Water Tyrant,Fluvicola pica
+,,Black-backed Water Tyrant,F. albiventer
+,,Masked Water Tyrant,F. nengeta
 180,,White-headed Marsh Tyrant,Arundinicola leucocephala
 ,,Streamer-tailed Tyrant,Gubernetes yetapa
 ,,Black-and-white Monjita,Heteroxolmis dominicana
@@ -1878,23 +1881,23 @@ TANAGERS,THRAUPIDAE
 ,,Large-billed Seed-Finch,S. crassirostris
 70,,Gray Seedeater,S. intermedia
 ,,Wing-barred Seedeater,S. americana
-,,Caqueta Seedeater,S. murallae
 ,,White-naped Seedeater,S. fringilloides
 ,,Black-and-white Seedeater,S. luctuosa
-75,,Yellow-bellied Seedeater,S. nigricollis
-,endemic,Dubois's Seedeater,S. ardesiaca
+,,Yellow-bellied Seedeater,S. nigricollis
+75,endemic,Dubois's Seedeater,S. ardesiaca
 ,,Double-collared Seedeater,S. caerulescens
 ,,Slate-colored Seedeater,S. schistacea
 ,,Temminck's Seedeater,S. falcirostris
-80,endemic,Buffy-fronted Seedeater,S. frontalis
-,,Plumbeous Seedeater,S. plumbea
+,endemic,Buffy-fronted Seedeater,S. frontalis
+80,,Plumbeous Seedeater,S. plumbea
 ,endemic,Tropeiro Seedeater,S. beltoni
 ,,Rusty-collared Seedeater,S. collaris
 ,endemic,White-throated Seedeater,S. albogularis
-85,,Many-colored Chaco Finch,Saltatricula multicolor
-,,Black-throated Saltator,S. atricollis
+,,Many-colored Chaco Finch,Saltatricula multicolor
+85,,Black-throated Saltator,S. atricollis
 ,,Buff-throated Saltator,Saltator maximus
-,,Grayish Saltator,S. coerulescens
+,,Olive-gray Saltator,S. olivascens
+,,Bluish-gray Saltator,S. coerulescens
 ,,Green-winged Saltator,S. similis
 90,,Thick-billed Saltator,S. maxillosus
 ,,Golden-billed Saltator,S. aurantiirostris

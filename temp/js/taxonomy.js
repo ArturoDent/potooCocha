@@ -27,7 +27,7 @@ var resultsPanelOpen = false;
 var printerButton;
 var closeOpenFamiliesButton;
 
-var searchInput;
+// var searchInput;
 // var searchCache = {};
 // var previousSearchResults;
 
@@ -76,12 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
   taxPage.addEventListener("click", toggleFamilyOpen);
   taxPanel = document.getElementById("tax-panel");
 
-    // preload the AuthorsAbridged.json
-  getJSON("../Authors/AuthorsAbridged.json", assignAuthorsJSON);  // does this work as a return? or need to do through callback ?
-
   // preloading the file occurrences.txt
-  // getTEXT("../occurrences/occurrences.txt", function (data) { loadOccurrences(data); });
-  getTEXT("../occurrences/occurrences.txt", loadOccurrences);
+  // getTEXT("../occurrences/occurrences.txt", loadOccurrences);
+  getTEXT("../occurrences/occurrences.txt", data => birds = data.split("\n"));
 
   var SAMTarget = document.getElementById( "SAM" );
   var evt = new Event("click", { "bubbles": true, "cancelable": false });
@@ -121,25 +118,6 @@ function getJSON(url, success) {
   xhr.send();
 }
 
-
-/**
- *
- * @param {*} data
- */
-function loadOccurrences(data) {
-  birds = data.split("\n");
-}
-
-// function animateScrollTop(el) {
-
-//   // var step = el.scrollTop / (duration/25);
-//   var step = 25;
-
-//   (function animateScroll() {
-//     el.scrollTop -= step;
-//     if (el.scrollTop > 0) setTimeout(animateScroll, 25);
-//   })();
-// }
 
 function toggleSearchInstructions() {
 
@@ -215,16 +193,13 @@ function loadCountryTaxonomy(country) {
 //  -----------------------------------------------------------------------------------------------
 
   if (country === "French Guiana") {
-    // getTEXT("Countries/FrenchGuianaSACC.html", getCountryHTML);
     getJSON("JSON/FrenchGuiana/FrenchGuiana.json", getCountryJSON);
   }
   // because Curaçao is accented here but not in filenames
   else if (country === "Curaçao") {
-    // getTEXT("Countries/CuracaoSACC.html", getCountryHTML);
     getJSON("JSON/Curacao/Curacao.json", getCountryJSON);
   }
   else if (country === "South America") {
-    // getTEXT("Countries/SouthAmericaSACC.html", getCountryHTML);
     getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
@@ -236,7 +211,6 @@ function loadCountryTaxonomy(country) {
     taxPage.classList.add("samTax");
   }
   else if (country) {
-    // getTEXT("Countries/" + country + "SACC.html", getCountryHTML);
     getJSON("JSON/" + country + "/" + country + ".json", getCountryJSON);
   }
 
@@ -296,40 +270,40 @@ function moveTaxPanel(whatIsOpening) {
 
   switch (whatIsOpening) {
 
-    case "searchResultsOpening":
-      if (searchInstructionsOpen) {
-        taxPanel.style.transform = "translateY(-128px)";
-      }
-      else {
-        shift = 100 + parseInt(instructionsHeight) + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";
-      }
-      break;
+  case "searchResultsOpening":
+    if (searchInstructionsOpen) {
+      taxPanel.style.transform = "translateY(-128px)";
+    }
+    else {
+      shift = 100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
 
-    case "searchInstructionsClosing":
-      if (resultsPanelOpen) {
-        shift = 100 + parseInt(instructionsHeight) + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";
-      }
-      else {
-        shift = 200 + parseInt(instructionsHeight) + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";
-      }
-      break;
+  case "searchInstructionsClosing":
+    if (resultsPanelOpen) {
+      shift = 100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    else {
+      shift = 200 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
 
-    case "searchInstructionsOpening":
-      if (resultsPanelOpen)  {
-        shift = -100 + parseInt(instructionsHeight) + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";
-      }
-      else {
-        shift = 220 + "px";
-        taxPanel.style.transform = "translateY(-" + shift + ")";
-      }
-      break;
+  case "searchInstructionsOpening":
+    if (resultsPanelOpen)  {
+      shift = -100 + parseInt(instructionsHeight) + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    else {
+      shift = 220 + "px";
+      taxPanel.style.transform = "translateY(-" + shift + ")";
+    }
+    break;
 
-    default:
-      break;
+  default:
+    break;
   }
 }
 
@@ -619,7 +593,7 @@ function toggleFamilyOpen(event) {
     addBirdNameToMap(speciesTarget);
 
     lastIndex = Number(speciesTarget.dataset.i);
-    highlightSAMmap(lastIndex, "currentMap"); 
+    highlightSAMmap(lastIndex, "currentMap");
 
     document.querySelector("#treeIntroText").innerHTML = currentCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
   }

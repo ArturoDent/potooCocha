@@ -2286,7 +2286,7 @@ input[type=checkbox]:disabled ~ label {
   left: -10vw;
   padding-left: 10vw;
   padding-right: 0.75rem;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: scroll;
   min-width: 100%;
   width: calc(100% + 10vw + 1.08rem);

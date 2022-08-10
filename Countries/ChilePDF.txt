@@ -3,6 +3,7 @@ RHEAS,RHEIDAE
 TINAMOUS,TINAMIDAE
 ,,Ornate Tinamou,Nothoprocta ornata
 ,endemic,Chilean Tinamou,N. perdicaria
+,,Andean Tinamou,N. pentlandii
 ,,Elegant Crested-Tinamou,Eudromia elegans
 ,,Puna Tinamou,Tinamotis pentlandii
 ,,Patagonian Tinamou,T. ingoufi
@@ -17,21 +18,22 @@ DUCKS,ANATIDAE
 ,,Kelp Goose,C. hybrida
 ,,Ashy-headed Goose,C. poliocephala
 10,,Ruddy-headed Goose,C. rubidiceps
+,,Comb Duck,Sarkidiornis sylvicola
 ,,Torrent Duck,Merganetta armata
 ,,Flying Steamer-Duck,Tachyeres patachonicus
 ,,Flightless Steamer-Duck,T. pteneres
-,,Crested Duck,Lophonetta specularioides
-15,,Spectacled Duck,Speculanas specularis
+15,,Crested Duck,Lophonetta specularioides
+,,Spectacled Duck,Speculanas specularis
 ,,Puna Teal,Spatula puna
 ,,Silver Teal,S. versicolor
 ,,Red Shoveler,S. platalea
-,,Blue-winged Teal,S. discors
-20,,Cinnamon Teal,S. cyanoptera
+20,,Blue-winged Teal,S. discors
+,,Cinnamon Teal,S. cyanoptera
 ,,Chiloe Wigeon,Mareca sibilatrix
 ,,White-cheeked Pintail,Anas bahamensis
 ,,Yellow-billed Pintail,A. georgica
-,,Yellow-billed Teal,A. flavirostris
-25,,Rosy-billed Pochard,Netta peposaca
+25,,Yellow-billed Teal,A. flavirostris
+,,Rosy-billed Pochard,Netta peposaca
 ,,Black-headed Duck,Heteronetta atricapilla
 ,,Ruddy Duck,Oxyura jamaicensis
 ,,Lake Duck,O. vittata
@@ -63,7 +65,8 @@ PIGEONS,COLUMBIDAE
 ,,Picui Ground Dove,C. picui
 ,,Croaking Ground Dove,C. cruziana
 CUCKOOS,CUCULIDAE
-,,Groove-billed Ani,Crotophaga sulcirostris
+,,Smooth-billed Ani,Crotophaga ani
+,,Groove-billed Ani,C. sulcirostris
 ,,Dark-billed Cuckoo,Coccyzus melacoryphus
 ,,Yellow-billed Cuckoo,C. americanus
 OILBIRD,STEATORNITHIDAE
@@ -71,7 +74,8 @@ OILBIRD,STEATORNITHIDAE
 POTOOS,NYCTIBIIDAE
 ,,Common Potoo,Nyctibius griseus
 NIGHTJARS,CAPRIMULGIDAE
-,,Lesser Nighthawk,Chordeiles acutipennis
+,,Nacunda Nighthawk,Chordeiles nacunda
+,,Lesser Nighthawk,C. acutipennis
 ,,Common Nighthawk,C. minor
 ,,Band-winged Nightjar,Systellura longirostris
 ,,Tschudi's Nightjar,S. decussata
@@ -200,21 +204,22 @@ GULLS,LARIDAE
 ,,Kelp Gull,L. dominicanus
 ,,Herring Gull,L. argentatus
 ,,Brown Noddy,Anous stolidus
-15,,Gray Noddy,A. albivitta
+15,,Black Noddy,A. minutus
+,,Gray Noddy,A. albivitta
 ,,Sooty Tern,Onychoprion fuscatus
 ,,Bridled Tern,O. anaethetus
 ,,Least Tern,Sternula antillarum
-,,Peruvian Tern,S. lorata
-20,,Large-billed Tern,Phaetusa simplex
+20,,Peruvian Tern,S. lorata
+,,Large-billed Tern,Phaetusa simplex
 ,,Gull-billed Tern,Gelochelidon nilotica
 ,,Inca Tern,Larosterna inca
 ,,Black Tern,Chlidonias niger
-,,Common Tern,Sterna hirundo
-25,,Arctic Tern,S. paradisaea
+25,,Common Tern,Sterna hirundo
+,,Arctic Tern,S. paradisaea
 ,,South American Tern,S. hirundinacea
 ,,Antarctic Tern,S. vittata
 ,,Snowy-crowned Tern,S. trudeaui
-,,Elegant Tern,Thalasseus elegans
+30,,Elegant Tern,Thalasseus elegans
 ,,Sandwich Tern,T. sandvicensis
 ,,Royal Tern,T. maximus
 TROPICBIRDS,PHAETHONTIDAE
@@ -303,6 +308,7 @@ BOOBIES,SULIDAE
 ,,Blue-footed Booby,Sula nebouxii
 ,,Peruvian Booby,S. variegata
 ,,Masked Booby,S. dactylatra
+,,Nazca Booby,S. granti
 ,,Red-footed Booby,S. sula
 ,,Brown Booby,S. leucogaster
 CORMORANTS,PHALACROCORACIDAE
@@ -441,46 +447,48 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Short-tailed Field Tyrant,Muscigralla brevicauda
 ,,Great Kiskadee,Pitangus sulphuratus
 10,,Cattle Tyrant,Machetornis rixosa
+,,Boat-billed Flycatcher,Megarynchus pitangua
 ,,Sulphur-bellied Flycatcher,Myiodynastes luteiventris
 ,,Streaked Flycatcher,M. maculatus
 ,,Crowned Slaty Flycatcher,Empidonomus aurantioatrocristatus
-,,Tropical Kingbird,Tyrannus melancholicus
-15,,Fork-tailed Flycatcher,T. savana
+15,,Tropical Kingbird,Tyrannus melancholicus
+,,Fork-tailed Flycatcher,T. savana
 ,,Eastern Kingbird,T. tyrannus
 ,,Rufous Casiornis,Casiornis rufus
 ,,Bran-colored Flycatcher,Myiophobus fasciatus
-,,Patagonian Tyrant,Colorhamphus parvirostris
-20,,d'Orbigny's Chat-Tyrant,Ochthoeca oenanthoides
+20,,Patagonian Tyrant,Colorhamphus parvirostris
+,,d'Orbigny's Chat-Tyrant,Ochthoeca oenanthoides
 ,,White-browed Chat-Tyrant,O. leucophrys
 ,,Vermilion Flycatcher,Pyrocephalus rubinus
 ,,Austral Negrito,Lessonia rufa
-,,Andean Negrito,L. oreas
-25,,Spectacled Tyrant,Hymenops perspicillatus
+25,,Andean Negrito,L. oreas
+,,Spectacled Tyrant,Hymenops perspicillatus
 ,,White-winged Black-Tyrant,Knipolegus aterrimus
 ,,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
 ,,Puna Ground-Tyrant,M. juninensis
-,,Cinereous Ground-Tyrant,M. cinereus
-30,,White-fronted Ground-Tyrant,M. albifrons
+30,,Cinereous Ground-Tyrant,M. cinereus
+,,White-fronted Ground-Tyrant,M. albifrons
 ,,Ochre-naped Ground-Tyrant,M. flavinucha
 ,,Rufous-naped Ground-Tyrant,M. rufivertex
 ,,Dark-faced Ground-Tyrant,M. maclovianus
-,,White-browed Ground-Tyrant,M. albilora
-35,,Cinnamon-bellied Ground-Tyrant,M. capistratus
+35,,White-browed Ground-Tyrant,M. albilora
+,,Cinnamon-bellied Ground-Tyrant,M. capistratus
 ,,Black-fronted Ground-Tyrant,M. frontalis
 ,,Rufous-webbed Bush-Tyrant,Cnemarchus rufipennis
 ,,Fire-eyed Diucon,Pyrope pyrope
-,,Black-crowned Monjita,Neoxolmis coronatus
-40,,Rusty-backed Monjita,N. rubetra
+40,,Black-crowned Monjita,Neoxolmis coronatus
+,,Rusty-backed Monjita,N. rubetra
 ,,Chocolate-vented Tyrant,N. rufiventris
 ,,Black-billed Shrike-Tyrant,Agriornis montanus
 ,,White-tailed Shrike-Tyrant,A. albicauda
-,,Great Shrike-Tyrant,A. lividus
-45,,Gray-bellied Shrike-Tyrant,A. micropterus
+45,,Great Shrike-Tyrant,A. lividus
+,,Gray-bellied Shrike-Tyrant,A. micropterus
 ,,Lesser Shrike-Tyrant,A. murinus
 ,,Western Wood-Pewee,Contopus sordidulus
 ,,Many-colored Rush Tyrant,Tachuris rubrigastra
 VIREOS,VIREONIDAE
-,,Chivi Vireo,Vireo chivi
+,,Red-eyed Vireo,Vireo olivaceus
+,,Chivi Vireo,V. chivi
 SWALLOWS,HIRUNDINIDAE
 ,,Blue-and-white Swallow,Pygochelidon cyanoleuca
 ,,Tawny-headed Swallow,Alopochelidon fucata
@@ -506,7 +514,10 @@ MOCKINGBIRDS,MIMIDAE
 ,,Long-tailed Mockingbird,Mimus longicaudatus
 ,,Chilean Mockingbird,M. thenca
 ,,Patagonian Mockingbird,M. patagonicus
+,,Chalk-browed Mockingbird,M. saturninus
 ,,White-banded Mockingbird,M. triurus
+STARLINGS,STURNIDAE
+,,European Starling,Sturnus vulgaris
 OLD WORLD SPARROWS,PASSERIDAE
 ,,House Sparrow,Passer domesticus
 PIPITS and WAGTAILS,MOTACILLIDAE
@@ -579,5 +590,6 @@ TANAGERS,THRAUPIDAE
 30,,Double-collared Seedeater,S. caerulescens
 ,,Golden-billed Saltator,Saltator aurantiirostris
 ,,Slender-billed Finch,Xenospingus concolor
+,,Ringed Warbling Finch,Microspingus torquatus
 ,,Diuca Finch,Diuca diuca
 ,,Blue-and-yellow Tanager,Rauenia bonariensis

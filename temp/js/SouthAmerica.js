@@ -23,8 +23,7 @@ var vagrantColor = "#54ca30";
 var hypotheticalColor = "#ddd";
 var introducedColor = "#fee090";
 
-// var baseColor = "​#535b5f";
-var baseColor = "​#8a8a7c";
+var baseColor = "#8a8a7c";
 // var baseStrokeColor = "#bbb";
 // var baseStrokeColor = "#333";
 var baseStrokeColor = "#eee";

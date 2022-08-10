@@ -107,12 +107,12 @@ CUCKOOS,CUCULIDAE
 OILBIRD,STEATORNITHIDAE
 ,,Oilbird,Steatornis caripensis
 POTOOS,NYCTIBIIDAE
+,,Rufous Potoo,Phyllaemulor bracteatus
 ,,Great Potoo,Nyctibius grandis
 ,,Long-tailed Potoo,N. aethereus
 ,,Common Potoo,N. griseus
 ,,Andean Potoo,N. maculosus
 ,,White-winged Potoo,N. leucopterus
-,,Rufous Potoo,N. bracteatus
 NIGHTJARS,CAPRIMULGIDAE
 ,,Nacunda Nighthawk,Chordeiles nacunda
 ,,Least Nighthawk,C. pusillus
@@ -149,8 +149,8 @@ SWIFTS,APODIDAE
 ,,Sick's Swift,C. meridionalis
 ,,Short-tailed Swift,C. brachyura
 ,,White-tipped Swift,Aeronautes montivagus
-15,,Pygmy Swift,Tachornis furcata
-,,Fork-tailed Palm-Swift,T. squamata
+15,,Pygmy Palm Swift,Tachornis furcata
+,,Fork-tailed Palm Swift,T. squamata
 ,,Lesser Swallow-tailed Swift,Panyptila cayennensis
 HUMMINGBIRDS,TROCHILIDAE
 ,,Crimson Topaz,Topaza pella
@@ -200,8 +200,8 @@ HUMMINGBIRDS,TROCHILIDAE
 45,,Long-tailed Sylph,Aglaiocercus kingii
 ,endemic,Venezuelan Sylph,A. berlepschi
 ,,Purple-backed Thornbill,Ramphomicron microrhynchum
-,,Bronze-tailed Thornbill,Chalcostigma heteropogon
 ,endemic,White-bearded Helmetcrest,Oxypogon lindenii
+,,Bronze-tailed Thornbill,Chalcostigma heteropogon
 50,,Tyrian Metaltail,Metallura tyrianthina
 ,,Perija Metaltail,M. iracunda
 ,,Glowing Puffleg,Eriocnemis vestita
@@ -465,10 +465,10 @@ HAWKS,ACCIPITRIDAE
 ,,Northern Harrier,Circus hudsonius
 20,,Long-winged Harrier,C. buffoni
 ,,Gray-bellied Hawk,Accipiter poliogaster
-,,Tiny Hawk,A. superciliosus
-,,Semicollared Hawk,A. collaris
 ,,Sharp-shinned Hawk,A. striatus
-25,,Bicolored Hawk,A. bicolor
+,,Bicolored Hawk,A. bicolor
+,,Tiny Hawk,Microspizias superciliosus
+25,,Semicollared Hawk,M. collaris
 ,,Crane Hawk,Geranospiza caerulescens
 ,,Slate-colored Hawk,Buteogallus schistaceus
 ,,Common Black Hawk,B. anthracinus
@@ -501,10 +501,10 @@ OWLS,STRIGIDAE
 ,,Crested Owl,Lophostrix cristata
 ,,Spectacled Owl,Pulsatrix perspicillata
 ,,Great Horned Owl,Bubo virginianus
-10,,Mottled Owl,Ciccaba virgata
-,,Black-and-white Owl,C. nigrolineata
-,,Black-banded Owl,C. huhula
-,,Rufous-banded Owl,C. albitarsis
+10,,Mottled Owl,Strix virgata
+,,Black-and-white Owl,S. nigrolineata
+,,Black-banded Owl,S. huhula
+,,Rufous-banded Owl,S. albitarsis
 ,,Andean Pygmy-Owl,Glaucidium jardinii
 15,,Amazonian Pygmy-Owl,G. hardyi
 ,,Ferruginous Pygmy-Owl,G. brasilianum
@@ -758,13 +758,14 @@ ANTPITTAS,GRALLARIIDAE
 ,,Plain-backed Antpitta,G. haplonota
 ,,Chestnut-crowned Antpitta,G. ruficapilla
 ,endemic,Gray-naped Antpitta,G. griseonucha
-,,Rufous Antpitta,G. rufula
-10,endemic,Scallop-breasted Antpitta,Grallaricula loricata
+,,Perija Antpitta,G. saltuensis
+10,,Muisca Antpitta,G. rufula
+,endemic,Scallop-breasted Antpitta,Grallaricula loricata
 ,,Hooded Antpitta,G. cucullata
 ,,Rusty-breasted Antpitta,G. ferrugineipectus
 ,,Slate-crowned Antpitta,G. nana
-,endemic,Sucre Antpitta,G. cumanensis
-15,,Spotted Antpitta,Hylopezus macularius
+15,endemic,Sucre Antpitta,G. cumanensis
+,,Spotted Antpitta,Hylopezus macularius
 ,,Thrush-like Antpitta,Myrmothera campanisona
 ,,Tepui Antpitta,M. simplex
 TAPACULOS,RHINOCRYPTIDAE
@@ -882,7 +883,7 @@ MANAKINS,PIPRIDAE
 ,,White-throated Manakin,C. gutturalis
 ,,Olive Manakin,Xenopipo uniformis
 10,,Black Manakin,X. atronitens
-,,Blue-crowned Manakin,Lepidothrix coronata
+,,Blue-capped Manakin,Lepidothrix coronata
 ,,Orange-bellied Manakin,L. suavissima
 ,,Yellow-crowned Manakin,Heterocercus flavivertex
 ,,White-bearded Manakin,Manacus manacus
@@ -972,7 +973,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Olive-striped Flycatcher,Mionectes olivaceus
 ,,Ochre-bellied Flycatcher,M. oleagineus
 20,,McConnell's Flycatcher,M. macconnelli
-,endemic,Sierra de Lema Flycatcher,M. roraimae
+,,Sierra de Lema Flycatcher,M. roraimae
 ,,Sepia-capped Flycatcher,Leptopogon amaurocephalus
 ,,Slaty-capped Flycatcher,L. superciliaris
 ,,Rufous-breasted Flycatcher,L. rufipectus
@@ -1099,7 +1100,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 145,,Northern Scrub-Flycatcher,Sublegatus arenarum
 ,,Amazonian Scrub-Flycatcher,S. obscurior
 ,,Vermilion Flycatcher,Pyrocephalus rubinus
-,,Pied Water-Tyrant,Fluvicola pica
+,,Pied Water Tyrant,Fluvicola pica
 ,,White-headed Marsh Tyrant,Arundinicola leucocephala
 150,,Riverside Tyrant,Knipolegus orenocensis
 ,,Rufous-tailed Tyrant,K. poecilurus
@@ -1451,7 +1452,7 @@ TANAGERS,THRAUPIDAE
 65,,Plumbeous Seedeater,S. plumbea
 ,,Buff-throated Saltator,Saltator maximus
 ,,Orinocan Saltator,S. orenocensis
-,,Grayish Saltator,S. coerulescens
+,,Olive-gray Saltator,S. olivascens
 ,,Streaked Saltator,S. striatipectus
 70,,Slate-colored Grosbeak,S. grossus
 ,,Wedge-tailed Grass-Finch,Emberizoides herbicola

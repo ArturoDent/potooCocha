@@ -51,6 +51,7 @@
 #results-panel    {
     pointer-events: none;
     opacity  :  0;
+    
     // transform-origin: top left;
     // transform: scaleY(0) translateY(0) !important;
     // transform: translateY(0) !important;
@@ -295,7 +296,6 @@
     padding  :  0;
 
     z-index: 0;
-
     border: none;
     box-shadow: none;
     background-color: transparent;
@@ -309,6 +309,7 @@
     width : calc(100% - 7vw);
     left : 7vw;
     padding: 0 0 1ch 0;
+    
     overflow-x : visible;
 
     border  :  0.077rem solid rgba(255,255,255,0.15);
@@ -516,7 +517,7 @@
     // overflow-y  :  auto;
 
     // use this for simpleBar
-    overflow:hidden;
+    overflow: hidden;
 
     transition  :  all 350ms;
 }

@@ -13,7 +13,7 @@ var checklistAuthorsPanel;
 var AuthorsAbridged;
 var checklistFlyoutText;
 
-var titleBanner;
+// var titleBanner;
 var countryMenuLayer;
 var countryButton;
 
@@ -38,16 +38,14 @@ var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "
   "South America": "SAM"
 };
 
-/* global  loadCountryTaxonomy selectedCountryFill getTEXT fillSAMmap  */
+/* global  loadCountryTaxonomy selectedCountryFill fillSAMmap  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("window.width = " + window.innerWidth);
 
   countryButton = document.getElementById("countryButton");
   countryButton.addEventListener("click", toggleCountryMenuLayer);
 
   // countryButton.addEventListener('click', e => { e.data })
-
 
   titleBanner = document.getElementById("titleBanner");
 
@@ -97,14 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
   leftCheck.checked = true;
 
   countryMenuLayer = document.getElementById("countryMenuLayer");
+  
+  getJSON("../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data);
 
   mailLink = document.getElementById("mailLink");
   mailLink.addEventListener("click", sendEmail);
 });
-
-function assignAuthorsJSON(data) {
-  AuthorsAbridged = data;
-}
 
 window.addEventListener("load", function () {
   updateActivityData("start");
@@ -258,9 +254,9 @@ function setChecklistCountryAuthors(country) {
   else if (country !== "South America") selectedCountryFill(country);
   else fillSAMmap("");
 
-        // check because AuthorsAbridged hasn't been downloaded yet
+  // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;4&nbsp;October&nbsp;2021. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;24&nbsp;July&nbsp;2022. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {

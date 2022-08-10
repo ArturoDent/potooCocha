@@ -118,12 +118,12 @@ E,Venezuelan Wood-Quail,O. columbianus
 ,Oilbird,Steatornis caripensis
 
 ,POTOOS,NYCTIBIIDAE
+,Rufous Potoo,Phyllaemulor bracteatus
 ,Great Potoo,Nyctibius grandis
 ,Long-tailed Potoo,N. aethereus
 ,Common Potoo,N. griseus
 ,Andean Potoo,N. maculosus
 ,White-winged Potoo,N. leucopterus
-,Rufous Potoo,N. bracteatus
 
 ,NIGHTJARS,CAPRIMULGIDAE
 ,Nacunda Nighthawk,Chordeiles nacunda
@@ -162,8 +162,8 @@ E,Venezuelan Wood-Quail,O. columbianus
 ,Sick's Swift,C. meridionalis
 ,Short-tailed Swift,C. brachyura
 ,White-tipped Swift,Aeronautes montivagus
-,Pygmy Swift,Tachornis furcata
-,Fork-tailed Palm-Swift,T. squamata
+,Pygmy Palm Swift,Tachornis furcata
+,Fork-tailed Palm Swift,T. squamata
 ,Lesser Swallow-tailed Swift,Panyptila cayennensis
 
 ,HUMMINGBIRDS,TROCHILIDAE
@@ -214,8 +214,8 @@ E,Tepui Goldenthroat,P. milleri
 ,Long-tailed Sylph,Aglaiocercus kingii
 E,Venezuelan Sylph,A. berlepschi
 ,Purple-backed Thornbill,Ramphomicron microrhynchum
-,Bronze-tailed Thornbill,Chalcostigma heteropogon
 E,White-bearded Helmetcrest,Oxypogon lindenii
+,Bronze-tailed Thornbill,Chalcostigma heteropogon
 ,Tyrian Metaltail,Metallura tyrianthina
 ,Perija Metaltail,M. iracunda
 ,Glowing Puffleg,Eriocnemis vestita
@@ -510,10 +510,10 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Northern Harrier,Circus hudsonius
 ,Long-winged Harrier,C. buffoni
 ,Gray-bellied Hawk,Accipiter poliogaster
-,Tiny Hawk,A. superciliosus
-,Semicollared Hawk,A. collaris
 ,Sharp-shinned Hawk,A. striatus
 ,Bicolored Hawk,A. bicolor
+,Tiny Hawk,Microspizias superciliosus
+,Semicollared Hawk,M. collaris
 ,Crane Hawk,Geranospiza caerulescens
 ,Slate-colored Hawk,Buteogallus schistaceus
 ,Common Black Hawk,B. anthracinus
@@ -548,10 +548,10 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Crested Owl,Lophostrix cristata
 ,Spectacled Owl,Pulsatrix perspicillata
 ,Great Horned Owl,Bubo virginianus
-,Mottled Owl,Ciccaba virgata
-,Black-and-white Owl,C. nigrolineata
-,Black-banded Owl,C. huhula
-,Rufous-banded Owl,C. albitarsis
+,Mottled Owl,Strix virgata
+,Black-and-white Owl,S. nigrolineata
+,Black-banded Owl,S. huhula
+,Rufous-banded Owl,S. albitarsis
 ,Andean Pygmy-Owl,Glaucidium jardinii
 ,Amazonian Pygmy-Owl,G. hardyi
 ,Ferruginous Pygmy-Owl,G. brasilianum
@@ -818,7 +818,8 @@ E,Tachira Antpitta,G. chthonia
 ,Plain-backed Antpitta,G. haplonota
 ,Chestnut-crowned Antpitta,G. ruficapilla
 E,Gray-naped Antpitta,G. griseonucha
-,Rufous Antpitta,G. rufula
+,Perija Antpitta,G. saltuensis
+,Muisca Antpitta,G. rufula
 E,Scallop-breasted Antpitta,Grallaricula loricata
 ,Hooded Antpitta,G. cucullata
 ,Rusty-breasted Antpitta,G. ferrugineipectus
@@ -946,7 +947,7 @@ E,Black-throated Spinetail,S. castanea
 ,White-throated Manakin,C. gutturalis
 ,Olive Manakin,Xenopipo uniformis
 ,Black Manakin,X. atronitens
-,Blue-crowned Manakin,Lepidothrix coronata
+,Blue-capped Manakin,Lepidothrix coronata
 ,Orange-bellied Manakin,L. suavissima
 ,Yellow-crowned Manakin,Heterocercus flavivertex
 ,White-bearded Manakin,Manacus manacus
@@ -1041,7 +1042,7 @@ E,Rufous-lored Tyrannulet,P. flaviventris
 ,Olive-striped Flycatcher,Mionectes olivaceus
 ,Ochre-bellied Flycatcher,M. oleagineus
 ,McConnell's Flycatcher,M. macconnelli
-E,Sierra de Lema Flycatcher,M. roraimae
+,Sierra de Lema Flycatcher,M. roraimae
 ,Sepia-capped Flycatcher,Leptopogon amaurocephalus
 ,Slaty-capped Flycatcher,L. superciliaris
 ,Rufous-breasted Flycatcher,L. rufipectus
@@ -1168,7 +1169,7 @@ E,Urich's Tyrannulet,P. urichi
 ,Northern Scrub-Flycatcher,Sublegatus arenarum
 ,Amazonian Scrub-Flycatcher,S. obscurior
 ,Vermilion Flycatcher,Pyrocephalus rubinus
-,Pied Water-Tyrant,Fluvicola pica
+,Pied Water Tyrant,Fluvicola pica
 ,White-headed Marsh Tyrant,Arundinicola leucocephala
 ,Riverside Tyrant,Knipolegus orenocensis
 ,Rufous-tailed Tyrant,K. poecilurus
@@ -1542,7 +1543,7 @@ E,Venezuelan Flowerpiercer,D. venezuelensis
 ,Plumbeous Seedeater,S. plumbea
 ,Buff-throated Saltator,Saltator maximus
 ,Orinocan Saltator,S. orenocensis
-,Grayish Saltator,S. coerulescens
+,Olive-gray Saltator,S. olivascens
 ,Streaked Saltator,S. striatipectus
 ,Slate-colored Grosbeak,S. grossus
 ,Wedge-tailed Grass-Finch,Emberizoides herbicola

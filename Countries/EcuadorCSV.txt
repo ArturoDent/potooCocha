@@ -132,11 +132,11 @@ E,Galapagos Dove,Z. galapagoensis
 ,Oilbird,Steatornis caripensis
 
 ,POTOOS,NYCTIBIIDAE
+,Rufous Potoo,Phyllaemulor bracteatus
 ,Great Potoo,Nyctibius grandis
 ,Long-tailed Potoo,N. aethereus
 ,Common Potoo,N. griseus
 ,Andean Potoo,N. maculosus
-,Rufous Potoo,N. bracteatus
 
 ,NIGHTJARS,CAPRIMULGIDAE
 ,Nacunda Nighthawk,Chordeiles nacunda
@@ -172,7 +172,7 @@ E,Galapagos Dove,Z. galapagoensis
 ,Chapman's Swift,C. chapmani
 ,Short-tailed Swift,C. brachyura
 ,White-tipped Swift,Aeronautes montivagus
-,Fork-tailed Palm-Swift,Tachornis squamata
+,Fork-tailed Palm Swift,Tachornis squamata
 ,Lesser Swallow-tailed Swift,Panyptila cayennensis
 
 ,HUMMINGBIRDS,TROCHILIDAE
@@ -620,10 +620,10 @@ E,Flightless Cormorant,Phalacrocorax harrisi
 ,Plumbeous Kite,I. plumbea
 ,Cinereous Harrier,Circus cinereus
 ,Gray-bellied Hawk,Accipiter poliogaster
-,Tiny Hawk,A. superciliosus
-,Semicollared Hawk,A. collaris
 ,Sharp-shinned Hawk,A. striatus
 ,Bicolored Hawk,A. bicolor
+,Tiny Hawk,Microspizias superciliosus
+,Semicollared Hawk,M. collaris
 ,Crane Hawk,Geranospiza caerulescens
 ,Plumbeous Hawk,Cryptoleucopteryx plumbea
 ,Slate-colored Hawk,Buteogallus schistaceus
@@ -666,10 +666,10 @@ E,Galapagos Hawk,B. galapagoensis
 ,Spectacled Owl,Pulsatrix perspicillata
 ,Band-bellied Owl,P. melanota
 ,Great Horned Owl,Bubo virginianus
-,Mottled Owl,Ciccaba virgata
-,Black-and-white Owl,C. nigrolineata
-,Black-banded Owl,C. huhula
-,Rufous-banded Owl,C. albitarsis
+,Mottled Owl,Strix virgata
+,Black-and-white Owl,S. nigrolineata
+,Black-banded Owl,S. huhula
+,Rufous-banded Owl,S. albitarsis
 ,Cloud-forest Pygmy-Owl,Glaucidium nubicola
 ,Andean Pygmy-Owl,G. jardinii
 ,Subtropical Pygmy-Owl,G. parkeri
@@ -923,10 +923,10 @@ E,White-necked Parakeet,P. albipectus
 ,Plain-throated Antwren,Isleria hauxwelli
 ,Spot-winged Antshrike,Pygiptila stellaris
 ,Checker-throated Stipplethroat,Epinecrophylla fulviventris
-,Rufous-backed Stipplethroat,E. haematonota
-,Foothill Stipplethroat,E. spodionota
 ,Ornate Stipplethroat,E. ornata
 ,Rufous-tailed Stipplethroat,E. erythrura
+,Rufous-backed Stipplethroat,E. haematonota
+,Foothill Stipplethroat,E. spodionota
 ,Pygmy Antwren,Myrmotherula brachyura
 ,Moustached Antwren,M. ignota
 ,Amazonian Streaked-Antwren,M. multostriata
@@ -1002,12 +1002,13 @@ E,White-necked Parakeet,P. albipectus
 ,Ochre-striped Antpitta,G. dignissima
 ,Chestnut-crowned Antpitta,G. ruficapilla
 ,Watkins's Antpitta,G. watkinsi
-,Bicolored Antpitta,G. rufocinerea
-E,Jocotoco Antpitta,G. ridgelyi
+,Jocotoco Antpitta,G. ridgelyi
 ,Chestnut-naped Antpitta,G. nuchalis
 ,Yellow-breasted Antpitta,G. flavotincta
 ,White-bellied Antpitta,G. hypoleuca
-,Rufous Antpitta,G. rufula
+,Bicolored Antpitta,G. rufocinerea
+,Muisca Antpitta,G. rufula
+,Equatorial Antpitta,G. saturata
 ,Tawny Antpitta,G. quitensis
 ,Ochre-breasted Antpitta,Grallaricula flavirostris
 ,Crescent-faced Antpitta,G. lineifrons
@@ -1083,7 +1084,7 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Streaked Xenops,X. rutilans
 ,Point-tailed Palmcreeper,Berlepschia rikeri
 ,Rufous-tailed Xenops,Microxenops milleri
-,Buffy Tuftedcheek,Pseudocolaptes lawrencii
+,Pacific Tuftedcheek,Pseudocolaptes johnsoni
 ,Streaked Tuftedcheek,P. boissonneautii
 ,Rusty-winged Barbtail,Premnornis guttuliger
 ,Pale-legged Hornero,Furnarius leucopus
@@ -1157,7 +1158,8 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Blue-backed Manakin,Chiroxiphia pareola
 ,Golden-winged Manakin,Masius chrysopterus
 ,Green Manakin,Cryptopipo holochlora
-,Blue-crowned Manakin,Lepidothrix coronata
+,Velvety Manakin,Lepidothrix velutina
+,Blue-capped Manakin,L. coronata
 ,Blue-rumped Manakin,L. isidorei
 ,Orange-crowned Manakin,Heterocercus aurantiivertex
 ,White-bearded Manakin,Manacus manacus
@@ -1398,8 +1400,8 @@ E,Galapagos Flycatcher,M. magnirostris
 ,Southern Scrub-Flycatcher,S. modestus
 ,Vermilion Flycatcher,Pyrocephalus rubinus
 E,Brujo Flycatcher,P. nanus
-,Pied Water-Tyrant,Fluvicola pica
-,Masked Water-Tyrant,F. nengeta
+,Pied Water Tyrant,Fluvicola pica
+,Masked Water Tyrant,F. nengeta
 ,White-headed Marsh Tyrant,Arundinicola leucocephala
 ,Riverside Tyrant,Knipolegus orenocensis
 ,Rufous-tailed Tyrant,K. poecilurus
@@ -1776,13 +1778,13 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,Black-billed Seed-Finch,S. atrirostris
 ,Variable Seedeater,S. corvina
 ,Gray Seedeater,S. intermedia
-,Caqueta Seedeater,S. murallae
+,Wing-barred Seedeater,S. americana
 ,Black-and-white Seedeater,S. luctuosa
 ,Yellow-bellied Seedeater,S. nigricollis
 ,Slate-colored Seedeater,S. schistacea
 ,Buff-throated Saltator,Saltator maximus
 ,Black-winged Saltator,S. atripennis
-,Grayish Saltator,S. coerulescens
+,Bluish-gray Saltator,S. coerulescens
 ,Streaked Saltator,S. striatipectus
 ,Black-cowled Saltator,S. nigriceps
 ,Masked Saltator,S. cinctus
