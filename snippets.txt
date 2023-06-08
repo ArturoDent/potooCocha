@@ -78,21 +78,21 @@ gulp.task('default', gulp.series(testWatch));
   
   -------------------------------------------------------------------------------------------------------------------
   
-  <li class='family'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></li>
-    <li data-i='2592' class='bird'><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>
-    <li data-i='2593' class='bird'><span class="ince">Black-capped Piprites</span><span>Piprites pileata</span></li>
+  <li class="family"><span class="fco">INCERTAE SEDIS</span><span class="fsc"></span></li>
+    <li data-i="2592" class="bird"><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>
+    <li data-i="2593" class="bird"><span class="ince">Black-capped Piprites</span><span>Piprites pileata</span></li>
     
-  <li class='family'><span class='fTitle'><span class='fco'>INCERTAE SEDIS</span><span class='fsc'></span></span>
-	<ul class='birds'>
+  <li class="family"><span class="fTitle"><span class="fco">INCERTAE SEDIS</span><span class="fsc"></span></span>
+	<ul class="birds">
 
-	  <li data-i='2592'><span class='ince'>Wing-barred Piprites</span><span>Piprites chloris</span></li>
-	  <li data-i='2593'><span class='ince'>Black-capped Piprites</span><span>Piprites pileata</span></li>
+	  <li data-i="2592"><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>
+	  <li data-i="2593"><span class="ince">Black-capped Piprites</span><span>Piprites pileata</span></li>
 	</ul></li>
   
   --------------------------------------------------------------------------------------------------------------------
     
-  <li class='family'><span class='fco'>RAILS</span><span class='fsc'>RALLIDAE</span></li>
-    <li data-i='628' class='bird'><span class="extinct">American Coot</span><span>Fulica americana</span></li>
+  <li class="family"><span class="fco">RAILS</span><span class="fsc">RALLIDAE</span></li>
+    <li data-i="628" class="bird"><span class="extinct">American Coot</span><span>Fulica americana</span></li>
     
-  <li class='family'><span class='fco'>SPARROWS</span><span class='fsc'>PASSERELLIDAE</span></li>
-    <li data-i='2851' class='bird'><span class="extinct">Grasshopper Sparrow</span><span>Ammodramus savannarum</span></li>
+  <li class="family"><span class="fco">SPARROWS</span><span class="fsc">PASSERELLIDAE</span></li>
+    <li data-i="2851" class="bird"><span class="extinct">Grasshopper Sparrow</span><span>Ammodramus savannarum</span></li>

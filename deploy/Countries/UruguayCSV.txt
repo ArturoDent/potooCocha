@@ -15,6 +15,7 @@
 ,Fulvous Whistling-Duck,Dendrocygna bicolor
 ,White-faced Whistling-Duck,D. viduata
 ,Black-bellied Whistling-Duck,D. autumnalis
+,Graylag Goose,Anser anser
 ,Black-necked Swan,Cygnus melancoryphus
 ,Coscoroba Swan,Coscoroba coscoroba
 ,Upland Goose,Chloephaga picta
@@ -111,8 +112,8 @@
 ,Ash-throated Crake,Mustelirallus albicollis
 ,Spotted Rail,Pardirallus maculatus
 ,Plumbeous Rail,P. sanguinolentus
-,Giant Wood-Rail,Aramides ypecaha
-,Gray-cowled Wood-Rail,A. cajaneus
+,Giant Wood Rail,Aramides ypecaha
+,Gray-cowled Wood Rail,A. cajaneus
 ,Spot-flanked Gallinule,Porphyriops melanops
 ,Yellow-breasted Crake,Porzana flaviventer
 ,Dot-winged Crake,P. spiloptera
@@ -140,6 +141,9 @@
 
 ,SHEATHBILLS,CHIONIDAE
 ,Snowy Sheathbill,Chionis albus
+
+,MAGELLANIC PLOVER,PLUVIANELLIDAE
+,Magellanic Plover,Pluvianellus socialis
 
 ,SANDPIPERS,SCOLOPACIDAE
 ,Upland Sandpiper,Bartramia longicauda
@@ -189,7 +193,8 @@
 ,GULLS,LARIDAE
 ,Brown-hooded Gull,Chroicocephalus maculipennis
 ,Gray-hooded Gull,C. cirrocephalus
-,Franklin's Gull,Leucophaeus pipixcan
+,Laughing Gull,Leucophaeus atricilla
+,Franklin's Gull,L. pipixcan
 ,Olrog's Gull,Larus atlanticus
 ,Kelp Gull,L. dominicanus
 ,Brown Noddy,Anous stolidus
@@ -384,6 +389,7 @@
 
 ,ANTBIRDS,THAMNOPHILIDAE
 ,Large-tailed Antshrike,Mackenziaena leachii
+,Great Antshrike,Taraba major
 ,Rufous-capped Antshrike,Thamnophilus ruficapillus
 ,Variable Antshrike,T. caerulescens
 
@@ -439,6 +445,7 @@
 
 ,TYRANT FLYCATCHERS,TYRANNIDAE
 ,Mottle-cheeked Tyrannulet,Phylloscartes ventralis
+,Sepia-capped Flycatcher,Leptopogon amaurocephalus
 ,Yellow-olive Flycatcher,Tolmomyias sulphurescens
 ,Pearly-vented Tody-Tyrant,Hemitriccus margaritaceiventer
 ,Ochre-faced Tody-Flycatcher,Poecilotriccus plumbeiceps
@@ -455,13 +462,13 @@
 ,Suiriri Flycatcher,Suiriri suiriri
 ,Rough-legged Tyrannulet,Phyllomyias burmeisteri
 ,Greenish Tyrannulet,P. virescens
+,Yellow-billed Tit-Tyrant,Anairetes flavirostris
 ,Bearded Tachuri,Polystictus pectoralis
 ,Sharp-tailed Tyrant,Culicivora caudacuta
 ,Crested Doradito,Pseudocolopteryx sclateri
 ,Warbling Doradito,P. flaviventris
 ,Sooty Tyrannulet,Serpophaga nigricans
 ,White-crested Tyrannulet,S. subcristata
-,White-bellied Tyrannulet,S. munda
 ,Straneck's Tyrannulet,S. griseicapilla
 ,Piratic Flycatcher,Legatus leucophaius
 ,Great Kiskadee,Pitangus sulphuratus
@@ -475,6 +482,7 @@
 ,Eastern Kingbird,T. tyrannus
 ,Rufous Casiornis,Casiornis rufus
 ,Swainson's Flycatcher,Myiarchus swainsoni
+,Short-crested Flycatcher,M. ferox
 ,Brown-crested Flycatcher,M. tyrannulus
 ,Bran-colored Flycatcher,Myiophobus fasciatus
 ,Southern Scrub-Flycatcher,Sublegatus modestus
@@ -532,6 +540,7 @@
 ,Masked Gnatcatcher,Polioptila dumicola
 
 ,THRUSHES,TURDIDAE
+,Swainson's Thrush,Catharus ustulatus
 ,Yellow-legged Thrush,Turdus flavipes
 ,Pale-breasted Thrush,T. leucomelas
 ,Rufous-bellied Thrush,T. rufiventris
@@ -546,10 +555,14 @@
 ,STARLINGS,STURNIDAE
 ,European Starling,Sturnus vulgaris
 
+,ESTRILDIDS,ESTRILDIDAE
+,Common Waxbill,Estrilda astrild
+
 ,OLD WORLD SPARROWS,PASSERIDAE
 ,House Sparrow,Passer domesticus
 
 ,PIPITS and WAGTAILS,MOTACILLIDAE
+,White Wagtail,Motacilla alba
 ,Yellowish Pipit,Anthus chii
 ,Short-billed Pipit,A. furcatus
 ,Correndera Pipit,A. correndera
@@ -607,6 +620,7 @@
 ,Ruby-crowned Tanager,Tachyphonus coronatus
 ,Black-goggled Tanager,Trichothraupis melanops
 ,Red-crested Finch,Coryphospingus cucullatus
+,Swallow Tanager,Tersina viridis
 ,White-bellied Seedeater,Sporophila leucoptera
 ,Pearly-bellied Seedeater,S. pileata
 ,Tawny-bellied Seedeater,S. hypoxantha
@@ -626,6 +640,7 @@
 ,Cinnamon Warbling Finch,Poospiza ornata
 ,Black-and-rufous Warbling Finch,P. nigrorufa
 ,Gray-throated Warbling Finch,Microspingus cabanisi
+,Ringed Warbling Finch,M. torquatus
 ,Black-capped Warbling Finch,M. melanoleucus
 ,Long-tailed Reed Finch,Donacospiza albifrons
 ,Bananaquit,Coereba flaveola

@@ -310,8 +310,8 @@ function moveTaxPanel(whatIsOpening) {
 // eslint-disable-next-line no-unused-vars
 // function getCountryHTML(data) {
 
-//   // <ul id='tree'>
-//   //  TODO  : tabindex="0" on all families and species !!
+// <ul id="tree">
+//  TODO  : tabindex="0" on all families and species !!
 //   taxPage.innerHTML = data;
 
 //   // so "species" includes the family level _and_ individual bird species
@@ -329,29 +329,29 @@ function buildTaxTree(thisCountryFamilies, country) {
     "V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endemic",
 	  "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
 
-  var results = `<ul id='tree'>\n\n`;
+  var results = `<ul id="tree">\n\n`;
 
   thisCountryFamilies.forEach(function(family) {    // forEach is okay, there will be no `break`s
 
-  //   <li class='family'><span class='fTitle'><span class='fco'>FLAMINGOS</span><span class='fsc'>PHOENICOPTERIDAE</span></span>
-	//     <ul class='birds'></ul>
+  //   <li class="family"><span class="fTitle"><span class="fco">FLAMINGOS</span><span class="fsc">PHOENICOPTERIDAE</span></span>
+	//     <ul class="birds"></ul>
 
-    results += `<li class='family'><span class='fTitle'><span class='fco'>${family.FamilyCommon}</span>`;
-    results += `<span class='fsc'>${family.Family}</span></span>\n`;
-    results += `  <ul class='birds'>\n\n`;
+    results += `<li class="family"><span class="fTitle"><span class="fco">${family.FamilyCommon}</span>`;
+    results += `<span class="fsc">${family.Family}</span></span>\n`;
+    results += `  <ul class="birds">\n\n`;
 
     family.genera.forEach(function (genus) {
 
       genus.spp.forEach(function (bird) {
 
-        // <li data-i='160'><span>Chilean Flamingo</span><span>Phoenicopterus chilensis</span></li>
-        // <li data-i='162'><span class='nb'>Andean Flamingo</span><span>Phoenicoparrus andinus</span></li>
+        // <li data-i="160"><span>Chilean Flamingo</span><span>Phoenicopterus chilensis</span></li>
+        // <li data-i="162"><span class="nb">Andean Flamingo</span><span>Phoenicoparrus andinus</span></li>
 
         occ = bird[country];
         if (occ && occ !== "X")
-          results += `  <li data-i='${bird.index}'><span class='${json2html[bird[country]]}'>${bird.name}</span>`;
+          results += `  <li data-i="${bird.index}"><span class="${json2html[bird[country]]}">${bird.name}</span>`;
         else
-          results += `  <li data-i='${bird.index}'><span>${bird.name}</span>`;
+          results += `  <li data-i="${bird.index}"><span>${bird.name}</span>`;
 
         results += `<span>${genus.Genus} ${bird.species}</span></li>\n`;
       });
@@ -460,10 +460,10 @@ function gotoMatch(e) {
 
     // match in family, fcommon, fscientific
 
-    // <li class='family'><span class='fTitle'><span class='fco'>SCREAMERS</span><span class='fsc'>ANHIMIDAE</span></span>
-	  //   <ul class='birds'>
-	  //     <li data-i='47'><span>Horned Screamer</span><span>Anhima cornuta</span></li>
-	  //     <li data-i='49'><span>Northern Screamer</span><span>Chauna chavaria</span></li>
+    // <li class="family"><span class="fTitle"><span class="fco">SCREAMERS</span><span class="fsc">ANHIMIDAE</span></span>
+	  //   <ul class="birds">
+	  //     <li data-i="47"><span>Horned Screamer</span><span>Anhima cornuta</span></li>
+	  //     <li data-i="49"><span>Northern Screamer</span><span>Chauna chavaria</span></li>
     //   </ul>
     // </li>
 

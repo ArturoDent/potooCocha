@@ -378,6 +378,8 @@ exports.sync = gulp.series(sass2css, reloadJS, serve, watch);
 exports.serve = gulp.series(serve);
 exports.scss = gulp.series(sass2css);
 
+exports.movePHP = gulp.series(copyPHP);
+
 exports.watch = gulp.series(watch);
 
 exports.production = gulp.series(moveJStoTemp, processJS);

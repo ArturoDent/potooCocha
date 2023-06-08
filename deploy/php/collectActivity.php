@@ -56,7 +56,7 @@ elseif ($stage == "stop") {
   $txt = "  -------------------------------------------------------------------------------\n";
 }
 
-file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+// file_put_contents($logFile, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 
 if ($stage == "download") {
   $txt = "    ".$when."   -->    [".$download."]   -->  " . $IPcity.", ".$IPregion."  ".$IPcountry;

@@ -655,13 +655,13 @@ E,Galapagos Rail,L. spilonota
 ,Blackish Rail,P. nigricans
 ,Plumbeous Rail,P. sanguinolentus
 ,Uniform Crake,Amaurolimnas concolor
-,Giant Wood-Rail,Aramides ypecaha
-,Brown Wood-Rail,A. wolfi
-E,Little Wood-Rail,A. mangle
-,Gray-cowled Wood-Rail,A. cajaneus
-,Rufous-necked Wood-Rail,A. axillaris
-,Red-winged Wood-Rail,A. calopterus
-,Slaty-breasted Wood-Rail,A. saracura
+,Giant Wood Rail,Aramides ypecaha
+,Brown Wood Rail,A. wolfi
+E,Little Wood Rail,A. mangle
+,Gray-cowled Wood Rail,A. cajaneus
+,Rufous-necked Wood Rail,A. axillaris
+,Red-winged Wood Rail,A. calopterus
+,Slaty-breasted Wood Rail,A. saracura
 ,Spot-flanked Gallinule,Porphyriops melanops
 ,Yellow-breasted Crake,Porzana flaviventer
 ,Dot-winged Crake,P. spiloptera
@@ -1645,8 +1645,8 @@ E,Bahia Antwren,H. pileatus
 E,Pectoral Antwren,H. pectoralis
 ,Large-billed Antwren,H. longirostris
 ,Yellow-breasted Antwren,H. axillaris
-,Rufous-margined Antwren,H. frater
-,Rusty-winged Antwren,H. rufimarginatus
+,Rusty-winged Antwren,H. frater
+,Rufous-margined Antwren,H. rufimarginatus
 ,Dusky-throated Antshrike,Thamnomanes ardesiacus
 ,Saturnine Antshrike,T. saturninus
 ,Cinereous Antshrike,T. caesius
@@ -2405,6 +2405,7 @@ E,Buff-throated Purpletuft,I. pipra
 ,Cinereous Becard,P. rufus
 ,Cinnamon Becard,P. cinnamomeus
 ,Chestnut-crowned Becard,P. castaneus
+,Cryptic Becard,P. salvini
 ,White-winged Becard,P. polychopterus
 ,Black-and-white Becard,P. albogriseus
 ,Black-capped Becard,P. marginatus
@@ -2439,14 +2440,16 @@ E,Kinglet Calyptura,Calyptura cristata
 ,Rufous-headed Pygmy-Tyrant,P. ruficeps
 ,Ringed Antpipit,Corythopis torquatus
 ,Southern Antpipit,C. delalandi
-,Variegated Bristle-Tyrant,Phylloscartes poecilotis
-,Chapman's Bristle-Tyrant,P. chapmani
-,Marble-faced Bristle-Tyrant,P. ophthalmicus
-E,Venezuelan Bristle-Tyrant,P. venezuelanus
-E,Antioquia Bristle-Tyrant,P. lanyoni
-,Spectacled Bristle-Tyrant,P. orbitalis
+E,Serra do Mar Bristle-Tyrant,Pogonotriccus difficilis
 ,Southern Bristle-Tyrant,P. eximius
-,Mottle-cheeked Tyrannulet,P. ventralis
+E,Antioquia Bristle-Tyrant,P. lanyoni
+,Marble-faced Bristle-Tyrant,P. ophthalmicus
+,São Paulo Bristle-Tyrant,P. paulista
+,Variegated Bristle-Tyrant,P. poecilotis
+E,Venezuelan Bristle-Tyrant,P. venezuelanus
+,Spectacled Bristle-Tyrant,P. orbitalis
+,Chapman's Bristle-Tyrant,P. chapmani
+,Mottle-cheeked Tyrannulet,Phylloscartes ventralis
 E,Restinga Tyrannulet,P. kronei
 E,Bahia Tyrannulet,P. beckeri
 ,Olive-green Tyrannulet,P. virescens
@@ -2457,9 +2460,7 @@ E,Alagoas Tyrannulet,P. ceciliae
 E,Rufous-lored Tyrannulet,P. flaviventris
 ,Cinnamon-faced Tyrannulet,P. parkeri
 E,Minas Gerais Tyrannulet,P. roquettei
-,São Paulo Tyrannulet,P. paulista
 E,Oustalet's Tyrannulet,P. oustaleti
-E,Serra do Mar Tyrannulet,P. difficilis
 ,Bay-ringed Tyrannulet,P. sylviolus
 ,Streak-necked Flycatcher,Mionectes striaticollis
 ,Olive-striped Flycatcher,M. olivaceus
@@ -2633,7 +2634,6 @@ E,Gray-backed Tachuri,P. superciliaris
 ,River Tyrannulet,S. hypoleuca
 ,Sooty Tyrannulet,S. nigricans
 ,White-crested Tyrannulet,S. subcristata
-,White-bellied Tyrannulet,S. munda
 ,Straneck's Tyrannulet,S. griseicapilla
 ,Agile Tit-Tyrant,Uromyias agilis
 E,Unstreaked Tit-Tyrant,U. agraphia
@@ -2650,7 +2650,7 @@ E,Gray-hooded Attila,A. rufus
 ,Rufous-tailed Flatbill,R. ruficauda
 ,Dusky-tailed Flatbill,R. fuscicauda
 ,Great Kiskadee,Pitangus sulphuratus
-,Lesser Kiskadee,P. lictor
+,Lesser Kiskadee,Philohydor lictor
 ,Cattle Tyrant,Machetornis rixosa
 ,Sulphury Flycatcher,Tyrannopsis sulphurea
 ,Boat-billed Flycatcher,Megarynchus pitangua
@@ -3308,9 +3308,10 @@ E,Olive-green Tanager,Orthogonys chloricterus
 ,Red-throated Ant-Tanager,H. fuscicauda
 E,Sooty Ant-Tanager,H. gutturalis
 E,Crested Ant-Tanager,H. cristata
-,Carmiol's Tanager,Chlorothraupis carmioli
+,Ochre-breasted Tanager,Chlorothraupis stolzmanni
+,Carmiol's Tanager,C. carmioli
 ,Lemon-spectacled Tanager,C. olivacea
-,Ochre-breasted Tanager,C. stolzmanni
+,Yellow-lored Tanager,C. frenata
 ,Golden Grosbeak,Pheucticus chrysogaster
 ,Black-backed Grosbeak,P. aureoventris
 ,Rose-breasted Grosbeak,P. ludovicianus
@@ -3462,6 +3463,7 @@ E,Black-legged Dacnis,D. nigripes
 ,Copper Seedeater,S. bouvreuil
 ,Pearly-bellied Seedeater,S. pileata
 ,Tawny-bellied Seedeater,S. hypoxantha
+,Ibera Seedeater,S. iberaensis
 ,Dark-throated Seedeater,S. ruficollis
 ,Marsh Seedeater,S. palustris
 ,Rufous-rumped Seedeater,S. hypochroma

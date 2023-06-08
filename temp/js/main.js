@@ -256,7 +256,7 @@ function setChecklistCountryAuthors(country) {
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;24&nbsp;July&nbsp;2022. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;6&nbsp;June&nbsp;2023. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {
@@ -441,12 +441,7 @@ function uploadActivity(action) {
     return true;
   }
   var activityURL = "./php/collectActivity.php";
-
-  // var JSONstringData = JSON.stringify(["start"]);
-  // var JSONstringData = JSON.stringify(["select", currentCountry]);
-  // var JSONstringData = JSON.stringify(["search"]);
-  // var JSONstringData = JSON.stringify(["download", "checklist"]);
-  // var JSONstringData = JSON.stringify(["stop"]);
+  // 11/08/2022 logging has been disabled on the server
 
   var JSONstringData = JSON.stringify(action);
 
