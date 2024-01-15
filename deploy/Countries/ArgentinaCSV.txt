@@ -229,9 +229,9 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Spotted Rail,Pardirallus maculatus
 ,Blackish Rail,P. nigricans
 ,Plumbeous Rail,P. sanguinolentus
-,Giant Wood Rail,Aramides ypecaha
-,Gray-cowled Wood Rail,A. cajaneus
-,Slaty-breasted Wood Rail,A. saracura
+,Giant Wood-Rail,Aramides ypecaha
+,Gray-cowled Wood-Rail,A. cajaneus
+,Slaty-breasted Wood-Rail,A. saracura
 ,Spot-flanked Gallinule,Porphyriops melanops
 ,Yellow-breasted Crake,Porzana flaviventer
 ,Dot-winged Crake,P. spiloptera
@@ -272,7 +272,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Andean Avocet,Recurvirostra andina
 
 ,THICK-KNEES,BURHINIDAE
-,Double-striped Thick-knee,Burhinus bistriatus
+,Double-striped Thick-knee,Hesperoburhinus bistriatus
 
 ,SHEATHBILLS,CHIONIDAE
 ,Snowy Sheathbill,Chionis albus
@@ -473,8 +473,8 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Stripe-backed Bittern,I. involucris
 ,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
-,Green Heron,Butorides virescens
-,Striated Heron,B. striata
+,Striated Heron,Butorides striata
+,Green Heron,B. virescens
 ,Cattle Egret,Bubulcus ibis
 ,Cocoi Heron,Ardea cocoi
 ,Great Egret,A. alba
@@ -577,7 +577,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,TROGONS,TROGONIDAE
 ,Blue-crowned Trogon,Trogon curucui
 ,Surucua Trogon,T. surrucura
-,Black-throated Trogon,T. rufus
+,Atlantic Black-throated Trogon,T. chrysochloros
 
 ,MOTMOTS,MOMOTIDAE
 ,Rufous-capped Motmot,Baryphthengus ruficapillus
@@ -872,7 +872,7 @@ E,White-throated Cacholote,P. gutturalis
 ,Bay-ringed Tyrannulet,P. sylviolus
 ,Gray-hooded Flycatcher,Mionectes rufiventris
 ,Sepia-capped Flycatcher,Leptopogon amaurocephalus
-,Yellow-olive Flycatcher,Tolmomyias sulphurescens
+,Yellow-olive Flatbill,Tolmomyias sulphurescens
 ,Eared Pygmy-Tyrant,Myiornis auricularis
 ,Drab-breasted Pygmy-Tyrant,Hemitriccus diops
 ,Brown-breasted Pygmy-Tyrant,H. obsoletus
@@ -884,7 +884,6 @@ E,White-throated Cacholote,P. gutturalis
 ,Greater Wagtail-Tyrant,Stigmatura budytoides
 ,Plain Tyrannulet,Inezia inornata
 ,Fulvous-crowned Scrub-Tyrant,Euscarthmus meloryphus
-,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,Yellow-bellied Elaenia,Elaenia flavogaster
 ,Large Elaenia,E. spectabilis
 ,White-crested Elaenia,E. albiceps
@@ -898,14 +897,15 @@ E,White-throated Cacholote,P. gutturalis
 ,Greenish Elaenia,M. viridicata
 ,Suiriri Flycatcher,Suiriri suiriri
 ,Yellow Tyrannulet,Capsiempis flaveola
-,Rough-legged Tyrannulet,Phyllomyias burmeisteri
-,Greenish Tyrannulet,P. virescens
-,Sclater's Tyrannulet,P. sclateri
-,Planalto Tyrannulet,P. fasciatus
-,Tawny-rumped Tyrannulet,P. uropygialis
-,Mouse-colored Tyrannulet,Phaeomyias murina
 ,Buff-banded Tyrannulet,Mecocerculus hellmayri
 ,White-throated Tyrannulet,M. leucophrys
+,Greenish Tyrannulet,Phyllomyias virescens
+,Sclater's Tyrannulet,P. sclateri
+,Planalto Tyrannulet,P. fasciatus
+,Rough-legged Tyrannulet,Acrochordopus burmeisteri
+,Tawny-rumped Tyrannulet,Tyranniscus uropygialis
+,Southern Beardless-Tyrannulet,Camptostoma obsoletum
+,Mouse-colored Tyrannulet,Nesotriccus murinus 
 ,Yellow-billed Tit-Tyrant,Anairetes flavirostris
 ,Tufted Tit-Tyrant,A. parulus
 ,Bearded Tachuri,Polystictus pectoralis
@@ -1139,6 +1139,7 @@ E,Yellow-striped Brushfinch,A. citrinellus
 ,Northern Waterthrush,Parkesia noveboracensis
 ,Tennessee Warbler,Leiothlypis peregrina
 ,Masked Yellowthroat,Geothlypis aequinoctialis
+,Common Yellowthroat,G. trichas
 ,American Redstart,Setophaga ruticilla
 ,Tropical Parula,S. pitiayumi
 ,Yellow Warbler,S. petechia

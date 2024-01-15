@@ -198,41 +198,42 @@ PIGEONS,COLUMBIDAE
 ,,Ruddy Pigeon,P. subvinacea
 ,,Short-billed Pigeon,P. nigrirostris
 15,,Dusky Pigeon,P. goodsoni
+,,Eurasian Collared-Dove,Streptopelia  decaocto
 ,,Purple Quail-Dove,Geotrygon purpurata
 ,,Sapphire Quail-Dove,G. saphirina
 ,,Ruddy Quail-Dove,G. montana
-,,Violaceous Quail-Dove,G. violacea
-20,,Olive-backed Quail-Dove,Leptotrygon veraguensis
+20,,Violaceous Quail-Dove,G. violacea
+,,Olive-backed Quail-Dove,Leptotrygon veraguensis
 ,,White-tipped Dove,Leptotila verreauxi
 ,,Gray-chested Dove,L. cassinii
 ,endemic,Tolima Dove,L. conoveri
-,,Ochre-bellied Dove,L. ochraceiventris
-25,,Gray-headed Dove,L. plumbeiceps
+25,,Ochre-bellied Dove,L. ochraceiventris
+,,Gray-headed Dove,L. plumbeiceps
 ,,Gray-fronted Dove,L. rufaxilla
 ,,Pallid Dove,L. pallida
 ,,Large-tailed Dove,L. megalura
-,,White-throated Quail-Dove,Zentrygon frenata
-30,,Lined Quail-Dove,Z. linearis
+30,,White-throated Quail-Dove,Zentrygon frenata
+,,Lined Quail-Dove,Z. linearis
 ,,Russet-crowned Quail-Dove,Z. goldmani
 ,,White-winged Dove,Zenaida asiatica
 ,,West Peruvian Dove,Z. meloda
-,endemic,Galapagos Dove,Z. galapagoensis
-35,,Eared Dove,Z. auriculata
+35,endemic,Galapagos Dove,Z. galapagoensis
+,,Eared Dove,Z. auriculata
 ,,Mourning Dove,Z. macroura
 ,,Blue Ground Dove,Claravis pretiosa
 ,,Long-tailed Ground Dove,Uropelia campestris
-,,Maroon-chested Ground Dove,Paraclaravis mondetoura
-40,,Purple-winged Ground Dove,P. geoffroyi
+40,,Maroon-chested Ground Dove,Paraclaravis mondetoura
+,,Purple-winged Ground Dove,P. geoffroyi
 ,,Bare-faced Ground Dove,Metriopelia ceciliae
 ,endemic,Bare-eyed Ground Dove,M. morenoi
 ,,Black-winged Ground Dove,M. melanoptera
-,,Golden-spotted Ground Dove,M. aymara
-45,,Common Ground Dove,Columbina passerina
+45,,Golden-spotted Ground Dove,M. aymara
+,,Common Ground Dove,Columbina passerina
 ,,Plain-breasted Ground Dove,C. minuta
 ,,Ruddy Ground Dove,C. talpacoti
 ,,Ecuadorian Ground Dove,C. buckleyi
-,,Scaled Dove,C. squammata
-50,,Picui Ground Dove,C. picui
+50,,Scaled Dove,C. squammata
+,,Picui Ground Dove,C. picui
 ,,Croaking Ground Dove,C. cruziana
 ,endemic,Blue-eyed Ground Dove,C. cyanopis
 CUCKOOS,CUCULIDAE
@@ -415,7 +416,7 @@ HUMMINGBIRDS,TROCHILIDAE
 ,,Rufous-crested Coquette,L. delattrei
 ,,Spangled Coquette,L. stictolophus
 ,,Butterfly Coquette,L. verreauxii
-,,Festive Coquette,L. chalybeus
+,endemic,Festive Coquette,L. chalybeus
 85,,Peacock Coquette,L. pavoninus
 ,,Ecuadorian Piedtail,Phlogophilus hemileucurus
 ,endemic,Peruvian Piedtail,P. harterti
@@ -635,13 +636,13 @@ RAILS,RALLIDAE
 ,,Blackish Rail,P. nigricans
 ,,Plumbeous Rail,P. sanguinolentus
 ,,Uniform Crake,Amaurolimnas concolor
-,,Giant Wood Rail,Aramides ypecaha
-30,,Brown Wood Rail,A. wolfi
-,endemic,Little Wood Rail,A. mangle
-,,Gray-cowled Wood Rail,A. cajaneus
-,,Rufous-necked Wood Rail,A. axillaris
-,,Red-winged Wood Rail,A. calopterus
-35,,Slaty-breasted Wood Rail,A. saracura
+,,Giant Wood-Rail,Aramides ypecaha
+30,,Brown Wood-Rail,A. wolfi
+,endemic,Little Wood-Rail,A. mangle
+,,Gray-cowled Wood-Rail,A. cajaneus
+,,Rufous-necked Wood-Rail,A. axillaris
+,,Red-winged Wood-Rail,A. calopterus
+35,,Slaty-breasted Wood-Rail,A. saracura
 ,,Spot-flanked Gallinule,Porphyriops melanops
 ,,Yellow-breasted Crake,Porzana flaviventer
 ,,Dot-winged Crake,P. spiloptera
@@ -685,8 +686,8 @@ AVOCETS and STILTS,RECURVIROSTRIDAE
 ,,American Avocet,Recurvirostra americana
 ,,Andean Avocet,R. andina
 THICK-KNEES,BURHINIDAE
-,,Double-striped Thick-knee,Burhinus bistriatus
-,,Peruvian Thick-knee,B. superciliaris
+,,Double-striped Thick-knee,Hesperoburhinus bistriatus
+,,Peruvian Thick-knee,H. superciliaris
 SHEATHBILLS,CHIONIDAE
 ,,Snowy Sheathbill,Chionis albus
 MAGELLANIC PLOVER,PLUVIANELLIDAE
@@ -740,6 +741,7 @@ SANDPIPERS,SCOLOPACIDAE
 ,,Greater Yellowlegs,T. melanoleuca
 ,,Willet,T. semipalmata
 ,,Lesser Yellowlegs,T. flavipes
+,,Spotted Redshank,T. erythropus
 ,,Common Redshank,T. totanus
 ,,Wood Sandpiper,T. glareola
 SEEDSNIPES,THINOCORIDAE
@@ -958,8 +960,8 @@ HERONS,ARDEIDAE
 ,,Stripe-backed Bittern,I. involucris
 10,,Black-crowned Night-Heron,Nycticorax nycticorax
 ,,Yellow-crowned Night-Heron,Nyctanassa violacea
-,,Green Heron,Butorides virescens
-,,Striated Heron,B. striata
+,,Striated Heron,Butorides striata
+,,Green Heron,B. virescens
 ,,Squacco Heron,Ardeola ralloides
 15,,Cattle Egret,Bubulcus ibis
 ,,Gray Heron,Ardea cinerea
@@ -1097,7 +1099,7 @@ OWLS,STRIGIDAE
 ,,Subtropical Pygmy-Owl,G. parkeri
 ,,Central American Pygmy-Owl,G. griseiceps
 ,,Amazonian Pygmy-Owl,G. hardyi
-,endemic,Pernambuco Pygmy-Owl,G. mooreorum
+,,Pernambuco Pygmy-Owl,G. mooreorum
 35,endemic,Least Pygmy-Owl,G. minutissimum
 ,,Ferruginous Pygmy-Owl,G. brasilianum
 ,,Peruvian Pygmy-Owl,G. peruanum
@@ -1119,12 +1121,15 @@ TROGONS,TROGONIDAE
 ,,Black-tailed Trogon,T. melanurus
 ,,White-tailed Trogon,T. chionurus
 10,,Green-backed Trogon,T. viridis
-,,Gartered Trogon,T. caligatus
-,,Amazonian Trogon,T. ramonianus
-,,Guianan Trogon,T. violaceus
+,,Gartered Violaceous-Trogon,T. caligatus
+,,Amazonian Violaceous-Trogon,T. ramonianus
+,,Guianan Violaceous-Trogon,T. violaceus
 ,,Blue-crowned Trogon,T. curucui
 15,,Surucua Trogon,T. surrucura
-,,Black-throated Trogon,T. rufus
+,,Graceful Black-throated Trogon,T. tenellus
+,,Kerr's Black-throated Trogon,T. cupreicauda
+,,Amazonian Black-throated Trogon,T. rufus
+,,Atlantic Black-throated Trogon,T. chrysochloros
 ,,Collared Trogon,T. collaris
 ,,Masked Trogon,T. personatus
 MOTMOTS,MOMOTIDAE
@@ -1422,7 +1427,7 @@ PARROTS,PSITTACIDAE
 ,,Yellow-shouldered Parrot,A. barbadensis
 ,,Turquoise-fronted Parrot,A. aestiva
 55,,Mealy Parrot,A. farinosa
-,endemic,Kawall's Parrot,A. kawalli
+,,Kawall's Parrot,A. kawalli
 ,endemic,Red-tailed Parrot,A. brasiliensis
 ,,Orange-winged Parrot,A. amazonica
 ,,Scaly-naped Parrot,A. mercenarius
@@ -2201,12 +2206,12 @@ MANAKINS,PIPRIDAE
 ,,Sulphur-bellied Tyrant-Manakin,N. sulphureiventer
 ,,Yellow-headed Manakin,Chloropipo flavicapilla
 ,,Jet Manakin,C. unicolor
-10,endemic,Araripe Manakin,Antilophia bokermanni
-,,Helmeted Manakin,A. galeata
-,,Lance-tailed Manakin,Chiroxiphia lanceolata
+10,,Yungas Manakin,Chiroxiphia boliviana
 ,,Blue-backed Manakin,C. pareola
-,,Yungas Manakin,C. boliviana
-15,,Swallow-tailed Manakin,C. caudata
+,,Lance-tailed Manakin,C. lanceolata
+,,Swallow-tailed Manakin,C. caudata
+,endemic,Araripe Manakin,C. bokermanni
+15,,Helmeted Manakin,C. galeata
 ,endemic,Pin-tailed Manakin,Ilicura militaris
 ,,Golden-winged Manakin,Masius chrysopterus
 ,,White-ruffed Manakin,Corapipo altera
@@ -2397,322 +2402,325 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Eye-ringed Flatbill,R. brevirostris
 ,,Pacific Flatbill,R. pacificus
 ,,Fulvous-breasted Flatbill,R. fulvipectus
-55,,Yellow-olive Flycatcher,Tolmomyias sulphurescens
-,,Orange-eyed Flycatcher,T. traylori
-,,Yellow-margined Flycatcher,T. assimilis
-,,Gray-crowned Flycatcher,T. poliocephalus
-,,Yellow-breasted Flycatcher,T. flaviventris
-60,,Eared Pygmy-Tyrant,Myiornis auricularis
+55,,Yellow-winged Flatbill,Tolmomyias flavotectus
+,,Orange-eyed Flatbill,T. traylori
+,,Yellow-margined Flatbill,T. assimilis
+,,Gray-crowned Flatbill,T. poliocephalus
+,,Yellow-breasted Flatbill,T. flaviventris
+60,,Yellow-olive Flatbill,T. sulphurescens
+,,Eared Pygmy-Tyrant,Myiornis auricularis
 ,,White-bellied Pygmy-Tyrant,M. albiventris
 ,,Black-capped Pygmy-Tyrant,M. atricapillus
 ,,Short-tailed Pygmy-Tyrant,M. ecaudatus
-,,Northern Bentbill,Oncostoma cinereigulare
-65,,Southern Bentbill,O. olivaceum
+65,,Northern Bentbill,Oncostoma cinereigulare
+,,Southern Bentbill,O. olivaceum
 ,,Scale-crested Pygmy-Tyrant,Lophotriccus pileatus
 ,,Double-banded Pygmy-Tyrant,L. vitiosus
 ,,Long-crested Pygmy-Tyrant,L. eulophotes
-,,Helmeted Pygmy-Tyrant,L. galeatus
-70,,Pale-eyed Pygmy-Tyrant,Atalotriccus pilaris
+70,,Helmeted Pygmy-Tyrant,L. galeatus
+,,Pale-eyed Pygmy-Tyrant,Atalotriccus pilaris
 ,,Snethlage's Tody-Tyrant,Hemitriccus minor
 ,,Acre Tody-Tyrant,H. cohnhafti
 ,,Yungas Tody-Tyrant,H. spodiops
-,,Flammulated Pygmy-Tyrant,H. flammulatus
-75,,Drab-breasted Pygmy-Tyrant,H. diops
+75,,Flammulated Pygmy-Tyrant,H. flammulatus
+,,Drab-breasted Pygmy-Tyrant,H. diops
 ,,Brown-breasted Pygmy-Tyrant,H. obsoletus
 ,,Boat-billed Tody-Tyrant,H. josephinae
 ,,White-eyed Tody-Tyrant,H. zosterops
-,,White-bellied Tody-Tyrant,H. griseipectus
-80,endemic,Eye-ringed Tody-Tyrant,H. orbitatus
+80,,White-bellied Tody-Tyrant,H. griseipectus
+,endemic,Eye-ringed Tody-Tyrant,H. orbitatus
 ,,Johannes's Tody-Tyrant,H. iohannis
 ,,Stripe-necked Tody-Tyrant,H. striaticollis
 ,endemic,Hangnest Tody-Tyrant,H. nidipendulus
-,,Pearly-vented Tody-Tyrant,H. margaritaceiventer
-85,,Pelzeln's Tody-Tyrant,H. inornatus
+85,,Pearly-vented Tody-Tyrant,H. margaritaceiventer
+,,Pelzeln's Tody-Tyrant,H. inornatus
 ,,Zimmer's Tody-Tyrant,H. minimus
 ,,Black-throated Tody-Tyrant,H. granadensis
 ,,Cinnamon-breasted Tody-Tyrant,H. cinnamomeipectus
-,endemic,Buff-breasted Tody-Tyrant,H. mirandae
-90,endemic,Kaempfer's Tody-Tyrant,H. kaempferi
+90,endemic,Buff-breasted Tody-Tyrant,H. mirandae
+,endemic,Kaempfer's Tody-Tyrant,H. kaempferi
 ,,Buff-throated Tody-Tyrant,H. rufigularis
 ,endemic,Fork-tailed Pygmy-Tyrant,H. furcatus
 ,,Rufous-crowned Tody-Flycatcher,Poecilotriccus ruficeps
-,endemic,Johnson's Tody-Flycatcher,P. luluae
-95,,White-cheeked Tody-Flycatcher,P. albifacies
+95,endemic,Johnson's Tody-Flycatcher,P. luluae
+,,White-cheeked Tody-Flycatcher,P. albifacies
 ,,Black-and-white Tody-Flycatcher,P. capitalis
 ,endemic,Buff-cheeked Tody-Flycatcher,P. senex
 ,,Ruddy Tody-Flycatcher,P. russatus
-,,Ochre-faced Tody-Flycatcher,P. plumbeiceps
-100,,Smoky-fronted Tody-Flycatcher,P. fumifrons
+100,,Ochre-faced Tody-Flycatcher,P. plumbeiceps
+,,Smoky-fronted Tody-Flycatcher,P. fumifrons
 ,,Rusty-fronted Tody-Flycatcher,P. latirostris
 ,,Slate-headed Tody-Flycatcher,P. sylvia
 ,,Golden-winged Tody-Flycatcher,P. calopterus
-,endemic,Black-backed Tody-Flycatcher,P. pulchellus
-105,,Spotted Tody-Flycatcher,Todirostrum maculatum
+105,endemic,Black-backed Tody-Flycatcher,P. pulchellus
+,,Spotted Tody-Flycatcher,Todirostrum maculatum
 ,endemic,Gray-headed Tody-Flycatcher,T. poliocephalum
 ,,Common Tody-Flycatcher,T. cinereum
 ,endemic,Maracaibo Tody-Flycatcher,T. viridanum
-,,Black-headed Tody-Flycatcher,T. nigriceps
-110,,Painted Tody-Flycatcher,T. pictum
+110,,Black-headed Tody-Flycatcher,T. nigriceps
+,,Painted Tody-Flycatcher,T. pictum
 ,,Yellow-browed Tody-Flycatcher,T. chrysocrotaphum
 ,,Ornate Flycatcher,Myiotriccus ornatus
 ,,Handsome Flycatcher,Nephelomyias pulcher
-,,Orange-banded Flycatcher,N. lintoni
-115,,Ochraceous-breasted Flycatcher,N. ochraceiventris
+115,,Orange-banded Flycatcher,N. lintoni
+,,Ochraceous-breasted Flycatcher,N. ochraceiventris
 ,,Cliff Flycatcher,Hirundinea ferruginea
 ,,Cinnamon Flycatcher,Pyrrhomyias cinnamomeus
 ,,Mistletoe Tyrannulet,Zimmerius vilissimus
-,endemic,Venezuelan Tyrannulet,Z. petersi
-120,,Spectacled Tyrannulet,Z. improbus
+120,endemic,Venezuelan Tyrannulet,Z. petersi
+,,Spectacled Tyrannulet,Z. improbus
 ,,Choco Tyrannulet,Z. albigularis
 ,,Bolivian Tyrannulet,Z. bolivianus
 ,,Red-billed Tyrannulet,Z. cinereicapilla
-,endemic,Mishana Tyrannulet,Z. villarejoi
-125,endemic,Chico's Tyrannulet,Z. chicomendesi
+125,endemic,Mishana Tyrannulet,Z. villarejoi
+,endemic,Chico's Tyrannulet,Z. chicomendesi
 ,,Slender-footed Tyrannulet,Z. gracilipes
 ,,Guianan Tyrannulet,Z. acer
 ,,Golden-faced Tyrannulet,Z. chrysops
-,,Peruvian Tyrannulet,Z. viridiflavus
-130,,Lesser Wagtail-Tyrant,Stigmatura napensis
+130,,Peruvian Tyrannulet,Z. viridiflavus
+,,Lesser Wagtail-Tyrant,Stigmatura napensis
 ,,Greater Wagtail-Tyrant,S. budytoides
 ,,Slender-billed Tyrannulet,Inezia tenuirostris
 ,,Plain Tyrannulet,I. inornata
-,,Amazonian Tyrannulet,I. subflava
-135,,Pale-tipped Tyrannulet,I. caudata
+135,,Amazonian Tyrannulet,I. subflava
+,,Pale-tipped Tyrannulet,I. caudata
 ,,Fulvous-crowned Scrub-Tyrant,Euscarthmus meloryphus
 ,,Fulvous-faced Scrub-Tyrant,E. fulviceps
 ,,Rufous-sided Scrub-Tyrant,E. rufomarginatus
-,,Brown-capped Tyrannulet,Ornithion brunneicapillus
-140,,White-lored Tyrannulet,O. inerme
-,,Southern Beardless-Tyrannulet,Camptostoma obsoletum
-,,Yellow-bellied Elaenia,Elaenia flavogaster
+140,,Yellow-bellied Elaenia,Elaenia flavogaster
 ,,Caribbean Elaenia,E. martinica
 ,,Large Elaenia,E. spectabilis
-145,endemic,Noronha Elaenia,E. ridleyana
+,endemic,Noronha Elaenia,E. ridleyana
 ,,White-crested Elaenia,E. albiceps
-,,Small-billed Elaenia,E. parvirostris
+145,,Small-billed Elaenia,E. parvirostris
 ,,Olivaceous Elaenia,E. mesoleuca
 ,,Slaty Elaenia,E. strepera
-150,,Mottle-backed Elaenia,E. gigas
+,,Mottle-backed Elaenia,E. gigas
 ,,Brownish Elaenia,E. pelzelni
-,,Plain-crested Elaenia,E. cristata
+150,,Plain-crested Elaenia,E. cristata
 ,,Lesser Elaenia,E. chiriquensis
 ,,Coopmans's Elaenia,E. brachyptera
-155,,Rufous-crowned Elaenia,E. ruficeps
+,,Rufous-crowned Elaenia,E. ruficeps
 ,,Mountain Elaenia,E. frantzii
-,,Tepui Elaenia,E. olivina
+155,,Tepui Elaenia,E. olivina
 ,,Highland Elaenia,E. obscura
 ,,Great Elaenia,E. dayi
-160,,Small-headed Elaenia,E. sordida
+,,Small-headed Elaenia,E. sordida
 ,,Sierran Elaenia,E. pallatangae
-,,Yellow-crowned Tyrannulet,Tyrannulus elatus
+160,,Yellow-crowned Tyrannulet,Tyrannulus elatus
 ,,Forest Elaenia,Myiopagis gaimardii
 ,,Gray Elaenia,M. caniceps
-165,,Foothill Elaenia,M. olallai
+,,Foothill Elaenia,M. olallai
 ,,Pacific Elaenia,M. subplacens
-,,Yellow-crowned Elaenia,M. flavivertex
+165,,Yellow-crowned Elaenia,M. flavivertex
 ,,Greenish Elaenia,M. viridicata
 ,,Suiriri Flycatcher,Suiriri suiriri
-170,,Yellow Tyrannulet,Capsiempis flaveola
-,,Rough-legged Tyrannulet,Phyllomyias burmeisteri
-,,Greenish Tyrannulet,P. virescens
-,,Reiser's Tyrannulet,P. reiseri
-,endemic,Urich's Tyrannulet,P. urichi
-175,,Sclater's Tyrannulet,P. sclateri
-,,Yungas Tyrannulet,P. weedeni
-,,Planalto Tyrannulet,P. fasciatus
-,,Sooty-headed Tyrannulet,P. griseiceps
-,,Black-capped Tyrannulet,P. nigrocapillus
-180,,Ashy-headed Tyrannulet,P. cinereiceps
-,,Tawny-rumped Tyrannulet,P. uropygialis
-,,Plumbeous-crowned Tyrannulet,P. plumbeiceps
-,endemic,Gray-capped Tyrannulet,P. griseocapilla
-,,Mouse-colored Tyrannulet,Phaeomyias murina
-185,,Gray-and-white Tyrannulet,Pseudelaenia leucospodia
+,,Yellow Tyrannulet,Capsiempis flaveola
 ,,White-tailed Tyrannulet,Mecocerculus poecilocercus
-,,Buff-banded Tyrannulet,M. hellmayri
+170,,Buff-banded Tyrannulet,M. hellmayri
 ,,White-banded Tyrannulet,M. stictopterus
 ,,White-throated Tyrannulet,M. leucophrys
-190,,Rufous-winged Tyrannulet,M. calopterus
+,,Rufous-winged Tyrannulet,M. calopterus
 ,,Sulphur-bellied Tyrannulet,M. minor
+175,,Greenish Tyrannulet,Phyllomyias virescens
+,,Reiser's Tyrannulet,P. reiseri
+,endemic,Urich's Tyrannulet,P. urichi
+,,Sclater's Tyrannulet,P. sclateri
+,,Yungas Tyrannulet,P. weedeni
+180,,Planalto Tyrannulet,P. fasciatus
+,,Sooty-headed Tyrannulet,P. griseiceps
+,,Plumbeous-crowned Tyrannulet,P. plumbeiceps
+,endemic,Gray-capped Tyrannulet,P. griseocapilla
+,,White-fronted Tyrannulet,Acrochordopus zeledoni
+185,,Rough-legged Tyrannulet,A. burmeisteri
+,,Ashy-headed Tyrannulet,Tyranniscus cinereiceps
+,,Black-capped Tyrannulet,T. nigrocapillus
+,,Tawny-rumped Tyrannulet,T. uropygialis
+,,Southern Beardless-Tyrannulet,Camptostoma obsoletum
+190,,Brown-capped Tyrannulet,Ornithion brunneicapillus
+,,White-lored Tyrannulet,O. inerme
+,,Mouse-colored Tyrannulet,Nesotriccus murinus 
+,,Gray-and-white Tyrannulet,Pseudelaenia leucospodia
 ,,Black-crested Tit-Tyrant,Anairetes nigrocristatus
-,,Pied-crested Tit-Tyrant,A. reguloides
+195,,Pied-crested Tit-Tyrant,A. reguloides
 ,,Ash-breasted Tit-Tyrant,A. alpinus
-195,,Yellow-billed Tit-Tyrant,A. flavirostris
+,,Yellow-billed Tit-Tyrant,A. flavirostris
 ,,Tufted Tit-Tyrant,A. parulus
 ,endemic,Juan Fernandez Tit-Tyrant,A. fernandezianus
-,,Bearded Tachuri,Polystictus pectoralis
+200,,Bearded Tachuri,Polystictus pectoralis
 ,endemic,Gray-backed Tachuri,P. superciliaris
-200,,Sharp-tailed Tyrant,Culicivora caudacuta
+,,Sharp-tailed Tyrant,Culicivora caudacuta
 ,,Crested Doradito,Pseudocolopteryx sclateri
 ,,Subtropical Doradito,P. acutipennis
-,,Dinelli's Doradito,P. dinelliana
+205,,Dinelli's Doradito,P. dinelliana
 ,,Warbling Doradito,P. flaviventris
-205,,Ticking Doradito,P. citreola
+,,Ticking Doradito,P. citreola
 ,,Torrent Tyrannulet,Serpophaga cinerea
 ,,River Tyrannulet,S. hypoleuca
-,,Sooty Tyrannulet,S. nigricans
+210,,Sooty Tyrannulet,S. nigricans
 ,,White-crested Tyrannulet,S. subcristata
-210,,Straneck's Tyrannulet,S. griseicapilla
+,,Straneck's Tyrannulet,S. griseicapilla
 ,,Agile Tit-Tyrant,Uromyias agilis
 ,endemic,Unstreaked Tit-Tyrant,U. agraphia
-,,Short-tailed Field Tyrant,Muscigralla brevicauda
+215,,Short-tailed Field Tyrant,Muscigralla brevicauda
 ,,Rufous-tailed Attila,Attila phoenicurus
-215,,Cinnamon Attila,A. cinnamomeus
+,,Cinnamon Attila,A. cinnamomeus
 ,,Ochraceous Attila,A. torridus
 ,,Citron-bellied Attila,A. citriniventris
-,,Dull-capped Attila,A. bolivianus
+220,,Dull-capped Attila,A. bolivianus
 ,endemic,Gray-hooded Attila,A. rufus
-220,,Bright-rumped Attila,A. spadiceus
+,,Bright-rumped Attila,A. spadiceus
 ,,Piratic Flycatcher,Legatus leucophaius
 ,,Large-headed Flatbill,Ramphotrigon megacephalum
-,,Rufous-tailed Flatbill,R. ruficauda
+225,,Rufous-tailed Flatbill,R. ruficauda
 ,,Dusky-tailed Flatbill,R. fuscicauda
-225,,Great Kiskadee,Pitangus sulphuratus
+,,Great Kiskadee,Pitangus sulphuratus
 ,,Lesser Kiskadee,Philohydor lictor
 ,,Cattle Tyrant,Machetornis rixosa
-,,Sulphury Flycatcher,Tyrannopsis sulphurea
+230,,Sulphury Flycatcher,Tyrannopsis sulphurea
 ,,Boat-billed Flycatcher,Megarynchus pitangua
-230,,Golden-crowned Flycatcher,Myiodynastes chrysocephalus
+,,Golden-bellied Flycatcher,Myiodynastes hemichrysus
+,,Golden-crowned Flycatcher,M. chrysocephalus
 ,,Baird's Flycatcher,M. bairdii
-,,Sulphur-bellied Flycatcher,M. luteiventris
+235,,Sulphur-bellied Flycatcher,M. luteiventris
 ,,Streaked Flycatcher,M. maculatus
 ,,Rusty-margined Flycatcher,Myiozetetes cayanensis
-235,,Social Flycatcher,M. similis
+,,Social Flycatcher,M. similis
 ,,Gray-capped Flycatcher,M. granadensis
-,,Dusky-chested Flycatcher,M. luteiventris
+240,,Dusky-chested Flycatcher,M. luteiventris
 ,,White-ringed Flycatcher,Conopias albovittatus
 ,,Yellow-throated Flycatcher,C. parvus
-240,,Three-striped Flycatcher,C. trivirgatus
+,,Three-striped Flycatcher,C. trivirgatus
 ,,Lemon-browed Flycatcher,C. cinchoneti
-,,White-bearded Flycatcher,Phelpsia inornata
+245,,White-bearded Flycatcher,Phelpsia inornata
 ,,Variegated Flycatcher,Empidonomus varius
 ,,Crowned Slaty Flycatcher,E. aurantioatrocristatus
-245,,Snowy-throated Kingbird,Tyrannus niveigularis
+,,Snowy-throated Kingbird,Tyrannus niveigularis
 ,,White-throated Kingbird,T. albogularis
-,,Tropical Kingbird,T. melancholicus
+250,,Tropical Kingbird,T. melancholicus
 ,,Scissor-tailed Flycatcher,T. forficatus
 ,,Fork-tailed Flycatcher,T. savana
-250,,Eastern Kingbird,T. tyrannus
+,,Eastern Kingbird,T. tyrannus
 ,,Gray Kingbird,T. dominicensis
-,,Rufous Mourner,Rhytipterna holerythra
+255,,Rufous Mourner,Rhytipterna holerythra
 ,,Grayish Mourner,R. simplex
 ,,Pale-bellied Mourner,R. immunda
-255,,Rufous Casiornis,Casiornis rufus
+,,Rufous Casiornis,Casiornis rufus
 ,endemic,Ash-throated Casiornis,C. fuscus
-,,Choco Sirystes,Sirystes albogriseus
+260,,Choco Sirystes,Sirystes albogriseus
 ,,White-rumped Sirystes,S. albocinereus
 ,,Todd's Sirystes,S. subcanescens
-260,,Sibilant Sirystes,S. sibilator
+,,Sibilant Sirystes,S. sibilator
 ,endemic,Rufous Flycatcher,Myiarchus semirufus
-,,Dusky-capped Flycatcher,M. tuberculifer
+265,,Dusky-capped Flycatcher,M. tuberculifer
 ,,Swainson's Flycatcher,M. swainsoni
 ,,Venezuelan Flycatcher,M. venezuelensis
-265,,Panama Flycatcher,M. panamensis
+,,Panama Flycatcher,M. panamensis
 ,,Short-crested Flycatcher,M. ferox
-,endemic,Apical Flycatcher,M. apicalis
+270,endemic,Apical Flycatcher,M. apicalis
 ,,Sooty-crowned Flycatcher,M. phaeocephalus
 ,,Pale-edged Flycatcher,M. cephalotes
-270,,Great Crested Flycatcher,M. crinitus
+,,Great Crested Flycatcher,M. crinitus
 ,,Brown-crested Flycatcher,M. tyrannulus
-,endemic,Galapagos Flycatcher,M. magnirostris
+275,endemic,Galapagos Flycatcher,M. magnirostris
 ,,Long-tailed Tyrant,Colonia colonus
 ,,Flavescent Flycatcher,Myiophobus flavicans
-275,,Orange-crested Flycatcher,M. phoenicomitra
+,,Orange-crested Flycatcher,M. phoenicomitra
 ,,Unadorned Flycatcher,M. inornatus
-,,Roraiman Flycatcher,M. roraimae
+280,,Roraiman Flycatcher,M. roraimae
 ,,Olive-chested Flycatcher,M. cryptoxanthus
 ,,Bran-colored Flycatcher,M. fasciatus
-280,,Patagonian Tyrant,Colorhamphus parvirostris
-,,Crowned Chat-Tyrant,Ochthoeca frontalis
-,,Jelski's Chat-Tyrant,O. jelskii
-,,Golden-browed Chat-Tyrant,O. pulchella
-,,Yellow-bellied Chat-Tyrant,O. diadema
-285,,Slaty-backed Chat-Tyrant,O. cinnamomeiventris
+,,Patagonian Tyrant,Colorhamphus parvirostris
+,,Crowned Chat-Tyrant,Silvicultrix frontalis
+285,,Jelski's Chat-Tyrant,S. jelskii
+,,Golden-browed Chat-Tyrant,S. pulchella
+,,Yellow-bellied Chat-Tyrant,S. diadema
+,,Slaty-backed Chat-Tyrant,Ochthoeca cinnamomeiventris
 ,,Rufous-breasted Chat-Tyrant,O. rufipectoralis
-,,Brown-backed Chat-Tyrant,O. fumicolor
+290,,Brown-backed Chat-Tyrant,O. fumicolor
 ,,d'Orbigny's Chat-Tyrant,O. oenanthoides
 ,endemic,Piura Chat-Tyrant,O. piurae
-290,,White-browed Chat-Tyrant,O. leucophrys
+,,White-browed Chat-Tyrant,O. leucophrys
 ,,Tumbes Tyrant,Tumbezia salvini
-,,Chapada Flycatcher,Guyramemua affine
+295,,Chapada Flycatcher,Guyramemua affine
 ,,Northern Scrub-Flycatcher,Sublegatus arenarum
 ,,Amazonian Scrub-Flycatcher,S. obscurior
-295,,Southern Scrub-Flycatcher,S. modestus
+,,Southern Scrub-Flycatcher,S. modestus
 ,,Vermilion Flycatcher,Pyrocephalus rubinus
-,endemic,Brujo Flycatcher,P. nanus
+300,endemic,Brujo Flycatcher,P. nanus
 ,,Pied Water Tyrant,Fluvicola pica
 ,,Black-backed Water Tyrant,F. albiventer
-300,,Masked Water Tyrant,F. nengeta
+,,Masked Water Tyrant,F. nengeta
 ,,White-headed Marsh Tyrant,Arundinicola leucocephala
-,,Streamer-tailed Tyrant,Gubernetes yetapa
+305,,Streamer-tailed Tyrant,Gubernetes yetapa
 ,,Black-and-white Monjita,Heteroxolmis dominicana
 ,,Cock-tailed Tyrant,Alectrurus tricolor
-305,,Strange-tailed Tyrant,A. risora
+,,Strange-tailed Tyrant,A. risora
 ,,Austral Negrito,Lessonia rufa
-,,Andean Negrito,L. oreas
+310,,Andean Negrito,L. oreas
 ,,Spectacled Tyrant,Hymenops perspicillatus
 ,,Riverside Tyrant,Knipolegus orenocensis
-310,,Rufous-tailed Tyrant,K. poecilurus
+,,Rufous-tailed Tyrant,K. poecilurus
 ,,Amazonian Black-Tyrant,K. poecilocercus
-,endemic,Caatinga Black-Tyrant,K. franciscanus
+315,endemic,Caatinga Black-Tyrant,K. franciscanus
 ,,Crested Black-Tyrant,K. lophotes
 ,endemic,Velvety Black-Tyrant,K. nigerrimus
-315,,Jelski's Black-Tyrant,K. signatus
+,,Jelski's Black-Tyrant,K. signatus
 ,,Plumbeous Black-Tyrant,K. cabanisi
-,,Blue-billed Black-Tyrant,K. cyanirostris
+320,,Blue-billed Black-Tyrant,K. cyanirostris
 ,,Cinereous Tyrant,K. striaticeps
 ,,White-winged Black-Tyrant,K. aterrimus
-320,,Hudson's Black-Tyrant,K. hudsoni
+,,Hudson's Black-Tyrant,K. hudsoni
 ,,Yellow-browed Tyrant,Satrapa icterophrys
-,,Little Ground-Tyrant,Syrtidicola fluviatilis
+325,,Little Ground-Tyrant,Syrtidicola fluviatilis
 ,,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
 ,,Taczanowski's Ground-Tyrant,M. griseus
-325,,Puna Ground-Tyrant,M. juninensis
+,,Puna Ground-Tyrant,M. juninensis
 ,,Cinereous Ground-Tyrant,M. cinereus
-,,White-fronted Ground-Tyrant,M. albifrons
+330,,White-fronted Ground-Tyrant,M. albifrons
 ,,Ochre-naped Ground-Tyrant,M. flavinucha
 ,,Rufous-naped Ground-Tyrant,M. rufivertex
-330,,Dark-faced Ground-Tyrant,M. maclovianus
+,,Dark-faced Ground-Tyrant,M. maclovianus
 ,,White-browed Ground-Tyrant,M. albilora
-,,Plain-capped Ground-Tyrant,M. alpinus
+335,,Plain-capped Ground-Tyrant,M. alpinus
 ,,Cinnamon-bellied Ground-Tyrant,M. capistratus
 ,,Black-fronted Ground-Tyrant,M. frontalis
-335,,Red-rumped Bush-Tyrant,Cnemarchus erythropygius
+,,Red-rumped Bush-Tyrant,Cnemarchus erythropygius
 ,,Rufous-webbed Bush-Tyrant,C. rufipennis
-,,Fire-eyed Diucon,Pyrope pyrope
+340,,Fire-eyed Diucon,Pyrope pyrope
 ,,White-rumped Monjita,Xolmis velatus
 ,,White Monjita,X. irupero
-340,,Gray Monjita,Nengetus cinereus
+,,Gray Monjita,Nengetus cinereus
 ,,Black-crowned Monjita,Neoxolmis coronatus
-,endemic,Salinas Monjita,N. salinarum
+345,endemic,Salinas Monjita,N. salinarum
 ,endemic,Rusty-backed Monjita,N. rubetra
 ,,Chocolate-vented Tyrant,N. rufiventris
-345,,Black-billed Shrike-Tyrant,Agriornis montanus
+,,Black-billed Shrike-Tyrant,Agriornis montanus
 ,,White-tailed Shrike-Tyrant,A. albicauda
-,,Great Shrike-Tyrant,A. lividus
+350,,Great Shrike-Tyrant,A. lividus
 ,,Gray-bellied Shrike-Tyrant,A. micropterus
 ,,Lesser Shrike-Tyrant,A. murinus
-350,,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
+,,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
 ,endemic,Santa Marta Bush-Tyrant,M. pernix
-,,Smoky Bush-Tyrant,M. fumigatus
+355,,Smoky Bush-Tyrant,M. fumigatus
 ,,Rufous-bellied Bush-Tyrant,M. fuscorufus
 ,,Drab Water Tyrant,Ochthornis littoralis
-355,,Fuscous Flycatcher,Cnemotriccus fuscatus
+,,Fuscous Flycatcher,Cnemotriccus fuscatus
 ,,Black-billed Flycatcher,Aphanotriccus audax
-,,Euler's Flycatcher,Lathrotriccus euleri
+360,,Euler's Flycatcher,Lathrotriccus euleri
 ,,Gray-breasted Flycatcher,L. griseipectus
 ,,Tufted Flycatcher,Mitrephanes phaeocercus
-360,,Olive Flycatcher,M. olivaceus
+,,Olive Flycatcher,M. olivaceus
 ,,Black Phoebe,Sayornis nigricans
-,,Acadian Flycatcher,Empidonax virescens
+365,,Acadian Flycatcher,Empidonax virescens
 ,,Willow Flycatcher,E. traillii
 ,,Alder Flycatcher,E. alnorum
-365,,Olive-sided Flycatcher,Contopus cooperi
+,,Olive-sided Flycatcher,Contopus cooperi
 ,,Smoke-colored Pewee,C. fumigatus
-,,Western Wood-Pewee,C. sordidulus
+370,,Western Wood-Pewee,C. sordidulus
 ,,Eastern Wood-Pewee,C. virens
 ,,Tropical Pewee,C. cinereus
-370,,White-throated Pewee,C. albogularis
+,,White-throated Pewee,C. albogularis
 ,,Blackish Pewee,C. nigrescens
 ,,Shear-tailed Gray Tyrant,Muscipipra vetula
 ,,Many-colored Rush Tyrant,Tachuris rubrigastra
@@ -3211,9 +3219,9 @@ CARDINAL GROSBEAKS,CARDINALIDAE
 ,,Rose-breasted Grosbeak,P. ludovicianus
 ,,Rose-breasted Chat,Granatellus pelzelni
 ,,Vermilion Cardinal,Cardinalis phoeniceus
-20,,Yellow-green Grosbeak,Caryothraustes canadensis
-,,Red-and-black Grosbeak,Periporphyrus erythromelas
-,,Blue Seedeater,Amaurospiza concolor
+20,,Red-and-black Grosbeak,Periporphyrus erythromelas
+,,Yellow-green Grosbeak,Caryothraustes canadensis
+,,Ecuadorian Seedeater,Amaurospiza aequatorialis
 ,endemic,Carrizal Seedeater,A. carrizalensis
 ,,Blackish-blue Seedeater,A. moesta
 25,,Glaucous-blue Grosbeak,Cyanoloxia glaucocaerulea
