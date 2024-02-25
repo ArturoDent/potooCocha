@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "January 5, 2024",
+	"version": "January 22, 2024",
 	"birds": {
 		"families": [
 			{
@@ -816,6 +816,12 @@
 								"EC": "X"
 							},
 							{
+								"species": "squammata",
+								"index": 224,
+								"name": "Scaled Dove",
+								"EC": "H"
+							},
+							{
 								"species": "cruziana",
 								"index": 226,
 								"name": "Croaking Ground Dove",
@@ -1048,7 +1054,7 @@
 								"species": "nacunda",
 								"index": 259,
 								"name": "Nacunda Nighthawk",
-								"EC": "NB"
+								"EC": "V"
 							},
 							{
 								"species": "rupestris",
@@ -2955,7 +2961,7 @@
 								"species": "americanus",
 								"index": 670,
 								"name": "Long-billed Curlew",
-								"EC": "H"
+								"EC": "V"
 							}
 						]
 					},
@@ -3124,7 +3130,7 @@
 								"species": "delicata",
 								"index": 700,
 								"name": "Wilson's Snipe",
-								"EC": "V"
+								"EC": "NB"
 							},
 							{
 								"species": "paraguaiae",
@@ -3364,6 +3370,17 @@
 						]
 					},
 					{
+						"Genus": "Hydrocoloeus",
+						"spp": [
+							{
+								"species": "minutus",
+								"index": 741,
+								"name": "Little Gull",
+								"EC": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Leucophaeus",
 						"spp": [
 							{
@@ -3530,7 +3547,7 @@
 								"species": "caspia",
 								"index": 767,
 								"name": "Caspian Tern",
-								"EC": "V"
+								"EC": "NB"
 							}
 						]
 					},
@@ -3822,7 +3839,7 @@
 								"species": "halli",
 								"index": 826,
 								"name": "Northern Giant-Petrel",
-								"EC": "H"
+								"EC": "V"
 							}
 						]
 					},
@@ -3867,7 +3884,7 @@
 								"species": "externa",
 								"index": 848,
 								"name": "Juan Fernandez Petrel",
-								"EC": "H"
+								"EC": "V"
 							}
 						]
 					},
@@ -4067,7 +4084,7 @@
 								"species": "leucogaster",
 								"index": 892,
 								"name": "Brown Booby",
-								"EC": "V"
+								"EC": "NB"
 							}
 						]
 					}
@@ -4097,6 +4114,12 @@
 					{
 						"Genus": "Phalacrocorax",
 						"spp": [
+							{
+								"species": "gaimardi",
+								"index": 894,
+								"name": "Red-legged Cormorant",
+								"EC": "H"
+							},
 							{
 								"species": "harrisi",
 								"index": 895,
@@ -4304,7 +4327,7 @@
 								"species": "sibilatrix",
 								"index": 922,
 								"name": "Whistling Heron",
-								"EC": "V"
+								"EC": "X"
 							}
 						]
 					},
@@ -5595,6 +5618,12 @@
 								"index": 1136,
 								"name": "Brown Nunlet",
 								"EC": "X"
+							},
+							{
+								"species": "ruficapilla",
+								"index": 1138,
+								"name": "Rufous-capped Nunlet",
+								"EC": "H"
 							}
 						]
 					},
@@ -6819,12 +6848,6 @@
 								"index": 1488,
 								"name": "Russet Antshrike",
 								"EC": "X"
-							},
-							{
-								"species": "rufescens",
-								"index": 1489,
-								"name": "Rufescent Antshrike",
-								"EC": "X"
 							}
 						]
 					},
@@ -7583,12 +7606,6 @@
 								"species": "rufocinerea",
 								"index": 1713,
 								"name": "Bicolored Antpitta",
-								"EC": "X"
-							},
-							{
-								"species": "rufula",
-								"index": 1714,
-								"name": "Muisca Antpitta",
 								"EC": "X"
 							},
 							{
@@ -10495,6 +10512,12 @@
 						"Genus": "Myiarchus",
 						"spp": [
 							{
+								"species": "semirufus",
+								"index": 2532,
+								"name": "Rufous Flycatcher",
+								"EC": "H"
+							},
+							{
 								"species": "tuberculifer",
 								"index": 2533,
 								"name": "Dusky-capped Flycatcher",
@@ -10504,7 +10527,7 @@
 								"species": "swainsoni",
 								"index": 2534,
 								"name": "Swainson's Flycatcher",
-								"EC": "NB"
+								"EC": "X"
 							},
 							{
 								"species": "panamensis",
@@ -11272,7 +11295,7 @@
 								"species": "leucorrhoa",
 								"index": 2711,
 								"name": "White-rumped Swallow",
-								"EC": "H"
+								"EC": "V"
 							}
 						]
 					},
@@ -12433,6 +12456,12 @@
 						"Genus": "Quiscalus",
 						"spp": [
 							{
+								"species": "lugubris",
+								"index": 3004,
+								"name": "Carib Grackle",
+								"EC": "H"
+							},
+							{
 								"species": "mexicanus",
 								"index": 3005,
 								"name": "Great-tailed Grackle",
@@ -12508,7 +12537,7 @@
 								"species": "chrysoptera",
 								"index": 3030,
 								"name": "Golden-winged Warbler",
-								"EC": "V"
+								"EC": "NB"
 							}
 						]
 					},
@@ -13148,6 +13177,12 @@
 								"index": 3191,
 								"name": "Black Flowerpiercer",
 								"EC": "X"
+							},
+							{
+								"species": "brunneiventris",
+								"index": 3192,
+								"name": "Black-throated Flowerpiercer",
+								"EC": "H"
 							},
 							{
 								"species": "albilatera",

@@ -16,7 +16,9 @@
 ,Choco Tinamou,C. kerriae
 ,Variegated Tinamou,C. variegatus
 ,Rusty Tinamou,C. brevirostris
+,Bartlett's Tinamou,C. bartletti
 ,Barred Tinamou,C. casiquiare
+,Curve-billed Tinamou,Nothoprocta curvirostris
 
 ,SCREAMERS,ANHIMIDAE
 ,Horned Screamer,Anhima cornuta
@@ -88,7 +90,8 @@ E,Chestnut Wood-Quail,O. hyperythrus
 E,Gorgeted Wood-Quail,O. strophium
 
 ,FLAMINGOS,PHOENICOPTERIDAE
-,American Flamingo,Phoenicopterus ruber
+,Chilean Flamingo,Phoenicopterus chilensis
+,American Flamingo,P. ruber
 
 ,GREBES,PODICIPEDIDAE
 ,Least Grebe,Tachybaptus dominicus
@@ -166,6 +169,7 @@ E,Tolima Dove,L. conoveri
 ,Long-tailed Potoo,N. aethereus
 ,Common Potoo,N. griseus
 ,Andean Potoo,N. maculosus
+,White-winged Potoo,N. leucopterus
 
 ,NIGHTJARS,CAPRIMULGIDAE
 ,Nacunda Nighthawk,Chordeiles nacunda
@@ -173,6 +177,7 @@ E,Tolima Dove,L. conoveri
 ,Sand-colored Nighthawk,C. rupestris
 ,Lesser Nighthawk,C. acutipennis
 ,Common Nighthawk,C. minor
+,Antillean Nighthawk,C. gundlachii
 ,Short-tailed Nighthawk,Lurocalis semitorquatus
 ,Rufous-bellied Nighthawk,L. rufiventris
 ,Band-tailed Nighthawk,Nyctiprogne leucopyga
@@ -252,7 +257,6 @@ E,Tolima Dove,L. conoveri
 ,Amethyst-throated Sunangel,H. amethysticollis
 ,Gorgeted Sunangel,H. strophianus
 ,Tourmaline Sunangel,H. exortis
-E,Bogota Sunangel,H. zusii
 ,Green Thorntail,Discosura conversii
 ,Wire-crested Thorntail,D. popelairii
 ,Black-bellied Thorntail,D. langsdorffi
@@ -428,6 +432,7 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Andean Lapwing,V. resplendens
 ,Killdeer,Charadrius vociferus
 ,Semipalmated Plover,C. semipalmatus
+,Piping Plover,C. melodus
 ,Wilson's Plover,C. wilsonia
 ,Collared Plover,C. collaris
 ,Snowy Plover,C. nivosus
@@ -480,6 +485,9 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Willet,T. semipalmata
 ,Lesser Yellowlegs,T. flavipes
 
+,SEEDSNIPES,THINOCORIDAE
+,Rufous-bellied Seedsnipe,Attagis gayi
+
 ,JACANAS,JACANIDAE
 ,Wattled Jacana,Jacana jacana
 
@@ -503,7 +511,8 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Gray Gull,Leucophaeus modestus
 ,Laughing Gull,L. atricilla
 ,Franklin's Gull,L. pipixcan
-,Ring-billed Gull,Larus delawarensis
+,Belcher's Gull,Larus belcheri
+,Ring-billed Gull,L. delawarensis
 ,Great Black-backed Gull,L. marinus
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
@@ -544,11 +553,13 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 
 ,ALBATROSSES,DIOMEDEIDAE
 ,Waved Albatross,Phoebastria irrorata
-,Black-browed Albatross,Thalassarche melanophris
+,Yellow-nosed Albatross,Thalassarche chlororhynchos
+,Black-browed Albatross,T. melanophris
 
 ,SOUTHERN STORM-PETRELS,OCEANITIDAE
 ,White-bellied Storm-Petrel,Fregetta grallaria
 ,Elliot's Storm-Petrel,Oceanites gracilis
+,White-faced Storm-Petrel,Pelagodroma marina
 
 ,NORTHERN STORM-PETRELS,HYDROBATIDAE
 ,Least Storm-Petrel,Hydrobates microsoma
@@ -561,7 +572,8 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 
 ,SHEARWATERS,PROCELLARIIDAE
 ,Cape Petrel,Daption capense
-,Black-capped Petrel,Pterodroma hasitata
+,Gould's Petrel,Pterodroma leucoptera
+,Black-capped Petrel,P. hasitata
 ,Galapagos Petrel,P. phaeopygia
 ,Juan Fernandez Petrel,P. externa
 ,White-chinned Petrel,Procellaria aequinoctialis
@@ -570,6 +582,7 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Cory's Shearwater,Calonectris diomedea
 ,Wedge-tailed Shearwater,Ardenna pacifica
 ,Sooty Shearwater,A. grisea
+,Great Shearwater,A. gravis
 ,Pink-footed Shearwater,A. creatopus
 ,Manx Shearwater,Puffinus puffinus
 ,Galapagos Shearwater,P. subalaris
@@ -664,6 +677,7 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Snail Kite,Rostrhamus sociabilis
 ,Slender-billed Kite,Helicolestes hamatus
 ,Double-toothed Kite,Harpagus bidentatus
+,Rufous-thighed Kite,H. diodon
 ,Mississippi Kite,Ictinia mississippiensis
 ,Plumbeous Kite,I. plumbea
 ,Northern Harrier,Circus hudsonius
@@ -802,6 +816,7 @@ E,Sooty-capped Puffbird,B. noanamae
 ,Rusty-breasted Nunlet,Nonnula rubecula
 ,Brown Nunlet,N. brunnea
 ,Gray-cheeked Nunlet,N. frontalis
+,Rufous-capped Nunlet,N. ruficapilla
 ,White-faced Nunbird,Hapaloptila castanea
 ,Black-fronted Nunbird,Monasa nigrifrons
 ,White-fronted Nunbird,M. morphoeus
@@ -849,6 +864,7 @@ E,White-mantled Barbet,C. hypoleucus
 ,Lafresnaye's Piculet,P. lafresnayi
 ,Golden-spangled Piculet,P. exilis
 ,Scaled Piculet,P. squamulatus
+,White-bellied Piculet,P. spilogaster
 ,Rufous-breasted Piculet,P. rufiventris
 ,Plain-breasted Piculet,P. castelnau
 ,Olivaceous Piculet,P. olivaceus
@@ -980,6 +996,7 @@ E,Brown-breasted Parakeet,P. calliptera
 ,Barred Antshrike,Thamnophilus doliatus
 ,Bar-crested Antshrike,T. multistriatus
 ,Lined Antshrike,T. tenuepunctatus
+,Chestnut-backed Antshrike,T. palliatus
 ,Black-crowned Antshrike,T. atrinucha
 ,Plain-winged Antshrike,T. schistaceus
 ,Mouse-colored Antshrike,T. murinus
@@ -996,7 +1013,6 @@ E,Brown-breasted Parakeet,P. calliptera
 ,Black Bushbird,Neoctantes niger
 ,Recurve-billed Bushbird,Clytoctantes alixii
 ,Russet Antshrike,Thamnistes anabatinus
-,Rufescent Antshrike,T. rufescens
 ,Plain Antvireo,Dysithamnus mentalis
 ,Spot-crowned Antvireo,D. puncticeps
 ,Bicolored Antvireo,D. occidentalis
@@ -1052,7 +1068,9 @@ E,Parker's Antbird,Cercomacroides parkeri
 ,White-browed Antbird,Myrmoborus leucophrys
 ,Ash-breasted Antbird,M. lugubris
 ,Black-faced Antbird,M. myotherinus
+,Black-tailed Antbird,M. melanurus
 ,Black-chinned Antbird,Hypocnemoides melanopogon
+,Band-tailed Antbird,H. maculicauda
 ,Black-and-white Antbird,Myrmochanes hemileucus
 ,Bare-crowned Antbird,Gymnocichla nudiceps
 ,Silvered Antbird,Sclateria naevia
@@ -1097,6 +1115,7 @@ E,Parker's Antbird,Cercomacroides parkeri
 ,ANTPITTAS,GRALLARIIDAE
 ,Undulated Antpitta,Grallaria squamigera
 ,Giant Antpitta,G. gigantea
+,Variegated Antpitta,G. varia
 ,Moustached Antpitta,G. alleni
 ,Scaled Antpitta,G. guatimalensis
 ,Plain-backed Antpitta,G. haplonota
@@ -1248,6 +1267,7 @@ E,Santa Marta Foliage-gleaner,C. rufipectus
 ,Spectacled Prickletail,Siptornis striaticollis
 ,Orinoco Softtail,Thripophaga cherriei
 ,Rusty-backed Spinetail,Cranioleuca vulpina
+,Parker's Spinetail,C. vulpecula
 ,Crested Spinetail,C. subcristata
 ,Red-faced Spinetail,C. erythrops
 ,Streak-capped Spinetail,C. hellmayri
@@ -1285,11 +1305,13 @@ E,Rusty-headed Spinetail,S. fuscorufa
 ,Velvety Manakin,Lepidothrix velutina
 ,Blue-capped Manakin,L. coronata
 ,Blue-rumped Manakin,L. isidorei
-,Yellow-crowned Manakin,Heterocercus flavivertex
+,Orange-crowned Manakin,Heterocercus aurantiivertex
+,Yellow-crowned Manakin,H. flavivertex
 ,White-bearded Manakin,Manacus manacus
 ,Wire-tailed Manakin,Pipra filicauda
 ,Club-winged Manakin,Machaeropterus deliciosus
 ,Striolated Manakin,M. striolatus
+,Fiery-capped Manakin,M. pyrocephalus
 ,White-crowned Manakin,Pseudopipra pipra
 ,Red-capped Manakin,Ceratopipra mentalis
 ,Golden-headed Manakin,C. erythrocephala
@@ -1421,6 +1443,7 @@ E,Antioquia Bristle-Tyrant,Pogonotriccus lanyoni
 ,Spotted Tody-Flycatcher,Todirostrum maculatum
 ,Common Tody-Flycatcher,T. cinereum
 ,Black-headed Tody-Flycatcher,T. nigriceps
+,Painted Tody-Flycatcher,T. pictum
 ,Yellow-browed Tody-Flycatcher,T. chrysocrotaphum
 ,Ornate Flycatcher,Myiotriccus ornatus
 ,Handsome Flycatcher,Nephelomyias pulcher
@@ -1436,6 +1459,7 @@ E,Antioquia Bristle-Tyrant,Pogonotriccus lanyoni
 ,Amazonian Tyrannulet,I. subflava
 ,Pale-tipped Tyrannulet,I. caudata
 ,Fulvous-crowned Scrub-Tyrant,Euscarthmus meloryphus
+,Fulvous-faced Scrub-Tyrant,E. fulviceps
 ,Yellow-bellied Elaenia,Elaenia flavogaster
 ,Caribbean Elaenia,E. martinica
 ,Large Elaenia,E. spectabilis
@@ -1569,6 +1593,7 @@ E,Santa Marta Bush-Tyrant,M. pernix
 ,Western Wood-Pewee,C. sordidulus
 ,Eastern Wood-Pewee,C. virens
 ,Tropical Pewee,C. cinereus
+,Blackish Pewee,C. nigrescens
 
 ,VIREOS,VIREONIDAE
 ,Rufous-browed Peppershrike,Cyclarhis gujanensis
@@ -1584,7 +1609,8 @@ E,Santa Marta Bush-Tyrant,M. pernix
 ,Dusky-capped Greenlet,P. hypoxantha
 ,Golden-fronted Greenlet,P. aurantiifrons
 ,Rufous-naped Greenlet,P. semibrunnea
-,Yellow-throated Vireo,Vireo flavifrons
+,White-eyed Vireo,Vireo griseus
+,Yellow-throated Vireo,V. flavifrons
 ,Choco Vireo,V. masteri
 ,Philadelphia Vireo,V. philadelphicus
 ,Brown-capped Vireo,V. leucophrys
@@ -1618,14 +1644,17 @@ E,Santa Marta Bush-Tyrant,M. pernix
 ,Purple Martin,P. subis
 ,Gray-breasted Martin,P. chalybea
 ,Southern Martin,P. elegans
+,Peruvian Martin,P. murphyi
 ,Tree Swallow,Tachycineta bicolor
 ,White-winged Swallow,T. albiventer
 ,Bank Swallow,Riparia riparia
 ,Barn Swallow,Hirundo rustica
 ,Cliff Swallow,Petrochelidon pyrrhonota
+,Cave Swallow,P. fulva
 
 ,WRENS,TROGLODYTIDAE
 ,Scaly-breasted Wren,Microcerculus marginatus
+,Wing-banded Wren,M. bambla
 ,Gray-mantled Wren,Odontorchilus branickii
 ,House Wren,Troglodytes aedon
 ,Ochraceous Wren,T. ochraceus
@@ -1667,6 +1696,7 @@ E,Munchique Wood-Wren,H. negreti
 ,Trilling Gnatwren,Ramphocaenus melanurus
 ,Tropical Gnatcatcher,Polioptila plumbea
 ,Rio Negro Gnatcatcher,P. facilis
+,Guianan Gnatcatcher,P. guianensis
 ,Slate-throated Gnatcatcher,P. schistaceigula
 
 ,DONACOBIUS,DONACOBIIDAE
@@ -1715,6 +1745,7 @@ E,Munchique Wood-Wren,H. negreti
 
 ,ESTRILDIDS,ESTRILDIDAE
 ,Tricolored Munia,Lonchura malacca
+,Java Sparrow,L. oryzivora
 
 ,OLD WORLD SPARROWS,PASSERIDAE
 ,House Sparrow,Passer domesticus
@@ -1776,6 +1807,7 @@ E,Sierra Nevada Brushfinch,Arremon basilicus
 ,Olive Finch,A. castaneiceps
 ,Clay-colored Sparrow,Spizella pallida
 ,Rufous-collared Sparrow,Zonotrichia capensis
+,Lincoln's Sparrow,Melospiza lincolnii
 ,White-naped Brushfinch,Atlapetes albinucha
 ,Moustached Brushfinch,A. albofrenatus
 E,Santa Marta Brushfinch,A. melanocephalus
@@ -1930,6 +1962,7 @@ E,Crested Ant-Tanager,H. cristata
 ,Guira Tanager,Hemithraupis guira
 ,Yellow-backed Tanager,H. flavicollis
 ,Bicolored Conebill,Conirostrum bicolor
+,Pearly-breasted Conebill,C. margaritae
 ,Chestnut-vented Conebill,C. speciosum
 ,White-eared Conebill,C. leucogenys
 ,Giant Conebill,C. binghami
@@ -1967,6 +2000,7 @@ E,Chestnut-bellied Flowerpiercer,Diglossa gloriosissima
 ,Red-shouldered Tanager,T. phoenicius
 ,Gray-headed Tanager,Eucometis penicillata
 ,Pileated Finch,Coryphospingus pileatus
+,Red-crested Finch,C. cucullatus
 ,Masked Crimson Tanager,Ramphocelus nigrogularis
 ,Crimson-backed Tanager,R. dimidiatus
 ,Silver-beaked Tanager,R. carbo
@@ -1993,7 +2027,9 @@ E,Turquoise Dacnis,D. hartlaubi
 ,Ruddy-breasted Seedeater,S. minuta
 ,Thick-billed Seed-Finch,S. funerea
 ,Chestnut-bellied Seed-Finch,S. angolensis
+,Great-billed Seed-Finch,S. maximiliani
 ,Large-billed Seed-Finch,S. crassirostris
+,Black-billed Seed-Finch,S. atrirostris
 ,Variable Seedeater,S. corvina
 ,Gray Seedeater,S. intermedia
 ,Wing-barred Seedeater,S. americana
@@ -2087,7 +2123,8 @@ E,Gold-ringed Tanager,B. aureocincta
 ,Blue-gray Tanager,Thraupis episcopus
 ,Glaucous Tanager,T. glaucocolpa
 ,Palm Tanager,T. palmarum
-,Rufous-throated Tanager,Ixothraupis rufigula
+,Dotted Tanager,Ixothraupis varia
+,Rufous-throated Tanager,I. rufigula
 ,Speckled Tanager,I. guttata
 ,Yellow-bellied Tanager,I. xanthogastra
 ,Spotted Tanager,I. punctata
