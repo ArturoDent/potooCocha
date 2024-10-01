@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "March 5, 2024",
+	"version": "September 28, 2024",
 	"birds": {
 		"families": [
 			{
@@ -303,7 +303,7 @@
 						]
 					},
 					{
-						"Genus": "Streptopelia ",
+						"Genus": "Streptopelia",
 						"spp": [
 							{
 								"species": "decaocto",
@@ -1042,33 +1042,27 @@
 						"Genus": "Pluvialis",
 						"spp": [
 							{
-								"species": "dominica",
+								"species": "squatarola",
 								"index": 639,
-								"name": "American Golden-Plover",
+								"name": "Black-bellied Plover",
 								"TT": "NB"
 							},
 							{
-								"species": "squatarola",
-								"index": 641,
-								"name": "Black-bellied Plover",
+								"species": "dominica",
+								"index": 640,
+								"name": "American Golden-Plover",
 								"TT": "NB"
 							}
 						]
 					},
 					{
-						"Genus": "Vanellus",
+						"Genus": "Hoploxypterus",
 						"spp": [
 							{
 								"species": "cayanus",
 								"index": 643,
 								"name": "Pied Lapwing",
 								"TT": "V"
-							},
-							{
-								"species": "chilensis",
-								"index": 644,
-								"name": "Southern Lapwing",
-								"TT": "X"
 							}
 						]
 					},
@@ -1077,31 +1071,47 @@
 						"spp": [
 							{
 								"species": "vociferus",
-								"index": 647,
+								"index": 646,
 								"name": "Killdeer",
 								"TT": "V"
 							},
 							{
 								"species": "semipalmatus",
-								"index": 648,
+								"index": 647,
 								"name": "Semipalmated Plover",
 								"TT": "NB"
-							},
+							}
+						]
+					},
+					{
+						"Genus": "Vanellus",
+						"spp": [
+							{
+								"species": "chilensis",
+								"index": 649,
+								"name": "Southern Lapwing",
+								"TT": "X"
+							}
+						]
+					},
+					{
+						"Genus": "Anarhynchus",
+						"spp": [
 							{
 								"species": "wilsonia",
-								"index": 651,
+								"index": 652,
 								"name": "Wilson's Plover",
 								"TT": "X"
 							},
 							{
 								"species": "collaris",
-								"index": 652,
+								"index": 653,
 								"name": "Collared Plover",
 								"TT": "X"
 							},
 							{
 								"species": "nivosus",
-								"index": 655,
+								"index": 656,
 								"name": "Snowy Plover",
 								"TT": "V"
 							}
@@ -2595,9 +2605,9 @@
 						"Genus": "Tyto",
 						"spp": [
 							{
-								"species": "alba",
+								"species": "furcata",
 								"index": 1012,
-								"name": "Barn Owl",
+								"name": "American Barn-Owl",
 								"TT": "X"
 							}
 						]
@@ -2999,13 +3009,13 @@
 							{
 								"species": "ochrocephala",
 								"index": 1357,
-								"name": "Yellow-crowned Parrot",
+								"name": "Yellow-crowned Amazon",
 								"TT": "X"
 							},
 							{
 								"species": "amazonica",
 								"index": 1363,
-								"name": "Orange-winged Parrot",
+								"name": "Orange-winged Amazon",
 								"TT": "X"
 							}
 						]
@@ -3071,7 +3081,7 @@
 						"spp": [
 							{
 								"species": "leucophthalmus",
-								"index": 1434,
+								"index": 1435,
 								"name": "White-eyed Parakeet",
 								"TT": "X"
 							}
@@ -3088,7 +3098,7 @@
 						"spp": [
 							{
 								"species": "major",
-								"index": 1449,
+								"index": 1450,
 								"name": "Great Antshrike",
 								"TT": "X"
 							}
@@ -3099,7 +3109,7 @@
 						"spp": [
 							{
 								"species": "canadensis",
-								"index": 1450,
+								"index": 1451,
 								"name": "Black-crested Antshrike",
 								"TT": "X"
 							}
@@ -3110,7 +3120,7 @@
 						"spp": [
 							{
 								"species": "doliatus",
-								"index": 1454,
+								"index": 1455,
 								"name": "Barred Antshrike",
 								"TT": "X"
 							}
@@ -3121,7 +3131,7 @@
 						"spp": [
 							{
 								"species": "mentalis",
-								"index": 1492,
+								"index": 1493,
 								"name": "Plain Antvireo",
 								"TT": "X"
 							}
@@ -3132,7 +3142,7 @@
 						"spp": [
 							{
 								"species": "axillaris",
-								"index": 1541,
+								"index": 1542,
 								"name": "White-flanked Antwren",
 								"TT": "X"
 							}
@@ -3143,7 +3153,7 @@
 						"spp": [
 							{
 								"species": "grisea",
-								"index": 1560,
+								"index": 1561,
 								"name": "White-fringed Antwren",
 								"TT": "X"
 							}
@@ -3154,7 +3164,7 @@
 						"spp": [
 							{
 								"species": "naevia",
-								"index": 1616,
+								"index": 1617,
 								"name": "Silvered Antbird",
 								"TT": "X"
 							}
@@ -3165,7 +3175,7 @@
 						"spp": [
 							{
 								"species": "longipes",
-								"index": 1627,
+								"index": 1628,
 								"name": "White-bellied Antbird",
 								"TT": "X"
 							}
@@ -3182,7 +3192,7 @@
 						"spp": [
 							{
 								"species": "guatimalensis",
-								"index": 1691,
+								"index": 1692,
 								"name": "Scaled Antpitta",
 								"TT": "V"
 							}
@@ -3199,7 +3209,7 @@
 						"spp": [
 							{
 								"species": "analis",
-								"index": 1819,
+								"index": 1820,
 								"name": "Black-faced Antthrush",
 								"TT": "X"
 							}
@@ -3216,7 +3226,7 @@
 						"spp": [
 							{
 								"species": "albigularis",
-								"index": 1833,
+								"index": 1834,
 								"name": "Gray-throated Leaftosser",
 								"TT": "X"
 							}
@@ -3227,7 +3237,7 @@
 						"spp": [
 							{
 								"species": "griseicapillus",
-								"index": 1847,
+								"index": 1848,
 								"name": "Olivaceous Woodcreeper",
 								"TT": "X"
 							}
@@ -3238,7 +3248,7 @@
 						"spp": [
 							{
 								"species": "fuliginosa",
-								"index": 1852,
+								"index": 1853,
 								"name": "Plain-brown Woodcreeper",
 								"TT": "X"
 							}
@@ -3249,7 +3259,7 @@
 						"spp": [
 							{
 								"species": "susurrans",
-								"index": 1876,
+								"index": 1877,
 								"name": "Cocoa Woodcreeper",
 								"TT": "X"
 							}
@@ -3260,7 +3270,7 @@
 						"spp": [
 							{
 								"species": "picus",
-								"index": 1881,
+								"index": 1882,
 								"name": "Straight-billed Woodcreeper",
 								"TT": "X"
 							}
@@ -3271,7 +3281,7 @@
 						"spp": [
 							{
 								"species": "souleyetii",
-								"index": 1889,
+								"index": 1890,
 								"name": "Streak-headed Woodcreeper",
 								"TT": "X"
 							}
@@ -3282,7 +3292,7 @@
 						"spp": [
 							{
 								"species": "rutilans",
-								"index": 1900,
+								"index": 1903,
 								"name": "Streaked Xenops",
 								"TT": "X"
 							}
@@ -3293,7 +3303,7 @@
 						"spp": [
 							{
 								"species": "cinnamomeus",
-								"index": 2084,
+								"index": 2087,
 								"name": "Yellow-chinned Spinetail",
 								"TT": "X"
 							}
@@ -3304,13 +3314,13 @@
 						"spp": [
 							{
 								"species": "albescens",
-								"index": 2110,
+								"index": 2113,
 								"name": "Pale-breasted Spinetail",
 								"TT": "X"
 							},
 							{
 								"species": "cinnamomea",
-								"index": 2120,
+								"index": 2123,
 								"name": "Stripe-breasted Spinetail",
 								"TT": "X"
 							}
@@ -3327,7 +3337,7 @@
 						"spp": [
 							{
 								"species": "pareola",
-								"index": 2133,
+								"index": 2136,
 								"name": "Blue-backed Manakin",
 								"TT": "X"
 							}
@@ -3338,7 +3348,7 @@
 						"spp": [
 							{
 								"species": "manacus",
-								"index": 2158,
+								"index": 2161,
 								"name": "White-bearded Manakin",
 								"TT": "X"
 							}
@@ -3349,7 +3359,7 @@
 						"spp": [
 							{
 								"species": "erythrocephala",
-								"index": 2170,
+								"index": 2173,
 								"name": "Golden-headed Manakin",
 								"TT": "X"
 							}
@@ -3366,13 +3376,13 @@
 						"spp": [
 							{
 								"species": "albus",
-								"index": 2222,
+								"index": 2225,
 								"name": "White Bellbird",
 								"TT": "V"
 							},
 							{
 								"species": "averano",
-								"index": 2223,
+								"index": 2226,
 								"name": "Bearded Bellbird",
 								"TT": "X"
 							}
@@ -3389,7 +3399,7 @@
 						"spp": [
 							{
 								"species": "cayana",
-								"index": 2233,
+								"index": 2236,
 								"name": "Black-tailed Tityra",
 								"TT": "X"
 							}
@@ -3400,7 +3410,7 @@
 						"spp": [
 							{
 								"species": "polychopterus",
-								"index": 2256,
+								"index": 2259,
 								"name": "White-winged Becard",
 								"TT": "X"
 							}
@@ -3417,7 +3427,7 @@
 						"spp": [
 							{
 								"species": "mystaceus",
-								"index": 2274,
+								"index": 2277,
 								"name": "White-throated Spadebill",
 								"TT": "X"
 							}
@@ -3428,13 +3438,13 @@
 						"spp": [
 							{
 								"species": "olivaceus",
-								"index": 2307,
+								"index": 2310,
 								"name": "Olive-striped Flycatcher",
 								"TT": "X"
 							},
 							{
 								"species": "oleagineus",
-								"index": 2308,
+								"index": 2311,
 								"name": "Ochre-bellied Flycatcher",
 								"TT": "X"
 							}
@@ -3445,7 +3455,7 @@
 						"spp": [
 							{
 								"species": "superciliaris",
-								"index": 2313,
+								"index": 2316,
 								"name": "Slaty-capped Flycatcher",
 								"TT": "X"
 							}
@@ -3456,13 +3466,13 @@
 						"spp": [
 							{
 								"species": "flaviventris",
-								"index": 2327,
+								"index": 2330,
 								"name": "Yellow-breasted Flatbill",
 								"TT": "X"
 							},
 							{
 								"species": "sulphurescens",
-								"index": 2329,
+								"index": 2332,
 								"name": "Yellow-olive Flatbill",
 								"TT": "X"
 							}
@@ -3473,7 +3483,7 @@
 						"spp": [
 							{
 								"species": "ecaudatus",
-								"index": 2333,
+								"index": 2336,
 								"name": "Short-tailed Pygmy-Tyrant",
 								"TT": "X"
 							}
@@ -3484,7 +3494,7 @@
 						"spp": [
 							{
 								"species": "maculatum",
-								"index": 2375,
+								"index": 2378,
 								"name": "Spotted Tody-Flycatcher",
 								"TT": "X"
 							}
@@ -3495,25 +3505,25 @@
 						"spp": [
 							{
 								"species": "flavogaster",
-								"index": 2409,
+								"index": 2412,
 								"name": "Yellow-bellied Elaenia",
 								"TT": "X"
 							},
 							{
 								"species": "parvirostris",
-								"index": 2414,
+								"index": 2417,
 								"name": "Small-billed Elaenia",
 								"TT": "NB"
 							},
 							{
 								"species": "strepera",
-								"index": 2416,
+								"index": 2419,
 								"name": "Slaty Elaenia",
 								"TT": "V"
 							},
 							{
 								"species": "chiriquensis",
-								"index": 2420,
+								"index": 2423,
 								"name": "Lesser Elaenia",
 								"TT": "X"
 							}
@@ -3524,7 +3534,7 @@
 						"spp": [
 							{
 								"species": "gaimardii",
-								"index": 2430,
+								"index": 2433,
 								"name": "Forest Elaenia",
 								"TT": "X"
 							}
@@ -3535,7 +3545,7 @@
 						"spp": [
 							{
 								"species": "obsoletum",
-								"index": 2458,
+								"index": 2461,
 								"name": "Southern Beardless-Tyrannulet",
 								"TT": "X"
 							}
@@ -3545,8 +3555,8 @@
 						"Genus": "Nesotriccus",
 						"spp": [
 							{
-								"species": "murinus ",
-								"index": 2461,
+								"species": "murinus",
+								"index": 2464,
 								"name": "Mouse-colored Tyrannulet",
 								"TT": "X"
 							}
@@ -3557,7 +3567,7 @@
 						"spp": [
 							{
 								"species": "sclateri",
-								"index": 2474,
+								"index": 2477,
 								"name": "Crested Doradito",
 								"TT": "V"
 							}
@@ -3568,7 +3578,7 @@
 						"spp": [
 							{
 								"species": "spadiceus",
-								"index": 2493,
+								"index": 2496,
 								"name": "Bright-rumped Attila",
 								"TT": "X"
 							}
@@ -3579,7 +3589,7 @@
 						"spp": [
 							{
 								"species": "leucophaius",
-								"index": 2494,
+								"index": 2497,
 								"name": "Piratic Flycatcher",
 								"TT": "X"
 							}
@@ -3590,7 +3600,7 @@
 						"spp": [
 							{
 								"species": "sulphuratus",
-								"index": 2498,
+								"index": 2501,
 								"name": "Great Kiskadee",
 								"TT": "X"
 							}
@@ -3601,7 +3611,7 @@
 						"spp": [
 							{
 								"species": "sulphurea",
-								"index": 2501,
+								"index": 2504,
 								"name": "Sulphury Flycatcher",
 								"TT": "X"
 							}
@@ -3612,7 +3622,7 @@
 						"spp": [
 							{
 								"species": "pitangua",
-								"index": 2502,
+								"index": 2505,
 								"name": "Boat-billed Flycatcher",
 								"TT": "X"
 							}
@@ -3623,7 +3633,7 @@
 						"spp": [
 							{
 								"species": "maculatus",
-								"index": 2507,
+								"index": 2510,
 								"name": "Streaked Flycatcher",
 								"TT": "X"
 							}
@@ -3634,7 +3644,7 @@
 						"spp": [
 							{
 								"species": "varius",
-								"index": 2517,
+								"index": 2520,
 								"name": "Variegated Flycatcher",
 								"TT": "X"
 							}
@@ -3645,25 +3655,25 @@
 						"spp": [
 							{
 								"species": "melancholicus",
-								"index": 2521,
+								"index": 2524,
 								"name": "Tropical Kingbird",
 								"TT": "X"
 							},
 							{
 								"species": "savana",
-								"index": 2523,
+								"index": 2526,
 								"name": "Fork-tailed Flycatcher",
 								"TT": "NB"
 							},
 							{
 								"species": "tyrannus",
-								"index": 2524,
+								"index": 2527,
 								"name": "Eastern Kingbird",
 								"TT": "V"
 							},
 							{
 								"species": "dominicensis",
-								"index": 2525,
+								"index": 2528,
 								"name": "Gray Kingbird",
 								"TT": "X"
 							}
@@ -3674,25 +3684,25 @@
 						"spp": [
 							{
 								"species": "tuberculifer",
-								"index": 2536,
+								"index": 2539,
 								"name": "Dusky-capped Flycatcher",
 								"TT": "X"
 							},
 							{
 								"species": "swainsoni",
-								"index": 2537,
+								"index": 2540,
 								"name": "Swainson's Flycatcher",
 								"TT": "V"
 							},
 							{
 								"species": "venezuelensis",
-								"index": 2538,
+								"index": 2541,
 								"name": "Venezuelan Flycatcher",
 								"TT": "X"
 							},
 							{
 								"species": "tyrannulus",
-								"index": 2545,
+								"index": 2548,
 								"name": "Brown-crested Flycatcher",
 								"TT": "X"
 							}
@@ -3703,7 +3713,7 @@
 						"spp": [
 							{
 								"species": "fasciatus",
-								"index": 2553,
+								"index": 2556,
 								"name": "Bran-colored Flycatcher",
 								"TT": "X"
 							}
@@ -3714,7 +3724,7 @@
 						"spp": [
 							{
 								"species": "arenarum",
-								"index": 2569,
+								"index": 2572,
 								"name": "Northern Scrub-Flycatcher",
 								"TT": "X"
 							}
@@ -3725,7 +3735,7 @@
 						"spp": [
 							{
 								"species": "pica",
-								"index": 2574,
+								"index": 2577,
 								"name": "Pied Water Tyrant",
 								"TT": "X"
 							}
@@ -3736,7 +3746,7 @@
 						"spp": [
 							{
 								"species": "leucocephala",
-								"index": 2577,
+								"index": 2580,
 								"name": "White-headed Marsh Tyrant",
 								"TT": "X"
 							}
@@ -3747,7 +3757,7 @@
 						"spp": [
 							{
 								"species": "fuscatus",
-								"index": 2631,
+								"index": 2634,
 								"name": "Fuscous Flycatcher",
 								"TT": "X"
 							}
@@ -3758,7 +3768,7 @@
 						"spp": [
 							{
 								"species": "euleri",
-								"index": 2633,
+								"index": 2636,
 								"name": "Euler's Flycatcher",
 								"TT": "X"
 							}
@@ -3769,13 +3779,13 @@
 						"spp": [
 							{
 								"species": "cooperi",
-								"index": 2641,
+								"index": 2644,
 								"name": "Olive-sided Flycatcher",
 								"TT": "NB"
 							},
 							{
 								"species": "cinereus",
-								"index": 2645,
+								"index": 2648,
 								"name": "Tropical Pewee",
 								"TT": "X"
 							}
@@ -3792,7 +3802,7 @@
 						"spp": [
 							{
 								"species": "gujanensis",
-								"index": 2650,
+								"index": 2653,
 								"name": "Rufous-browed Peppershrike",
 								"TT": "X"
 							}
@@ -3803,7 +3813,7 @@
 						"spp": [
 							{
 								"species": "flavipes",
-								"index": 2656,
+								"index": 2659,
 								"name": "Scrub Greenlet",
 								"TT": "X"
 							}
@@ -3814,7 +3824,7 @@
 						"spp": [
 							{
 								"species": "aurantiifrons",
-								"index": 2666,
+								"index": 2669,
 								"name": "Golden-fronted Greenlet",
 								"TT": "X"
 							}
@@ -3825,31 +3835,31 @@
 						"spp": [
 							{
 								"species": "griseus",
-								"index": 2668,
+								"index": 2671,
 								"name": "White-eyed Vireo",
 								"TT": "V"
 							},
 							{
 								"species": "flavifrons",
-								"index": 2669,
+								"index": 2672,
 								"name": "Yellow-throated Vireo",
 								"TT": "V"
 							},
 							{
 								"species": "olivaceus",
-								"index": 2675,
+								"index": 2678,
 								"name": "Red-eyed Vireo",
 								"TT": "NB"
 							},
 							{
 								"species": "chivi",
-								"index": 2676,
+								"index": 2679,
 								"name": "Chivi Vireo",
 								"TT": "X"
 							},
 							{
 								"species": "altiloquus",
-								"index": 2679,
+								"index": 2682,
 								"name": "Black-whiskered Vireo",
 								"TT": "NB"
 							}
@@ -3866,7 +3876,7 @@
 						"spp": [
 							{
 								"species": "cyanoleuca",
-								"index": 2696,
+								"index": 2699,
 								"name": "Blue-and-white Swallow",
 								"TT": "V"
 							}
@@ -3877,7 +3887,7 @@
 						"spp": [
 							{
 								"species": "ruficollis",
-								"index": 2704,
+								"index": 2707,
 								"name": "Southern Rough-winged Swallow",
 								"TT": "X"
 							}
@@ -3888,13 +3898,13 @@
 						"spp": [
 							{
 								"species": "dominicensis",
-								"index": 2707,
+								"index": 2710,
 								"name": "Caribbean Martin",
 								"TT": "X"
 							},
 							{
 								"species": "chalybea",
-								"index": 2709,
+								"index": 2712,
 								"name": "Gray-breasted Martin",
 								"TT": "X"
 							}
@@ -3905,7 +3915,7 @@
 						"spp": [
 							{
 								"species": "albiventer",
-								"index": 2715,
+								"index": 2718,
 								"name": "White-winged Swallow",
 								"TT": "X"
 							}
@@ -3916,7 +3926,7 @@
 						"spp": [
 							{
 								"species": "riparia",
-								"index": 2718,
+								"index": 2721,
 								"name": "Bank Swallow",
 								"TT": "NB"
 							}
@@ -3927,7 +3937,7 @@
 						"spp": [
 							{
 								"species": "rustica",
-								"index": 2719,
+								"index": 2722,
 								"name": "Barn Swallow",
 								"TT": "NB"
 							}
@@ -3938,7 +3948,7 @@
 						"spp": [
 							{
 								"species": "pyrrhonota",
-								"index": 2720,
+								"index": 2723,
 								"name": "Cliff Swallow",
 								"TT": "NB"
 							}
@@ -3955,7 +3965,7 @@
 						"spp": [
 							{
 								"species": "aedon",
-								"index": 2728,
+								"index": 2731,
 								"name": "House Wren",
 								"TT": "X"
 							}
@@ -3966,7 +3976,7 @@
 						"spp": [
 							{
 								"species": "rutilus",
-								"index": 2750,
+								"index": 2753,
 								"name": "Rufous-breasted Wren",
 								"TT": "X"
 							}
@@ -3983,7 +3993,7 @@
 						"spp": [
 							{
 								"species": "melanurus",
-								"index": 2776,
+								"index": 2779,
 								"name": "Trilling Gnatwren",
 								"TT": "X"
 							}
@@ -4000,19 +4010,19 @@
 						"spp": [
 							{
 								"species": "aurantiirostris",
-								"index": 2793,
+								"index": 2796,
 								"name": "Orange-billed Nightingale-Thrush",
 								"TT": "X"
 							},
 							{
 								"species": "fuscescens",
-								"index": 2796,
+								"index": 2799,
 								"name": "Veery",
 								"TT": "V"
 							},
 							{
 								"species": "minimus",
-								"index": 2797,
+								"index": 2800,
 								"name": "Gray-cheeked Thrush",
 								"TT": "V"
 							}
@@ -4023,25 +4033,25 @@
 						"spp": [
 							{
 								"species": "flavipes",
-								"index": 2806,
+								"index": 2809,
 								"name": "Yellow-legged Thrush",
 								"TT": "X"
 							},
 							{
 								"species": "fumigatus",
-								"index": 2808,
+								"index": 2811,
 								"name": "Cocoa Thrush",
 								"TT": "X"
 							},
 							{
 								"species": "nudigenis",
-								"index": 2813,
+								"index": 2816,
 								"name": "Spectacled Thrush",
 								"TT": "X"
 							},
 							{
 								"species": "albicollis",
-								"index": 2831,
+								"index": 2834,
 								"name": "White-necked Thrush",
 								"TT": "X"
 							}
@@ -4058,7 +4068,7 @@
 						"spp": [
 							{
 								"species": "gilvus",
-								"index": 2834,
+								"index": 2837,
 								"name": "Tropical Mockingbird",
 								"TT": "X"
 							}
@@ -4075,7 +4085,7 @@
 						"spp": [
 							{
 								"species": "cucullatus",
-								"index": 2849,
+								"index": 2852,
 								"name": "Village Weaver",
 								"TT": "IN"
 							}
@@ -4092,7 +4102,7 @@
 						"spp": [
 							{
 								"species": "astrild",
-								"index": 2851,
+								"index": 2854,
 								"name": "Common Waxbill",
 								"TT": "IN"
 							}
@@ -4103,7 +4113,7 @@
 						"spp": [
 							{
 								"species": "malacca",
-								"index": 2852,
+								"index": 2855,
 								"name": "Tricolored Munia",
 								"TT": "IN"
 							}
@@ -4120,7 +4130,7 @@
 						"spp": [
 							{
 								"species": "domesticus",
-								"index": 2854,
+								"index": 2857,
 								"name": "House Sparrow",
 								"TT": "IN"
 							}
@@ -4137,7 +4147,7 @@
 						"spp": [
 							{
 								"species": "alba",
-								"index": 2855,
+								"index": 2858,
 								"name": "White Wagtail",
 								"TT": "V"
 							}
@@ -4154,13 +4164,13 @@
 						"spp": [
 							{
 								"species": "cucullatus",
-								"index": 2869,
+								"index": 2872,
 								"name": "Red Siskin",
 								"TT": "EX"
 							},
 							{
 								"species": "psaltria",
-								"index": 2878,
+								"index": 2881,
 								"name": "Lesser Goldfinch",
 								"TT": "V"
 							}
@@ -4171,7 +4181,7 @@
 						"spp": [
 							{
 								"species": "cyanocephala",
-								"index": 2879,
+								"index": 2882,
 								"name": "Golden-rumped Euphonia",
 								"TT": "EX"
 							}
@@ -4182,13 +4192,13 @@
 						"spp": [
 							{
 								"species": "trinitatis",
-								"index": 2888,
+								"index": 2891,
 								"name": "Trinidad Euphonia",
 								"TT": "X"
 							},
 							{
 								"species": "violacea",
-								"index": 2892,
+								"index": 2895,
 								"name": "Violaceous Euphonia",
 								"TT": "X"
 							}
@@ -4205,7 +4215,7 @@
 						"spp": [
 							{
 								"species": "oryzivorus",
-								"index": 2965,
+								"index": 2968,
 								"name": "Bobolink",
 								"TT": "NB"
 							}
@@ -4216,7 +4226,7 @@
 						"spp": [
 							{
 								"species": "militaris",
-								"index": 2967,
+								"index": 2970,
 								"name": "Red-breasted Meadowlark",
 								"TT": "X"
 							}
@@ -4227,7 +4237,7 @@
 						"spp": [
 							{
 								"species": "decumanus",
-								"index": 2977,
+								"index": 2980,
 								"name": "Crested Oropendola",
 								"TT": "X"
 							}
@@ -4238,7 +4248,7 @@
 						"spp": [
 							{
 								"species": "cela",
-								"index": 2986,
+								"index": 2989,
 								"name": "Yellow-rumped Cacique",
 								"TT": "X"
 							}
@@ -4249,25 +4259,25 @@
 						"spp": [
 							{
 								"species": "cayanensis",
-								"index": 2996,
+								"index": 2999,
 								"name": "Epaulet Oriole",
 								"TT": "X"
 							},
 							{
 								"species": "spurius",
-								"index": 2998,
+								"index": 3001,
 								"name": "Orchard Oriole",
 								"TT": "V"
 							},
 							{
 								"species": "galbula",
-								"index": 3001,
+								"index": 3004,
 								"name": "Baltimore Oriole",
 								"TT": "V"
 							},
 							{
 								"species": "nigrogularis",
-								"index": 3002,
+								"index": 3005,
 								"name": "Yellow Oriole",
 								"TT": "X"
 							}
@@ -4278,7 +4288,7 @@
 						"spp": [
 							{
 								"species": "phoeniceus",
-								"index": 3003,
+								"index": 3006,
 								"name": "Red-winged Blackbird",
 								"TT": "V"
 							}
@@ -4289,13 +4299,13 @@
 						"spp": [
 							{
 								"species": "oryzivorus",
-								"index": 3005,
+								"index": 3008,
 								"name": "Giant Cowbird",
 								"TT": "X"
 							},
 							{
 								"species": "bonariensis",
-								"index": 3007,
+								"index": 3010,
 								"name": "Shiny Cowbird",
 								"TT": "X"
 							}
@@ -4306,13 +4316,13 @@
 						"spp": [
 							{
 								"species": "lugubris",
-								"index": 3009,
+								"index": 3012,
 								"name": "Carib Grackle",
 								"TT": "X"
 							},
 							{
 								"species": "mexicanus",
-								"index": 3010,
+								"index": 3013,
 								"name": "Great-tailed Grackle",
 								"TT": "V"
 							}
@@ -4323,7 +4333,7 @@
 						"spp": [
 							{
 								"species": "icterocephalus",
-								"index": 3027,
+								"index": 3030,
 								"name": "Yellow-hooded Blackbird",
 								"TT": "X"
 							}
@@ -4340,7 +4350,7 @@
 						"spp": [
 							{
 								"species": "aurocapilla",
-								"index": 3031,
+								"index": 3034,
 								"name": "Ovenbird",
 								"TT": "V"
 							}
@@ -4351,7 +4361,7 @@
 						"spp": [
 							{
 								"species": "noveboracensis",
-								"index": 3033,
+								"index": 3036,
 								"name": "Northern Waterthrush",
 								"TT": "NB"
 							}
@@ -4362,7 +4372,7 @@
 						"spp": [
 							{
 								"species": "chrysoptera",
-								"index": 3035,
+								"index": 3038,
 								"name": "Golden-winged Warbler",
 								"TT": "V"
 							}
@@ -4373,7 +4383,7 @@
 						"spp": [
 							{
 								"species": "varia",
-								"index": 3037,
+								"index": 3040,
 								"name": "Black-and-white Warbler",
 								"TT": "V"
 							}
@@ -4384,7 +4394,7 @@
 						"spp": [
 							{
 								"species": "citrea",
-								"index": 3038,
+								"index": 3041,
 								"name": "Prothonotary Warbler",
 								"TT": "NB"
 							}
@@ -4395,7 +4405,7 @@
 						"spp": [
 							{
 								"species": "peregrina",
-								"index": 3039,
+								"index": 3042,
 								"name": "Tennessee Warbler",
 								"TT": "V"
 							}
@@ -4406,19 +4416,19 @@
 						"spp": [
 							{
 								"species": "aequinoctialis",
-								"index": 3041,
+								"index": 3044,
 								"name": "Masked Yellowthroat",
 								"TT": "X"
 							},
 							{
 								"species": "formosa",
-								"index": 3043,
+								"index": 3046,
 								"name": "Kentucky Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "trichas",
-								"index": 3045,
+								"index": 3048,
 								"name": "Common Yellowthroat",
 								"TT": "V"
 							}
@@ -4429,97 +4439,97 @@
 						"spp": [
 							{
 								"species": "citrina",
-								"index": 3046,
+								"index": 3049,
 								"name": "Hooded Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "ruticilla",
-								"index": 3047,
+								"index": 3050,
 								"name": "American Redstart",
 								"TT": "NB"
 							},
 							{
 								"species": "tigrina",
-								"index": 3048,
+								"index": 3051,
 								"name": "Cape May Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "cerulea",
-								"index": 3049,
+								"index": 3052,
 								"name": "Cerulean Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "americana",
-								"index": 3050,
+								"index": 3053,
 								"name": "Northern Parula",
 								"TT": "V"
 							},
 							{
 								"species": "pitiayumi",
-								"index": 3051,
+								"index": 3054,
 								"name": "Tropical Parula",
 								"TT": "X"
 							},
 							{
 								"species": "magnolia",
-								"index": 3052,
+								"index": 3055,
 								"name": "Magnolia Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "castanea",
-								"index": 3053,
+								"index": 3056,
 								"name": "Bay-breasted Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "fusca",
-								"index": 3054,
+								"index": 3057,
 								"name": "Blackburnian Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "petechia",
-								"index": 3055,
+								"index": 3058,
 								"name": "Yellow Warbler",
 								"TT": "NB"
 							},
 							{
 								"species": "pensylvanica",
-								"index": 3056,
+								"index": 3059,
 								"name": "Chestnut-sided Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "striata",
-								"index": 3057,
+								"index": 3060,
 								"name": "Blackpoll Warbler",
 								"TT": "NB"
 							},
 							{
 								"species": "caerulescens",
-								"index": 3058,
+								"index": 3061,
 								"name": "Black-throated Blue Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "coronata",
-								"index": 3060,
+								"index": 3063,
 								"name": "Yellow-rumped Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "discolor",
-								"index": 3062,
+								"index": 3065,
 								"name": "Prairie Warbler",
 								"TT": "V"
 							},
 							{
 								"species": "virens",
-								"index": 3064,
+								"index": 3067,
 								"name": "Black-throated Green Warbler",
 								"TT": "V"
 							}
@@ -4530,18 +4540,18 @@
 						"spp": [
 							{
 								"species": "culicivorus",
-								"index": 3081,
+								"index": 3084,
 								"name": "Golden-crowned Warbler",
 								"TT": "X"
 							}
 						]
 					},
 					{
-						"Genus": "Cardellina ",
+						"Genus": "Cardellina",
 						"spp": [
 							{
 								"species": "canadensis",
-								"index": 3086,
+								"index": 3089,
 								"name": "Canada Warbler",
 								"TT": "V"
 							}
@@ -4558,19 +4568,19 @@
 						"spp": [
 							{
 								"species": "flava",
-								"index": 3102,
+								"index": 3105,
 								"name": "Hepatic Tanager",
 								"TT": "X"
 							},
 							{
 								"species": "rubra",
-								"index": 3103,
+								"index": 3106,
 								"name": "Summer Tanager",
 								"TT": "NB"
 							},
 							{
 								"species": "olivacea",
-								"index": 3104,
+								"index": 3107,
 								"name": "Scarlet Tanager",
 								"TT": "V"
 							}
@@ -4581,7 +4591,7 @@
 						"spp": [
 							{
 								"species": "rubica",
-								"index": 3108,
+								"index": 3114,
 								"name": "Red-crowned Ant-Tanager",
 								"TT": "X"
 							}
@@ -4592,7 +4602,7 @@
 						"spp": [
 							{
 								"species": "ludovicianus",
-								"index": 3118,
+								"index": 3121,
 								"name": "Rose-breasted Grosbeak",
 								"TT": "V"
 							}
@@ -4603,7 +4613,7 @@
 						"spp": [
 							{
 								"species": "cyanea",
-								"index": 3131,
+								"index": 3134,
 								"name": "Indigo Bunting",
 								"TT": "V"
 							}
@@ -4614,7 +4624,7 @@
 						"spp": [
 							{
 								"species": "americana",
-								"index": 3132,
+								"index": 3135,
 								"name": "Dickcissel",
 								"TT": "NB"
 							}
@@ -4631,7 +4641,7 @@
 						"spp": [
 							{
 								"species": "spiza",
-								"index": 3141,
+								"index": 3144,
 								"name": "Green Honeycreeper",
 								"TT": "X"
 							}
@@ -4642,7 +4652,7 @@
 						"spp": [
 							{
 								"species": "bicolor",
-								"index": 3149,
+								"index": 3152,
 								"name": "Bicolored Conebill",
 								"TT": "X"
 							}
@@ -4653,19 +4663,19 @@
 						"spp": [
 							{
 								"species": "columbiana",
-								"index": 3168,
+								"index": 3171,
 								"name": "Orange-fronted Yellow-Finch",
 								"TT": "V"
 							},
 							{
 								"species": "flaveola",
-								"index": 3169,
+								"index": 3172,
 								"name": "Saffron Finch",
 								"TT": "X"
 							},
 							{
 								"species": "luteola",
-								"index": 3170,
+								"index": 3173,
 								"name": "Grassland Yellow-Finch",
 								"TT": "X"
 							}
@@ -4676,7 +4686,7 @@
 						"spp": [
 							{
 								"species": "jacarina",
-								"index": 3211,
+								"index": 3214,
 								"name": "Blue-black Grassquit",
 								"TT": "X"
 							}
@@ -4687,7 +4697,7 @@
 						"spp": [
 							{
 								"species": "luctuosus",
-								"index": 3218,
+								"index": 3221,
 								"name": "White-shouldered Tanager",
 								"TT": "X"
 							}
@@ -4698,7 +4708,7 @@
 						"spp": [
 							{
 								"species": "rufus",
-								"index": 3222,
+								"index": 3225,
 								"name": "White-lined Tanager",
 								"TT": "X"
 							}
@@ -4709,7 +4719,7 @@
 						"spp": [
 							{
 								"species": "carbo",
-								"index": 3232,
+								"index": 3235,
 								"name": "Silver-beaked Tanager",
 								"TT": "X"
 							}
@@ -4720,13 +4730,13 @@
 						"spp": [
 							{
 								"species": "caeruleus",
-								"index": 3241,
+								"index": 3244,
 								"name": "Purple Honeycreeper",
 								"TT": "X"
 							},
 							{
 								"species": "cyaneus",
-								"index": 3242,
+								"index": 3245,
 								"name": "Red-legged Honeycreeper",
 								"TT": "X"
 							}
@@ -4737,7 +4747,7 @@
 						"spp": [
 							{
 								"species": "viridis",
-								"index": 3243,
+								"index": 3246,
 								"name": "Swallow Tanager",
 								"TT": "X"
 							}
@@ -4748,7 +4758,7 @@
 						"spp": [
 							{
 								"species": "cayana",
-								"index": 3250,
+								"index": 3253,
 								"name": "Blue Dacnis",
 								"TT": "X"
 							}
@@ -4759,55 +4769,55 @@
 						"spp": [
 							{
 								"species": "bouvronides",
-								"index": 3253,
+								"index": 3256,
 								"name": "Lesson's Seedeater",
 								"TT": "?"
 							},
 							{
 								"species": "lineola",
-								"index": 3254,
+								"index": 3257,
 								"name": "Lined Seedeater",
 								"TT": "V"
 							},
 							{
 								"species": "minuta",
-								"index": 3260,
+								"index": 3263,
 								"name": "Ruddy-breasted Seedeater",
 								"TT": "X"
 							},
 							{
 								"species": "angolensis",
-								"index": 3272,
+								"index": 3275,
 								"name": "Chestnut-bellied Seed-Finch",
 								"TT": "EX"
 							},
 							{
 								"species": "crassirostris",
-								"index": 3274,
+								"index": 3277,
 								"name": "Large-billed Seed-Finch",
 								"TT": "EX"
 							},
 							{
 								"species": "intermedia",
-								"index": 3277,
+								"index": 3280,
 								"name": "Gray Seedeater",
 								"TT": "EX"
 							},
 							{
 								"species": "americana",
-								"index": 3278,
+								"index": 3281,
 								"name": "Wing-barred Seedeater",
 								"TT": "EX"
 							},
 							{
 								"species": "nigricollis",
-								"index": 3281,
+								"index": 3284,
 								"name": "Yellow-bellied Seedeater",
 								"TT": "X"
 							},
 							{
 								"species": "schistacea",
-								"index": 3284,
+								"index": 3287,
 								"name": "Slate-colored Seedeater",
 								"TT": "EX"
 							}
@@ -4818,13 +4828,13 @@
 						"spp": [
 							{
 								"species": "olivascens",
-								"index": 3296,
+								"index": 3299,
 								"name": "Olive-gray Saltator",
 								"TT": "X"
 							},
 							{
 								"species": "striatipectus",
-								"index": 3298,
+								"index": 3301,
 								"name": "Streaked Saltator",
 								"TT": "X"
 							}
@@ -4835,7 +4845,7 @@
 						"spp": [
 							{
 								"species": "flaveola",
-								"index": 3361,
+								"index": 3364,
 								"name": "Bananaquit",
 								"TT": "X"
 							}
@@ -4846,7 +4856,7 @@
 						"spp": [
 							{
 								"species": "fuliginosa",
-								"index": 3364,
+								"index": 3367,
 								"name": "Sooty Grassquit",
 								"TT": "X"
 							}
@@ -4857,7 +4867,7 @@
 						"spp": [
 							{
 								"species": "bicolor",
-								"index": 3365,
+								"index": 3368,
 								"name": "Black-faced Grassquit",
 								"TT": "X"
 							}
@@ -4868,7 +4878,7 @@
 						"spp": [
 							{
 								"species": "nigrogenis",
-								"index": 3393,
+								"index": 3396,
 								"name": "Masked Cardinal",
 								"TT": "X"
 							}
@@ -4879,7 +4889,7 @@
 						"spp": [
 							{
 								"species": "cyanocephala",
-								"index": 3419,
+								"index": 3422,
 								"name": "Blue-capped Tanager",
 								"TT": "X"
 							}
@@ -4890,13 +4900,13 @@
 						"spp": [
 							{
 								"species": "mexicana",
-								"index": 3450,
+								"index": 3454,
 								"name": "Turquoise Tanager",
 								"TT": "X"
 							},
 							{
 								"species": "gyrola",
-								"index": 3460,
+								"index": 3464,
 								"name": "Bay-headed Tanager",
 								"TT": "X"
 							}
@@ -4907,13 +4917,13 @@
 						"spp": [
 							{
 								"species": "episcopus",
-								"index": 3470,
+								"index": 3474,
 								"name": "Blue-gray Tanager",
 								"TT": "X"
 							},
 							{
 								"species": "palmarum",
-								"index": 3475,
+								"index": 3479,
 								"name": "Palm Tanager",
 								"TT": "X"
 							}
@@ -4924,7 +4934,7 @@
 						"spp": [
 							{
 								"species": "guttata",
-								"index": 3478,
+								"index": 3482,
 								"name": "Speckled Tanager",
 								"TT": "X"
 							}

@@ -352,22 +352,22 @@ RAILS,RALLIDAE
 FINFOOTS,HELIORNITHIDAE
 ,,Sungrebe,Heliornis fulica
 PLOVERS,CHARADRIIDAE
-,,American Golden-Plover,Pluvialis dominica
-,,Black-bellied Plover,P. squatarola
+,,Black-bellied Plover,Pluvialis squatarola
+,,American Golden-Plover,P. dominica
 ,,Tawny-throated Dotterel,Oreopholus ruficollis
-,,Pied Lapwing,Vanellus cayanus
-5,,Southern Lapwing,V. chilensis
-,,Andean Lapwing,V. resplendens
-,,Rufous-chested Dotterel,Charadrius modestus
-,,Killdeer,C. vociferus
+,,Pied Lapwing,Hoploxypterus cayanus
+5,,Diademed Sandpiper-Plover,Phegornis mitchellii
+,,Rufous-chested Dotterel,Zonibyx modestus
+,,Killdeer,Charadrius vociferus
 ,,Semipalmated Plover,C. semipalmatus
-10,,Lesser Sand-Plover,C. mongolus
-,,Wilson's Plover,C. wilsonia
-,,Collared Plover,C. collaris
-,,Puna Plover,C. alticola
-,,Two-banded Plover,C. falklandicus
-,,Snowy Plover,C. nivosus
-,,Diademed Sandpiper-Plover,Phegornis mitchellii
+,,Southern Lapwing,Vanellus chilensis
+10,,Andean Lapwing,V. resplendens
+,,Lesser Sand-Plover,Anarhynchus mongolus
+,,Wilson's Plover,A. wilsonia
+,,Collared Plover,A. collaris
+,,Puna Plover,A. alticola
+,,Two-banded Plover,A. falklandicus
+,,Snowy Plover,A. nivosus
 OYSTERCATCHERS,HAEMATOPODIDAE
 ,,American Oystercatcher,Haematopus palliatus
 ,,Blackish Oystercatcher,H. ater
@@ -494,7 +494,7 @@ SHEARWATERS,PROCELLARIIDAE
 ,,Southern Giant-Petrel,Macronectes giganteus
 ,,Northern Giant-Petrel,M. halli
 ,,Southern Fulmar,Fulmarus glacialoides
-,,Cape Petrel,Daption capense
+,,Pintado Petrel,Daption capense
 5,,Cook's Petrel,Pterodroma cookii
 ,,Masatierra Petrel,P. defilippiana
 ,,Kermadec Petrel,P. neglecta
@@ -630,7 +630,7 @@ HAWKS,ACCIPITRIDAE
 ,,Swainson's Hawk,B. swainsoni
 ,,Zone-tailed Hawk,B. albonotatus
 BARN OWLS,TYTONIDAE
-,,Barn Owl,Tyto alba
+,,American Barn-Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,White-throated Screech-Owl,Megascops albogularis
 ,,Tropical Screech-Owl,M. choliba
@@ -831,12 +831,12 @@ PARROTS,PSITTACIDAE
 ,,Blue-headed Parrot,P. menstruus
 ,,Bronze-winged Parrot,P. chalcopterus
 ,,Short-tailed Parrot,Graydidascalus brachyurus
-20,,Festive Parrot,Amazona festiva
-,,Yellow-crowned Parrot,A. ochrocephala
-,,Turquoise-fronted Parrot,A. aestiva
-,,Mealy Parrot,A. farinosa
-,,Orange-winged Parrot,A. amazonica
-25,,Scaly-naped Parrot,A. mercenarius
+20,,Festive Amazon,Amazona festiva
+,,Yellow-crowned Amazon,A. ochrocephala
+,,Turquoise-fronted Amazon,A. aestiva
+,,Mealy Amazon,A. farinosa
+,,Orange-winged Amazon,A. amazonica
+25,,Scaly-naped Amazon,A. mercenarius
 ,,Dusky-billed Parrotlet,Forpus modestus
 ,,Riparian Parrotlet,F. crassirostris
 ,,Pacific Parrotlet,F. coelestis
@@ -861,7 +861,7 @@ PARROTS,PSITTACIDAE
 ,,Red-and-green Macaw,A. chloropterus
 ,,Golden-plumed Parakeet,Leptosittaca branickii
 ,,Red-shouldered Macaw,Diopsittaca nobilis
-50,,Scarlet-fronted Parakeet,Psittacara wagleri
+50,,Cordilleran Parakeet,Psittacara frontatus
 ,,Mitred Parakeet,P. mitratus
 ,,Red-masked Parakeet,P. erythrogenys
 ,,White-eyed Parakeet,P. leucophthalmus
@@ -1104,7 +1104,7 @@ OVENBIRDS,FURNARIIDAE
 ,,Duida Woodcreeper,L. duidae
 ,,Inambari Woodcreeper,L. fatimalimae
 40,,Slender-billed Xenops,Xenops tenuirostris
-,,Plain Xenops,X. minutus
+,,Amazonian Plain-Xenops,X. genibarbis
 ,,Streaked Xenops,X. rutilans
 ,,Point-tailed Palmcreeper,Berlepschia rikeri
 ,,Rufous-tailed Xenops,Microxenops milleri
@@ -1127,8 +1127,8 @@ OVENBIRDS,FURNARIIDAE
 ,,White-winged Cinclodes,C. atacamensis
 ,endemic,Surf Cinclodes,C. taczanowskii
 ,,Dusky-cheeked Foliage-gleaner,Anabazenops dorsalis
-,,Rufous-rumped Foliage-gleaner,Philydor erythrocercum
-65,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
+,,Rufous-rumped Foliage-gleaner,Neophilydor erythrocercum
+65,,Cinnamon-rumped Foliage-gleaner,Philydor pyrrhodes
 ,,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,,Rufous-tailed Foliage-gleaner,A. ruficaudata
 ,,Buff-browed Foliage-gleaner,Syndactyla rufosuperciliata
@@ -1420,7 +1420,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Tawny-rumped Tyrannulet,T. uropygialis
 115,,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,,White-lored Tyrannulet,Ornithion inerme
-,,Mouse-colored Tyrannulet,Nesotriccus murinus 
+,,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,,Tumbesian Tyrannulet,N. tumbezanus
 ,,Marañon Tyrannulet,N. maranonicus
 120,,Gray-and-white Tyrannulet,Pseudelaenia leucospodia
@@ -1771,7 +1771,7 @@ WOOD-WARBLERS,PARULIDAE
 ,,Yellow Warbler,S. petechia
 ,,Blackpoll Warbler,S. striata
 ,,Palm Warbler,S. palmarum
-,,Citrine Warbler,Myiothlypis  luteoviridis
+,,Citrine Warbler,Myiothlypis luteoviridis
 15,,Black-crested Warbler,M. nigrocristata
 ,,Pale-legged Warbler,M. signata
 ,,Buff-rumped Warbler,M. fulvicauda
@@ -1781,7 +1781,7 @@ WOOD-WARBLERS,PARULIDAE
 ,,Russet-crowned Warbler,M. coronata
 ,,Three-striped Warbler,Basileuterus tristriatus
 ,,Three-banded Warbler,B. trifasciatus
-,,Canada Warbler,Cardellina  canadensis
+,,Canada Warbler,Cardellina canadensis
 ,,Slate-throated Redstart,Myioborus miniatus
 ,,Spectacled Redstart,M. melanocephalus
 MITROSPINGIDS,MITROSPINGIDAE

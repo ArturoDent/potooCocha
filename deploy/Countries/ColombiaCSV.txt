@@ -426,17 +426,17 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Sungrebe,Heliornis fulica
 
 ,PLOVERS,CHARADRIIDAE
-,American Golden-Plover,Pluvialis dominica
-,Black-bellied Plover,P. squatarola
-,Pied Lapwing,Vanellus cayanus
-,Southern Lapwing,V. chilensis
-,Andean Lapwing,V. resplendens
+,Black-bellied Plover,Pluvialis squatarola
+,American Golden-Plover,P. dominica
+,Pied Lapwing,Hoploxypterus cayanus
 ,Killdeer,Charadrius vociferus
 ,Semipalmated Plover,C. semipalmatus
 ,Piping Plover,C. melodus
-,Wilson's Plover,C. wilsonia
-,Collared Plover,C. collaris
-,Snowy Plover,C. nivosus
+,Southern Lapwing,Vanellus chilensis
+,Andean Lapwing,V. resplendens
+,Wilson's Plover,Anarhynchus wilsonia
+,Collared Plover,A. collaris
+,Snowy Plover,A. nivosus
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
 ,American Oystercatcher,Haematopus palliatus
@@ -572,7 +572,7 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Black Storm-Petrel,H. melania
 
 ,SHEARWATERS,PROCELLARIIDAE
-,Cape Petrel,Daption capense
+,Pintado Petrel,Daption capense
 ,Gould's Petrel,Pterodroma leucoptera
 ,Black-capped Petrel,P. hasitata
 ,Galapagos Petrel,P. phaeopygia
@@ -716,7 +716,7 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Red-tailed Hawk,B. jamaicensis
 
 ,BARN OWLS,TYTONIDAE
-,Barn Owl,Tyto alba
+,American Barn-Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,Bare-shanked Screech-Owl,Megascops clarkii
@@ -949,13 +949,13 @@ E,Indigo-winged Parrot,H. fuertesi
 ,Blue-headed Parrot,P. menstruus
 ,Bronze-winged Parrot,P. chalcopterus
 ,Short-tailed Parrot,Graydidascalus brachyurus
-,Festive Parrot,Amazona festiva
-,Red-lored Parrot,A. autumnalis
-,Yellow-crowned Parrot,A. ochrocephala
-,Mealy Parrot,A. farinosa
-,Kawall's Parrot,A. kawalli
-,Orange-winged Parrot,A. amazonica
-,Scaly-naped Parrot,A. mercenarius
+,Festive Amazon,Amazona festiva
+,Red-lored Amazon,A. autumnalis
+,Yellow-crowned Amazon,A. ochrocephala
+,Mealy Amazon,A. farinosa
+,Kawall's Amazon,A. kawalli
+,Orange-winged Amazon,A. amazonica
+,Scaly-naped Amazon,A. mercenarius
 ,Dusky-billed Parrotlet,Forpus modestus
 ,Riparian Parrotlet,F. crassirostris
 ,Spectacled Parrotlet,F. conspicillatus
@@ -1086,6 +1086,7 @@ E,Parker's Antbird,Cercomacroides parkeri
 ,Esmeraldas Antbird,S. nigricauda
 ,Stub-tailed Antbird,S. berlepschi
 ,Chestnut-tailed Antbird,Sciaphylax hemimelaena
+,Zimmer's Antbird,S. castanea
 ,White-shouldered Antbird,Akletos melanoceps
 ,Sooty Antbird,Hafferia fortis
 ,Zeledon's Antbird,H. zeledoni
@@ -1217,7 +1218,8 @@ E,Brown-rumped Tapaculo,S. latebricola
 ,Montane Woodcreeper,L. lacrymiger
 ,Duida Woodcreeper,L. duidae
 ,Slender-billed Xenops,Xenops tenuirostris
-,Plain Xenops,X. minutus
+,Northern Plain-Xenops,X. mexicanus
+,Amazonian Plain-Xenops,X. genibarbis
 ,Streaked Xenops,X. rutilans
 ,Point-tailed Palmcreeper,Berlepschia rikeri
 ,Rufous-tailed Xenops,Microxenops milleri
@@ -1231,9 +1233,9 @@ E,Brown-rumped Tapaculo,S. latebricola
 ,Chestnut-winged Cinclodes,Cinclodes albidiventris
 ,Stout-billed Cinclodes,C. excelsior
 ,Dusky-cheeked Foliage-gleaner,Anabazenops dorsalis
-,Slaty-winged Foliage-gleaner,Philydor fuscipenne
-,Rufous-rumped Foliage-gleaner,P. erythrocercum
-,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
+,Slaty-winged Foliage-gleaner,Neophilydor fuscipenne
+,Rufous-rumped Foliage-gleaner,N. erythrocercum
+,Cinnamon-rumped Foliage-gleaner,Philydor pyrrhodes
 ,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,Scaly-throated Foliage-gleaner,A. variegaticeps
 ,Rufous-tailed Foliage-gleaner,A. ruficaudata
@@ -1496,7 +1498,7 @@ E,Antioquia Bristle-Tyrant,Pogonotriccus lanyoni
 ,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,White-lored Tyrannulet,O. inerme
-,Mouse-colored Tyrannulet,Nesotriccus murinus 
+,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,Tufted Tit-Tyrant,Anairetes parulus
 ,Bearded Tachuri,Polystictus pectoralis
 ,Subtropical Doradito,Pseudocolopteryx acutipennis
@@ -1901,7 +1903,7 @@ E,Mountain Grackle,Macroagelaius subalaris
 ,Prairie Warbler,S. discolor
 ,Townsend's Warbler,S. townsendi
 ,Black-throated Green Warbler,S. virens
-,Citrine Warbler,Myiothlypis  luteoviridis
+,Citrine Warbler,Myiothlypis luteoviridis
 E,Santa Marta Warbler,M. basilica
 ,Flavescent Warbler,M. flaveola
 ,Black-crested Warbler,M. nigrocristata
@@ -1914,7 +1916,7 @@ E,White-lored Warbler,M. conspicillata
 ,Golden-crowned Warbler,B. culicivorus
 ,Pirre Warbler,B. ignotus
 ,Three-striped Warbler,B. tristriatus
-,Canada Warbler,Cardellina  canadensis
+,Canada Warbler,Cardellina canadensis
 ,Wilson's Warbler,C. pusilla
 ,Slate-throated Redstart,Myioborus miniatus
 E,Yellow-crowned Redstart,M. flavivertex
@@ -1930,10 +1932,10 @@ E,Yellow-crowned Redstart,M. flavivertex
 ,Scarlet Tanager,P. olivacea
 ,Red-hooded Tanager,P. rubriceps
 ,White-winged Tanager,P. leucoptera
+,Red-throated Ant-Tanager,Driophlox fuscicauda
+E,Sooty Ant-Tanager,D. gutturalis
+E,Crested Ant-Tanager,D. cristata
 ,Red-crowned Ant-Tanager,Habia rubica
-,Red-throated Ant-Tanager,H. fuscicauda
-E,Sooty Ant-Tanager,H. gutturalis
-E,Crested Ant-Tanager,H. cristata
 ,Ochre-breasted Tanager,Chlorothraupis stolzmanni
 ,Carmiol's Tanager,C. carmioli
 ,Lemon-spectacled Tanager,C. olivacea

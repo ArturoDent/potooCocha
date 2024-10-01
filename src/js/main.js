@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   leftCheck.checked = true;
 
   countryMenuLayer = document.getElementById("countryMenuLayer");
-  
+
   getJSON("../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data);
 
   mailLink = document.getElementById("mailLink");
@@ -256,7 +256,7 @@ function setChecklistCountryAuthors(country) {
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;6&nbsp;March&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;28&nbsp;September&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {

@@ -80,7 +80,7 @@ E,White-headed Steamer-Duck,T. leucocephalus
 ,Spot-winged Wood-Quail,Odontophorus capueira
 
 ,PHEASANTS,PHASIANIDAE
-,Silver Pheasant,Lophura  nycthemera
+,Silver Pheasant,Lophura nycthemera
 
 ,FLAMINGOS,PHOENICOPTERIDAE
 ,Chilean Flamingo,Phoenicopterus chilensis
@@ -247,20 +247,20 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Sungrebe,Heliornis fulica
 
 ,PLOVERS,CHARADRIIDAE
-,American Golden-Plover,Pluvialis dominica
-,Black-bellied Plover,P. squatarola
+,Black-bellied Plover,Pluvialis squatarola
+,American Golden-Plover,P. dominica
 ,Tawny-throated Dotterel,Oreopholus ruficollis
-,Pied Lapwing,Vanellus cayanus
-,Southern Lapwing,V. chilensis
-,Andean Lapwing,V. resplendens
-,Rufous-chested Dotterel,Charadrius modestus
-,Semipalmated Plover,C. semipalmatus
-,Lesser Sand-Plover,C. mongolus
-,Wilson's Plover,C. wilsonia
-,Collared Plover,C. collaris
-,Puna Plover,C. alticola
-,Two-banded Plover,C. falklandicus
+,Pied Lapwing,Hoploxypterus cayanus
 ,Diademed Sandpiper-Plover,Phegornis mitchellii
+,Rufous-chested Dotterel,Zonibyx modestus
+,Semipalmated Plover,Charadrius semipalmatus
+,Southern Lapwing,Vanellus chilensis
+,Andean Lapwing,V. resplendens
+,Lesser Sand-Plover,Anarhynchus mongolus
+,Wilson's Plover,A. wilsonia
+,Collared Plover,A. collaris
+,Puna Plover,A. alticola
+,Two-banded Plover,A. falklandicus
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
 ,American Oystercatcher,Haematopus palliatus
@@ -272,7 +272,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Andean Avocet,Recurvirostra andina
 
 ,THICK-KNEES,BURHINIDAE
-,Double-striped Thick-knee,Hesperoburhinus bistriatus
+,Peruvian Thick-knee,Hesperoburhinus superciliaris
 
 ,SHEATHBILLS,CHIONIDAE
 ,Snowy Sheathbill,Chionis albus
@@ -412,7 +412,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Southern Giant-Petrel,Macronectes giganteus
 ,Northern Giant-Petrel,M. halli
 ,Southern Fulmar,Fulmarus glacialoides
-,Cape Petrel,Daption capense
+,Pintado Petrel,Daption capense
 ,Kerguelen Petrel,Aphrodroma brevirostris
 ,Soft-plumaged Petrel,Pterodroma mollis
 ,Atlantic Petrel,P. incerta
@@ -550,7 +550,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Rufous-tailed Hawk,B. ventralis
 
 ,BARN OWLS,TYTONIDAE
-,Barn Owl,Tyto alba
+,American Barn-Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,Tropical Screech-Owl,Megascops choliba
@@ -667,11 +667,11 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Pileated Parrot,Pionopsitta pileata
 ,Blue-bellied Parrot,Triclaria malachitacea
 ,Scaly-headed Parrot,Pionus maximiliani
-,Vinaceous-breasted Parrot,Amazona vinacea
-,Tucuman Parrot,A. tucumana
-,Red-spectacled Parrot,A. pretrei
-,Turquoise-fronted Parrot,A. aestiva
-,Scaly-naped Parrot,A. mercenarius
+,Vinaceous-breasted Amazon,Amazona vinacea
+,Tucuman Amazon,A. tucumana
+,Red-spectacled Amazon,A. pretrei
+,Turquoise-fronted Amazon,A. aestiva
+,Scaly-naped Amazon,A. mercenarius
 ,Cobalt-rumped Parrotlet,Forpus xanthopterygius
 ,Blaze-winged Parakeet,Pyrrhura devillei
 ,Maroon-bellied Parakeet,P. frontalis
@@ -756,7 +756,7 @@ E,White-browed Tapaculo,S. superciliaris
 ,Scimitar-billed Woodcreeper,Drymornis bridgesii
 ,Narrow-billed Woodcreeper,Lepidocolaptes angustirostris
 ,Scalloped Woodcreeper,L. falcinellus
-,Plain Xenops,Xenops minutus
+,Atlantic Plain-Xenops,Xenops minutus
 ,Streaked Xenops,X. rutilans
 ,White-throated Treerunner,Pygarrhichas albogularis
 ,Rock Earthcreeper,Ochetorhynchus andaecola
@@ -905,7 +905,7 @@ E,White-throated Cacholote,P. gutturalis
 ,Rough-legged Tyrannulet,Acrochordopus burmeisteri
 ,Tawny-rumped Tyrannulet,Tyranniscus uropygialis
 ,Southern Beardless-Tyrannulet,Camptostoma obsoletum
-,Mouse-colored Tyrannulet,Nesotriccus murinus 
+,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,Yellow-billed Tit-Tyrant,Anairetes flavirostris
 ,Tufted Tit-Tyrant,A. parulus
 ,Bearded Tachuri,Polystictus pectoralis
@@ -1144,13 +1144,13 @@ E,Yellow-striped Brushfinch,A. citrinellus
 ,Tropical Parula,S. pitiayumi
 ,Yellow Warbler,S. petechia
 ,Blackpoll Warbler,S. striata
-,Flavescent Warbler,Myiothlypis  flaveola
+,Flavescent Warbler,Myiothlypis flaveola
 ,White-browed Warbler,M. leucoblephara
 ,Pale-legged Warbler,M. signata
 ,Riverbank Warbler,M. rivularis
 ,Two-banded Warbler,M. bivittata
 ,Golden-crowned Warbler,Basileuterus culicivorus
-,Wilson's Warbler,Cardellina  pusilla
+,Wilson's Warbler,Cardellina pusilla
 ,Brown-capped Redstart,Myioborus brunniceps
 
 ,CARDINAL GROSBEAKS,CARDINALIDAE

@@ -406,17 +406,17 @@ RAILS,RALLIDAE
 FINFOOTS,HELIORNITHIDAE
 ,,Sungrebe,Heliornis fulica
 PLOVERS,CHARADRIIDAE
-,,American Golden-Plover,Pluvialis dominica
-,,Black-bellied Plover,P. squatarola
-,,Pied Lapwing,Vanellus cayanus
-,,Southern Lapwing,V. chilensis
-5,,Andean Lapwing,V. resplendens
+,,Black-bellied Plover,Pluvialis squatarola
+,,American Golden-Plover,P. dominica
+,,Pied Lapwing,Hoploxypterus cayanus
 ,,Killdeer,Charadrius vociferus
-,,Semipalmated Plover,C. semipalmatus
+5,,Semipalmated Plover,C. semipalmatus
 ,,Piping Plover,C. melodus
-,,Wilson's Plover,C. wilsonia
-,,Collared Plover,C. collaris
-,,Snowy Plover,C. nivosus
+,,Southern Lapwing,Vanellus chilensis
+,,Andean Lapwing,V. resplendens
+,,Wilson's Plover,Anarhynchus wilsonia
+,,Collared Plover,A. collaris
+,,Snowy Plover,A. nivosus
 OYSTERCATCHERS,HAEMATOPODIDAE
 ,,American Oystercatcher,Haematopus palliatus
 AVOCETS and STILTS,RECURVIROSTRIDAE
@@ -536,7 +536,7 @@ NORTHERN STORM-PETRELS,HYDROBATIDAE
 ,,Hornby's Storm-Petrel,H. hornbyi
 ,,Black Storm-Petrel,H. melania
 SHEARWATERS,PROCELLARIIDAE
-,,Cape Petrel,Daption capense
+,,Pintado Petrel,Daption capense
 ,,Gould's Petrel,Pterodroma leucoptera
 ,,Black-capped Petrel,P. hasitata
 ,,Galapagos Petrel,P. phaeopygia
@@ -668,7 +668,7 @@ HAWKS,ACCIPITRIDAE
 ,,Zone-tailed Hawk,B. albonotatus
 ,,Red-tailed Hawk,B. jamaicensis
 BARN OWLS,TYTONIDAE
-,,Barn Owl,Tyto alba
+,,American Barn-Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,Bare-shanked Screech-Owl,Megascops clarkii
 ,,White-throated Screech-Owl,M. albogularis
@@ -889,13 +889,13 @@ PARROTS,PSITTACIDAE
 ,,Blue-headed Parrot,P. menstruus
 ,,Bronze-winged Parrot,P. chalcopterus
 ,,Short-tailed Parrot,Graydidascalus brachyurus
-,,Festive Parrot,Amazona festiva
-25,,Red-lored Parrot,A. autumnalis
-,,Yellow-crowned Parrot,A. ochrocephala
-,,Mealy Parrot,A. farinosa
-,,Kawall's Parrot,A. kawalli
-,,Orange-winged Parrot,A. amazonica
-30,,Scaly-naped Parrot,A. mercenarius
+,,Festive Amazon,Amazona festiva
+25,,Red-lored Amazon,A. autumnalis
+,,Yellow-crowned Amazon,A. ochrocephala
+,,Mealy Amazon,A. farinosa
+,,Kawall's Amazon,A. kawalli
+,,Orange-winged Amazon,A. amazonica
+30,,Scaly-naped Amazon,A. mercenarius
 ,,Dusky-billed Parrotlet,Forpus modestus
 ,,Riparian Parrotlet,F. crassirostris
 ,,Spectacled Parrotlet,F. conspicillatus
@@ -1024,23 +1024,24 @@ ANTBIRDS,THAMNOPHILIDAE
 ,,Esmeraldas Antbird,S. nigricauda
 ,,Stub-tailed Antbird,S. berlepschi
 ,,Chestnut-tailed Antbird,Sciaphylax hemimelaena
-,,White-shouldered Antbird,Akletos melanoceps
-100,,Sooty Antbird,Hafferia fortis
+,,Zimmer's Antbird,S. castanea
+100,,White-shouldered Antbird,Akletos melanoceps
+,,Sooty Antbird,Hafferia fortis
 ,,Zeledon's Antbird,H. zeledoni
 ,,Blue-lored Antbird,H. immaculata
 ,,Yapacana Antbird,Aprositornis disjuncta
-,,Black-throated Antbird,Myrmophylax atrothorax
-105,,Gray-bellied Antbird,Ammonastes pelzelni
+105,,Black-throated Antbird,Myrmophylax atrothorax
+,,Gray-bellied Antbird,Ammonastes pelzelni
 ,,Wing-banded Antbird,Myrmornis torquata
 ,,White-plumed Antbird,Pithys albifrons
 ,,Bicolored Antbird,Gymnopithys bicolor
-,,White-cheeked Antbird,G. leucaspis
-110,,Chestnut-crested Antbird,Rhegmatorhina cristata
+110,,White-cheeked Antbird,G. leucaspis
+,,Chestnut-crested Antbird,Rhegmatorhina cristata
 ,,Hairy-crested Antbird,R. melanosticta
 ,,Spotted Antbird,Hylophylax naevioides
 ,,Spot-backed Antbird,H. naevius
-,,Dot-backed Antbird,H. punctulatus
-115,,Common Scale-backed Antbird,Willisornis poecilinotus
+115,,Dot-backed Antbird,H. punctulatus
+,,Common Scale-backed Antbird,Willisornis poecilinotus
 ,,Black-spotted Bare-eye,Phlegopsis nigromaculata
 ,,Reddish-winged Bare-eye,P. erythroptera
 ,,Ocellated Antbird,Phaenostictus mcleannani
@@ -1150,78 +1151,79 @@ OVENBIRDS,FURNARIIDAE
 ,,Montane Woodcreeper,L. lacrymiger
 ,,Duida Woodcreeper,L. duidae
 ,,Slender-billed Xenops,Xenops tenuirostris
-,,Plain Xenops,X. minutus
-40,,Streaked Xenops,X. rutilans
+,,Northern Plain-Xenops,X. mexicanus
+40,,Amazonian Plain-Xenops,X. genibarbis
+,,Streaked Xenops,X. rutilans
 ,,Point-tailed Palmcreeper,Berlepschia rikeri
 ,,Rufous-tailed Xenops,Microxenops milleri
 ,,Pacific Tuftedcheek,Pseudocolaptes johnsoni
-,,Streaked Tuftedcheek,P. boissonneautii
-45,,Rusty-winged Barbtail,Premnornis guttuliger
+45,,Streaked Tuftedcheek,P. boissonneautii
+,,Rusty-winged Barbtail,Premnornis guttuliger
 ,,Pale-legged Hornero,Furnarius leucopus
 ,,Pale-billed Hornero,F. torridus
 ,,Lesser Hornero,F. minor
-,,Sharp-tailed Streamcreeper,Lochmias nematura
-50,,Chestnut-winged Cinclodes,Cinclodes albidiventris
+50,,Sharp-tailed Streamcreeper,Lochmias nematura
+,,Chestnut-winged Cinclodes,Cinclodes albidiventris
 ,,Stout-billed Cinclodes,C. excelsior
 ,,Dusky-cheeked Foliage-gleaner,Anabazenops dorsalis
-,,Slaty-winged Foliage-gleaner,Philydor fuscipenne
-,,Rufous-rumped Foliage-gleaner,P. erythrocercum
-55,,Cinnamon-rumped Foliage-gleaner,P. pyrrhodes
+,,Slaty-winged Foliage-gleaner,Neophilydor fuscipenne
+55,,Rufous-rumped Foliage-gleaner,N. erythrocercum
+,,Cinnamon-rumped Foliage-gleaner,Philydor pyrrhodes
 ,,Montane Foliage-gleaner,Anabacerthia striaticollis
 ,,Scaly-throated Foliage-gleaner,A. variegaticeps
 ,,Rufous-tailed Foliage-gleaner,A. ruficaudata
-,,Lineated Foliage-gleaner,Syndactyla subalaris
-60,,Chestnut-winged Hookbill,Ancistrops strigilatus
+60,,Lineated Foliage-gleaner,Syndactyla subalaris
+,,Chestnut-winged Hookbill,Ancistrops strigilatus
 ,,Buff-fronted Foliage-gleaner,Dendroma rufa
 ,,Chestnut-winged Foliage-gleaner,D. erythroptera
 ,,Ruddy Foliage-gleaner,Clibanornis rubiginosus
-,endemic,Santa Marta Foliage-gleaner,C. rufipectus
-65,,Uniform Treehunter,Thripadectes ignobilis
+65,endemic,Santa Marta Foliage-gleaner,C. rufipectus
+,,Uniform Treehunter,Thripadectes ignobilis
 ,,Flammulated Treehunter,T. flammulatus
 ,,Striped Treehunter,T. holostictus
 ,,Streak-capped Treehunter,T. virgaticeps
-,,Black-billed Treehunter,T. melanorhynchus
-70,,Chestnut-crowned Foliage-gleaner,Automolus rufipileatus
+70,,Black-billed Treehunter,T. melanorhynchus
+,,Chestnut-crowned Foliage-gleaner,Automolus rufipileatus
 ,,Brown-rumped Foliage-gleaner,A. melanopezus
 ,,Buff-throated Foliage-gleaner,A. ochrolaemus
 ,,Striped Woodhaunter,A. subulatus
-,,Olive-backed Foliage-gleaner,A. infuscatus
-75,,Spotted Barbtail,Premnoplex brunnescens
+75,,Olive-backed Foliage-gleaner,A. infuscatus
+,,Spotted Barbtail,Premnoplex brunnescens
 ,,Fulvous-dotted Treerunner,Margarornis stellatus
 ,,Pearled Treerunner,M. squamiger
 ,,Andean Tit-Spinetail,Leptasthenura andicola
-,,Rufous-fronted Thornbird,Phacellodomus rufifrons
-80,,White-browed Spinetail,Hellmayrea gularis
+80,,Rufous-fronted Thornbird,Phacellodomus rufifrons
+,,White-browed Spinetail,Hellmayrea gularis
 ,,Many-striped Canastero,Asthenes flammulata
 ,,Streak-backed Canastero,A. wyatti
 ,,Perija Thistletail,A. perijana
-,,White-chinned Thistletail,A. fuliginosa
-85,,Orange-fronted Plushcrown,Metopothrix aurantiaca
+85,,White-chinned Thistletail,A. fuliginosa
+,,Orange-fronted Plushcrown,Metopothrix aurantiaca
 ,,Double-banded Graytail,Xenerpestes minlosi
 ,,Spectacled Prickletail,Siptornis striaticollis
 ,,Orinoco Softtail,Thripophaga cherriei
-,,Rusty-backed Spinetail,Cranioleuca vulpina
-90,,Parker's Spinetail,C. vulpecula
+90,,Rusty-backed Spinetail,Cranioleuca vulpina
+,,Parker's Spinetail,C. vulpecula
 ,,Crested Spinetail,C. subcristata
 ,,Red-faced Spinetail,C. erythrops
 ,,Streak-capped Spinetail,C. hellmayri
-,,Ash-browed Spinetail,C. curtata
-95,,Speckled Spinetail,C. gutturata
+95,,Ash-browed Spinetail,C. curtata
+,,Speckled Spinetail,C. gutturata
 ,,Yellow-chinned Spinetail,Certhiaxis cinnamomeus
 ,,Red-and-white Spinetail,C. mustelinus
 ,,White-bellied Spinetail,Mazaria propinqua
-,,Plain-crowned Spinetail,Synallaxis gujanensis
-100,,Slaty Spinetail,S. brachyura
+100,,Plain-crowned Spinetail,Synallaxis gujanensis
+,,Slaty Spinetail,S. brachyura
 ,endemic,Silvery-throated Spinetail,S. subpudica
 ,,Dusky Spinetail,S. moesta
 ,,Dark-breasted Spinetail,S. albigularis
-,,Rio Orinoco Spinetail,S. beverlyae
-105,,Pale-breasted Spinetail,S. albescens
+105,,Rio Orinoco Spinetail,S. beverlyae
+,,Pale-breasted Spinetail,S. albescens
 ,,Azara's Spinetail,S. azarae
 ,,White-whiskered Spinetail,S. candei
 ,endemic,Rusty-headed Spinetail,S. fuscorufa
-,,Rufous Spinetail,S. unirufa
-110,,Stripe-breasted Spinetail,S. cinnamomea
+110,,Rufous Spinetail,S. unirufa
+,,Stripe-breasted Spinetail,S. cinnamomea
 ,,Ruddy Spinetail,S. rutilans
 ,,Chestnut-throated Spinetail,S. cherriei
 MANAKINS,PIPRIDAE
@@ -1423,7 +1425,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 105,,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,,White-lored Tyrannulet,O. inerme
-,,Mouse-colored Tyrannulet,Nesotriccus murinus 
+,,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,,Tufted Tit-Tyrant,Anairetes parulus
 110,,Bearded Tachuri,Polystictus pectoralis
 ,,Subtropical Doradito,Pseudocolopteryx acutipennis
@@ -1809,7 +1811,7 @@ WOOD-WARBLERS,PARULIDAE
 ,,Prairie Warbler,S. discolor
 ,,Townsend's Warbler,S. townsendi
 ,,Black-throated Green Warbler,S. virens
-35,,Citrine Warbler,Myiothlypis  luteoviridis
+35,,Citrine Warbler,Myiothlypis luteoviridis
 ,endemic,Santa Marta Warbler,M. basilica
 ,,Flavescent Warbler,M. flaveola
 ,,Black-crested Warbler,M. nigrocristata
@@ -1822,7 +1824,7 @@ WOOD-WARBLERS,PARULIDAE
 45,,Golden-crowned Warbler,B. culicivorus
 ,,Pirre Warbler,B. ignotus
 ,,Three-striped Warbler,B. tristriatus
-,,Canada Warbler,Cardellina  canadensis
+,,Canada Warbler,Cardellina canadensis
 ,,Wilson's Warbler,C. pusilla
 50,,Slate-throated Redstart,Myioborus miniatus
 ,endemic,Yellow-crowned Redstart,M. flavivertex
@@ -1836,10 +1838,10 @@ CARDINAL GROSBEAKS,CARDINALIDAE
 ,,Scarlet Tanager,P. olivacea
 ,,Red-hooded Tanager,P. rubriceps
 5,,White-winged Tanager,P. leucoptera
+,,Red-throated Ant-Tanager,Driophlox fuscicauda
+,endemic,Sooty Ant-Tanager,D. gutturalis
+,endemic,Crested Ant-Tanager,D. cristata
 ,,Red-crowned Ant-Tanager,Habia rubica
-,,Red-throated Ant-Tanager,H. fuscicauda
-,endemic,Sooty Ant-Tanager,H. gutturalis
-,endemic,Crested Ant-Tanager,H. cristata
 10,,Ochre-breasted Tanager,Chlorothraupis stolzmanni
 ,,Carmiol's Tanager,C. carmioli
 ,,Lemon-spectacled Tanager,C. olivacea

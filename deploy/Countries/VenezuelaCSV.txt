@@ -51,6 +51,7 @@ E,Tepui Tinamou,C. ptaritepui
 ,Blue-throated Piping-Guan,Pipile cumanensis
 ,Wattled Guan,Aburria aburri
 ,Rufous-vented Chachalaca,Ortalis ruficauda
+,Speckled Chachalaca,O. guttata
 ,Variable Chachalaca,O. motmot
 ,Nocturnal Curassow,Nothocrax urumutum
 ,Yellow-knobbed Curassow,Crax daubentoni
@@ -150,6 +151,7 @@ E,Venezuelan Wood-Quail,O. columbianus
 ,SWIFTS,APODIDAE
 ,Spot-fronted Swift,Cypseloides cherriei
 ,White-chinned Swift,C. cryptus
+,Black Swift,C. niger
 ,Chestnut-collared Swift,Streptoprocne rutila
 ,Tepui Swift,S. phelpsi
 ,White-collared Swift,S. zonaris
@@ -158,7 +160,7 @@ E,Venezuelan Wood-Quail,O. columbianus
 ,Chimney Swift,C. pelagica
 ,Vaux's Swift,C. vauxi
 ,Chapman's Swift,C. chapmani
-,Ashy-tailed Swift,C. andrei
+E,Ashy-tailed Swift,C. andrei
 ,Sick's Swift,C. meridionalis
 ,Short-tailed Swift,C. brachyura
 ,White-tipped Swift,Aeronautes montivagus
@@ -220,6 +222,7 @@ E,White-bearded Helmetcrest,Oxypogon lindenii
 ,Perija Metaltail,M. iracunda
 ,Glowing Puffleg,Eriocnemis vestita
 ,Coppery-bellied Puffleg,E. cupreoventris
+,Sapphire-vented Puffleg,E. luciani
 ,Bronzy Inca,Coeligena coeligena
 ,Collared Inca,C. torquata
 ,Golden-bellied Starfrontlet,C. bonapartei
@@ -306,23 +309,22 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Sungrebe,Heliornis fulica
 
 ,PLOVERS,CHARADRIIDAE
-,American Golden-Plover,Pluvialis dominica
-,Black-bellied Plover,P. squatarola
-,Pied Lapwing,Vanellus cayanus
-,Southern Lapwing,V. chilensis
+,Black-bellied Plover,Pluvialis squatarola
+,American Golden-Plover,P. dominica
+,Pied Lapwing,Hoploxypterus cayanus
 ,Killdeer,Charadrius vociferus
 ,Semipalmated Plover,C. semipalmatus
 ,Piping Plover,C. melodus
-,Wilson's Plover,C. wilsonia
-,Collared Plover,C. collaris
-,Snowy Plover,C. nivosus
+,Southern Lapwing,Vanellus chilensis
+,Wilson's Plover,Anarhynchus wilsonia
+,Collared Plover,A. collaris
+,Snowy Plover,A. nivosus
 
 ,OYSTERCATCHERS,HAEMATOPODIDAE
 ,American Oystercatcher,Haematopus palliatus
 
 ,AVOCETS and STILTS,RECURVIROSTRIDAE
 ,Black-necked Stilt,Himantopus mexicanus
-,American Avocet,Recurvirostra americana
 
 ,THICK-KNEES,BURHINIDAE
 ,Double-striped Thick-knee,Hesperoburhinus bistriatus
@@ -381,6 +383,7 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Laughing Gull,Leucophaeus atricilla
 ,Franklin's Gull,L. pipixcan
 ,Ring-billed Gull,Larus delawarensis
+,Great Black-backed Gull,L. marinus
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Herring Gull,L. argentatus
@@ -534,9 +537,10 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Short-tailed Hawk,B. brachyurus
 ,Swainson's Hawk,B. swainsoni
 ,Zone-tailed Hawk,B. albonotatus
+,Red-tailed Hawk,B. jamaicensis
 
 ,BARN OWLS,TYTONIDAE
-,Barn Owl,Tyto alba
+,American Barn-Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,White-throated Screech-Owl,Megascops albogularis
@@ -610,6 +614,7 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Moustached Puffbird,M. mystacalis
 ,Rusty-breasted Nunlet,Nonnula rubecula
 ,Black Nunbird,Monasa atra
+,Black-fronted Nunbird,M. nigrifrons
 ,White-fronted Nunbird,M. morphoeus
 ,Swallow-winged Puffbird,Chelidoptera tenebrosa
 
@@ -671,7 +676,6 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Lined Forest-Falcon,M. gilvicollis
 ,Slaty-backed Forest-Falcon,M. mirandollei
 ,Collared Forest-Falcon,M. semitorquatus
-,Buckley's Forest-Falcon,M. buckleyi
 ,Crested Caracara,Caracara plancus
 ,Red-throated Caracara,Ibycter americanus
 ,Black Caracara,Daptrius ater
@@ -705,14 +709,14 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Speckle-faced Parrot,P. tumultuosus
 ,Blue-headed Parrot,P. menstruus
 ,Bronze-winged Parrot,P. chalcopterus
-,Festive Parrot,Amazona festiva
-,Red-lored Parrot,A. autumnalis
-,Blue-cheeked Parrot,A. dufresniana
-,Yellow-crowned Parrot,A. ochrocephala
-,Yellow-shouldered Parrot,A. barbadensis
-,Mealy Parrot,A. farinosa
-,Orange-winged Parrot,A. amazonica
-,Scaly-naped Parrot,A. mercenarius
+,Festive Amazon,Amazona festiva
+,Red-lored Amazon,A. autumnalis
+,Blue-cheeked Amazon,A. dufresniana
+,Yellow-crowned Amazon,A. ochrocephala
+,Yellow-shouldered Amazon,A. barbadensis
+,Mealy Amazon,A. farinosa
+,Orange-winged Amazon,A. amazonica
+,Scaly-naped Amazon,A. mercenarius
 ,Dusky-billed Parrotlet,Forpus modestus
 ,Spectacled Parrotlet,F. conspicillatus
 ,Green-rumped Parrotlet,F. passerinus
@@ -881,7 +885,8 @@ E,Merida Tapaculo,S. meridanus
 ,Duida Woodcreeper,L. duidae
 ,Guianan Woodcreeper,L. albolineatus
 ,Slender-billed Xenops,Xenops tenuirostris
-,Plain Xenops,X. minutus
+,Northern Plain-Xenops,X. mexicanus
+,Amazonian Plain-Xenops,X. genibarbis
 ,Streaked Xenops,X. rutilans
 ,Point-tailed Palmcreeper,Berlepschia rikeri
 ,Rufous-tailed Xenops,Microxenops milleri
@@ -927,7 +932,7 @@ E,Delta Amacuro Softtail,T. amacurensis
 ,Yellow-chinned Spinetail,Certhiaxis cinnamomeus
 ,Plain-crowned Spinetail,Synallaxis gujanensis
 ,McConnell's Spinetail,S. macconnelli
-E,Rio Orinoco Spinetail,S. beverlyae
+,Rio Orinoco Spinetail,S. beverlyae
 ,Pale-breasted Spinetail,S. albescens
 ,Azara's Spinetail,S. azarae
 ,White-whiskered Spinetail,S. candei
@@ -1035,8 +1040,7 @@ E,Handsome Fruiteater,P. formosa
 ,Variegated Bristle-Tyrant,P. poecilotis
 E,Venezuelan Bristle-Tyrant,P. venezuelanus
 ,Chapman's Bristle-Tyrant,P. chapmani
-,Olive-green Tyrannulet,Phylloscartes virescens
-,Black-fronted Tyrannulet,P. nigrifrons
+,Black-fronted Tyrannulet,Phylloscartes nigrifrons
 ,Rufous-browed Tyrannulet,P. superciliaris
 E,Rufous-lored Tyrannulet,P. flaviventris
 ,Olive-striped Flycatcher,Mionectes olivaceus
@@ -1060,6 +1064,7 @@ E,Rufous-lored Tyrannulet,P. flaviventris
 ,Snethlage's Tody-Tyrant,Hemitriccus minor
 ,White-eyed Tody-Tyrant,H. zosterops
 ,Pearly-vented Tody-Tyrant,H. margaritaceiventer
+,Pelzeln's Tody-Tyrant,H. inornatus
 ,Black-throated Tody-Tyrant,H. granadensis
 ,Rufous-crowned Tody-Flycatcher,Poecilotriccus ruficeps
 ,Ruddy Tody-Flycatcher,P. russatus
@@ -1110,7 +1115,7 @@ E,Urich's Tyrannulet,Phyllomyias urichi
 ,Southern Beardless-Tyrannulet,Camptostoma obsoletum
 ,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,White-lored Tyrannulet,O. inerme
-,Mouse-colored Tyrannulet,Nesotriccus murinus 
+,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,Bearded Tachuri,Polystictus pectoralis
 ,Crested Doradito,Pseudocolopteryx sclateri
 ,Torrent Tyrannulet,Serpophaga cinerea
@@ -1207,6 +1212,7 @@ E,Urich's Tyrannulet,Phyllomyias urichi
 ,White-eyed Vireo,Vireo griseus
 ,Yellow-throated Vireo,V. flavifrons
 ,Tepui Vireo,V. sclateri
+,Philadelphia Vireo,V. philadelphicus
 ,Brown-capped Vireo,V. leucophrys
 ,Red-eyed Vireo,V. olivaceus
 ,Chivi Vireo,V. chivi
@@ -1236,8 +1242,7 @@ E,Urich's Tyrannulet,Phyllomyias urichi
 ,Cuban Martin,P. cryptoleuca
 ,Gray-breasted Martin,P. chalybea
 ,Southern Martin,P. elegans
-,Tree Swallow,Tachycineta bicolor
-,White-winged Swallow,T. albiventer
+,White-winged Swallow,Tachycineta albiventer
 ,Bank Swallow,Riparia riparia
 ,Barn Swallow,Hirundo rustica
 ,Cliff Swallow,Petrochelidon pyrrhonota
@@ -1287,11 +1292,13 @@ E,Merida Wren,C. meridae
 ,Veery,C. fuscescens
 ,Gray-cheeked Thrush,C. minimus
 ,Swainson's Thrush,C. ustulatus
+,Wood Thrush,Hylocichla mustelina
 ,Rufous-brown Solitaire,Cichlopsis leucogenys
 ,Pale-eyed Thrush,Turdus leucops
 ,Yellow-legged Thrush,T. flavipes
 ,Pale-breasted Thrush,T. leucomelas
 ,Cocoa Thrush,T. fumigatus
+,Hauxwell's Thrush,T. hauxwelli
 ,Spectacled Thrush,T. nudigenis
 ,Lawrence's Thrush,T. lawrencii
 ,Pantepui Thrush,T. murinus
@@ -1430,8 +1437,9 @@ E,Paria Brushfinch,A. phygas
 ,Palm Warbler,S. palmarum
 ,Yellow-rumped Warbler,S. coronata
 ,Yellow-throated Warbler,S. dominica
+,Prairie Warbler,S. discolor
 ,Black-throated Green Warbler,S. virens
-,Citrine Warbler,Myiothlypis  luteoviridis
+,Citrine Warbler,Myiothlypis luteoviridis
 ,Flavescent Warbler,M. flaveola
 ,Black-crested Warbler,M. nigrocristata
 ,Riverbank Warbler,M. rivularis
@@ -1442,7 +1450,7 @@ E,Paria Brushfinch,A. phygas
 ,Golden-crowned Warbler,B. culicivorus
 ,Three-striped Warbler,B. tristriatus
 E,Gray-headed Warbler,B. griseiceps
-,Canada Warbler,Cardellina  canadensis
+,Canada Warbler,Cardellina canadensis
 ,Slate-throated Redstart,Myioborus miniatus
 E,White-fronted Redstart,M. albifrons
 ,Golden-fronted Redstart,M. ornatus
@@ -1544,6 +1552,7 @@ E,Venezuelan Flowerpiercer,D. venezuelensis
 ,Buff-throated Saltator,Saltator maximus
 ,Orinocan Saltator,S. orenocensis
 ,Olive-gray Saltator,S. olivascens
+,Bluish-gray Saltator,S. coerulescens
 ,Streaked Saltator,S. striatipectus
 ,Slate-colored Grosbeak,S. grossus
 ,Wedge-tailed Grass-Finch,Emberizoides herbicola
@@ -1579,6 +1588,7 @@ E,Gray-capped Hemispingus,Kleinothraupis reyi
 ,Blue-capped Tanager,Sporathraupis cyanocephala
 ,Black-chested Mountain Tanager,Cnemathraupis eximia
 ,Black-headed Tanager,Stilpnia cyanoptera
+,Black-hooded Tanager,S. whitelyi
 ,Black-capped Tanager,S. heinei
 ,Burnished-buff Tanager,S. cayana
 ,Scrub Tanager,S. vitriolina
