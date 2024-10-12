@@ -7,12 +7,18 @@ function modifyQuery(term) {
   
   var searcFormContents = document.querySelector(".searchForm_contents");
   // keep a minimum of 20 ch's width in input field and add 1 ch width for every query.length > 8
+
+  term = term.trimStart();
+  // if (term.length === 0) searchInput.value = "";
+  if (term.length < 2) return;
+
   if (term.length > 6) {
     searcFormContents.style.left = "-" + (term.length - 6)/5 + "ch";
-    searchInput.size = 20 + (term.length - 6); 
+    searchInput.size = 20 + (term.length - 6);
   }
   
-  term = term.replace(/^\s+|\s+$/g, ""); // strip trailing and leading whitespaces
+  // term = term.replace(/^\s+|\s+$/g, ""); // strip trailing and leading whitespaces
+  // TODO: term = term.trim();
 
   //  wildcards * and ? ::
   // term = term.replace(/\\\*/g, "[a-zA-Z'ñã\\s-]+");
@@ -41,9 +47,13 @@ function modifyQuery(term) {
   //  : use next 2 lines to enable fuzzy searching
   //   but gets very weird with the accented characters
     // query = query.replace(/(\S|\s)/g, "$1.*?");   // add '.*?' behind every character, even spaces
-    // term = term.replace(/(\S|\s)/g, "$1[a-z' -]*?");   // add '.*?' behind every character, even spaces
-    
+  // term = term.replace(/(\S|\s)/g, "$1[a-z' -]*?");   // add '.*?' behind every character, even spaces
+  
     // query = query.replace(/(\S|\s)/g, "$1.{2}?");   // to limit the possible characters between inputs, sorta weird
+  
+  term = term.replace(/(-| )/g, "(-| )");   // replace a space or hyphen with (space | hyphen)
+  // term = term.replace(/^\s+|\s+$/g, ""); // strip trailing and leading whitespaces
+  // term = term.trimEnd();
   
   lastQuery = term;
   return term;

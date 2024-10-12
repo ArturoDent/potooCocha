@@ -27,6 +27,12 @@ function getQuery() {
     return;
   }
 
+  // trim leading whitespace
+  searchInput.value = searchInput.value.trimStart();
+  if (searchInput.value.length === 0) {   // if only whitespace, clear the input element
+    searchInput.value = "";
+  }
+
   // wait for at least two characters
   if (searchInput.value.length < 2) {
     return;
