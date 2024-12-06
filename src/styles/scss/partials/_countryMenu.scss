@@ -74,6 +74,13 @@
 
 #country-menu a.highlight   {
   background-color:  $titleBannerColor;
+  width: 104%;
+  left: -2%;
+
+  // border-color: black;
+  // border: 1px rgba(0, 0, 0, 0.822) solid;
+  border: 1px rgba(252, 248, 248, 0.5) solid;
+
   // color: black;
   // text-shadow : 0 0.077rem rgba(255,255,255,0.2);
   // transition: all 450ms ease-out;
@@ -87,6 +94,7 @@
   border-style  :  solid;
   border-width  :  1.5rem;
   border-color  :  transparent white transparent transparent;
+
   filter: drop-shadow(0 0 0.077rem rgba(0,0,0,1));
 
   transition : left 700ms ease-in-out;

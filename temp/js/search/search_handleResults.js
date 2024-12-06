@@ -43,6 +43,7 @@ function loadSearchResults(results) {
   var term = lastQuery;
 
   // remove accented characters and surrounding regex from the displayed query: (n|ñ) and/or (a|ã)
+  // TODO: what about (-| )
   if (lastQuery) {
     var regex = /[ãñ()|]/g;
     term = lastQuery.replace(regex, "");

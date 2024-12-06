@@ -159,12 +159,12 @@ a:visited {
 #mainContent {
   position: relative;
   left: 7vw;
-  margin: 15.6vh 0 0 0;
+  margin: 8vh 0 0 0;
 }
 
 #titleBanner {
   position: relative;
-  top: 1.25rem;
+  top: 4vh;
   left: calc(4vw - 1.25rem);
   width: calc(91vw - 1.9rem);
   height: 4.5rem;
@@ -1382,6 +1382,9 @@ input[type=checkbox]:disabled ~ label {
 
 #country-menu a.highlight {
   background-color: #979788;
+  width: 104%;
+  left: -2%;
+  border: 1px rgba(252, 248, 248, 0.5) solid;
 }
 
 #country-menu a.highlight:after {
@@ -1419,7 +1422,6 @@ input[type=checkbox]:disabled ~ label {
 
 #taxonomyArticle {
   position: relative;
-  left: 3vw;
   border: none;
   box-shadow: none;
   -webkit-transition: all 850ms ease-in-out;
@@ -1430,12 +1432,10 @@ input[type=checkbox]:disabled ~ label {
 
 .searchWord {
   position: relative;
-  left: -5.4rem;
   width: calc(42vw + 10ch);
-  height: 30vh;
-  padding: 3vw 4vw 0 4vw;
+  padding: 1.5vw 2vw 1.5vw 2vw;
   z-index: 0;
-  font-size: 1.06rem;
+  font-size: 1rem;
   line-height: 1.8rem;
   text-align: center;
   color: white;
@@ -1450,129 +1450,18 @@ input[type=checkbox]:disabled ~ label {
 }
 
 .taxArticleMain {
-  padding: 1.15rem 0 0 0;
+  padding: 0.5rem 0 0 0;
   line-height: 1.5rem;
   text-align: center;
 }
 
-.linkHighlight {
-  padding: 0 0.23rem 0.077rem 0.31rem;
-  border-radius: 0.15rem;
-  border: solid 0.077rem transparent;
-  border-bottom: solid 0.077rem white;
-  box-shadow: 0 0.077rem rgba(0, 0, 0, 0.5);
-  transition: border 850ms;
-}
-
-.linkHighlight:hover, .linkHighlight:focus {
-  outline: none;
-  border: solid 0.077rem white;
-}
-
-.linkHighlight:visited {
-  background-color: #979788;
-}
-
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
-.slideUpWrapper {
-  position: relative;
-  top: -8rem;
-  left: -0.5vw;
-  overflow-y: hidden;
-  max-height: 27rem;
-  width: 90%;
-  border-top: none;
-  border-bottom: none;
-  border-bottom-right-radius: 22%;
-  background-color: #626258;
-  transform: translateY(0) scaleY(100%);
-  transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out;
-}
-
-.slideUpWrapper.panel {
-  padding: 0 2.5ch 0 2.5ch;
-}
-
-.slideUpWrapper.closeInstructions {
-  transform: translateY(-27rem);
-  opacity: 0;
-  transition: opacity 450ms, transform 600ms 250ms ease-in-out;
-}
-
-.slideUpWrapper + #searchForm {
-  transform: translateY(-7rem);
-  transition: all 400ms 200ms ease-in-out;
-}
-
-.slideUpWrapper.closeInstructions + #searchForm {
-  border-bottom-left-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  transform: translateY(-19rem);
-  transition: all 400ms ease-in-out;
-}
-
-#results-panel {
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(-10rem) !important;
-  transition: transform 500ms ease-in-out 100ms, opacity 400ms 300ms;
-}
-
-#results-panel.closeInstructions:not(.resultsPanelBoolean) {
-  transform: translateY(-10rem) !important;
-}
-
-#results-panel.closeInstructions.resultsPanelBoolean {
-  pointer-events: all;
-  opacity: 1;
-  transform: translateY(-10rem) !important;
-}
-
-#results-panel.resultsPanelBoolean:not(.closeInstructions) {
-  pointer-events: all;
-  opacity: 1;
-  transform: translateY(0) !important;
-}
-
-.taxInstructionsButton {
-  position: absolute;
-  display: inline-block;
-  top: -2.6rem;
-  left: -6vw;
-  width: 3rem;
-  height: 3rem;
-  padding: 0 0 0.15rem 0;
-  z-index: 1;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  border: 0.15rem solid #979788;
-  border-radius: 50%;
-  background-color: #a3a396;
-  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem #8a8a7c;
-  cursor: pointer;
-  transition: background-color 300ms;
-}
-
-.taxInstructionsButton:hover, .taxInstructionsButton:focus {
-  outline: none;
-  background-color: black;
-  transition: background-color 300ms 250ms;
-}
-
-.taxInstructionsButton.instructionsClosed .tooltip {
-  width: 10rem;
-  border: 0.1rem solid #979788;
-  background-color: #6eb2bb;
-  transform: rotate(0);
-}
-
 #searchForm {
   position: relative;
-  left: 2%;
+  left: 8vw;
   width: 80%;
   padding: 0 0 1.8ch 0;
+  margin-bottom: 8vh;
   border: 1px solid transparent;
   background-color: #626258;
   border-bottom-left-radius: 6.9rem;
@@ -1715,9 +1604,8 @@ input[type=checkbox]:disabled ~ label {
   position: relative;
   height: auto;
   width: calc(100% + 7vw);
-  top: -5rem;
   left: -7vw;
-  margin: 5.5ch 0 2ch 0;
+  margin-bottom: 2vh;
   padding: 0;
   z-index: 0;
   border: none;
@@ -2005,27 +1893,24 @@ input[type=checkbox]:disabled ~ label {
   position: relative;
   width: calc(100% + 7vw);
   height: 0;
-  top: 2rem;
   left: -7vw;
-  margin: 0 0 -20.5ch 0;
+  margin: 0;
   padding: 5ch 0 0 0;
   z-index: 0;
   border: none;
   box-shadow: none;
   background-color: transparent;
-  transform: translateY(-13rem);
   transition: all 400ms ease-in-out;
 }
 
 #tax-panel.setTaxPanelHeight {
   opacity: 1;
   height: auto;
-  margin: 1ch 0 -10ch 0;
+  margin: 0;
 }
 
 #fakeTaxPageBox {
   position: relative;
-  top: -1.5ch;
   height: 100%;
   width: calc(100% - 7vw);
   left: 7vw;
@@ -2373,24 +2258,6 @@ input[type=checkbox]:disabled ~ label {
   transition: all 500ms ease;
 }
 
-.taxInstructionsButton .tooltip {
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  left: 5rem;
-  padding: 0 0 0.1rem 0;
-  width: 14rem;
-  letter-spacing: 0.1rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-shadow: 0 0.05rem black;
-  border: 0.07rem solid #979788;
-  border-right: 0.2rem solid #979788;
-  background-color: #828274;
-  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.3px white;
-  transition: all 450ms;
-}
-
 .deleteMapButton .tooltip {
   position: absolute;
   top: 7rem;
@@ -2433,14 +2300,6 @@ input[type=checkbox]:disabled ~ label {
   border-style: solid;
 }
 
-.taxInstructionsButton .tooltip:after {
-  top: -0.28em;
-  left: -2.35em;
-  border-width: 0.98em;
-  border-color: transparent #bbbbb1 transparent transparent;
-  transition: border-color 200ms 200ms;
-}
-
 .saveMapButton .tooltip:after {
   top: -0.06rem;
   left: 103%;
@@ -2454,17 +2313,6 @@ input[type=checkbox]:disabled ~ label {
   left: 107%;
   border-width: 1.2em;
   border-color: transparent transparent transparent white;
-}
-
-.taxInstructionsButton.hasTooltip:hover .tooltip, .taxInstructionsButton.hasTooltip:focus .tooltip {
-  text-shadow: none;
-  background-color: #ddd;
-  color: black;
-  will-change: transform;
-}
-
-.taxInstructionsButton.hasTooltip:hover .tooltip:after {
-  border-color: transparent #fff transparent transparent;
 }
 
 .saveMapButton.hasTooltip:hover .tooltip {
@@ -2490,7 +2338,7 @@ input[type=checkbox]:disabled ~ label {
 
   #mainContent {
     left: 5.5vw;
-    margin: 13vh 0 0 0;
+    margin: 8vh 0 0 0;
   }
 
   .articles {
@@ -2498,25 +2346,11 @@ input[type=checkbox]:disabled ~ label {
     max-width: 51vw;
   }
 
-  .taxInstructionsButton {
-    left: -2vw;
-  }
-
   .searchWord {
     left: -2.4rem;
-    height: 27vh;
-    padding: 3vw 1vw 0 1.5vw;
-    margin-bottom: 3vw;
-  }
-
-  .slideUpWrapper {
-    top: -10rem;
-    width: 92%;
-    left: 7%;
   }
 
   #searchForm {
-    top: -2rem;
     width: 92%;
     left: 7%;
   }
@@ -2528,10 +2362,6 @@ input[type=checkbox]:disabled ~ label {
   #searchSpecials {
     top: -9.9ch;
     left: 82%;
-  }
-
-  #results-panel {
-    top: -10rem;
   }
 
   #checklistOptions.panel {

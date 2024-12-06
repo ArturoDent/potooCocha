@@ -10,11 +10,11 @@ var json2html = {	"V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endem
 // eslint-disable-next-line no-unused-vars
 function searchRegexTree(families, query, country, modifyBoolean) {
   
-  // var originalQuery = query;
 
-  if (modifyBoolean)query = modifyQuery(query);
-  
-  return searchAllQuery(families, query, country);                // Any country, any regex query
+  if (modifyBoolean) query = modifyQuery(query);
+
+  if (query) return searchAllQuery(families, query, country);     // Any country, any regex query
+  else return null;
 }
 
 // ------------------------------------------------------------------------------------------------------ //

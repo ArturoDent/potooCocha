@@ -51,7 +51,8 @@ function modifyQuery(term) {
   
     // query = query.replace(/(\S|\s)/g, "$1.{2}?");   // to limit the possible characters between inputs, sorta weird
   
-  term = term.replace(/(-| )/g, "(-| )");   // replace a space or hyphen with (space | hyphen)
+  // term = term.replace(/(-| )/g, "(-| )");   // replace a space or hyphen with (space | hyphen)
+  term = term.replace(/[ -]/g, "(-| )");   // replace a space or hyphen with (space | hyphen)
   // term = term.replace(/^\s+|\s+$/g, ""); // strip trailing and leading whitespaces
   // term = term.trimEnd();
   

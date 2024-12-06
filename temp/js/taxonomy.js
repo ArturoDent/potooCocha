@@ -35,7 +35,7 @@ var lastResultsSpecies;
 var lastIndex;
 
 var searchSlideUpWrapper;
-var taxInstructionsButton;
+// var taxInstructionsButton;
 var searchInstructionsOpen = true;
 
 
@@ -43,10 +43,10 @@ var searchInstructionsOpen = true;
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
-  searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";
+  // searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
+  // searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";
 
-  taxInstructionsButton = document.querySelector(".taxInstructionsButton");
+  // taxInstructionsButton = document.querySelector(".taxInstructionsButton");
 
   printerButton = document.getElementById("printerButton");
   printerButton.addEventListener("click", printSearchResults);
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   searchSpecials.addEventListener("click", getSearchSpecialsQuery);
   searchSpecials.addEventListener("keyup", getSearchSpecialsQuery);
 
-  taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
+  // taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
   taxPage = document.getElementById("taxPage");
 
@@ -119,30 +119,30 @@ function getJSON(url, success) {
 }
 
 
-function toggleSearchInstructions() {
+// function toggleSearchInstructions() {
 
-  var taxInstructionTooltip = document.querySelector(".taxInstructionsButton .tooltip");
+//   var taxInstructionTooltip = document.querySelector(".taxInstructionsButton .tooltip");
 
-  if (!searchInstructionsOpen) taxInstructionTooltip.innerHTML = "Close";
-  else taxInstructionTooltip.innerHTML = "Open";
+//   if (!searchInstructionsOpen) taxInstructionTooltip.innerHTML = "Close";
+//   else taxInstructionTooltip.innerHTML = "Open";
 
-  //  do only once, hence no toggle
-  if (!taxInstructionsButton.classList.contains("instructionsClosed")) taxInstructionsButton.classList.add("instructionsClosed");
+//   //  do only once, hence no toggle
+//   if (!taxInstructionsButton.classList.contains("instructionsClosed")) taxInstructionsButton.classList.add("instructionsClosed");
 
-  searchSlideUpWrapper.classList.toggle("closeInstructions");
-  resultsPanel.classList.toggle("closeInstructions");
+//   searchSlideUpWrapper.classList.toggle("closeInstructions");
+//   resultsPanel.classList.toggle("closeInstructions");
 
-  if (searchInstructionsOpen) {
-    moveTaxPanel("searchInstructionsClosing");
-    toggleFooterFocusable(true);  // remove tab focus to citations/potoococha links
-  }
-  else {
-    moveTaxPanel("searchInstructionsOpening");
-    toggleFooterFocusable(false);  // add tab focus to citations/potoococha links
-  }
+//   if (searchInstructionsOpen) {
+//     moveTaxPanel("searchInstructionsClosing");
+//     toggleFooterFocusable(true);  // remove tab focus to citations/potoococha links
+//   }
+//   else {
+//     moveTaxPanel("searchInstructionsOpening");
+//     toggleFooterFocusable(false);  // add tab focus to citations/potoococha links
+//   }
 
-  searchInstructionsOpen = !searchInstructionsOpen;
-}
+//   searchInstructionsOpen = !searchInstructionsOpen;
+// }
 
 function toggleFooterFocusable(disable) {
 
@@ -184,6 +184,8 @@ function loadCountryTaxonomy(country) {
     // document.getElementById("countrySearch").classList.remove("closed");
     document.getElementById("searchTerm").innerHTML = country + " : <span>" + lastQuery + "</span>";
   }
+  else
+    document.getElementById("searchTerm").innerHTML = country + " : <span>" + "enter a search term above</span>";
 
   if (country !== "South America") {
     searchResults.classList.remove("samTax");
@@ -248,64 +250,64 @@ function toggleSearchResultsPanel() {
   resultsPanel.classList.toggle("resultsPanelBoolean");
 
   if (!resultsPanelOpen) {      // results-panel was not open
-    moveTaxPanel("searchResultsOpening");
+    // moveTaxPanel("searchResultsOpening");
     printerButton.setAttribute("tabindex", "0");
   }
   else {                        // results-panel was open
-    moveTaxPanel("searchResultsClosing");
+    // moveTaxPanel("searchResultsClosing");
     printerButton.setAttribute("tabindex", "-1");
   }
 
   resultsPanelOpen = !resultsPanelOpen;
 }
 
-function moveTaxPanel(whatIsOpening) {
+// function moveTaxPanel(whatIsOpening) {
 
-  //    "searchResultsOpening", "searchResultsClosing"
-  //    "searchInstructionsClosing", "searchInstructionsOpening"
+//   //    "searchResultsOpening", "searchResultsClosing"
+//   //    "searchInstructionsClosing", "searchInstructionsOpening"
 
-  var instructionsHeight = searchSlideUpWrapper.style.height;
-  var shift;
-  // transform: translateY(-15rem);  // the initial state
+//   var instructionsHeight = searchSlideUpWrapper.style.height;
+//   var shift;
+//   // transform: translateY(-15rem);  // the initial state
 
-  switch (whatIsOpening) {
+//   switch (whatIsOpening) {
 
-  case "searchResultsOpening":
-    if (searchInstructionsOpen) {
-      taxPanel.style.transform = "translateY(-128px)";
-    }
-    else {
-      shift = 100 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    break;
+//   case "searchResultsOpening":
+//     if (searchInstructionsOpen) {
+//       taxPanel.style.transform = "translateY(-128px)";
+//     }
+//     else {
+//       shift = 100 + parseInt(instructionsHeight) + "px";
+//       taxPanel.style.transform = "translateY(-" + shift + ")";
+//     }
+//     break;
 
-  case "searchInstructionsClosing":
-    if (resultsPanelOpen) {
-      shift = 100 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    else {
-      shift = 200 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    break;
+//   case "searchInstructionsClosing":
+//     if (resultsPanelOpen) {
+//       shift = 100 + parseInt(instructionsHeight) + "px";
+//       taxPanel.style.transform = "translateY(-" + shift + ")";
+//     }
+//     else {
+//       shift = 200 + parseInt(instructionsHeight) + "px";
+//       taxPanel.style.transform = "translateY(-" + shift + ")";
+//     }
+//     break;
 
-  case "searchInstructionsOpening":
-    if (resultsPanelOpen)  {
-      shift = -100 + parseInt(instructionsHeight) + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    else {
-      shift = 220 + "px";
-      taxPanel.style.transform = "translateY(-" + shift + ")";
-    }
-    break;
+//   case "searchInstructionsOpening":
+//     if (resultsPanelOpen)  {
+//       shift = -100 + parseInt(instructionsHeight) + "px";
+//       taxPanel.style.transform = "translateY(-" + shift + ")";
+//     }
+//     else {
+//       shift = 220 + "px";
+//       taxPanel.style.transform = "translateY(-" + shift + ")";
+//     }
+//     break;
 
-  default:
-    break;
-  }
-}
+//   default:
+//     break;
+//   }
+// }
 
 // eslint-disable-next-line no-unused-vars
 // function getCountryHTML(data) {

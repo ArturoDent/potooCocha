@@ -121,35 +121,8 @@
         "port": 9222,
         "url": "http://localhost:3000",
         "webRoot": "${workspaceFolder}"
-      },
-      {
-        "type": "vscode-edge-devtools.debug",
-        "request": "launch",
-        "name": "Launch Microsoft Edge and open the Elements tool",
-        "url": "http://localhost:3000",
-        // "url": "$env:url", does not work
-        "webRoot": "${workspaceFolder}",
-        "sourceMaps": true,
-      },
-      {
-        "type": "vscode-edge-devtools.debug",
-        "request": "attach",
-        "name": "Attach to Microsoft Edge and open the Elements tool",
-        "url": "http://localhost:3000/",
-        "webRoot": "${workspaceFolder}"
       }
-      //   {
-      //     "type": "browser-preview",
-      //     "request": "attach",
-      //     "name": "Browser Preview: Attach"
-      // },
-      // {
-      //     "type": "browser-preview",
-      //     "request": "launch",
-      //     "name": "Browser Preview: Launch",
-      //     "url": "http://localhost:3000",
-      //     "webRoot": "${workspaceFolder}"
-      // }
+
 
     ]
 }

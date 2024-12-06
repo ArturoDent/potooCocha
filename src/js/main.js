@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // countryButton.addEventListener('click', e => { e.data })
 
-  titleBanner = document.getElementById("titleBanner");
+  // titleBanner = document.getElementById("titleBanner");
 
   numDaysButton = document.getElementById("numDays");
   numDaysButton.addEventListener("click", setNumDays);
@@ -98,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   getJSON("../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data);
 
-  mailLink = document.getElementById("mailLink");
-  mailLink.addEventListener("click", sendEmail);
+  // mailLink = document.getElementById("mailLink");
+  // mailLink.addEventListener("click", sendEmail);
 });
 
 window.addEventListener("load", function () {
@@ -110,10 +110,10 @@ window.addEventListener("unload", function () {
   updateActivityData("stop");
 });
 
-function sendEmail() {
-  // TODO : can this be obfuscated?  unicode??
-  window.location.href = "mailto:mark@potoococha.net";
-}
+// function sendEmail() {
+//   // TODO : can this be obfuscated?  unicode??
+//   window.location.href = "mailto:mark@potoococha.net";
+// }
 
 function toggleCountryMenuLayer(evt) {
 
@@ -256,7 +256,7 @@ function setChecklistCountryAuthors(country) {
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;28&nbsp;September&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;5&nbsp;December&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {

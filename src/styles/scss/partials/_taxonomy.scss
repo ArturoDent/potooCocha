@@ -1,135 +1,134 @@
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 
-.slideUpWrapper  {
-    position: relative;
-    top: -8rem;
-    // left: -3vw;
-    left: -0.5vw;
-    overflow-y: hidden;
-    max-height: 27rem;
-    width: 90%;
+// .slideUpWrapper  {
+//     position: relative;
+//     top: -8rem;
+//     // left: -3vw;
+//     left: -0.5vw;
+//     overflow-y: hidden;
+//     max-height: 27rem;
+//     width: 90%;
 
-    border-top: none;
-    border-bottom: none;
-    border-bottom-right-radius: 22%;
-    background-color: darken($bgColor, 15%);
-    transform: translateY(0) scaleY(100%);
-    // transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out;
-    transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out;
-}
+//     border-top: none;
+//     border-bottom: none;
+//     border-bottom-right-radius: 22%;
+//     background-color: darken($bgColor, 15%);
+//     transform: translateY(0) scaleY(100%);
+//     // transition: opacity 1s 600ms, transform 600ms 250ms ease-in-out;
+//     transition: opacity 1s 500ms, transform 600ms 250ms ease-in-out;
+// }
 
-.slideUpWrapper.panel  {
-  padding  :  0 2.5ch 0 2.5ch;
-}
+// .slideUpWrapper.panel  {
+//   padding  :  0 2.5ch 0 2.5ch;
+// }
 
-.slideUpWrapper.closeInstructions  {
-    // transform: scaleY(0) translateY(-27rem);
-    transform: translateY(-27rem);
-    opacity: 0;
-    transition: opacity 450ms, transform 600ms 250ms ease-in-out;
+// .slideUpWrapper.closeInstructions  {
+//     // transform: scaleY(0) translateY(-27rem);
+//     transform: translateY(-27rem);
+//     opacity: 0;
+//     transition: opacity 450ms, transform 600ms 250ms ease-in-out;
 
-}
+// }
 
-.slideUpWrapper +  #searchForm    {
-    // transform: translateY(-8rem);
+// .slideUpWrapper +  #searchForm    {
+//     // transform: translateY(-8rem);
 
-    transform: translateY(-7rem);
-    transition: all 400ms 200ms ease-in-out;
-}
+//     transform: translateY(-7rem);
+//     transition: all 400ms 200ms ease-in-out;
+// }
 
-.slideUpWrapper.closeInstructions +  #searchForm   {
-    border-bottom-left-radius: 0;
-    // border: 1px solid rgba(255,255,255,0.5);
-    border: 1px solid rgba(0,0,0,0.1);
-    // transform: translateY(-23.3rem);
-    // transform: translateY(-22rem);
-    // transform: translateY(-20rem);
-    transform: translateY(-19rem);
-    transition: all 400ms ease-in-out;
-}
+// .slideUpWrapper.closeInstructions +  #searchForm   {
+//     border-bottom-left-radius: 0;
+//     // border: 1px solid rgba(255,255,255,0.5);
+//     border: 1px solid rgba(0,0,0,0.1);
+//     // transform: translateY(-23.3rem);
+//     // transform: translateY(-22rem);
+//     // transform: translateY(-20rem);
+//     transform: translateY(-19rem);
+//     transition: all 400ms ease-in-out;
+// }
 
-#results-panel    {
-    pointer-events: none;
-    opacity  :  0;
+// #results-panel    {
+//     // pointer-events: none;
+//     // opacity  :  0;
     
-    // transform-origin: top left;
-    // transform: scaleY(0) translateY(0) !important;
-    // transform: translateY(0) !important;
-    transform: translateY(-10rem) !important;
-    // transition: transform 400ms ease-in;
-    transition: transform 500ms ease-in-out 100ms, opacity 400ms 300ms;
-}
+//     // transform: translateY(-10rem) !important;
+//     // transition: transform 500ms ease-in-out 100ms, opacity 400ms 300ms;
+// }
 
-#results-panel.closeInstructions:not(.resultsPanelBoolean)  {
-    // transform: scaleY(0) translateY(-10rem) !important;
-    transform: translateY(-10rem) !important;
-}
+// #results-panel.closeInstructions:not(.resultsPanelBoolean)  {
+//     // transform: scaleY(0) translateY(-10rem) !important;
+//     transform: translateY(-10rem) !important;
+// }
 
-#results-panel.closeInstructions.resultsPanelBoolean  {
-    pointer-events: all;
+// #results-panel.closeInstructions.resultsPanelBoolean  {
+//     pointer-events: all;
 
-    opacity : 1;
-    // height : 100%;
-    // transform: scaleY(1) translateY(-10rem) !important;
-    transform: translateY(-10rem) !important;
-}
+//     opacity : 1;
+//     // height : 100%;
+//     // transform: scaleY(1) translateY(-10rem) !important;
+//     transform: translateY(-10rem) !important;
+// }
 
-#results-panel.resultsPanelBoolean:not(.closeInstructions)  {
-    pointer-events: all;
+// #results-panel.resultsPanelBoolean:not(.closeInstructions)  {
+//     pointer-events: all;
 
-    opacity : 1;
-    // height : 100%;
-    transform: translateY(0) !important;
-}
+//     opacity : 1;
+//     // height : 100%;
+//     transform: translateY(0) !important;
+// }
 
-.taxInstructionsButton  {
-    position  :  absolute;
-    display: inline-block;
+// .taxInstructionsButton  {
+//     position  :  absolute;
+//     display: inline-block;
 
-    top : -2.6rem;
-    left : -6vw;
-    width  :  3rem;
-    height  :  3rem;
+//     top : -2.6rem;
+//     left : -6vw;
+//     width  :  3rem;
+//     height  :  3rem;
 
-    padding  :  0 0 0.15rem 0;
-    z-index  :  1;
+//     padding  :  0 0 0.15rem 0;
+//     z-index  :  1;
 
-    font-size  :  1.6rem;
-    font-weight  :  bold;
-    color  :  white;
-    text-align  :  center;
+//     font-size  :  1.6rem;
+//     font-weight  :  bold;
+//     color  :  white;
+//     text-align  :  center;
 
-    // border : 0.15rem solid  $goldHighlightColor;
-    border : 0.15rem solid  $greenHighlightColor;
-    border-radius  :  50%;
-    // background-color  :  darken($bgColor, 3%);
-    background-color  :  lighten($titleBannerColor, 5%);
-    box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
+//     // border : 0.15rem solid  $goldHighlightColor;
+//     border : 0.15rem solid  $greenHighlightColor;
+//     border-radius  :  50%;
+//     // background-color  :  darken($bgColor, 3%);
+//     background-color  :  lighten($titleBannerColor, 5%);
+//     box-shadow  :  inset 0 0 0 0.25px black, 0 0 0 0.25px black, 0 0 0 0.62rem $bgColor;
 
-    cursor  :  pointer;
-    transition: background-color 300ms;
-}
+//     cursor  :  pointer;
+//     transition: background-color 300ms;
+// }
 
-.taxInstructionsButton:hover, .taxInstructionsButton:focus {
-    outline: none;
-    background-color  :  black;
-    transition: background-color 300ms 250ms;
-}
+// .taxInstructionsButton:hover, .taxInstructionsButton:focus {
+//     outline: none;
+//     background-color  :  black;
+//     transition: background-color 300ms 250ms;
+// }
 
-.taxInstructionsButton.instructionsClosed .tooltip {
-    width  :  10rem;
-    // border : 0.15rem solid $greenHighlightColor;
-    border : 0.1rem solid $greenHighlightColor;
-    // background-color: $panelColor;
-    background-color: $turquoiseHighlightColor;
-    transform: rotate(0);
-}
+// .taxInstructionsButton.instructionsClosed .tooltip {
+//     width  :  10rem;
+//     // border : 0.15rem solid $greenHighlightColor;
+//     border : 0.1rem solid $greenHighlightColor;
+//     // background-color: $panelColor;
+//     background-color: $turquoiseHighlightColor;
+//     transform: rotate(0);
+// }
 
 #searchForm  {
     position  :  relative;
-    left: 2%;
+    // left: 2%;
+    left: 8vw;
     width : 80%;
     padding  : 0 0 1.8ch 0;
+    // margin-top: 2vh;
+    margin-bottom: 8vh;
 
     border: 1px solid transparent;
     background-color: darken($bgColor, 15%);
@@ -290,9 +289,10 @@
     height  :  auto;
     width : calc(100% + 7vw);
     // top : -7rem;
-    top : -5rem;
+    // top : -5rem;
     left : -7vw;
-    margin  : 5.5ch 0 2ch 0;
+    // margin  : 5.5ch 0 2ch 0;
+    margin-bottom: 2vh;
     padding  :  0;
 
     z-index: 0;
@@ -686,9 +686,10 @@
     position: relative;
     width: calc(100% + 7vw);
     height: 0;
-    top: 2rem;
+    // top: 2rem;
     left: -7vw;
-    margin: 0 0 -20.5ch 0;
+    // margin: 0 0 -20.5ch 0;
+    margin: 0;
     padding :  5ch 0 0 0;
 
     z-index : 0;
@@ -698,19 +699,20 @@
     // overscroll-behavior: contain;  doesn't seem to work anywhere
     // overscroll-behavior: none;
 
-    transform: translateY(-13rem);
+    // transform: translateY(-13rem);
     transition: all 400ms ease-in-out;
 }
 
 #tax-panel.setTaxPanelHeight  {
     opacity : 1;
     height: auto;
-    margin: 1ch 0 -10ch 0;
+    // margin: 1ch 0 -10ch 0;
+    margin: 0;
 }
 
 #fakeTaxPageBox  {
     position : relative;
-    top : -1.5ch;
+    // top : -1.5ch;
     height : 100%;
     width : calc(100% - 7vw);
     left : 7vw;

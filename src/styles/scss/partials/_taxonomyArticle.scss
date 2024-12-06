@@ -1,6 +1,6 @@
 #taxonomyArticle {
     position  :  relative;
-    left: 3vw;
+    // left: 2vw;
     border : none;
     box-shadow : none;
     -webkit-transition  :  all 850ms ease-in-out;
@@ -11,15 +11,16 @@
 
 .searchWord {
     position  :  relative;
-    left : -5.4rem;
+    // left : -5.4rem;
     width : calc(42vw + 10ch);
     // height: 23ch;
-    height: 30vh;
-    padding  :  3vw 4vw 0 4vw;
+    // height: 30vh;
+    // height: 25vh;
+    padding  :  1.5vw 2vw 1.5vw 2vw;
 
     z-index: 0;
 
-    font-size : 1.06rem;
+    font-size : 1rem;
     line-height : 1.8rem;
     text-align: center;
     color: $panelFlyoutFontColor;
@@ -38,25 +39,25 @@
 }
 
 .taxArticleMain {
-    padding  : 1.15rem 0 0 0;
+    padding  : 0.5rem 0 0 0;
     line-height: 1.5rem;
     text-align: center;
 }
 
-.linkHighlight {
-    padding : 0 0.23rem 0.077rem 0.31rem;
-    border-radius: 0.15rem;
-    border : solid 0.077rem transparent;
-    border-bottom  :  solid 0.077rem $panelFlyoutFontColor;
-    box-shadow : 0 0.077rem rgba(0,0,0,0.5);
-    transition: border 850ms;
-}
+// .linkHighlight {
+//     padding : 0 0.23rem 0.077rem 0.31rem;
+//     border-radius: 0.15rem;
+//     border : solid 0.077rem transparent;
+//     border-bottom  :  solid 0.077rem $panelFlyoutFontColor;
+//     box-shadow : 0 0.077rem rgba(0,0,0,0.5);
+//     transition: border 850ms;
+// }
 
-.linkHighlight:hover, .linkHighlight:focus {
-    outline: none;
-    border: solid 0.077rem $panelFlyoutFontColor;
-}
+// .linkHighlight:hover, .linkHighlight:focus {
+//     outline: none;
+//     border: solid 0.077rem $panelFlyoutFontColor;
+// }
 
-.linkHighlight:visited {
-    background-color: $greenHighlightColor;
-}
+// .linkHighlight:visited {
+//     background-color: $greenHighlightColor;
+// }

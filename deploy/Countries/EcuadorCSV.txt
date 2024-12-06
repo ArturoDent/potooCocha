@@ -144,18 +144,18 @@ E,Galapagos Dove,Z. galapagoensis
 ,Sand-colored Nighthawk,C. rupestris
 ,Lesser Nighthawk,C. acutipennis
 ,Common Nighthawk,C. minor
+,Band-tailed Nighthawk,Nyctiprogne leucopyga
 ,Short-tailed Nighthawk,Lurocalis semitorquatus
 ,Rufous-bellied Nighthawk,L. rufiventris
-,Band-tailed Nighthawk,Nyctiprogne leucopyga
 ,Blackish Nightjar,Nyctipolus nigrescens
-,Band-winged Nightjar,Systellura longirostris
 ,Common Pauraque,Nyctidromus albicollis
 ,Scrub Nightjar,N. anthonyi
 ,Swallow-tailed Nightjar,Uropsalis segmentata
 ,Lyre-tailed Nightjar,U. lyra
-,White-tailed Nightjar,Hydropsalis cayennensis
-,Spot-tailed Nightjar,H. maculicaudus
+,Spot-tailed Nightjar,Hydropsalis maculicaudus
+,White-tailed Nightjar,H. cayennensis
 ,Ladder-tailed Nightjar,H. climacocerca
+,Band-winged Nightjar,Systellura longirostris
 ,Choco Poorwill,Nyctiphrynus rosenbergi
 ,Ocellated Poorwill,N. ocellatus
 ,Rufous Nightjar,Antrostomus rufus
@@ -542,7 +542,7 @@ E,Galapagos Shearwater,P. subalaris
 ,Masked Booby,S. dactylatra
 ,Nazca Booby,S. granti
 ,Red-footed Booby,S. sula
-,Brown Booby,S. leucogaster
+,Brewster's Booby,S. brewsteri
 
 ,ANHINGAS,ANHINGIDAE
 ,Anhinga,Anhinga anhinga
@@ -806,7 +806,7 @@ E,Galapagos Hawk,B. galapagoensis
 ,Lineated Woodpecker,Dryocopus lineatus
 ,Cinnamon Woodpecker,Celeus loricatus
 ,Ringed Woodpecker,C. torquatus
-,Scale-breasted Woodpecker,C. grammicus
+,Variable Woodpecker,C. undatus
 ,Cream-colored Woodpecker,C. flavus
 ,Rufous-headed Woodpecker,C. spectabilis
 ,Chestnut Woodpecker,C. elegans
@@ -1157,8 +1157,7 @@ E,Ecuadorian Tapaculo,S. robbinsi
 
 ,MANAKINS,PIPRIDAE
 ,Dwarf Tyrant-Manakin,Tyranneutes stolzmanni
-,Yellow-headed Manakin,Chloropipo flavicapilla
-,Jet Manakin,C. unicolor
+,Jet Manakin,Chloropipo unicolor
 ,Blue-backed Manakin,Chiroxiphia pareola
 ,Golden-winged Manakin,Masius chrysopterus
 ,Green Manakin,Cryptopipo holochlora
@@ -1307,6 +1306,7 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Small-billed Elaenia,E. parvirostris
 ,Slaty Elaenia,E. strepera
 ,Mottle-backed Elaenia,E. gigas
+,Brownish Elaenia,E. pelzelni
 ,Lesser Elaenia,E. chiriquensis
 ,Coopmans's Elaenia,E. brachyptera
 ,Highland Elaenia,E. obscura
@@ -1404,6 +1404,7 @@ E,Galapagos Flycatcher,M. magnirostris
 ,Slaty-backed Chat-Tyrant,Ochthoeca cinnamomeiventris
 ,Rufous-breasted Chat-Tyrant,O. rufipectoralis
 ,Brown-backed Chat-Tyrant,O. fumicolor
+,Piura Chat-Tyrant,O. piurae
 ,White-browed Chat-Tyrant,O. leucophrys
 ,Tumbes Tyrant,Tumbezia salvini
 ,Amazonian Scrub-Flycatcher,Sublegatus obscurior
@@ -1836,7 +1837,8 @@ E,Large Ground-Finch,G. magnirostris
 E,Española Ground-Finch,G. conirostris
 ,Glistening-green Tanager,Chlorochrysa phoenicotis
 ,Orange-eared Tanager,C. calliparaea
-,Red-capped Cardinal,Paroaria gularis
+,Red-crested Cardinal,Paroaria coronata
+,Red-capped Cardinal,P. gularis
 ,Black-faced Tanager,Schistochlamys melanopis
 ,Magpie Tanager,Cissopis leverianus
 ,Vermilion Tanager,Calochaetes coccineus

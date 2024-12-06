@@ -291,29 +291,29 @@ E,Scaled Ground-Cuckoo,N. squamiger
 ,Lesser Nighthawk,C. acutipennis
 ,Common Nighthawk,C. minor
 ,Antillean Nighthawk,C. gundlachii
-,Short-tailed Nighthawk,Lurocalis semitorquatus
-,Rufous-bellied Nighthawk,L. rufiventris
 ,Band-tailed Nighthawk,Nyctiprogne leucopyga
 E,Bahian Nighthawk,N. vielliardi
+,Short-tailed Nighthawk,Lurocalis semitorquatus
+,Rufous-bellied Nighthawk,L. rufiventris
 ,Blackish Nightjar,Nyctipolus nigrescens
 E,Pygmy Nightjar,N. hirundinaceus
-,Band-winged Nightjar,Systellura longirostris
-,Tschudi's Nightjar,S. decussata
 ,Common Pauraque,Nyctidromus albicollis
 ,Scrub Nightjar,N. anthonyi
-,White-winged Nightjar,Eleothreptus candicans
-,Sickle-winged Nightjar,E. anomalus
+,Roraiman Nightjar,Tepuiornis whitelyi
 ,Swallow-tailed Nightjar,Uropsalis segmentata
 ,Lyre-tailed Nightjar,U. lyra
+,Tschudi's Nightjar,Quechuavis decussata
 ,Todd's Nightjar,Setopagis heterura
 ,Little Nightjar,S. parvula
-,Roraiman Nightjar,S. whitelyi
 E,Cayenne Nightjar,S. maculosa
-,White-tailed Nightjar,Hydropsalis cayennensis
-,Spot-tailed Nightjar,H. maculicaudus
+,Spot-tailed Nightjar,Hydropsalis maculicaudus
+,Long-trained Nightjar,H. forcipata
+,White-tailed Nightjar,H. cayennensis
 ,Ladder-tailed Nightjar,H. climacocerca
 ,Scissor-tailed Nightjar,H. torquata
-,Long-trained Nightjar,Macropsalis forcipata
+,Band-winged Nightjar,Systellura longirostris
+,White-winged Nightjar,Eleothreptus candicans
+,Sickle-winged Nightjar,E. anomalus
 ,Choco Poorwill,Nyctiphrynus rosenbergi
 ,Ocellated Poorwill,N. ocellatus
 ,Silky-tailed Nightjar,Antrostomus sericocaudatus
@@ -417,7 +417,7 @@ E,Tepui Goldenthroat,P. milleri
 ,Tourmaline Sunangel,H. exortis
 ,Little Sunangel,H. micraster
 ,Purple-throated Sunangel,H. viola
-E,Bogota Sunangel,H. zusii
+,Bogota Sunangel,H. zusii
 ,Royal Sunangel,H. regalis
 ,Green-backed Firecrown,Sephanoides sephaniodes
 E,Juan Fernandez Firecrown,S. fernandensis
@@ -981,6 +981,7 @@ E,Galapagos Shearwater,P. subalaris
 ,Nazca Booby,S. granti
 ,Red-footed Booby,S. sula
 ,Brown Booby,S. leucogaster
+,Brewster's Booby,S. brewsteri
 
 ,ANHINGAS,ANHINGIDAE
 ,Anhinga,Anhinga anhinga
@@ -1382,8 +1383,7 @@ E,Yellow-eared Woodpecker,D. maculifrons
 ,Cinnamon Woodpecker,Celeus loricatus
 ,Ringed Woodpecker,C. torquatus
 ,Helmeted Woodpecker,C. galeatus
-,Scale-breasted Woodpecker,C. grammicus
-,Waved Woodpecker,C. undatus
+,Variable Woodpecker,C. undatus
 ,Cream-colored Woodpecker,C. flavus
 ,Rufous-headed Woodpecker,C. spectabilis
 E,Kaempfer's Woodpecker,C. obrieni
@@ -1455,6 +1455,7 @@ E,Rufous-fronted Parakeet,B. ferrugineifrons
 ,Tepui Parrotlet,Nannopsittaca panychlora
 ,Amazonian Parrotlet,N. dachilleae
 ,Monk Parakeet,Myiopsitta monachus
+E,Cliff Parakeet,M. luchsi
 ,Tui Parakeet,Brotogeris sanctithomae
 E,Plain Parakeet,B. tirica
 ,Canary-winged Parakeet,B. versicolurus
