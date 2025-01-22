@@ -41,7 +41,8 @@ var searchInstructionsOpen = true;
 
 /* global   currentMap  currentCountry  */
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", function () {
 
   // searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
   // searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";

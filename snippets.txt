@@ -1,98 +1,131 @@
-  css "C:\WINDOWS\system32\NOTEPAD.EXE"
-txt "C:\Windows\notepad.exe"
-
-C:\Users\Mark\AppData\Roaming\Code\User\settings.json
-
-C:\Users\Mark\AppData\Local\Programs\Microsoft VS Code\Code.exe
-
-
+const ftpGlobs = [
   
-   // gulp.task('Preprocess HTML', function () {
-//   console.log("in Preprocess HTML");
-//   return gulp.src('./');
-// });
-
-// // function PreprocessHTML() {
-// //   console.log("in Preprocess HTML");
-// //   return gulp.src('./');
-// // }
-
-// function PreprocessStyles() {
-//   console.log("in Preprocess styles");
-//   return gulp.src('./');
-// }
-
-// function testTaskTrue() {
-//   console.log("in testTaskTrue");
-//   return gulp.src('./');
-// }
-
-function build (path)  {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve('resolved');
-    }, 2000);
-    console.log("2 path = " + path);
-  });
-};
-
-function anotherTask (path)  {
-  return new Promise(resolve => { console.log("4 path = " + path); });
-};
-
-function testWatch () {
-
-  console.log("in testWatch");
-
-  var watcher = gulp.watch('src/js/*.js', { debounceDelay: 2000 });
-
-  watcher.on('change', async function (path, stats) {
-
-    console.log('1 File ' + path + ' was changed');
-    await build(path);
-    console.log("3 after build");
-
-    await anotherTask(path);
-    console.log("5 after anotherTask");
-  });
-};
-
-gulp.task('default', gulp.series(testWatch));
-
-/* <defs>
-    <pattern id="pattern-circles"  x="10" y="10" width="30" height="30" patternUnits="userSpaceOnUse">
-      <rect x="0" y="0" width="30" height="30" fill="#00838f"/>
-      <circle cx="4" cy="4" r="3" stroke="none" fill="#fff" />
-    </pattern>
-
-    <pattern id="pattern-vertStripes" x="0" y="10" width="18" height="3" patternUnits="userSpaceOnUse" >
-      <rect x="0"  y="0" width="2" height="3" fill="#fff"/>
-      <rect x="1"  y="0" width="15" height="3" fill="#f00"/>
-    </pattern>
-
-    <pattern id="pattern-horizStripes" x="0" y="10" width="3" height="18" patternUnits="userSpaceOnUse" >
-      <rect x="0"  y="0" width="3" height="3" fill="#000"/>
-      <rect x="0"  y="3" width="3" height="15" fill="#f38714"/>
-    </pattern>
-  </defs> */
-  
-  -------------------------------------------------------------------------------------------------------------------
-  
-  <li class="family"><span class="fco">INCERTAE SEDIS</span><span class="fsc"></span></li>
-    <li data-i="2592" class="bird"><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>
-    <li data-i="2593" class="bird"><span class="ince">Black-capped Piprites</span><span>Piprites pileata</span></li>
-    
-  <li class="family"><span class="fTitle"><span class="fco">INCERTAE SEDIS</span><span class="fsc"></span></span>
-	<ul class="birds">
-
-	  <li data-i="2592"><span class="ince">Wing-barred Piprites</span><span>Piprites chloris</span></li>
-	  <li data-i="2593"><span class="ince">Black-capped Piprites</span><span>Piprites pileata</span></li>
-	</ul></li>
-  
-  --------------------------------------------------------------------------------------------------------------------
-    
-  <li class="family"><span class="fco">RAILS</span><span class="fsc">RALLIDAE</span></li>
-    <li data-i="628" class="bird"><span class="extinct">American Coot</span><span>Fulica americana</span></li>
-    
-  <li class="family"><span class="fco">SPARROWS</span><span class="fsc">PASSERELLIDAE</span></li>
-    <li data-i="2851" class="bird"><span class="extinct">Grasshopper Sparrow</span><span>Ammodramus savannarum</span></li>
+  'deploy/home.html',
+  'deploy/citations.html',
+  'deploy/svg/SouthAmerica.svg',
+  'deploy/php/sendCSV.php',
+  'deploy/php/makePDF.php',
+  'deploy/php/collectVisits.php',
+  'deploy/php/collectDownloads.php',
+  'deploy/php/collectActivity.php',
+  'deploy/occurrences/occurrences.txt',
+  'deploy/JSON/Venezuela/Venezuela.json',
+  'deploy/JSON/Uruguay/Uruguay.json',
+  'deploy/JSON/Trinidad/Trinidad.json',
+  'deploy/JSON/Suriname/Suriname.json',
+  'deploy/JSON/SouthAmerica/SouthAmerica.json',
+  'deploy/JSON/Peru/Peru.json',
+  'deploy/JSON/Paraguay/Paraguay.json',
+  'deploy/JSON/Guyana/Guyana.json',
+  'deploy/JSON/FrenchGuiana/FrenchGuiana.json',
+  'deploy/JSON/Falklands/Falklands.json',
+  'deploy/JSON/Ecuador/Ecuador.json',
+  'deploy/JSON/Curacao/Curacao.json',
+  'deploy/JSON/Colombia/Colombia.json',
+  'deploy/JSON/Chile/Chile.json',
+  'deploy/JSON/Brazil/Brazil.json',
+  'deploy/JSON/Bonaire/Bonaire.json',
+  'deploy/JSON/Bolivia/Bolivia.json',
+  'deploy/JSON/Aruba/Aruba.json',
+  'deploy/JSON/Argentina/Argentina.json',
+  'deploy/js/app.min.js',
+  'deploy/flags/Venezuela.png',
+  'deploy/flags/Uruguay.png',
+  'deploy/flags/Trinidad-and-tobago.png',
+  'deploy/flags/Suriname.png',
+  'deploy/flags/South-America2.png',
+  'deploy/flags/South-America.png',
+  'deploy/flags/South-America-min.png',
+  'deploy/flags/Peru.png',
+  'deploy/flags/Paraguay.png',
+  'deploy/flags/Guyana.png',
+  'deploy/flags/French-Southern.png',
+  'deploy/flags/Falkland-islands.png',
+  'deploy/flags/Ecuador.png',
+  'deploy/flags/Curacao.png',
+  'deploy/flags/Colombia.png',
+  'deploy/flags/Chile.png',
+  'deploy/flags/Brazil.png',
+  'deploy/flags/Bonaire.png',
+  'deploy/flags/Bolivia.png',
+  'deploy/flags/Aruba.png',
+  'deploy/flags/Argentina.png',
+  'deploy/css/styles.min.css',
+  'deploy/Countries/VenezuelaSACC.html',
+  'deploy/Countries/VenezuelaPDF.txt',
+  'deploy/Countries/VenezuelaCSV.txt',
+  'deploy/Countries/UruguaySACC.html',
+  'deploy/Countries/UruguayPDF.txt',
+  'deploy/Countries/UruguayCSV.txt',
+  'deploy/Countries/TrinidadSACC.html',
+  'deploy/Countries/TrinidadPDF.txt',
+  'deploy/Countries/TrinidadCSV.txt',
+  'deploy/Countries/SurinameSACC.html',
+  'deploy/Countries/SurinamePDF.txt',
+  'deploy/Countries/SurinameCSV.txt',
+  'deploy/Countries/SouthAmericaSACC.html',
+  'deploy/Countries/SouthAmericaPDF.txt',
+  'deploy/Countries/SouthAmericaCSV.txt',
+  'deploy/Countries/PeruSACC.html',
+  'deploy/Countries/PeruPDF.txt',
+  'deploy/Countries/PeruCSV.txt',
+  'deploy/Countries/ParaguaySACC.html',
+  'deploy/Countries/ParaguayPDF.txt',
+  'deploy/Countries/ParaguayCSV.txt',
+  'deploy/Countries/GuyanaSACC.html',
+  'deploy/Countries/GuyanaPDF.txt',
+  'deploy/Countries/GuyanaCSV.txt',
+  'deploy/Countries/FrenchGuianaSACC.html',
+  'deploy/Countries/FrenchGuianaPDF.txt',
+  'deploy/Countries/FrenchGuianaCSV.txt',
+  'deploy/Countries/FalklandsSACC.html',
+  'deploy/Countries/FalklandsPDF.txt',
+  'deploy/Countries/FalklandsCSV.txt',
+  'deploy/Countries/EcuadorSACC.html',
+  'deploy/Countries/EcuadorPDF.txt',
+  'deploy/Countries/EcuadorCSV.txt',
+  'deploy/Countries/CuracaoSACC.html',
+  'deploy/Countries/CuracaoPDF.txt',
+  'deploy/Countries/CuracaoCSV.txt',
+  'deploy/Countries/ColombiaSACC.html',
+  'deploy/Countries/ColombiaPDF.txt',
+  'deploy/Countries/ColombiaCSV.txt',
+  'deploy/Countries/ChileSACC.html',
+  'deploy/Countries/ChilePDF.txt',
+  'deploy/Countries/ChileCSV.txt',
+  'deploy/Countries/BrazilSACC.html',
+  'deploy/Countries/BrazilPDF.txt',
+  'deploy/Countries/BrazilCSV.txt',
+  'deploy/Countries/BonaireSACC.html',
+  'deploy/Countries/BonairePDF.txt',
+  'deploy/Countries/BonaireCSV.txt',
+  'deploy/Countries/BoliviaSACC.html',
+  'deploy/Countries/BoliviaPDF.txt',
+  'deploy/Countries/BoliviaCSV.txt',
+  'deploy/Countries/ArubaSACC.html',
+  'deploy/Countries/ArubaPDF.txt',
+  'deploy/Countries/ArubaCSV.txt',
+  'deploy/Countries/ArgentinaSACC.html',
+  'deploy/Countries/ArgentinaPDF.txt',
+  'deploy/Countries/ArgentinaCSV.txt',
+  'deploy/Authors/Venezuela.txt',
+  'deploy/Authors/Uruguay.txt',
+  'deploy/Authors/Trinidad.txt',
+  'deploy/Authors/Suriname.txt',
+  'deploy/Authors/SouthAmerica.txt',
+  'deploy/Authors/Peru.txt',
+  'deploy/Authors/Paraguay.txt',
+  'deploy/Authors/Guyana.txt',
+  'deploy/Authors/FrenchGuiana.txt',
+  'deploy/Authors/Falklands.txt',
+  'deploy/Authors/Ecuador.txt',
+  'deploy/Authors/Curacao.txt',
+  'deploy/Authors/Colombia.txt',
+  'deploy/Authors/Chile.txt',
+  'deploy/Authors/Brazil.txt',
+  'deploy/Authors/Bonaire.txt',
+  'deploy/Authors/Bolivia.txt',
+  'deploy/Authors/AuthorsAbridged.json',
+  'deploy/Authors/Aruba.txt',
+  'deploy/Authors/Argentina.txt',
+];

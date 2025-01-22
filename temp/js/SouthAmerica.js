@@ -47,13 +47,21 @@ function initCurrentMap() {
 // eslint-disable-next-line
 function prepareSVGstyles(obj) {
 
-  var svg = document.getElementById(obj);
+  // var svg = document.getElementById(obj);
+  // // currentBirdMap
 
-  var svgDoc = svg.contentDocument;
+  let currentBirdMap = document.getElementById("currentBirdMap");
+  // let Ecuador = currentBirdMap.querySelector("#Ecuador").nodeName;
+
+  let svgDoc;
+
+  // svgDoc = svg.contentDocument;
+  // if (!svgDoc) svgDoc = svg.getSVGDocument();
 
   for (var country in countries) {
 
-    var cc = svgDoc.getElementById(country);
+    // var cc = svgDoc.getElementById(country);
+    var cc = currentBirdMap.querySelector("#" + country);
 
     if (!cc) continue;
 
@@ -82,13 +90,21 @@ function setSVGstyles(obj) {
 
 function fillSAMmap(skipCountry) {
 
-  var svg;
-  svg = currentMap.querySelector("#SAMsvg");
-  var svgDoc = svg.contentDocument;
+  // var svg;
+  // svg = currentMap.querySelector("#SAMsvg");
+  // // var svgDoc = svg.contentDocument;
+  
+  // svgDoc = svg.contentDocument;
+  // if (!svgDoc) svgDoc = svg.getSVGDocument();
+
+  let currentBirdMap = document.getElementById("currentBirdMap");
+
 
   for (var country in countries) {
 
-    var cc = svgDoc.getElementById(country);
+    // var cc = svgDoc.getElementById(country);
+    var cc = currentBirdMap.querySelector("#" + country);
+
     if (!cc || cc === skipCountry) continue;
     newFillColor(cc, baseColor);
     newStrokeColor(cc, baseStrokeColor);
@@ -130,10 +146,17 @@ function newFillColor(obj, newColor) {
 // eslint-disable-next-line
 function selectedCountryFill(selectedCountry) {
 
-  var svg = currentMap.querySelector("#SAMsvg");
-  var svgDoc = svg.contentDocument;
+  // var svg = currentMap.querySelector("#SAMsvg");
+  // // var svgDoc = svg.getSVGDocument();
+  // // var svgDoc = svg.contentDocument;
+  
+  // svgDoc = svg.contentDocument;
+  // if (!svgDoc) svgDoc = svg.getSVGDocument();
 
-  var cc = svgDoc.getElementById(selectedCountry);
+  // var cc = svgDoc.getElementById(selectedCountry);
+
+  let currentBirdMap = document.getElementById("currentBirdMap");
+  let cc = currentBirdMap.querySelector("#" + selectedCountry);
 
   fillSAMmap(cc);
   newFillColor(cc, selectedCountryFillColor);
@@ -163,23 +186,34 @@ function newStrokeColor(obj, newColor) {
   }
 }
 
-/* global  mapsCollection saveMapButton  */
+/* global  mapsCollection saveMapButton  currentMap */
 // eslint-disable-next-line
 function highlightSAMmap(index, current) {
-  var svg;
+  // var svg;
 
-  if (current === "currentMap") {
-    svg = currentMap.querySelector("#SAMsvg");
-  }
-  else {
-    svg = document.getElementById(current);
-  }
-  var svgDoc = svg.contentDocument;
+  let currentBirdMap = document.getElementById("currentBirdMap");
+  // let cc = currentBirdMap.querySelector(selectedCountry);
+
+  // TODO: figure this out ***
+  // if (current === "currentMap") {
+  //   svg = currentMap.querySelector("#SAMsvg");
+  // }
+  // else {
+  //   svg = document.getElementById(current);
+  // }
+
+  // var svgDoc = svg.contentDocument;
+  // // var svgDoc = svg.getSVGDocument();
+  
+  // svgDoc = svg.contentDocument;
+  // if (!svgDoc) svgDoc = svg.getSVGDocument();
+
   var cList = birds[index].split("-");  // cList = []
 
   for (var country in countries) {
 
-    var cc = svgDoc.getElementById(country);
+    // var cc = svgDoc.getElementById(country);
+    let cc = currentBirdMap.querySelector("#" + country);
 
     if (!cc) continue;
 

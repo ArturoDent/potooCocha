@@ -38,9 +38,10 @@ var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "
   "South America": "SAM"
 };
 
-/* global  loadCountryTaxonomy selectedCountryFill fillSAMmap  */
+/* global  loadCountryTaxonomy selectedCountryFill fillSAMmap  initCurrentMap */
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {  // this doesn't wait for images, iFrames, etc. to be loaded
+window.addEventListener("load", function () {
 
   countryButton = document.getElementById("countryButton");
   countryButton.addEventListener("click", toggleCountryMenuLayer);
@@ -98,13 +99,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   getJSON("../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data);
 
+  updateActivityData("start");
+
+  initCurrentMap();
+
   // mailLink = document.getElementById("mailLink");
   // mailLink.addEventListener("click", sendEmail);
 });
 
-window.addEventListener("load", function () {
-  updateActivityData("start");
-});
+// window.addEventListener("load", function () {
+//   updateActivityData("start");
+// });
 
 window.addEventListener("unload", function () {
   updateActivityData("stop");
@@ -252,11 +257,11 @@ function setChecklistCountryAuthors(country) {
 
   if (country === "French Guiana") selectedCountryFill("FrenchGuiana");
   else if (country !== "South America") selectedCountryFill(country);
-  else fillSAMmap("");
+  else fillSAMmap("");  // when is this called ?
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;5&nbsp;December&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;23&nbsp;December&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {

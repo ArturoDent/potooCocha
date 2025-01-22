@@ -48,9 +48,11 @@
 
 // #thin1, #thin2, etc.
 [id^=thin] {
-    //  TODO  : using vw for the hieght?  must be weird on small screens in portrait mode??
+    //  TODO  : using vw for the height?  must be weird on small screens in portrait mode??
     height: calc(100vw / 4.5);
     width: auto;
+    position  :  relative;
+    top: 17px;
 }
 
 .smallBird .drawing  {
@@ -66,7 +68,7 @@
     width  :  calc(100% + 40%);
 
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.75rem;     // TODO: increase this a little
     line-height  : 1rem;
 }
 

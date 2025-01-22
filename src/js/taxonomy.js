@@ -41,7 +41,8 @@ var searchInstructionsOpen = true;
 
 /* global   currentMap  currentCountry  */
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", function () {
 
   // searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
   // searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";
@@ -403,7 +404,8 @@ function gotoMatch(e) {
   // <li class="family"><span class="fco">HUMMINGBIRDS</span><span class="fsc">TROCHILIDAE</span></li>
   // <li data-i="316" class="bird"><span>Fiery Topaz</span><span>Topaza pyra</span></li>
 
-  var ev = e || window.event;  // window.event for IE8-
+  var ev = e || window.event;  // window.event for IE8-  TODO: simplify with ??=
+  // ev ??= window.event
   var clicked = ev.target.closest("li");  // works
 
   if (clicked) var clickedClass = clicked.className;
@@ -512,7 +514,7 @@ function toggleFamilyOpen(event) {
   // taxPage is not open yet
   if (!numFamilies) return;
 
-  event = event || window.event;  // window.event for IE8-
+  event = event || window.event;  // window.event for IE8-  TODO: use ??= instead
 
   var familyUList;
   var familyHeader;

@@ -13,6 +13,9 @@ $bodyBorderColor : $titleBannerColor;
 // $panelColor : darken($bgColor, 5%);
 $panelColor : darken($bgColor, 10%);
 
+// color.scale($color, $lightness: 11.4864864865%)
+// color.adjust($color, $lightness: 5%)
+
 $slateHoverColor : rgb(56, 61, 61);
 
 // $greenHighlightColor: #4db088;
@@ -54,7 +57,8 @@ $overlayColor : $bgColor;
 
 $overlayInfoColor : #ce402e;
 
-$mapCollectionColor: $bgColor;
+// $mapCollectionColor: $bgColor;
+$mapCollectionColor: darken($bgColor, 20%);
 // $mapCollectionColor: #444;
 
 $sampleTableBGColor: #fefefe;

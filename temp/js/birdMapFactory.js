@@ -75,10 +75,10 @@ function saveCurrentMap()  {
   // reattach eventListeners
 
   var thisInstance = map.children[0];
-
   var dupNode = thisInstance.cloneNode(true);
   dupNode.classList.remove("birdMapInstance");
   dupNode.classList.add("smallBird");
+
 
   dupNode.querySelector(".birdName").classList.add("smallBirdText");
 
@@ -121,13 +121,12 @@ function saveCurrentMap()  {
     this.classList.remove("hover");
   });
 
+  // document.getElementById("thin" + currentID).onload = function () {
 
-  document.getElementById("thin" + currentID).onload = function () {
-
-    highlightSAMmap(lastIndex, "thin" + currentID);
-    mapsCollection.lastChild.style.opacity = "1";
-    currentID++;
-  };
+  highlightSAMmap(lastIndex, "thin" + currentID);
+  mapsCollection.lastChild.style.opacity = "1";
+  currentID++;
+  // };
 }
 
 function repositionChildMaps(numChildren) {
