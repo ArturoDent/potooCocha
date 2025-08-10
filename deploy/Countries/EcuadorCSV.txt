@@ -435,10 +435,11 @@ E,Galapagos Rail,L. spilonota
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,GULLS,LARIDAE
+,Brown Noddy,Anous stolidus
+,Black Noddy,A. minutus
+,Blue-billed White-Tern,Gygis candida
+,Black Skimmer,Rynchops niger
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Sabine's Gull,Xema sabini
 ,Bonaparte's Gull,Chroicocephalus philadelphia
@@ -455,9 +456,6 @@ E,Lava Gull,L. fuliginosus
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Herring Gull,L. argentatus
-,Brown Noddy,Anous stolidus
-,Black Noddy,A. minutus
-,White Tern,Gygis alba
 ,Sooty Tern,Onychoprion fuscatus
 ,Bridled Tern,O. anaethetus
 ,Least Tern,Sternula antillarum
@@ -484,7 +482,7 @@ E,Lava Gull,L. fuliginosus
 
 ,PENGUINS,SPHENISCIDAE
 ,Humboldt Penguin,Spheniscus humboldti
-E,Galapagos Penguin,S. mendiculus
+,Galapagos Penguin,S. mendiculus
 
 ,ALBATROSSES,DIOMEDEIDAE
 ,Waved Albatross,Phoebastria irrorata
@@ -512,7 +510,8 @@ E,Galapagos Penguin,S. mendiculus
 ,Northern Giant-Petrel,M. halli
 ,Southern Fulmar,Fulmarus glacialoides
 ,Pintado Petrel,Daption capense
-,Mottled Petrel,Pterodroma inexpectata
+,Kermadec Petrel,Pterodroma neglecta
+,Mottled Petrel,P. inexpectata
 ,Galapagos Petrel,P. phaeopygia
 ,Juan Fernandez Petrel,P. externa
 ,Antarctic Prion,Pachyptila desolata
@@ -523,8 +522,9 @@ E,Galapagos Penguin,S. mendiculus
 ,Sooty Shearwater,A. grisea
 ,Pink-footed Shearwater,A. creatopus
 ,Flesh-footed Shearwater,A. carneipes
-,Manx Shearwater,Puffinus puffinus
-E,Galapagos Shearwater,P. subalaris
+,Christmas Shearwater,Puffinus nativitatis
+,Manx Shearwater,P. puffinus
+,Galapagos Shearwater,P. subalaris
 ,Peruvian Diving-Petrel,Pelecanoides garnotii
 
 ,STORKS,CICONIIDAE
@@ -560,26 +560,26 @@ E,Flightless Cormorant,P. harrisi
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,Fasciated Tiger-Heron,T. fasciatum
-,Agami Heron,Agamia agami
 ,Boat-billed Heron,Cochlearius cochlearius
+,Agami Heron,Agamia agami
 ,Zigzag Heron,Zebrilus undulatus
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
-,Black-crowned Night-Heron,Nycticorax nycticorax
+,Capped Heron,Pilherodius pileatus
+,Whistling Heron,Syrigma sibilatrix
+,Little Blue Heron,Egretta caerulea
+,Tricolored Heron,E. tricolor
+,Reddish Egret,E. rufescens
+,Snowy Egret,E. thula
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Green Heron,B. virescens
 ,Cattle Egret,Bubulcus ibis
-,Great Blue Heron,Ardea herodias
+,Great Egret,Ardea alba
+,Great Blue Heron,A. herodias
 ,Cocoi Heron,A. cocoi
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
-,Capped Heron,Pilherodius pileatus
-,Tricolored Heron,Egretta tricolor
-,Reddish Egret,E. rufescens
-,Snowy Egret,E. thula
-,Little Blue Heron,E. caerulea
 
 ,IBISES,THRESKIORNITHIDAE
 ,White Ibis,Eudocimus albus
@@ -653,7 +653,7 @@ E,Galapagos Hawk,B. galapagoensis
 ,Zone-tailed Hawk,B. albonotatus
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,White-throated Screech-Owl,Megascops albogularis
@@ -1055,7 +1055,7 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Slender-billed Miner,Geositta tenuirostris
 ,Spot-throated Woodcreeper,Certhiasomus stictolaemus
 ,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,Long-tailed Woodcreeper,Deconychura longicauda
+,Mournful Long-tailed Woodcreeper,Deconychura pallida
 ,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,White-chinned Woodcreeper,D. merula
 ,Plain-brown Woodcreeper,D. fuliginosa
@@ -1399,8 +1399,8 @@ E,Galapagos Flycatcher,M. magnirostris
 ,Bran-colored Flycatcher,M. fasciatus
 ,Mouse-gray Flycatcher,M. crypterythrus
 ,Crowned Chat-Tyrant,Silvicultrix frontalis
-,Jelski's Chat-Tyrant,S. jelskii
 ,Yellow-bellied Chat-Tyrant,S. diadema
+,Jelski's Chat-Tyrant,S. jelskii
 ,Slaty-backed Chat-Tyrant,Ochthoeca cinnamomeiventris
 ,Rufous-breasted Chat-Tyrant,O. rufipectoralis
 ,Brown-backed Chat-Tyrant,O. fumicolor
@@ -1773,6 +1773,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,Red-legged Honeycreeper,C. cyaneus
 ,Swallow Tanager,Tersina viridis
 ,White-bellied Dacnis,Dacnis albiventris
+,Yellow-tufted Dacnis,D. egregia
 ,Black-faced Dacnis,D. lineata
 ,Yellow-bellied Dacnis,D. flaviventer
 ,Scarlet-thighed Dacnis,D. venusta
@@ -1805,7 +1806,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,Wedge-tailed Grass-Finch,Emberizoides herbicola
 ,Cinereous Finch,Piezorina cinerea
 ,Black-headed Hemispingus,Pseudospingus verticalis
-,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
+,Pink-billed Cnemoscopus,Cnemoscopus rubrirostris
 ,Collared Warbling Finch,Poospiza hispaniolensis
 ,Black-capped Hemispingus,Kleinothraupis atropileus
 ,Oleaginous Hemispingus,Sphenopsis frontalis
@@ -1847,7 +1848,7 @@ E,Española Ground-Finch,G. conirostris
 ,Golden-crowned Tanager,I. rufivertex
 ,Fawn-breasted Tanager,Pipraeidea melanonota
 ,Blue-and-yellow Tanager,Rauenia bonariensis
-,Buff-breasted Mountain Tanager,Dubusia taeniata
+,Buff-banded Mountain Tanager,Dubusia taeniata
 ,Lacrimose Mountain Tanager,Anisognathus lacrymosus
 ,Scarlet-bellied Mountain Tanager,A. igniventris
 ,Blue-winged Mountain Tanager,A. somptuosus

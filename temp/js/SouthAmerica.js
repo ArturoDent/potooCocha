@@ -20,7 +20,7 @@ var residentColor = "#fc8d59";
 var nonBreederColor = "#579ac4";
 
 var vagrantColor = "#54ca30";
-var hypotheticalColor = "#ddd";
+var unconfirmedColor = "#ddd";
 var introducedColor = "#fee090";
 
 var baseColor = "#8a8a7c";
@@ -250,8 +250,8 @@ function highlightSAMmap(index, current) {
 
       break;
 
-    case "H":
-      newFillColor(cc, hypotheticalColor);
+    case "U":
+      newFillColor(cc, unconfirmedColor);
       // newStrokeColor(cc, darkerStrokeColor);
       newStrokeColor(cc, highlightStrokeColor);
       break;

@@ -102,14 +102,14 @@ SKUAS,STERCORARIIDAE
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
 GULLS,LARIDAE
+,,Black Noddy,Anous minutus
 ,,Brown-hooded Gull,Chroicocephalus maculipennis
 ,,Gray-hooded Gull,C. cirrocephalus
 ,,Dolphin Gull,Leucophaeus scoresbii
-,,Gray Gull,L. modestus
-5,,Franklin's Gull,L. pipixcan
+5,,Gray Gull,L. modestus
+,,Franklin's Gull,L. pipixcan
 ,,Olrog's Gull,Larus atlanticus
 ,,Kelp Gull,L. dominicanus
-,,Black Noddy,Anous minutus
 ,,Sooty Tern,Onychoprion fuscatus
 10,,Common Tern,Sterna hirundo
 ,,Arctic Tern,S. paradisaea
@@ -121,8 +121,9 @@ PENGUINS,SPHENISCIDAE
 ,,King Penguin,Aptenodytes patagonicus
 ,,Emperor Penguin,A. forsteri
 ,,Gentoo Penguin,Pygoscelis papua
-,,Chinstrap Penguin,P. antarcticus
-5,,Magellanic Penguin,Spheniscus magellanicus
+,,Adelie Penguin,P. adeliae
+5,,Chinstrap Penguin,P. antarcticus
+,,Magellanic Penguin,Spheniscus magellanicus
 ,,Erect-crested Penguin,Eudyptes sclateri
 ,,Macaroni Penguin,E. chrysolophus
 ,,Tristan Penguin,E. moseleyi
@@ -189,12 +190,12 @@ CORMORANTS,PHALACROCORACIDAE
 ,,Magellanic Cormorant,P. magellanicus
 ,,Imperial Cormorant,P. atriceps
 HERONS,ARDEIDAE
+,,Snowy Egret,Egretta thula
 ,,Black-crowned Night-Heron,Nycticorax nycticorax
 ,,Striated Heron,Butorides striata
 ,,Cattle Egret,Bubulcus ibis
-,,Cocoi Heron,Ardea cocoi
-,,Great Egret,A. alba
-,,Snowy Egret,Egretta thula
+,,Great Egret,Ardea alba
+,,Cocoi Heron,A. cocoi
 IBISES,THRESKIORNITHIDAE
 ,,Black-faced Ibis,Theristicus melanopis
 ,,Roseate Spoonbill,Platalea ajaja
@@ -205,7 +206,7 @@ HAWKS,ACCIPITRIDAE
 ,,Long-winged Harrier,C. buffoni
 ,,Variable Hawk,Geranoaetus polyosoma
 BARN OWLS,TYTONIDAE
-,,American Barn-Owl,Tyto furcata
+,,American Barn Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,Great Horned Owl,Bubo virginianus
 ,,Burrowing Owl,Athene cunicularia
@@ -220,7 +221,6 @@ FALCONS,FALCONIDAE
 PARROTS,PSITTACIDAE
 ,,Austral Parakeet,Enicognathus ferrugineus
 ,,Burrowing Parakeet,Cyanoliseus patagonus
-TAPACULOS,RHINOCRYPTIDAE
 OVENBIRDS,FURNARIIDAE
 ,,Short-billed Miner,Geositta antarctica
 ,,Buff-winged Cinclodes,Cinclodes fuscus

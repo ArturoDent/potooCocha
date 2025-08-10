@@ -206,7 +206,7 @@ function loadCountryTaxonomy(country) {
     getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
-    // so hypotheticals and vagrants aren't selectable if South America is chosen
+    // so unconfirmeds and vagrants aren't selectable if South America is chosen
     searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
     searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
 
@@ -219,13 +219,14 @@ function loadCountryTaxonomy(country) {
 
 //  -----------------------------------------------------------------------------------------------
 
-  if (country !== "South America") {
+  if (country !== "South America") {  // TODO: might have to change if eb/u added
     searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
     searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
     // searchSpecials.classList.remove("SAM");
   }
 
-  var specials = /extinct|endemic|hypothetical|vagrant/;
+  // TODO: endemic breeder|unconfirmed ?
+  var specials = /extinct|endemic|unconfirmed|vagrant/;
 
   if (!lastQuery) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
@@ -328,8 +329,9 @@ function buildTaxTree(thisCountryFamilies, country) {
   // why building this here instead of using the *SACC.html file?
 
   var occ = "";
+  // TODO: "E(eb)": "eb", "U": "u"
   var json2html = {
-    "V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endemic",
+    "V": "va", "IN": "intr", "U": "u", "NB": "nb", "X(e)": "endemic",
 	  "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
 
   var results = `<ul id="tree">\n\n`;
@@ -380,7 +382,8 @@ function getCountryJSON(data) {
 
   if (lastQuery) {
     var results = {};
-    var specials = /extinct|endemic|hypothetical|vagrant/;
+    // TODO: endemic breeder|unconfirmed
+    var specials = /extinct|endemic|unconfirmed|vagrant/;
     if (specials.test(lastQuery)) results = specialSearch(families, lastQuery);
     // false will avoid modifyQuery()  sanitize, add accents, etc. - has already been done on the lastQuery
     else results = searchRegexTree(families, lastQuery, countries2Postals[currentCountry]), false;
@@ -627,8 +630,9 @@ function printSearchResults (evt) {
   var numSpecies = document.getElementsByClassName("bird").length;
   if (!numSpecies) return;
 
-  var divId = evt.target.id;
-  if (divId === "printerButton" || evt.target.nodeName === "use") divId = "searchResults";
+  // var divId = evt.target.id;
+  // if (divId === "printerButton" || evt.target.nodeName === "use") divId = "searchResults";
+  let divId = "searchResults";
 
   var content = document.getElementById(divId).children[2].innerHTML;
 

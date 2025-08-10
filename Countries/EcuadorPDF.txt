@@ -407,39 +407,38 @@ SKUAS,STERCORARIIDAE
 ,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
-,,Swallow-tailed Gull,Creagrus furcatus
+,,Brown Noddy,Anous stolidus
+,,Black Noddy,A. minutus
+,,Blue-billed White-Tern,Gygis candida
+,,Black Skimmer,Rynchops niger
+5,,Swallow-tailed Gull,Creagrus furcatus
 ,,Sabine's Gull,Xema sabini
 ,,Bonaparte's Gull,Chroicocephalus philadelphia
 ,,Andean Gull,C. serranus
-5,,Gray-hooded Gull,C. cirrocephalus
-,,Little Gull,Hydrocoloeus minutus
+,,Gray-hooded Gull,C. cirrocephalus
+10,,Little Gull,Hydrocoloeus minutus
 ,,Gray Gull,Leucophaeus modestus
 ,,Laughing Gull,L. atricilla
 ,,Franklin's Gull,L. pipixcan
-10,endemic,Lava Gull,L. fuliginosus
-,,Belcher's Gull,Larus belcheri
+,endemic,Lava Gull,L. fuliginosus
+15,,Belcher's Gull,Larus belcheri
 ,,Ring-billed Gull,L. delawarensis
 ,,California Gull,L. californicus
 ,,Kelp Gull,L. dominicanus
-15,,Lesser Black-backed Gull,L. fuscus
-,,Herring Gull,L. argentatus
-,,Brown Noddy,Anous stolidus
-,,Black Noddy,A. minutus
-,,White Tern,Gygis alba
-20,,Sooty Tern,Onychoprion fuscatus
+,,Lesser Black-backed Gull,L. fuscus
+20,,Herring Gull,L. argentatus
+,,Sooty Tern,Onychoprion fuscatus
 ,,Bridled Tern,O. anaethetus
 ,,Least Tern,Sternula antillarum
 ,,Yellow-billed Tern,S. superciliaris
-,,Peruvian Tern,S. lorata
-25,,Large-billed Tern,Phaetusa simplex
+25,,Peruvian Tern,S. lorata
+,,Large-billed Tern,Phaetusa simplex
 ,,Gull-billed Tern,Gelochelidon nilotica
 ,,Caspian Tern,Hydroprogne caspia
 ,,Inca Tern,Larosterna inca
-,,Black Tern,Chlidonias niger
-30,,Common Tern,Sterna hirundo
+30,,Black Tern,Chlidonias niger
+,,Common Tern,Sterna hirundo
 ,,Arctic Tern,S. paradisaea
 ,,South American Tern,S. hirundinacea
 ,,Elegant Tern,Thalasseus elegans
@@ -452,7 +451,7 @@ TROPICBIRDS,PHAETHONTIDAE
 ,,Red-tailed Tropicbird,P. rubricauda
 PENGUINS,SPHENISCIDAE
 ,,Humboldt Penguin,Spheniscus humboldti
-,endemic,Galapagos Penguin,S. mendiculus
+,,Galapagos Penguin,S. mendiculus
 ALBATROSSES,DIOMEDEIDAE
 ,,Waved Albatross,Phoebastria irrorata
 ,,Black-browed Albatross,Thalassarche melanophris
@@ -476,19 +475,21 @@ SHEARWATERS,PROCELLARIIDAE
 ,,Northern Giant-Petrel,M. halli
 ,,Southern Fulmar,Fulmarus glacialoides
 ,,Pintado Petrel,Daption capense
-5,,Mottled Petrel,Pterodroma inexpectata
+5,,Kermadec Petrel,Pterodroma neglecta
+,,Mottled Petrel,P. inexpectata
 ,,Galapagos Petrel,P. phaeopygia
 ,,Juan Fernandez Petrel,P. externa
 ,,Antarctic Prion,Pachyptila desolata
-,,White-chinned Petrel,Procellaria aequinoctialis
-10,,Parkinson's Petrel,P. parkinsoni
+10,,White-chinned Petrel,Procellaria aequinoctialis
+,,Parkinson's Petrel,P. parkinsoni
 ,,Wedge-tailed Shearwater,Ardenna pacifica
 ,,Buller's Shearwater,A. bulleri
 ,,Sooty Shearwater,A. grisea
-,,Pink-footed Shearwater,A. creatopus
-15,,Flesh-footed Shearwater,A. carneipes
-,,Manx Shearwater,Puffinus puffinus
-,endemic,Galapagos Shearwater,P. subalaris
+15,,Pink-footed Shearwater,A. creatopus
+,,Flesh-footed Shearwater,A. carneipes
+,,Christmas Shearwater,Puffinus nativitatis
+,,Manx Shearwater,P. puffinus
+,,Galapagos Shearwater,P. subalaris
 ,,Peruvian Diving-Petrel,Pelecanoides garnotii
 STORKS,CICONIIDAE
 ,,Jabiru,Jabiru mycteria
@@ -517,26 +518,26 @@ PELICANS,PELECANIDAE
 HERONS,ARDEIDAE
 ,,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,,Fasciated Tiger-Heron,T. fasciatum
-,,Agami Heron,Agamia agami
 ,,Boat-billed Heron,Cochlearius cochlearius
+,,Agami Heron,Agamia agami
 5,,Zigzag Heron,Zebrilus undulatus
+,,Stripe-backed Bittern,Ixobrychus involucris
+,,Least Bittern,I. exilis
 ,,Pinnated Bittern,Botaurus pinnatus
-,,Least Bittern,Ixobrychus exilis
-,,Stripe-backed Bittern,I. involucris
+,,Capped Heron,Pilherodius pileatus
+10,,Whistling Heron,Syrigma sibilatrix
+,,Little Blue Heron,Egretta caerulea
+,,Tricolored Heron,E. tricolor
+,,Reddish Egret,E. rufescens
+,,Snowy Egret,E. thula
+15,,Yellow-crowned Night-Heron,Nyctanassa violacea
 ,,Black-crowned Night-Heron,Nycticorax nycticorax
-10,,Yellow-crowned Night-Heron,Nyctanassa violacea
 ,,Striated Heron,Butorides striata
 ,,Green Heron,B. virescens
 ,,Cattle Egret,Bubulcus ibis
-,,Great Blue Heron,Ardea herodias
-15,,Cocoi Heron,A. cocoi
-,,Great Egret,A. alba
-,,Whistling Heron,Syrigma sibilatrix
-,,Capped Heron,Pilherodius pileatus
-,,Tricolored Heron,Egretta tricolor
-20,,Reddish Egret,E. rufescens
-,,Snowy Egret,E. thula
-,,Little Blue Heron,E. caerulea
+20,,Great Egret,Ardea alba
+,,Great Blue Heron,A. herodias
+,,Cocoi Heron,A. cocoi
 IBISES,THRESKIORNITHIDAE
 ,,White Ibis,Eudocimus albus
 ,,Scarlet Ibis,E. ruber
@@ -605,7 +606,7 @@ HAWKS,ACCIPITRIDAE
 ,endemic,Galapagos Hawk,B. galapagoensis
 ,,Zone-tailed Hawk,B. albonotatus
 BARN OWLS,TYTONIDAE
-,,American Barn-Owl,Tyto furcata
+,,American Barn Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,White-throated Screech-Owl,Megascops albogularis
 ,,Tropical Screech-Owl,M. choliba
@@ -987,7 +988,7 @@ OVENBIRDS,FURNARIIDAE
 ,,Slender-billed Miner,Geositta tenuirostris
 ,,Spot-throated Woodcreeper,Certhiasomus stictolaemus
 ,,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,,Long-tailed Woodcreeper,Deconychura longicauda
+,,Mournful Long-tailed Woodcreeper,Deconychura pallida
 10,,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,,White-chinned Woodcreeper,D. merula
 ,,Plain-brown Woodcreeper,D. fuliginosa
@@ -1325,8 +1326,8 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Bran-colored Flycatcher,M. fasciatus
 160,,Mouse-gray Flycatcher,M. crypterythrus
 ,,Crowned Chat-Tyrant,Silvicultrix frontalis
-,,Jelski's Chat-Tyrant,S. jelskii
 ,,Yellow-bellied Chat-Tyrant,S. diadema
+,,Jelski's Chat-Tyrant,S. jelskii
 ,,Slaty-backed Chat-Tyrant,Ochthoeca cinnamomeiventris
 165,,Rufous-breasted Chat-Tyrant,O. rufipectoralis
 ,,Brown-backed Chat-Tyrant,O. fumicolor
@@ -1679,124 +1680,125 @@ TANAGERS,THRAUPIDAE
 ,,Red-legged Honeycreeper,C. cyaneus
 55,,Swallow Tanager,Tersina viridis
 ,,White-bellied Dacnis,Dacnis albiventris
+,,Yellow-tufted Dacnis,D. egregia
 ,,Black-faced Dacnis,D. lineata
 ,,Yellow-bellied Dacnis,D. flaviventer
-,,Scarlet-thighed Dacnis,D. venusta
-60,,Blue Dacnis,D. cayana
+60,,Scarlet-thighed Dacnis,D. venusta
+,,Blue Dacnis,D. cayana
 ,,Scarlet-breasted Dacnis,D. berlepschi
 ,,Lesson's Seedeater,Sporophila bouvronides
 ,,Lined Seedeater,S. lineola
-,,Parrot-billed Seedeater,S. peruviana
-65,,Chestnut-throated Seedeater,S. telasco
+65,,Parrot-billed Seedeater,S. peruviana
+,,Chestnut-throated Seedeater,S. telasco
 ,,Drab Seedeater,S. simplex
 ,,Chestnut-bellied Seedeater,S. castaneiventris
 ,,Ruddy-breasted Seedeater,S. minuta
-,,Thick-billed Seed-Finch,S. funerea
-70,,Chestnut-bellied Seed-Finch,S. angolensis
+70,,Thick-billed Seed-Finch,S. funerea
+,,Chestnut-bellied Seed-Finch,S. angolensis
 ,,Large-billed Seed-Finch,S. crassirostris
 ,,Black-billed Seed-Finch,S. atrirostris
 ,,Variable Seedeater,S. corvina
-,,Gray Seedeater,S. intermedia
-75,,Wing-barred Seedeater,S. americana
+75,,Gray Seedeater,S. intermedia
+,,Wing-barred Seedeater,S. americana
 ,,Black-and-white Seedeater,S. luctuosa
 ,,Yellow-bellied Seedeater,S. nigricollis
 ,,Slate-colored Seedeater,S. schistacea
-,,Buff-throated Saltator,Saltator maximus
-80,,Black-winged Saltator,S. atripennis
+80,,Buff-throated Saltator,Saltator maximus
+,,Black-winged Saltator,S. atripennis
 ,,Bluish-gray Saltator,S. coerulescens
 ,,Streaked Saltator,S. striatipectus
 ,,Black-cowled Saltator,S. nigriceps
-,,Masked Saltator,S. cinctus
-85,,Slate-colored Grosbeak,S. grossus
+85,,Masked Saltator,S. cinctus
+,,Slate-colored Grosbeak,S. grossus
 ,,Wedge-tailed Grass-Finch,Emberizoides herbicola
 ,,Cinereous Finch,Piezorina cinerea
 ,,Black-headed Hemispingus,Pseudospingus verticalis
-,,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
-90,,Collared Warbling Finch,Poospiza hispaniolensis
+90,,Pink-billed Cnemoscopus,Cnemoscopus rubrirostris
+,,Collared Warbling Finch,Poospiza hispaniolensis
 ,,Black-capped Hemispingus,Kleinothraupis atropileus
 ,,Oleaginous Hemispingus,Sphenopsis frontalis
 ,,Black-eared Hemispingus,S. melanotis
-,,Orange-headed Tanager,Thlypopsis sordida
-95,,Buff-bellied Tanager,T. inornata
+95,,Orange-headed Tanager,Thlypopsis sordida
+,,Buff-bellied Tanager,T. inornata
 ,,Superciliaried Hemispingus,T. superciliaris
 ,,Rufous-chested Tanager,T. ornata
 ,,Black-backed Bush Tanager,Urothraupis stolzmanni
-,,Bananaquit,Coereba flaveola
-100,,Yellow-faced Grassquit,Tiaris olivaceus
+100,,Bananaquit,Coereba flaveola
+,,Yellow-faced Grassquit,Tiaris olivaceus
 ,,Dull-colored Grassquit,Asemospiza obscura
 ,endemic,Green Warbler-Finch,Certhidea olivacea
 ,endemic,Gray Warbler-Finch,C. fusca
-,endemic,Vegetarian Finch,Platyspiza crassirostris
-105,endemic,Woodpecker Finch,Camarhynchus pallidus
+105,endemic,Vegetarian Finch,Platyspiza crassirostris
+,endemic,Woodpecker Finch,Camarhynchus pallidus
 ,endemic,Large Tree-Finch,C. psittacula
 ,endemic,Medium Tree-Finch,C. pauper
 ,endemic,Small Tree-Finch,C. parvulus
-,endemic,Mangrove Finch,C. heliobates
-110,endemic,Sharp-beaked Ground-Finch,Geospiza difficilis
+110,endemic,Mangrove Finch,C. heliobates
+,endemic,Sharp-beaked Ground-Finch,Geospiza difficilis
 ,endemic,Vampire Ground-Finch,G. septentrionalis
 ,endemic,Small Ground-Finch,G. fuliginosa
 ,endemic,Medium Ground-Finch,G. fortis
-,endemic,Genovesa Ground-Finch,G. acutirostris
-115,endemic,Common Cactus-Finch,G. scandens
+115,endemic,Genovesa Ground-Finch,G. acutirostris
+,endemic,Common Cactus-Finch,G. scandens
 ,endemic,Genovesa Cactus-Finch,G. propinqua
 ,endemic,Large Ground-Finch,G. magnirostris
 ,endemic,Española Ground-Finch,G. conirostris
-,,Glistening-green Tanager,Chlorochrysa phoenicotis
-120,,Orange-eared Tanager,C. calliparaea
+120,,Glistening-green Tanager,Chlorochrysa phoenicotis
+,,Orange-eared Tanager,C. calliparaea
 ,,Red-crested Cardinal,Paroaria coronata
 ,,Red-capped Cardinal,P. gularis
 ,,Black-faced Tanager,Schistochlamys melanopis
-,,Magpie Tanager,Cissopis leverianus
-125,,Vermilion Tanager,Calochaetes coccineus
+125,,Magpie Tanager,Cissopis leverianus
+,,Vermilion Tanager,Calochaetes coccineus
 ,,Purplish-mantled Tanager,Iridosornis porphyrocephalus
 ,,Yellow-throated Tanager,I. analis
 ,,Golden-crowned Tanager,I. rufivertex
-,,Fawn-breasted Tanager,Pipraeidea melanonota
-130,,Blue-and-yellow Tanager,Rauenia bonariensis
-,,Buff-breasted Mountain Tanager,Dubusia taeniata
+130,,Fawn-breasted Tanager,Pipraeidea melanonota
+,,Blue-and-yellow Tanager,Rauenia bonariensis
+,,Buff-banded Mountain Tanager,Dubusia taeniata
 ,,Lacrimose Mountain Tanager,Anisognathus lacrymosus
 ,,Scarlet-bellied Mountain Tanager,A. igniventris
-,,Blue-winged Mountain Tanager,A. somptuosus
-135,,Black-chinned Mountain Tanager,A. notabilis
+135,,Blue-winged Mountain Tanager,A. somptuosus
+,,Black-chinned Mountain Tanager,A. notabilis
 ,,Hooded Mountain Tanager,Buthraupis montana
 ,,Masked Mountain Tanager,Tephrophilus wetmorei
 ,,Blue-capped Tanager,Sporathraupis cyanocephala
-,,Grass-green Tanager,Chlorornis riefferii
-140,,Black-chested Mountain Tanager,Cnemathraupis eximia
+140,,Grass-green Tanager,Chlorornis riefferii
+,,Black-chested Mountain Tanager,Cnemathraupis eximia
 ,,Orange-throated Tanager,Wetmorethraupis sterrhopteron
 ,,Golden-chested Tanager,Bangsia rothschildi
 ,,Moss-backed Tanager,B. edwardsi
-,,Yellow-green Tanager,B. flavovirens
-145,,Golden-naped Tanager,Chalcothraupis ruficervix
+145,,Yellow-green Tanager,B. flavovirens
+,,Golden-naped Tanager,Chalcothraupis ruficervix
 ,,Gray-and-gold Tanager,Poecilostreptus palmeri
 ,,Silvery Tanager,Stilpnia viridicollis
 ,,Black-capped Tanager,S. heinei
-,,Green-throated Tanager,S. argyrofenges
-150,,Scrub Tanager,S. vitriolina
+150,,Green-throated Tanager,S. argyrofenges
+,,Scrub Tanager,S. vitriolina
 ,,Masked Tanager,S. nigrocincta
 ,,Golden-hooded Tanager,S. larvata
 ,,Blue-necked Tanager,S. cyanicollis
-,,Blue-and-black Tanager,Tangara vassorii
-155,,Beryl-spangled Tanager,T. nigroviridis
+155,,Blue-and-black Tanager,Tangara vassorii
+,,Beryl-spangled Tanager,T. nigroviridis
 ,,Metallic-green Tanager,T. labradorides
 ,,Blue-browed Tanager,T. cyanotis
 ,,Turquoise Tanager,T. mexicana
-,,Paradise Tanager,T. chilensis
-160,,Opal-rumped Tanager,T. velia
+160,,Paradise Tanager,T. chilensis
+,,Opal-rumped Tanager,T. velia
 ,,Opal-crowned Tanager,T. callophrys
 ,,Rufous-winged Tanager,T. lavinia
 ,,Bay-headed Tanager,T. gyrola
-,,Golden-eared Tanager,T. chrysotis
-165,,Saffron-crowned Tanager,T. xanthocephala
+165,,Golden-eared Tanager,T. chrysotis
+,,Saffron-crowned Tanager,T. xanthocephala
 ,,Flame-faced Tanager,T. parzudakii
 ,,Green-and-gold Tanager,T. schrankii
 ,,Blue-whiskered Tanager,T. johannae
-,,Golden Tanager,T. arthus
-170,,Emerald Tanager,T. florida
+170,,Golden Tanager,T. arthus
+,,Emerald Tanager,T. florida
 ,,Silver-throated Tanager,T. icterocephala
 ,,Blue-gray Tanager,Thraupis episcopus
 ,,Palm Tanager,T. palmarum
-,,Rufous-throated Tanager,Ixothraupis rufigula
-175,,Speckled Tanager,I. guttata
+175,,Rufous-throated Tanager,Ixothraupis rufigula
+,,Speckled Tanager,I. guttata
 ,,Yellow-bellied Tanager,I. xanthogastra
 ,,Spotted Tanager,I. punctata

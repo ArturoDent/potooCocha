@@ -132,6 +132,7 @@
 
     border: 1px solid transparent;
     background-color: darken($bgColor, 15%);
+    // background-color: red; 
 
     border-bottom-left-radius: 6.9rem;
     -webkit-transition  :  all 850ms ease-in-out;
@@ -150,6 +151,7 @@
     height : auto;
     left: 0;
     margin  : 0;
+    
 
     pointer-events  :  auto;
 
@@ -163,6 +165,7 @@
     position : relative;
     margin: 1.92rem 0 2.31rem 0;
     left: 22%;
+    // left: 322%;
     opacity  :  1;
 }
 
@@ -204,9 +207,17 @@
 #searchInput::placeholder  {  color  :  white;  }
 
 #searchSpecials  {
+
     position  :  absolute;
-    top : -3.5ch;
-    left  :  107%;
+    // position  :  relative;
+
+    height: fit-content;
+    width: min-content;
+
+    top : -1.5ch;
+    left  :  102%;
+    // left: 8vw;
+    // width: 100%;
     // width: 15.38rem;
     // width: 10.5rem;
     // padding : 0.5rem 0;
@@ -230,6 +241,10 @@
 }
 
 .searchSpecialWrapper {
+    position:relative;
+    // top:15%;
+    // left: 75%;
+    width:fit-content;
     padding: 0.5ch 0;
     text-align: center;
     transition  :  all 1000ms;
@@ -290,9 +305,12 @@
     width : calc(100% + 7vw);
     // top : -7rem;
     // top : -5rem;
+    // top: 4vh;
     left : -7vw;
     // margin  : 5.5ch 0 2ch 0;
-    margin-bottom: 2vh;
+    // margin-bottom: 2vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
     padding  :  0;
 
     z-index: 0;
@@ -359,7 +377,7 @@
 //   left: calc(100%);
   width: 2.2rem;
   height: 2.2rem;
-  padding: 0.077rem;
+  // padding: 0.077rem;
 
   cursor: pointer;
   color: white;
@@ -659,8 +677,8 @@
     font-size  :  0.8rem;
 }
 
-.hy::before  {
-    content  :  'h';
+.u::before  {
+    content  :  'u';
     position  :  relative;
     left  :  -0.53rem;
     font-size  :  0.8rem;
@@ -673,7 +691,7 @@
     font-size  :  0.8rem;
 }
 
-#searchResults .endemic, #searchResults .extinct, #searchResults .hy, #searchResults .va  {
+#searchResults .endemic, #searchResults .extinct, #searchResults .u, #searchResults .va  {
     position  :  relative;
     left  :  -0.575rem;
 }
@@ -862,25 +880,25 @@ to {
     left  :  54.5%;
 }
 
-#taxPage.samTax .hy:before,#taxPage.samTax .va:before  {
+#taxPage.samTax .u:before,#taxPage.samTax .va:before  {
     content  :  '';
 }
 
-#taxPage.samTax .hy,#taxPage.samTax .va  {
+#taxPage.samTax .u,#taxPage.samTax .va  {
     position  :  relative;
     left  :  1.55rem;
 }
 
-#searchResults.samTax .hy:before,#searchResults.samTax .va:before  {
+#searchResults.samTax .u:before,#searchResults.samTax .va:before  {
     content  :  '';
 }
 
-#searchResults.samTax .hy,#searchResults.samTax .va  {
+#searchResults.samTax .u,#searchResults.samTax .va  {
     position  :  relative;
     left  :  0;
 }
 
-#taxPage.samTax li.familyOpen span.hy  {
+#taxPage.samTax li.familyOpen span.u  {
     position  :  relative;
     left  :  1.55rem;
 }
@@ -890,7 +908,7 @@ to {
     left  :  1.55rem;
 }
 
-#taxPage .endemic, #taxPage .extinct, #taxPage .hy, #taxPage .va  {
+#taxPage .endemic, #taxPage .extinct, #taxPage .u, #taxPage .va  {
     position  :  relative;
     left  :  -0.7rem;
 }

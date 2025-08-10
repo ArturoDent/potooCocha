@@ -34,7 +34,6 @@ DUCKS,ANATIDAE
 GUANS,CRACIDAE
 ,,Dusky-legged Guan,Penelope obscura
 ,,Chaco Chachalaca,Ortalis canicollis
-NEW WORLD QUAILS,ODONTOPHORIDAE
 FLAMINGOS,PHOENICOPTERIDAE
 ,,Chilean Flamingo,Phoenicopterus chilensis
 ,,Andean Flamingo,Phoenicoparrus andinus
@@ -160,24 +159,23 @@ SKUAS,STERCORARIIDAE
 ,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
+,,Brown Noddy,Anous stolidus
+,,Black Skimmer,Rynchops niger
 ,,Brown-hooded Gull,Chroicocephalus maculipennis
 ,,Gray-hooded Gull,C. cirrocephalus
-,,Laughing Gull,Leucophaeus atricilla
+5,,Laughing Gull,Leucophaeus atricilla
 ,,Franklin's Gull,L. pipixcan
-5,,Olrog's Gull,Larus atlanticus
+,,Olrog's Gull,Larus atlanticus
 ,,Kelp Gull,L. dominicanus
-,,Brown Noddy,Anous stolidus
 ,,Least Tern,Sternula antillarum
-,,Yellow-billed Tern,S. superciliaris
-10,,Large-billed Tern,Phaetusa simplex
+10,,Yellow-billed Tern,S. superciliaris
+,,Large-billed Tern,Phaetusa simplex
 ,,Gull-billed Tern,Gelochelidon nilotica
 ,,Black Tern,Chlidonias niger
 ,,Common Tern,Sterna hirundo
-,,Arctic Tern,S. paradisaea
-15,,South American Tern,S. hirundinacea
+15,,Arctic Tern,S. paradisaea
+,,South American Tern,S. hirundinacea
 ,,Antarctic Tern,S. vittata
 ,,Snowy-crowned Tern,S. trudeaui
 ,,Elegant Tern,Thalasseus elegans
@@ -243,16 +241,16 @@ CORMORANTS,PHALACROCORACIDAE
 ,,Imperial Cormorant,P. atriceps
 HERONS,ARDEIDAE
 ,,Rufescent Tiger-Heron,Tigrisoma lineatum
-,,Pinnated Bittern,Botaurus pinnatus
 ,,Stripe-backed Bittern,Ixobrychus involucris
-,,Black-crowned Night-Heron,Nycticorax nycticorax
-5,,Striated Heron,Butorides striata
-,,Cattle Egret,Bubulcus ibis
-,,Cocoi Heron,Ardea cocoi
-,,Great Egret,A. alba
+,,Pinnated Bittern,Botaurus pinnatus
 ,,Whistling Heron,Syrigma sibilatrix
-,,Snowy Egret,Egretta thula
-,,Little Blue Heron,E. caerulea
+5,,Little Blue Heron,Egretta caerulea
+,,Snowy Egret,E. thula
+,,Black-crowned Night-Heron,Nycticorax nycticorax
+,,Striated Heron,Butorides striata
+,,Cattle Egret,Bubulcus ibis
+,,Great Egret,Ardea alba
+,,Cocoi Heron,A. cocoi
 IBISES,THRESKIORNITHIDAE
 ,,White-faced Ibis,Plegadis chihi
 ,,Bare-faced Ibis,Phimosus infuscatus
@@ -286,7 +284,7 @@ HAWKS,ACCIPITRIDAE
 ,,Short-tailed Hawk,Buteo brachyurus
 ,,Swainson's Hawk,B. swainsoni
 BARN OWLS,TYTONIDAE
-,,American Barn-Owl,Tyto furcata
+,,American Barn Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,Tropical Screech-Owl,Megascops choliba
 ,,Long-tufted Screech-Owl,M. sanctaecatarinae

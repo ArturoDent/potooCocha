@@ -2,7 +2,7 @@
 
 var results = {}; // {numSpecies: numSpecies, list: results}
 
-var html2json = {	"vagrant": "V", "hypothetical": "H", "endemic": "X(e)",
+var html2json = {	"vagrant": "V", "unconfirmed": "U", "endemic": "X(e)",
   "extinct": "EX"
 };  // note 'extinct` is an array: 2 values to search for EX(e)
   
@@ -84,11 +84,12 @@ function getSearchSpecialsQuery(evt) {
 function specialSearch(families, special) {
   
   lastQuery = special;
-  special = html2json[special];  // vagrant("V"), hypothetical("H"), endemic("X(e)"), extinct("EX")
+  // TODO: added specials
+  special = html2json[special];  // vagrant("V"), unconfirmed("U"), endemic("X(e)"), extinct("EX")
   
   if (special) {
     
     if (currentCountry === "SAM") return searchExtinctOrEndemicSAM(families, special);    // SAM : extinct and endemics
-    else return searchCountrySpecials(families, special, countries2Postals[currentCountry]);     // countries: hypothetical, vagrant, extinct and endemic
+    else return searchCountrySpecials(families, special, countries2Postals[currentCountry]);     // countries: unconfirmed, vagrant, extinct and endemic
   }
 }

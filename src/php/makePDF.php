@@ -15,8 +15,10 @@
 //============================================================+
 
 // Include the main TCPDF library (search for installation path).
-require_once('tcpdf/tcpdf.php');
-require_once('tcpdf/config/tcpdf_config.php');
+// require_once('tcpdf/tcpdf.php');
+require_once('../tcpdf/tcpdf.php');
+// require_once('tcpdf/config/tcpdf_config.php');
+require_once('../tcpdf/config/tcpdf_config.php');
 // set_time_limit(0);
 
 // ---------------------------------------------------------
@@ -76,7 +78,7 @@ class PDF extends TCPDF {
 		$this->italics     =  ($Si  === 'true')  ? true : false;
 		$this->country     =  $where;
 
-		$this->daysInMonth   =  array(31,29,31,30,31,30,31,31,30,31,30,31);  // 2020 is a leap year
+		$this->daysInMonth   =  array(31,28,31,30,31,30,31,31,30,31,30,31);  // 2028 is a leap year
 
 		if ($this->endemics || $this->lineNos || $this->leftChecks)  {
 			$this->endemicCellWidth = 13;
@@ -396,8 +398,6 @@ class PDF extends TCPDF {
 		}
 	}	
 }
-
-error_reporting(0);
 
 $country     =  filter_var($_GET['country'],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 $num_days    =  filter_var($_GET['num_days'],  FILTER_SANITIZE_NUMBER_INT);

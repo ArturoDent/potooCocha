@@ -7,7 +7,7 @@
 ,White-throated Tinamou,T. guttatus
 ,Cinereous Tinamou,Crypturellus cinereus
 ,Little Tinamou,C. soui
-E,Tepui Tinamou,C. ptaritepui
+,Tepui Tinamou,C. ptaritepui
 ,Brown Tinamou,C. obsoletus
 ,Undulated Tinamou,C. undulatus
 ,Gray-legged Tinamou,C. duidae
@@ -374,10 +374,10 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,GULLS,LARIDAE
+,Brown Noddy,Anous stolidus
+,Black Noddy,A. minutus
+,Black Skimmer,Rynchops niger
 ,Black-legged Kittiwake,Rissa tridactyla
 ,Black-headed Gull,Chroicocephalus ridibundus
 ,Laughing Gull,Leucophaeus atricilla
@@ -387,8 +387,6 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Herring Gull,L. argentatus
-,Brown Noddy,Anous stolidus
-,Black Noddy,A. minutus
 ,Sooty Tern,Onychoprion fuscatus
 ,Bridled Tern,O. anaethetus
 ,Least Tern,Sternula antillarum
@@ -449,26 +447,26 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,Fasciated Tiger-Heron,T. fasciatum
-,Agami Heron,Agamia agami
 ,Boat-billed Heron,Cochlearius cochlearius
+,Agami Heron,Agamia agami
 ,Zigzag Heron,Zebrilus undulatus
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
-,Black-crowned Night-Heron,Nycticorax nycticorax
+,Capped Heron,Pilherodius pileatus
+,Whistling Heron,Syrigma sibilatrix
+,Little Blue Heron,Egretta caerulea
+,Tricolored Heron,E. tricolor
+,Reddish Egret,E. rufescens
+,Snowy Egret,E. thula
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Green Heron,B. virescens
 ,Cattle Egret,Bubulcus ibis
-,Great Blue Heron,Ardea herodias
+,Great Egret,Ardea alba
+,Great Blue Heron,A. herodias
 ,Cocoi Heron,A. cocoi
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
-,Capped Heron,Pilherodius pileatus
-,Tricolored Heron,Egretta tricolor
-,Reddish Egret,E. rufescens
-,Snowy Egret,E. thula
-,Little Blue Heron,E. caerulea
 
 ,IBISES,THRESKIORNITHIDAE
 ,White Ibis,Eudocimus albus
@@ -540,7 +538,7 @@ E,Rusty-flanked Crake,Laterallus levraudi
 ,Red-tailed Hawk,B. jamaicensis
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,White-throated Screech-Owl,Megascops albogularis
@@ -856,7 +854,7 @@ E,Merida Tapaculo,S. meridanus
 ,Gray-throated Leaftosser,S. albigularis
 ,Spot-throated Woodcreeper,Certhiasomus stictolaemus
 ,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,Long-tailed Woodcreeper,Deconychura longicauda
+,Mournful Long-tailed Woodcreeper,Deconychura pallida
 ,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,White-chinned Woodcreeper,D. merula
 ,Ruddy Woodcreeper,D. homochroa
@@ -1363,6 +1361,7 @@ E,Caracas Brushfinch,A. phaeopleurus
 E,Paria Brushfinch,A. phygas
 ,Gray-browed Brushfinch,A. assimilis
 ,Golden-winged Sparrow,A. schlegeli
+,Yellow-mandibled Sparrow,A. axillaris
 ,Pectoral Sparrow,A. taciturnus
 ,Chestnut-capped Brushfinch,A. brunneinucha
 ,Rufous-collared Sparrow,Zonotrichia capensis
@@ -1445,7 +1444,7 @@ E,Paria Brushfinch,A. phygas
 ,Two-banded Warbler,M. bivittata
 ,Gray-throated Warbler,M. cinereicollis
 ,Russet-crowned Warbler,M. coronata
-,Rufous-capped Warbler,Basileuterus rufifrons
+,Chestnut-capped Warbler,Basileuterus deltattrii
 ,Golden-crowned Warbler,B. culicivorus
 ,Three-striped Warbler,B. tristriatus
 E,Gray-headed Warbler,B. griseiceps
@@ -1557,7 +1556,7 @@ E,Venezuelan Flowerpiercer,D. venezuelensis
 ,Wedge-tailed Grass-Finch,Emberizoides herbicola
 E,Duida Grass-Finch,E. duidae
 ,Black-headed Hemispingus,Pseudospingus verticalis
-,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
+,Pink-billed Cnemoscopus,Cnemoscopus rubrirostris
 E,Slaty-backed Hemispingus,Poospiza goeringi
 E,Gray-capped Hemispingus,Kleinothraupis reyi
 ,Black-capped Hemispingus,K. atropileus
@@ -1578,7 +1577,7 @@ E,Gray-capped Hemispingus,Kleinothraupis reyi
 ,Magpie Tanager,Cissopis leverianus
 ,Golden-crowned Tanager,Iridosornis rufivertex
 ,Fawn-breasted Tanager,Pipraeidea melanonota
-,Buff-breasted Mountain Tanager,Dubusia taeniata
+,Buff-banded Mountain Tanager,Dubusia taeniata
 ,Lacrimose Mountain Tanager,Anisognathus lacrymosus
 ,Scarlet-bellied Mountain Tanager,A. igniventris
 ,Blue-winged Mountain Tanager,A. somptuosus

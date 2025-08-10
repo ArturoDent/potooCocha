@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "December 5, 2024",
+	"version": "July 31, 2025",
 	"birds": {
 		"families": [
 			{
@@ -116,7 +116,7 @@
 								"species": "specularis",
 								"index": 71,
 								"name": "Spectacled Duck",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -201,7 +201,7 @@
 								"species": "atricapilla",
 								"index": 92,
 								"name": "Black-headed Duck",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -319,7 +319,7 @@
 								"species": "pretiosa",
 								"index": 212,
 								"name": "Blue Ground Dove",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -465,7 +465,7 @@
 								"species": "notatus",
 								"index": 609,
 								"name": "Speckled Rail",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -640,7 +640,7 @@
 								"species": "socialis",
 								"index": 666,
 								"name": "Magellanic Plover",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					}
@@ -668,7 +668,7 @@
 								"species": "borealis",
 								"index": 668,
 								"name": "Eskimo Curlew",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "phaeopus",
@@ -707,13 +707,13 @@
 								"species": "canutus",
 								"index": 677,
 								"name": "Red Knot",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "virgata",
 								"index": 678,
 								"name": "Surfbird",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "himantopus",
@@ -749,7 +749,7 @@
 								"species": "pusilla",
 								"index": 691,
 								"name": "Semipalmated Sandpiper",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -902,19 +902,30 @@
 				"FamilyCommon": "GULLS",
 				"genera": [
 					{
+						"Genus": "Anous",
+						"spp": [
+							{
+								"species": "minutus",
+								"index": 733,
+								"name": "Black Noddy",
+								"FK": "U"
+							}
+						]
+					},
+					{
 						"Genus": "Chroicocephalus",
 						"spp": [
 							{
 								"species": "maculipennis",
-								"index": 738,
+								"index": 743,
 								"name": "Brown-hooded Gull",
 								"FK": "X"
 							},
 							{
 								"species": "cirrocephalus",
-								"index": 739,
+								"index": 744,
 								"name": "Gray-hooded Gull",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -923,19 +934,19 @@
 						"spp": [
 							{
 								"species": "scoresbii",
-								"index": 742,
+								"index": 747,
 								"name": "Dolphin Gull",
 								"FK": "X"
 							},
 							{
 								"species": "modestus",
-								"index": 743,
+								"index": 748,
 								"name": "Gray Gull",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "pipixcan",
-								"index": 745,
+								"index": 750,
 								"name": "Franklin's Gull",
 								"FK": "V"
 							}
@@ -946,26 +957,15 @@
 						"spp": [
 							{
 								"species": "atlanticus",
-								"index": 749,
+								"index": 754,
 								"name": "Olrog's Gull",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "dominicanus",
-								"index": 753,
+								"index": 758,
 								"name": "Kelp Gull",
 								"FK": "X"
-							}
-						]
-					},
-					{
-						"Genus": "Anous",
-						"spp": [
-							{
-								"species": "minutus",
-								"index": 757,
-								"name": "Black Noddy",
-								"FK": "H"
 							}
 						]
 					},
@@ -974,7 +974,7 @@
 						"spp": [
 							{
 								"species": "fuscatus",
-								"index": 760,
+								"index": 761,
 								"name": "Sooty Tern",
 								"FK": "V"
 							}
@@ -985,31 +985,31 @@
 						"spp": [
 							{
 								"species": "hirundo",
-								"index": 772,
+								"index": 773,
 								"name": "Common Tern",
 								"FK": "V"
 							},
 							{
 								"species": "paradisaea",
-								"index": 774,
+								"index": 775,
 								"name": "Arctic Tern",
 								"FK": "V"
 							},
 							{
 								"species": "hirundinacea",
-								"index": 775,
+								"index": 776,
 								"name": "South American Tern",
 								"FK": "X"
 							},
 							{
 								"species": "vittata",
-								"index": 776,
+								"index": 777,
 								"name": "Antarctic Tern",
 								"FK": "NB"
 							},
 							{
 								"species": "trudeaui",
-								"index": 778,
+								"index": 779,
 								"name": "Snowy-crowned Tern",
 								"FK": "V"
 							}
@@ -1020,7 +1020,7 @@
 						"spp": [
 							{
 								"species": "sandvicensis",
-								"index": 780,
+								"index": 781,
 								"name": "Sandwich Tern",
 								"FK": "V"
 							}
@@ -1037,13 +1037,13 @@
 						"spp": [
 							{
 								"species": "patagonicus",
-								"index": 786,
+								"index": 787,
 								"name": "King Penguin",
 								"FK": "X"
 							},
 							{
 								"species": "forsteri",
-								"index": 787,
+								"index": 788,
 								"name": "Emperor Penguin",
 								"FK": "V"
 							}
@@ -1054,13 +1054,19 @@
 						"spp": [
 							{
 								"species": "papua",
-								"index": 788,
+								"index": 789,
 								"name": "Gentoo Penguin",
 								"FK": "X"
 							},
 							{
+								"species": "adeliae",
+								"index": 790,
+								"name": "Adelie Penguin",
+								"FK": "V"
+							},
+							{
 								"species": "antarcticus",
-								"index": 789,
+								"index": 791,
 								"name": "Chinstrap Penguin",
 								"FK": "V"
 							}
@@ -1071,7 +1077,7 @@
 						"spp": [
 							{
 								"species": "magellanicus",
-								"index": 793,
+								"index": 795,
 								"name": "Magellanic Penguin",
 								"FK": "X"
 							}
@@ -1082,31 +1088,31 @@
 						"spp": [
 							{
 								"species": "sclateri",
-								"index": 794,
+								"index": 796,
 								"name": "Erect-crested Penguin",
 								"FK": "V"
 							},
 							{
 								"species": "chrysolophus",
-								"index": 795,
+								"index": 797,
 								"name": "Macaroni Penguin",
 								"FK": "X"
 							},
 							{
 								"species": "moseleyi",
-								"index": 796,
+								"index": 798,
 								"name": "Tristan Penguin",
 								"FK": "V"
 							},
 							{
 								"species": "chrysocome",
-								"index": 797,
+								"index": 799,
 								"name": "Rockhopper Penguin",
 								"FK": "X"
 							},
 							{
 								"species": "robustus",
-								"index": 798,
+								"index": 800,
 								"name": "Snares Penguin",
 								"FK": "V"
 							}
@@ -1123,13 +1129,13 @@
 						"spp": [
 							{
 								"species": "epomophora",
-								"index": 800,
+								"index": 802,
 								"name": "Royal Albatross",
 								"FK": "NB"
 							},
 							{
 								"species": "exulans",
-								"index": 801,
+								"index": 803,
 								"name": "Wandering Albatross",
 								"FK": "NB"
 							}
@@ -1140,13 +1146,13 @@
 						"spp": [
 							{
 								"species": "fusca",
-								"index": 802,
+								"index": 804,
 								"name": "Sooty Albatross",
 								"FK": "V"
 							},
 							{
 								"species": "palpebrata",
-								"index": 803,
+								"index": 805,
 								"name": "Light-mantled Albatross",
 								"FK": "NB"
 							}
@@ -1157,31 +1163,31 @@
 						"spp": [
 							{
 								"species": "chlororhynchos",
-								"index": 804,
+								"index": 806,
 								"name": "Yellow-nosed Albatross",
 								"FK": "V"
 							},
 							{
 								"species": "melanophris",
-								"index": 805,
+								"index": 807,
 								"name": "Black-browed Albatross",
 								"FK": "X"
 							},
 							{
 								"species": "chrysostoma",
-								"index": 806,
+								"index": 808,
 								"name": "Gray-headed Albatross",
 								"FK": "NB"
 							},
 							{
 								"species": "bulleri",
-								"index": 807,
+								"index": 809,
 								"name": "Buller's Albatross",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "cauta",
-								"index": 808,
+								"index": 810,
 								"name": "White-capped Albatross",
 								"FK": "NB"
 							}
@@ -1198,13 +1204,13 @@
 						"spp": [
 							{
 								"species": "grallaria",
-								"index": 811,
+								"index": 813,
 								"name": "White-bellied Storm-Petrel",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "tropica",
-								"index": 812,
+								"index": 814,
 								"name": "Black-bellied Storm-Petrel",
 								"FK": "NB"
 							}
@@ -1215,7 +1221,7 @@
 						"spp": [
 							{
 								"species": "oceanicus",
-								"index": 813,
+								"index": 815,
 								"name": "Wilson's Storm-Petrel",
 								"FK": "X"
 							}
@@ -1226,7 +1232,7 @@
 						"spp": [
 							{
 								"species": "nereis",
-								"index": 816,
+								"index": 818,
 								"name": "Gray-backed Storm-Petrel",
 								"FK": "X"
 							}
@@ -1237,7 +1243,7 @@
 						"spp": [
 							{
 								"species": "marina",
-								"index": 817,
+								"index": 819,
 								"name": "White-faced Storm-Petrel",
 								"FK": "V"
 							}
@@ -1254,9 +1260,9 @@
 						"spp": [
 							{
 								"species": "leucorhous",
-								"index": 821,
+								"index": 823,
 								"name": "Leach's Storm-Petrel",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					}
@@ -1271,13 +1277,13 @@
 						"spp": [
 							{
 								"species": "giganteus",
-								"index": 825,
+								"index": 827,
 								"name": "Southern Giant-Petrel",
 								"FK": "X"
 							},
 							{
 								"species": "halli",
-								"index": 826,
+								"index": 828,
 								"name": "Northern Giant-Petrel",
 								"FK": "NB"
 							}
@@ -1288,7 +1294,7 @@
 						"spp": [
 							{
 								"species": "glacialoides",
-								"index": 828,
+								"index": 830,
 								"name": "Southern Fulmar",
 								"FK": "NB"
 							}
@@ -1299,7 +1305,7 @@
 						"spp": [
 							{
 								"species": "antarctica",
-								"index": 829,
+								"index": 831,
 								"name": "Antarctic Petrel",
 								"FK": "NB"
 							}
@@ -1310,7 +1316,7 @@
 						"spp": [
 							{
 								"species": "capense",
-								"index": 830,
+								"index": 832,
 								"name": "Pintado Petrel",
 								"FK": "NB"
 							}
@@ -1321,7 +1327,7 @@
 						"spp": [
 							{
 								"species": "nivea",
-								"index": 831,
+								"index": 833,
 								"name": "Snow Petrel",
 								"FK": "V"
 							}
@@ -1332,7 +1338,7 @@
 						"spp": [
 							{
 								"species": "brevirostris",
-								"index": 832,
+								"index": 834,
 								"name": "Kerguelen Petrel",
 								"FK": "NB"
 							}
@@ -1343,43 +1349,43 @@
 						"spp": [
 							{
 								"species": "macroptera",
-								"index": 834,
+								"index": 836,
 								"name": "Great-winged Petrel",
 								"FK": "V"
 							},
 							{
 								"species": "mollis",
-								"index": 835,
+								"index": 837,
 								"name": "Soft-plumaged Petrel",
 								"FK": "NB"
 							},
 							{
 								"species": "incerta",
-								"index": 837,
+								"index": 839,
 								"name": "Atlantic Petrel",
 								"FK": "NB"
 							},
 							{
 								"species": "lessonii",
-								"index": 838,
+								"index": 840,
 								"name": "White-headed Petrel",
 								"FK": "V"
 							},
 							{
 								"species": "neglecta",
-								"index": 844,
+								"index": 846,
 								"name": "Kermadec Petrel",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "arminjoniana",
-								"index": 845,
+								"index": 847,
 								"name": "Trindade Petrel",
 								"FK": "V"
 							},
 							{
 								"species": "inexpectata",
-								"index": 846,
+								"index": 848,
 								"name": "Mottled Petrel",
 								"FK": "V"
 							}
@@ -1390,7 +1396,7 @@
 						"spp": [
 							{
 								"species": "caerulea",
-								"index": 850,
+								"index": 852,
 								"name": "Blue Petrel",
 								"FK": "NB"
 							}
@@ -1401,25 +1407,25 @@
 						"spp": [
 							{
 								"species": "turtur",
-								"index": 851,
+								"index": 853,
 								"name": "Fairy Prion",
 								"FK": "X"
 							},
 							{
 								"species": "vittata",
-								"index": 852,
+								"index": 854,
 								"name": "Broad-billed Prion",
 								"FK": "V"
 							},
 							{
 								"species": "desolata",
-								"index": 853,
+								"index": 855,
 								"name": "Antarctic Prion",
 								"FK": "NB"
 							},
 							{
 								"species": "belcheri",
-								"index": 854,
+								"index": 856,
 								"name": "Slender-billed Prion",
 								"FK": "X"
 							}
@@ -1430,25 +1436,25 @@
 						"spp": [
 							{
 								"species": "cinerea",
-								"index": 856,
+								"index": 858,
 								"name": "Gray Petrel",
 								"FK": "NB"
 							},
 							{
 								"species": "aequinoctialis",
-								"index": 857,
+								"index": 859,
 								"name": "White-chinned Petrel",
 								"FK": "X"
 							},
 							{
 								"species": "conspicillata",
-								"index": 858,
+								"index": 860,
 								"name": "Spectacled Petrel",
 								"FK": "V"
 							},
 							{
 								"species": "westlandica",
-								"index": 860,
+								"index": 862,
 								"name": "Westland Petrel",
 								"FK": "V"
 							}
@@ -1459,7 +1465,7 @@
 						"spp": [
 							{
 								"species": "diomedea",
-								"index": 861,
+								"index": 863,
 								"name": "Cory's Shearwater",
 								"FK": "V"
 							}
@@ -1470,19 +1476,19 @@
 						"spp": [
 							{
 								"species": "grisea",
-								"index": 866,
+								"index": 868,
 								"name": "Sooty Shearwater",
 								"FK": "X"
 							},
 							{
 								"species": "gravis",
-								"index": 867,
+								"index": 869,
 								"name": "Great Shearwater",
 								"FK": "X"
 							},
 							{
 								"species": "carneipes",
-								"index": 869,
+								"index": 871,
 								"name": "Flesh-footed Shearwater",
 								"FK": "V"
 							}
@@ -1493,13 +1499,13 @@
 						"spp": [
 							{
 								"species": "puffinus",
-								"index": 870,
+								"index": 873,
 								"name": "Manx Shearwater",
 								"FK": "V"
 							},
 							{
 								"species": "assimilis",
-								"index": 872,
+								"index": 875,
 								"name": "Little Shearwater",
 								"FK": "NB"
 							}
@@ -1510,19 +1516,19 @@
 						"spp": [
 							{
 								"species": "urinatrix",
-								"index": 875,
+								"index": 878,
 								"name": "Common Diving-Petrel",
 								"FK": "X"
 							},
 							{
 								"species": "georgicus",
-								"index": 876,
+								"index": 879,
 								"name": "South Georgia Diving-Petrel",
 								"FK": "V"
 							},
 							{
 								"species": "magellani",
-								"index": 877,
+								"index": 880,
 								"name": "Magellanic Diving-Petrel",
 								"FK": "NB"
 							}
@@ -1539,7 +1545,7 @@
 						"spp": [
 							{
 								"species": "maguari",
-								"index": 878,
+								"index": 881,
 								"name": "Maguari Stork",
 								"FK": "V"
 							}
@@ -1556,7 +1562,7 @@
 						"spp": [
 							{
 								"species": "variegata",
-								"index": 888,
+								"index": 891,
 								"name": "Peruvian Booby",
 								"FK": "V"
 							}
@@ -1573,25 +1579,25 @@
 						"spp": [
 							{
 								"species": "gaimardi",
-								"index": 895,
+								"index": 898,
 								"name": "Red-legged Cormorant",
 								"FK": "V"
 							},
 							{
 								"species": "brasilianus",
-								"index": 897,
+								"index": 900,
 								"name": "Neotropic Cormorant",
 								"FK": "V"
 							},
 							{
 								"species": "magellanicus",
-								"index": 898,
+								"index": 901,
 								"name": "Magellanic Cormorant",
 								"FK": "X"
 							},
 							{
 								"species": "atriceps",
-								"index": 900,
+								"index": 903,
 								"name": "Imperial Cormorant",
 								"FK": "X"
 							}
@@ -1604,11 +1610,22 @@
 				"FamilyCommon": "HERONS",
 				"genera": [
 					{
+						"Genus": "Egretta",
+						"spp": [
+							{
+								"species": "thula",
+								"index": 920,
+								"name": "Snowy Egret",
+								"FK": "V"
+							}
+						]
+					},
+					{
 						"Genus": "Nycticorax",
 						"spp": [
 							{
 								"species": "nycticorax",
-								"index": 912,
+								"index": 924,
 								"name": "Black-crowned Night-Heron",
 								"FK": "X"
 							}
@@ -1619,7 +1636,7 @@
 						"spp": [
 							{
 								"species": "striata",
-								"index": 914,
+								"index": 925,
 								"name": "Striated Heron",
 								"FK": "V"
 							}
@@ -1630,7 +1647,7 @@
 						"spp": [
 							{
 								"species": "ibis",
-								"index": 917,
+								"index": 928,
 								"name": "Cattle Egret",
 								"FK": "NB"
 							}
@@ -1640,26 +1657,15 @@
 						"Genus": "Ardea",
 						"spp": [
 							{
-								"species": "cocoi",
-								"index": 920,
-								"name": "Cocoi Heron",
+								"species": "alba",
+								"index": 929,
+								"name": "Great Egret",
 								"FK": "V"
 							},
 							{
-								"species": "alba",
-								"index": 922,
-								"name": "Great Egret",
-								"FK": "V"
-							}
-						]
-					},
-					{
-						"Genus": "Egretta",
-						"spp": [
-							{
-								"species": "thula",
-								"index": 929,
-								"name": "Snowy Egret",
+								"species": "cocoi",
+								"index": 932,
+								"name": "Cocoi Heron",
 								"FK": "V"
 							}
 						]
@@ -1675,7 +1681,7 @@
 						"spp": [
 							{
 								"species": "melanopis",
-								"index": 942,
+								"index": 945,
 								"name": "Black-faced Ibis",
 								"FK": "V"
 							}
@@ -1686,7 +1692,7 @@
 						"spp": [
 							{
 								"species": "ajaja",
-								"index": 944,
+								"index": 947,
 								"name": "Roseate Spoonbill",
 								"FK": "V"
 							}
@@ -1703,7 +1709,7 @@
 						"spp": [
 							{
 								"species": "aura",
-								"index": 948,
+								"index": 951,
 								"name": "Turkey Vulture",
 								"FK": "X"
 							}
@@ -1720,15 +1726,15 @@
 						"spp": [
 							{
 								"species": "cinereus",
-								"index": 972,
+								"index": 975,
 								"name": "Cinereous Harrier",
 								"FK": "V"
 							},
 							{
 								"species": "buffoni",
-								"index": 973,
+								"index": 976,
 								"name": "Long-winged Harrier",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -1737,7 +1743,7 @@
 						"spp": [
 							{
 								"species": "polyosoma",
-								"index": 996,
+								"index": 999,
 								"name": "Variable Hawk",
 								"FK": "X"
 							}
@@ -1754,8 +1760,8 @@
 						"spp": [
 							{
 								"species": "furcata",
-								"index": 1013,
-								"name": "American Barn-Owl",
+								"index": 1016,
+								"name": "American Barn Owl",
 								"FK": "X"
 							}
 						]
@@ -1771,9 +1777,9 @@
 						"spp": [
 							{
 								"species": "virginianus",
-								"index": 1033,
+								"index": 1036,
 								"name": "Great Horned Owl",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -1782,7 +1788,7 @@
 						"spp": [
 							{
 								"species": "cunicularia",
-								"index": 1053,
+								"index": 1056,
 								"name": "Burrowing Owl",
 								"FK": "V"
 							}
@@ -1793,7 +1799,7 @@
 						"spp": [
 							{
 								"species": "flammeus",
-								"index": 1057,
+								"index": 1060,
 								"name": "Short-eared Owl",
 								"FK": "X"
 							}
@@ -1810,7 +1816,7 @@
 						"spp": [
 							{
 								"species": "plancus",
-								"index": 1289,
+								"index": 1292,
 								"name": "Crested Caracara",
 								"FK": "X"
 							}
@@ -1821,7 +1827,7 @@
 						"spp": [
 							{
 								"species": "australis",
-								"index": 1294,
+								"index": 1297,
 								"name": "Striated Caracara",
 								"FK": "X"
 							}
@@ -1832,7 +1838,7 @@
 						"spp": [
 							{
 								"species": "chimango",
-								"index": 1297,
+								"index": 1300,
 								"name": "Chimango Caracara",
 								"FK": "V"
 							}
@@ -1843,19 +1849,19 @@
 						"spp": [
 							{
 								"species": "sparverius",
-								"index": 1299,
+								"index": 1302,
 								"name": "American Kestrel",
 								"FK": "V"
 							},
 							{
 								"species": "femoralis",
-								"index": 1303,
+								"index": 1306,
 								"name": "Aplomado Falcon",
 								"FK": "V"
 							},
 							{
 								"species": "peregrinus",
-								"index": 1304,
+								"index": 1307,
 								"name": "Peregrine Falcon",
 								"FK": "X"
 							}
@@ -1872,9 +1878,9 @@
 						"spp": [
 							{
 								"species": "ferrugineus",
-								"index": 1399,
+								"index": 1402,
 								"name": "Austral Parakeet",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -1883,9 +1889,9 @@
 						"spp": [
 							{
 								"species": "patagonus",
-								"index": 1401,
+								"index": 1404,
 								"name": "Burrowing Parakeet",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					}
@@ -1900,7 +1906,7 @@
 						"spp": [
 							{
 								"species": "magellanicus",
-								"index": 1780,
+								"index": 1783,
 								"name": "Magellanic Tapaculo",
 								"FK": "EX"
 							}
@@ -1917,7 +1923,7 @@
 						"spp": [
 							{
 								"species": "antarctica",
-								"index": 1845,
+								"index": 1848,
 								"name": "Short-billed Miner",
 								"FK": "V"
 							}
@@ -1928,13 +1934,13 @@
 						"spp": [
 							{
 								"species": "fuscus",
-								"index": 1932,
+								"index": 1937,
 								"name": "Buff-winged Cinclodes",
 								"FK": "V"
 							},
 							{
 								"species": "antarcticus",
-								"index": 1933,
+								"index": 1938,
 								"name": "Blackish Cinclodes",
 								"FK": "X"
 							}
@@ -1945,9 +1951,9 @@
 						"spp": [
 							{
 								"species": "spinicauda",
-								"index": 1995,
+								"index": 2000,
 								"name": "Thorn-tailed Rayadito",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					}
@@ -1962,7 +1968,7 @@
 						"spp": [
 							{
 								"species": "rara",
-								"index": 2194,
+								"index": 2200,
 								"name": "Rufous-tailed Plantcutter",
 								"FK": "V"
 							}
@@ -1979,7 +1985,7 @@
 						"spp": [
 							{
 								"species": "albiceps",
-								"index": 2417,
+								"index": 2424,
 								"name": "White-crested Elaenia",
 								"FK": "V"
 							}
@@ -1990,7 +1996,7 @@
 						"spp": [
 							{
 								"species": "parulus",
-								"index": 2473,
+								"index": 2480,
 								"name": "Tufted Tit-Tyrant",
 								"FK": "V"
 							}
@@ -2001,7 +2007,7 @@
 						"spp": [
 							{
 								"species": "sulphuratus",
-								"index": 2502,
+								"index": 2509,
 								"name": "Great Kiskadee",
 								"FK": "V"
 							}
@@ -2012,7 +2018,7 @@
 						"spp": [
 							{
 								"species": "rixosa",
-								"index": 2504,
+								"index": 2511,
 								"name": "Cattle Tyrant",
 								"FK": "V"
 							}
@@ -2023,7 +2029,7 @@
 						"spp": [
 							{
 								"species": "aurantioatrocristatus",
-								"index": 2522,
+								"index": 2529,
 								"name": "Crowned Slaty Flycatcher",
 								"FK": "V"
 							}
@@ -2034,13 +2040,13 @@
 						"spp": [
 							{
 								"species": "savana",
-								"index": 2527,
+								"index": 2534,
 								"name": "Fork-tailed Flycatcher",
 								"FK": "V"
 							},
 							{
 								"species": "tyrannus",
-								"index": 2528,
+								"index": 2535,
 								"name": "Eastern Kingbird",
 								"FK": "V"
 							}
@@ -2051,7 +2057,7 @@
 						"spp": [
 							{
 								"species": "rubinus",
-								"index": 2576,
+								"index": 2583,
 								"name": "Vermilion Flycatcher",
 								"FK": "V"
 							}
@@ -2062,7 +2068,7 @@
 						"spp": [
 							{
 								"species": "rufa",
-								"index": 2586,
+								"index": 2593,
 								"name": "Austral Negrito",
 								"FK": "V"
 							}
@@ -2073,13 +2079,13 @@
 						"spp": [
 							{
 								"species": "maclovianus",
-								"index": 2610,
+								"index": 2617,
 								"name": "Dark-faced Ground-Tyrant",
 								"FK": "X"
 							},
 							{
 								"species": "albilora",
-								"index": 2611,
+								"index": 2618,
 								"name": "White-browed Ground-Tyrant",
 								"FK": "V"
 							}
@@ -2090,7 +2096,7 @@
 						"spp": [
 							{
 								"species": "pyrope",
-								"index": 2617,
+								"index": 2624,
 								"name": "Fire-eyed Diucon",
 								"FK": "V"
 							}
@@ -2101,7 +2107,7 @@
 						"spp": [
 							{
 								"species": "coronatus",
-								"index": 2621,
+								"index": 2628,
 								"name": "Black-crowned Monjita",
 								"FK": "V"
 							}
@@ -2112,9 +2118,9 @@
 						"spp": [
 							{
 								"species": "montanus",
-								"index": 2625,
+								"index": 2632,
 								"name": "Black-billed Shrike-Tyrant",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					}
@@ -2129,7 +2135,7 @@
 						"spp": [
 							{
 								"species": "cyanoleuca",
-								"index": 2700,
+								"index": 2707,
 								"name": "Blue-and-white Swallow",
 								"FK": "V"
 							}
@@ -2140,9 +2146,9 @@
 						"spp": [
 							{
 								"species": "fucata",
-								"index": 2702,
+								"index": 2709,
 								"name": "Tawny-headed Swallow",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -2151,7 +2157,7 @@
 						"spp": [
 							{
 								"species": "ruficollis",
-								"index": 2708,
+								"index": 2715,
 								"name": "Southern Rough-winged Swallow",
 								"FK": "V"
 							}
@@ -2162,25 +2168,25 @@
 						"spp": [
 							{
 								"species": "tapera",
-								"index": 2709,
+								"index": 2716,
 								"name": "Brown-chested Martin",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "subis",
-								"index": 2710,
+								"index": 2717,
 								"name": "Purple Martin",
 								"FK": "V"
 							},
 							{
 								"species": "chalybea",
-								"index": 2713,
+								"index": 2720,
 								"name": "Gray-breasted Martin",
 								"FK": "V"
 							},
 							{
 								"species": "elegans",
-								"index": 2714,
+								"index": 2721,
 								"name": "Southern Martin",
 								"FK": "V"
 							}
@@ -2191,13 +2197,13 @@
 						"spp": [
 							{
 								"species": "leucorrhoa",
-								"index": 2720,
+								"index": 2727,
 								"name": "White-rumped Swallow",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "leucopyga",
-								"index": 2721,
+								"index": 2728,
 								"name": "Chilean Swallow",
 								"FK": "NB"
 							}
@@ -2208,7 +2214,7 @@
 						"spp": [
 							{
 								"species": "riparia",
-								"index": 2722,
+								"index": 2729,
 								"name": "Bank Swallow",
 								"FK": "V"
 							}
@@ -2219,7 +2225,7 @@
 						"spp": [
 							{
 								"species": "rustica",
-								"index": 2723,
+								"index": 2730,
 								"name": "Barn Swallow",
 								"FK": "NB"
 							}
@@ -2230,7 +2236,7 @@
 						"spp": [
 							{
 								"species": "pyrrhonota",
-								"index": 2724,
+								"index": 2731,
 								"name": "Cliff Swallow",
 								"FK": "V"
 							}
@@ -2247,13 +2253,13 @@
 						"spp": [
 							{
 								"species": "aedon",
-								"index": 2732,
+								"index": 2739,
 								"name": "House Wren",
 								"FK": "V"
 							},
 							{
 								"species": "cobbi",
-								"index": 2733,
+								"index": 2740,
 								"name": "Cobb's Wren",
 								"FK": "X(e)"
 							}
@@ -2264,7 +2270,7 @@
 						"spp": [
 							{
 								"species": "platensis",
-								"index": 2738,
+								"index": 2745,
 								"name": "Grass Wren",
 								"FK": "X"
 							}
@@ -2281,7 +2287,7 @@
 						"spp": [
 							{
 								"species": "mustelina",
-								"index": 2803,
+								"index": 2810,
 								"name": "Wood Thrush",
 								"FK": "V"
 							}
@@ -2292,13 +2298,13 @@
 						"spp": [
 							{
 								"species": "falcklandii",
-								"index": 2808,
+								"index": 2815,
 								"name": "Austral Thrush",
 								"FK": "X"
 							},
 							{
 								"species": "amaurochalinus",
-								"index": 2823,
+								"index": 2830,
 								"name": "Creamy-bellied Thrush",
 								"FK": "V"
 							}
@@ -2315,13 +2321,13 @@
 						"spp": [
 							{
 								"species": "patagonicus",
-								"index": 2841,
+								"index": 2848,
 								"name": "Patagonian Mockingbird",
 								"FK": "V"
 							},
 							{
 								"species": "triurus",
-								"index": 2843,
+								"index": 2850,
 								"name": "White-banded Mockingbird",
 								"FK": "V"
 							}
@@ -2338,7 +2344,7 @@
 						"spp": [
 							{
 								"species": "vulgaris",
-								"index": 2852,
+								"index": 2859,
 								"name": "European Starling",
 								"FK": "V"
 							}
@@ -2355,7 +2361,7 @@
 						"spp": [
 							{
 								"species": "domesticus",
-								"index": 2858,
+								"index": 2865,
 								"name": "House Sparrow",
 								"FK": "IN"
 							}
@@ -2372,7 +2378,7 @@
 						"spp": [
 							{
 								"species": "correndera",
-								"index": 2865,
+								"index": 2872,
 								"name": "Correndera Pipit",
 								"FK": "X"
 							}
@@ -2389,7 +2395,7 @@
 						"spp": [
 							{
 								"species": "barbatus",
-								"index": 2881,
+								"index": 2888,
 								"name": "Black-chinned Siskin",
 								"FK": "X"
 							}
@@ -2406,9 +2412,9 @@
 						"spp": [
 							{
 								"species": "humeralis",
-								"index": 2917,
+								"index": 2924,
 								"name": "Grassland Sparrow",
-								"FK": "H"
+								"FK": "U"
 							}
 						]
 					},
@@ -2417,7 +2423,7 @@
 						"spp": [
 							{
 								"species": "capensis",
-								"index": 2940,
+								"index": 2948,
 								"name": "Rufous-collared Sparrow",
 								"FK": "V"
 							}
@@ -2434,7 +2440,7 @@
 						"spp": [
 							{
 								"species": "loyca",
-								"index": 2975,
+								"index": 2984,
 								"name": "Long-tailed Meadowlark",
 								"FK": "X"
 							}
@@ -2445,7 +2451,7 @@
 						"spp": [
 							{
 								"species": "bonariensis",
-								"index": 3011,
+								"index": 3020,
 								"name": "Shiny Cowbird",
 								"FK": "V"
 							}
@@ -2456,7 +2462,7 @@
 						"spp": [
 							{
 								"species": "thilius",
-								"index": 3029,
+								"index": 3038,
 								"name": "Yellow-winged Blackbird",
 								"FK": "V"
 							}
@@ -2473,13 +2479,13 @@
 						"spp": [
 							{
 								"species": "ruticilla",
-								"index": 3051,
+								"index": 3060,
 								"name": "American Redstart",
 								"FK": "V"
 							},
 							{
 								"species": "pitiayumi",
-								"index": 3055,
+								"index": 3064,
 								"name": "Tropical Parula",
 								"FK": "V"
 							}
@@ -2496,13 +2502,13 @@
 						"spp": [
 							{
 								"species": "lebruni",
-								"index": 3171,
+								"index": 3180,
 								"name": "Patagonian Yellow-Finch",
-								"FK": "H"
+								"FK": "U"
 							},
 							{
 								"species": "luteola",
-								"index": 3174,
+								"index": 3183,
 								"name": "Grassland Yellow-Finch",
 								"FK": "V"
 							}
@@ -2513,7 +2519,7 @@
 						"spp": [
 							{
 								"species": "patagonicus",
-								"index": 3180,
+								"index": 3189,
 								"name": "Patagonian Sierra Finch",
 								"FK": "V"
 							}
@@ -2524,7 +2530,7 @@
 						"spp": [
 							{
 								"species": "fruticeti",
-								"index": 3183,
+								"index": 3192,
 								"name": "Mourning Sierra Finch",
 								"FK": "V"
 							}
@@ -2535,13 +2541,13 @@
 						"spp": [
 							{
 								"species": "melanodera",
-								"index": 3191,
+								"index": 3200,
 								"name": "White-bridled Finch",
 								"FK": "X"
 							},
 							{
 								"species": "xanthogramma",
-								"index": 3192,
+								"index": 3201,
 								"name": "Yellow-bridled Finch",
 								"FK": "EX"
 							}
@@ -2552,7 +2558,7 @@
 						"spp": [
 							{
 								"species": "caerulescens",
-								"index": 3287,
+								"index": 3297,
 								"name": "Double-collared Seedeater",
 								"FK": "V"
 							}
@@ -2563,7 +2569,7 @@
 						"spp": [
 							{
 								"species": "diuca",
-								"index": 3393,
+								"index": 3404,
 								"name": "Diuca Finch",
 								"FK": "V"
 							}

@@ -4,11 +4,6 @@
 // ini_set('output_buffering', 0);
 // ini_set('zlib.output_compression', 0)
 
-// ini_set('display_errors', '1');
-// error_reporting(E_ALL | E_STRICT);
-
-// error_reporting(0);
-
 $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 $document = filter_var($_POST['document'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 if (!isset($country)) { echo "failure on country"; exit;  }

@@ -459,10 +459,9 @@ E,Green-and-white Hummingbird,E. viridicauda
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,GULLS,LARIDAE
+,Black Noddy,Anous minutus
+,Black Skimmer,Rynchops niger
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Black-legged Kittiwake,Rissa tridactyla
 ,Sabine's Gull,Xema sabini
@@ -475,7 +474,6 @@ E,Green-and-white Hummingbird,E. viridicauda
 ,Belcher's Gull,Larus belcheri
 ,Kelp Gull,L. dominicanus
 ,Herring Gull,L. argentatus
-,Black Noddy,Anous minutus
 ,Sooty Tern,Onychoprion fuscatus
 ,Least Tern,Sternula antillarum
 ,Yellow-billed Tern,S. superciliaris
@@ -589,26 +587,26 @@ E,Green-and-white Hummingbird,E. viridicauda
 
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
-,Fasciated Tiger-Heron,T. fasciatum
 ,Bare-throated Tiger-Heron,T. mexicanum
-,Agami Heron,Agamia agami
+,Fasciated Tiger-Heron,T. fasciatum
 ,Boat-billed Heron,Cochlearius cochlearius
+,Agami Heron,Agamia agami
 ,Zigzag Heron,Zebrilus undulatus
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
-,Black-crowned Night-Heron,Nycticorax nycticorax
-,Yellow-crowned Night-Heron,Nyctanassa violacea
-,Striated Heron,Butorides striata
-,Cattle Egret,Bubulcus ibis
-,Cocoi Heron,Ardea cocoi
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
 ,Capped Heron,Pilherodius pileatus
-,Tricolored Heron,Egretta tricolor
+,Whistling Heron,Syrigma sibilatrix
+,Little Blue Heron,Egretta caerulea
+,Tricolored Heron,E. tricolor
 ,Reddish Egret,E. rufescens
 ,Snowy Egret,E. thula
-,Little Blue Heron,E. caerulea
+,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Black-crowned Night-Heron,Nycticorax nycticorax
+,Striated Heron,Butorides striata
+,Cattle Egret,Bubulcus ibis
+,Great Egret,Ardea alba
+,Cocoi Heron,A. cocoi
 
 ,IBISES,THRESKIORNITHIDAE
 ,White Ibis,Eudocimus albus
@@ -682,7 +680,7 @@ E,Green-and-white Hummingbird,E. viridicauda
 ,Zone-tailed Hawk,B. albonotatus
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,White-throated Screech-Owl,Megascops albogularis
@@ -1147,7 +1145,7 @@ E,Thick-billed Miner,G. crassirostris
 E,Dark-winged Miner,G. saxicolina
 ,Spot-throated Woodcreeper,Certhiasomus stictolaemus
 ,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,Long-tailed Woodcreeper,Deconychura longicauda
+,Mournful Long-tailed Woodcreeper,Deconychura pallida
 ,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,White-chinned Woodcreeper,D. merula
 ,Plain-brown Woodcreeper,D. fuliginosa
@@ -1256,6 +1254,7 @@ E,Eye-ringed Thistletail,A. palpebralis
 ,Plain Softtail,Thripophaga fusciceps
 E,Russet-mantled Softtail,T. berlepschi
 E,Marcapata Spinetail,Cranioleuca marcapatae
+E,Vilcabamba Spinetail,C. weskei
 ,Light-crowned Spinetail,C. albiceps
 ,Rusty-backed Spinetail,C. vulpina
 ,Parker's Spinetail,C. vulpecula
@@ -1544,6 +1543,7 @@ E,Unstreaked Tit-Tyrant,Uromyias agraphia
 ,Snowy-throated Kingbird,Tyrannus niveigularis
 ,White-throated Kingbird,T. albogularis
 ,Tropical Kingbird,T. melancholicus
+,Scissor-tailed Flycatcher,T. forficatus
 ,Fork-tailed Flycatcher,T. savana
 ,Eastern Kingbird,T. tyrannus
 ,Grayish Mourner,Rhytipterna simplex
@@ -1567,9 +1567,9 @@ E,Rufous Flycatcher,Myiarchus semirufus
 ,Mouse-gray Flycatcher,M. crypterythrus
 ,Rufescent Flycatcher,M. rufescens
 ,Crowned Chat-Tyrant,Silvicultrix frontalis
+,Yellow-bellied Chat-Tyrant,S. diadema
 ,Jelski's Chat-Tyrant,S. jelskii
 ,Golden-browed Chat-Tyrant,S. pulchella
-,Yellow-bellied Chat-Tyrant,S. diadema
 ,Slaty-backed Chat-Tyrant,Ochthoeca cinnamomeiventris
 ,Rufous-breasted Chat-Tyrant,O. rufipectoralis
 ,Brown-backed Chat-Tyrant,O. fumicolor
@@ -2010,7 +2010,8 @@ E,Cinereous Finch,Piezorina cinerea
 ,Slender-billed Finch,Xenospingus concolor
 ,Black-headed Hemispingus,Pseudospingus verticalis
 ,Drab Hemispingus,P. xanthophthalmus
-,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
+,Pink-billed Cnemoscopus,Cnemoscopus rubrirostris
+E,Black-billed Cnemoscopus,C. chrysogaster
 E,Rufous-browed Hemispingus,Poospiza rufosuperciliaris
 E,Rufous-breasted Warbling Finch,P. rubecula
 ,Collared Warbling Finch,P. hispaniolensis
@@ -2048,7 +2049,8 @@ E,Little Inca-Finch,I. watkinsi
 E,Yellow-scarfed Tanager,I. reinhardti
 ,Fawn-breasted Tanager,Pipraeidea melanonota
 ,Blue-and-yellow Tanager,Rauenia bonariensis
-,Buff-breasted Mountain Tanager,Dubusia taeniata
+,Buff-banded Mountain Tanager,Dubusia taeniata
+E,Streak-crowned Mountain Tanager,D. stictocephala
 ,Chestnut-bellied Mountain Tanager,D. castaneoventris
 ,Lacrimose Mountain Tanager,Anisognathus lacrymosus
 ,Scarlet-bellied Mountain Tanager,A. igniventris

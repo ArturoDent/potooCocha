@@ -119,7 +119,8 @@ E,Horned Curassow,Pauxi unicornis
 ,Bare-faced Ground Dove,Metriopelia ceciliae
 ,Black-winged Ground Dove,M. melanoptera
 ,Golden-spotted Ground Dove,M. aymara
-,Plain-breasted Ground Dove,Columbina minuta
+,Common Ground Dove,Columbina passerina
+,Plain-breasted Ground Dove,C. minuta
 ,Ruddy Ground Dove,C. talpacoti
 ,Scaled Dove,C. squammata
 ,Picui Ground Dove,C. picui
@@ -175,7 +176,8 @@ E,Horned Curassow,Pauxi unicornis
 ,Rufous Nightjar,A. rufus
 
 ,SWIFTS,APODIDAE
-,White-chinned Swift,Cypseloides cryptus
+,Spot-fronted Swift,Cypseloides cherriei
+,White-chinned Swift,C. cryptus
 ,White-chested Swift,C. lemosi
 ,Rothschild's Swift,C. rothschildi
 ,Great Dusky Swift,C. senex
@@ -366,10 +368,11 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,JACANAS,JACANIDAE
 ,Wattled Jacana,Jacana jacana
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
+,PAINTED-SNIPE,ROSTRATULIDAE
+,South American Painted-snipe,Nycticryphes semicollaris
 
 ,GULLS,LARIDAE
+,Black Skimmer,Rynchops niger
 ,Andean Gull,Chroicocephalus serranus
 ,Laughing Gull,Leucophaeus atricilla
 ,Franklin's Gull,L. pipixcan
@@ -380,6 +383,9 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 
 ,SUNBITTERN,EURYPYGIDAE
 ,Sunbittern,Eurypyga helias
+
+,NORTHERN STORM-PETRELS,HYDROBATIDAE
+,Markham's Storm-Petrel,Hydrobates markhami
 
 ,STORKS,CICONIIDAE
 ,Maguari Stork,Ciconia maguari
@@ -395,21 +401,21 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,Fasciated Tiger-Heron,T. fasciatum
-,Agami Heron,Agamia agami
 ,Boat-billed Heron,Cochlearius cochlearius
+,Agami Heron,Agamia agami
 ,Zigzag Heron,Zebrilus undulatus
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
+,Capped Heron,Pilherodius pileatus
+,Whistling Heron,Syrigma sibilatrix
+,Little Blue Heron,Egretta caerulea
+,Snowy Egret,E. thula
 ,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Cattle Egret,Bubulcus ibis
-,Cocoi Heron,Ardea cocoi
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
-,Capped Heron,Pilherodius pileatus
-,Snowy Egret,Egretta thula
-,Little Blue Heron,E. caerulea
+,Great Egret,Ardea alba
+,Cocoi Heron,A. cocoi
 
 ,IBISES,THRESKIORNITHIDAE
 ,White-faced Ibis,Plegadis chihi
@@ -480,7 +486,7 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,Zone-tailed Hawk,B. albonotatus
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,White-throated Screech-Owl,Megascops albogularis
@@ -729,6 +735,7 @@ E,Red-fronted Macaw,A. rubrogenys
 ,White-shouldered Antshrike,T. aethiops
 ,Upland Antshrike,T. aroyae
 ,Amazonian Antshrike,T. amazonicus
+,Black Bushbird,Neoctantes niger
 ,Rufescent Antshrike,Thamnistes rufescens
 ,Plain Antvireo,Dysithamnus mentalis
 ,Black-capped Antwren,Herpsilochmus atricapillus
@@ -843,7 +850,7 @@ E,Masked Antpitta,Hylopezus auricularis
 ,Campo Miner,G. poeciloptera
 ,Rufous-banded Miner,G. rufipennis
 ,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,Long-tailed Woodcreeper,Deconychura longicauda
+,Mournful Long-tailed Woodcreeper,Deconychura pallida
 ,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,White-chinned Woodcreeper,D. merula
 ,Plain-brown Woodcreeper,D. fuliginosa
@@ -1173,7 +1180,7 @@ E,Bolivian Spinetail,C. henricae
 ,Roraiman Flycatcher,M. roraimae
 ,Bran-colored Flycatcher,M. fasciatus
 ,Crowned Chat-Tyrant,Silvicultrix frontalis
-,Golden-browed Chat-Tyrant,S. pulchella
+,Jelski's Chat-Tyrant,S. jelskii
 ,Slaty-backed Chat-Tyrant,Ochthoeca cinnamomeiventris
 ,Rufous-breasted Chat-Tyrant,O. rufipectoralis
 ,Brown-backed Chat-Tyrant,O. fumicolor
@@ -1321,6 +1328,7 @@ E,Unicolored Thrush,T. haplochrous
 ,Lawrence's Thrush,T. lawrencii
 ,Creamy-bellied Thrush,T. amaurochalinus
 ,Black-billed Thrush,T. ignobilis
+,Campina Thrush,T. arthuri
 ,Andean Slaty Thrush,T. nigriceps
 ,Great Thrush,T. fuscater
 ,Chiguanco Thrush,T. chiguanco
@@ -1500,7 +1508,8 @@ E,Gray-bellied Flowerpiercer,D. carbonaria
 ,Gray-headed Tanager,Eucometis penicillata
 ,Black-goggled Tanager,Trichothraupis melanops
 ,Inti Tanager,Heliothraupis oneilli
-,Red-crested Finch,Coryphospingus cucullatus
+,Pileated Finch,Coryphospingus pileatus
+,Red-crested Finch,C. cucullatus
 ,Masked Crimson Tanager,Ramphocelus nigrogularis
 ,Silver-beaked Tanager,R. carbo
 ,White-winged Shrike-Tanager,Lanio versicolor
@@ -1519,6 +1528,7 @@ E,Gray-bellied Flowerpiercer,D. carbonaria
 ,Black-and-tawny Seedeater,S. nigrorufa
 ,Pearly-bellied Seedeater,S. pileata
 ,Tawny-bellied Seedeater,S. hypoxantha
+,Ibera Seedeater,S. iberaensis
 ,Dark-throated Seedeater,S. ruficollis
 ,Rufous-rumped Seedeater,S. hypochroma
 ,Chestnut-bellied Seed-Finch,S. angolensis
@@ -1543,7 +1553,7 @@ E,Gray-bellied Flowerpiercer,D. carbonaria
 ,Great Pampa-Finch,Embernagra platensis
 ,Wedge-tailed Grass-Finch,Emberizoides herbicola
 ,Drab Hemispingus,Pseudospingus xanthophthalmus
-,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
+,Black-billed Cnemoscopus,Cnemoscopus chrysogaster
 ,Bolivian Warbling Finch,Poospiza boliviana
 ,Black-and-chestnut Warbling Finch,P. whitii
 E,Cochabamba Mountain Finch,P. garleppi

@@ -26,7 +26,7 @@ var pdfButton;
 var csvButton;
 var requested;
 
-var mailLink;
+// var mailLink;
 // var upLoadData = new FormData();
 // eslint-disable-next-line no-unused-vars
 var activityData = [];
@@ -99,7 +99,7 @@ window.addEventListener("load", function () {
 
   getJSON("../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data);
 
-  updateActivityData("start");
+  // updateActivityData("start");
 
   initCurrentMap();
 
@@ -111,9 +111,9 @@ window.addEventListener("load", function () {
 //   updateActivityData("start");
 // });
 
-window.addEventListener("unload", function () {
-  updateActivityData("stop");
-});
+// window.addEventListener("unload", function () {
+//   updateActivityData("stop");
+// });
 
 // function sendEmail() {
 //   // TODO : can this be obfuscated?  unicode??
@@ -238,9 +238,9 @@ function setCountry(evt) {
   currentCountry = evt.target.innerText;
   updateActivityData("select");  // TODO could this be delayed?
 
-  // uploadActivity();
+  // uploadActivity(); 
 
-  console.log(currentCountry);
+  // console.log(currentCountry);
 
   if (currentCountry === "South America") countryButton.innerHTML = "SA";
   else countryButton.innerHTML = countries2Postals[currentCountry];
@@ -248,6 +248,7 @@ function setCountry(evt) {
   setChecklistCountryAuthors(currentCountry);
   loadCountryTaxonomy(currentCountry);
 }
+
 
 function setChecklistCountryAuthors(country) {
 
@@ -261,7 +262,7 @@ function setChecklistCountryAuthors(country) {
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;23&nbsp;December&nbsp;2024. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;31&nbsp;July&nbsp;2025. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {
@@ -333,7 +334,7 @@ function getCSVText() {
 
   requested = "csv";
   // uploadDownloads();
-  updateActivityData("download");
+  // updateActivityData("download");
 
   var tempCountry;
 
@@ -346,7 +347,8 @@ function getCSVText() {
 
     var form = document.createElement("form");
     form.setAttribute("method", "post");
-    form.setAttribute("action", "../php/sendCSV.php?country=" + tempCountry + "");
+    // form.setAttribute("action", "../php/sendCSV.php?country=" + tempCountry + "");
+    form.setAttribute("action", "./php/sendCSV.php?country=" + tempCountry + "");
 
     document.body.appendChild(form);
 
@@ -360,8 +362,7 @@ function openChecklistPage() {
   if (!currentCountry) return;
 
   requested = "checklist";
-  // uploadDownloads();
-  updateActivityData("download");
+  // updateActivityData("download");
 
   var vars;
   var tempCountry;
@@ -384,7 +385,7 @@ function openChecklistPage() {
   vars += "&sci_names=" + !sciNames.checked;
   vars += "&italics=" + !italics.checked;
 
-  window.open("../php/makePDF.php" + vars, "_blank");
+  window.open("./php/makePDF.php" + vars + "", "_blank");
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -437,7 +438,7 @@ function updateActivityData(stage, query) {
     break;
   }
 
-  uploadActivity(action);
+  // uploadActivity(action);
 }
 
 function uploadActivity(action) {

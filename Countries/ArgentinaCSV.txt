@@ -253,7 +253,8 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Pied Lapwing,Hoploxypterus cayanus
 ,Diademed Sandpiper-Plover,Phegornis mitchellii
 ,Rufous-chested Dotterel,Zonibyx modestus
-,Semipalmated Plover,Charadrius semipalmatus
+,Killdeer,Charadrius vociferus
+,Semipalmated Plover,C. semipalmatus
 ,Southern Lapwing,Vanellus chilensis
 ,Andean Lapwing,V. resplendens
 ,Lesser Sand-Plover,Anarhynchus mongolus
@@ -340,10 +341,8 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,GULLS,LARIDAE
+,Black Skimmer,Rynchops niger
 ,Sabine's Gull,Xema sabini
 ,Andean Gull,Chroicocephalus serranus
 ,Brown-hooded Gull,C. maculipennis
@@ -375,6 +374,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,King Penguin,Aptenodytes patagonicus
 ,Emperor Penguin,A. forsteri
 ,Gentoo Penguin,Pygoscelis papua
+,Adelie Penguin,P. adeliae
 ,Chinstrap Penguin,P. antarcticus
 ,Humboldt Penguin,Spheniscus humboldti
 ,Magellanic Penguin,S. magellanicus
@@ -468,20 +468,20 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,Fasciated Tiger-Heron,T. fasciatum
 ,Boat-billed Heron,Cochlearius cochlearius
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
-,Black-crowned Night-Heron,Nycticorax nycticorax
+,Capped Heron,Pilherodius pileatus
+,Whistling Heron,Syrigma sibilatrix
+,Little Blue Heron,Egretta caerulea
+,Snowy Egret,E. thula
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Green Heron,B. virescens
 ,Cattle Egret,Bubulcus ibis
-,Cocoi Heron,Ardea cocoi
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
-,Capped Heron,Pilherodius pileatus
-,Snowy Egret,Egretta thula
-,Little Blue Heron,E. caerulea
+,Great Egret,Ardea alba
+,Cocoi Heron,A. cocoi
 
 ,IBISES,THRESKIORNITHIDAE
 ,Scarlet Ibis,Eudocimus ruber
@@ -550,7 +550,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Rufous-tailed Hawk,B. ventralis
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,Tropical Screech-Owl,Megascops choliba
@@ -1076,7 +1076,7 @@ E,Rusty-backed Monjita,N. rubetra
 ,PIPITS and WAGTAILS,MOTACILLIDAE
 ,Yellowish Pipit,Anthus chii
 ,Short-billed Pipit,A. furcatus
-E,Pampas Pipit,A. chacoensis
+,Pampas Pipit,A. chacoensis
 ,Correndera Pipit,A. correndera
 ,Ochre-breasted Pipit,A. nattereri
 ,Hellmayr's Pipit,A. hellmayri
@@ -1099,8 +1099,8 @@ E,Pampas Pipit,A. chacoensis
 
 ,SPARROWS,PASSERELLIDAE
 ,Common Chlorospingus,Chlorospingus flavopectus
-,Yungas Sparrow,Rhynchospiza dabbennei
-,Chaco Sparrow,R. strigiceps
+E,Yungas Sparrow,Rhynchospiza dabbennei
+E,Chaco Sparrow,R. strigiceps
 ,Grassland Sparrow,Ammodramus humeralis
 ,Yellow-browed Sparrow,A. aurifrons
 ,White-browed Brushfinch,Arremon torquatus
@@ -1194,7 +1194,8 @@ E,Carbonated Sierra Finch,R. carbonaria
 ,Yellow-bridled Finch,M. xanthogramma
 ,Band-tailed Seedeater,Catamenia analis
 ,Plain-colored Seedeater,C. inornata
-,Gray-bellied Flowerpiercer,Diglossa carbonaria
+,Black-throated Flowerpiercer,Diglossa brunneiventris
+,Gray-bellied Flowerpiercer,D. carbonaria
 ,Rusty Flowerpiercer,D. sittoides
 ,Slaty Finch,Haplospiza rustica
 ,Uniform Finch,H. unicolor

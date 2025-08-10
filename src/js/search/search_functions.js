@@ -2,7 +2,7 @@
  
 var results = "";
   
-var json2html = {	"V": "va", "IN": "intr", "H": "hy", "NB": "nb", "X(e)": "endemic",
+var json2html = {	"V": "va", "IN": "intr", "U": "u", "NB": "nb", "X(e)": "endemic",
   "EX(e)": "extinct", "EX": "extinct", "X": ""  };
 
 //  ------------------------------------------------------------------------------------------------------------  //
@@ -172,11 +172,10 @@ function searchAllQuery(families, query, country) {
   
 // ------------------------------------------------------------------------------------------------------ //
 
-// for countries (not SAM): hypothetical, vagrant, extinct and endemic
+// for countries (not SAM): unconfirmed, vagrant, extinct and endemic
 
 // eslint-disable-next-line no-unused-vars
 function searchCountrySpecials(families, special, country) {
-  console.log(special);
   
   var numSpecies = 0;
   results = "";

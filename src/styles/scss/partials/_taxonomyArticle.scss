@@ -38,6 +38,36 @@
     box-shadow: inset 0 0 0.15rem rgba(255,255,255, 0.2), inset 0 0 1.15rem rgba(0,0,0, 0.1), 0 0 1.15rem rgba(0,0,0, 0.2);
 }
 
+.searchWord > :nth-child(1) {    // target the top sentence
+  font-size: 1.2rem;
+}
+
+// .searchWord > :nth-child(1) > sup {
+//   font-size: 1rem;
+//   vertical-align: super;
+// }
+
+.citationLink:link {
+  text-decoration: none;       /* Remove underline */
+  border-bottom: none;
+  font-size: 0.9em;            /* Optional: shrink link inside superscript */
+  vertical-align: super;       /* Ensure it's aligned like a superscript */
+}
+
+.citationLink:visited {
+  color: white;
+  background-color: inherit;
+}
+
+.citationLink:focus {
+  color: white;
+  background-color: inherit;
+}
+
+.citationLink:hover {
+  color: black;
+}
+
 .taxArticleMain {
     padding  : 0.5rem 0 0 0;
     line-height: 1.5rem;

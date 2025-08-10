@@ -192,6 +192,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Whimbrel,Numenius phaeopus
 ,Bar-tailed Godwit,Limosa lapponica
 ,Hudsonian Godwit,L. haemastica
+,Marbled Godwit,L. fedoa
 ,Ruddy Turnstone,Arenaria interpres
 ,Red Knot,Calidris canutus
 ,Ruff,C. pugnax
@@ -228,10 +229,9 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,GULLS,LARIDAE
+,Brown Noddy,Anous stolidus
+,Black Skimmer,Rynchops niger
 ,Black-legged Kittiwake,Rissa tridactyla
 ,Sabine's Gull,Xema sabini
 ,Gray-hooded Gull,Chroicocephalus cirrocephalus
@@ -244,7 +244,6 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Herring Gull,L. argentatus
-,Brown Noddy,Anous stolidus
 ,Sooty Tern,Onychoprion fuscatus
 ,Bridled Tern,O. anaethetus
 ,Least Tern,Sternula antillarum
@@ -278,7 +277,8 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Leach's Storm-Petrel,H. leucorhous
 
 ,SHEARWATERS,PROCELLARIIDAE
-,Fea's Petrel,Pterodroma feae
+,Trindade Petrel,Pterodroma arminjoniana
+,Fea's Petrel,P. feae
 ,Bulwer's Petrel,Bulweria bulwerii
 ,Cory's Shearwater,Calonectris diomedea
 ,Sooty Shearwater,Ardenna grisea
@@ -311,25 +311,27 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,Fasciated Tiger-Heron,T. fasciatum
-,Agami Heron,Agamia agami
 ,Boat-billed Heron,Cochlearius cochlearius
+,Agami Heron,Agamia agami
 ,Zigzag Heron,Zebrilus undulatus
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
-,Black-crowned Night-Heron,Nycticorax nycticorax
+,Capped Heron,Pilherodius pileatus
+,Little Blue Heron,Egretta caerulea
+,Tricolored Heron,E. tricolor
+,Snowy Egret,E. thula
+,Little Egret,E. garzetta
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Squacco Heron,Ardeola ralloides
 ,Cattle Egret,Bubulcus ibis
-,Cocoi Heron,Ardea cocoi
+,Great Egret,Ardea alba
+,Gray Heron,A. cinerea
+,Great Blue Heron,A. herodias
+,Cocoi Heron,A. cocoi
 ,Purple Heron,A. purpurea
-,Great Egret,A. alba
-,Capped Heron,Pilherodius pileatus
-,Tricolored Heron,Egretta tricolor
-,Little Egret,E. garzetta
-,Snowy Egret,E. thula
-,Little Blue Heron,E. caerulea
 
 ,IBISES,THRESKIORNITHIDAE
 ,White Ibis,Eudocimus albus
@@ -337,6 +339,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Glossy Ibis,Plegadis falcinellus
 ,Green Ibis,Mesembrinibis cayennensis
 ,Bare-faced Ibis,Phimosus infuscatus
+,Buff-necked Ibis,Theristicus caudatus
 ,Roseate Spoonbill,Platalea ajaja
 
 ,NEW WORLD VULTURES,CATHARTIDAE
@@ -386,7 +389,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Zone-tailed Hawk,B. albonotatus
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,Tropical Screech-Owl,Megascops choliba
@@ -574,7 +577,7 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Short-billed Leaftosser,S. rufigularis
 ,Black-tailed Leaftosser,S. caudacutus
 ,Spot-throated Woodcreeper,Certhiasomus stictolaemus
-,Long-tailed Woodcreeper,Deconychura longicauda
+,Whistling Long-tailed Woodcreeper,Deconychura longicauda
 ,White-chinned Woodcreeper,Dendrocincla merula
 ,Plain-brown Woodcreeper,D. fuliginosa
 ,Wedge-billed Woodcreeper,Glyphorynchus spirurus
@@ -888,10 +891,13 @@ E,Cayenne Nightjar,Setopagis maculosa
 ,Blue Dacnis,D. cayana
 ,Lesson's Seedeater,Sporophila bouvronides
 ,Lined Seedeater,S. lineola
+,White-bellied Seedeater,S. leucoptera
 ,Chestnut-bellied Seedeater,S. castaneiventris
 ,Ruddy-breasted Seedeater,S. minuta
+,Copper Seedeater,S. bouvreuil
 ,Chestnut-bellied Seed-Finch,S. angolensis
 ,Large-billed Seed-Finch,S. crassirostris
+,Gray Seedeater,S. intermedia
 ,Wing-barred Seedeater,S. americana
 ,Yellow-bellied Seedeater,S. nigricollis
 ,Plumbeous Seedeater,S. plumbea

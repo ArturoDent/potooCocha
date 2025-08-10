@@ -68,7 +68,7 @@ function setSVGstyles(obj, bColor, sColor )  {
 }
 
 function fillSAMmap(color, skipCountry)  {
-console.log(' in fillSAMap ');
+// console.log(' in fillSAMap ');
 
   if (!color) color = baseColor;
   var svg;
@@ -146,7 +146,7 @@ function newStrokeColor(obj, newColor) {
 
 function selectedCountryStrokeColor(selectedCountry, color) {
 
-  console.log("selectedCountryStrokeColor");
+  // console.log("selectedCountryStrokeColor");
 
   var svg = currentMap.querySelector("#SAMsvg");
   var svgDoc = svg.contentDocument;
@@ -163,7 +163,7 @@ function selectedCountryStrokeColor(selectedCountry, color) {
 /* global  mapsCollection saveMapButton */
 
 function highlightSAMmap(index, current) {
-  console.log("in highlightSAMmap, index = " + index);
+  // console.log("in highlightSAMmap, index = " + index);
   var svg;
 
   if (current === "currentMap") {

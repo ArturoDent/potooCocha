@@ -257,7 +257,7 @@ E,Tolima Dove,L. conoveri
 ,Amethyst-throated Sunangel,H. amethysticollis
 ,Gorgeted Sunangel,H. strophianus
 ,Tourmaline Sunangel,H. exortis
-,Bogota Sunangel,H. zusii
+E,Bogota Sunangel,H. zusii
 ,Green Thorntail,Discosura conversii
 ,Wire-crested Thorntail,D. popelairii
 ,Black-bellied Thorntail,D. langsdorffi
@@ -499,10 +499,11 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Parasitic Jaeger,S. parasiticus
 ,Long-tailed Jaeger,S. longicaudus
 
-,SKIMMERS,RYNCHOPIDAE
-,Black Skimmer,Rynchops niger
-
 ,GULLS,LARIDAE
+,Brown Noddy,Anous stolidus
+,Black Noddy,A. minutus
+,Blue-billed White-Tern,Gygis candida
+,Black Skimmer,Rynchops niger
 ,Swallow-tailed Gull,Creagrus furcatus
 ,Sabine's Gull,Xema sabini
 ,Andean Gull,Chroicocephalus serranus
@@ -518,9 +519,6 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Herring Gull,L. argentatus
-,Brown Noddy,Anous stolidus
-,Black Noddy,A. minutus
-,White Tern,Gygis alba
 ,Sooty Tern,Onychoprion fuscatus
 ,Bridled Tern,O. anaethetus
 ,Least Tern,Sternula antillarum
@@ -619,28 +617,28 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 
 ,HERONS,ARDEIDAE
 ,Rufescent Tiger-Heron,Tigrisoma lineatum
-,Fasciated Tiger-Heron,T. fasciatum
 ,Bare-throated Tiger-Heron,T. mexicanum
-,Agami Heron,Agamia agami
+,Fasciated Tiger-Heron,T. fasciatum
 ,Boat-billed Heron,Cochlearius cochlearius
+,Agami Heron,Agamia agami
 ,Zigzag Heron,Zebrilus undulatus
+,Stripe-backed Bittern,Ixobrychus involucris
+,Least Bittern,I. exilis
 ,Pinnated Bittern,Botaurus pinnatus
-,Least Bittern,Ixobrychus exilis
-,Stripe-backed Bittern,I. involucris
-,Black-crowned Night-Heron,Nycticorax nycticorax
+,Capped Heron,Pilherodius pileatus
+,Whistling Heron,Syrigma sibilatrix
+,Little Blue Heron,Egretta caerulea
+,Tricolored Heron,E. tricolor
+,Reddish Egret,E. rufescens
+,Snowy Egret,E. thula
 ,Yellow-crowned Night-Heron,Nyctanassa violacea
+,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Green Heron,B. virescens
 ,Cattle Egret,Bubulcus ibis
-,Great Blue Heron,Ardea herodias
+,Great Egret,Ardea alba
+,Great Blue Heron,A. herodias
 ,Cocoi Heron,A. cocoi
-,Great Egret,A. alba
-,Whistling Heron,Syrigma sibilatrix
-,Capped Heron,Pilherodius pileatus
-,Tricolored Heron,Egretta tricolor
-,Reddish Egret,E. rufescens
-,Snowy Egret,E. thula
-,Little Blue Heron,E. caerulea
 
 ,IBISES,THRESKIORNITHIDAE
 ,White Ibis,Eudocimus albus
@@ -717,7 +715,7 @@ E,Sapphire-bellied Hummingbird,C. lilliae
 ,Red-tailed Hawk,B. jamaicensis
 
 ,BARN OWLS,TYTONIDAE
-,American Barn-Owl,Tyto furcata
+,American Barn Owl,Tyto furcata
 
 ,OWLS,STRIGIDAE
 ,Bare-shanked Screech-Owl,Megascops clarkii
@@ -1188,7 +1186,8 @@ E,Brown-rumped Tapaculo,S. latebricola
 ,Gray-throated Leaftosser,S. albigularis
 ,Spot-throated Woodcreeper,Certhiasomus stictolaemus
 ,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,Long-tailed Woodcreeper,Deconychura longicauda
+,Piping Long-tailed Woodcreeper,Deconychura typica
+,Mournful Long-tailed Woodcreeper,D. pallida
 ,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,White-chinned Woodcreeper,D. merula
 ,Ruddy Woodcreeper,D. homochroa
@@ -1807,6 +1806,7 @@ E,Sierra Nevada Brushfinch,Arremon basilicus
 ,Gray-browed Brushfinch,A. assimilis
 ,Orange-billed Sparrow,A. aurantiirostris
 ,Golden-winged Sparrow,A. schlegeli
+,Yellow-mandibled Sparrow,A. axillaris
 ,Pectoral Sparrow,A. taciturnus
 ,Chestnut-capped Brushfinch,A. brunneinucha
 ,Sooty-faced Finch,A. crassirostris
@@ -1828,6 +1828,7 @@ E,Antioquia Brushfinch,A. blancae
 ,Yellow-breasted Brushfinch,A. latinuchus
 
 ,BLACKBIRDS,ICTERIDAE
+,Yellow-headed Blackbird,Xanthocephalus xanthocephalus
 ,Bobolink,Dolichonyx oryzivorus
 ,Eastern Meadowlark,Sturnella magna
 ,Red-breasted Meadowlark,Leistes militaris
@@ -1913,7 +1914,7 @@ E,Santa Marta Warbler,M. basilica
 E,White-lored Warbler,M. conspicillata
 ,Gray-throated Warbler,M. cinereicollis
 ,Russet-crowned Warbler,M. coronata
-,Rufous-capped Warbler,Basileuterus rufifrons
+,Chestnut-capped Warbler,Basileuterus deltattrii
 ,Golden-crowned Warbler,B. culicivorus
 ,Pirre Warbler,B. ignotus
 ,Three-striped Warbler,B. tristriatus
@@ -2019,6 +2020,7 @@ E,Chestnut-bellied Flowerpiercer,Diglossa gloriosissima
 ,Red-legged Honeycreeper,C. cyaneus
 ,Swallow Tanager,Tersina viridis
 ,White-bellied Dacnis,Dacnis albiventris
+,Yellow-tufted Dacnis,D. egregia
 ,Black-faced Dacnis,D. lineata
 ,Yellow-bellied Dacnis,D. flaviventer
 E,Turquoise Dacnis,D. hartlaubi
@@ -2055,7 +2057,7 @@ E,Turquoise Dacnis,D. hartlaubi
 ,Slate-colored Grosbeak,S. grossus
 ,Wedge-tailed Grass-Finch,Emberizoides herbicola
 ,Black-headed Hemispingus,Pseudospingus verticalis
-,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
+,Pink-billed Cnemoscopus,Cnemoscopus rubrirostris
 ,Black-capped Hemispingus,Kleinothraupis atropileus
 ,Oleaginous Hemispingus,Sphenopsis frontalis
 ,Black-eared Hemispingus,S. melanotis
@@ -2081,7 +2083,8 @@ E,Multicolored Tanager,C. nitidissima
 ,Yellow-throated Tanager,I. analis
 ,Golden-crowned Tanager,I. rufivertex
 ,Fawn-breasted Tanager,Pipraeidea melanonota
-,Buff-breasted Mountain Tanager,Dubusia taeniata
+E,Carriker's Mountain Tanager,Dubusia carrikeri
+,Buff-banded Mountain Tanager,D. taeniata
 E,Black-cheeked Mountain Tanager,Anisognathus melanogenys
 ,Lacrimose Mountain Tanager,A. lacrymosus
 ,Scarlet-bellied Mountain Tanager,A. igniventris

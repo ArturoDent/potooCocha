@@ -3,8 +3,9 @@ TINAMOUS,TINAMIDAE
 ,,Cinereous Tinamou,Crypturellus cinereus
 ,,Little Tinamou,C. soui
 ,,Red-legged Tinamou,C. erythropus
-,,Variegated Tinamou,C. variegatus
+5,,Variegated Tinamou,C. variegatus
 ,,Rusty Tinamou,C. brevirostris
+,,Small-billed Tinamou,C. parvirostris
 SCREAMERS,ANHIMIDAE
 ,,Horned Screamer,Anhima cornuta
 DUCKS,ANATIDAE
@@ -74,13 +75,14 @@ POTOOS,NYCTIBIIDAE
 NIGHTJARS,CAPRIMULGIDAE
 ,,Nacunda Nighthawk,Chordeiles nacunda
 ,,Least Nighthawk,C. pusillus
+,,Sand-colored Nighthawk,C. rupestris
 ,,Lesser Nighthawk,C. acutipennis
-,,Short-tailed Nighthawk,Lurocalis semitorquatus
-5,,Blackish Nightjar,Nyctipolus nigrescens
+5,,Short-tailed Nighthawk,Lurocalis semitorquatus
+,,Blackish Nightjar,Nyctipolus nigrescens
 ,,Common Pauraque,Nyctidromus albicollis
 ,,Spot-tailed Nightjar,Hydropsalis maculicaudus
 ,,White-tailed Nightjar,H. cayennensis
-,,Ladder-tailed Nightjar,H. climacocerca
+10,,Ladder-tailed Nightjar,H. climacocerca
 ,,Scissor-tailed Nightjar,H. torquata
 ,,Rufous Nightjar,Antrostomus rufus
 SWIFTS,APODIDAE
@@ -199,24 +201,23 @@ SKUAS,STERCORARIIDAE
 ,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
-,,Black-legged Kittiwake,Rissa tridactyla
-,,Black-headed Gull,Chroicocephalus ridibundus
-,,Laughing Gull,Leucophaeus atricilla
-,,Audouin's Gull,Ichthyaetus audouinii
-5,,Lesser Black-backed Gull,Larus fuscus
 ,,Brown Noddy,Anous stolidus
 ,,Black Noddy,A. minutus
+,,Black Skimmer,Rynchops niger
+,,Black-legged Kittiwake,Rissa tridactyla
+5,,Black-headed Gull,Chroicocephalus ridibundus
+,,Laughing Gull,Leucophaeus atricilla
+,,Audouin's Gull,Ichthyaetus audouinii
+,,Lesser Black-backed Gull,Larus fuscus
 ,,Sooty Tern,Onychoprion fuscatus
-,,Bridled Tern,O. anaethetus
-10,,Least Tern,Sternula antillarum
+10,,Bridled Tern,O. anaethetus
+,,Least Tern,Sternula antillarum
 ,,Yellow-billed Tern,S. superciliaris
 ,,Large-billed Tern,Phaetusa simplex
 ,,Gull-billed Tern,Gelochelidon nilotica
-,,Black Tern,Chlidonias niger
-15,,Common Tern,Sterna hirundo
+15,,Black Tern,Chlidonias niger
+,,Common Tern,Sterna hirundo
 ,,Roseate Tern,S. dougallii
 ,,Sandwich Tern,Thalasseus sandvicensis
 ,,Royal Tern,T. maximus
@@ -257,24 +258,24 @@ PELICANS,PELECANIDAE
 HERONS,ARDEIDAE
 ,,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,,Fasciated Tiger-Heron,T. fasciatum
-,,Agami Heron,Agamia agami
 ,,Boat-billed Heron,Cochlearius cochlearius
+,,Agami Heron,Agamia agami
 5,,Zigzag Heron,Zebrilus undulatus
+,,Stripe-backed Bittern,Ixobrychus involucris
+,,Least Bittern,I. exilis
 ,,Pinnated Bittern,Botaurus pinnatus
-,,Least Bittern,Ixobrychus exilis
-,,Stripe-backed Bittern,I. involucris
-,,Black-crowned Night-Heron,Nycticorax nycticorax
-10,,Yellow-crowned Night-Heron,Nyctanassa violacea
+,,Capped Heron,Pilherodius pileatus
+10,,Little Blue Heron,Egretta caerulea
+,,Tricolored Heron,E. tricolor
+,,Snowy Egret,E. thula
+,,Little Egret,E. garzetta
+,,Yellow-crowned Night-Heron,Nyctanassa violacea
+15,,Black-crowned Night-Heron,Nycticorax nycticorax
 ,,Striated Heron,Butorides striata
 ,,Green Heron,B. virescens
 ,,Cattle Egret,Bubulcus ibis
-,,Cocoi Heron,Ardea cocoi
-15,,Great Egret,A. alba
-,,Capped Heron,Pilherodius pileatus
-,,Tricolored Heron,Egretta tricolor
-,,Little Egret,E. garzetta
-,,Snowy Egret,E. thula
-,,Little Blue Heron,E. caerulea
+,,Great Egret,Ardea alba
+,,Cocoi Heron,A. cocoi
 IBISES,THRESKIORNITHIDAE
 ,,White Ibis,Eudocimus albus
 ,,Scarlet Ibis,E. ruber
@@ -324,7 +325,7 @@ HAWKS,ACCIPITRIDAE
 ,,Short-tailed Hawk,B. brachyurus
 ,,Zone-tailed Hawk,B. albonotatus
 BARN OWLS,TYTONIDAE
-,,American Barn-Owl,Tyto furcata
+,,American Barn Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,Tropical Screech-Owl,Megascops choliba
 ,,Foothill Screech-Owl,M. roraimae
@@ -507,7 +508,7 @@ OVENBIRDS,FURNARIIDAE
 ,,Short-billed Leaftosser,S. rufigularis
 ,,Black-tailed Leaftosser,S. caudacutus
 ,,Spot-throated Woodcreeper,Certhiasomus stictolaemus
-5,,Long-tailed Woodcreeper,Deconychura longicauda
+5,,Whistling Long-tailed Woodcreeper,Deconychura longicauda
 ,,White-chinned Woodcreeper,Dendrocincla merula
 ,,Plain-brown Woodcreeper,D. fuliginosa
 ,,Wedge-billed Woodcreeper,Glyphorynchus spirurus

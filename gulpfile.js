@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const browserSync = require("browser-sync").create("index.html");
 const reload = browserSync.reload;
 
-const newer = require('gulp-newer');
+const newer = require('gulp-newer');  // try gulp-changed ?
 const sass = require("gulp-dart-sass");
 // const sourcemaps = require("gulp-sourcemaps");
 
@@ -24,10 +24,28 @@ function serve (done) {        // serve:    ./home.html
     server: {
       baseDir: "./",
       index: "home.html",
+      // files: 
+      // serveStaticOptions: 
     },
     ghostMode: false
   });
   done();
+  // gulp.watch('app/*.html').on('change', browserSync.reload);
+  // gulp.watch('app/css/*.css').on('change', browserSync.reload);
+  // gulp.watch('app/js/*.js').on('change', browserSync.reload);
+
+  // gulp.watch(paths.js.src, reloadJS);
+  // // gulp.watch(paths.sass.src, sass2css);
+  // gulp.watch(paths.sass.src, sass2css);
+  // gulp.watch("./*.html", { events: 'all' }, function(cb) {
+  //   reload();
+  //   cb();
+  // });
+
+  // gulp.watch('./*.html').on('change', browserSync.reload);
+  // gulp.watch(paths.css.src).on('change', browserSync.reload);
+  // gulp.watch('./temp/js').on('change', browserSync.reload);
+
 }
 
 // function serveDeploy (done) {      // serve:    deploy/home.html
@@ -97,25 +115,39 @@ const paths = {
   flags: {
     src: "./flags/32/*.png",
     deploy: "./deploy/flags"
+  },
+  images: {
+    src: "./images/*.png",
+    deploy: "./deploy/images"
   }
 };
 
 function watch() {
   gulp.watch(paths.js.src, reloadJS);
+
   gulp.watch(paths.sass.src, sass2css);
+  // gulp.watch(paths.css.src).on('change', browserSync.reload);  // doesn't work
+
+  gulp.watch(paths.css.src).on('change', function () {            // works!
+    browserSync.reload();
+  }); 
+
+
+  // gulp.watch(paths.css.src, { events: 'all' }, function() {
+  //   reload();
+  //   // cb();
+  // });
+
   gulp.watch("./*.html", { events: 'all' }, function(cb) {
     reload();
     cb();
   });
 }
 
-function sass2css() {
+function sass2css(done) {
   return gulp.src(paths.sass.stylesFile, { sourcemaps: true })
-    // .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    // .pipe(sourcemaps.write("./temp"))
-    .pipe(gulp.dest(paths.css.temp),  { sourcemaps: true })
-    .pipe(reload({ stream: true }));
+    .pipe(gulp.dest(paths.css.temp), { sourcemaps: true });
 }
 
 // .pipe(sass({ silenceDeprecations: ['legacy-js-api']}))
@@ -277,6 +309,12 @@ function copyFLAGS() {
     .pipe(gulp.dest(paths.flags.deploy));
 }
 
+function copyIMAGES() {
+  return gulp.src(paths.images.src, {encoding: false})
+    .pipe(newer(paths.images.deploy))
+    .pipe(gulp.dest(paths.images.deploy));
+}
+
 // ************************   get the SACC data from the BuildSACC directory   **********************  //
 
 // to get Countries and occurrences.txt from BuildSACC directory
@@ -315,7 +353,7 @@ function getBuildSACC_NumLists() {
     .pipe(gulp.dest("./src/js"));
 }
 
-// ************************   ftp to experimental.potoococha.net and potoococha.net    **********************  //
+// ****************   ftp to System Domain (potoococha.net) and potoococha.net    **********************  //
 
 const gutil = require('gulp-util');
 const ftp = require('vinyl-ftp');
@@ -326,29 +364,6 @@ const ftp = require('vinyl-ftp');
 const glob = require('glob');
 const deploys = glob.globSync('./deploy/**/*.*');
 
-// console.log(deploys);
-// const authorsGulp = ['deploy/Authors/*.{txt,json}'];
-// const countriesGulp = ['deploy/Countries/*.*'];
-// let all = [authors, countries];
-// all = all.reduce((accumulator, currentValue) => accumulator.concat(currentValue));
-
-
-// function testGlobs() {
-
-//     // using base = '.' will transfer everything to /public_html correctly
-//   // turn off buffering in gulp.src for best performance
-  
-//   // return gulp.src(authors, { base: './deploy', buffer: false })
-//   // return gulp.src(authors, { buffer: false })
-//   // return gulp.src(authorsGulp, { buffer: false })
-//   // return gulp.src(authorsGulp.concat(countriesGulp), { buffer: false })  // this works
-//   // return gulp.src(all, { buffer: false })  // this works
-//   return gulp.src(deploys, { buffer: false, base: 'deploy' })  // this works
-//   .pipe(print())
-//   .pipe(gulp.dest("testGlobs"));
-// }
-
-// TODO : (logFileRequests.txt?)
 /* list all files you wish to ftp in the glob variable */
 // const ftpGlobs = [
 //   'deploy/css/*.css',
@@ -366,55 +381,38 @@ const deploys = glob.globSync('./deploy/**/*.*');
 //   '!ftpConfig.js'
 // ];
 
-const gulpftp = require('./ftpConfig.js');
+const gulpSFTP = require('./sftpConfig.js');
 
-function deployTest() {
+const sftp = require('gulp-sftp');
 
-  const conn = ftp.create({
-    host: gulpftp.config.host,
-    user: gulpftp.config.user,
-    password: gulpftp.config.pass,
-    parallel: 3,
-    log: gutil.log
-  });
+function deploySystemDomain() {
 
-  return gulp.src(deploys, { base: 'deploy', buffer: false })
-    .pipe(conn.newer('./experimental.net/test'))
-    .pipe(conn.dest('./experimental.net/test'));
-}
-
-function deployExperimental() {
-
-  const conn = ftp.create({
-    host: gulpftp.config.host,
-    user: gulpftp.config.user,
-    password: gulpftp.config.pass,
-    parallel: 3,
-    log: gutil.log
-  });
-
-    // using base = '.' will transfer everything to /public_html correctly
-    // turn off buffering in gulp.src for best performance
-  // return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
+  // using base = '.' will transfer everything to /public_html correctly
+  // turn off buffering in gulp.src for best performance
   return gulp.src(deploys, { base: './deploy', buffer: false })
-    .pipe(conn.newer('./experimental.net'))
-    .pipe(conn.dest('./experimental.net'));
+  // return gulp.src("snippets.txt")
+
+    .pipe(sftp({
+      host: gulpSFTP.systemConfig.host,
+      user: gulpSFTP.systemConfig.user,
+      protocol: gulpSFTP.systemConfig.protocol,
+      port: gulpSFTP.systemConfig.port,
+      pass: gulpSFTP.systemConfig.pass
+    }));
 }
 
 function deployPotoococha() {
 
-  const conn = ftp.create({
-    host: gulpftp.config.host,
-    user: gulpftp.config.user,
-    password: gulpftp.config.pass,
-    parallel: 3,
-    log: gutil.log
-  });
-
-  // return gulp.src(ftpGlobs, { base: './deploy', buffer: false })
   return gulp.src(deploys, { base: './deploy', buffer: false })
-    .pipe(conn.newer('.'))
-    .pipe(conn.dest('.'));
+  // return gulp.src("citations.html")
+
+    .pipe(sftp({
+      host: gulpSFTP.potooConfig.host,
+      user: gulpSFTP.potooConfig.user,
+      protocol: gulpSFTP.potooConfig.protocol,
+      port: gulpSFTP.potooConfig.port,
+      pass: gulpSFTP.potooConfig.pass
+    }));
 }
 
 //  ****************************   compose and export tasks  *****************************  //
@@ -433,17 +431,16 @@ exports.production = gulp.series(moveJStoTemp, processJS);
 
 // TODO : (include php and logFileRequests.txt) movePrintCSStoTemp? not used anymore - keep as backup?
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
-  copyPHP, copySVG, copyFLAGS, copyCitations, copyAuthors,
+  copyPHP, copySVG, copyFLAGS, copyIMAGES, copyCitations, copyAuthors,
   copyOccurrences, copyCountries, copyJSON, movePrintCSStoTemp);
 
 // exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON);
 exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON, getBuildSACC_NumLists);
 
-exports.deploy_E = gulp.series(deployExperimental);
+exports.deploy_S = gulp.series(deploySystemDomain);
 exports.deploy_P = gulp.series(deployPotoococha);
 
 // exports.testGlobs = gulp.series(testGlobs);
-// exports.deployTest = gulp.series(deployTest);
 
 // *************************** not used ************************************ //
 

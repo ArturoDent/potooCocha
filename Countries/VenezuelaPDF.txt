@@ -6,7 +6,7 @@ TINAMOUS,TINAMIDAE
 5,,White-throated Tinamou,T. guttatus
 ,,Cinereous Tinamou,Crypturellus cinereus
 ,,Little Tinamou,C. soui
-,endemic,Tepui Tinamou,C. ptaritepui
+,,Tepui Tinamou,C. ptaritepui
 ,,Brown Tinamou,C. obsoletus
 10,,Undulated Tinamou,C. undulatus
 ,,Gray-legged Tinamou,C. duidae
@@ -347,29 +347,28 @@ SKUAS,STERCORARIIDAE
 ,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
-SKIMMERS,RYNCHOPIDAE
-,,Black Skimmer,Rynchops niger
 GULLS,LARIDAE
+,,Brown Noddy,Anous stolidus
+,,Black Noddy,A. minutus
+,,Black Skimmer,Rynchops niger
 ,,Black-legged Kittiwake,Rissa tridactyla
-,,Black-headed Gull,Chroicocephalus ridibundus
+5,,Black-headed Gull,Chroicocephalus ridibundus
 ,,Laughing Gull,Leucophaeus atricilla
 ,,Franklin's Gull,L. pipixcan
-5,,Ring-billed Gull,Larus delawarensis
+,,Ring-billed Gull,Larus delawarensis
 ,,Great Black-backed Gull,L. marinus
-,,Kelp Gull,L. dominicanus
+10,,Kelp Gull,L. dominicanus
 ,,Lesser Black-backed Gull,L. fuscus
 ,,Herring Gull,L. argentatus
-10,,Brown Noddy,Anous stolidus
-,,Black Noddy,A. minutus
 ,,Sooty Tern,Onychoprion fuscatus
 ,,Bridled Tern,O. anaethetus
-,,Least Tern,Sternula antillarum
-15,,Yellow-billed Tern,S. superciliaris
+15,,Least Tern,Sternula antillarum
+,,Yellow-billed Tern,S. superciliaris
 ,,Large-billed Tern,Phaetusa simplex
 ,,Gull-billed Tern,Gelochelidon nilotica
 ,,Caspian Tern,Hydroprogne caspia
-,,Black Tern,Chlidonias niger
-20,,Common Tern,Sterna hirundo
+20,,Black Tern,Chlidonias niger
+,,Common Tern,Sterna hirundo
 ,,Roseate Tern,S. dougallii
 ,,Sandwich Tern,Thalasseus sandvicensis
 ,,Royal Tern,T. maximus
@@ -408,26 +407,26 @@ PELICANS,PELECANIDAE
 HERONS,ARDEIDAE
 ,,Rufescent Tiger-Heron,Tigrisoma lineatum
 ,,Fasciated Tiger-Heron,T. fasciatum
-,,Agami Heron,Agamia agami
 ,,Boat-billed Heron,Cochlearius cochlearius
+,,Agami Heron,Agamia agami
 5,,Zigzag Heron,Zebrilus undulatus
+,,Stripe-backed Bittern,Ixobrychus involucris
+,,Least Bittern,I. exilis
 ,,Pinnated Bittern,Botaurus pinnatus
-,,Least Bittern,Ixobrychus exilis
-,,Stripe-backed Bittern,I. involucris
+,,Capped Heron,Pilherodius pileatus
+10,,Whistling Heron,Syrigma sibilatrix
+,,Little Blue Heron,Egretta caerulea
+,,Tricolored Heron,E. tricolor
+,,Reddish Egret,E. rufescens
+,,Snowy Egret,E. thula
+15,,Yellow-crowned Night-Heron,Nyctanassa violacea
 ,,Black-crowned Night-Heron,Nycticorax nycticorax
-10,,Yellow-crowned Night-Heron,Nyctanassa violacea
 ,,Striated Heron,Butorides striata
 ,,Green Heron,B. virescens
 ,,Cattle Egret,Bubulcus ibis
-,,Great Blue Heron,Ardea herodias
-15,,Cocoi Heron,A. cocoi
-,,Great Egret,A. alba
-,,Whistling Heron,Syrigma sibilatrix
-,,Capped Heron,Pilherodius pileatus
-,,Tricolored Heron,Egretta tricolor
-20,,Reddish Egret,E. rufescens
-,,Snowy Egret,E. thula
-,,Little Blue Heron,E. caerulea
+20,,Great Egret,Ardea alba
+,,Great Blue Heron,A. herodias
+,,Cocoi Heron,A. cocoi
 IBISES,THRESKIORNITHIDAE
 ,,White Ibis,Eudocimus albus
 ,,Scarlet Ibis,E. ruber
@@ -494,7 +493,7 @@ HAWKS,ACCIPITRIDAE
 ,,Zone-tailed Hawk,B. albonotatus
 ,,Red-tailed Hawk,B. jamaicensis
 BARN OWLS,TYTONIDAE
-,,American Barn-Owl,Tyto furcata
+,,American Barn Owl,Tyto furcata
 OWLS,STRIGIDAE
 ,,White-throated Screech-Owl,Megascops albogularis
 ,,Tropical Screech-Owl,M. choliba
@@ -793,7 +792,7 @@ OVENBIRDS,FURNARIIDAE
 ,,Gray-throated Leaftosser,S. albigularis
 5,,Spot-throated Woodcreeper,Certhiasomus stictolaemus
 ,,Olivaceous Woodcreeper,Sittasomus griseicapillus
-,,Long-tailed Woodcreeper,Deconychura longicauda
+,,Mournful Long-tailed Woodcreeper,Deconychura pallida
 ,,Tyrannine Woodcreeper,Dendrocincla tyrannina
 ,,White-chinned Woodcreeper,D. merula
 10,,Ruddy Woodcreeper,D. homochroa
@@ -1277,14 +1276,15 @@ SPARROWS,PASSERELLIDAE
 ,endemic,Paria Brushfinch,A. phygas
 10,,Gray-browed Brushfinch,A. assimilis
 ,,Golden-winged Sparrow,A. schlegeli
+,,Yellow-mandibled Sparrow,A. axillaris
 ,,Pectoral Sparrow,A. taciturnus
 ,,Chestnut-capped Brushfinch,A. brunneinucha
-,,Rufous-collared Sparrow,Zonotrichia capensis
-15,,Lincoln's Sparrow,Melospiza lincolnii
+15,,Rufous-collared Sparrow,Zonotrichia capensis
+,,Lincoln's Sparrow,Melospiza lincolnii
 ,,Moustached Brushfinch,Atlapetes albofrenatus
 ,,Tepui Brushfinch,A. personatus
 ,,Ochre-breasted Brushfinch,A. semirufus
-,,Slaty Brushfinch,A. schistaceus
+20,,Slaty Brushfinch,A. schistaceus
 ,,Pale-naped Brushfinch,A. pallidinucha
 ,,Yellow-breasted Brushfinch,A. latinuchus
 BLACKBIRDS,ICTERIDAE
@@ -1357,7 +1357,7 @@ WOOD-WARBLERS,PARULIDAE
 ,,Two-banded Warbler,M. bivittata
 ,,Gray-throated Warbler,M. cinereicollis
 ,,Russet-crowned Warbler,M. coronata
-40,,Rufous-capped Warbler,Basileuterus rufifrons
+40,,Chestnut-capped Warbler,Basileuterus deltattrii
 ,,Golden-crowned Warbler,B. culicivorus
 ,,Three-striped Warbler,B. tristriatus
 ,endemic,Gray-headed Warbler,B. griseiceps
@@ -1466,7 +1466,7 @@ TANAGERS,THRAUPIDAE
 ,,Wedge-tailed Grass-Finch,Emberizoides herbicola
 ,endemic,Duida Grass-Finch,E. duidae
 ,,Black-headed Hemispingus,Pseudospingus verticalis
-75,,Gray-hooded Bush Tanager,Cnemoscopus rubrirostris
+75,,Pink-billed Cnemoscopus,Cnemoscopus rubrirostris
 ,endemic,Slaty-backed Hemispingus,Poospiza goeringi
 ,endemic,Gray-capped Hemispingus,Kleinothraupis reyi
 ,,Black-capped Hemispingus,K. atropileus
@@ -1487,7 +1487,7 @@ TANAGERS,THRAUPIDAE
 ,,Magpie Tanager,Cissopis leverianus
 ,,Golden-crowned Tanager,Iridosornis rufivertex
 95,,Fawn-breasted Tanager,Pipraeidea melanonota
-,,Buff-breasted Mountain Tanager,Dubusia taeniata
+,,Buff-banded Mountain Tanager,Dubusia taeniata
 ,,Lacrimose Mountain Tanager,Anisognathus lacrymosus
 ,,Scarlet-bellied Mountain Tanager,A. igniventris
 ,,Blue-winged Mountain Tanager,A. somptuosus
