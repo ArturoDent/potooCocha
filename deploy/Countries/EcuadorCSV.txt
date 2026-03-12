@@ -163,6 +163,7 @@ E,Galapagos Dove,Z. galapagoensis
 ,SWIFTS,APODIDAE
 ,Spot-fronted Swift,Cypseloides cherriei
 ,White-chinned Swift,C. cryptus
+,Black Swift,C. niger
 ,White-chested Swift,C. lemosi
 ,Chestnut-collared Swift,Streptoprocne rutila
 ,White-collared Swift,S. zonaris
@@ -272,7 +273,7 @@ E,Black-breasted Puffleg,Eriocnemis nigrivestis
 ,Green-crowned Brilliant,H. jacula
 ,Empress Brilliant,H. imperatrix
 ,Violet-fronted Brilliant,H. leadbeateri
-,Giant Hummingbird,Patagona gigas
+,Northern Giant-Hummingbird,Patagona peruviana
 ,Long-billed Starthroat,Heliomaster longirostris
 ,Blue-tufted Starthroat,H. furcifer
 ,Purple-collared Woodstar,Myrtis fanny
@@ -576,8 +577,8 @@ E,Flightless Cormorant,P. harrisi
 ,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Green Heron,B. virescens
-,Cattle Egret,Bubulcus ibis
-,Great Egret,Ardea alba
+,Cattle Egret,Ardea ibis
+,Great Egret,A. alba
 ,Great Blue Heron,A. herodias
 ,Cocoi Heron,A. cocoi
 
@@ -621,10 +622,10 @@ E,Flightless Cormorant,P. harrisi
 ,Rufous-thighed Kite,H. diodon
 ,Mississippi Kite,Ictinia mississippiensis
 ,Plumbeous Kite,I. plumbea
-,Cinereous Harrier,Circus cinereus
 ,Gray-bellied Hawk,Accipiter poliogaster
 ,Sharp-shinned Hawk,A. striatus
-,Bicolored Hawk,A. bicolor
+,Bicolored Hawk,Astur bicolor
+,Cinereous Harrier,Circus cinereus
 ,Tiny Hawk,Microspizias superciliosus
 ,Semicollared Hawk,M. collaris
 ,Crane Hawk,Geranospiza caerulescens
@@ -668,7 +669,7 @@ E,Galapagos Hawk,B. galapagoensis
 ,Crested Owl,Lophostrix cristata
 ,Spectacled Owl,Pulsatrix perspicillata
 ,Band-bellied Owl,P. melanota
-,Great Horned Owl,Bubo virginianus
+,Paramo Horned Owl,Bubo nigrescens
 ,Mottled Owl,Strix virgata
 ,Black-and-white Owl,S. nigrolineata
 ,Black-banded Owl,S. huhula
@@ -1040,7 +1041,7 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,ANTTHRUSHES,FORMICARIIDAE
 ,Rufous-capped Antthrush,Formicarius colma
 ,Black-faced Antthrush,F. analis
-,Black-headed Antthrush,F. nigricapillus
+,Black-hooded Antthrush,F. destructus
 ,Rufous-breasted Antthrush,F. rufipectus
 ,Short-tailed Antthrush,Chamaeza campanisona
 ,Striated Antthrush,C. nobilis
@@ -1231,7 +1232,7 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Sharpbill,Oxyruncus cristatus
 
 ,ROYAL FLYCATCHERS,ONYCHORHYNCHIDAE
-,Royal Flycatcher,Onychorhynchus coronatus
+,Tropical Royal-Flycatcher,Onychorhynchus coronatus
 ,Ruddy-tailed Flycatcher,Terenotriccus erythrurus
 ,Tawny-breasted Flycatcher,Myiobius villosus
 ,Sulphur-rumped Flycatcher,M. barbatus
@@ -1330,7 +1331,8 @@ E,Ecuadorian Tapaculo,S. robbinsi
 ,Ashy-headed Tyrannulet,Tyranniscus cinereiceps
 ,Black-capped Tyrannulet,T. nigrocapillus
 ,Tawny-rumped Tyrannulet,T. uropygialis
-,Southern Beardless-Tyrannulet,Camptostoma obsoletum
+,Pacific Beardless-Tyrannulet,Camptostoma sclateri
+,Amazonian Beardless-Tyrannulet,C. napaeum
 ,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,White-lored Tyrannulet,O. inerme
 ,Mouse-colored Tyrannulet,Nesotriccus murinus
@@ -1450,7 +1452,8 @@ E,Brujo Flycatcher,P. nanus
 ,Olivaceous Greenlet,Hylophilus olivaceus
 ,Lemon-chested Greenlet,H. thoracicus
 ,Slaty-capped Shrike-Vireo,Vireolanius leucotis
-,Tawny-crowned Greenlet,Tunchiornis ochraceiceps
+,Northern Tawny-crowned Greenlet,Tunchiornis ochraceiceps
+,Western Tawny-crowned Greenlet,T. ferrugineifrons
 ,Lesser Greenlet,Pachysylvia decurtata
 ,Dusky-capped Greenlet,P. hypoxantha
 ,Rufous-naped Greenlet,P. semibrunnea
@@ -1462,6 +1465,7 @@ E,Brujo Flycatcher,P. nanus
 ,Red-eyed Vireo,V. olivaceus
 ,Chivi Vireo,V. chivi
 ,Yellow-green Vireo,V. flavoviridis
+,Black-whiskered Vireo,V. altiloquus
 
 ,JAYS,CORVIDAE
 ,Black-collared Jay,Cyanolyca armillata
@@ -1473,6 +1477,7 @@ E,Brujo Flycatcher,P. nanus
 
 ,SWALLOWS,HIRUNDINIDAE
 ,Blue-and-white Swallow,Pygochelidon cyanoleuca
+,Black-collared Swallow,P. melanoleuca
 ,Brown-bellied Swallow,Orochelidon murina
 ,Pale-footed Swallow,O. flavipes
 ,White-banded Swallow,Atticora fasciata
@@ -1496,7 +1501,7 @@ E,Galapagos Martin,P. modesta
 ,Scaly-breasted Wren,Microcerculus marginatus
 ,Wing-banded Wren,M. bambla
 ,Gray-mantled Wren,Odontorchilus branickii
-,House Wren,Troglodytes aedon
+,Southern House Wren,Troglodytes musculus
 ,Mountain Wren,T. solstitialis
 ,Grass Wren,Cistothorus platensis
 ,Band-backed Wren,Campylorhynchus zonatus
@@ -1556,8 +1561,8 @@ E,Galapagos Martin,P. modesta
 ,Great Thrush,T. fuscater
 ,Chiguanco Thrush,T. chiguanco
 ,Glossy-black Thrush,T. serranus
-,White-throated Thrush,T. assimilis
-,White-necked Thrush,T. albicollis
+,Dagua Thrush,T. daguae
+,Gray-flanked Thrush,T. phaeopygus
 
 ,MOCKINGBIRDS,MIMIDAE
 ,Tropical Mockingbird,Mimus gilvus
@@ -1627,6 +1632,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 
 ,BLACKBIRDS,ICTERIDAE
 ,Bobolink,Dolichonyx oryzivorus
+,Eastern Meadowlark,Sturnella magna
 ,Red-breasted Meadowlark,Leistes militaris
 ,Peruvian Meadowlark,L. bellicosus
 ,Yellow-billed Cacique,Amblycercus holosericeus
@@ -1647,6 +1653,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,White-edged Oriole,I. graceannae
 ,Yellow-tailed Oriole,I. mesomelas
 ,Epaulet Oriole,I. cayanensis
+,Orchard Oriole,I. spurius
 ,Yellow-backed Oriole,I. chrysater
 ,Baltimore Oriole,I. galbula
 ,Giant Cowbird,Molothrus oryzivorus
@@ -1678,6 +1685,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,Chestnut-sided Warbler,S. pensylvanica
 ,Blackpoll Warbler,S. striata
 ,Black-throated Blue Warbler,S. caerulescens
+,Yellow-rumped Warbler,S. coronata
 ,Black-throated Green Warbler,S. virens
 ,Citrine Warbler,Myiothlypis luteoviridis
 ,Black-crested Warbler,M. nigrocristata
@@ -1750,7 +1758,7 @@ E,Pale-headed Brushfinch,A. pallidiceps
 ,Rusty Flowerpiercer,D. sittoides
 ,Deep-blue Flowerpiercer,D. glauca
 ,Bluish Flowerpiercer,D. caerulescens
-,Masked Flowerpiercer,D. cyanea
+,Warbling Masked-Flowerpiercer,D. cyanea
 ,Tit-like Dacnis,Xenodacnis parina
 ,Slaty Finch,Haplospiza rustica
 ,Blue-black Grassquit,Volatinia jacarina

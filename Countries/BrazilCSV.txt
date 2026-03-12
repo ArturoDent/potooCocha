@@ -9,6 +9,7 @@
 ,White-throated Tinamou,T. guttatus
 ,Cinereous Tinamou,Crypturellus cinereus
 ,Little Tinamou,C. soui
+E,Slaty-masked Tinamou,C. resonans
 ,Brown Tinamou,C. obsoletus
 ,Undulated Tinamou,C. undulatus
 ,Brazilian Tinamou,C. strigulosus
@@ -439,7 +440,8 @@ E,Little Wood-Rail,A. mangle
 ,Gray Gull,Leucophaeus modestus
 ,Laughing Gull,L. atricilla
 ,Franklin's Gull,L. pipixcan
-,Ring-billed Gull,Larus delawarensis
+,Olrog's Gull,Larus atlanticus
+,Ring-billed Gull,L. delawarensis
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Sooty Tern,Onychoprion fuscatus
@@ -571,8 +573,8 @@ E,Little Wood-Rail,A. mangle
 ,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Squacco Heron,Ardeola ralloides
-,Cattle Egret,Bubulcus ibis
-,Great Egret,Ardea alba
+,Cattle Egret,Ardea ibis
+,Great Egret,A. alba
 ,Gray Heron,A. cinerea
 ,Great Blue Heron,A. herodias
 ,Cocoi Heron,A. cocoi
@@ -619,11 +621,11 @@ E,White-collared Kite,L. forbesi
 ,Rufous-thighed Kite,H. diodon
 ,Mississippi Kite,Ictinia mississippiensis
 ,Plumbeous Kite,I. plumbea
-,Cinereous Harrier,Circus cinereus
-,Long-winged Harrier,C. buffoni
 ,Gray-bellied Hawk,Accipiter poliogaster
 ,Sharp-shinned Hawk,A. striatus
-,Bicolored Hawk,A. bicolor
+,Bicolored Hawk,Astur bicolor
+,Cinereous Harrier,Circus cinereus
+,Long-winged Harrier,C. buffoni
 ,Tiny Hawk,Microspizias superciliosus
 ,Black Kite,Milvus migrans
 ,Crane Hawk,Geranospiza caerulescens
@@ -663,9 +665,8 @@ E,White-necked Hawk,B. lacernulatus
 ,Crested Owl,Lophostrix cristata
 ,Spectacled Owl,Pulsatrix perspicillata
 ,Tawny-browed Owl,P. koeniswaldiana
-,Great Horned Owl,Bubo virginianus
-,Rusty-barred Owl,Strix hylophila
-,Mottled Owl,S. virgata
+,Tropical Horned Owl,Bubo nacurutu
+,Mottled Owl,Strix virgata
 ,Black-banded Owl,S. huhula
 ,Amazonian Pygmy-Owl,Glaucidium hardyi
 E,Least Pygmy-Owl,G. minutissimum
@@ -1426,7 +1427,8 @@ E,Buff-throated Purpletuft,I. pipra
 ,Sharpbill,Oxyruncus cristatus
 
 ,ROYAL FLYCATCHERS,ONYCHORHYNCHIDAE
-,Royal Flycatcher,Onychorhynchus coronatus
+,Tropical Royal-Flycatcher,Onychorhynchus coronatus
+E,Atlantic Royal-Flycatcher,O. swainsoni
 ,Ruddy-tailed Flycatcher,Terenotriccus erythrurus
 ,Sulphur-rumped Flycatcher,Myiobius barbatus
 ,Black-tailed Flycatcher,M. atricaudus
@@ -1541,12 +1543,13 @@ E,Noronha Elaenia,E. ridleyana
 ,White-throated Tyrannulet,Mecocerculus leucophrys
 ,Greenish Tyrannulet,Phyllomyias virescens
 ,Reiser's Tyrannulet,P. reiseri
+,Sooty-headed Tyrannulet,P. griseiceps
 ,Yungas Tyrannulet,P. weedeni
 ,Planalto Tyrannulet,P. fasciatus
-,Sooty-headed Tyrannulet,P. griseiceps
 E,Gray-capped Tyrannulet,P. griseocapilla
 ,Rough-legged Tyrannulet,Acrochordopus burmeisteri
-,Southern Beardless-Tyrannulet,Camptostoma obsoletum
+,Amazonian Beardless-Tyrannulet,Camptostoma napaeum
+,Southern Beardless-Tyrannulet,C. obsoletum
 ,White-lored Tyrannulet,Ornithion inerme
 ,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,Bearded Tachuri,Polystictus pectoralis
@@ -1664,7 +1667,9 @@ E,Gray-eyed Greenlet,Hylophilus amaurocephalus
 ,Brown-headed Greenlet,H. brunneiceps
 ,Lemon-chested Greenlet,H. thoracicus
 ,Slaty-capped Shrike-Vireo,Vireolanius leucotis
-,Tawny-crowned Greenlet,Tunchiornis ochraceiceps
+,Western Tawny-crowned Greenlet,Tunchiornis ferrugineifrons
+,Guianan Tawny-crowned Greenlet,T. luteifrons
+E,Para Tawny-crowned Greenlet,T. rubrifrons
 ,Dusky-capped Greenlet,Pachysylvia hypoxantha
 ,Buff-cheeked Greenlet,P. muscicapina
 ,Tepui Vireo,Vireo sclateri
@@ -1709,7 +1714,7 @@ E,White-naped Jay,C. cyanopogon
 ,Flutist Wren,M. ustulatus
 ,Wing-banded Wren,M. bambla
 ,Tooth-billed Wren,Odontorchilus cinereus
-,House Wren,Troglodytes aedon
+,Southern House Wren,Troglodytes musculus
 ,Tepui Wren,T. rufulus
 ,Grass Wren,Cistothorus platensis
 ,Bicolored Wren,Campylorhynchus griseus
@@ -1759,7 +1764,8 @@ E,Inambari Gnatcatcher,P. attenboroughi
 ,Campina Thrush,T. arthuri
 ,Black-hooded Thrush,T. olivater
 ,Blacksmith Thrush,T. subalaris
-,White-necked Thrush,T. albicollis
+,Gray-flanked Thrush,T. phaeopygus
+,Rufous-flanked Thrush,T. albicollis
 
 ,MOCKINGBIRDS,MIMIDAE
 ,Tropical Mockingbird,Mimus gilvus

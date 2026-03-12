@@ -241,6 +241,7 @@
 ,Yellow-billed Tern,S. superciliaris
 ,Large-billed Tern,Phaetusa simplex
 ,Gull-billed Tern,Gelochelidon nilotica
+,Caspian Tern,Hydroprogne caspia
 ,Black Tern,Chlidonias niger
 ,Common Tern,Sterna hirundo
 ,Roseate Tern,S. dougallii
@@ -260,8 +261,7 @@
 ,Wilson's Storm-Petrel,Oceanites oceanicus
 
 ,NORTHERN STORM-PETRELS,HYDROBATIDAE
-,Band-rumped Storm-Petrel,Hydrobates castro
-,Leach's Storm-Petrel,H. leucorhous
+,Leach's Storm-Petrel,Hydrobates leucorhous
 
 ,SHEARWATERS,PROCELLARIIDAE
 ,Fea's Petrel,Pterodroma feae
@@ -311,8 +311,8 @@
 ,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
 ,Green Heron,B. virescens
-,Cattle Egret,Bubulcus ibis
-,Great Egret,Ardea alba
+,Cattle Egret,Ardea ibis
+,Great Egret,A. alba
 ,Cocoi Heron,A. cocoi
 
 ,IBISES,THRESKIORNITHIDAE
@@ -349,9 +349,9 @@
 ,Double-toothed Kite,Harpagus bidentatus
 ,Rufous-thighed Kite,H. diodon
 ,Plumbeous Kite,Ictinia plumbea
-,Long-winged Harrier,Circus buffoni
 ,Gray-bellied Hawk,Accipiter poliogaster
-,Bicolored Hawk,A. bicolor
+,Bicolored Hawk,Astur bicolor
+,Long-winged Harrier,Circus buffoni
 ,Tiny Hawk,Microspizias superciliosus
 ,Crane Hawk,Geranospiza caerulescens
 ,Common Black Hawk,Buteogallus anthracinus
@@ -376,7 +376,7 @@
 ,Tawny-bellied Screech-Owl,M. watsonii
 ,Crested Owl,Lophostrix cristata
 ,Spectacled Owl,Pulsatrix perspicillata
-,Great Horned Owl,Bubo virginianus
+,Tropical Horned Owl,Bubo nacurutu
 ,Mottled Owl,Strix virgata
 ,Black-banded Owl,S. huhula
 ,Amazonian Pygmy-Owl,Glaucidium hardyi
@@ -644,7 +644,7 @@ E,Arrowhead Piculet,P. minutissimus
 ,Sharpbill,Oxyruncus cristatus
 
 ,ROYAL FLYCATCHERS,ONYCHORHYNCHIDAE
-,Royal Flycatcher,Onychorhynchus coronatus
+,Tropical Royal-Flycatcher,Onychorhynchus coronatus
 ,Ruddy-tailed Flycatcher,Terenotriccus erythrurus
 ,Sulphur-rumped Flycatcher,Myiobius barbatus
 
@@ -692,7 +692,7 @@ E,Arrowhead Piculet,P. minutissimus
 ,Suiriri Flycatcher,Suiriri suiriri
 ,Yellow Tyrannulet,Capsiempis flaveola
 ,Sooty-headed Tyrannulet,Phyllomyias griseiceps
-,Southern Beardless-Tyrannulet,Camptostoma obsoletum
+,Amazonian Beardless-Tyrannulet,Camptostoma napaeum
 ,White-lored Tyrannulet,Ornithion inerme
 ,Mouse-colored Tyrannulet,Nesotriccus murinus
 ,Bearded Tachuri,Polystictus pectoralis
@@ -745,7 +745,7 @@ E,Arrowhead Piculet,P. minutissimus
 ,Ashy-headed Greenlet,Hylophilus pectoralis
 ,Lemon-chested Greenlet,H. thoracicus
 ,Slaty-capped Shrike-Vireo,Vireolanius leucotis
-,Tawny-crowned Greenlet,Tunchiornis ochraceiceps
+,Guianan Tawny-crowned Greenlet,Tunchiornis luteifrons
 ,Buff-cheeked Greenlet,Pachysylvia muscicapina
 ,Tepui Vireo,Vireo sclateri
 ,Chivi Vireo,V. chivi
@@ -773,7 +773,7 @@ E,Arrowhead Piculet,P. minutissimus
 
 ,WRENS,TROGLODYTIDAE
 ,Wing-banded Wren,Microcerculus bambla
-,House Wren,Troglodytes aedon
+,Southern House Wren,Troglodytes musculus
 ,Coraya Wren,Pheugopedius coraya
 ,Buff-breasted Wren,Cantorchilus leucotis
 ,White-breasted Wood-Wren,Henicorhina leucosticta
@@ -797,7 +797,7 @@ E,Arrowhead Piculet,P. minutissimus
 ,Spectacled Thrush,T. nudigenis
 ,Campina Thrush,T. arthuri
 ,Black-hooded Thrush,T. olivater
-,White-necked Thrush,T. albicollis
+,Gray-flanked Thrush,T. phaeopygus
 
 ,MOCKINGBIRDS,MIMIDAE
 ,Tropical Mockingbird,Mimus gilvus
@@ -858,6 +858,7 @@ E,Arrowhead Piculet,P. minutissimus
 ,Hepatic Tanager,Piranga flava
 ,Summer Tanager,P. rubra
 ,Scarlet Tanager,P. olivacea
+,Red-throated Ant-Tanager,Driophlox fuscicauda
 ,Rose-breasted Grosbeak,Pheucticus ludovicianus
 ,Rose-breasted Chat,Granatellus pelzelni
 ,Red-and-black Grosbeak,Periporphyrus erythromelas

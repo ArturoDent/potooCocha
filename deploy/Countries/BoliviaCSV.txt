@@ -1,7 +1,7 @@
 
 ,RHEAS,RHEIDAE
 ,Greater Rhea,Rhea americana
-,Lesser Rhea,R. pennata
+,Lesser Rhea,Pterocnemia pennata
 
 ,TINAMOUS,TINAMIDAE
 ,Hooded Tinamou,Nothocercus nigrocapillus
@@ -27,6 +27,7 @@
 ,Andean Tinamou,N. pentlandii
 ,White-bellied Nothura,Nothura boraquira
 ,Darwin's Nothura,N. darwinii
+,Dwarf Tinamou,Taoniscus nanus
 ,Quebracho Crested-Tinamou,Eudromia formosa
 ,Puna Tinamou,Tinamotis pentlandii
 
@@ -255,7 +256,8 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,Gould's Jewelfront,H. aurescens
 ,Fawn-breasted Brilliant,H. rubinoides
 ,Violet-fronted Brilliant,H. leadbeateri
-,Giant Hummingbird,Patagona gigas
+,Northern Giant-Hummingbird,Patagona peruviana
+,Southern Giant-Hummingbird,P. gigas
 ,Long-billed Starthroat,Heliomaster longirostris
 ,Blue-tufted Starthroat,H. furcifer
 ,White-bellied Woodstar,Chaetocercus mulsant
@@ -413,8 +415,8 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,Snowy Egret,E. thula
 ,Black-crowned Night-Heron,Nycticorax nycticorax
 ,Striated Heron,Butorides striata
-,Cattle Egret,Bubulcus ibis
-,Great Egret,Ardea alba
+,Cattle Egret,Ardea ibis
+,Great Egret,A. alba
 ,Cocoi Heron,A. cocoi
 
 ,IBISES,THRESKIORNITHIDAE
@@ -457,11 +459,11 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,Rufous-thighed Kite,H. diodon
 ,Mississippi Kite,Ictinia mississippiensis
 ,Plumbeous Kite,I. plumbea
-,Cinereous Harrier,Circus cinereus
-,Long-winged Harrier,C. buffoni
 ,Gray-bellied Hawk,Accipiter poliogaster
 ,Sharp-shinned Hawk,A. striatus
-,Bicolored Hawk,A. bicolor
+,Bicolored Hawk,Astur bicolor
+,Cinereous Harrier,Circus cinereus
+,Long-winged Harrier,C. buffoni
 ,Tiny Hawk,Microspizias superciliosus
 ,Semicollared Hawk,M. collaris
 ,Crane Hawk,Geranospiza caerulescens
@@ -499,8 +501,10 @@ E,Black-hooded Sunbeam,Aglaeactis pamela
 ,Crested Owl,Lophostrix cristata
 ,Spectacled Owl,Pulsatrix perspicillata
 ,Band-bellied Owl,P. melanota
-,Great Horned Owl,Bubo virginianus
-,Chaco Owl,Strix chacoensis
+,Tropical Horned Owl,Bubo nacurutu
+,Magellanic Horned Owl,B. magellanicus
+,Rusty-barred Owl,Strix hylophila
+,Chaco Owl,S. chacoensis
 ,Mottled Owl,S. virgata
 ,Black-banded Owl,S. huhula
 ,Rufous-banded Owl,S. albitarsis
@@ -1026,7 +1030,7 @@ E,Bolivian Spinetail,C. henricae
 ,Sharpbill,Oxyruncus cristatus
 
 ,ROYAL FLYCATCHERS,ONYCHORHYNCHIDAE
-,Royal Flycatcher,Onychorhynchus coronatus
+,Tropical Royal-Flycatcher,Onychorhynchus coronatus
 ,Ruddy-tailed Flycatcher,Terenotriccus erythrurus
 ,Tawny-breasted Flycatcher,Myiobius villosus
 ,Sulphur-rumped Flycatcher,M. barbatus
@@ -1247,7 +1251,7 @@ E,Bolivian Spinetail,C. henricae
 ,Gray-chested Greenlet,H. semicinereus
 ,Lemon-chested Greenlet,H. thoracicus
 ,Slaty-capped Shrike-Vireo,Vireolanius leucotis
-,Tawny-crowned Greenlet,Tunchiornis ochraceiceps
+,Western Tawny-crowned Greenlet,Tunchiornis ferrugineifrons
 ,Dusky-capped Greenlet,Pachysylvia hypoxantha
 ,Buff-cheeked Greenlet,P. muscicapina
 ,Brown-capped Vireo,Vireo leucophrys
@@ -1288,7 +1292,7 @@ E,Bolivian Spinetail,C. henricae
 ,Scaly-breasted Wren,Microcerculus marginatus
 ,Gray-mantled Wren,Odontorchilus branickii
 ,Tooth-billed Wren,O. cinereus
-,House Wren,Troglodytes aedon
+,Southern House Wren,Troglodytes musculus
 ,Mountain Wren,T. solstitialis
 ,Grass Wren,Cistothorus platensis
 ,Thrush-like Wren,Campylorhynchus turdinus
@@ -1333,7 +1337,7 @@ E,Unicolored Thrush,T. haplochrous
 ,Great Thrush,T. fuscater
 ,Chiguanco Thrush,T. chiguanco
 ,Glossy-black Thrush,T. serranus
-,White-necked Thrush,T. albicollis
+,Rufous-flanked Thrush,T. albicollis
 
 ,MOCKINGBIRDS,MIMIDAE
 ,Patagonian Mockingbird,Mimus patagonicus
@@ -1371,7 +1375,7 @@ E,Unicolored Thrush,T. haplochrous
 ,SPARROWS,PASSERELLIDAE
 ,Short-billed Chlorospingus,Chlorospingus parvirostris
 ,Common Chlorospingus,C. flavopectus
-,Yungas Sparrow,Rhynchospiza dabbennei
+,Yungas Sparrow,Rhynchospiza dabbenei
 ,Chaco Sparrow,R. strigiceps
 ,Grassland Sparrow,Ammodramus humeralis
 ,Yellow-browed Sparrow,A. aurifrons
@@ -1495,7 +1499,7 @@ E,Gray-bellied Flowerpiercer,D. carbonaria
 ,Rusty Flowerpiercer,D. sittoides
 ,Deep-blue Flowerpiercer,D. glauca
 ,Bluish Flowerpiercer,D. caerulescens
-,Masked Flowerpiercer,D. cyanea
+,Whistling Masked-Flowerpiercer,D. melanopis
 ,Slaty Finch,Haplospiza rustica
 ,Blue-black Grassquit,Volatinia jacarina
 ,Black-and-white Tanager,Conothraupis speculigera

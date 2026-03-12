@@ -1,6 +1,6 @@
 RHEAS,RHEIDAE
 ,,Greater Rhea,Rhea americana
-,,Lesser Rhea,R. pennata
+,,Lesser Rhea,Pterocnemia pennata
 TINAMOUS,TINAMIDAE
 ,,Solitary Tinamou,Tinamus solitarius
 ,,Brown Tinamou,Crypturellus obsoletus
@@ -177,7 +177,7 @@ HUMMINGBIRDS,TROCHILIDAE
 15,,White-sided Hillstar,O. leucopleurus
 ,,Wedge-tailed Hillstar,O. adela
 ,,Blue-capped Puffleg,Eriocnemis glaucopoides
-,,Giant Hummingbird,Patagona gigas
+,,Southern Giant-Hummingbird,Patagona gigas
 ,,Long-billed Starthroat,Heliomaster longirostris
 20,,Stripe-breasted Starthroat,H. squamosus
 ,,Blue-tufted Starthroat,H. furcifer
@@ -437,8 +437,8 @@ HERONS,ARDEIDAE
 ,,Black-crowned Night-Heron,Nycticorax nycticorax
 ,,Striated Heron,Butorides striata
 ,,Green Heron,B. virescens
-15,,Cattle Egret,Bubulcus ibis
-,,Great Egret,Ardea alba
+15,,Cattle Egret,Ardea ibis
+,,Great Egret,A. alba
 ,,Cocoi Heron,A. cocoi
 IBISES,THRESKIORNITHIDAE
 ,,Scarlet Ibis,Eudocimus ruber
@@ -477,11 +477,11 @@ HAWKS,ACCIPITRIDAE
 ,,Rufous-thighed Kite,Harpagus diodon
 15,,Mississippi Kite,Ictinia mississippiensis
 ,,Plumbeous Kite,I. plumbea
-,,Cinereous Harrier,Circus cinereus
-,,Long-winged Harrier,C. buffoni
 ,,Gray-bellied Hawk,Accipiter poliogaster
-20,,Sharp-shinned Hawk,A. striatus
-,,Bicolored Hawk,A. bicolor
+,,Sharp-shinned Hawk,A. striatus
+,,Bicolored Hawk,Astur bicolor
+20,,Cinereous Harrier,Circus cinereus
+,,Long-winged Harrier,C. buffoni
 ,,Tiny Hawk,Microspizias superciliosus
 ,,Crane Hawk,Geranospiza caerulescens
 ,,Savanna Hawk,Buteogallus meridionalis
@@ -511,15 +511,16 @@ OWLS,STRIGIDAE
 ,,Black-capped Screech-Owl,M. atricapilla
 5,,Spectacled Owl,Pulsatrix perspicillata
 ,,Tawny-browed Owl,P. koeniswaldiana
-,,Great Horned Owl,Bubo virginianus
+,,Tropical Horned Owl,Bubo nacurutu
+,,Magellanic Horned Owl,B. magellanicus
 ,,Rusty-barred Owl,Strix hylophila
-,,Chaco Owl,S. chacoensis
-10,,Rufous-legged Owl,S. rufipes
+10,,Chaco Owl,S. chacoensis
+,,Rufous-legged Owl,S. rufipes
 ,,Mottled Owl,S. virgata
 ,,Black-banded Owl,S. huhula
 ,,Yungas Pygmy-Owl,Glaucidium bolivianum
-,,Ferruginous Pygmy-Owl,G. brasilianum
-15,,Austral Pygmy-Owl,G. nana
+15,,Ferruginous Pygmy-Owl,G. brasilianum
+,,Austral Pygmy-Owl,G. nana
 ,,Burrowing Owl,Athene cunicularia
 ,,Buff-fronted Owl,Aegolius harrisii
 ,,Striped Owl,Asio clamator
@@ -954,7 +955,7 @@ SWALLOWS,HIRUNDINIDAE
 ,,Barn Swallow,Hirundo rustica
 ,,Cliff Swallow,Petrochelidon pyrrhonota
 WRENS,TROGLODYTIDAE
-,,House Wren,Troglodytes aedon
+,,Southern House Wren,Troglodytes musculus
 ,,Mountain Wren,T. solstitialis
 ,,Grass Wren,Cistothorus platensis
 ,,Thrush-like Wren,Campylorhynchus turdinus
@@ -979,7 +980,7 @@ THRUSHES,TURDIDAE
 ,,Blacksmith Thrush,T. subalaris
 ,,Chiguanco Thrush,T. chiguanco
 ,,Glossy-black Thrush,T. serranus
-,,White-necked Thrush,T. albicollis
+,,Rufous-flanked Thrush,T. albicollis
 MOCKINGBIRDS,MIMIDAE
 ,,Chilean Mockingbird,Mimus thenca
 ,,Patagonian Mockingbird,M. patagonicus
@@ -1015,7 +1016,7 @@ FINCHES,FRINGILLIDAE
 ,,Chestnut-bellied Euphonia,E. pectoralis
 SPARROWS,PASSERELLIDAE
 ,,Common Chlorospingus,Chlorospingus flavopectus
-,endemic,Yungas Sparrow,Rhynchospiza dabbennei
+,endemic,Yungas Sparrow,Rhynchospiza dabbenei
 ,endemic,Chaco Sparrow,R. strigiceps
 ,,Grassland Sparrow,Ammodramus humeralis
 5,,Yellow-browed Sparrow,A. aurifrons

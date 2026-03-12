@@ -11,10 +11,10 @@ var numFamiliesList = {
 
 var numSpeciesList = {
 
-		"Argentina": 1047, "Aruba": 245, "Bolivia": 1406, "Brazil": 1861, "Chile": 525,
-  "Colombia": 1913, "Curaçao": 217, "Ecuador": 1670, "French Guiana": 737,
-  "Guyana": 828, "Paraguay": 694, "Peru": 1890, "Suriname": 746, "Trinidad": 490,
-  "Uruguay": 500, "Venezuela": 1413, "Bonaire": 209, "Falklands": 219, "South America": 3499
+		"Argentina": 1048, "Aruba": 245, "Bolivia": 1410, "Brazil": 1867, "Chile": 526,
+  "Colombia": 1915, "Curaçao": 217, "Ecuador": 1683, "French Guiana": 737,
+  "Guyana": 828, "Paraguay": 694, "Peru": 1897, "Suriname": 746, "Trinidad": 490,
+  "Uruguay": 500, "Venezuela": 1414, "Bonaire": 209, "Falklands": 220, "South America": 3514
 };
 
 // numSpecies does not include unconfirmeds, from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
