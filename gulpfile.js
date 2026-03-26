@@ -4,15 +4,10 @@ const reload = browserSync.reload;
 
 const newer = require('gulp-newer');  // try gulp-changed ?
 const sass = require("gulp-dart-sass");
-// const sourcemaps = require("gulp-sourcemaps");
 
-const concat = require("gulp-concat");
-const rename = require("gulp-rename");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 
-const stripComments = require("gulp-strip-comments");
-// const stripdebug = require("gulp-strip-debug");
 const modifyHTMLlinks = require("gulp-processhtml");  // or try gulp-useref
 const addVersionString = require("gulp-version-number");
 const print = require('gulp-print').default;
@@ -30,34 +25,7 @@ function serve (done) {        // serve:    ./home.html
     ghostMode: false
   });
   done();
-  // gulp.watch('app/*.html').on('change', browserSync.reload);
-  // gulp.watch('app/css/*.css').on('change', browserSync.reload);
-  // gulp.watch('app/js/*.js').on('change', browserSync.reload);
-
-  // gulp.watch(paths.js.src, reloadJS);
-  // // gulp.watch(paths.sass.src, sass2css);
-  // gulp.watch(paths.sass.src, sass2css);
-  // gulp.watch("./*.html", { events: 'all' }, function(cb) {
-  //   reload();
-  //   cb();
-  // });
-
-  // gulp.watch('./*.html').on('change', browserSync.reload);
-  // gulp.watch(paths.css.src).on('change', browserSync.reload);
-  // gulp.watch('./temp/js').on('change', browserSync.reload);
-
 }
-
-// function serveDeploy (done) {      // serve:    deploy/home.html
-//   browserSync.init({
-//     server: {
-//       baseDir: "deploy",
-//       index: "home.html"
-//     },
-//     ghostMode: false
-//   });
-//   done();
-// }
 
 const paths = {
   html: {
@@ -132,12 +100,6 @@ function watch() {
     browserSync.reload();
   }); 
 
-
-  // gulp.watch(paths.css.src, { events: 'all' }, function() {
-  //   reload();
-  //   // cb();
-  // });
-
   gulp.watch("./*.html", { events: 'all' }, function(cb) {
     reload();
     cb();
@@ -175,7 +137,6 @@ const scriptOrder = [
   "./temp/js/SouthAmerica.js",
   "./temp/js/numList.js",
 
-  // "./temp/js/taxonomy.js",
   "./temp/js/search/search_entry.js",
   "./temp/js/search/search_handleQuery.js",
   "./temp/js/search/search_functions.js",
@@ -186,20 +147,26 @@ const scriptOrder = [
   "./temp/js/birdMapFactory.js"
 ];
 
-function processJS() {
 
-  return gulp.src(scriptOrder)
-    // .pipe(stripdebug())
-    .pipe(stripComments())
-    .pipe(concat("app.js"))
-    .pipe(rename({
-      basename: "app",
-      suffix: ".min",
-      extname: ".js"
-    }))
-    // why no minify ?????
-    // .pipe(uglifyES())
-    .pipe(gulp.dest(paths.js.deploy));
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const strip = require('strip-comments');
+
+async function processJS() {
+  const pieces = await Promise.all(
+    scriptOrder.map(async (file) => {
+      const source = await fs.readFile(file, 'utf8');
+      return strip(source, { language: 'javascript' });
+    })
+  );
+
+  await fs.mkdir(paths.js.deploy, { recursive: true });
+
+  await fs.writeFile(
+    path.join(paths.js.deploy, 'app.min.js'),
+    pieces.join('\n;\n'),
+    'utf8'
+  );
 }
 
 const stripOptions = {
@@ -233,15 +200,27 @@ function processHTML() {
     .pipe(gulp.dest(paths.html.deploy));
 }
 
+
+const { Transform } = require('node:stream');
+
+function renameTo(filename) {
+  return new Transform({
+    objectMode: true,
+    transform(file, enc, cb) {
+      file.path = path.join(file.base, filename);
+      cb(null, file);
+    }
+  });
+}
+
 function processCSS() {
   return gulp.src(paths.css.src)
-    .pipe(autoprefixer({
-      cascade: false
-    }))
+    .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
-    .pipe(rename("styles.min.css"))
+    .pipe(renameTo('styles.min.css'))
     .pipe(gulp.dest(paths.css.deploy));
 }
+
 
 // function processPrintCSS() {
 //   return gulp.src(paths.css.src)
@@ -355,14 +334,10 @@ function getBuildSACC_NumLists() {
 
 // ****************   ftp to System Domain (potoococha.net) and potoococha.net    **********************  //
 
-const gutil = require('gulp-util');
-const ftp = require('vinyl-ftp');
-
 // const authors = glob.globSync('./deploy/Authors/*.{json,txt}');
 // const countries = glob.globSync('./deploy/Countries/*.{html,txt}');
 
-const glob = require('glob');
-const deploys = glob.globSync('./deploy/**/*.*');
+const deployRoot = './deploy';
 
 /* list all files you wish to ftp in the glob variable */
 // const ftpGlobs = [
@@ -382,37 +357,35 @@ const deploys = glob.globSync('./deploy/**/*.*');
 // ];
 
 const gulpSFTP = require('./sftpConfig.js');
+const SftpClient = require('ssh2-sftp-client');
 
-const sftp = require('gulp-sftp');
+function getSftpConnectionConfig(config) {
+  return {
+    host: config.host,
+    port: config.port,
+    username: config.user,
+    password: config.pass
+  };
+}
+
+async function uploadDeployDirectory(config, label) {
+  const client = new SftpClient(label);
+
+  try {
+    await client.connect(getSftpConnectionConfig(config));
+    console.log(`Uploading ${deployRoot} to ${label} at /`);
+    await client.uploadDir(deployRoot, '/', { useFastput: false });
+  } finally {
+    await client.end().catch(() => undefined);
+  }
+}
 
 function deploySystemDomain() {
-
-  // using base = '.' will transfer everything to /public_html correctly
-  // turn off buffering in gulp.src for best performance
-  return gulp.src(deploys, { base: './deploy', buffer: false })
-  // return gulp.src("snippets.txt")
-
-    .pipe(sftp({
-      host: gulpSFTP.systemConfig.host,
-      user: gulpSFTP.systemConfig.user,
-      protocol: gulpSFTP.systemConfig.protocol,
-      port: gulpSFTP.systemConfig.port,
-      pass: gulpSFTP.systemConfig.pass
-    }));
+  return uploadDeployDirectory(gulpSFTP.systemConfig, 'system domain');
 }
 
 function deployPotoococha() {
-
-  return gulp.src(deploys, { base: './deploy', buffer: false })
-  // return gulp.src("citations.html")
-
-    .pipe(sftp({
-      host: gulpSFTP.potooConfig.host,
-      user: gulpSFTP.potooConfig.user,
-      protocol: gulpSFTP.potooConfig.protocol,
-      port: gulpSFTP.potooConfig.port,
-      pass: gulpSFTP.potooConfig.pass
-    }));
+  return uploadDeployDirectory(gulpSFTP.potooConfig, 'potoococha');
 }
 
 //  ****************************   compose and export tasks  *****************************  //
@@ -432,15 +405,12 @@ exports.production = gulp.series(moveJStoTemp, processJS);
 // TODO : (include php and logFileRequests.txt) movePrintCSStoTemp? not used anymore - keep as backup?
 exports.build = gulp.series(processHTML, processCSS, moveJStoTemp, processJS,
   copyPHP, copySVG, copyFLAGS, copyIMAGES, copyCitations, copyAuthors,
-  copyOccurrences, copyCountries, copyJSON, movePrintCSStoTemp);
+  copyOccurrences, copyCountries, copyJSON);  // movePrintCSStoTemp
 
-// exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON);
 exports.getSACC = gulp.series(getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON, getBuildSACC_NumLists);
 
 exports.deploy_S = gulp.series(deploySystemDomain);
 exports.deploy_P = gulp.series(deployPotoococha);
-
-// exports.testGlobs = gulp.series(testGlobs);
 
 // *************************** not used ************************************ //
 
@@ -461,4 +431,7 @@ exports.deploy_P = gulp.series(deployPotoococha);
 // } else {
 //   exports.build = series(transpile, livereload);
 // }
+
+// node --trace-deprecation node_modules/gulp/bin/gulp.js build  // this works but runs gulp build as well
+// gulp-rename → vinyl → clone-stats → new fs.Stats()
 
