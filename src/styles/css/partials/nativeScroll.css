@@ -1,0 +1,44 @@
+.scroll-shell {
+  --scroll-gutter: 1rem;
+  --scrollbar-size: 0.85rem;
+  --scrollbar-thumb-color: rgba(200, 200, 200, 0.65);
+  --scrollbar-thumb-hover: rgba(220, 220, 220, 0.9);
+  position: relative;
+  overflow: hidden;
+  padding-right: var(--scroll-gutter);
+}
+
+.scroll-pane {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: calc(-1 * var(--scroll-gutter));
+  padding-right: calc(var(--scroll-gutter) - 0.15rem);
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) transparent;
+}
+
+.scroll-pane::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+}
+
+.scroll-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-pane::-webkit-scrollbar-thumb {
+  min-height: 4.62rem;
+  border: 0.23rem solid transparent;
+  border-radius: 0.38rem;
+  background-clip: padding-box;
+  background-color: var(--scrollbar-thumb-color);
+}
+
+.scroll-pane:hover::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+#taxPageScroller {
+  height: 0;
+}

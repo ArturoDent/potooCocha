@@ -388,11 +388,15 @@
           <div id="countrySearch" class="flyoutPanel">
             <span id="searchTerm"></span>
           </div>
-          <ul id="searchResults" contenteditable="false">
-            <li> &nbsp; &nbsp; search results will appear here...</li>
-            <li></li>
-            <li></li>
-          </ul>
+          <div class="scroll-shell search-scroll-shell">
+            <div id="searchResultsScroller" class="scroll-pane">
+              <ul id="searchResults" contenteditable="false">
+                <li> &nbsp; &nbsp; search results will appear here...</li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
 
           <button id="printerButton"  type="button" aria-label="Print these search results" tabindex="-1">
             <!-- <svg class="icon icon-printer">
@@ -408,7 +412,11 @@
         <div id="fakeTaxPageBox">
 
           <div id="treeIntroText" class="flyoutPanel topFlyoutPanel">&nbsp; numFamilies Families, numSpecies species</div>
-          <div id="taxPage" contenteditable="false"></div>
+          <div class="scroll-shell tax-scroll-shell">
+            <div id="taxPageScroller" class="scroll-pane">
+              <div id="taxPage" contenteditable="false"></div>
+            </div>
+          </div>
           <button id="closeOpenFamiliesButton"  type="button" aria-label="Close Open Families" tabindex="-1">▲</button>
           <!-- ˄⁞↑ↆ▲⸽ꜛ -->
         </div>
@@ -919,7 +927,6 @@
 
 
   <!-- build:remove -->
-  <script src="src/js/simplebar.js"></script>
   <!-- /build -->
 
   <!-- build:js js/app.min.js -->

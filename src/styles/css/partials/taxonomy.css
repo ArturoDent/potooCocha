@@ -258,13 +258,11 @@
   left: -7vw;
   width: calc(100% + 7vw + 1.1ch);
   height: auto;
-  max-height: 28.5rem;
   padding: 0 0 0 7vw;
   font-size: 1rem;
   line-height: 1rem;
   border: none;
   box-shadow: none;
-  overflow: hidden;
   transition: all 350ms;
 }
 
@@ -453,8 +451,7 @@
   top: -1.5ch;
   left: -7vw;
   width: calc(100% + 7vw + 1ch);
-  height: 0;
-  max-height: 75vh;
+  height: auto;
   padding: 0 0 0 7vw;
   margin: 0;
   font-size: 1rem;

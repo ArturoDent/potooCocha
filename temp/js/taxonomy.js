@@ -18,10 +18,8 @@ var taxPanel;
 var searchSpecials;
 var resultsPanel;
 var searchResults;
-
-// eslint-disable-next-line no-unused-vars
-var simpleBarResults;
-var simpleBarTaxPage;
+var searchResultsScroller;
+var taxPageScroller;
 
 var resultsPanelOpen = false;
 var printerButton;
@@ -69,8 +67,10 @@ var searchInstructionsOpen = true;
   // taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
   taxPage = document.getElementById("taxPage");
+  taxPageScroller = document.getElementById("taxPageScroller");
 
   searchResults = document.getElementById("searchResults");
+  searchResultsScroller = document.getElementById("searchResultsScroller");
   resultsPanel = document.getElementById("results-panel");
 
   searchResults.addEventListener("click", gotoMatch, false);
@@ -445,7 +445,7 @@ function gotoMatch(e) {
 
       // put highlighted bird at "top" (100px down) of taxPage
       // entry.scrollIntoView(true);  //  TODO : might work now w/o IE, test on edge
-      elem = simpleBarTaxPage.getScrollElement();
+      elem = taxPageScroller;
       // elem.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
       
       // a little buggy on firefox for some reason
@@ -481,7 +481,7 @@ function gotoMatch(e) {
         lastResultsSpecies = null;
       }
 
-      elem = simpleBarTaxPage.getScrollElement();
+      elem = taxPageScroller;
       // family clicked on in searchResults
           //    put family at top of taxPage
           //   entry.scrollIntoView(true);  screws up IE
@@ -630,18 +630,19 @@ function printSearchResults (evt) {
   var numSpecies = document.getElementsByClassName("bird").length;
   if (!numSpecies) return;
 
-  // var divId = evt.target.id;
-  // if (divId === "printerButton" || evt.target.nodeName === "use") divId = "searchResults";
   let divId = "searchResults";
 
-  var content = document.getElementById(divId).children[2].innerHTML;
+  var content = '<ul class="print-results">' + document.getElementById(divId).innerHTML + "</ul>";
 
   var html = '<html><head><title></title><head>';
 
   var css = "<style>";
-  css += ".simplebar-content { list-style-type: none; padding: 0 0 0 40px; }";
+  css += ".print-results { list-style-type: none; margin: 0; padding: 0 0 0 40px; }";
   css += "h3 { margin: 0 0 3ch 0; text-align: left; padding-left: 80px; }";
+  // css += ".print-results > .family, .print-results > .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
   css += ".family, .familyOpen { margin: 2ch 0 0.5ch -2.5ch; list-style-type: disc; }";
+  // css += ".print-results .birds, .print-results .bird { list-style-type: none; margin-left: 0; padding-left: 0; }";
+  css += ".birds, .bird { list-style-type: none; margin-left: 0; padding-left: 0; }";
   css += ".fsc { position: absolute; left: 50%; }";
   css += ".bird>span { padding-left: 10px;}";
   css += ".bird span:last-child { position: absolute; left: 50%; }";
