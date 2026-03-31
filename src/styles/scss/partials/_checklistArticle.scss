@@ -162,10 +162,7 @@
   transform: scale(1);
 
     cursor  :  pointer;
-    -webkit-transition  :  transform 300ms;
-       -moz-transition  :  transform 300ms;
-         -o-transition  :  transform 300ms;
-            transition  :  transform 300ms;
+  transition  :  transform 300ms;
 }
 
 // every other one is different

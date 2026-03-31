@@ -24,8 +24,6 @@
     width  :  2.5em;
     height  :  2.5em;
 
-    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
-        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
             filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.2) ) drop-shadow( -0.077rem -0.077rem 0.077rem rgba(0,0,0,0.3) );
 
     transform: translate(-1.3rem,0.75rem);
@@ -48,8 +46,6 @@
 }
 
 .icon-paper-plane {
-    -webkit-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
-        -ms-filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
             filter  :  drop-shadow( 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5) );
     transform : rotate(10deg) translate(-0.2rem, -0.4rem);
     // transition : fill-opacity 750ms;
@@ -57,8 +53,6 @@
 
 .icon-delete  {
     transform: scale(2,1.8);
-    -webkit-filter  : none;
-        -ms-filter  : none;
             filter  : none;
 }
 

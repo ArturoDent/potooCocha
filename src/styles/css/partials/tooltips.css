@@ -1,0 +1,81 @@
+.tooltip {
+  opacity: 0;
+  font-size: 0.8rem;
+  color: var(--panel-flyout-font-color);
+  line-height: 1.2rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  z-index: 100;
+  border-radius: 0;
+  box-shadow: 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
+  transition: all 500ms ease;
+}
+
+.deleteMapButton .tooltip {
+  position: absolute;
+  top: 7rem;
+  left: -1.8rem;
+  width: 5.5em;
+  padding: 0;
+  font-size: 0.675rem;
+  text-align: center;
+  letter-spacing: 0.25em;
+  background-color: transparent;
+  border: 0.063rem solid rgb(190, 189, 189);
+  transform-origin: top right;
+  transform: rotate(-15deg);
+}
+
+.saveMapButton .tooltip {
+  position: absolute;
+  width: 6em;
+  padding: 0 0 0.15rem 0;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0.03rem black;
+  opacity: 1;
+  border: 0.077rem solid rgb(255, 255, 255);
+  background-color: var(--bg-color);
+  box-shadow: inset 0 0 0 0.25px black, 0 0 0 0.25px black;
+  transform: rotate(-20deg);
+  transform-origin: middle right;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-width: 0.6em;
+  border-style: solid;
+}
+
+.saveMapButton .tooltip:after {
+  top: -0.06rem;
+  left: 103%;
+  border-width: 0.91em;
+  border-color: transparent transparent transparent var(--panel-flyout-font-color);
+  transition: all 350ms;
+}
+
+.deleteMapButton .tooltip:after {
+  top: -0.2rem;
+  left: 107%;
+  border-width: 1.2em;
+  border-color: transparent transparent transparent var(--panel-flyout-font-color);
+}
+
+.saveMapButton.hasTooltip:hover .tooltip {
+  background-color: var(--bird-rollover-color);
+  outline: none;
+}
+
+.saveMapButton.hasTooltip:hover .tooltip::after {
+  top: -0.17rem;
+  left: 105%;
+  border-width: 1.1em;
+  outline: none;
+}
+
+.deleteMapButton.hasTooltip.hover .tooltip {
+  opacity: 1;
+}

@@ -1,12 +1,9 @@
 #country-menu {
   position: relative;
-  display  :  -webkit-flex;
   display  :  flex;
 
-  -webkit-flex-direction  :  column;
   flex-direction  :  column;
 
-  -webkit-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
 
   top: 0;
@@ -30,13 +27,10 @@
   position: relative;
   width: 100%;
 
-  display  :  -webkit-flex;
   display  :  flex;
 
-  -webkit-flex-direction  :  row;
   flex-direction  :  row;
 
-  -webkit-flex-wrap  :  nowrap;
   flex-wrap  :  nowrap;
 
   align-items: center;

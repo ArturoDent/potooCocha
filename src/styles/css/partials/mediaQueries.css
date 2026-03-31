@@ -1,0 +1,58 @@
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+  #mainContent {
+    left: 5.5vw;
+    margin: 8vh 0 0 0;
+  }
+  .articles {
+    width: 51vw;
+    max-width: 51vw;
+  }
+  .searchWord {
+    left: -2.4rem;
+  }
+  #searchForm {
+    width: 92%;
+    left: 7%;
+  }
+  #searchForm span.searchGroup {
+    left: 15%;
+  }
+  #searchSpecials {
+    top: -9.9ch;
+    left: 82%;
+  }
+  #checklistOptions.panel {
+    width: 110%;
+  }
+  #numDays {
+    justify-content: space-around;
+    left: -4.5ch;
+    width: 170%;
+  }
+  #deleteAllMapsButton {
+    padding: 0.15rem 1.5ch 0.23rem 1.5ch;
+    font-size: 0.9em;
+  }
+  .deleteMapButton {
+    top: 2.1rem;
+    transform: scale(0.85);
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 667px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 10px;
+  }
+}

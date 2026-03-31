@@ -1,0 +1,58 @@
+.icon {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  fill: #ddd;
+  stroke: #ddd;
+  stroke-width: 0;
+}
+
+.icon-printer {
+  top: -0.25ch;
+  left: -0.15ch;
+  width: 2em;
+  height: 2em;
+  fill: #ddd;
+}
+
+.icon-download {
+  top: 0.45ch;
+  transform: scale(1.6);
+}
+
+.icon-mag-glass {
+  width: 2.5em;
+  height: 2.5em;
+  filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2)) drop-shadow(-0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3));
+  transform: translate(-1.3rem, 0.75rem);
+  z-index: 1;
+}
+
+.icon-female {
+  top: -0.077rem;
+  left: -0.077rem;
+  transform: scale(1.3);
+  fill: var(--sample-table-text-color);
+}
+
+.icon-camera {
+  top: 0.077rem;
+  fill: var(--sample-table-text-color);
+  transform: scale(1.3);
+}
+
+.icon-paper-plane {
+  filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5));
+  transform: rotate(10deg) translate(-0.2rem, -0.4rem);
+}
+
+.icon-delete {
+  transform: scale(2, 1.8);
+  filter: none;
+}
+
+#icon-delete-circle {
+  fill: rgb(96, 96, 96);
+  stroke: #ddd;
+  stroke-width: 0.077rem;
+}

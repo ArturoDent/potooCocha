@@ -113,7 +113,6 @@ a:visited {  background-color: #4db088;  }
 }
 
 .articles {
-    display  :  -webkit-flex;
     display  :          flex;
     flex-direction  :  column;
     flex-wrap  :  nowrap;
@@ -152,9 +151,6 @@ article {
     // box-shadow: 0 -0.02rem 0.02rem rgba(255,255,255,0.7), 0 0 0.15rem rgba(0,0,0,0.7);
     box-shadow: -0.015rem 0 0.015rem rgba(255,255,255,0.7), 0 -0.02rem 0.02rem rgba(255,255,255,0.7), 0 0 0.15rem rgba(0,0,0,0.7);
 
-    -webkit-transition  :  opacity 2s;
-       -moz-transition  :  opacity 2s;
-         -o-transition  :  opacity 2s;
             transition  :  opacity 2s;
 }
 
@@ -205,12 +201,8 @@ article {
 /*   -------------------   Footer   ----------------------------   */
 
 footer {
-    display  :  -webkit-flex;
-    display  :  -ms-flex;
     display  :          flex;
 
-    -webkit-flex-direction  :  row;
-    -ms-flex-direction  :  row;
     flex-direction  :  row;
 
     // justify-content  :  space-around;

@@ -3,14 +3,13 @@ const browserSync = require("browser-sync").create("index.html");
 const reload = browserSync.reload;
 
 const newer = require('gulp-newer');  // try gulp-changed ?
-const sass = require("gulp-dart-sass");
 
-const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 
 const modifyHTMLlinks = require("gulp-processhtml");  // or try gulp-useref
 const addVersionString = require("gulp-version-number");
 const print = require('gulp-print').default;
+const { Transform } = require('node:stream');
 
 
 function serve (done) {        // serve:    ./home.html
@@ -52,13 +51,9 @@ const paths = {
     src: "JSON/**/*.json",
     deploy: "./deploy/JSON"
   },
-  sass: {
-    src: "./src/styles/scss/**/*.scss",
-    stylesFile: "./src/styles/scss/styles.scss"
-  },
   css: {
-    src: "./temp/css/*.css",
-    temp: "./temp/css",
+    src: "./src/styles/css/styles.css",
+    watch: "./src/styles/css/**/*.css",
     deploy: "./deploy/css"
   },
   printCSS: {
@@ -81,7 +76,7 @@ const paths = {
     deploy: "./deploy/svg"
   },
   flags: {
-    src: "./flags/32/*.png",
+    src: "./flags/*.png",
     deploy: "./deploy/flags"
   },
   images: {
@@ -93,10 +88,7 @@ const paths = {
 function watch() {
   gulp.watch(paths.js.src, reloadJS);
 
-  gulp.watch(paths.sass.src, sass2css);
-  // gulp.watch(paths.css.src).on('change', browserSync.reload);  // doesn't work
-
-  gulp.watch(paths.css.src).on('change', function () {            // works!
+  gulp.watch(paths.css.watch).on('change', function () {
     browserSync.reload();
   }); 
 
@@ -105,14 +97,6 @@ function watch() {
     cb();
   });
 }
-
-function sass2css(done) {
-  return gulp.src(paths.sass.stylesFile, { sourcemaps: true })
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest(paths.css.temp), { sourcemaps: true });
-}
-
-// .pipe(sass({ silenceDeprecations: ['legacy-js-api']}))
 
 
 function reloadJS() {
@@ -184,6 +168,31 @@ const versionConfig = {
   },
 };
 
+function stripHtmlCommentsFromFile() {
+  return new Transform({
+    objectMode: true,
+    transform(file, enc, cb) {
+      if (file.isNull()) {
+        cb(null, file);
+        return;
+      }
+
+      if (file.isStream()) {
+        cb(new Error('Streaming HTML is not supported.'));
+        return;
+      }
+
+      const contents = file.contents.toString('utf8');
+      file.contents = Buffer.from(
+        contents.replace(/<!--(?!\[if\b)[\s\S]*?-->/gi, ''),
+        'utf8'
+      );
+
+      cb(null, file);
+    }
+  });
+}
+
 function processHTML() {
   return gulp.src(paths.html.src)
     .pipe(print())
@@ -192,16 +201,13 @@ function processHTML() {
     // update css/js links to .min.css or .min.js
     .pipe(modifyHTMLlinks())
 
-    .pipe(stripComments.html(stripOptions))
+    .pipe(stripHtmlCommentsFromFile())
 
     // add ?v=dateTime stamp to css and js links
     .pipe(addVersionString(versionConfig))
 
     .pipe(gulp.dest(paths.html.deploy));
 }
-
-
-const { Transform } = require('node:stream');
 
 function renameTo(filename) {
   return new Transform({
@@ -215,7 +221,7 @@ function renameTo(filename) {
 
 function processCSS() {
   return gulp.src(paths.css.src)
-    .pipe(autoprefixer({ cascade: false }))
+    // .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS())
     .pipe(renameTo('styles.min.css'))
     .pipe(gulp.dest(paths.css.deploy));
@@ -390,11 +396,12 @@ function deployPotoococha() {
 
 //  ****************************   compose and export tasks  *****************************  //
 
-exports.sync = gulp.series(sass2css, reloadJS, serve, watch);
+exports.sync = gulp.series(reloadJS, serve, watch);
 // exports.default = exports.sync;   this works
 
 exports.serve = gulp.series(serve);
-exports.scss = gulp.series(sass2css);
+exports.css = gulp.series(processCSS);
+exports.scss = gulp.series(processCSS);
 
 exports.movePHP = gulp.series(copyPHP);
 

@@ -1,0 +1,56 @@
+#taxonomyArticle {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  transition: all 850ms ease-in-out;
+}
+
+.searchWord {
+  position: relative;
+  width: calc(42vw + 10ch);
+  padding: 1.5vw 2vw 1.5vw 2vw;
+  z-index: 0;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: var(--panel-flyout-font-color);
+  background-color: var(--title-banner-color);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 0.77rem;
+  border-top-right-radius: 0.77rem;
+  border: 0.077rem solid rgba(255, 255, 255, 0.1);
+  border-top: 0.077rem solid transparent;
+  box-shadow: inset 0 0 0.15rem rgba(255, 255, 255, 0.2), inset 0 0 1.15rem rgba(0, 0, 0, 0.1), 0 0 1.15rem rgba(0, 0, 0, 0.2);
+}
+
+.searchWord > :nth-child(1) {
+  font-size: 1.2rem;
+}
+
+.citationLink:link {
+  text-decoration: none; /* Remove underline */
+  border-bottom: none;
+  font-size: 0.9em; /* Optional: shrink link inside superscript */
+  vertical-align: super; /* Ensure it's aligned like a superscript */
+}
+
+.citationLink:visited {
+  color: var(--panel-flyout-font-color);
+  background-color: inherit;
+}
+
+.citationLink:focus {
+  color: var(--panel-flyout-font-color);
+  background-color: inherit;
+}
+
+.citationLink:hover {
+  color: black;
+}
+
+.taxArticleMain {
+  padding: 0.5rem 0 0 0;
+  line-height: 1.5rem;
+  text-align: center;
+}

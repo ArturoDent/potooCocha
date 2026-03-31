@@ -20,10 +20,7 @@
     box-shadow  :  inset 0 0 0 transparent, 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1);
 
     cursor  :  pointer;
-    -webkit-transition  :  all 650ms;
-       -moz-transition  :  all 650ms;
-         -o-transition  :  all 650ms;
-            transition  :  all 650ms;
+  transition  :  all 650ms;
 }
 
 .genericButton:hover,.genericButton:focus {

@@ -1,0 +1,37 @@
+:root {
+  --bg-color: #8a8a7c;
+  --title-text-font-color: #fff;
+  --title-banner-color: #979788;
+  --body-border-color: var(--title-banner-color);
+  --panel-color: color-mix(in srgb, var(--bg-color) 90%, black);
+  --slate-hover-color: rgb(56, 61, 61);
+  --green-highlight-color: #979788;
+  --search-header-color: rgb(89, 97, 97);
+  --turquoise-highlight-color: #6eb2bb;
+  --gold-highlight-color: rgba(255, 217, 0, 0.6);
+  --generic-button-color: #e0a040;
+  --generic-button-highlight-color: color-mix(in srgb, var(--bg-color) 93%, black);
+  --panel-flyout-color: color-mix(in srgb, var(--bg-color) 90%, black);
+  --panel-flyout-font-color: #fff;
+  --family-open-color: var(--bg-color);
+  --bird-rollover-color: #333;
+  --bird-rollover-color-dark-10: color-mix(in srgb, var(--bird-rollover-color) 90%, black);
+  --bird-active-color: #333;
+  --country-menu-color: #333;
+  --country-menu-highlight-color: rgb(167, 95, 29);
+  --overlay-color: var(--bg-color);
+  --overlay-info-color: #ce402e;
+  --map-collection-color: color-mix(in srgb, var(--bg-color) 80%, black);
+  --map-collection-color-dark-20: color-mix(in srgb, var(--map-collection-color) 80%, black);
+  --sample-table-bg-color: #fefefe;
+  --sample-table-text-color: #43494d;
+  --num-days-hover-color: color-mix(in srgb, var(--generic-button-color) 95%, white);
+  --bg-color-dark-2: color-mix(in srgb, var(--bg-color) 98%, black);
+  --bg-color-dark-4: color-mix(in srgb, var(--bg-color) 96%, black);
+  --bg-color-dark-7: color-mix(in srgb, var(--bg-color) 93%, black);
+  --bg-color-dark-10: color-mix(in srgb, var(--bg-color) 90%, black);
+  --bg-color-dark-15: color-mix(in srgb, var(--bg-color) 85%, black);
+  --bg-color-dark-20: color-mix(in srgb, var(--bg-color) 80%, black);
+  --green-highlight-color-light-10: color-mix(in srgb, var(--green-highlight-color) 90%, white);
+  --title-banner-color-light-5: color-mix(in srgb, var(--title-banner-color) 95%, white);
+}

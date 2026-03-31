@@ -1,0 +1,678 @@
+@charset "UTF-8";
+/*  ------------------------------   taxonomy panel   ------------------------------------------  */
+#searchForm {
+  position: relative;
+  left: 8vw;
+  width: 80%;
+  padding: 0 0 1.8ch 0;
+  margin-bottom: 8vh;
+  border: 1px solid transparent;
+  background-color: var(--bg-color-dark-15);
+  border-bottom-left-radius: 6.9rem;
+  transition: all 850ms ease-in-out;
+}
+
+.searchForm_contents {
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0;
+  margin: 0;
+  pointer-events: auto;
+  transition: all 2s;
+}
+
+#searchForm span.searchGroup {
+  position: relative;
+  margin: 1.92rem 0 2.31rem 0;
+  left: 22%;
+  opacity: 1;
+}
+
+#searchForm span.searchGroup.grayed {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+#searchInput {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  padding: 0.23rem 0 0.31rem 0;
+  font-size: 1rem;
+  color: var(--panel-flyout-font-color);
+  font-weight: bold;
+  letter-spacing: 0.13em;
+  text-align: center;
+  text-shadow: 0.077rem 0.077rem 0.15rem rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+  background-color: var(--bird-rollover-color);
+  user-select: text;
+}
+
+#searchInput:focus {
+  outline: none;
+  border: 1px solid var(--panel-flyout-font-color);
+}
+
+#searchInput:focus + .inpuInfo {
+  display: block;
+}
+
+#searchInput::placeholder {
+  color: var(--panel-flyout-font-color);
+}
+
+#searchSpecials {
+  position: absolute;
+  height: fit-content;
+  width: min-content;
+  top: -1.5ch;
+  left: 102%;
+  font-size: 0.87rem;
+  letter-spacing: 0.09rem;
+  text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  transition: all 500ms 1300ms;
+}
+
+#searchSpecials.grayed {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.searchSpecialWrapper {
+  position: relative;
+  width: fit-content;
+  padding: 0.5ch 0;
+  text-align: center;
+  transition: all 1000ms;
+}
+
+.searchSpecialWrapper a {
+  display: inline-block;
+  width: 14ch;
+  padding: 0.1ch 0 0.5ch 0;
+}
+
+.searchSpecialWrapper a {
+  border: 0.077rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.15rem;
+  background-color: var(--generic-button-color);
+  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 350ms;
+}
+
+.searchSpecialWrapper:hover a, .searchSpecialWrapper a:focus {
+  outline: none;
+  border: 0.077rem solid #666;
+  background-color: #222;
+  box-shadow: 0 0 0.15rem rgb(0, 0, 0);
+}
+
+#searchSpecials div.notAvailable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#searchTerm span {
+  color: rgb(252, 185, 40);
+  text-decoration-line: overline;
+  text-shadow: 0.2px 0.2px white;
+}
+
+.highlightSpecial {
+  border-bottom: 0.077rem solid var(--panel-flyout-font-color);
+}
+
+/*  -----------------------   searchResults  panel  ----------------------  */
+#results-panel {
+  position: relative;
+  height: auto;
+  width: calc(100% + 7vw);
+  left: -7vw;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  padding: 0;
+  z-index: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+#fakeResultsBox {
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 7vw);
+  left: 7vw;
+  padding: 0 0 1ch 0;
+  overflow-x: visible;
+  border: 0.077rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.23rem;
+  background-color: var(--panel-color);
+  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
+}
+
+#printerButton {
+  position: absolute;
+  top: calc(100% - 1rem);
+  left: calc(100% - 1rem);
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  color: var(--panel-flyout-font-color);
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--bird-rollover-color-dark-10);
+  border: 0.13rem solid var(--turquoise-highlight-color);
+  box-shadow: 0.25rem -0.05rem 0 0.24rem var(--bg-color), 0.2rem -0.1rem 0 0.24rem var(--bg-color), 0.3rem 0.1rem 0 0.24rem var(--bg-color), 0.25rem -0.05rem 0 0.27rem rgba(0, 0, 0, 0.6), 0.25rem -0.05rem 0 0.35rem var(--bg-color), 0 0 0 0.3rem var(--bg-color), 0.02rem -0.04rem 0 0.3rem var(--bg-color), -0.02rem 0.04rem 0 0.3rem var(--bg-color), -0.04rem 0.04rem 0 0.32rem var(--bg-color), -0.04rem -0.04rem 0 0.3rem rgba(0, 0, 0, 0.6), -0.05rem -0.05rem 0 0.34rem rgb(114, 114, 114);
+}
+
+#printerButton::before {
+  position: absolute;
+  content: "print search\aresults";
+  white-space: pre;
+  left: 95%;
+  top: -115%;
+  width: auto;
+  z-index: -1;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.38rem 0.8rem 0.38rem 1rem;
+  border: 1px solid var(--bg-color);
+  border-radius: 0.6rem;
+  background-color: var(--bird-rollover-color-dark-10);
+  box-shadow: 0 0 0.09rem rgb(0, 0, 0);
+  transition: all 100ms ease-in-out;
+}
+
+#printerButton:hover::before, #printerButton:focus::before {
+  border-color: var(--panel-flyout-font-color);
+}
+
+#closeOpenFamiliesButton {
+  position: absolute;
+  left: calc(100% - 1.31rem);
+  top: calc(100% - 1.75rem);
+  width: 3rem;
+  height: 3rem;
+  padding: 0 0 0.3rem 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  color: var(--panel-flyout-font-color);
+  background-color: var(--bird-rollover-color-dark-10);
+  border: 0.13rem solid var(--turquoise-highlight-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.62rem var(--bg-color), 0 -0.077rem 0 0.62rem var(--bg-color), -0.077rem 0 0 0.62rem var(--bg-color), -0.077rem -0.077rem 0 0.62rem rgba(0, 0, 0, 0.5), 0.077rem -0.077rem 0 0.69rem var(--bg-color), -0.077rem -0.077rem 0 0.69rem var(--bg-color), -0.077rem -0.077rem 0 0.69rem rgba(255, 255, 255, 0.25), 0.077rem 0 0 0.7rem var(--bg-color), -0.2rem 0.03rem 0 0.66rem rgba(0, 0, 0, 0.4), 0.077rem -0.077rem 0 0.69rem var(--bg-color), 0.077rem 0.077rem 0 0.69rem var(--bg-color), -0.2rem 0.05rem 0 0.66rem rgba(255, 255, 255, 0.3);
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+#closeOpenFamiliesButton:hover, #printerButton:hover,
+#closeOpenFamiliesButton:focus, #printerButton:focus {
+  outline: none;
+  border-color: var(--panel-flyout-font-color);
+}
+
+#closeOpenFamiliesButton::before {
+  position: absolute;
+  content: "close open\a families";
+  white-space: pre;
+  left: -6.8vw;
+  top: 90%;
+  width: auto;
+  padding: 0.38rem 1.5rem 0.38rem 1rem;
+  border: 1px solid var(--bg-color);
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  z-index: -1;
+  background-color: var(--bird-rollover-color-dark-10);
+  box-shadow: 0 0 0.09rem hsl(0, 0%, 0%);
+  transition: all 200ms ease-in-out;
+}
+
+#closeOpenFamiliesButton:hover::before, #closeOpenFamiliesButton:focus::before {
+  border-color: var(--panel-flyout-font-color);
+}
+
+#countrySearch {
+  opacity: 1;
+  position: relative;
+  padding: 1ch 0 0 0;
+  height: 4ch;
+  margin: -0.77rem 0 1ch 0;
+  left: 2ch;
+  width: calc(100% - 4ch);
+  font-variant: small-caps;
+  color: var(--panel-flyout-font-color);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+#searchResults {
+  opacity: 1;
+  position: relative;
+  left: -7vw;
+  width: calc(100% + 7vw + 1.1ch);
+  height: auto;
+  max-height: 28.5rem;
+  padding: 0 0 0 7vw;
+  font-size: 1rem;
+  line-height: 1rem;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  transition: all 350ms;
+}
+
+#searchResults.fadeIn {
+  opacity: 1;
+  transition: all 2s;
+}
+
+#searchResults li {
+  position: relative;
+  padding: 0.077rem 0 0.12rem 1.23rem;
+  width: calc(100% - 0.55rem);
+  list-style-type: none;
+  cursor: pointer;
+  border-top: 0.077rem solid transparent;
+  border-bottom: 0.077rem solid transparent;
+}
+
+#searchResults li.bird {
+  font-size: 0.9rem;
+}
+
+#countrySearch.closed {
+  opacity: 0;
+  height: 0;
+}
+
+#searchResults li:hover {
+  color: var(--panel-flyout-font-color);
+  border-top: 0.077rem solid var(--bird-rollover-color-dark-10);
+  border-bottom: 0.077rem solid var(--bird-rollover-color-dark-10);
+  background-color: var(--bird-rollover-color);
+}
+
+#searchResults li.bird:not(.active):hover::before {
+  content: "  ";
+  position: absolute;
+  top: 0.1rem;
+  left: -1.3rem;
+  border-left: 0.54rem solid var(--panel-flyout-font-color);
+}
+
+#searchResults li.bird.active:hover::before {
+  content: "  ";
+  position: absolute;
+  border-left: 0.54rem solid var(--panel-flyout-font-color);
+  top: -0.077rem;
+  left: -7vw;
+  height: calc(100% + 0.15rem);
+  width: 7vw;
+  border-right: 0 solid var(--bird-rollover-color);
+  background-color: var(--bird-rollover-color);
+  transition: border-right 650ms;
+}
+
+#searchResults li.family:hover::before {
+  position: absolute;
+  top: 0.1rem;
+  left: -2rem;
+  content: "  ";
+  border-left: 0.77rem solid var(--panel-flyout-font-color);
+}
+
+#searchResults li:not(.family) span:first-child {
+  padding: 0.23rem 0 0.23rem 0.7rem;
+}
+
+#searchResults li.active {
+  position: relative;
+  background-color: var(--bird-rollover-color);
+}
+
+#searchResults li.active::before {
+  position: absolute;
+  content: "  ";
+  top: -0.077rem;
+  left: -7vw;
+  height: calc(100% + 0.12rem);
+  width: 7vw;
+  border-right: 0 solid var(--bird-rollover-color);
+  background: linear-gradient(to right, rgba(60, 60, 60, 0) 0%, rgb(60, 60, 60) 100%);
+  transition: border-right 650ms;
+}
+
+#searchResults li.active:hover::before {
+  border-right: 7vw solid var(--bird-rollover-color);
+}
+
+#searchResults .family {
+  margin: 0.38rem 0 0 0;
+  padding: 0.077rem 0 0.15rem 1.2rem;
+}
+
+#searchResults .familyOpen {
+  margin: 0.38rem 0 0 0;
+  padding: 0.077rem 0 0.15rem 1.2rem;
+}
+
+#searchResults span:not(.fsc):last-child {
+  position: absolute;
+  left: calc(52.8% + 0.7rem);
+}
+
+.fsc {
+  position: absolute;
+  left: 52.8%;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fco {
+  font-weight: bold;
+}
+
+.endemic::before {
+  content: "e";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.extinct::before {
+  content: "x";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.u::before {
+  content: "u";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.va::before {
+  content: "v";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+#searchResults .endemic, #searchResults .extinct, #searchResults .u, #searchResults .va {
+  position: relative;
+  left: -0.575rem;
+}
+
+/*  -----------------------------   #taxTreeArticle  ---------------------  */
+#tax-panel {
+  opacity: 0;
+  position: relative;
+  width: calc(100% + 7vw);
+  height: 0;
+  left: -7vw;
+  margin: 0;
+  padding: 5ch 0 0 0;
+  z-index: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  transition: all 400ms ease-in-out;
+}
+
+#tax-panel.setTaxPanelHeight {
+  opacity: 1;
+  height: auto;
+  margin: 0;
+}
+
+#fakeTaxPageBox {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 7vw);
+  left: 7vw;
+  padding: 1ch 0 2ch 0;
+  border: 0.077rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.23rem;
+  background-color: var(--panel-color);
+  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
+  overflow-x: visible;
+}
+
+/*  -----------------------------   #taxPage panel  ---------------------  */
+#taxPage {
+  position: relative;
+  top: -1.5ch;
+  left: -7vw;
+  width: calc(100% + 7vw + 1ch);
+  height: 0;
+  max-height: 75vh;
+  padding: 0 0 0 7vw;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  /* necessary because 100% padding right would else break line at spaces and hyphens */
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#taxPageButton {
+  cursor: pointer;
+  transition: all 350ms;
+}
+
+#taxPageButton:hover {
+  letter-spacing: 0.23rem;
+  box-shadow: 0 0.15rem 0.31rem #444;
+}
+
+#tree * {
+  list-style-type: none;
+}
+
+.birds {
+  display: none;
+  position: relative;
+}
+
+#tree .fsc {
+  position: absolute;
+  left: 52.3%;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*
+	position : relative MUST be here for entry.offsetTop to work in taxonomy.js
+	it is the offset distance to the nearest relatively-positioned parent
+*/
+.birds.open {
+  display: block;
+  animation: showIn 650ms ease-in forwards;
+}
+
+@keyframes showIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#tree .family {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+#tree .familyOpen {
+  position: relative;
+  width: 100%;
+  padding: 0 0 0.46rem 0;
+  cursor: pointer;
+}
+
+/*target : family common name only*/
+#tree li.family > span:nth-child(1) {
+  padding: 0.077rem 0 0.15rem 1.15rem;
+}
+
+/*target : familyOpen family common and sci names for families that are open  */
+#tree li.familyOpen > span:nth-child(1) {
+  padding: 0.077rem 0 0.15rem 1.15rem;
+}
+
+.fTitle {
+  display: inline-block;
+  width: calc(100% - 0.55rem);
+  border-top: 0.077rem solid transparent;
+  border-bottom: 0.077rem solid transparent;
+  background-color: transparent;
+}
+
+.fTitle:hover {
+  border-top: 0.077rem solid var(--panel-color);
+  border-bottom: 0.077rem solid var(--panel-color);
+  background-color: var(--bird-rollover-color);
+}
+
+.fTitle.active {
+  background-color: var(--bird-rollover-color);
+}
+
+#tree .familyOpen ul {
+  width: calc(100% - 0.55rem);
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+/* target : familyOpen bird common names only */
+#tree .familyOpen ul li span:first-child {
+  padding: 0.077rem 0 0 1.8rem;
+}
+
+/*target : familyOpen bird sci names only*/
+#tree .familyOpen .birds li span:last-child {
+  position: absolute;
+  left: 54.5%;
+}
+
+#taxPage.samTax .u:before, #taxPage.samTax .va:before {
+  content: "";
+}
+
+#taxPage.samTax .u, #taxPage.samTax .va {
+  position: relative;
+  left: 1.55rem;
+}
+
+#searchResults.samTax .u:before, #searchResults.samTax .va:before {
+  content: "";
+}
+
+#searchResults.samTax .u, #searchResults.samTax .va {
+  position: relative;
+  left: 0;
+}
+
+#taxPage.samTax li.familyOpen span.u {
+  position: relative;
+  left: 1.55rem;
+}
+
+#taxPage.samTax li.familyOpen span.va {
+  position: relative;
+  left: 1.55rem;
+}
+
+#taxPage .endemic, #taxPage .extinct, #taxPage .u, #taxPage .va {
+  position: relative;
+  left: -0.7rem;
+}
+
+#tree .fco, #tree .fsc {
+  font-weight: bold;
+}
+
+#tree .family:hover::before, #tree .familyOpen:hover::before {
+  position: absolute;
+  top: 0.15rem;
+  left: -2.5vw;
+  font-size: 1.3rem;
+}
+
+#tree .familyOpen::before {
+  content: "▼";
+  position: absolute;
+  left: -2.5vw;
+  top: 0.15rem;
+  font-size: 1.3rem;
+}
+
+#tree .family:hover::before {
+  content: "►";
+  position: absolute;
+  color: black;
+}
+
+#tree .familyOpen:hover::before {
+  content: "▼";
+}
+
+/*    below targets each individual bird */
+#tree li.familyOpen:hover > ul > li:hover, #tree ul li:hover {
+  padding: 0.15rem 0 0.15rem 0;
+  background-color: var(--bird-rollover-color);
+  border-top: 0.077rem solid var(--panel-color);
+  border-bottom: 0.077rem solid var(--panel-color);
+  transition: background-color 450ms;
+}
+
+#tree ul li:hover::before {
+  content: "  ";
+  position: absolute;
+  top: 0.12rem;
+  left: -1.3rem;
+  border-left: 0.54rem solid var(--panel-flyout-font-color);
+}
+
+#tree ul li {
+  position: relative;
+  padding: 0.15rem 0 0.15rem 0;
+  border: none;
+  border-top: 0.077rem solid transparent;
+  border-bottom: 0.077rem solid transparent;
+}
+
+/* added by toggleFamilyOpen, the species highlighted */
+#tree ul li.active {
+  position: relative;
+  background-color: var(--bird-rollover-color);
+}
+
+#tree ul li.active::before {
+  position: absolute;
+  top: -0.077rem;
+  left: -7vw;
+  content: "";
+  height: calc(100% + 0.12rem);
+  width: 7vw;
+  border-right: 0 solid var(--bird-rollover-color);
+  background: linear-gradient(to right, rgba(60, 60, 60, 0) 0%, rgb(60, 60, 60) 100%);
+  transition: border-right 650ms;
+}
+
+#tree ul li.active:hover::before {
+  border-right: 7vw solid var(--bird-rollover-color);
+}

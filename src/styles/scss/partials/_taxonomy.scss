@@ -135,9 +135,6 @@
     // background-color: red; 
 
     border-bottom-left-radius: 6.9rem;
-    -webkit-transition  :  all 850ms ease-in-out;
-       -moz-transition  :  all 850ms ease-in-out;
-         -o-transition  :  all 850ms ease-in-out;
             transition  :  all 850ms ease-in-out;
 }
 
@@ -155,9 +152,6 @@
 
     pointer-events  :  auto;
 
-    -webkit-transition  :  all 2s;
-       -moz-transition  :  all 2s;
-         -o-transition  :  all 2s;
             transition  :  all 2s;
 }
 
@@ -192,18 +186,12 @@
     border: 1px solid transparent;
     background-color: #333;
 
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select : text;
     user-select : text;
 }
 
 #searchInput:focus  {  outline: none;      border: 1px solid white;  }
 #searchInput:focus + .inpuInfo { display: block; }
 
-#searchInput::-moz-placeholder  {  color  :  white;  }
-#searchInput::-ms-input-placeholder  {  color  :  white;  }
-#searchInput::-webkit-input-placeholder  {  color  :  white;  }
 #searchInput::placeholder  {  color  :  white;  }
 
 #searchSpecials  {
@@ -621,12 +609,8 @@
     width : 7vw;
 
     border-right : 0 solid $birdRolloverColor;
-    // background: -moz-linear-gradient(left, rgba(166,87,81,0) 0%, rgba(166,87,81,1) 100%);
-    // background: -webkit-linear-gradient(left, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
     // background: linear-gradient(to right, rgba(166,87,81,0) 0%,rgba(166,87,81,1) 100%);
 
-    background: -moz-linear-gradient(left, rgba(60,60,60,0) 0%, rgba(60,60,60,1) 100%);
-    background: -webkit-linear-gradient(left, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
     background: linear-gradient(to right, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
 
     transition: border-right 650ms;
@@ -984,8 +968,6 @@ to {
 
     border-right : 0 solid $birdActiveColor;
 
-    background: -moz-linear-gradient(left, rgba(60,60,60,0) 0%, rgba(60,60,60,1) 100%);
-    background: -webkit-linear-gradient(left, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
     background: linear-gradient(to right, rgba(60,60,60,0) 0%,rgba(60,60,60,1) 100%);
 
     transition: border-right 650ms;

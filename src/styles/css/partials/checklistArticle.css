@@ -1,0 +1,146 @@
+#checklistArticle {
+  position: relative;
+  width: 90%;
+  margin: 6rem 0 0 0;
+  order: 4;
+  overflow: visible;
+}
+
+#checklistArticle .flyoutPanel {
+  position: relative;
+  top: -1.6rem;
+  left: 2.5%;
+  width: auto;
+  height: auto;
+  padding: 0.8ch 5% 1.5ch 0;
+  margin-top: 1.5rem;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+#checklistAuthorsPanel {
+  position: relative;
+  height: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1ch 2ch 0 3ch;
+  font-variant: small-caps;
+  font-size: 0.8rem;
+  text-align: center;
+  text-shadow: none;
+  line-height: 1.1rem;
+  background-color: var(--sample-table-bg-color);
+  transition: opacity 550ms 400ms;
+}
+
+#checklistOptions.panel {
+  position: relative;
+  left: 5%;
+  width: 105%;
+  margin: 0;
+  padding: 1.8ch 0 2ch 2ch;
+  font-size: 1rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.15em;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 25%;
+}
+
+.checklistTitle {
+  position: relative;
+  top: 0.2rem;
+  left: -4vw;
+  font-size: 6rem;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: var(--bg-color-dark-4);
+  text-shadow: 0 0 1px #fff, 0 0 2px white, 1px 1px 1px white, 0 -1px 2px white;
+  letter-spacing: 0.2em;
+}
+
+#pdfButton, #csvButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  width: 19ch;
+  padding: 0.5ch 1.5ch 0.5ch 1.5ch;
+}
+
+#pdfButton {
+  left: 90%;
+  bottom: 45%;
+}
+
+#csvButton {
+  left: 90%;
+  bottom: 15%;
+}
+
+#numDays {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  left: -5.5ch;
+  width: 150%;
+  margin: 3rem 0 2.5rem 0;
+  transition: margin 300ms 1.3s linear;
+}
+
+#numDays.mapCollectionShowing {
+  margin: 5rem 0 4.6rem 0;
+}
+
+#days {
+  position: relative;
+  top: 0.62rem;
+  height: 1.55rem;
+  margin-right: 3ch;
+  color: var(--panel-flyout-font-color);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0.077rem rgba(0, 0, 0, 0.3);
+  border-bottom: 0.23rem solid var(--green-highlight-color-light-10);
+  border-left: 2ch solid transparent;
+}
+
+#numDays > a {
+  position: relative;
+  top: 0;
+  width: 4ch;
+  height: 4ch;
+  margin-right: 0.19rem;
+  padding: 1ch 0 0 0;
+  color: #454647;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0.077rem 0.077rem 0.23rem rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #eee;
+  box-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5), -0.077rem -0.077rem 0.077rem rgba(0, 0, 0, 0.3), inset 0 0 0.54rem rgb(255, 255, 255);
+  transform: scale(1);
+  cursor: pointer;
+  transition: transform 300ms;
+}
+
+#numDays > a:nth-of-type(2n) {
+  color: #fff;
+  border-radius: 50%;
+  background-color: var(--bird-rollover-color);
+}
+
+#numDays > a:hover, #numDays > a:focus {
+  outline: none;
+  color: #fff;
+  background-color: var(--green-highlight-color);
+}
+
+#numDays > a.highlight {
+  color: #fff;
+  border-top-right-radius: 1%;
+  transform: scale(1.5);
+  background-color: var(--green-highlight-color);
+}

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+.optionsCheckboxes {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0.2em;
+}
+
+input[type=checkbox].hideCheckBox {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+.optionsCheckboxes label {
+  display: inline-block;
+  width: 58%;
+  margin: 0.05rem;
+  padding: 0 1ch 0 5ch;
+  outline: transparent 1px solid;
+  outline-offset: 0;
+  border-radius: 0.38rem;
+  transition: all 350ms;
+}
+
+.optionsCheckboxes label:hover, .optionsCheckboxes label:focus {
+  outline: #ccc 1px solid;
+  outline-offset: -2px;
+  background-color: var(--generic-button-color);
+  cursor: pointer;
+}
+
+.optionsCheckboxes label::before {
+  content: "";
+}
+
+input[type=checkbox]:checked ~ label::before {
+  position: relative;
+  content: "✓";
+  left: -2.5rem;
+  margin-right: -0.92rem;
+  font-weight: 900;
+}
+
+input[type=checkbox]:checked ~ label {
+  padding: 0 1ch 0 5ch;
+  background-color: var(--generic-button-color);
+  border-radius: 0.38rem;
+}
+
+input[type=checkbox]:disabled ~ label:hover, input[type=checkbox]:disabled ~ label:focus {
+  outline: none;
+  border: none;
+  border-radius: 0.38rem;
+  background-color: var(--bg-color);
+  cursor: default;
+}
+
+input[type=checkbox]:disabled ~ label::before {
+  content: "";
+}
+
+input[type=checkbox]:disabled ~ label {
+  padding: 0 1ch 0 7.5ch;
+}
