@@ -13,16 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "glob": "^11.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-dart-sass": "^1.0.2",
     "gulp-newer": "^1.4.0",
     "gulp-print": "^5.0.2",
     "gulp-processhtml": "^1.2.0",
     "gulp-version-number": "^0.2.4",
     "ssh2-sftp-client": "^12.1.0",
-    "strip-comments": "^2.0.1",
-    "vinyl-ftp": "^0.6.1"
+    "strip-comments": "^2.0.1"
   },
   "dependencies": {
     "gulp": "^4.0.2"

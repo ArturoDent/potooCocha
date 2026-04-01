@@ -449,7 +449,7 @@ function gotoMatch(e) {
       // elem.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
       
       // a little buggy on firefox for some reason
-      elem.scroll({top: familyTemp.parentNode.offsetTop + entry.offsetTop - 100, behavior: 'smooth'});
+      elem.scroll({top: familyTemp.parentNode.offsetTop + entry.offsetTop - 90, behavior: 'smooth'});
 
       entry.className = "active";
 
@@ -485,7 +485,7 @@ function gotoMatch(e) {
       // family clicked on in searchResults
           //    put family at top of taxPage
           //   entry.scrollIntoView(true);  screws up IE
-      elem.scroll({top: entry.offsetTop, behavior: 'smooth'});  // ssems to work
+      elem.scroll({top: entry.offsetTop-40, behavior: 'smooth'});  // ssems to work
 
       lastSpecies = entry.firstChild;
       lastSpecies.classList.add("active");
@@ -511,7 +511,7 @@ function addBirdNameToMap(name) {
 
 function toggleFamilyOpen(event) {
 
-  if (event.target.className.indexOf("simplebar") !== -1) return;
+  // if (event.target.className.indexOf("simplebar") !== -1) return;
   if (event.target.id === "taxPage") return;
 
   // taxPage is not open yet

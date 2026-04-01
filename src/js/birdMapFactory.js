@@ -69,16 +69,28 @@ function deleteMap(evt)  {
 function saveCurrentMap()  {
 
   var len = mapsCollection.getElementsByClassName("smallBird").length;
-  if (len === 5)  return;
+  if (len === 5) return;
+
+  var thisInstance = map.children[0];
+  
+  if (len > 0) {   // to prevent duplicates
+    // var thisCommonName = thisInstance.children[0].children[0].innerText;
+    var thisSciName = thisInstance.children[0].children[2].innerText;
+    
+    var birdNameCollection = mapsCollection.getElementsByClassName("smallBirdText");
+    var alreadyInCollection = Array.from(birdNameCollection).find(bird => bird.children[2].innerText === thisSciName);
+    
+    if (alreadyInCollection) return;
+  }
+  // thisInstance.children[0].children[0].innerText = "Horned Screamer"
+  // thisInstance.children[0].children[2].innerText = "Anhima cornuta"
 
   // clone node, remove ids so not duplicate
   // reattach eventListeners
 
-  var thisInstance = map.children[0];
   var dupNode = thisInstance.cloneNode(true);
   dupNode.classList.remove("birdMapInstance");
   dupNode.classList.add("smallBird");
-
 
   dupNode.querySelector(".birdName").classList.add("smallBirdText");
 

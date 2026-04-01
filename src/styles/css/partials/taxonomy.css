@@ -29,11 +29,6 @@
   opacity: 1;
 }
 
-#searchForm span.searchGroup.grayed {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
 #searchInput {
   display: inline-block;
   height: auto;
@@ -55,10 +50,6 @@
   border: 1px solid var(--panel-flyout-font-color);
 }
 
-#searchInput:focus + .inpuInfo {
-  display: block;
-}
-
 #searchInput::placeholder {
   color: var(--panel-flyout-font-color);
 }
@@ -74,11 +65,6 @@
   text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   pointer-events: auto;
   transition: all 500ms 1300ms;
-}
-
-#searchSpecials.grayed {
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .searchSpecialWrapper {
@@ -266,11 +252,6 @@
   transition: all 350ms;
 }
 
-#searchResults.fadeIn {
-  opacity: 1;
-  transition: all 2s;
-}
-
 #searchResults li {
   position: relative;
   padding: 0.077rem 0 0.12rem 1.23rem;
@@ -352,11 +333,6 @@
 }
 
 #searchResults .family {
-  margin: 0.38rem 0 0 0;
-  padding: 0.077rem 0 0.15rem 1.2rem;
-}
-
-#searchResults .familyOpen {
   margin: 0.38rem 0 0 0;
   padding: 0.077rem 0 0.15rem 1.2rem;
 }
@@ -461,16 +437,6 @@
   border: none;
   background-color: transparent;
   box-shadow: none;
-}
-
-#taxPageButton {
-  cursor: pointer;
-  transition: all 350ms;
-}
-
-#taxPageButton:hover {
-  letter-spacing: 0.23rem;
-  box-shadow: 0 0.15rem 0.31rem #444;
 }
 
 #tree * {

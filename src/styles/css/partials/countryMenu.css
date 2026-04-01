@@ -34,16 +34,22 @@
   left: 0.01rem;
   margin-right: -3rem;
   margin-bottom: 0.077rem;
+  /* padding: 0.6rem 0 0.6rem 1.3rem; */
   padding: 0.6rem 0 0.6rem 1.3rem;
   text-decoration: none;
-  text-shadow: 0 0.077rem rgb(0, 0, 0);
-  transition: all 450ms ease-out;
+  /* text-shadow: 0 0.077rem rgb(0, 0, 0); */
+  /* transition: all 450ms ease-out; */
+  transition: background-color 450ms ease-out;
   cursor: pointer;
 }
 
 #country-menu a:hover, #country-menu a:focus {
   outline: none;
-  background-color: var(--title-banner-color);
+  /* background-color: var(--title-banner-color); */
+  background-color: rgb(96, 95, 95);
+  border-left: 0.3rem solid white;
+  padding: 0.6rem 0 0.6rem 1.035rem;
+  /* border-color: white; */
 }
 
 #country-menu a.highlight {

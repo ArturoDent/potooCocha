@@ -339,9 +339,6 @@ function getBuildSACC_NumLists() {
 
 // ****************   ftp to System Domain (potoococha.net) and potoococha.net    **********************  //
 
-// const authors = glob.globSync('./deploy/Authors/*.{json,txt}');
-// const countries = glob.globSync('./deploy/Countries/*.{html,txt}');
-
 const deployRoot = './deploy';
 
 /* list all files you wish to ftp in the glob variable */
