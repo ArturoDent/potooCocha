@@ -189,24 +189,12 @@ function newStrokeColor(obj, newColor) {
 /* global  mapsCollection saveMapButton  currentMap */
 // eslint-disable-next-line
 function highlightSAMmap(index, current) {
-  // var svg;
 
   let currentBirdMap = document.getElementById("currentBirdMap");
-  // let cc = currentBirdMap.querySelector(selectedCountry);
 
-  // TODO: figure this out ***
-  // if (current === "currentMap") {
-  //   svg = currentMap.querySelector("#SAMsvg");
-  // }
-  // else {
-  //   svg = document.getElementById(current);
-  // }
-
-  // var svgDoc = svg.contentDocument;
-  // // var svgDoc = svg.getSVGDocument();
-  
-  // svgDoc = svg.contentDocument;
-  // if (!svgDoc) svgDoc = svg.getSVGDocument();
+  // TODO: 
+  // if this bird is already highlighted = do nothing
+  // if this bird is in the mapsCollection = set saveMapButton display to none
 
   var cList = birds[index].split("-");  // cList = []
 
@@ -281,5 +269,28 @@ function highlightSAMmap(index, current) {
     }
   }
 
-  if ((current === "currentMap") && (mapsCollection.children.length < 5)) { saveMapButton.style.display = "block"; }
+  // if ((current === "currentMap") && (mapsCollection.children.length < 5)) { saveMapButton.style.display = "block"; }
+  // if ((current === "currentMap") && (mapsCollection.children.length < 5)) { alreadyInMapsCollection(); }
+}
+
+
+function alreadyInMapsCollection() {
+
+  const len = mapsCollection.children.length;
+
+  if (len > 0) {
+
+    var thisInstance = map.children[0];
+    // var thisCommonName = thisInstance.children[0].children[0].innerText;
+    var thisSciName = thisInstance.children[0].children[2].innerText;
+    
+    var birdNameCollection = mapsCollection.getElementsByClassName("smallBirdText");
+    return Array.from(birdNameCollection).some(bird => bird.children[2].innerText === thisSciName);
+  }
+
+  else {
+    return false;
+  }
+  // thisInstance.children[0].children[0].innerText = "Horned Screamer"
+  // thisInstance.children[0].children[2].innerText = "Anhima cornuta"
 }

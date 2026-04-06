@@ -3,7 +3,7 @@
 var deleteMapButton;
 var saveMapButton;
 var mapsCollection;
-var deleteAllMapsButton;
+// var deleteAllMapsButton;
 
 var currentID = 0;
 
@@ -14,29 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
   saveMapButton.addEventListener("click", saveCurrentMap);
   mapsCollection = document.getElementById("mapsCollection");
 
-  deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
+  // deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
 
-  deleteAllMapsButton.addEventListener("click", deleteAllMaps);
+  // deleteAllMapsButton.addEventListener("click", deleteAllMaps);
 
-  deleteAllMapsButton.addEventListener("mouseenter", function () {
+  // deleteAllMapsButton.addEventListener("mouseenter", function () {
 
-    var mouseenterEvent = new Event('mouseenter');
-    var numMaps = mapsCollection.children.length - 1;
+  //   var mouseenterEvent = new Event('mouseenter');
+  //   var numMaps = mapsCollection.children.length - 1;
 
-    for (var index = 0; index < numMaps; index++) {
-      mapsCollection.children[numMaps - index].children[1].dispatchEvent(mouseenterEvent);
-    }
-  }, false);
+  //   for (var index = 0; index < numMaps; index++) {
+  //     mapsCollection.children[numMaps - index].children[1].dispatchEvent(mouseenterEvent);
+  //   }
+  // }, false);
 
-  deleteAllMapsButton.addEventListener("mouseleave", function () {
+  // deleteAllMapsButton.addEventListener("mouseleave", function () {
 
-    var mouseleaveEvent = new Event('mouseleave');
-    var numMaps = mapsCollection.children.length - 1;
+  //   var mouseleaveEvent = new Event('mouseleave');
+  //   var numMaps = mapsCollection.children.length - 1;
 
-    for (var index = 0; index < numMaps; index++) {
-      mapsCollection.children[numMaps - index].children[1].dispatchEvent(mouseleaveEvent);
-    }
-  }, false);
+  //   for (var index = 0; index < numMaps; index++) {
+  //     mapsCollection.children[numMaps - index].children[1].dispatchEvent(mouseleaveEvent);
+  //   }
+  // }, false);
 
 });
 
@@ -53,32 +53,36 @@ function deleteMap(evt)  {
   map.querySelector(".saveMapButton").style.display = "block";
   var len = mapsCollection.getElementsByClassName("smallBird").length;
 
-  if (len === 1) {
-    deleteAllMaps(evt);
-  }
-  else {
+  // if (len === 1) {
+  //   deleteAllMaps(evt);
+  // }
+  // else {
     var birdInstance = this.parentNode;
     // TODO: remove eventListeners?
     birdInstance.parentNode.removeChild(this.parentNode);
     map.querySelector(".saveMapButton").style.display = "block";
 
     repositionChildMaps(len-1);
-  }
+  // }
 }
 
 function saveCurrentMap()  {
 
   var len = mapsCollection.getElementsByClassName("smallBird").length;
-  if (len === 5)  return;
+  if (len === 5) return;
+
+  var thisInstance = map.children[0];
+  // thisInstance.children[0].children[0].innerText = "Horned Screamer"
+  // thisInstance.children[0].children[2].innerText = "Anhima cornuta"
+
+  if (alreadyInMapsCollection()) return;
 
   // clone node, remove ids so not duplicate
   // reattach eventListeners
 
-  var thisInstance = map.children[0];
   var dupNode = thisInstance.cloneNode(true);
   dupNode.classList.remove("birdMapInstance");
   dupNode.classList.add("smallBird");
-
 
   dupNode.querySelector(".birdName").classList.add("smallBirdText");
 
@@ -102,11 +106,10 @@ function saveCurrentMap()  {
     
     numDaysButton.classList.add("mapCollectionShowing");
 
-    deleteAllMapsButton.addEventListener("click", deleteAllMaps);
+    // deleteAllMapsButton.addEventListener("click", deleteAllMaps);
   }
-  else if (len === 5)  {
-    map.querySelector(".saveMapButton").style.display = "none";
-  }
+  
+  map.querySelector(".saveMapButton").style.display = "none";
 
   repositionChildMaps(len);
 
@@ -126,7 +129,6 @@ function saveCurrentMap()  {
   highlightSAMmap(lastIndex, "thin" + currentID);
   mapsCollection.lastChild.style.opacity = "1";
   currentID++;
-  // };
 }
 
 function repositionChildMaps(numChildren) {
@@ -170,29 +172,29 @@ function repositionChildMaps(numChildren) {
   }
 }
 
-function deleteAllMaps(evt) {
+// function deleteAllMaps(evt) {
 
-  evt.stopPropagation();
+//   evt.stopPropagation();
 
-  revealMapsCollection();  // toggle off
+//   revealMapsCollection();  // toggle off
   
-  var maps = mapsCollection.getElementsByClassName("smallBird");
-  var len = maps.length;
+//   var maps = mapsCollection.getElementsByClassName("smallBird");
+//   var len = maps.length;
 
-  mapsCollection.classList.remove("namesOnlySeen");
-  mapsCollection.removeEventListener("click", revealMapsCollection);
-  deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
+//   mapsCollection.classList.remove("namesOnlySeen");
+//   mapsCollection.removeEventListener("click", revealMapsCollection);
+//   deleteAllMapsButton.removeEventListener("click", deleteAllMaps);
   
-  numDaysButton.classList.remove("mapCollectionShowing");
+//   numDaysButton.classList.remove("mapCollectionShowing");
 
-  map.querySelector(".saveMapButton").style.display = "block";
+//   map.querySelector(".saveMapButton").style.display = "block";
   
-  // delay so mapsCollection closing is smooth, before children are removed
-  setTimeout(function(){
-    for (var i = 1; i <= len; i++) {
-      //  TODO  : remove eventListeners?
-      mapsCollection.removeChild(mapsCollection.childNodes[3]);
-    }
-  }, 1000);
+//   // delay so mapsCollection closing is smooth, before children are removed
+//   setTimeout(function(){
+//     for (var i = 1; i <= len; i++) {
+//       //  TODO  : remove eventListeners?
+//       mapsCollection.removeChild(mapsCollection.childNodes[3]);
+//     }
+//   }, 1000);
   
-}
+// }
