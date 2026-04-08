@@ -31,7 +31,8 @@
 .citationLink:link {
   text-decoration: none; /* Remove underline */
   border-bottom: none;
-  font-size: 0.9em; /* Optional: shrink link inside superscript */
+  margin-left: 0.7em;
+  font-size: 0.7em; /* Optional: shrink link inside superscript */
   vertical-align: super; /* Ensure it's aligned like a superscript */
 }
 
@@ -46,7 +47,7 @@
 }
 
 .citationLink:hover {
-  color: black;
+  color: white;
 }
 
 .taxArticleMain {

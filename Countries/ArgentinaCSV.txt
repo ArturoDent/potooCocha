@@ -352,7 +352,7 @@ E,Bare-eyed Ground Dove,M. morenoi
 ,Laughing Gull,L. atricilla
 ,Franklin's Gull,L. pipixcan
 ,Belcher's Gull,Larus belcheri
-,Olrog's Gull,L. atlanticus
+EB,Olrog's Gull,L. atlanticus
 ,Kelp Gull,L. dominicanus
 ,Lesser Black-backed Gull,L. fuscus
 ,Least Tern,Sternula antillarum
@@ -913,12 +913,12 @@ E,White-throated Cacholote,P. gutturalis
 ,Sharp-tailed Tyrant,Culicivora caudacuta
 ,Crested Doradito,Pseudocolopteryx sclateri
 ,Subtropical Doradito,P. acutipennis
-,Dinelli's Doradito,P. dinelliana
+EB,Dinelli's Doradito,P. dinelliana
 ,Warbling Doradito,P. flaviventris
 ,Ticking Doradito,P. citreola
 ,Sooty Tyrannulet,Serpophaga nigricans
 ,White-crested Tyrannulet,S. subcristata
-,Straneck's Tyrannulet,S. griseicapilla
+EB,Straneck's Tyrannulet,S. griseicapilla
 ,Rufous-tailed Attila,Attila phoenicurus
 ,Piratic Flycatcher,Legatus leucophaius
 ,Large-headed Flatbill,Ramphotrigon megacephalum
@@ -964,8 +964,9 @@ E,White-throated Cacholote,P. gutturalis
 ,Blue-billed Black-Tyrant,K. cyanirostris
 ,Cinereous Tyrant,K. striaticeps
 ,White-winged Black-Tyrant,K. aterrimus
-,Hudson's Black-Tyrant,K. hudsoni
+EB,Hudson's Black-Tyrant,K. hudsoni
 ,Yellow-browed Tyrant,Satrapa icterophrys
+,Little Ground-Tyrant,Syrtidicola fluviatilis
 ,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
 ,Puna Ground-Tyrant,M. juninensis
 ,Cinereous Ground-Tyrant,M. cinereus
@@ -980,7 +981,7 @@ E,White-throated Cacholote,P. gutturalis
 ,White-rumped Monjita,Xolmis velatus
 ,White Monjita,X. irupero
 ,Gray Monjita,Nengetus cinereus
-,Black-crowned Monjita,Neoxolmis coronatus
+EB,Black-crowned Monjita,Neoxolmis coronatus
 E,Salinas Monjita,N. salinarum
 E,Rusty-backed Monjita,N. rubetra
 ,Chocolate-vented Tyrant,N. rufiventris
@@ -988,7 +989,7 @@ E,Rusty-backed Monjita,N. rubetra
 ,White-tailed Shrike-Tyrant,A. albicauda
 ,Great Shrike-Tyrant,A. lividus
 ,Gray-bellied Shrike-Tyrant,A. micropterus
-,Lesser Shrike-Tyrant,A. murinus
+EB,Lesser Shrike-Tyrant,A. murinus
 ,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
 ,Fuscous Flycatcher,Cnemotriccus fuscatus
 ,Euler's Flycatcher,Lathrotriccus euleri
@@ -1064,7 +1065,7 @@ E,Rusty-backed Monjita,N. rubetra
 ,Chilean Mockingbird,Mimus thenca
 ,Patagonian Mockingbird,M. patagonicus
 ,Chalk-browed Mockingbird,M. saturninus
-,White-banded Mockingbird,M. triurus
+EB,White-banded Mockingbird,M. triurus
 ,Brown-backed Mockingbird,M. dorsalis
 
 ,STARLINGS,STURNIDAE
@@ -1077,7 +1078,7 @@ E,Rusty-backed Monjita,N. rubetra
 ,PIPITS and WAGTAILS,MOTACILLIDAE
 ,Yellowish Pipit,Anthus chii
 ,Short-billed Pipit,A. furcatus
-,Pampas Pipit,A. chacoensis
+EB,Pampas Pipit,A. chacoensis
 ,Correndera Pipit,A. correndera
 ,Ochre-breasted Pipit,A. nattereri
 ,Hellmayr's Pipit,A. hellmayri
@@ -1101,7 +1102,7 @@ E,Rusty-backed Monjita,N. rubetra
 ,SPARROWS,PASSERELLIDAE
 ,Common Chlorospingus,Chlorospingus flavopectus
 E,Yungas Sparrow,Rhynchospiza dabbenei
-E,Chaco Sparrow,R. strigiceps
+EB,Chaco Sparrow,R. strigiceps
 ,Grassland Sparrow,Ammodramus humeralis
 ,Yellow-browed Sparrow,A. aurifrons
 ,White-browed Brushfinch,Arremon torquatus
@@ -1169,7 +1170,6 @@ E,Yellow-striped Brushfinch,A. citrinellus
 ,Guira Tanager,Hemithraupis guira
 ,Chestnut-vented Conebill,Conirostrum speciosum
 ,Giant Conebill,C. binghami
-,Cinereous Conebill,C. cinereum
 ,Stripe-tailed Yellow-Finch,Sicalis citrina
 ,Puna Yellow-Finch,S. lutea
 ,Bright-rumped Yellow-Finch,S. uropygialis
@@ -1195,8 +1195,7 @@ E,Carbonated Sierra Finch,R. carbonaria
 ,Yellow-bridled Finch,M. xanthogramma
 ,Band-tailed Seedeater,Catamenia analis
 ,Plain-colored Seedeater,C. inornata
-,Black-throated Flowerpiercer,Diglossa brunneiventris
-,Gray-bellied Flowerpiercer,D. carbonaria
+,Gray-bellied Flowerpiercer,Diglossa carbonaria
 ,Rusty Flowerpiercer,D. sittoides
 ,Slaty Finch,Haplospiza rustica
 ,Uniform Finch,H. unicolor
@@ -1273,4 +1272,5 @@ E,Tucuman Mountain Finch,P. baeri
 ,Green-headed Tanager,Tangara seledon
 ,Red-necked Tanager,T. cyanocephala
 ,Sayaca Tanager,Thraupis sayaca
+,Golden-chevroned Tanager,T. ornata
 ,Palm Tanager,T. palmarum

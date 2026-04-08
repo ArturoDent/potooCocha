@@ -3,7 +3,7 @@
 var results = "";
   
 var json2html = {	"V": "va", "IN": "intr", "U": "u", "NB": "nb", "X(e)": "endemic",
-  "EX(e)": "extinct", "EX": "extinct", "X": ""  };
+  "X(eb)": "endemic-breeder", "EX(e)": "extinct", "EX": "extinct", "X": ""  };
 
 //  ------------------------------------------------------------------------------------------------------------  //
 
@@ -40,6 +40,7 @@ function searchExtinctOrEndemicSAM(families, special) {
           return birdOccurrenceArray.includes("EX") || birdOccurrenceArray.includes("EX(e)");
           // "extinct" : "EX" or "EX(e)"
         }
+        // TODO: does special include "X(eb)" ?
         else return birdOccurrenceArray.includes(special);  // endemic = "X(e)"
       });
       
@@ -90,22 +91,30 @@ function searchExtinctOrEndemicSAM(families, special) {
 // var addFamily = buildFamily({ FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon });
 function buildFamily(f) {
   
-  var elem = "<li class=\"family\"><span class=\"fco\">";
-  elem += f.FamilyCommon + "</span>";
-  elem += "<span class=\"fsc\">" + f.FamilyScientific + "</span></li>";
+  // var elem = "<li class=\"family\"><span class=\"fco\">";
+  var elem = `<li data-family="${f.FamilyScientific}" class="family"><span class="fco">`;
+  // elem += f.FamilyCommon + "</span>";
+  elem += f.FamilyCommon + `</span>`;
+  // elem += "<span class=\"fsc\">" + f.FamilyScientific + "</span></li>";
+  elem += `<span class="fsc">${f.FamilyScientific}</span></li>`;
   return elem;
 }
 
 // var addBird = buildBird({ index: bird.index, special: special, name: bird.name, genus: genus, spp: bird.species });
 function buildBird(b) {
   
-  var elem = "<li data-i=\"" + b.index + "\" class=\"bird\">";
+  // var elem = "<li data-i=\"" + b.index + "\" class=\"bird\">";
+  var elem = `<li data-i="${b.index}" class="bird">`;
   
-  if (b.special) elem += "<span class=\"" + b.special + "\">";
-  else elem += "<span>";
+  // if (b.special) elem += "<span class=\"" + b.special + "\">";
+  if (b.special) elem += `<span class="${b.special}">`;
+  // else elem += "<span>";
+  else elem += `<span>`;
   
-  elem += b.name + "</span>";
-  elem += "<span>" + b.genus + " " + b.spp + "</span></li>";
+  // elem += b.name + "</span>";
+  elem += `${b.name}</span>`;
+  // elem += "<span>" + b.genus + " " + b.spp + "</span></li>";
+  elem += `<span>${b.genus} ${b.spp}</span></li>`;
   return elem;
 }
 

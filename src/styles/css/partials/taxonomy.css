@@ -58,7 +58,7 @@
   position: absolute;
   height: fit-content;
   width: min-content;
-  top: -1.5ch;
+  top: -2ch;
   left: 102%;
   font-size: 0.87rem;
   letter-spacing: 0.09rem;
@@ -67,7 +67,7 @@
   transition: all 500ms 1300ms;
 }
 
-.searchSpecialWrapper {
+/* .searchSpecialWrapper {
   position: relative;
   width: fit-content;
   padding: 0.5ch 0;
@@ -95,7 +95,45 @@
   border: 0.077rem solid #666;
   background-color: #222;
   box-shadow: 0 0 0.15rem rgb(0, 0, 0);
+} */
+
+.searchSpecialWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  /* width: 14ch; */
+  width: 20ch;
+
+  padding: 0.1ch 0 0.5ch 0;
+  margin: 0 0 6px 0;
+  text-align: center;
+  border: 0.077rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.15rem;
+  background-color: var(--generic-button-color);
+  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 350ms;
 }
+
+.searchSpecialWrapper:hover,
+.searchSpecialWrapper:focus-within {
+  border: 0.077rem solid #666;
+  background-color: #222;
+  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 1);
+}
+
+.searchSpecialWrapper a,
+.searchSpecialWrapper .specialLabel {
+  display: inline;
+  width: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
 
 #searchSpecials div.notAvailable {
   pointer-events: none;
@@ -360,6 +398,13 @@
   font-size: 0.8rem;
 }
 
+.endemic-breeder::before {
+  content: "*";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
 .extinct::before {
   content: "x";
   position: relative;
@@ -381,7 +426,7 @@
   font-size: 0.8rem;
 }
 
-#searchResults .endemic, #searchResults .extinct, #searchResults .u, #searchResults .va {
+#searchResults .endemic, #searchResults .endemic-breeder, #searchResults .extinct, #searchResults .u, #searchResults .va {
   position: relative;
   left: -0.575rem;
 }
@@ -559,10 +604,17 @@
   left: 1.55rem;
 }
 
-#taxPage .endemic, #taxPage .extinct, #taxPage .u, #taxPage .va {
+#taxPage .endemic, #taxPage .endemic-breeder, #taxPage .extinct, #taxPage .u, #taxPage .va {
   position: relative;
   left: -0.7rem;
 }
+
+/* #taxPage .endemic-breeder {
+  content: "*";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+} */
 
 #tree .fco, #tree .fsc {
   font-weight: bold;

@@ -3,7 +3,7 @@
 var lastQuery;
 var lastSpecies;
 
-var species;
+// var species;
 var families;
 var numFamilies;
 
@@ -208,9 +208,25 @@ function loadCountryTaxonomy(country) {
     getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
+    // <div id="searchSpecials">
+    //   <div class="searchSpecialWrapper" data-special="extinct"><span class="specialLabel" tabindex="0">extinct</a></span></div>
+    //   <div class="searchSpecialWrapper" data-special="endemic"><span class="specialLabel" tabindex="0">endemic</a></span></div>
+    
+    //   <div class="searchSpecialWrapper" data-special="endemic-breeder"  title="'Endemic breeders: a species whose breeding population is restricted to one country, but nonbreeding populations are part of the regular avifauna of other countries.'">
+    //     <span class="specialLabel" tabindex="0">endemic Breeder</span> 
+    //     <a  class="citationLink"  href="https://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm" target="_blank" rel="noopener noreferrer">*</a>
+    //   </div>
+
+    //   <div class="searchSpecialWrapper" data-special="unconfirmed"><span class="specialLabel" tabindex="0">unconfirmed</a></span></div>
+    //   <div class="searchSpecialWrapper" data-special="vagrant"><span class="specialLabel" tabindex="0">vagrant</a></span></div>
+    // </div>
+
     // so unconfirmeds and vagrants aren't selectable if South America is chosen
-    searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
-    searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
+    // searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
+    // searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
+    searchSpecials.querySelector('[data-special="unconfirmed"]').classList.add("notAvailable");
+    searchSpecials.querySelector('[data-special="vagrant"]').classList.add("notAvailable");
+
 
     // searchSpecials.classList.add("SAM");
     taxPage.classList.add("samTax");
@@ -221,14 +237,15 @@ function loadCountryTaxonomy(country) {
 
 //  -----------------------------------------------------------------------------------------------
 
-  if (country !== "South America") {  // TODO: might have to change if eb/u added
-    searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
-    searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
-    // searchSpecials.classList.remove("SAM");
+  if (country !== "South America") {
+    // searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
+    // searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
+    searchSpecials.querySelector('[data-special="unconfirmed"]').classList.remove("notAvailable");
+    searchSpecials.querySelector('[data-special="vagrant"]').classList.remove("notAvailable");
   }
 
   // TODO: endemic breeder|unconfirmed ?
-  var specials = /extinct|endemic|unconfirmed|vagrant/;
+  var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
 
   if (!lastQuery) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
@@ -334,7 +351,7 @@ function buildTaxTree(thisCountryFamilies, country) {
   // TODO: "E(eb)": "eb", "U": "u"
   var json2html = {
     "V": "va", "IN": "intr", "U": "u", "NB": "nb", "X(e)": "endemic",
-	  "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
+	   "X(eb)": "endemic-breeder", "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
 
   var results = `<ul id="tree">\n\n`;
 
@@ -373,7 +390,7 @@ function buildTaxTree(thisCountryFamilies, country) {
   taxPage.innerHTML = results;
 
   // so "species" includes the family level _and_ individual bird species
-  species = document.getElementById("tree").getElementsByTagName("li");
+  // species = document.getElementById("tree").getElementsByTagName("li");
 
   resetTaxPageHeight();
 
@@ -402,7 +419,7 @@ function getCountryJSON(data) {
   if (lastQuery) {
     var results = {};
     // TODO: endemic breeder|unconfirmed
-    var specials = /extinct|endemic|unconfirmed|vagrant/;
+    var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
     if (specials.test(lastQuery)) results = specialSearch(families, lastQuery);
     // false will avoid modifyQuery()  sanitize, add accents, etc. - has already been done on the lastQuery
     else results = searchRegexTree(families, lastQuery, countries2Postals[currentCountry]), false;
@@ -466,7 +483,8 @@ function gotoMatch(e) {
   }
 
   const birdNode = taxNodeByKey.get(`bird:${clicked.dataset.i}`);
-  const familyNode = taxNodeByKey.get(`family:${familyLi.children[1].innerText}`);
+  // const familyNode = taxNodeByKey.get(`family:${familyLi.children[1].innerText}`);
+  const familyNode = taxNodeByKey.get(`family:${familyLi.dataset.family}`);
 
   // const taxNode = document.querySelector(`#tree li[data-i="${CSS.escape(clicked.dataset.i)}"]`);
   // const taxFamilyNode = taxNode.parentNode.parentNode;
@@ -484,43 +502,32 @@ function gotoMatch(e) {
       familyNode.classList.add("familyOpen");
     }
 
-    birdNode.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      container: "nearest"
+    // can't offset down easily for some reason with scroll-margin-top on '.active' elements
+    // birdNode.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    //   container: "nearest"
+    // });
+
+    const top =
+      birdNode.getBoundingClientRect().top -
+      taxPageScroller.getBoundingClientRect().top +
+      taxPageScroller.scrollTop -
+      60;     // offset
+
+    taxPageScroller.scroll({
+      top,
+      behavior: "smooth"
     });
 
-    
-    // if (!familyNode.classList.contains("open")) {
-
-    //   // familyNode.classList.add("familyOpen");
-    //   familyNode.classList.add("open");
-    //   familyNode.parentNode.className = "familyOpen";
-    //   // familyNode.className = "familyOpen";
-    // }
-
-    //     // put highlighted bird at "top" (100px down) of taxPage
-    // elem = taxPageScroller;
-    // elem.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
-    
-    // a little buggy on firefox for some reason
-    // elem.scroll({top: familyLi.parentNode.offsetTop + entry.offsetTop - 90, behavior: 'smooth'});
-    // elem.scroll({top: familyNode.parentNode.offsetTop + birdNode.offsetTop - 90, behavior: 'smooth'});
-    // elem.scroll({top: familyNode.offsetTop + birdNode.offsetTop - 90, behavior: 'smooth'});
-
-    // entry.className = "active";
     birdNode.className = "active";
 
-    // lastSpecies = entry;
     lastSpecies = birdNode;
-    // lastIndex = Number(entry.dataset.i);
     lastIndex = Number(clicked.dataset.i);
 
     if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
 
-    // birdNode.classList.toggle("active");
     lastResultsSpecies = birdNode;
-    // addBirdNameToMap(entry);
     addBirdNameToMap(clicked);
 
     highlightSAMmap(lastIndex, "currentMap");
@@ -539,107 +546,20 @@ function gotoMatch(e) {
       lastResultsSpecies = null;
     }
 
-    // elem = taxPageScroller;
-    // family clicked on in searchResults
-        //    put family at top of taxPage
-          // familyNode.scrollIntoView(true);  // screws up IE
-    // elem.scroll({top: entry.offsetTop-40, behavior: 'smooth'});  // ssems to work
-    // elem.scroll({top: famiyNode.offsetTop-40, behavior: 'smooth'});  // ssems to work
+    const top =
+      familyNode.getBoundingClientRect().top -
+      taxPageScroller.getBoundingClientRect().top +
+      taxPageScroller.scrollTop -
+      30;
 
-    familyNode.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      // inline: "nearest",
-      container: "nearest"
+    taxPageScroller.scroll({
+      top,
+      behavior: "smooth"
     });
-
+   
     lastSpecies = familyNode.firstChild;
-    // lastSpecies = familyNode;
     lastSpecies.classList.add("active");    
   }
-
-  
-
-  // var sLen = species.length;
-  // var entry;
-  // var elem;
-  // var eText = clicked.textContent;
-
-  // TODO: get Family first and then loop through that ?
-  // for (var i = 0; i < sLen; i++) {
-
-  //   entry = species[i];
-
-  //   var entryTextTrimmed = entry.textContent.split("\n")[0];
-
-  //   // match if clicked = common, scientific or default
-  //   if (entryTextTrimmed === eText && clickedClass !== "family") {
-
-  //     var familyTemp = entry.parentNode;
-
-  //     if (!familyTemp.classList.contains("open")) {
-
-  //       familyTemp.classList.add("open");
-  //       familyTemp.parentNode.className = "familyOpen";
-  //     }
-
-  //     // put highlighted bird at "top" (100px down) of taxPage
-  //     // entry.scrollIntoView(true);  //  TODO : might work now w/o IE, test on edge
-  //     elem = taxPageScroller;
-  //     // elem.scrollTop = familyTemp.parentNode.offsetTop + entry.offsetTop - 100;
-      
-  //     // a little buggy on firefox for some reason
-  //     elem.scroll({top: familyTemp.parentNode.offsetTop + entry.offsetTop - 90, behavior: 'smooth'});
-
-  //     entry.className = "active";
-
-  //     lastSpecies = entry;
-  //     lastIndex = Number(entry.dataset.i);
-
-  //     if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
-
-  //     clicked.classList.toggle("active");
-  //     lastResultsSpecies = clicked;
-  //     addBirdNameToMap(entry);
-
-  //     highlightSAMmap(lastIndex, "currentMap");
-
-  //     if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
-  //       saveMapButton.style.display = "none";
-  //     }
-  //     else 
-  //       saveMapButton.style.display = "block";
-
-  //     break;
-  //   }
-
-  //   // match in family, fcommon, fscientific
-
-  //   // <li class="family"><span class="fTitle"><span class="fco">SCREAMERS</span><span class="fsc">ANHIMIDAE</span></span>
-	//   //   <ul class="birds">
-	//   //     <li data-i="47"><span>Horned Screamer</span><span>Anhima cornuta</span></li>
-	//   //     <li data-i="49"><span>Northern Screamer</span><span>Chauna chavaria</span></li>
-  //   //   </ul>
-  //   // </li>
-
-  //   else if (entryTextTrimmed === eText && clickedClass === "family") {
-
-  //     if (lastResultsSpecies) {
-  //       lastResultsSpecies.classList.remove("active");
-  //       lastResultsSpecies = null;
-  //     }
-
-  //     elem = taxPageScroller;
-  //     // family clicked on in searchResults
-  //         //    put family at top of taxPage
-  //         //   entry.scrollIntoView(true);  screws up IE
-  //     elem.scroll({top: entry.offsetTop-40, behavior: 'smooth'});  // ssems to work
-
-  //     lastSpecies = entry.firstChild;
-  //     lastSpecies.classList.add("active");
-  //     break;
-  //   }
-  // }
 }
 
 function addBirdNameToMap(name) {
@@ -758,16 +678,31 @@ function toggleFamilyOpen(event) {
 
 function closeAllFamilies() {
 
-  var openedFamilies = taxPage.querySelectorAll("#tree .familyOpen ul");
-  var len = openedFamilies.length;
+  for (const node of taxNodeByKey.values()) {
+    if (node.matches("li.familyOpen")) {
 
-  for (var i = 0; i < len; i++) {
+      const familyUList = node?.querySelector(":scope > ul.birds");
 
-    openedFamilies[i].classList.remove("open");
-    openedFamilies[i].classList.add("closed");
+      familyUList.classList.remove("open");
+      familyUList.classList.add("closed");
 
-    openedFamilies[i].parentNode.className = "family";  // TODO :  why not removing .familyOpen here?
+      node.classList.add("family");
+      node.classList.remove("familyOpen");
+    }
   }
+
+
+  // var openedFamilies = taxPage.querySelectorAll("#tree .familyOpen ul");
+  // var len = openedFamilies.length;
+
+  // for (var i = 0; i < len; i++) {
+
+  //   openedFamilies[i].classList.remove("open");
+  //   openedFamilies[i].classList.add("closed");
+
+  //   openedFamilies[i].parentNode.className = "family";  // TODO :  why not removing .familyOpen here?
+  // }
+
   // **** reset families and species of country
   document.querySelector("#treeIntroText").innerHTML = currentCountry + "   &nbsp; : " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
 }
@@ -804,7 +739,7 @@ function printSearchResults (evt) {
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + normalizedQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += content;
   //  TODO  : add SACC?
-  html+= 	"<br><br><br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;2&nbsp;March&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
+  html+= 	"<br><br><br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;26&nbsp;March&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
   html += '</body></html>';
 
   // var printWindow = window.open('_blank', 'Print', 'menubar=yes,scroll=yes,height=600,width=800');

@@ -11,9 +11,9 @@ var numFamiliesList = {
 
 var numSpeciesList = {
 
-		"Argentina": 1048, "Aruba": 245, "Bolivia": 1410, "Brazil": 1867, "Chile": 526,
+		"Argentina": 1052, "Aruba": 245, "Bolivia": 1409, "Brazil": 1867, "Chile": 526,
   "Colombia": 1915, "Curaçao": 217, "Ecuador": 1683, "French Guiana": 737,
-  "Guyana": 828, "Paraguay": 694, "Peru": 1905, "Suriname": 747, "Trinidad": 490,
+  "Guyana": 828, "Paraguay": 694, "Peru": 1905, "Suriname": 746, "Trinidad": 490,
   "Uruguay": 500, "Venezuela": 1414, "Bonaire": 209, "Falklands": 220, "South America": 3514
 };
 

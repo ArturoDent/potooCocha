@@ -3,7 +3,7 @@
 var results = {}; // {numSpecies: numSpecies, list: results}
 
 var html2json = {	"vagrant": "V", "unconfirmed": "U", "endemic": "X(e)",
-  "extinct": "EX"
+  "extinct": "EX", "endemic-breeder": "X(eb)"
 };  // note 'extinct` is an array: 2 values to search for EX(e)
   
 document.addEventListener("DOMContentLoaded", function () {
@@ -53,30 +53,43 @@ function getQuery() {
 //  ------------------------------------------------------------------------------------------------------------  //
 
 // eslint-disable-next-line no-unused-vars
-function getSearchSpecialsQuery(evt) {
+// function getSearchSpecialsQuery(evt) {
 
-  // <div id="searchSpecials" class="grayed">
-  //    <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
-  //    <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
+//   // <div id="searchSpecials" class="grayed">
+//   //    <span class="searchSpecialWrapper"><a>e<span class="highlightSpecial">x</span>tinct</a></span>
+//   //    <span class="searchSpecialWrapper"><a><span class="highlightSpecial">e</span>ndemic</a></span>
   
-   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup" && evt.keyCode !== 13) {
-    return;
-  }
+//    // KeyboardEvent, type keyup, 13 === Enter
+//   if (evt.type === "keyup" && evt.keyCode !== 13) {
+//     return;
+//   }
 
-  var special;
+//   var special;
 
-  // clear the input
-  searchInput.value = "";
+//   // clear the input
+//   searchInput.value = "";
 
-  if (evt.target.id === "searchSpecials") return;     // clicked in #searchSpecials but not on a button area
-  else if (evt.target.className === "searchSpecialWrapper")
-    special = evt.target.textContent.trim();    // clicked between "visible" buttons on "searchSpecialWrapper"
-  else special = evt.target.parentNode.textContent.trim();
-  // parentNode else if you click on "e" of extinct only the "e" is detected as the textContent of the target
+//   // TODO: add endemic breeder
+//   if (evt.target.id === "searchSpecials") return;     // clicked in #searchSpecials but not on a button area
+//   else if (evt.target.className === "searchSpecialWrapper")
+//     special = evt.target.textContent.trim();    // clicked between "visible" buttons on "searchSpecialWrapper"
+//   else special = evt.target.parentNode.textContent.trim();
+//   // parentNode else if you click on "e" of extinct only the "e" is detected as the textContent of the target
   
-  results = specialSearch(families, special);  // country is a postalCode
-  loadSearchResults(results);
+//   results = specialSearch(families, special);  // country is a postalCode
+//   loadSearchResults(results);
+// }
+
+
+function getSearchSpecialsQuery(event) {
+  const wrapper = event.target.closest(".searchSpecialWrapper");
+  if (!wrapper || wrapper.classList.contains("notAvailable")) return;
+
+  const special = wrapper.dataset.special;
+  if (!special) return;
+
+  lastQuery = special;
+  loadSearchResults(specialSearch(families, special));
 }
 
 //  ------------------------------------------------------------------------------------------------------------  //
@@ -84,12 +97,12 @@ function getSearchSpecialsQuery(evt) {
 function specialSearch(families, special) {
   
   lastQuery = special;
-  // TODO: added specials
   special = html2json[special];  // vagrant("V"), unconfirmed("U"), endemic("X(e)"), extinct("EX")
   
   if (special) {
     
-    if (currentCountry === "SAM") return searchExtinctOrEndemicSAM(families, special);    // SAM : extinct and endemics
+    // TODO: add endemic breeder
+    if (currentCountry === "SAM" || currentCountry === "South America") return searchExtinctOrEndemicSAM(families, special);    // SAM : extinct and endemics
     else return searchCountrySpecials(families, special, countries2Postals[currentCountry]);     // countries: unconfirmed, vagrant, extinct and endemic
   }
 }

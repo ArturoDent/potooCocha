@@ -1,9 +1,4 @@
-<?php
-//  ob_start();
-//  echo(php_ini_loaded_file());
-//  phpinfo();
-//  error_reporting(E_ALL);
-// error_reporting(0);
+ <?php
 //============================================================+
 // File name   : makePDF.php
 // 
@@ -19,23 +14,12 @@
 //               potoococha.net
 //============================================================+
 
+// Include the main TCPDF library (search for installation path).
+// require_once('tcpdf/tcpdf.php');
 require_once('../tcpdf/tcpdf.php');
+// require_once('tcpdf/config/tcpdf_config.php');
 require_once('../tcpdf/config/tcpdf_config.php');
-
-// sftp://a390398@access-5017074029.webspace-host.com/php/makePDF.php
-// sftp://a390398@access-5017074029.webspace-host.com/php/tcpdf/tcpdf.php
-// sftp://a390398@access-5017074029.webspace-host.com/php/tcpdf/config/tcpdf_config.php
-
-// function log_to_console($data, bool $quotes = true) {
-//   $output = json_encode($data);
-//   if ($quotes) {
-//       echo "<script>console.log('{$output}' );</script>";
-//   } else {
-//       echo "<script>console.log({$output} );</script>";
-//   }
-// }
-
-// log_to_console("after");
+// set_time_limit(0);
 
 // ---------------------------------------------------------
 
@@ -85,9 +69,6 @@ class PDF extends TCPDF {
 
 	function __construct($Dv, $Sd, $Ev, $Lv, $LCv, $Sv, $Si, $where) {
 
-    parent::__construct('P', 'pt', 'Letter');
-
-
 		$this->numDays     =  $Dv;
 		$this->startDate   =  $Sd;
 		$this->endemics    =  ($Ev  === 'true')  ? true : false;
@@ -115,8 +96,7 @@ class PDF extends TCPDF {
 		$this->familyCommonIndent  =  6;
 		$this->commonIndent        =  3;
 
-		// $this->familyRowHeight     =  13;
-		$this->familyRowHeight     =  16;   // works but text is vertically centered
+		$this->familyRowHeight     =  13;
 		$this->commonRowHeight     =  14;
 
 		$this->defaultSeparator        =  array('B' => array('width' => 0.5),  'L' => array('width' => 0.5),'T' => array('width' => 0.5));
@@ -124,8 +104,8 @@ class PDF extends TCPDF {
 
 		$this->defaultSciSeparator     =  array('B' => array('width' => 0.5),  'T' => array('width' => 0.5),  'R' => array('width' => 0.5));
 		$this->headerDefaultSeparator  =  array('B' => array('width' => 0.5),  'R' => array('width' => 0.5),   'L' => array('width' => 0.5),'T' => array('width' => 0.5));
-    
-    // parent::__construct('P', 'pt', 'Letter');
+
+    parent::__construct('P', 'pt', 'Letter'); 
    } 
 
 	public function LoadData($file) {
@@ -260,65 +240,50 @@ class PDF extends TCPDF {
 
 			//  *********************  Family  ********************
 			
-	  	if ( count($bird) == 2)  {    // e.g.,  	TINAMOUS,TINAMIDAE
+	  	if ( count($bird) == 2)  {
 
 				// check for orphans/ widows (i.e., Families at bottom)
-				// if ($this->GetY() + $this->familyCellHeight + $this->commonCellHeight >= $this->PageBreakTrigger)  {
-				if ($this->GetY() + $this->familyRowHeight + $this->commonRowHeight >= $this->PageBreakTrigger)  {
+
+				if ($this->GetY() + $this->familyCellHeight + $this->commonCellHeight >= $this->PageBreakTrigger)  {
 					$this->AddPage();
 				}
 
-				// $this->SetCellPaddings($this->familyCommonIndent + $this->endemicCellWidth, 0, 0, 0);
 				$this->SetCellPaddings($this->familyCommonIndent + $this->endemicCellWidth);
 				$this->SetFont('courier', 'B', 10);
 				$this->setFontSpacing  (1);
 
-        // $familyCommonName = $pdf.text($bird[0], 0, 0, {baseline: "bottom"});
-				// $this->Cell( $this->familyCellWidth, $this->familyRowHeight, $bird[0], 0, 0, 'L', 0, '', 1);
 				$this->Cell( $this->familyCellWidth, $this->familyRowHeight, $bird[0], 0, 0, 'L', 0, '', 1);
 
 				if ($this->sciNames)  {
 					$this->SetCellPaddings($this->endemicCellWidth);  					
-					// $this->Cell( $this->familySCiCellWidth, $this->familyRowHeight, $bird[1], 0, 0, 'L', 0, '', 1 );
 					$this->Cell( $this->familySCiCellWidth, $this->familyRowHeight, $bird[1], 0, 0, 'L', 0, '', 1 );
 				}
 				$this->Ln($this->familyRowHeight);
 			}
 
-			else {  // not a family
+			else {
 
-              // 	TINAMOUS,TINAMIDAE
-              // 	,,Tawny-breasted Tinamou,Nothocercus julius
-              // 	,,Highland Tinamou,N. bonapartei
-              // 	,,Gray Tinamou,Tinamus tao
-              //	,endemic,Black Tinamou,T. osgoodi
-              // 	5,,Great Tinamou,T. major
-
-        // handle orphans and widows
-        // show at least 2 birds at top of page before family
-        $birdNext2 = explode(',', $allBirds[$i + 2]);
-        if ( count($birdNext2) == 2) {
-          if ($this->GetY() + $this->commonCellHeight + $this->commonCellHeight >= $this->PageBreakTrigger)  {
-            $this->AddPage();
-          }
-        }
-													
+					// 	TINAMOUS,TINAMIDAE
+					// 	,,Tawny-breasted Tinamou,Nothocercus julius
+					// 	,,Highland Tinamou,N. bonapartei
+					// 	,,Gray Tinamou,Tinamus tao
+					//	,endemic,Black Tinamou,T. osgoodi
+					// 	5,,Great Tinamou,T. major
+																			
 				if (($i + 1) == $dataLength) $this->finishedLastBird = true;
 
 				$this->setFontSpacing  (0);
 
-				$AddLineNo = is_numeric($bird[0]);          // 	5,,Great Tinamou,T. major
-				$AddEndemic = ($bird[1] == "endemic");      //	,endemic,Black Tinamou,T. osgoodi
+				$AddLineNo = is_numeric($bird[0]);
+				$AddEndemic = ($bird[1] == "endemic");
 				$EndemicCellWritten = false;
 
+        // TODO: add 'eb' for endemic breeders ?
     		if ($this->endemics || $this->lineNos || $this->leftChecks)  {
 
 					if ($this->endemics && $AddEndemic) {
 
-            // make endemics bold ?
-
 						$this->SetFont( '', '', 8 );
-				    // $this->SetFont('', 'B', 8);  // makes the 'e' bold
 
 						if ($this->leftChecks)  {
 							$this->Cell( $this->endemicCellWidth, $this->commonRowHeight, 'e', 1, 0, 'C', 0 );
@@ -355,19 +320,12 @@ class PDF extends TCPDF {
 				$this->SetCellPaddings($this->commonIndent,0,10,0);
 				$this->SetFont('', '', 10);
 
-        // this makes the endemic common name always bold - whether showEndemics is true or false
-        if ($this->endemics && $AddEndemic) {
-          $this->SetFont('', 'B', 10);
-        }
-        else {
-          $this->SetFont('', '', 10);
-        } 
 
 				if ($this->sciNames) {
 					$this->setFontSpacing  (0);
 
 					// last parameter : 1 forces font squeezing if text overflows cell width
-          $this->Cell( $this->commonCellWidth, $this->commonRowHeight, $bird[2], $this->defaultSeparator, 0, 'L', 0,'', 1 );
+					$this->Cell( $this->commonCellWidth, $this->commonRowHeight, $bird[2], $this->defaultSeparator, 0, 'L', 0,'', 1 );
 				}
 				else {
 					$this->setFontSpacing  (1);
@@ -433,23 +391,14 @@ class PDF extends TCPDF {
 		
 		// print checklist authors here, this will be the last page
 		if ($this->authors)  {
-      $this->Ln(40);
-      $this->SetFont('','',11);
-      $this->SetX($this->GetX() + 30);
+	  		$this->Ln(40);
+		   	$this->SetFont('','',11);
+		    $this->SetX($this->GetX() + 30);
 
-      // $this->link('citations.html', 'howdy');
-      // $pdf.textWithLink('citations', posX, posY, {url: 'https://potoococha.net/citations.html/'});
-
-      $this->MultiCell  ( 450, 20, $this->authors, 0, 'L', false );
-      // $this->MultiCell  ( 450, 20, $this.textWithLink('Hello World!', , 25, {url: 'https://www.example.com/'});, 0, 'L', false );
-      // $this->textWithLink('citations', 450, 20, {url: 'https://potoococha.net/citations.html/'});
-
-      // link for SAM just prints  <a href='citations.html' target='_blank'>classification</a>
-      // rather than a clickable link
+				$this->MultiCell  ( 450, 20, $this->authors, 0, 'L', false );
 		}
 	}	
 }
-
 
 $country     =  filter_var($_GET['country'],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 $num_days    =  filter_var($_GET['num_days'],  FILTER_SANITIZE_NUMBER_INT);
@@ -464,11 +413,8 @@ $italics     =  filter_var($_GET['italics'], FILTER_SANITIZE_STRING, FILTER_FLAG
 
 $pdf = new PDF( $num_days, $start_date, $endemics, $line_nos, $left_check, $sci_names, $italics, $country);
 
-// echo("Number of days: ".$num_days);  // fails before this
-
 $pdf->setFontSubsetting(false);
 
-// $pdf->
 $pdf->SetCreator('potoococha.net');
 $pdf->SetAuthor('SACC');
 $pdf->SetTitle($country . ' Checklist SACC');
@@ -501,8 +447,7 @@ $pdf->AddPage();
 $pdf->MakeTable($birds);
 
 // must flush [error] output before creating the pdf
-// ob_clean();
+ob_clean();
 
 $pdf->Output($country . '-SACC-Checklist.pdf', 'I');
-// $pdf->Output($country . '-SACC-Checklist.pdf', 'D');
 ?>

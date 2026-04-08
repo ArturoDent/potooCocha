@@ -782,13 +782,13 @@ GULLS,LARIDAE
 ,,Black-headed Gull,C. ridibundus
 15,,Little Gull,Hydrocoloeus minutus
 ,,Dolphin Gull,Leucophaeus scoresbii
-,,Gray Gull,L. modestus
+,endemic-breeder,Gray Gull,L. modestus
 ,,Laughing Gull,L. atricilla
 ,,Franklin's Gull,L. pipixcan
 20,endemic,Lava Gull,L. fuliginosus
 ,,Audouin's Gull,Ichthyaetus audouinii
 ,,Belcher's Gull,Larus belcheri
-,,Olrog's Gull,L. atlanticus
+,endemic-breeder,Olrog's Gull,L. atlanticus
 ,,Ring-billed Gull,L. delawarensis
 25,,California Gull,L. californicus
 ,,Great Black-backed Gull,L. marinus
@@ -831,7 +831,7 @@ PENGUINS,SPHENISCIDAE
 5,,Chinstrap Penguin,P. antarcticus
 ,,Little Penguin,Eudyptula minor
 ,,Humboldt Penguin,Spheniscus humboldti
-,,Galapagos Penguin,S. mendiculus
+,endemic-breeder,Galapagos Penguin,S. mendiculus
 ,,Magellanic Penguin,S. magellanicus
 10,,Erect-crested Penguin,Eudyptes sclateri
 ,,Macaroni Penguin,E. chrysolophus
@@ -839,7 +839,7 @@ PENGUINS,SPHENISCIDAE
 ,,Rockhopper Penguin,E. chrysocome
 ,,Snares Penguin,E. robustus
 ALBATROSSES,DIOMEDEIDAE
-,,Waved Albatross,Phoebastria irrorata
+,endemic-breeder,Waved Albatross,Phoebastria irrorata
 ,,Royal Albatross,Diomedea epomophora
 ,,Wandering Albatross,D. exulans
 ,,Sooty Albatross,Phoebetria fusca
@@ -885,14 +885,14 @@ SHEARWATERS,PROCELLARIIDAE
 15,,Cook's Petrel,P. cookii
 ,,Black-winged Petrel,P. nigripennis
 ,,Chatham Petrel,P. axillaris
-,,Masatierra Petrel,P. defilippiana
-,,Stejneger's Petrel,P. longirostris
+,endemic-breeder,Masatierra Petrel,P. defilippiana
+,endemic-breeder,Stejneger's Petrel,P. longirostris
 20,,Murphy's Petrel,P. ultima
 ,,Kermadec Petrel,P. neglecta
 ,,Trindade Petrel,P. arminjoniana
 ,,Mottled Petrel,P. inexpectata
-,,Galapagos Petrel,P. phaeopygia
-25,,Juan Fernandez Petrel,P. externa
+,endemic-breeder,Galapagos Petrel,P. phaeopygia
+25,endemic-breeder,Juan Fernandez Petrel,P. externa
 ,,Fea's Petrel,P. feae
 ,,Blue Petrel,Halobaena caerulea
 ,,Fairy Prion,Pachyptila turtur
@@ -912,11 +912,11 @@ SHEARWATERS,PROCELLARIIDAE
 ,,Short-tailed Shearwater,A. tenuirostris
 ,,Sooty Shearwater,A. grisea
 ,,Great Shearwater,A. gravis
-45,,Pink-footed Shearwater,A. creatopus
+45,endemic-breeder,Pink-footed Shearwater,A. creatopus
 ,,Flesh-footed Shearwater,A. carneipes
 ,,Christmas Shearwater,Puffinus nativitatis
 ,,Manx Shearwater,P. puffinus
-,,Galapagos Shearwater,P. subalaris
+,endemic-breeder,Galapagos Shearwater,P. subalaris
 50,,Little Shearwater,P. assimilis
 ,,Audubon's Shearwater,P. lherminieri
 ,,Peruvian Diving-Petrel,Pelecanoides garnotii
@@ -2575,14 +2575,14 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Sharp-tailed Tyrant,Culicivora caudacuta
 210,,Crested Doradito,Pseudocolopteryx sclateri
 ,,Subtropical Doradito,P. acutipennis
-,,Dinelli's Doradito,P. dinelliana
+,endemic-breeder,Dinelli's Doradito,P. dinelliana
 ,,Warbling Doradito,P. flaviventris
 ,,Ticking Doradito,P. citreola
 215,,Torrent Tyrannulet,Serpophaga cinerea
 ,,River Tyrannulet,S. hypoleuca
 ,,Sooty Tyrannulet,S. nigricans
 ,,White-crested Tyrannulet,S. subcristata
-,,Straneck's Tyrannulet,S. griseicapilla
+,endemic-breeder,Straneck's Tyrannulet,S. griseicapilla
 220,,Agile Tit-Tyrant,Uromyias agilis
 ,endemic,Unstreaked Tit-Tyrant,U. agraphia
 ,,Short-tailed Field Tyrant,Muscigralla brevicauda
@@ -2695,7 +2695,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Blue-billed Black-Tyrant,K. cyanirostris
 330,,Cinereous Tyrant,K. striaticeps
 ,,White-winged Black-Tyrant,K. aterrimus
-,,Hudson's Black-Tyrant,K. hudsoni
+,endemic-breeder,Hudson's Black-Tyrant,K. hudsoni
 ,,Yellow-browed Tyrant,Satrapa icterophrys
 ,,Little Ground-Tyrant,Syrtidicola fluviatilis
 335,,Spot-billed Ground-Tyrant,Muscisaxicola maculirostris
@@ -2716,7 +2716,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 350,,White-rumped Monjita,Xolmis velatus
 ,,White Monjita,X. irupero
 ,,Gray Monjita,Nengetus cinereus
-,,Black-crowned Monjita,Neoxolmis coronatus
+,endemic-breeder,Black-crowned Monjita,Neoxolmis coronatus
 ,endemic,Salinas Monjita,N. salinarum
 355,endemic,Rusty-backed Monjita,N. rubetra
 ,,Chocolate-vented Tyrant,N. rufiventris
@@ -2724,7 +2724,7 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,White-tailed Shrike-Tyrant,A. albicauda
 ,,Great Shrike-Tyrant,A. lividus
 360,,Gray-bellied Shrike-Tyrant,A. micropterus
-,,Lesser Shrike-Tyrant,A. murinus
+,endemic-breeder,Lesser Shrike-Tyrant,A. murinus
 ,,Streak-throated Bush-Tyrant,Myiotheretes striaticollis
 ,endemic,Santa Marta Bush-Tyrant,M. pernix
 ,,Smoky Bush-Tyrant,M. fumigatus
@@ -2954,7 +2954,7 @@ MOCKINGBIRDS,MIMIDAE
 ,,Chilean Mockingbird,M. thenca
 5,,Patagonian Mockingbird,M. patagonicus
 ,,Chalk-browed Mockingbird,M. saturninus
-,,White-banded Mockingbird,M. triurus
+,endemic-breeder,White-banded Mockingbird,M. triurus
 ,,Brown-backed Mockingbird,M. dorsalis
 ,endemic,Galapagos Mockingbird,M. parvulus
 10,endemic,Floreana Mockingbird,M. trifasciatus
@@ -2980,7 +2980,7 @@ PIPITS and WAGTAILS,MOTACILLIDAE
 ,,Yellowish Pipit,A. chii
 ,,Short-billed Pipit,A. furcatus
 5,,Peruvian Pipit,A. peruvianus
-,,Pampas Pipit,A. chacoensis
+,endemic-breeder,Pampas Pipit,A. chacoensis
 ,,Correndera Pipit,A. correndera
 ,,Ochre-breasted Pipit,A. nattereri
 ,,Hellmayr's Pipit,A. hellmayri
@@ -3034,7 +3034,7 @@ SPARROWS,PASSERELLIDAE
 ,,Dusky Chlorospingus,C. semifuscus
 ,,Tumbes Sparrow,Rhynchospiza stolzmanni
 ,endemic,Yungas Sparrow,R. dabbenei
-10,endemic,Chaco Sparrow,R. strigiceps
+10,endemic-breeder,Chaco Sparrow,R. strigiceps
 ,,Grasshopper Sparrow,Ammodramus savannarum
 ,,Grassland Sparrow,A. humeralis
 ,,Yellow-browed Sparrow,A. aurifrons
@@ -3287,7 +3287,7 @@ TANAGERS,THRAUPIDAE
 ,,White-browed Conebill,C. ferrugineiventre
 ,,Blue-backed Conebill,C. sitticolor
 ,,Capped Conebill,C. albifrons
-25,,Tamarugo Conebill,C. tamarugense
+25,endemic-breeder,Tamarugo Conebill,C. tamarugense
 ,,Rufous-browed Conebill,C. rufum
 ,,Cinereous Conebill,C. cinereum
 ,,Stripe-tailed Yellow-Finch,Sicalis citrina
@@ -3357,7 +3357,7 @@ TANAGERS,THRAUPIDAE
 ,,Red-shouldered Tanager,T. phoenicius
 ,,Gray-headed Tanager,Eucometis penicillata
 ,,Black-goggled Tanager,Trichothraupis melanops
-95,,Inti Tanager,Heliothraupis oneilli
+95,endemic-breeder,Inti Tanager,Heliothraupis oneilli
 ,,Pileated Finch,Coryphospingus pileatus
 ,,Red-crested Finch,C. cucullatus
 ,,Masked Crimson Tanager,Ramphocelus nigrogularis

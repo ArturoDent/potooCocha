@@ -199,7 +199,7 @@
   background-color: var(--sample-table-bg-color);
 }
 
-.showEndemics {
+.showEndemics, .showEndemicBreeders {
   position: relative;
 }
 
@@ -217,8 +217,35 @@
   transition: left 500ms;
 }
 
+.leftCheckBox:not(.show) + .endemical.showEndemicBreeders::before {
+  content: "EB";
+  position: absolute;
+  top: 0.46rem;
+  left: -1.6rem;
+  width: auto;
+  height: auto;
+  padding: 0.15rem 0.3rem 0.23rem 0.3rem;
+  font-size: 0.6rem;
+  text-shadow: none;
+  background-color: var(--sample-table-bg-color);
+  transition: left 500ms;
+}
+
 .leftCheckBox.show + .endemical.showEndemics::before {
   content: "E";
+  position: absolute;
+  top: 0.46rem;
+  left: -2.6rem;
+  width: auto;
+  height: auto;
+  padding: 0.15rem 0.3rem 0.23rem 0.3rem;
+  font-size: 0.6rem;
+  text-shadow: none;
+  background-color: var(--sample-table-bg-color);
+}
+
+.leftCheckBox.show + .endemical.showEndemicBreeders::before {
+  content: "EB";
   position: absolute;
   top: 0.46rem;
   left: -2.6rem;

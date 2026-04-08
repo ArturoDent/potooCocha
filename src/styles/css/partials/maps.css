@@ -286,3 +286,12 @@
 .colorKey ul li:nth-child(7)::after { /* unconfirmed       */
   border-color: transparent transparent transparent #f3f3f3;
 }
+
+.colorKey ul li:nth-child(8) { /* endemic breeder  */
+  margin-top: 0.4rem;
+  border-left: 1.2rem solid #672c29;
+}
+
+.colorKey ul li:nth-child(8)::after { /* endemic breeder       */
+  border-color: transparent transparent transparent #672c29;
+}

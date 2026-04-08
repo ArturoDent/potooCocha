@@ -345,11 +345,13 @@
 
         <div>Search the South American Classification Committee's <a href="http://www.museum.lsu.edu/%7ERemsen/SACCBaseline.htm"
             target="_blank" rel="noopener noreferrer">taxonomy and country lists</a> for <span id="searchCountryText">South America</span>.<a class="citationLink" href="citations.html"
-            target="_blank" rel="noopener noreferrer">*</a></div>
+            target="_blank" rel="noopener noreferrer">1</a></div>
             <br>
         <div>
           Type part of a word like "xantho" or "potoo".<br>
-          Select an item in the search results or the taxonomic tree.
+          Select an item in the search results or the taxonomic tree.<br>
+              
+          * (in results or tree) refers to an "<a  href="https://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm" target="_blank" rel="noopener noreferrer">endemic breeder</a>".
         </div>
       </article>
 
@@ -367,15 +369,28 @@
             </span>
           </div>
 
-          <!-- <div id="searchSpecials" class="grayed"> -->
-          <div id="searchSpecials">
+          <!-- TODO: add 'endemic breeder' -->
+          <!-- <div id="searchSpecials">
             <div class="searchSpecialWrapper"><a tabindex="0">e<span class="highlightSpecial">x</span>tinct</a></div>
             <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">e</span>ndemic</a></div>
-            <!-- <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">e</span>ndemic Breeder</a></div> -->
+            <div class="searchSpecialWrapper" title="Endemic breeders: a species whose breeding population is restricted to one country, but nonbreeding populations are part of the regular avifauna of other countries."><a tabindex="0"><span class="highlightSpecial">e</span>ndemic Breeder</a></div>
 
             <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">u</span>nconfirmed</a></div>
             <div class="searchSpecialWrapper"><a tabindex="0"><span class="highlightSpecial">v</span>agrant</a></div>
+          </div> -->
+
+          <div id="searchSpecials">
+            <div class="searchSpecialWrapper" data-special="extinct"><span class="specialLabel" tabindex="0">extinct</a></span></div>
+            <div class="searchSpecialWrapper" data-special="endemic"><span class="specialLabel" tabindex="0">endemic</a></span></div>
+          
+            <div class="searchSpecialWrapper" data-special="endemic-breeder"  title="'Endemic breeders: a species whose breeding population is restricted to one country, but nonbreeding populations are part of the regular avifauna of other countries.'">
+              <span class="specialLabel" tabindex="0">endemic breeder</span> 
+            </div>
+
+            <div class="searchSpecialWrapper" data-special="unconfirmed"><span class="specialLabel" tabindex="0">unconfirmed</a></span></div>
+            <div class="searchSpecialWrapper" data-special="vagrant"><span class="specialLabel" tabindex="0">vagrant</a></span></div>
           </div>
+
 
         </form>
       <!-- </article> -->
@@ -544,6 +559,8 @@
               <label for="lineNumbers" tabindex="0">Line numbers</label></li>
             <li><input id="showEndemics" type="checkbox" class="hideCheckBox" tabindex="-1">
               <label for="showEndemics" tabindex="0">Show endemics</label></li>
+            <li><input id="showEndemicBreeders" type="checkbox" class="hideCheckBox" tabindex="-1">
+              <label for="showEndemicBreeders" tabindex="0">Show endemic breeders</label></li>
             <li><input id="leftCheck" type="checkbox" class="hideCheckBox" tabindex="-1">
               <label for="leftCheck" tabindex="0">Left checkbox</label></li>
             <li><input id="italics" type="checkbox" class="hideCheckBox" tabindex="-1">
@@ -845,6 +862,7 @@
           <li>introduced</li>
           <li>nonbreeder</li>
           <li>unconfirmed</li>
+          <li>en. breeder</li>
         </ul>
       </div>
 

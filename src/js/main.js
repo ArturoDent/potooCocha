@@ -6,6 +6,7 @@ var sciNames;
 var italics;
 var lineNumbers;
 var showEndemics;
+var showEndemicBreeders;
 
 var currentCountry;
 var previousHighlightedCountryNode;  //  a node
@@ -72,18 +73,24 @@ window.addEventListener("load", function () {
   lineNumbers = document.getElementById("lineNumbers");
   leftCheck = document.getElementById("leftCheck");
   showEndemics = document.getElementById("showEndemics");
+  showEndemicBreeders = document.getElementById("showEndemicBreeders");
+
   sciNames = document.getElementById("sciNames");
   italics = document.getElementById("italics");
 
   lineNumbers.addEventListener("click", toggleSampleTableLineNumbers);
   leftCheck.addEventListener("click", toggleSampleTableLeftChecks);
   showEndemics.addEventListener("click", toggleSampleTableShowEndemics);
+  showEndemicBreeders.addEventListener("click", toggleSampleTableShowEndemicBreeders);
+
   sciNames.addEventListener("click", toggleSampleTableSciNames);
   italics.addEventListener("click", toggleSampleTableItalics);
 
   lineNumbers.nextElementSibling.addEventListener("keyup", toggleSampleTableLineNumbers);
   leftCheck.nextElementSibling.addEventListener("keyup", toggleSampleTableLeftChecks);
   showEndemics.nextElementSibling.addEventListener("keyup", toggleSampleTableShowEndemics);
+  showEndemicBreeders.nextElementSibling.addEventListener("keyup", toggleSampleTableShowEndemicBreeders);
+
   sciNames.nextElementSibling.addEventListener("keyup", toggleSampleTableSciNames);
   italics.nextElementSibling.addEventListener("keyup", toggleSampleTableItalics);
 
@@ -153,6 +160,20 @@ function toggleSampleTableShowEndemics(evt) {
     }
   }
   sampleTable.querySelector("td.endemical").classList.toggle("showEndemics");
+}
+
+function toggleSampleTableShowEndemicBreeders(evt) {
+
+  // KeyboardEvent, type keyup, 13 === Enter
+  if (evt.type === "keyup") {
+    if (evt.keyCode !== 13) {
+      return;
+    }
+    else {
+      evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
+    }
+  }
+  sampleTable.querySelector("td.endemical").classList.toggle("showEndemicBreeders");
 }
 
 function toggleSampleTableSciNames(evt) {
@@ -262,7 +283,7 @@ function setChecklistCountryAuthors(country) {
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;2&nbsp;March&nbsp;2026. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;6&nbsp;April&nbsp;2026. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
 function setNumDays(evt) {
@@ -382,6 +403,8 @@ function openChecklistPage() {
   vars += "&line_nos=" + lineNumbers.checked;
   vars += "&left_check=" + leftCheck.checked;
   vars += "&endemics=" + showEndemics.checked;
+  vars += "&endemicBreeders=" + showEndemicBreeders.checked;
+
   vars += "&sci_names=" + !sciNames.checked;
   vars += "&italics=" + !italics.checked;
 

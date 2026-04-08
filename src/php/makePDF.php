@@ -1,4 +1,4 @@
- <?php
+<?php
 //============================================================+
 // File name   : makePDF.php
 // 
@@ -40,12 +40,16 @@ class PDF extends TCPDF {
 	protected  $contentHeight;	    
 
 	protected  $endemics;
+	protected  $endemicBreeders;
+
 	protected  $lineNos;
 	protected  $leftChecks;
 	protected  $sciNames;
 	protected  $italics;
 
 	protected  $endemicCellWidth;
+	// protected  $endemicBreederCellWidth;
+
 	protected  $familyCellWidth;
 	protected  $familyCommonIndent;
 
@@ -67,11 +71,13 @@ class PDF extends TCPDF {
 	protected  $headerDefaultSeparator;
 	protected  $finishedLastBird;
 
-	function __construct($Dv, $Sd, $Ev, $Lv, $LCv, $Sv, $Si, $where) {
+	function __construct($Dv, $Sd, $Ev,  $Eb, $Lv, $LCv, $Sv, $Si, $where) {
 
 		$this->numDays     =  $Dv;
 		$this->startDate   =  $Sd;
 		$this->endemics    =  ($Ev  === 'true')  ? true : false;
+		$this->endemicBreeders    =  ($Eb  === 'true')  ? true : false;
+
 		$this->lineNos     =  ($Lv  === 'true')  ? true : false;
 		$this->leftChecks  =  ($LCv === 'true')  ? true : false;
 		$this->sciNames    =  ($Sv  === 'true')  ? true : false;
@@ -80,7 +86,7 @@ class PDF extends TCPDF {
 
 		$this->daysInMonth   =  array(31,28,31,30,31,30,31,31,30,31,30,31);  // 2028 is a leap year
 
-		if ($this->endemics || $this->lineNos || $this->leftChecks)  {
+		if ($this->endemics || $this->endemicBreeders || $this->lineNos || $this->leftChecks)  {
 			$this->endemicCellWidth = 13;
 		}
 		else $this->endemicCellWidth = 0;
@@ -276,8 +282,11 @@ class PDF extends TCPDF {
 
 				$AddLineNo = is_numeric($bird[0]);
 				$AddEndemic = ($bird[1] == "endemic");
+				$AddEndemicBreeder = ($bird[1] == "endemic-breeder");
+
 				$EndemicCellWritten = false;
 
+        // TODO: add 'eb' for endemic breeders ?
     		if ($this->endemics || $this->lineNos || $this->leftChecks)  {
 
 					if ($this->endemics && $AddEndemic) {
@@ -289,6 +298,19 @@ class PDF extends TCPDF {
 						}
 						else {
 							$this->Cell( $this->endemicCellWidth, $this->commonRowHeight, 'e', 0, 0, 'C', 0 );
+						}
+						$EndemicCellWritten = true;
+					}
+
+          if ($this->endemicBreeders && $AddEndemicBreeder  && !$EndemicCellWritten) {
+
+						$this->SetFont( '', '', 8 );
+
+						if ($this->leftChecks)  {
+							$this->Cell( $this->endemicCellWidth, $this->commonRowHeight, 'eb', 1, 0, 'C', 0 );
+						}
+						else {
+							$this->Cell( $this->endemicCellWidth, $this->commonRowHeight, 'eb', 0, 0, 'C', 0 );
 						}
 						$EndemicCellWritten = true;
 					}
@@ -399,18 +421,31 @@ class PDF extends TCPDF {
 	}	
 }
 
-$country     =  filter_var($_GET['country'],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
-$num_days    =  filter_var($_GET['num_days'],  FILTER_SANITIZE_NUMBER_INT);
-$start_date  =  filter_var($_GET['start_date'],  FILTER_SANITIZE_NUMBER_INT);
+// $country     =  filter_var($_GET['country'],  FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+// $num_days    =  filter_var($_GET['num_days'],  FILTER_SANITIZE_NUMBER_INT);
+// $start_date  =  filter_var($_GET['start_date'],  FILTER_SANITIZE_NUMBER_INT);
 
-$line_nos    =  filter_var($_GET['line_nos'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
-$left_check  =  filter_var($_GET['left_check'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
-$endemics    =  filter_var($_GET['endemics'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
-$sci_names   =  filter_var($_GET['sci_names'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+// $line_nos    =  filter_var($_GET['line_nos'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+// $left_check  =  filter_var($_GET['left_check'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+// $endemics    =  filter_var($_GET['endemics'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+// $sci_names   =  filter_var($_GET['sci_names'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 
-$italics     =  filter_var($_GET['italics'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+// $italics     =  filter_var($_GET['italics'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
 
-$pdf = new PDF( $num_days, $start_date, $endemics, $line_nos, $left_check, $sci_names, $italics, $country);
+$country = $_GET['country'] ?? '';
+$num_days = filter_input(INPUT_GET, 'num_days', FILTER_VALIDATE_INT);
+$start_date = filter_input(INPUT_GET, 'start_date', FILTER_VALIDATE_INT);
+
+$line_nos = $_GET['line_nos'] ?? '';
+$left_check = $_GET['left_check'] ?? '';
+$endemics = $_GET['endemics'] ?? '';
+$endemicBreeders = $_GET['endemics'] ?? '';
+
+$sci_names = $_GET['sci_names'] ?? '';
+$italics = $_GET['italics'] ?? '';
+
+
+$pdf = new PDF( $num_days, $start_date, $endemics, $endemicBreeders, $line_nos, $left_check, $sci_names, $italics, $country);
 
 $pdf->setFontSubsetting(false);
 
@@ -446,7 +481,9 @@ $pdf->AddPage();
 $pdf->MakeTable($birds);
 
 // must flush [error] output before creating the pdf
-ob_clean();
+// ob_clean();
+if (ob_get_length()) {
+    ob_end_clean();
+}
 
 $pdf->Output($country . '-SACC-Checklist.pdf', 'I');
-?>

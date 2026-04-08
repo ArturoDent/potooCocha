@@ -3,7 +3,7 @@
 var results = "";
   
 var json2html = {	"V": "va", "IN": "intr", "U": "u", "NB": "nb", "X(e)": "endemic",
-  "EX(e)": "extinct", "EX": "extinct", "X": ""  };
+  "X(eb)": "endemic-breeder", "EX(e)": "extinct", "EX": "extinct", "X": ""  };
 
 //  ------------------------------------------------------------------------------------------------------------  //
 
@@ -40,6 +40,7 @@ function searchExtinctOrEndemicSAM(families, special) {
           return birdOccurrenceArray.includes("EX") || birdOccurrenceArray.includes("EX(e)");
           // "extinct" : "EX" or "EX(e)"
         }
+        // TODO: does special include "X(eb)" ?
         else return birdOccurrenceArray.includes(special);  // endemic = "X(e)"
       });
       

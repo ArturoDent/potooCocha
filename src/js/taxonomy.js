@@ -208,9 +208,25 @@ function loadCountryTaxonomy(country) {
     getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
     searchResults.classList.add("samTax");
 
+    // <div id="searchSpecials">
+    //   <div class="searchSpecialWrapper" data-special="extinct"><span class="specialLabel" tabindex="0">extinct</a></span></div>
+    //   <div class="searchSpecialWrapper" data-special="endemic"><span class="specialLabel" tabindex="0">endemic</a></span></div>
+    
+    //   <div class="searchSpecialWrapper" data-special="endemic-breeder"  title="'Endemic breeders: a species whose breeding population is restricted to one country, but nonbreeding populations are part of the regular avifauna of other countries.'">
+    //     <span class="specialLabel" tabindex="0">endemic Breeder</span> 
+    //     <a  class="citationLink"  href="https://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm" target="_blank" rel="noopener noreferrer">*</a>
+    //   </div>
+
+    //   <div class="searchSpecialWrapper" data-special="unconfirmed"><span class="specialLabel" tabindex="0">unconfirmed</a></span></div>
+    //   <div class="searchSpecialWrapper" data-special="vagrant"><span class="specialLabel" tabindex="0">vagrant</a></span></div>
+    // </div>
+
     // so unconfirmeds and vagrants aren't selectable if South America is chosen
-    searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
-    searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
+    // searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
+    // searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
+    searchSpecials.querySelector('[data-special="unconfirmed"]').classList.add("notAvailable");
+    searchSpecials.querySelector('[data-special="vagrant"]').classList.add("notAvailable");
+
 
     // searchSpecials.classList.add("SAM");
     taxPage.classList.add("samTax");
@@ -221,14 +237,15 @@ function loadCountryTaxonomy(country) {
 
 //  -----------------------------------------------------------------------------------------------
 
-  if (country !== "South America") {  // TODO: might have to change if eb/u added
-    searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
-    searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
-    // searchSpecials.classList.remove("SAM");
+  if (country !== "South America") {
+    // searchSpecials.querySelector("div:nth-of-type(3)").classList.remove("notAvailable");
+    // searchSpecials.querySelector("div:nth-of-type(4)").classList.remove("notAvailable");
+    searchSpecials.querySelector('[data-special="unconfirmed"]').classList.remove("notAvailable");
+    searchSpecials.querySelector('[data-special="vagrant"]').classList.remove("notAvailable");
   }
 
   // TODO: endemic breeder|unconfirmed ?
-  var specials = /extinct|endemic|unconfirmed|vagrant/;
+  var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
 
   if (!lastQuery) {
     currentMap.querySelector(".saveMapButton").style.display = "none";
@@ -334,7 +351,7 @@ function buildTaxTree(thisCountryFamilies, country) {
   // TODO: "E(eb)": "eb", "U": "u"
   var json2html = {
     "V": "va", "IN": "intr", "U": "u", "NB": "nb", "X(e)": "endemic",
-	  "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
+	   "X(eb)": "endemic-breeder", "EX(e)": "endemic extinct", "EX": "extinct", "X": ""  };
 
   var results = `<ul id="tree">\n\n`;
 
@@ -402,7 +419,7 @@ function getCountryJSON(data) {
   if (lastQuery) {
     var results = {};
     // TODO: endemic breeder|unconfirmed
-    var specials = /extinct|endemic|unconfirmed|vagrant/;
+    var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
     if (specials.test(lastQuery)) results = specialSearch(families, lastQuery);
     // false will avoid modifyQuery()  sanitize, add accents, etc. - has already been done on the lastQuery
     else results = searchRegexTree(families, lastQuery, countries2Postals[currentCountry]), false;
@@ -722,7 +739,7 @@ function printSearchResults (evt) {
   html += '<h3>' + currentCountry + ' : &nbsp;\'' + normalizedQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
   html += content;
   //  TODO  : add SACC?
-  html+= 	"<br><br><br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;2&nbsp;March&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
+  html+= 	"<br><br><br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;26&nbsp;March&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
   html += '</body></html>';
 
   // var printWindow = window.open('_blank', 'Print', 'menubar=yes,scroll=yes,height=600,width=800');

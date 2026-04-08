@@ -13,6 +13,8 @@ var countries = {
 // ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4']
 
 var endemicColor = "#d73027";
+var endemicBreederColor = "#672c29";
+
 var extinctColor = "#000";
 var residentColor = "#fc8d59";
 
@@ -214,6 +216,12 @@ function highlightSAMmap(index, current) {
     case "X(e)":
 
       newFillColor(cc, endemicColor);
+      newStrokeColor(cc, baseStrokeColor);
+        break;
+      
+    case "X(eb)":
+
+      newFillColor(cc, endemicBreederColor);
       newStrokeColor(cc, baseStrokeColor);
       break;
 
