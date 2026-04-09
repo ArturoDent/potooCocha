@@ -10,14 +10,14 @@
   transition: transform 500ms;
 }
 
-#mapsHeader {
+/* #mapsHeader {
   position: absolute;
   height: 3.2rem;
   width: 100%;
   border-top: 0.077rem solid var(--title-banner-color);
   border-bottom: 0.077rem solid var(--title-banner-color);
   background-color: var(--map-collection-color-dark-20);
-}
+} */
 
 #mapsCollection.namesOnlySeen {
   transform: translateY(-3.2rem);
@@ -40,7 +40,6 @@
   height: 22.2222222222vw;
   width: auto;
   position: relative;
-  top: 17px;
 }
 
 .smallBird .drawing {
@@ -57,7 +56,7 @@
   line-height: 1rem;
 }
 
-#deleteAllMapsButton {
+/* #deleteAllMapsButton {
   position: absolute;
   left: 0;
   top: 290%;
@@ -93,7 +92,7 @@
 
 #deleteAllMapsButton:focus-within {
   outline: none;
-}
+} */
 
 .birdName {
   position: absolute;
@@ -198,9 +197,9 @@
 .colorKey {
   opacity: 0;
   position: absolute;
-  top: 59%;
+  top: 53%;
   left: 71%;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 }
 
 .colorKey ul {
@@ -209,89 +208,80 @@
 
 .colorKey ul li {
   position: relative;
-  margin-top: 0.8ch;
+  margin-top: 0.6ch;
   padding: 0.077rem 0.5rem 0.15rem 1.5rem;
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
+  font-size: 0.8rem;
   text-align: right;
   letter-spacing: 0.13em;
-  text-shadow: rgba(0, 0, 0, 0.5) 0.077rem 0.077rem 0.077rem;
+  text-shadow: rgba(0, 0, 0, 0.7) 0.077rem 0.077rem 0.077rem;
   list-style-type: none;
-  background: linear-gradient(to right, var(--bg-color-dark-2) 0%, var(--bg-color-dark-10) 100%);
+  /* background: linear-gradient(to right, var(--bg-color-dark-2) 0%, var(--bg-color-dark-10) 100%); */
+  background: var(--bg-color-dark-15);
 }
 
-.colorKey ul li::after { /* extinct       */
+/* .colorKey ul li::after {
   content: "";
   position: absolute;
   top: 0;
   left: -1%;
   border-width: 0.75em;
   border-style: solid;
-}
+} */
 
 .colorKey ul li:nth-child(1) { /* extinct       */
   margin-bottom: 0;
-  border-left: 1.2rem solid #000;
-}
-
-.colorKey ul li:nth-child(1)::after { /* extinct       */
-  border-color: transparent transparent transparent #000;
+  border-left: 1.5rem solid #000;
 }
 
 .colorKey ul li:nth-child(2) { /* vagrant       */
-  border-left: 1.2rem solid #54ca30;
-}
-
-.colorKey ul li:nth-child(2)::after { /* vagrant       */
-  border-color: transparent transparent transparent #54ca30;
+  border-left: 1.5rem solid #0f0;
 }
 
 .colorKey ul li:nth-child(3) { /* endemic       */
-  border-left: 1.2rem solid #d73027;
-}
-
-.colorKey ul li:nth-child(3)::after { /* extinct       */
-  border-color: transparent transparent transparent #d73027;
+  border-left: 1.5rem solid #f00;
 }
 
 .colorKey ul li:nth-child(4) { /* resident      */
-  border-left: 1.2rem solid #fc8d59;
-}
-
-.colorKey ul li:nth-child(4)::after { /* endemic       */
-  border-color: transparent transparent transparent #fc8d59;
+  border-left: 1.5rem solid #fd712f;
 }
 
 .colorKey ul li:nth-child(5) { /* introduced  */
-  border-left: 1.2rem solid #fee090;
-}
-
-.colorKey ul li:nth-child(5)::after { /* introduced       */
-  border-color: transparent transparent transparent #fee090;
+  border-left: 1.5rem solid #fee090;
 }
 
 .colorKey ul li:nth-child(6) { /* nonbreeder    */
   position: relative;
-  border-left: 1.2rem solid #579ac4;
-}
-
-.colorKey ul li:nth-child(6)::after { /* nonbreeder       */
-  border-color: transparent transparent transparent #579ac4;
+  border-left: 1.5rem solid #00f;
 }
 
 .colorKey ul li:nth-child(7) { /* unconfirmed  */
   margin-top: 0.4rem;
-  border-left: 1.2rem solid #f3f3f3;
+  /* border-left: 1.2rem solid #f3f3f3; */
+  border-left: 1.5rem solid #f3f3f3;
 }
 
-.colorKey ul li:nth-child(7)::after { /* unconfirmed       */
-  border-color: transparent transparent transparent #f3f3f3;
-}
 
 .colorKey ul li:nth-child(8) { /* endemic breeder  */
   margin-top: 0.4rem;
-  border-left: 1.2rem solid #672c29;
+  /* border-left: 1.5rem solid #672c29; */
+  border-left: none;
 }
 
-.colorKey ul li:nth-child(8)::after { /* endemic breeder       */
-  border-color: transparent transparent transparent #672c29;
+.colorKey ul li:nth-child(8)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #f00 0 4px,
+      #f00 4px 8px,
+      #d9b3ad 8px 10px
+    );
 }
+
+

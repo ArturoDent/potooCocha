@@ -73,16 +73,16 @@ class PDF extends TCPDF {
 
 	function __construct($Dv, $Sd, $Ev,  $Eb, $Lv, $LCv, $Sv, $Si, $where) {
 
-		$this->numDays     =  $Dv;
-		$this->startDate   =  $Sd;
-		$this->endemics    =  ($Ev  === 'true')  ? true : false;
+		$this->numDays            =  $Dv;
+		$this->startDate          =  $Sd;
+		$this->endemics           =  ($Ev  === 'true')  ? true : false;
 		$this->endemicBreeders    =  ($Eb  === 'true')  ? true : false;
 
-		$this->lineNos     =  ($Lv  === 'true')  ? true : false;
-		$this->leftChecks  =  ($LCv === 'true')  ? true : false;
-		$this->sciNames    =  ($Sv  === 'true')  ? true : false;
-		$this->italics     =  ($Si  === 'true')  ? true : false;
-		$this->country     =  $where;
+		$this->lineNos            =  ($Lv  === 'true')  ? true : false;
+		$this->leftChecks         =  ($LCv === 'true')  ? true : false;
+		$this->sciNames           =  ($Sv  === 'true')  ? true : false;
+		$this->italics            =  ($Si  === 'true')  ? true : false;
+		$this->country            =  $where;
 
 		$this->daysInMonth   =  array(31,28,31,30,31,30,31,31,30,31,30,31);  // 2028 is a leap year
 
@@ -287,7 +287,7 @@ class PDF extends TCPDF {
 				$EndemicCellWritten = false;
 
         // TODO: add 'eb' for endemic breeders ?
-    		if ($this->endemics || $this->lineNos || $this->leftChecks)  {
+    		if ($this->endemics || $this->endemicBreeders || $this->lineNos || $this->leftChecks)  {
 
 					if ($this->endemics && $AddEndemic) {
 
@@ -439,7 +439,7 @@ $start_date = filter_input(INPUT_GET, 'start_date', FILTER_VALIDATE_INT);
 $line_nos = $_GET['line_nos'] ?? '';
 $left_check = $_GET['left_check'] ?? '';
 $endemics = $_GET['endemics'] ?? '';
-$endemicBreeders = $_GET['endemics'] ?? '';
+$endemicBreeders = $_GET['endemicBreeders'] ?? '';
 
 $sci_names = $_GET['sci_names'] ?? '';
 $italics = $_GET['italics'] ?? '';

@@ -173,7 +173,7 @@ function toggleSampleTableShowEndemicBreeders(evt) {
       evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
     }
   }
-  sampleTable.querySelector("td.endemical").classList.toggle("showEndemicBreeders");
+  sampleTable.querySelector("td.endemicalBreeder").classList.toggle("showEndemicBreeders");
 }
 
 function toggleSampleTableSciNames(evt) {

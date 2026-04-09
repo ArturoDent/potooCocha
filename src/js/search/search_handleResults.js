@@ -7,11 +7,14 @@ function resetSearchResultsHeight() {
 
   if (searchResults.scrollHeight >= 300) {
     searchResultsScroller.style.height = "25rem";
+     searchResultsScroller.style.overflowY = "auto";
   }
   else {
     // 25px added due to Chrome-only bug,
     //   it makes the searchResults height too short, even two species do not fit w/o scrolling
-    searchResultsScroller.style.height = searchResults.scrollHeight + 25 + "px";
+    // searchResultsScroller.style.height = searchResults.scrollHeight + 25 + "px";
+    searchResultsScroller.style.height = searchResults.scrollHeight + 2 + "px";
+     searchResultsScroller.style.overflowY = "hidden";
   }
 
   searchResultsScroller.scrollTop = 0;
@@ -45,7 +48,8 @@ function loadSearchResults(results) {
 
   if (!results.numSpecies) {
 
-    searchResults.innerHTML = "<li></li><br/><br/><li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no matches found</li><li></li>";
+    // searchResults.innerHTML = "<li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no matches found</li></br>";
+    searchResults.innerHTML = "<li> &nbsp; &nbsp; no matches found</li><li></li><li></li>";
 
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();

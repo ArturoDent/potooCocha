@@ -449,13 +449,6 @@ function gotoMatch(e) {
   if (clicked) var clickedClass = clicked.className;
   else return;  // clicked was null so clicked on scrollBar or outside the searchResults
 
-  // var clickedcontent = clicked.textContent.replace(/^\s+|\s+$/g, "");
-
-  // if (clickedcontent === "no matches found") return;
-  // else if (clickedcontent === "character not allowed") return;
-  // // else if (clickedcontent === "search results will appear here") return;
-  // else if (clickedcontent === "") return;  // necessary?
-
   if (clicked.className !== 'family' && clicked.className !== 'bird') return;
 
   // eText = "Horned ScreamerAnhima cornuta"
@@ -483,11 +476,7 @@ function gotoMatch(e) {
   }
 
   const birdNode = taxNodeByKey.get(`bird:${clicked.dataset.i}`);
-  // const familyNode = taxNodeByKey.get(`family:${familyLi.children[1].innerText}`);
   const familyNode = taxNodeByKey.get(`family:${familyLi.dataset.family}`);
-
-  // const taxNode = document.querySelector(`#tree li[data-i="${CSS.escape(clicked.dataset.i)}"]`);
-  // const taxFamilyNode = taxNode.parentNode.parentNode;
 
   var elem;
 
@@ -520,14 +509,16 @@ function gotoMatch(e) {
       behavior: "smooth"
     });
 
-    birdNode.className = "active";
+    birdNode.classList.add("active");
 
     lastSpecies = birdNode;
     lastIndex = Number(clicked.dataset.i);
 
-    if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
-
-    lastResultsSpecies = birdNode;
+    if (lastResultsSpecies && lastResultsSpecies !== clicked) {
+      lastResultsSpecies.classList.remove("active");
+    }
+    clicked.classList.add("active");
+    lastResultsSpecies = clicked;  // not birdNode which is a taxTree node, clicked is in the resultsPanel
     addBirdNameToMap(clicked);
 
     highlightSAMmap(lastIndex, "currentMap");
@@ -557,8 +548,8 @@ function gotoMatch(e) {
       behavior: "smooth"
     });
    
-    lastSpecies = familyNode.firstChild;
-    lastSpecies.classList.add("active");    
+    lastSpecies = familyNode.firstChild;  // remove active from lastSpecies before this
+    lastSpecies.classList.add("active");  
   }
 }
 
@@ -579,7 +570,6 @@ function addBirdNameToMap(name) {
 
 function toggleFamilyOpen(event) {
 
-  // if (event.target.className.indexOf("simplebar") !== -1) return;
   if (event.target.id === "taxPage") return;
 
   // taxPage is not open yet
@@ -652,7 +642,7 @@ function toggleFamilyOpen(event) {
     //    <ul class="birds open">
     //      <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
 
-    speciesTarget.className = "active";
+    speciesTarget.classList.add("active");
 
     if (speciesTarget !== lastSpecies) {
 
@@ -662,7 +652,7 @@ function toggleFamilyOpen(event) {
     }
 
     lastSpecies = speciesTarget;
-    if (lastResultsSpecies) lastResultsSpecies.classList.toggle("active");
+    if (lastResultsSpecies) lastResultsSpecies.classList.remove("active");
     lastResultsSpecies = null;
 
     addBirdNameToMap(speciesTarget);
@@ -671,6 +661,12 @@ function toggleFamilyOpen(event) {
     highlightSAMmap(lastIndex, "currentMap");
 
     document.querySelector("#treeIntroText").innerHTML = currentCountry + "   &nbsp; : &nbsp; " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
+
+    if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
+      saveMapButton.style.display = "none";
+    }
+    else 
+      saveMapButton.style.display = "block";
   }
 
   taxPage.style.zIndex = 5;

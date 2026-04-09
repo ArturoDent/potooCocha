@@ -67,51 +67,21 @@
   transition: all 500ms 1300ms;
 }
 
-/* .searchSpecialWrapper {
-  position: relative;
-  width: fit-content;
-  padding: 0.5ch 0;
-  text-align: center;
-  transition: all 1000ms;
-}
-
-.searchSpecialWrapper a {
-  display: inline-block;
-  width: 14ch;
-  padding: 0.1ch 0 0.5ch 0;
-}
-
-.searchSpecialWrapper a {
-  border: 0.077rem solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.15rem;
-  background-color: var(--generic-button-color);
-  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: all 350ms;
-}
-
-.searchSpecialWrapper:hover a, .searchSpecialWrapper a:focus {
-  outline: none;
-  border: 0.077rem solid #666;
-  background-color: #222;
-  box-shadow: 0 0 0.15rem rgb(0, 0, 0);
-} */
-
 .searchSpecialWrapper {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
-  /* width: 14ch; */
+  /* gap: 0.25rem; */
   width: 20ch;
 
   padding: 0.1ch 0 0.5ch 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 7px 0;
   text-align: center;
   border: 0.077rem solid rgba(255, 255, 255, 0.2);
   border-radius: 0.15rem;
-  background-color: var(--generic-button-color);
+  /* background-color: var(--generic-button-color); */
+  background-color: black;
   box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 350ms;
@@ -171,7 +141,7 @@
   height: 100%;
   width: calc(100% - 7vw);
   left: 7vw;
-  padding: 0 0 1ch 0;
+  padding: 0 0 1.5ch 0;
   overflow-x: visible;
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
@@ -267,7 +237,8 @@
   position: relative;
   padding: 1ch 0 0 0;
   height: 4ch;
-  margin: -0.77rem 0 1ch 0;
+  /* margin: -0.77rem 0 1ch 0; */
+  margin: -0.77rem 0 0 0;
   left: 2ch;
   width: calc(100% - 4ch);
   font-variant: small-caps;
