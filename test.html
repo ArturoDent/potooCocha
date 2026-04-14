@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bird Map Debugger</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .link-box { margin-top: 20px; padding: 15px; border: 1px solid #ccc; display: inline-block; }
+        a { font-weight: bold; color: blue; text-decoration: underline; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Bird Family Link Tester</h1>
+    <p>Chrome is very picky. A real HTML link is more reliable than window.open().</p>
+    
+    <div class="link-box">
+        <a id="dynamicLink" href="#" target="_blank">Click here to open RHEIDAE</a>
+    </div>
+
+    <script>
+        const familyMap = new Map([
+            ["RHEIDAE", {
+                text: "RHEIDAE (RHEAS)",
+                url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline.htm"
+            }]
+        ]);
+
+        const linkElement = document.getElementById('dynamicLink');
+        const familyKey = "RHEIDAE";
+        const data = familyMap.get(familyKey);
+
+        if (data) {
+            // Encode the text fragment
+            const fragment = encodeURIComponent(data.text);
+            const fullUrl = `${data.url}#:~:text=${fragment}`;
+            
+            // Set the href of the ACTUAL link
+            linkElement.href = fullUrl;
+            linkElement.textContent = `Open ${data.text} in a new tab`;
+        }
+    </script>
+</body>
+</html>

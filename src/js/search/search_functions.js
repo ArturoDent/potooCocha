@@ -49,7 +49,7 @@ function searchExtinctOrEndemicSAM(families, special) {
           results += buildFamily({ FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon });
           familyAdded = true;
         }
-        results += buildBird({ index: bird.index, special: json2html[bird["SAM"]], name: bird.name, genus: genus.Genus, spp: bird.species });
+        results += buildBird({ family: family.Family, index: bird.index, special: json2html[bird["SAM"]], name: bird.name, genus: genus.Genus, spp: bird.species });
         numSpecies++;
       });
     }
@@ -100,20 +100,15 @@ function buildFamily(f) {
   return elem;
 }
 
-// var addBird = buildBird({ index: bird.index, special: special, name: bird.name, genus: genus, spp: bird.species });
+// var addBird = buildBird({ family: family.Family, index: bird.index, special: special, name: bird.name, genus: genus, spp: bird.species });
 function buildBird(b) {
   
-  // var elem = "<li data-i=\"" + b.index + "\" class=\"bird\">";
-  var elem = `<li data-i="${b.index}" class="bird">`;
+  var elem = `<li data-i="${b.index}" data-family="${b.family}" class="bird">`;
   
-  // if (b.special) elem += "<span class=\"" + b.special + "\">";
   if (b.special) elem += `<span class="${b.special}">`;
-  // else elem += "<span>";
   else elem += `<span>`;
   
-  // elem += b.name + "</span>";
   elem += `${b.name}</span>`;
-  // elem += "<span>" + b.genus + " " + b.spp + "</span></li>";
   elem += `<span>${b.genus} ${b.spp}</span></li>`;
   return elem;
 }
@@ -150,7 +145,7 @@ function searchAllQuery(families, query, country) {
             familyAdded = true;
             numFamilies.push(family.Family);
           }
-          results += buildBird({ index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
+          results += buildBird({ family: family.Family, index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
           numSpecies++;
         }
       });
@@ -208,7 +203,7 @@ function searchCountrySpecials(families, special, country) {
         }
       
         birdsWithSpecial.forEach(function(bird) {
-          results += buildBird({ index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
+          results += buildBird({ family: family.Family, index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
           numSpecies++;
         });
       }
@@ -240,7 +235,7 @@ function getAllSpeciesFromOneFamily($results, thisFamily, country) {
     
       genus.spp.forEach(function (bird) {
       
-        $results += buildBird({ index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
+        $results += buildBird({ family: family.Family, index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
         numSpecies++;
       });
     });

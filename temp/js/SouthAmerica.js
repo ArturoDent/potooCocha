@@ -12,16 +12,17 @@ var countries = {
 
 // ['#d73027','#fc8d59','#fee090','#ffffbf','#e0f3f8','#91bfdb','#4575b4']
 
-var endemicColor = "#d73027";
-var endemicBreederColor = "#672c29";
+// var endemicColor = "#d73027";
+var endemicColor = "#f00";
+var endemicBreederColor = "url(#pattern-endemic-breeder)";
 
 var extinctColor = "#000";
-var residentColor = "#fc8d59";
+var residentColor = "#fd712f";
 
 // var nonBreederColor = "url(#pattern-horizStripes)";
-var nonBreederColor = "#579ac4";
+var nonBreederColor = "#00f";
 
-var vagrantColor = "#54ca30";
+var vagrantColor = "#0f0";
 var unconfirmedColor = "#ddd";
 var introducedColor = "#fee090";
 

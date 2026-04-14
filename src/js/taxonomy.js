@@ -39,10 +39,10 @@ var searchInstructionsOpen = true;
 let taxNodeByKey = new Map();
 
 
-/* global   currentMap  currentCountry  */
+/* global   currentMap  currentCountry   */
 
 // document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("load", function () {
+window.addEventListener("load", function () {
 
   // searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
   // searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";
@@ -76,6 +76,15 @@ let taxNodeByKey = new Map();
   resultsPanel = document.getElementById("results-panel");
 
   searchResults.addEventListener("click", gotoMatch, false);
+  searchResults.addEventListener("dblclick", gotoSACCLink, false);
+  searchResults.addEventListener("auxclick", gotoSACCLink, false);
+  // searchResults.addEventListener("keyup", gotoSACCLink, false);
+  searchResults.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        gotoSACCLink(e);
+    }
+  }, false);
+
   taxPage.addEventListener("click", toggleFamilyOpen);
   taxPanel = document.getElementById("tax-panel");
 
@@ -431,10 +440,50 @@ function getCountryJSON(data) {
   buildTaxTree(families, countries2Postals[currentCountry]);
 }
 
+/* global   currentMap  currentCountry  familyMap */
+
+function gotoSACCLink(e) {
+
+  let familyItem = e.target.dataset.family;
+  // 1. Identify what was clicked (the 'bird' container or 'family' container)
+  const birdItem = e.target.closest('.bird');
+  // if (birdItem) familyItem = e.target.closest('.family');
+  // if (birdItem) familyItem = e.target.dataset.family;
+  // else familyItem = 
+
+  e.preventDefault();
+  e.stopImmediatePropagation();
+
+  // clicked between common and scientific family name, or after scientific or before common
+  if (e.target.className === "family") navigateToFamily(e.target.lastChild.innerText);
+
+  // clicked on common family name
+  else if (e.target.className === 'fco') navigateToFamily(e.target.parentNode.lastChild.innerText);
+
+  // clicked on scientific family name
+  else if (e.target.className === 'fsc') navigateToFamily(e.target.innerText);
+
+  else if (e.target.parentNode.classList.contains('bird')) navigateToFamily(e.target.parentNode.dataset.family, e.target.parentNode.innerText);
+
+  else if (e.target.classList.contains('bird')) navigateToFamily(e.target.dataset.family, e.target.innerText);
+}
+
 // <ul id="searchResults"></ul>
 function gotoMatch(e) {
 
   // e.target === 'Mergus octosetaceus' or 'Brazilian Merganser'
+
+  if (e.ctrlKey || e.metaKey) {
+    // Find the specific item (bird or family) that was clicked
+    // const item = e.target.closest('.bird-item-class, .family-header-class'); // Replace with your actual classes
+    // if (!item) return;
+
+    // 2. Prevent the "normal" click behavior
+    // e.preventDefault();
+    // e.stopImmediatePropagation();
+    gotoSACCLink(e);
+    return;
+  }
 
   if (lastSpecies && lastSpecies.classList.contains("active")) {
     lastSpecies.classList.remove("active");

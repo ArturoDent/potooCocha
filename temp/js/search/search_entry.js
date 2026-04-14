@@ -21,7 +21,7 @@ function getQuery() {
   var badIndex = searchInput.value.search(/[^"a-zñãúáóíç'\s-]/i);
 
   if (badIndex !== -1) {
-    searchResults.innerHTML = "<li></li><br/><br/><li> &nbsp; &nbsp; &nbsp; &nbsp; character not allowed </li><li></li>";
+    searchResults.innerHTML = "<li> &nbsp; &nbsp; character not allowed</li><li></li><li></li>";
     resetSearchResultsHeight();
     if (!resultsPanelOpen) toggleSearchResultsPanel();
     return;

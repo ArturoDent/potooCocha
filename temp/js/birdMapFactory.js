@@ -57,12 +57,19 @@ function deleteMap(evt)  {
   //   deleteAllMaps(evt);
   // }
   // else {
-    var birdInstance = this.parentNode;
-    // TODO: remove eventListeners?
-    birdInstance.parentNode.removeChild(this.parentNode);
-    map.querySelector(".saveMapButton").style.display = "block";
+  var birdInstance = this.parentNode;
+  // TODO: remove eventListeners?
+  birdInstance.parentNode.removeChild(this.parentNode);
+  map.querySelector(".saveMapButton").style.display = "block";
 
-    repositionChildMaps(len-1);
+  repositionChildMaps(len - 1);
+
+  // TODO: make this into a function since it is done 3 times at least
+  if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
+    saveMapButton.style.display = "none";
+  }
+  else 
+    saveMapButton.style.display = "block";
   // }
 }
 
@@ -75,7 +82,7 @@ function saveCurrentMap()  {
   // thisInstance.children[0].children[0].innerText = "Horned Screamer"
   // thisInstance.children[0].children[2].innerText = "Anhima cornuta"
 
-  if (alreadyInMapsCollection()) return;
+  if (alreadyInMapsCollection()) return; // TODO: should be unneccesary here, the button would not appear anyhow
 
   // clone node, remove ids so not duplicate
   // reattach eventListeners

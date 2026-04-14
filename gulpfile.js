@@ -116,6 +116,9 @@ function movePrintCSStoTemp() {
 }
 
 const scriptOrder = [
+
+  "./temp/js/familyMap.js",
+
   "./temp/js/main.js",
   "./temp/js/SouthAmerica.js",
   "./temp/js/numList.js",
