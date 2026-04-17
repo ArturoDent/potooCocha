@@ -32,7 +32,8 @@ var requested;
 // eslint-disable-next-line no-unused-vars
 var activityData = [];
 
-var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
+var countries2Postals = {
+  "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
   "Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
   "Guyana": "GY", "Paraguay": "PY", "Peru": "PE", "Suriname": "SU", "Trinidad": "TT",
   "Uruguay": "UY", "Venezuela": "VE", "Bonaire": "BQ", "Falklands": "FK",
@@ -42,69 +43,69 @@ var countries2Postals = {   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "
 /* global  loadCountryTaxonomy selectedCountryFill fillSAMmap  initCurrentMap */
 
 // document.addEventListener("DOMContentLoaded", function () {  // this doesn't wait for images, iFrames, etc. to be loaded
-window.addEventListener("load", function () {
+window.addEventListener( "load", function () {
 
-  countryButton = document.getElementById("countryButton");
-  countryButton.addEventListener("click", toggleCountryMenuLayer);
+  countryButton = document.getElementById( "countryButton" );
+  countryButton?.addEventListener( "click", toggleCountryMenuLayer );
 
   // countryButton.addEventListener('click', e => { e.data })
 
   // titleBanner = document.getElementById("titleBanner");
 
-  numDaysButton = document.getElementById("numDays");
-  numDaysButton.addEventListener("click", setNumDays);
+  numDaysButton = document.getElementById( "numDays" );
+  numDaysButton?.addEventListener( "click", setNumDays );
   // onKeyUp listener for tabbing and entering
-  numDaysButton.addEventListener('keyup', setNumDays);
+  numDaysButton?.addEventListener( 'keyup', setNumDays );
 
-  numDaysButton.children.item(9).classList.add("highlight");
+  numDaysButton?.children.item( 9 ).classList.add( "highlight" );
   gNumDays = 8;
 
-  sampleTable = document.getElementById("sampleTable");
-  sampleTable.classList.add("numDays" + String(gNumDays));
+  sampleTable = document.getElementById( "sampleTable" );
+  sampleTable?.classList.add( "numDays" + String( gNumDays ) );
 
   previousNumDaysClass = "numDays8";
 
-  pdfButton = document.getElementById("pdfButton");
-  pdfButton.addEventListener("click", openChecklistPage);
+  pdfButton = document.getElementById( "pdfButton" );
+  pdfButton?.addEventListener( "click", openChecklistPage );
 
-  csvButton = document.getElementById("csvButton");
-  csvButton.addEventListener("click", getCSVText);
+  csvButton = document.getElementById( "csvButton" );
+  csvButton?.addEventListener( "click", getCSVText );
 
-  lineNumbers = document.getElementById("lineNumbers");
-  leftCheck = document.getElementById("leftCheck");
-  showEndemics = document.getElementById("showEndemics");
-  showEndemicBreeders = document.getElementById("showEndemicBreeders");
+  lineNumbers = document.getElementById( "lineNumbers" );
+  leftCheck = document.getElementById( "leftCheck" );
+  showEndemics = document.getElementById( "showEndemics" );
+  showEndemicBreeders = document.getElementById( "showEndemicBreeders" );
 
-  sciNames = document.getElementById("sciNames");
-  italics = document.getElementById("italics");
+  sciNames = document.getElementById( "sciNames" );
+  italics = document.getElementById( "italics" );
 
-  lineNumbers.addEventListener("click", toggleSampleTableLineNumbers);
-  leftCheck.addEventListener("click", toggleSampleTableLeftChecks);
-  showEndemics.addEventListener("click", toggleSampleTableShowEndemics);
-  showEndemicBreeders.addEventListener("click", toggleSampleTableShowEndemicBreeders);
+  lineNumbers?.addEventListener( "click", toggleSampleTableLineNumbers );
+  leftCheck?.addEventListener( "click", toggleSampleTableLeftChecks );
+  showEndemics?.addEventListener( "click", toggleSampleTableShowEndemics );
+  showEndemicBreeders?.addEventListener( "click", toggleSampleTableShowEndemicBreeders );
 
-  sciNames.addEventListener("click", toggleSampleTableSciNames);
-  italics.addEventListener("click", toggleSampleTableItalics);
+  sciNames?.addEventListener( "click", toggleSampleTableSciNames );
+  italics?.addEventListener( "click", toggleSampleTableItalics );
 
-  lineNumbers.nextElementSibling.addEventListener("keyup", toggleSampleTableLineNumbers);
-  leftCheck.nextElementSibling.addEventListener("keyup", toggleSampleTableLeftChecks);
-  showEndemics.nextElementSibling.addEventListener("keyup", toggleSampleTableShowEndemics);
-  showEndemicBreeders.nextElementSibling.addEventListener("keyup", toggleSampleTableShowEndemicBreeders);
+  lineNumbers?.nextElementSibling?.addEventListener( "keyup", toggleSampleTableLineNumbers );
+  leftCheck?.nextElementSibling?.addEventListener( "keyup", toggleSampleTableLeftChecks );
+  showEndemics?.nextElementSibling?.addEventListener( "keyup", toggleSampleTableShowEndemics );
+  showEndemicBreeders?.nextElementSibling?.addEventListener( "keyup", toggleSampleTableShowEndemicBreeders );
 
-  sciNames.nextElementSibling.addEventListener("keyup", toggleSampleTableSciNames);
-  italics.nextElementSibling.addEventListener("keyup", toggleSampleTableItalics);
+  sciNames?.nextElementSibling?.addEventListener( "keyup", toggleSampleTableSciNames );
+  italics?.nextElementSibling?.addEventListener( "keyup", toggleSampleTableItalics );
 
-  checklistAuthorsPanel = document.getElementById("checklistAuthorsPanel");
-  checklistFlyoutText = document.getElementById("checklistFlyoutText");
+  checklistAuthorsPanel = document.getElementById( "checklistAuthorsPanel" );
+  checklistFlyoutText = document.getElementById( "checklistFlyoutText" );
 
-  document.querySelector("#country-menu").addEventListener("click", setCountry);
-  document.querySelector("#country-menu").addEventListener("keyup", setCountry);
+  document.querySelector( "#country-menu" )?.addEventListener( "click", setCountry );
+  document.querySelector( "#country-menu" )?.addEventListener( "keyup", setCountry );
 
-  leftCheck.checked = true;
+  leftCheck?.checked = true;
 
-  countryMenuLayer = document.getElementById("countryMenuLayer");
+  countryMenuLayer = document.getElementById( "countryMenuLayer" );
 
-  getJSON("../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data);
+  getJSON( "../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data );
 
   // updateActivityData("start");
 
@@ -112,7 +113,7 @@ window.addEventListener("load", function () {
 
   // mailLink = document.getElementById("mailLink");
   // mailLink.addEventListener("click", sendEmail);
-});
+} );
 
 // window.addEventListener("load", function () {
 //   updateActivityData("start");
@@ -127,60 +128,60 @@ window.addEventListener("load", function () {
 //   window.location.href = "mailto:mark@potoococha.net";
 // }
 
-function toggleCountryMenuLayer(evt) {
+function toggleCountryMenuLayer ( evt ) {
 
-  countryMenuLayer.classList.toggle("show");
-  countryButton.classList.toggle("slideRight");
+  countryMenuLayer.classList.toggle( "show" );
+  countryButton.classList.toggle( "slideRight" );
 
-  if (evt) evt.stopPropagation();
+  if ( evt ) evt.stopPropagation();
 
-  var list = document.querySelectorAll(".countryItem");
+  var list = document.querySelectorAll( ".countryItem" );
 
-  if (countryMenuLayer.classList.contains("show")) {  // country menu shown, should disable all elements on main page
-    list.forEach(function(element) {
-      element.setAttribute("tabindex", "1");
-    });
+  if ( countryMenuLayer.classList.contains( "show" ) ) {  // country menu shown, should disable all elements on main page
+    list.forEach( function ( element ) {
+      element.setAttribute( "tabindex", "1" );
+    } );
   }
   else {
-    list.forEach(function(element) {
-      element.setAttribute("tabindex", "-1");
-    });
+    list.forEach( function ( element ) {
+      element.setAttribute( "tabindex", "-1" );
+    } );
   }
 }
 
-function toggleSampleTableShowEndemics(evt) {
+function toggleSampleTableShowEndemics ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup") {
-    if (evt.keyCode !== 13) {
+  if ( evt.type === "keyup" ) {
+    if ( evt.keyCode !== 13 ) {
       return;
     }
     else {
       evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
     }
   }
-  sampleTable.querySelector("td.endemical").classList.toggle("showEndemics");
+  sampleTable.querySelector( "td.endemical" ).classList.toggle( "showEndemics" );
 }
 
-function toggleSampleTableShowEndemicBreeders(evt) {
+function toggleSampleTableShowEndemicBreeders ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup") {
-    if (evt.keyCode !== 13) {
+  if ( evt.type === "keyup" ) {
+    if ( evt.keyCode !== 13 ) {
       return;
     }
     else {
       evt.target.previousElementSibling.checked = !evt.target.previousElementSibling.checked;
     }
   }
-  sampleTable.querySelector("td.endemicalBreeder").classList.toggle("showEndemicBreeders");
+  sampleTable.querySelector( "td.endemicalBreeder" ).classList.toggle( "showEndemicBreeders" );
 }
 
-function toggleSampleTableSciNames(evt) {
+function toggleSampleTableSciNames ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup") {
-    if (evt.keyCode !== 13) {
+  if ( evt.type === "keyup" ) {
+    if ( evt.keyCode !== 13 ) {
       return;
     }
     else {
@@ -188,15 +189,15 @@ function toggleSampleTableSciNames(evt) {
     }
   }
 
-  sampleTable.classList.toggle("noScientificNames");
+  sampleTable.classList.toggle( "noScientificNames" );
   italics.disabled = !italics.disabled;
 }
 
-function toggleSampleTableItalics(evt) {
+function toggleSampleTableItalics ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup") {
-    if (evt.keyCode !== 13) {
+  if ( evt.type === "keyup" ) {
+    if ( evt.keyCode !== 13 ) {
       return;
     }
     else {
@@ -204,14 +205,14 @@ function toggleSampleTableItalics(evt) {
     }
   }
 
-  sampleTable.classList.toggle("noItalics");
+  sampleTable.classList.toggle( "noItalics" );
 }
 
-function toggleSampleTableLeftChecks(evt) {
+function toggleSampleTableLeftChecks ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup") {
-    if (evt.keyCode !== 13) {
+  if ( evt.type === "keyup" ) {
+    if ( evt.keyCode !== 13 ) {
       return;
     }
     else {
@@ -219,18 +220,18 @@ function toggleSampleTableLeftChecks(evt) {
     }
   }
 
-  var list = sampleTable.querySelectorAll(".leftCheckBox, .familyHidden");
+  var list = sampleTable.querySelectorAll( ".leftCheckBox, .familyHidden" );
 
-  Array.prototype.forEach.call(list, function (item) {
-    item.classList.toggle("show");
-  });
+  Array.prototype.forEach.call( list, function ( item ) {
+    item.classList.toggle( "show" );
+  } );
 }
 
-function toggleSampleTableLineNumbers(evt) {
+function toggleSampleTableLineNumbers ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup") {
-    if (evt.keyCode !== 13) {
+  if ( evt.type === "keyup" ) {
+    if ( evt.keyCode !== 13 ) {
       return;
     }
     else {
@@ -238,120 +239,139 @@ function toggleSampleTableLineNumbers(evt) {
     }
   }
 
-  sampleTable.querySelector("td.lineNumbers").classList.toggle("showLineNumbers");
+  sampleTable.querySelector( "td.lineNumbers" ).classList.toggle( "showLineNumbers" );
 }
 
-function setCountry(evt) {
+function setCountry ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup" && evt.keyCode !== 13) {
+  if ( evt.type === "keyup" && evt.keyCode !== 13 ) {
     return;
   }
 
-  if (!currentCountry) document.getElementById("tax-panel").classList.add("setTaxPanelHeight");
+  if ( !currentCountry ) document.getElementById( "tax-panel" )?.classList.add( "setTaxPanelHeight" );
 
-  if (previousHighlightedCountryNode) previousHighlightedCountryNode.classList.remove("highlight");
-  evt.target.classList.add("highlight");
+  if ( previousHighlightedCountryNode ) previousHighlightedCountryNode.classList.remove( "highlight" );
+  evt.target.classList.add( "highlight" );
   previousHighlightedCountryNode = evt.target;
 
   toggleCountryMenuLayer();
 
   currentCountry = evt.target.innerText;
-  updateActivityData("select");  // TODO could this be delayed?
+  updateActivityData( "select" );  // TODO could this be delayed?
 
   // uploadActivity(); 
 
   // console.log(currentCountry);
 
-  if (currentCountry === "South America") countryButton.innerHTML = "SA";
-  else countryButton.innerHTML = countries2Postals[currentCountry];
+  if ( currentCountry === "South America" ) countryButton.innerHTML = "SA";
+  else countryButton.innerHTML = countries2Postals[ currentCountry ];
 
-  setChecklistCountryAuthors(currentCountry);
-  loadCountryTaxonomy(currentCountry);
+  setChecklistCountryAuthors( currentCountry );
+  loadCountryTaxonomy( currentCountry );
 }
 
 
-function setChecklistCountryAuthors(country) {
+function setChecklistCountryAuthors ( country ) {
 
-  if (country === "Falklands")
+  if ( country === "Falklands" )
     checklistFlyoutText.innerHTML = "Make a checklist for the " + country + " Islands";
   else checklistFlyoutText.innerHTML = "Make a checklist for " + country;
 
-  if (country === "French Guiana") selectedCountryFill("FrenchGuiana");
-  else if (country !== "South America") selectedCountryFill(country);
-  else fillSAMmap("");  // when is this called ?
+  if ( country === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
+  else if ( country !== "South America" ) selectedCountryFill( country );
+  else fillSAMmap( "" );  // when is this called ?
 
   // check because AuthorsAbridged hasn't been downloaded yet
-  if (AuthorsAbridged) checklistAuthorsPanel.innerHTML = AuthorsAbridged[country];
-  else checklistAuthorsPanel.innerHTML = 	"Remsen, et al. Country lists. &nbsp;6&nbsp;April&nbsp;2026. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
+  if ( AuthorsAbridged ) checklistAuthorsPanel.innerHTML = AuthorsAbridged[ country ];
+  else checklistAuthorsPanel.innerHTML = "Remsen, et al. Country lists. &nbsp;6&nbsp;April&nbsp;2026. A <a href='citations.html' target='_blank'>classification</a> of the bird species of South America. American Ornithological Society.";
 }
 
-function setNumDays(evt) {
+function setNumDays ( evt ) {
 
   // KeyboardEvent, type keyup, 13 === Enter
-  if (evt.type === "keyup" && evt.keyCode !== 13) {
+  if ( evt.type === "keyup" && evt.keyCode !== 13 ) {
     return;
   }
+
+  // else if (gNumDays === 0) {
+  //   numDaysButton.children[gNumDays + 1].classList.remove("highlight");
+  // }
 
   var day = evt.target;
+
+  // const dayHeaders = sampleTable.querySelectorAll('thead th');
+
+  // if (day.innerText === '0') {
+  //     dayHeaders.forEach(th => {
+  //         th.dataset.original = th.textContent; // Store "1", "2", etc.
+  //         th.textContent = ''; 
+  //     });
+  // }
+  // else {
+  //     dayHeaders.forEach(th => {
+  //         th.textContent = th.dataset.original; // Restore them
+  //     });
+  // }
+
   var list;   // will be a NodeList of th/td's with cds class applies to them
 
-  if (day.classList.contains("highlight")) {  // if click on already highlighted target ignore
+  if ( day.classList.contains( "highlight" ) ) {  // if click on already highlighted target ignore
     return;
   }
-  else if (gNumDays || gNumDays === 0) {
-    numDaysButton.children[gNumDays + 1].classList.remove("highlight");
+  else if ( gNumDays || gNumDays === 0 ) {
+    numDaysButton.children[ gNumDays + 1 ].classList.remove( "highlight" );
   }
 
-  day.classList.add("highlight");
-  gNumDays = parseInt(day.innerHTML);
+  day.classList.add( "highlight" );
+  gNumDays = parseInt( day.innerHTML );
 
-  sampleTable.classList.remove(previousNumDaysClass);
-  sampleTable.classList.add("numDays" + String(gNumDays));
-  previousNumDaysClass = "numDays" + String(gNumDays);
+  sampleTable.classList.add( "numDays" + String( gNumDays ) );
+  sampleTable.classList.remove( previousNumDaysClass );
+  previousNumDaysClass = "numDays" + String( gNumDays );
 
   // rules for column double border right vs. number of days
   // first clear all cds classes
 
-  list = sampleTable.querySelectorAll("td.cds, th.cds");
-  Array.prototype.forEach.call(list, function (item) {
-    item.classList.remove("cds");
-  });
+  list = sampleTable.querySelectorAll( "td.cds, th.cds" );
+  Array.prototype.forEach.call( list, function ( item ) {
+    item.classList.remove( "cds" );
+  } );
 
-  if (gNumDays === 6) {
+  if ( gNumDays === 6 ) {
 
-    list = sampleTable.querySelectorAll("td:nth-child(6), th:nth-child(4)");
-    Array.prototype.forEach.call(list, function (item) {
-      item.classList.add("cds");
-    });
+    list = sampleTable.querySelectorAll( "td:nth-child(6), th:nth-child(4)" );
+    Array.prototype.forEach.call( list, function ( item ) {
+      item.classList.add( "cds" );
+    } );
   }
-  else if (gNumDays === 7 || gNumDays === 8) {
+  else if ( gNumDays === 7 || gNumDays === 8 ) {
 
-    list = sampleTable.querySelectorAll("td:nth-child(7), th:nth-child(5)");
-    Array.prototype.forEach.call(list, function (item) {
-      item.classList.add("cds");
-    });
+    list = sampleTable.querySelectorAll( "td:nth-child(7), th:nth-child(5)" );
+    Array.prototype.forEach.call( list, function ( item ) {
+      item.classList.add( "cds" );
+    } );
 
   }
-  else if (gNumDays === 9 || gNumDays === 10) {
+  else if ( gNumDays === 9 || gNumDays === 10 ) {
 
-    list = sampleTable.querySelectorAll("td:nth-child(8), th:nth-child(6)");
-    Array.prototype.forEach.call(list, function (item) {
-      item.classList.add("cds");
-    });
+    list = sampleTable.querySelectorAll( "td:nth-child(8), th:nth-child(6)" );
+    Array.prototype.forEach.call( list, function ( item ) {
+      item.classList.add( "cds" );
+    } );
   }
-  else if (gNumDays === 11 || gNumDays === 12) {
+  else if ( gNumDays === 11 || gNumDays === 12 ) {
 
-    list = sampleTable.querySelectorAll("td:nth-child(8), td:nth-child(13), th:nth-child(6), th:nth-child(11)");
-    Array.prototype.forEach.call(list, function (item) {
-      item.classList.add("cds");
-    });
+    list = sampleTable.querySelectorAll( "td:nth-child(8), td:nth-child(13), th:nth-child(6), th:nth-child(11)" );
+    Array.prototype.forEach.call( list, function ( item ) {
+      item.classList.add( "cds" );
+    } );
   }
 }
 
-function getCSVText() {
+function getCSVText () {
 
-  if (!currentCountry) return;
+  if ( !currentCountry ) return;
 
   requested = "csv";
   // uploadDownloads();
@@ -359,28 +379,28 @@ function getCSVText() {
 
   var tempCountry;
 
-  if (currentCountry === "French Guiana") tempCountry = "FrenchGuiana";
-  else if (currentCountry === "South America") tempCountry = "SouthAmerica";
-  else if (currentCountry === "Curaçao") tempCountry = "Curacao";
+  if ( currentCountry === "French Guiana" ) tempCountry = "FrenchGuiana";
+  else if ( currentCountry === "South America" ) tempCountry = "SouthAmerica";
+  else if ( currentCountry === "Curaçao" ) tempCountry = "Curacao";
   else tempCountry = currentCountry;
 
-  if (tempCountry) {
+  if ( tempCountry ) {
 
-    var form = document.createElement("form");
-    form.setAttribute("method", "post");
+    var form = document.createElement( "form" );
+    form.setAttribute( "method", "post" );
     // form.setAttribute("action", "../php/sendCSV.php?country=" + tempCountry + "");
-    form.setAttribute("action", "./php/sendCSV.php?country=" + tempCountry + "");
+    form.setAttribute( "action", "./php/sendCSV.php?country=" + tempCountry + "" );
 
-    document.body.appendChild(form);
+    document.body.appendChild( form );
 
     form.submit();
     form.remove();
   }
 }
 
-function openChecklistPage() {
+function openChecklistPage () {
 
-  if (!currentCountry) return;
+  if ( !currentCountry ) return;
 
   requested = "checklist";
   // updateActivityData("download");
@@ -388,13 +408,13 @@ function openChecklistPage() {
   var vars;
   var tempCountry;
 
-  if (currentCountry === "French Guiana") tempCountry = "FrenchGuiana";
-  else if (currentCountry === "South America") tempCountry = "SouthAmerica";
-  else if (currentCountry === "Curaçao") tempCountry = "Curacao";
+  if ( currentCountry === "French Guiana" ) tempCountry = "FrenchGuiana";
+  else if ( currentCountry === "South America" ) tempCountry = "SouthAmerica";
+  else if ( currentCountry === "Curaçao" ) tempCountry = "Curacao";
   else tempCountry = currentCountry;
 
-  if (gNumDays === undefined) gNumDays = 12;
-  if (gStartDate === undefined) gStartDate = 1;
+  if ( gNumDays === undefined ) gNumDays = 12;
+  if ( gStartDate === undefined ) gStartDate = 1;
 
   vars = "?country=" + tempCountry;
   vars += "&num_days=" + gNumDays;
@@ -408,73 +428,73 @@ function openChecklistPage() {
   vars += "&sci_names=" + !sciNames.checked;
   vars += "&italics=" + !italics.checked;
 
-  window.open("./php/makePDF.php" + vars + "", "_blank");
+  window.open( "./php/makePDF.php" + vars + "", "_blank" );
 }
 
 // eslint-disable-next-line no-unused-vars
-function uploadDownloads() {
+function uploadDownloads () {
 
-  if (!navigator.sendBeacon) {
-    console.log("sendBeacon(uploadDownloads) not supported");
+  if ( !navigator.sendBeacon ) {
+    console.log( "sendBeacon(uploadDownloads) not supported" );
     return true;
   }
 
   var downloadsURL = "./php/collectDownloads.php";
 
   var downloadData = new FormData();
-  downloadData.append('country', currentCountry);
-  downloadData.append('document', requested);
+  downloadData.append( 'country', currentCountry );
+  downloadData.append( 'document', requested );
 
-  navigator.sendBeacon(downloadsURL, downloadData);
+  navigator.sendBeacon( downloadsURL, downloadData );
 }
 
-function updateActivityData(stage, query) {
+function updateActivityData ( stage, query ) {
 
   var action = [];
 
-  switch (stage) {
+  switch ( stage ) {
 
-  case "start":
-    action.push("start");
-    break;
+    case "start":
+      action.push( "start" );
+      break;
 
-  case "select":
-    action.push("select");
-    action.push(currentCountry);
-    break;
+    case "select":
+      action.push( "select" );
+      action.push( currentCountry );
+      break;
 
-  case "search":
-    action.push("search");
-    if (query)  action.push(query);
-    break;
+    case "search":
+      action.push( "search" );
+      if ( query ) action.push( query );
+      break;
 
-  case "download":
-    action.push("download");
-    action.push(requested);
-    break;
+    case "download":
+      action.push( "download" );
+      action.push( requested );
+      break;
 
-  case "stop":
-    action.push("stop");
-    break;
+    case "stop":
+      action.push( "stop" );
+      break;
 
-  default:
-    break;
+    default:
+      break;
   }
 
   // uploadActivity(action);
 }
 
-function uploadActivity(action) {
+function uploadActivity ( action ) {
 
-  if (!navigator.sendBeacon) {
+  if ( !navigator.sendBeacon ) {
     return true;
   }
   var activityURL = "./php/collectActivity.php";
   // 11/08/2022 logging has been disabled on the server
 
-  var JSONstringData = JSON.stringify(action);
+  var JSONstringData = JSON.stringify( action );
 
   var downloadData = new FormData();
-  downloadData.append('action', JSONstringData);
-  navigator.sendBeacon(activityURL, downloadData);
+  downloadData.append( 'action', JSONstringData );
+  navigator.sendBeacon( activityURL, downloadData );
 }

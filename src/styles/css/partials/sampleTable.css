@@ -257,13 +257,16 @@
   background-color: var(--sample-table-bg-color);
 }
 
-.numDays0 .cLs {
-  border-right: 0.077rem solid #000;
-}
-
 .numDays0 th {
-  width: 0;
-  border: 0.077rem solid transparent;
+    /* !important not needed on border and causes a visual glitch when going from 0 days to more */
+    border: none;
+
+    border-style: hidden !important;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .numDays1 th {
@@ -358,12 +361,6 @@
   display: none;
 }
 
-.numDays0 th {
-  display: none;
-  width: 0;
-  border: 0.077rem solid transparent;
-}
-
 .numDays11 td:nth-child(n+15) {
   display: none;
 }
@@ -415,8 +412,4 @@
 #sampleTable th:first-child {
   border: solid 0.077rem transparent;
   border-right: solid 0.077rem #000;
-}
-
-.numDays0 tr.topBorderDisappear {
-  border-top: hidden;
 }

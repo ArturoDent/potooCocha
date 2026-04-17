@@ -60,7 +60,7 @@
   width: min-content;
   top: -2ch;
   left: 102%;
-  font-size: 0.87rem;
+  font-size: 0.85rem;
   letter-spacing: 0.09rem;
   text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   pointer-events: auto;
@@ -73,25 +73,22 @@
   align-items: center;
   justify-content: center;
   /* gap: 0.25rem; */
-  width: 20ch;
+  width: 19ch;
 
   padding: 0.1ch 0 0.5ch 0;
-  margin: 0 0 7px 0;
+  margin: 0 0 2px 0;
   text-align: center;
-  border: 0.077rem solid rgba(255, 255, 255, 0.2);
+  border: 0.2rem solid rgb(159, 158, 158);
   border-radius: 0.15rem;
-  /* background-color: var(--generic-button-color); */
-  background-color: black;
-  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.5);
+  background-color: var(--bird-rollover-color-dark-10);
   cursor: pointer;
   transition: all 350ms;
 }
 
 .searchSpecialWrapper:hover,
 .searchSpecialWrapper:focus-within {
-  border: 0.077rem solid #666;
+  border: 0.2rem solid rgb(252, 185, 40);
   background-color: #222;
-  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 1);
 }
 
 .searchSpecialWrapper a,
@@ -104,7 +101,6 @@
   box-shadow: none;
 }
 
-
 #searchSpecials div.notAvailable {
   pointer-events: none;
   opacity: 0.5;
@@ -113,7 +109,7 @@
 #searchTerm span {
   color: rgb(252, 185, 40);
   text-decoration-line: overline;
-  text-shadow: 0.2px 0.2px white;
+  text-shadow: 0.4px 0.4px black;
 }
 
 .highlightSpecial {
@@ -124,27 +120,14 @@
 #results-panel {
   position: relative;
   height: auto;
-  width: calc(100% + 7vw);
-  left: -7vw;
   margin-top: 4vh;
   margin-bottom: 4vh;
-  padding: 0;
+  padding: 0 0 1.5ch 0;
   z-index: 0;
   border: none;
-  box-shadow: none;
-  background-color: transparent;
-}
+  border-radius: 0 0 20px 0;
+  corner-bottom-right-shape: scoop;
 
-#fakeResultsBox {
-  position: relative;
-  top: 0;
-  height: 100%;
-  width: calc(100% - 7vw);
-  left: 7vw;
-  padding: 0 0 1.5ch 0;
-  overflow-x: visible;
-  border: 0.077rem solid rgba(255, 255, 255, 0.15);
-  border-radius: 0.23rem;
   background-color: var(--panel-color);
   box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
 }
@@ -161,22 +144,23 @@
   border-radius: 50%;
   background-color: var(--bird-rollover-color-dark-10);
   border: 0.13rem solid var(--turquoise-highlight-color);
-  box-shadow: 0.25rem -0.05rem 0 0.24rem var(--bg-color), 0.2rem -0.1rem 0 0.24rem var(--bg-color), 0.3rem 0.1rem 0 0.24rem var(--bg-color), 0.25rem -0.05rem 0 0.27rem rgba(0, 0, 0, 0.6), 0.25rem -0.05rem 0 0.35rem var(--bg-color), 0 0 0 0.3rem var(--bg-color), 0.02rem -0.04rem 0 0.3rem var(--bg-color), -0.02rem 0.04rem 0 0.3rem var(--bg-color), -0.04rem 0.04rem 0 0.32rem var(--bg-color), -0.04rem -0.04rem 0 0.3rem rgba(0, 0, 0, 0.6), -0.05rem -0.05rem 0 0.34rem rgb(114, 114, 114);
+  box-shadow: 0 0 0.09rem hsl(0, 0%, 0%);
 }
 
 #printerButton::before {
   position: absolute;
   content: "print search\aresults";
   white-space: pre;
-  left: 95%;
-  top: -115%;
+  left: 1.4rem;
+  top: 1.4rem;
   width: auto;
   z-index: -1;
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
   padding: 0.38rem 0.8rem 0.38rem 1rem;
   border: 1px solid var(--bg-color);
-  border-radius: 0.6rem;
+  border-radius: 0 20px 0.6rem 0.6rem;
+  /* corner-top-left-shape: scoop; */
   background-color: var(--bird-rollover-color-dark-10);
   box-shadow: 0 0 0.09rem rgb(0, 0, 0);
   transition: all 100ms ease-in-out;
@@ -189,7 +173,7 @@
 #closeOpenFamiliesButton {
   position: absolute;
   left: calc(100% - 1.31rem);
-  top: calc(100% - 1.75rem);
+  top: calc(97%);
   width: 3rem;
   height: 3rem;
   padding: 0 0 0.3rem 0;
@@ -200,7 +184,7 @@
   background-color: var(--bird-rollover-color-dark-10);
   border: 0.13rem solid var(--turquoise-highlight-color);
   border-radius: 50%;
-  box-shadow: 0 0 0 0.62rem var(--bg-color), 0 -0.077rem 0 0.62rem var(--bg-color), -0.077rem 0 0 0.62rem var(--bg-color), -0.077rem -0.077rem 0 0.62rem rgba(0, 0, 0, 0.5), 0.077rem -0.077rem 0 0.69rem var(--bg-color), -0.077rem -0.077rem 0 0.69rem var(--bg-color), -0.077rem -0.077rem 0 0.69rem rgba(255, 255, 255, 0.25), 0.077rem 0 0 0.7rem var(--bg-color), -0.2rem 0.03rem 0 0.66rem rgba(0, 0, 0, 0.4), 0.077rem -0.077rem 0 0.69rem var(--bg-color), 0.077rem 0.077rem 0 0.69rem var(--bg-color), -0.2rem 0.05rem 0 0.66rem rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0.09rem hsl(0, 0%, 0%);
   transition: all 300ms;
   cursor: pointer;
 }
@@ -215,12 +199,13 @@
   position: absolute;
   content: "close open\a families";
   white-space: pre;
-  left: -6.8vw;
-  top: 90%;
+  left: -240%;
+  top: 60%;
   width: auto;
   padding: 0.38rem 1.5rem 0.38rem 1rem;
   border: 1px solid var(--bg-color);
-  border-radius: 0.6rem;
+  border-radius: 0.6rem 20px 0.6rem 0.6rem;
+  corner-top-right-shape: scoop;
   font-size: 0.9rem;
   z-index: -1;
   background-color: var(--bird-rollover-color-dark-10);
@@ -237,7 +222,6 @@
   position: relative;
   padding: 1ch 0 0 0;
   height: 4ch;
-  /* margin: -0.77rem 0 1ch 0; */
   margin: -0.77rem 0 0 0;
   left: 2ch;
   width: calc(100% - 4ch);
@@ -247,77 +231,28 @@
   letter-spacing: 0.1em;
 }
 
-#searchResults {
-  opacity: 1;
-  position: relative;
-  left: -7vw;
-  width: calc(100% + 7vw + 1.1ch);
-  height: auto;
-  padding: 0 0 0 7vw;
-  font-size: 1rem;
-  line-height: 1rem;
-  border: none;
-  box-shadow: none;
-  transition: all 350ms;
+#countrySearch.closed {
+  opacity: 0;
+  height: 0;
 }
 
-#searchResults li {
-  position: relative;
-  padding: 0.077rem 0 0.12rem 1.23rem;
-  width: calc(100% - 0.55rem);
+#searchResults {
+  padding: 0 0 20px 0;
   list-style-type: none;
   cursor: pointer;
-  border-top: 0.077rem solid transparent;
-  border-bottom: 0.077rem solid transparent;
+}
+
+#searchResults li.family {
+  font-size: 0.9rem;
 }
 
 #searchResults li.bird {
   font-size: 0.9rem;
 }
 
-#countrySearch.closed {
-  opacity: 0;
-  height: 0;
-}
-
-#searchResults li:hover {
+#searchResults li.family:hover {
   color: var(--panel-flyout-font-color);
-  border-top: 0.077rem solid var(--bird-rollover-color-dark-10);
-  border-bottom: 0.077rem solid var(--bird-rollover-color-dark-10);
   background-color: var(--bird-rollover-color);
-}
-
-#searchResults li.bird:not(.active):hover::before {
-  content: "  ";
-  position: absolute;
-  top: 0.1rem;
-  left: -1.3rem;
-  border-left: 0.54rem solid var(--panel-flyout-font-color);
-}
-
-#searchResults li.bird.active:hover::before {
-  content: "  ";
-  position: absolute;
-  border-left: 0.54rem solid var(--panel-flyout-font-color);
-  top: -0.077rem;
-  left: -7vw;
-  height: calc(100% + 0.15rem);
-  width: 7vw;
-  border-right: 0 solid var(--bird-rollover-color);
-  background-color: var(--bird-rollover-color);
-  transition: border-right 650ms;
-}
-
-#searchResults li.family:hover::before {
-  position: absolute;
-  top: 0.1rem;
-  left: -2rem;
-  content: "  ";
-  border-left: 0.77rem solid var(--panel-flyout-font-color);
-}
-
-#searchResults li:not(.family) span:first-child {
-  padding: 0.23rem 0 0.23rem 0.7rem;
 }
 
 #searchResults li.active {
@@ -325,31 +260,11 @@
   background-color: var(--bird-rollover-color);
 }
 
-#searchResults li.active::before {
-  position: absolute;
-  content: "  ";
-  top: -0.077rem;
-  left: -7vw;
-  height: calc(100% + 0.12rem);
-  width: 7vw;
-  border-right: 0 solid var(--bird-rollover-color);
-  background: linear-gradient(to right, rgba(60, 60, 60, 0) 0%, rgb(60, 60, 60) 100%);
-  transition: border-right 650ms;
-}
-
-#searchResults li.active:hover::before {
-  border-right: 7vw solid var(--bird-rollover-color);
-}
-
-#searchResults .family {
-  margin: 0.38rem 0 0 0;
-  padding: 0.077rem 0 0.15rem 1.2rem;
-}
-
 #searchResults span:not(.fsc):last-child {
   position: absolute;
   left: calc(52.8% + 0.7rem);
 }
+
 
 .fsc {
   position: absolute;
@@ -402,19 +317,73 @@
   left: -0.575rem;
 }
 
+/* Remove default bullets and padding from the nested list */
+.family-container {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.family-header {
+  position: relative;
+  left: 0;
+  font-weight: bold;
+  padding: 1px 0 1px 20px;
+}
+
+.family-header.active {
+  background-color: var(--bird-rollover-color);
+}
+
+.family-header:hover {
+  color: var(--panel-flyout-font-color);
+  background-color: var(--bird-rollover-color);
+}
+
+.family-header:focus-visible {
+    outline: none; /* Hide default browser ring if you want */
+    color: black;
+    border: 1px solid white;
+    text-shadow: none;
+}
+
+.bird-list {
+  position:relative;
+  left: 0;
+  list-style: none;
+}
+
+li.bird {
+  padding: 2px 0 2px 4ch;
+}
+
+li.bird.active {
+  background-color: var(--bird-rollover-color);
+}
+
+li.bird:hover {
+  color: var(--panel-flyout-font-color);
+  background-color: var(--bird-rollover-color);
+}
+
+li.bird:focus-visible {
+    outline: none; /* Hide default browser ring if you want */
+    color: black;
+    border: 1px solid white;
+    text-shadow: none;
+}
+
 /*  -----------------------------   #taxTreeArticle  ---------------------  */
 #tax-panel {
-  opacity: 0;
   position: relative;
-  width: calc(100% + 7vw);
-  height: 0;
-  left: -7vw;
+  top: 60px;
   margin: 0;
-  padding: 5ch 0 0 0;
+  padding: 3ch 0 1.5ch 0;
   z-index: 0;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
+  border: 0.077rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 0 0 30px 0;
+  corner-bottom-right-shape: scoop;
+  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
+  background-color: var(--panel-color);;
   transition: all 400ms ease-in-out;
 }
 
@@ -424,34 +393,15 @@
   margin: 0;
 }
 
-#fakeTaxPageBox {
-  position: relative;
-  height: 100%;
-  width: calc(100% - 7vw);
-  left: 7vw;
-  padding: 1ch 0 2ch 0;
-  border: 0.077rem solid rgba(255, 255, 255, 0.15);
-  border-radius: 0.23rem;
-  background-color: var(--panel-color);
-  box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.5), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.5), 0 0 0.15rem rgba(0, 0, 0, 0.7);
-  overflow-x: visible;
-}
-
 /*  -----------------------------   #taxPage panel  ---------------------  */
 #taxPage {
-  position: relative;
-  top: 0;
-  left: -7vw;
-  width: calc(100% + 7vw + 1ch);
   height: auto;
-  padding: 0 0 0 7vw;
   margin: 0;
   font-size: 1rem;
   line-height: 1.3rem;
   /* necessary because 100% padding right would else break line at spaces and hyphens */
   white-space: nowrap;
   border: none;
-  background-color: transparent;
   box-shadow: none;
 }
 
@@ -579,13 +529,6 @@
   position: relative;
   left: -0.7rem;
 }
-
-/* #taxPage .endemic-breeder {
-  content: "*";
-  position: relative;
-  left: -0.53rem;
-  font-size: 0.8rem;
-} */
 
 #tree .fco, #tree .fsc {
   font-weight: bold;

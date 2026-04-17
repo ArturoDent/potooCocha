@@ -4,9 +4,9 @@ html {
   background-color: var(--bg-color);
 }
 
-*:focus {
-  background-color: red;
-}
+/* *:focus {
+  background-color: rgb(153, 150, 150);
+} */
 
 body {
   position: relative;
@@ -137,7 +137,8 @@ article {
 }
 
 .topFlyoutPanel {
-  top: -3.2ch;
+  position: absolute;
+  top: -2.2ch;
   left: 2ch;
   width: calc(100% - 4ch);
 }

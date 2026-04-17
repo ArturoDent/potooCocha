@@ -70,7 +70,9 @@ function deleteMap(evt)  {
   }
   else 
     saveMapButton.style.display = "block";
-  // }
+
+  if (len === 1) revealMapsCollection();
+
 }
 
 function saveCurrentMap()  {

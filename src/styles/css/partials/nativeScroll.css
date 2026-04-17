@@ -1,6 +1,6 @@
-.scroll-shell {
+/* .scroll-shell {
   --scroll-gutter: 1rem;
-  --scrollbar-size: 0.85rem;
+  --scrollbar-size: 1rem;
   --scrollbar-thumb-color: rgba(200, 200, 200, 0.65);
   --scrollbar-thumb-hover: rgba(220, 220, 220, 0.9);
   position: relative;
@@ -35,10 +35,97 @@
   background-color: var(--scrollbar-thumb-color);
 }
 
+
 .scroll-pane:hover::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-hover);
 }
 
 #taxPageScroller {
   height: 0;
+}
+
+::-webkit-scrollbar-button {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment {
+    display: none !important;
+}
+
+::-webkit-scrollbar-button {
+    background-color: transparent;
+    border: none;
+    height: 0px!;
+    width: 0px!;
+} */
+
+.scroll-shell {
+  --scroll-gutter: 1rem;
+  --scrollbar-size: 1rem;
+  --scrollbar-thumb-color: rgba(200, 200, 200, 0.65);
+  --scrollbar-thumb-hover: rgba(220, 220, 220, 0.9);
+  position: relative;
+  overflow: hidden;
+  padding-right: var(--scroll-gutter);
+}
+
+.scroll-pane {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: calc(-1 * var(--scroll-gutter));
+  padding-right: calc(var(--scroll-gutter) - 0.15rem);
+  scrollbar-gutter: stable;
+}
+
+/* tax-panel.scroll-pane {
+  padding-bottom: 6rem;
+} */
+
+/* Force the scrollbar to exist so we can style it */
+.scroll-pane::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+}
+
+/* THE FIX: Hide the buttons by setting height/width to 0 */
+/* .scroll-pane::-webkit-scrollbar-button {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+} */
+
+/* 1. Remove the 'display: none' from the buttons */
+.scroll-pane::-webkit-scrollbar-button {
+    display: block !important; /* Must be block to take up space */
+    background: transparent;   /* Keep them invisible */
+    border: none;
+}
+
+/* 2. Set the 'shortness' of the track */
+/* This adds 20px of empty space at the top */
+/* .scroll-pane::-webkit-scrollbar-button:vertical:start:decrement {
+    height: 0; 
+} */
+
+/* This adds 20px of empty space at the bottom */
+/* .scroll-pane::-webkit-scrollbar-button:vertical:end:increment { */
+    /* height: 10px; */
+/* } */
+
+/* Optional: Ensure the track and thumb are styled (which you already have) */
+.scroll-pane::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-pane::-webkit-scrollbar-thumb {
+  min-height: 4.62rem;
+  border: 0.23rem solid transparent;
+  border-radius: 0.38rem;
+  background-clip: padding-box;
+  background-color: var(--scrollbar-thumb-color);
 }

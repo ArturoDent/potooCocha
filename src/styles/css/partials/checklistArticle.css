@@ -1,7 +1,7 @@
 #checklistArticle {
   position: relative;
   width: 90%;
-  margin: 6rem 0 0 0;
+  margin: 10rem 0 0 0;
   order: 4;
   overflow: visible;
 }
@@ -39,22 +39,24 @@
   left: 5%;
   width: 105%;
   margin: 0;
-  padding: 1.8ch 0 2ch 2ch;
+  padding: 1.8ch 0 2ch 1ch;
   font-size: 1rem;
   line-height: 2.4rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 25%;
 }
 
 .checklistTitle {
   position: relative;
+  margin-bottom: 50px;
   top: 0.2rem;
   left: -4vw;
   font-size: 6rem;
   font-weight: bold;
   font-variant: small-caps;
-  color: var(--bg-color-dark-4);
+  /* color: var(--bg-color-dark-4); */
+  color: #9e9b9b;
   text-shadow: 0 0 1px #fff, 0 0 2px white, 1px 1px 1px white, 0 -1px 2px white;
   letter-spacing: 0.2em;
 }

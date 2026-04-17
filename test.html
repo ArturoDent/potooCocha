@@ -1,44 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
+`<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Bird Map Debugger</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
-        .link-box { margin-top: 20px; padding: 15px; border: 1px solid #ccc; display: inline-block; }
-        a { font-weight: bold; color: blue; text-decoration: underline; cursor: pointer; }
-    </style>
-</head>
+    <title></title>
+    <head>
+        <style>
+            h3 {
+                position: relative;
+                top: 40px;
+                margin: 0 0 4ch 0;
+                text-align: center;
+                padding-left: 0;
+            }
+
+            #searchResults {
+                position: relative;
+                padding: 20px 0 20px 0;
+                list-style-type: none;
+                font-size: 1rem;
+            }
+
+            #searchResults span:not(.fsc):last-child {
+                position: absolute;
+                left: calc(55% + 2ch);
+            }
+
+            #searchResults span:not(.fsc):first-child {
+                position: relative;
+                left: 18%;
+            }
+
+            .fsc {
+                position: absolute;
+                /* top: 0; */
+                left: 55%;
+                font-weight: bold;
+                font-style: normal;
+            }
+
+            .fco {
+                position: absolute;
+                left: 20%;
+                font-weight: bold;
+            }
+
+            .endemic::before {
+                content: "e";
+                position: relative;
+                left: -0.53rem;
+                font-size: 0.8rem;
+            }
+
+            .endemic-breeder::before {
+                content: "*";
+                position: relative;
+                left: -0.53rem;
+                font-size: 0.8rem;
+            }
+
+            .extinct::before {
+                content: "x";
+                position: relative;
+                left: -0.53rem;
+                font-size: 0.8rem;
+            }
+
+            .u::before {
+                content: "u";
+                position: relative;
+                left: -0.53rem;
+                font-size: 0.8rem;
+            }
+
+            .va::before {
+                content: "v";
+                position: relative;
+                left: -0.53rem;
+                font-size: 0.8rem;
+            }
+
+            .family-header {
+                position: relative;
+                /* margin: 0; */
+                font-weight: bold;
+                padding: 1px 0 1px 0;
+            }
+
+            .bird-list {
+                position: relative;
+                top: -13px;
+                margin-bottom: 5px;
+                padding-left: 2ch;
+                list-style: none;
+            }
+
+            li.bird {
+                padding: 2px 0 2px 0;
+            }
+
+            li.bird span:first-child {
+                position: relative;
+                color: red;
+                left: 16%;
+            }
+        </style>
+    </head>
 <body>
-
-    <h1>Bird Family Link Tester</h1>
-    <p>Chrome is very picky. A real HTML link is more reliable than window.open().</p>
-    
-    <div class="link-box">
-        <a id="dynamicLink" href="#" target="_blank">Click here to open RHEIDAE</a>
+    <h3>South America : &nbsp;'endemic-breeder' &nbsp;&nbsp;20 species</h3>
+    <div id="searchresults">
+        <li data-family="LARIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">GULLS</span><span class="fsc">LARIDAE</span></div>
+            <ul class="bird-list">
+                <li data-i="750" data-family="LARIDAE" class="bird" tabindex="0"><span class="endemic-breeder">Gray
+                        Gull</span><span>Leucophaeus modestus</span></li>
+                <li data-i="756" data-family="LARIDAE" class="bird" tabindex="0"><span class="endemic-breeder">Olrog's
+                        Gull</span><span>Larus atlanticus</span></li>
+            </ul>
+        </li>
+        <li data-family="SPHENISCIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">PENGUINS</span><span
+                    class="fsc">SPHENISCIDAE</span>
+            </div>
+            <ul class="bird-list">
+                <li data-i="796" data-family="SPHENISCIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Galapagos Penguin</span><span>Spheniscus mendiculus</span></li>
+            </ul>
+        </li>
+        <li data-family="DIOMEDEIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">ALBATROSSES</span><span
+                    class="fsc">DIOMEDEIDAE</span>
+            </div>
+            <ul class="bird-list">
+                <li data-i="803" data-family="DIOMEDEIDAE" class="bird" tabindex="0"><span class="endemic-breeder">Waved
+                        Albatross</span><span>Phoebastria irrorata</span></li>
+            </ul>
+        </li>
+        <li data-family="PROCELLARIIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">SHEARWATERS</span><span
+                    class="fsc">PROCELLARIIDAE</span></div>
+            <ul class="bird-list">
+                <li data-i="846" data-family="PROCELLARIIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Masatierra Petrel</span><span>Pterodroma defilippiana</span></li>
+                <li data-i="847" data-family="PROCELLARIIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Stejneger's Petrel</span><span>Pterodroma longirostris</span></li>
+                <li data-i="852" data-family="PROCELLARIIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Galapagos Petrel</span><span>Pterodroma phaeopygia</span></li>
+                <li data-i="853" data-family="PROCELLARIIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Juan
+                        Fernandez Petrel</span><span>Pterodroma externa</span></li>
+                <li data-i="873" data-family="PROCELLARIIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Pink-footed Shearwater</span><span>Ardenna creatopus</span></li>
+                <li data-i="877" data-family="PROCELLARIIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Galapagos Shearwater</span><span>Puffinus subalaris</span></li>
+            </ul>
+        </li>
+        <li data-family="TYRANNIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">TYRANT FLYCATCHERS</span><span
+                    class="fsc">TYRANNIDAE</span></div>
+            <ul class="bird-list">
+                <li data-i="2497" data-family="TYRANNIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Dinelli's
+                        Doradito</span><span>Pseudocolopteryx dinelliana</span></li>
+                <li data-i="2504" data-family="TYRANNIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Straneck's Tyrannulet</span><span>Serpophaga griseicapilla</span></li>
+                <li data-i="2617" data-family="TYRANNIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Hudson's
+                        Black-Tyrant</span><span>Knipolegus hudsoni</span></li>
+                <li data-i="2638" data-family="TYRANNIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Black-crowned Monjita</span><span>Neoxolmis coronatus</span></li>
+                <li data-i="2646" data-family="TYRANNIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Lesser
+                        Shrike-Tyrant</span><span>Agriornis murinus</span></li>
+            </ul>
+        </li>
+        <li data-family="MIMIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">MOCKINGBIRDS</span><span
+                    class="fsc">MIMIDAE</span>
+            </div>
+            <ul class="bird-list">
+                <li data-i="2864" data-family="MIMIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">White-banded
+                        Mockingbird</span><span>Mimus triurus</span></li>
+            </ul>
+        </li>
+        <li data-family="MOTACILLIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">PIPITS and WAGTAILS</span><span
+                    class="fsc">MOTACILLIDAE</span></div>
+            <ul class="bird-list">
+                <li data-i="2885" data-family="MOTACILLIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Pampas
+                        Pipit</span><span>Anthus chacoensis</span></li>
+            </ul>
+        </li>
+        <li data-family="PASSERELLIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">SPARROWS</span><span
+                    class="fsc">PASSERELLIDAE</span>
+            </div>
+            <ul class="bird-list">
+                <li data-i="2936" data-family="PASSERELLIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Chaco
+                        Sparrow</span><span>Rhynchospiza strigiceps</span></li>
+            </ul>
+        </li>
+        <li data-family="THRAUPIDAE" class="family-container">
+            <div class="family-header" tabindex="0"><span class="fco">TANAGERS</span><span class="fsc">THRAUPIDAE</span>
+            </div>
+            <ul class="bird-list">
+                <li data-i="3184" data-family="THRAUPIDAE" class="bird" tabindex="0"><span
+                        class="endemic-breeder">Tamarugo
+                        Conebill</span><span>Conirostrum tamarugense</span></li>
+                <li data-i="3254" data-family="THRAUPIDAE" class="bird" tabindex="0"><span class="endemic-breeder">Inti
+                        Tanager</span><span>Heliothraupis oneilli</span></li>
+            </ul>
+        </li>
     </div>
-
-    <script>
-        const familyMap = new Map([
-            ["RHEIDAE", {
-                text: "RHEIDAE (RHEAS)",
-                url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline.htm"
-            }]
-        ]);
-
-        const linkElement = document.getElementById('dynamicLink');
-        const familyKey = "RHEIDAE";
-        const data = familyMap.get(familyKey);
-
-        if (data) {
-            // Encode the text fragment
-            const fragment = encodeURIComponent(data.text);
-            const fullUrl = `${data.url}#:~:text=${fragment}`;
-            
-            // Set the href of the ACTUAL link
-            linkElement.href = fullUrl;
-            linkElement.textContent = `Open ${data.text} in a new tab`;
-        }
-    </script>
+    <br><br><br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists.
+    &nbsp;26&nbsp;March&nbsp;2026. A classification of the bird species of South America. American Ornithological
+    Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm
 </body>
-</html>
+</html>`

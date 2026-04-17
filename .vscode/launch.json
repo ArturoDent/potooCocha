@@ -8,25 +8,24 @@
       {
           "name": "Start gulp sync and chrome debugger",
           "configurations": ["Gulp: serve", "Chrome : Launch with sourcemaps" ],
+      },
+      {
+          "name": "gulp serve and launch Integrated Browser",
+          "configurations": ["Gulp: serve", "Launch in integrated browser" ],
       }
     ],
     "configurations": [
 
-        // {
-        //     "type": "node",
-        //     "request": "launch",
-        //     "name": "Gulp sync",
-        //     // "env": {
-        //     //   "url": "sdfsdf"
-        //     // },
-        //     // "name": "$env:gulp-sync", this works
-        //     // "envFile": "${workspaceFolder}/.env",
-        //     "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
-        //     "args": [
-        //         "sync"
-        //         // "$env:task" won't work here
-        //     ]
-        // },
+      {
+        "type": "editor-browser",
+        "request": "launch",
+        "name": "Launch in integrated browser",
+        // "url": "http://localhost:3000",
+        "url": "http://127.0.0.1:3000/home.html?vscode-livepreview=true"
+
+      },
+
+
       {
         "type": "node",
         "request": "launch",
@@ -36,14 +35,13 @@
             "serve"
         ],
           "serverReadyAction": {
+            "action": "openExternally",
             "pattern": "Local: http://localhost:([0-9]+)",
-            "uriFormat": "http://localhost:%s",
-            "action": "debugWithChrome",
+            "uriFormat": "http://localhost:%s"
             // "webroot": "${workspaceFolder}"
         },
 
         "preLaunchTask": "Gulp: watch",
-        // "preLaunchTask": "Echo vars",
         "postDebugTask": "postdebugKill"
       },
 

@@ -22,8 +22,8 @@ input[type=checkbox].hideCheckBox {
 .optionsCheckboxes label {
   display: inline-block;
   width: 58%;
-  margin: 0.05rem;
-  padding: 0 1ch 0 5ch;
+  /* margin: 0.05rem; */
+  padding: 0 1ch 0 4ch;
   outline: transparent 1px solid;
   outline-offset: 0;
   border-radius: 0.38rem;

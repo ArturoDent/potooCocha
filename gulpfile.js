@@ -17,11 +17,13 @@ function serve (done) {        // serve:    ./home.html
     port: 3000,
     server: {
       baseDir: "./",
-      index: "home.html",
+      index: "home.html"
       // files: 
       // serveStaticOptions: 
     },
-    ghostMode: false
+  ghostMode: false,
+  injectChanges: true,
+  snippet: true,
   });
   done();
 }

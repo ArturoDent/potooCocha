@@ -387,58 +387,59 @@ const familyMap = new Map([
 
   ["PLOCEIDAE", {
     text: "PLOCEIDAE (WEAVERS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["ESTRILDIDAE", {
     text: "ESTRILDIDAE (ESTRILDIDS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["PASSERIDAE", {
     text: "PASSERIDAE (OLD WORLD SPARROWS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["MOTACILLIDAE", {
     text: "MOTACILLIDAE (PIPITS and WAGTAILS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["FRINGILLIDAE", {
     text: "FRINGILLIDAE (FINCHES)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["RHODINOCICHLIDAE", {
     text: "RHODINOCICHLIDAE (THRUSH-TANAGER)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["PASSERELLIDAE", {
     text: "PASSERELLIDAE (SPARROWS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
 
   ["ICTERIDAE", {
     text: "ICTERIDAE (BLACKBIRDS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["PARULIDAE", {
     text: "PARULIDAE (WOOD-WARBLERS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["MITROSPINGIDAE", {
     text: "MITROSPINGIDAE (MITROSPINGIDS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["CARDINALIDAE", {
     text: "CARDINALIDAE (CARDINAL GROSBEAKS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["THRAUPIDAE", {
     text: "THRAUPIDAE (TANAGERS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }]
 ]);
 
 
 // navigateToFamily("RHEIDAE");
-function navigateToFamily(familyKey, birdName = "") {
+function navigateToFamily(familyKey, birdName = null) {
+
     const data = familyMap.get(familyKey.toUpperCase());
     
     if (!data) {
@@ -456,10 +457,10 @@ function navigateToFamily(familyKey, birdName = "") {
       // Syntax: #:~:text=StartText,EndText
       // fragment = `${encodeURIComponent(scientificName)},${encodeURIComponent(commonName)}`;
       fragment = encodeURIComponent(scientificName);
-      // const firstWordCommon = commonName.split(' ')[0];
-      // fragment = `${encodeURIComponent(scientificName)},${encodeURIComponent(firstWordCommon)}`;
     } else {
+      // need to manually encode the '-' in WOOD-WARBLERS, THRUSH-TANAGER, etc.
       fragment = encodeURIComponent(data.text);
+      fragment = fragment.replace(/-/g, "%2D");
     }
 
     const fullUrl = `${data.url}#:~:text=${fragment}`;
@@ -475,7 +476,3 @@ function navigateToFamily(familyKey, birdName = "") {
 
 // If you're building a list of links dynamically:
 // const linkHtml = `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer">${value.text}</a>`;
-
-// For example, if you want to be extra safe:
-// #:~:text=Rhynchortyx,Quail  // probably won't work in SACC, too many elements involved
-// starts with Rhynchortyx and ends with Quail

@@ -23,7 +23,7 @@ function resetSearchResultsHeight() {
 // eslint-disable-next-line no-unused-vars
 function resetTaxPageHeight() {
 
-  taxPageScroller.style.height = "75vh";
+  taxPageScroller.style.height = "74vh";
   taxPageScroller.scrollTop = 0;
 }
 

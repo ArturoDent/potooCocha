@@ -387,58 +387,58 @@ const familyMap = new Map([
 
   ["PLOCEIDAE", {
     text: "PLOCEIDAE (WEAVERS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["ESTRILDIDAE", {
     text: "ESTRILDIDAE (ESTRILDIDS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["PASSERIDAE", {
     text: "PASSERIDAE (OLD WORLD SPARROWS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["MOTACILLIDAE", {
     text: "MOTACILLIDAE (PIPITS and WAGTAILS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["FRINGILLIDAE", {
     text: "FRINGILLIDAE (FINCHES)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["RHODINOCICHLIDAE", {
     text: "RHODINOCICHLIDAE (THRUSH-TANAGER)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
   ["PASSERELLIDAE", {
     text: "PASSERELLIDAE (SPARROWS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline010.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline10.htm"
   }],
 
   ["ICTERIDAE", {
     text: "ICTERIDAE (BLACKBIRDS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["PARULIDAE", {
     text: "PARULIDAE (WOOD-WARBLERS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["MITROSPINGIDAE", {
     text: "MITROSPINGIDAE (MITROSPINGIDS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["CARDINALIDAE", {
     text: "CARDINALIDAE (CARDINAL GROSBEAKS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }],
   ["THRAUPIDAE", {
     text: "THRAUPIDAE (TANAGERS)",
-    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline011.htm"
+    url: "https://www.museum.lsu.edu/~Remsen/SACCBaseline11.htm"
   }]
 ]);
 
 
 // navigateToFamily("RHEIDAE");
-function navigateToFamily(familyKey) {
+function navigateToFamily(familyKey, birdName = null) {
 
     const data = familyMap.get(familyKey.toUpperCase());
     
@@ -446,39 +446,33 @@ function navigateToFamily(familyKey) {
         console.error("Family not found");
         return;
     }
+    
+    let fragment = "";
+    if (birdName) {
+      // Input: 'Yellow-legged Tinamou\nCrypturellus noctivagus'
+      const split = birdName.split('\n');
+      // const commonName = split[0].trim();  // fragment doesn't work with commonName
+      const scientificName = split[1].trim();
+      
+      // Syntax: #:~:text=StartText,EndText
+      // fragment = `${encodeURIComponent(scientificName)},${encodeURIComponent(commonName)}`;
+      fragment = encodeURIComponent(scientificName);
+    } else {
+      // need to manually encode the '-' in WOOD-WARBLERS, THRUSH-TANAGER, etc.
+      fragment = encodeURIComponent(data.text);
+      fragment = fragment.replace(/-/g, "%2D");
+    }
 
-    // Construct the fragmented URL
-    const fragment = encodeURIComponent(data.text);
     const fullUrl = `${data.url}#:~:text=${fragment}`;
 
-    // 2. Create a temporary link element (not visible to user)
     const link = document.createElement('a');
     link.href = fullUrl;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-
-    // 3. Trigger the click
-    // Chrome treats this "simulated click" with higher trust than window.open
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link); // Clean up
+    document.body.removeChild(link);
 }
-
-
-// const familyKey = "RHEIDAE";
-// const value = familyMap.get(familyKey);
-
-// 2. Add a check to make sure the value exists before using it
-// if (value) {
-//   const fullUrl = `${value.url}#:~:text=${encodeURIComponent(value.text)}`;
-//   console.log(fullUrl);
-// } else {
-//   console.error(`Family "${familyKey}" not found in the Map.`);
-// }
 
 // If you're building a list of links dynamically:
 // const linkHtml = `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer">${value.text}</a>`;
-
-// For example, if you want to be extra safe:
-// #:~:text=Rhynchortyx,Quail
-// (This tells the browser: "Find the place that starts with Rhynchortyx and ends with Quail.")
