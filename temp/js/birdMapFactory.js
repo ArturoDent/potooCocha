@@ -1,17 +1,23 @@
 "use strict";
+import { map, highlightSAMmap, alreadyInMapsCollection } from "./SouthAmerica.js";
+import * as tax from "./taxonomy.js";
+import { numDaysButton } from "./main.js";
+
 
 var deleteMapButton;
-var saveMapButton;
-var mapsCollection;
+export let saveMapButton;
+export let mapsCollection;
 // var deleteAllMapsButton;
 
 var currentID = 0;
+let birdMapFactoryInitialized = false;
 
-/* global  highlightSAMmap map lastIndex  */
+export function initBirdMapFactory () {
+  if ( birdMapFactoryInitialized ) return;
+  birdMapFactoryInitialized = true;
 
-document.addEventListener("DOMContentLoaded", function () {
   saveMapButton = document.querySelector(".saveMapButton");
-  saveMapButton.addEventListener("click", saveCurrentMap);
+  saveMapButton?.addEventListener("click", saveCurrentMap);
   mapsCollection = document.getElementById("mapsCollection");
 
   // deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
@@ -38,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // }, false);
 
-});
+}
 
 function revealMapsCollection() {
 
@@ -46,6 +52,8 @@ function revealMapsCollection() {
   map.classList.toggle("shiftUp");
 }
 
+/**
+ */
 function deleteMap(evt)  {
 
   evt.stopPropagation();
@@ -57,9 +65,11 @@ function deleteMap(evt)  {
   //   deleteAllMaps(evt);
   // }
   // else {
-  var birdInstance = this.parentNode;
+  // var birdInstance = this.parentNode;
+  var birdInstance = evt.currentTarget.parentNode;
   // TODO: remove eventListeners?
-  birdInstance.parentNode.removeChild(this.parentNode);
+  // birdInstance.parentNode.removeChild(this.parentNode);
+  birdInstance.parentNode.removeChild(evt.currentTarget.parentNode);
   map.querySelector(".saveMapButton").style.display = "block";
 
   repositionChildMaps(len - 1);
@@ -75,6 +85,9 @@ function deleteMap(evt)  {
 
 }
 
+/**
+ * @this {any}
+ */
 function saveCurrentMap()  {
 
   var len = mapsCollection.getElementsByClassName("smallBird").length;
@@ -125,17 +138,17 @@ function saveCurrentMap()  {
   deleteMapButton = dupNode.querySelector(".deleteMapButton");
   deleteMapButton.addEventListener("click", deleteMap);
 
-  deleteMapButton.addEventListener("mouseenter", function () {
+  deleteMapButton.addEventListener("mouseenter",  () => {
     this.classList.add("hover");
   });
 
-  deleteMapButton.addEventListener("mouseleave", function () {
+  deleteMapButton.addEventListener("mouseleave",  () => {
     this.classList.remove("hover");
   });
 
   // document.getElementById("thin" + currentID).onload = function () {
 
-  highlightSAMmap(lastIndex, "thin" + currentID);
+  highlightSAMmap(tax.lastIndex, "thin" + currentID);
   mapsCollection.lastChild.style.opacity = "1";
   currentID++;
 }

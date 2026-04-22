@@ -31,7 +31,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/styles.min.css?v=20260417123441">
+  <link rel="stylesheet" href="css/styles.min.css">
 
 </head>
 
@@ -250,14 +250,24 @@
             America</span>.<a class="citationLink" href="citations.html" target="_blank" rel="noopener noreferrer">1</a>
         </div>
         <br>
-        <div>
-          Type part of a word like "xantho" or "potoo".<br>
-          Select an item in the search results or the taxonomic tree.<br>
-          Control-click an item to open its SACC page location.<br>
 
-          * indicates an <a
-            href="https://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm#:~:text=X%28eb%29%20%3D%20Endemic%20breeders"
-            target="_blank" rel="noopener noreferrer">endemic breeder</a>.
+        <button id="openInstructions" command="show-modal" commandfor="instructionsDialog">Instructions</button>
+
+        <dialog id="instructionsDialog" closedby="any">
+          <p>Type part of a word like "xantho" or "potoo".</p>
+          <p>Select an item in the search results or the taxonomic tree.</p>
+          <p>Control-click an item to open its SACC page location.</p>
+          <button id="closeInstructions" commandfor="instructionsDialog" command="close">Close</button>
+        </dialog>
+        </br>
+
+        
+        
+        
+
+        * indicates an <a
+          href="https://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm#:~:text=X%28eb%29%20%3D%20Endemic%20breeders"
+          target="_blank" rel="noopener noreferrer">endemic breeder</a>.
         </div>
       </article>
 
@@ -291,38 +301,38 @@
 
       </form>
 
+      
+
+      
+
       <article class="panel" id="results-panel">
 
         <div id="countrySearch" class="flyoutPanel">
           <span id="searchTerm"></span>
         </div>
-        <div class="scroll-shell search-scroll-shell">
-          <div id="searchResultsScroller" class="scroll-pane">
-            <ul id="searchResults" contenteditable="false">
-              <li> &nbsp; &nbsp; search results will appear here...</li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+
+        <div id="searchResultsScroller" class="scroll-pane search-scroll-shell">
+          <ul id="searchResults" contenteditable="false">
+            <li> &nbsp; &nbsp; search results will appear here...</li>
+          </ul>
         </div>
 
-        <button id="printerButton" type="button" aria-label="Print these search results" tabindex="-1">
-          
-          <img src="./images/printer.png" height:32 width:32 alt="printer icon">
+        <button id="printerButton" type="button" aria-label="Print these search results">
+          <img src="./images/printer.png" height="32" width="32" alt="printer icon">
         </button>
 
       </article>
 
       <article class="panel" id="tax-panel">
-
-        <div id="treeIntroText" class="flyoutPanel topFlyoutPanel">&nbsp; numFamilies Families, numSpecies species</div>
-        <div class="scroll-shell tax-scroll-shell">
-          <div id="taxPageScroller" class="scroll-pane">
-            <div id="taxPage" contenteditable="false"></div>
-          </div>
+        <div id="treeIntroText" class="flyoutPanel topFlyoutPanel">
+          &nbsp; numFamilies Families, numSpecies species
         </div>
-        <button id="closeOpenFamiliesButton" type="button" aria-label="Close Open Families" tabindex="-1">▲</button>
-        
+
+        <div id="taxPageScroller" class="scroll-pane tax-scroll-shell">
+          <div id="taxPage" contenteditable="false"></div>
+        </div>
+
+        <button id="closeOpenFamiliesButton" type="button" aria-label="Close Open Families">▲</button>
       </article>
 
       <article id="checklistArticle">
@@ -683,11 +693,10 @@
     
   </article>
 
-  <button id="countryButton" class="genericButton slideRight" type="button" aria-label="Select a country"
-    tabindex="1">SA</button>
+  <button id="countryButton" class="genericButton" type="button" aria-label="Select a country" tabindex="1">SA</button>
 
   <div id="countryMenuLayer">
-    <nav id="country-menu" hidden="true" contenteditable="false">
+    <nav id="country-menu" contenteditable="false">
       <div class="countryItem"><a id="SAM" tabindex="-1">South America</a>
         <div class="flag"><img src="./flags/South-America-min.png" alt="Continent of South America"></div>
       </div>
@@ -750,7 +759,7 @@
     </nav>
   </div>
 
-  <script src="js/app.min.js?v=20260417123441"></script>
+  <script type="module" src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,8 @@
 // "use strict";
+import { taxNodeByKey } from '../taxonomy.js';
+import { modifyQuery } from "./search_handleQuery.js";
+
+
 
 // let results = "";
 
@@ -10,7 +14,7 @@ var json2html = {
 //  ------------------------------------------------------------------------------------------------------------  //
 
 // eslint-disable-next-line no-unused-vars
-function searchRegexTree ( families, query, country, modifyBoolean ) {
+export function searchRegexTree ( families, query, country, modifyBoolean ) {
 
 
   if ( modifyBoolean ) query = modifyQuery( query );
@@ -22,7 +26,7 @@ function searchRegexTree ( families, query, country, modifyBoolean ) {
 // ------------------------------------------------------------------------------------------------------ //
 
 // eslint-disable-next-line no-unused-vars
-function searchExtinctOrEndemicSAM ( families, special ) {
+export function searchExtinctOrEndemicSAM ( families, special ) {
 
   //  country === "SAM"
   var numSpecies = 0;
@@ -55,7 +59,7 @@ function searchExtinctOrEndemicSAM ( families, special ) {
         numSpecies++;
       } );
     }
-    results += closeFamily();
+    // results += closeFamily();
   }
   return { numSpecies: numSpecies, list: results };
 }
@@ -92,149 +96,114 @@ function searchExtinctOrEndemicSAM ( families, special ) {
 // ------------------------------------------------------------------------------------------------------ //
 
 // // var addFamily = buildFamily({ FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon });
-// function buildFamily(f) {
-
-//   // var elem = "<li class=\"family\"><span class=\"fco\">";
-//   var elem = `<li data-family="${f.FamilyScientific}" class="family"><span class="fco">`;
-//   // elem += f.FamilyCommon + "</span>";
-//   elem += f.FamilyCommon + `</span>`;
-//   // elem += "<span class=\"fsc\">" + f.FamilyScientific + "</span></li>";
-//   elem += `<span class="fsc">${f.FamilyScientific}</span></li>`;
-//   return elem;
-// }
-
-// // var addBird = buildBird({ family: family.Family, index: bird.index, special: special, name: bird.name, genus: genus, spp: bird.species });
-// function buildBird(b) {
-
-//   var elem = `<li data-i="${b.index}" data-family="${b.family}" class="bird">`;
-
-//   if (b.special) elem += `<span class="${b.special}">`;
-//   else elem += `<span>`;
-
-//   elem += `${b.name}</span>`;
-//   elem += `<span>${b.genus} ${b.spp}</span></li>`;
-//   return elem;
-// }
-
 function buildFamily ( f ) {
-  // We open the <li> and the <ul>. These stay open until closeFamily() is called.
-  var elem = `<li data-family="${ f.FamilyScientific }" class="family-container">`;
-  elem += `<div class="family-header"  tabindex="0">`;
+  var elem = `<li data-family="${ f.FamilyScientific }" class="family"  tabindex="0">`;
   elem += `<span class="fco">${ f.FamilyCommon }</span>`;
   elem += `<span class="fsc">${ f.FamilyScientific }</span>`;
-  elem += `</div>`;
-  elem += `<ul class="bird-list">`;
   return elem;
 }
 
-function closeFamily () {
-  return `</ul></li>`; // Closes the bird list and the family container
-}
+// function closeFamily () {
+//   return `</ul></li>`; // Closes the bird-list and the family-container
+// }
 
+// // var addBird = buildBird({ family: family.Family, index: bird.index, special: special, name: bird.name, genus: genus, spp: bird.species });
 function buildBird ( b ) {
-  var elem = `<li data-i="${ b.index }" data-family="${ b.family }" class="bird" tabindex="0">`;
-  // tabIndex = 0; // This makes it focusable via Tab or clicks
-  var specialClass = b.special ? ` class="${ b.special }"` : "";
-  elem += `<span${ specialClass }>${ b.name }</span>`;
+  var elem = `<li data-i="${ b.index }" data-family="${ b.family }" class="bird"  tabindex="0">`;
+  if ( b.special ) elem += `<span class="${ b.special }">`;
+  else elem += `<span>`;
+  elem += `${ b.name }</span>`;
   elem += `<span>${ b.genus } ${ b.spp }</span></li>`;
   return elem;
 }
 
 // ------------------------------------------------------------------------------------------------------ //
 
-// function searchAllQuery(families, query, country) {
-
-//   var regex = RegExp(query, "i");
-
-//   var numFamilies = [];
-//   var familyAdded;
-//   results = "";
-//   var numSpecies = 0;
-
-//   families.forEach(function(family) {    // forEach is okay, there will be no `break`s
-
-//     familyAdded = false;
-
-//     if (regex.test(family.Family) || regex.test(family.FamilyCommon)) {
-//       results += buildFamily({ FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon });
-//       familyAdded = true;
-//       numFamilies.push(family.Family);
-//     }
-
-//     family.genera.forEach(function (genus) {
-
-//       genus.spp.forEach(function (bird) {
-
-//         if (regex.test(genus.Genus.concat(" ", bird.species)) || regex.test(bird.name)) {
-
-//           if (!familyAdded) {
-//             results += buildFamily({ FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon });
-//             familyAdded = true;
-//             numFamilies.push(family.Family);
-//           }
-//           results += buildBird({ family: family.Family, index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
-//           numSpecies++;
-//         }
-//       });
-//     });
-//   });
-
-//   if (numFamilies.length === 1 && !numSpecies) {
-//     // console.log("numSpecies = " + numSpecies);
-//     // results = {$results, numSpecies}
-//     var birdsInFamily = getAllSpeciesFromOneFamily(results, numFamilies[0], country);
-//     results = birdsInFamily.$results;
-//     numSpecies = birdsInFamily.numSpecies;
-//   }
-//   // return numSpecies;
-//   return { numSpecies: numSpecies, list: results };
-// }
-
 function searchAllQuery ( families, query, country ) {
+
   var regex = RegExp( query, "i" );
+
+  var numFamilies = [];
+  var familyAdded;
+  let results = "";
   var numSpecies = 0;
-  var finalResults = "";
 
-  families.forEach( function ( family ) {
-    var familyAdded = false;
+  families.forEach( function ( family ) {    // forEach is okay, there will be no `break`s
 
-    // Check if the Family name itself matches the search
-    var familyMatch = regex.test( family.Family ) || regex.test( family.FamilyCommon );
+    familyAdded = false;
+
+    if ( regex.test( family.Family ) || regex.test( family.FamilyCommon ) ) {
+      results += buildFamily( { FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon } );
+      familyAdded = true;
+      numFamilies.push( family.Family );
+    }
 
     family.genera.forEach( function ( genus ) {
+
       genus.spp.forEach( function ( bird ) {
-        // Check if the individual bird matches
-        var birdMatch = regex.test( genus.Genus.concat( " ", bird.species ) ) || regex.test( bird.name );
 
-        // If EITHER the family matched OR the specific bird matched
-        if ( familyMatch || birdMatch ) {
+        if ( regex.test( genus.Genus.concat( " ", bird.species ) ) || regex.test( bird.name ) ) {
+
           if ( !familyAdded ) {
-            finalResults += buildFamily( { FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon } );
-            // finalResults += closeFamily();
+            results += buildFamily( { FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon } );
             familyAdded = true;
+            numFamilies.push( family.Family );
           }
-          finalResults += buildBird( {
-            family: family.Family,
-            index: bird.index,
-            special: json2html[ bird[ country ] ],
-            name: bird.name,
-            genus: genus.Genus,
-            spp: bird.species
-          } );
 
+          results += buildBird( { family: family.Family, index: bird.index, special: json2html[ bird[ country ] ], name: bird.name, genus: genus.Genus, spp: bird.species } );
           numSpecies++;
         }
       } );
     } );
-
-    // If we opened this family, we must close the tags
-    if ( familyAdded ) {
-      finalResults += closeFamily();
-    }
   } );
 
-  return { numSpecies: numSpecies, list: finalResults };
+  if ( numFamilies.length === 1 && !numSpecies ) {
+    var birdsInFamily = getAllSpeciesFromOneFamily( results, numFamilies[ 0 ], country );
+    results = birdsInFamily.$results;
+    numSpecies = birdsInFamily.numSpecies;
+  }
+  return { numSpecies: numSpecies, list: results };
 }
+
+// function searchAllQuery ( families, query, country ) {
+//   var regex = RegExp( query, "i" );
+//   var numSpecies = 0;
+//   var finalResults = "";
+
+//   families.forEach( function ( family ) {
+//     var familyAdded = false;
+
+//     // Check if the Family name itself matches the search
+//     var familyMatch = regex.test( family.Family ) || regex.test( family.FamilyCommon );
+
+//     family.genera.forEach( function ( genus ) {
+//       genus.spp.forEach( function ( bird ) {
+//         // Check if the individual bird matches
+//         var birdMatch = regex.test( genus.Genus.concat( " ", bird.species ) ) || regex.test( bird.name );
+
+//         // If EITHER the family matched OR the specific bird matched
+//         if ( familyMatch || birdMatch ) {
+//           if ( !familyAdded ) {
+//             finalResults += buildFamily( { FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon } );
+//             familyAdded = true;
+//           }
+//           finalResults += buildBird( {
+//             family: family.Family,
+//             index: bird.index,
+//             special: json2html[ bird[ country ] ],
+//             name: bird.name,
+//             genus: genus.Genus,
+//             spp: bird.species
+//           } );
+
+//           numSpecies++;
+//         }
+//       } );
+//     } );
+//   } );
+
+//   return { numSpecies: numSpecies, list: finalResults };
+// }
 
 /* <li class="family"><span class="fco">FINCHES</span><span class="fsc">FRINGILLIDAE</span></li> */
 
@@ -252,10 +221,10 @@ function searchAllQuery ( families, query, country ) {
 // for countries (not SAM): unconfirmed, vagrant, extinct and endemic
 
 // eslint-disable-next-line no-unused-vars
-function searchCountrySpecials ( families, special, country ) {
+export function searchCountrySpecials ( families, special, country ) {
 
   var numSpecies = 0;
-  results = "";
+  let results = "";
   var familyAdded;
 
   for ( var family of families ) {
@@ -279,12 +248,9 @@ function searchCountrySpecials ( families, special, country ) {
           results += buildBird( { family: family.Family, index: bird.index, special: json2html[ bird[ country ] ], name: bird.name, genus: genus.Genus, spp: bird.species } );
           numSpecies++;
         } );
-        results += closeFamily();
-
       }
     }
   }
-  // return numSpecies;
   return { numSpecies: numSpecies, list: results };
 }
 // <li class="family"><span class="fco">SHEARWATERS</span><span class="fsc">PROCELLARIIDAE</span></li>
@@ -296,56 +262,52 @@ function searchCountrySpecials ( families, special, country ) {
 
 // ------------------------------------------------------------------------------------------------------ //
 
-// function getAllSpeciesFromOneFamily($results, thisFamily, country) {
+function getAllSpeciesFromOneFamily ( $results, thisFamily, country ) {
 
-//   var numSpecies = 0;
-//   results = "";
-//   var regex = new RegExp(thisFamily);
-
-//   for (var family of families) {  //  there will be a`break` after finding the one family
-
-//     if (!(regex.test(family.Family))) continue;  // no match, goto next family in loop
-
-//     family.genera.forEach(function (genus) {
-
-//       genus.spp.forEach(function (bird) {
-
-//         $results += buildBird({ family: family.Family, index: bird.index, special: json2html[bird[country]], name: bird.name, genus: genus.Genus, spp: bird.species });
-//         numSpecies++;
-//       });
-//     });
-//     break;  // if got to here, must have matched family so go no further
-//   }
-//   return { numSpecies: numSpecies, $results: $results };
-// }
-
-function getAllSpeciesFromOneFamily ( currentResults, thisFamily, country ) {
   var numSpecies = 0;
-  var regex = new RegExp( thisFamily, "i" );
-  var output = currentResults;
+  const familyNode = taxNodeByKey.get( `family:${ thisFamily }` );
 
-  for ( var family of families ) {
-    if ( regex.test( family.Family ) ) {
-      // If we are calling this, the Family header might already be added. 
-      // If not, add buildFamily() here.
-      family.genera.forEach( function ( genus ) {
-        genus.spp.forEach( function ( bird ) {
-          output += buildBird( {
-            family: family.Family,
-            index: bird.index,
-            special: json2html[ bird[ country ] ],
-            name: bird.name,
-            genus: genus.Genus,
-            spp: bird.species
-          } );
-          numSpecies++;
-        } );
-      } );
-      break;
-    }
-  }
-  return { numSpecies: numSpecies, $results: output };
+  const allBirdsInFamily = familyNode.querySelectorAll( '.birds > li' );
+
+  allBirdsInFamily.forEach( function ( bird ) {
+
+    const genus = bird.children[ 1 ].innerText.split( " " )[ 0 ];
+    const species = bird.children[ 1 ].innerText.split( " " )[ 1 ];
+
+    $results += buildBird( { family: thisFamily, index: bird.dataset.i, special: bird.children[ 0 ].className, name: bird.children[ 0 ].innerText, genus, spp: species } );
+    numSpecies++;
+  } );
+
+  return { numSpecies, $results };
 }
+
+// function getAllSpeciesFromOneFamily ( families, currentResults, thisFamily, country ) {
+//   var numSpecies = 0;
+//   var regex = new RegExp( thisFamily, "i" );
+//   var output = currentResults;
+
+//   for ( var family of families ) {
+//     if ( regex.test( family.Family ) ) {
+//       // If we are calling this, the Family header might already be added.
+//       // If not, add buildFamily() here.
+//       family.genera.forEach( function ( genus ) {
+//         genus.spp.forEach( function ( bird ) {
+//           output += buildBird( {
+//             family: family.Family,
+//             index: bird.index,
+//             special: json2html[ bird[ country ] ],
+//             name: bird.name,
+//             genus: genus.Genus,
+//             spp: bird.species
+//           } );
+//           numSpecies++;
+//         } );
+//       } );
+//       break;
+//     }
+//   }
+//   return { numSpecies: numSpecies, $results: output };
+// }
 
 // console.log(`\n${family.Family} : ${family.genera.length} genera`);  // to print familes : genera and how many
 // family.genera.forEach(function (genus) {

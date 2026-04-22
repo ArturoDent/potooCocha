@@ -1,21 +1,33 @@
 #country-menu {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   top: 12vh;
-  left: 75vw;
+  right: 3vw;
+  left: auto;
   width: 22ch;
   padding: 1rem 0;
   justify-content: space-around;
   /* justify-content: normal; */
   height: auto;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border: none;
   border-left: 0.01rem solid rgb(187, 185, 185);
   border-right: 0.01rem solid rgb(187, 185, 185);
   background: rgb(49, 49, 49);
   box-shadow: 0 0 0 0.025rem rgba(255, 255, 255, 0.5), 0 0 0 0.0125rem black;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(1.5rem);
+  transition: opacity 220ms ease-out, transform 280ms ease-out;
+  z-index: 22;
+}
+
+#countryMenuLayer.show #country-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
 }
 
 .countryItem {
@@ -34,7 +46,7 @@
   width: calc(100% - 0.01rem);
   left: 0.01rem;
   margin-right: -3rem;
-  padding: 0.4rem 0 0.4rem 1.3rem;
+  padding: 0.5rem 0 0.5rem 1.3rem;
   text-decoration: none;
   transition: all 450ms ease-out;
   border: 1px solid transparent;

@@ -7,7 +7,7 @@
   height: 100vh;
   background-color: var(--overlay-color);
   pointer-events: none;
-  z-index: 2;
+  z-index: 20;
   transition: opacity 300ms ease-in-out;
   will-change: opacity;
 }
@@ -22,7 +22,7 @@
   position: fixed;
   top: 2.35rem;
   cursor: pointer;
-  z-index: 3;
+  z-index: 21;
   width: 5.3rem;
   height: 4.5rem;
   padding: 0;
@@ -34,13 +34,13 @@
   border: 0.2rem solid transparent;
   border-radius: 50%;
   box-shadow: 0 0 0 0.1rem var(--title-banner-color-light-5), 0 0 0 0.2rem #444, 0 0 0 0.43rem #888;
-  transform: translateX(65vw);
+  transform: translateX(87vw);
   transition: transform 600ms ease-in-out;
   will-change: transform;
 }
 
-#countryButton.slideRight {
-  transform: translateX(87vw);
+#countryButton.slideLeft {
+  transform: translateX(70vw);
   transition: transform 500ms ease-in-out;
 }
 

@@ -1,5 +1,29 @@
 // "use strict";
 
+import { selectedCountryFill, initCurrentMap, fillSAMmap } from "./SouthAmerica.js";
+
+import "./familyMap.js";
+import "./numList.js";
+import * as tax from "./taxonomy.js";
+
+import "./search/search_entry.js";
+import "./search/search_handleQuery.js";
+import "./search/search_functions.js";
+import "./search/search_handleResults.js";
+
+import { initBirdMapFactory } from "./birdMapFactory.js";
+
+
+
+// import * as Family from "./familyMap.js";
+// export const familyMap = { /* ... */ };
+// import { familyMap } from "./familyMap.js";
+
+// load when needed, after some other condition
+// const { familyMap } = await import("./familyMap.js");
+
+
+
 var sampleTable;
 var leftCheck;
 var sciNames;
@@ -8,13 +32,14 @@ var lineNumbers;
 var showEndemics;
 var showEndemicBreeders;
 
-var currentCountry;
+export let currentCountry = "South America";
+// export let currentCountry = "";
+export let searchSpecials;
 var previousHighlightedCountryNode;  //  a node
 var checklistAuthorsPanel;
 var AuthorsAbridged;
 var checklistFlyoutText;
 
-// var titleBanner;
 var countryMenuLayer;
 var countryButton;
 
@@ -22,17 +47,18 @@ var gNumDays;
 var gStartDate;
 var previousNumDaysClass;
 
-var numDaysButton;
+export let numDaysButton;
 var pdfButton;
 var csvButton;
 var requested;
+let appInitialized = false;
 
 // var mailLink;
 // var upLoadData = new FormData();
 // eslint-disable-next-line no-unused-vars
-var activityData = [];
+// var activityData = [];
 
-var countries2Postals = {
+export const countries2Postals = {
   "Argentina": "AR", "Aruba": "AW", "Bolivia": "BO", "Brazil": "BR", "Chile": "CL",
   "Colombia": "CO", "Curaçao": "CW", "Ecuador": "EC", "French Guiana": "GF",
   "Guyana": "GY", "Paraguay": "PY", "Peru": "PE", "Suriname": "SU", "Trinidad": "TT",
@@ -40,24 +66,29 @@ var countries2Postals = {
   "South America": "SAM"
 };
 
-/* global  loadCountryTaxonomy selectedCountryFill fillSAMmap  initCurrentMap */
 
-// document.addEventListener("DOMContentLoaded", function () {  // this doesn't wait for images, iFrames, etc. to be loaded
-window.addEventListener( "load", function () {
+// document.addEventListener( "DOMContentLoaded", function () {  // this doesn't wait for images, iFrames, etc. to be loaded
+window.addEventListener( "load", initApp );
+
+function initApp () {
+  if ( appInitialized ) return;
+  appInitialized = true;
+
+  searchSpecials = document.getElementById( "searchSpecials" );
+
+  countryMenuLayer = document.getElementById( "countryMenuLayer" );
 
   countryButton = document.getElementById( "countryButton" );
   countryButton?.addEventListener( "click", toggleCountryMenuLayer );
 
   // countryButton.addEventListener('click', e => { e.data })
 
-  // titleBanner = document.getElementById("titleBanner");
-
   numDaysButton = document.getElementById( "numDays" );
   numDaysButton?.addEventListener( "click", setNumDays );
   // onKeyUp listener for tabbing and entering
   numDaysButton?.addEventListener( 'keyup', setNumDays );
 
-  numDaysButton?.children.item( 9 ).classList.add( "highlight" );
+  numDaysButton?.children.item( 9 )?.classList.add( "highlight" );
   gNumDays = 8;
 
   sampleTable = document.getElementById( "sampleTable" );
@@ -101,19 +132,29 @@ window.addEventListener( "load", function () {
   document.querySelector( "#country-menu" )?.addEventListener( "click", setCountry );
   document.querySelector( "#country-menu" )?.addEventListener( "keyup", setCountry );
 
-  leftCheck?.checked = true;
+  if ( leftCheck instanceof HTMLInputElement ) leftCheck.checked = true;
 
-  countryMenuLayer = document.getElementById( "countryMenuLayer" );
+  initBirdMapFactory();
+  tax.initTaxonomy();
+  initCurrentMap();
 
-  getJSON( "../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data );
+  tax.loadCountryTaxonomy( "South America" );
+
+
+  tax.getJSON( "../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data );
+
+  const dialog = document.querySelector( "dialog" );
+  const closeButton = document.querySelector( "dialog button" );
+
+  closeButton?.addEventListener( "click", () => {
+    dialog?.close();
+  } );
 
   // updateActivityData("start");
 
-  initCurrentMap();
-
   // mailLink = document.getElementById("mailLink");
   // mailLink.addEventListener("click", sendEmail);
-} );
+}
 
 // window.addEventListener("load", function () {
 //   updateActivityData("start");
@@ -125,13 +166,13 @@ window.addEventListener( "load", function () {
 
 // function sendEmail() {
 //   // TODO : can this be obfuscated?  unicode??
-//   window.location.href = "mailto:mark@potoococha.net";
+//   window.location.href = "mailto:";
 // }
 
-function toggleCountryMenuLayer ( evt ) {
+export function toggleCountryMenuLayer ( evt ) {
 
   countryMenuLayer.classList.toggle( "show" );
-  countryButton.classList.toggle( "slideRight" );
+  countryButton.classList.toggle( "slideLeft" );
 
   if ( evt ) evt.stopPropagation();
 
@@ -268,7 +309,7 @@ function setCountry ( evt ) {
   else countryButton.innerHTML = countries2Postals[ currentCountry ];
 
   setChecklistCountryAuthors( currentCountry );
-  loadCountryTaxonomy( currentCountry );
+  tax.loadCountryTaxonomy( currentCountry );
 }
 
 

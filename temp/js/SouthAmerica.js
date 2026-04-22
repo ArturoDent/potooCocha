@@ -1,7 +1,11 @@
 "use strict";
+import { birds, addBirdNameToMap } from "./taxonomy.js";
+import { mapsCollection } from "./birdMapFactory.js";
+
+
 
 // eslint-disable-next-line no-unused-vars
-var map;
+export let map;
 
 var countries = {
   "Argentina": 0, "Aruba": 1, "Bolivia": 2, "Brazil": 3, "Chile": 4,
@@ -34,26 +38,23 @@ var highlightStrokeColor = "#6a7377";
 var darkerStrokeColor = "#333";
 var selectedCountryFillColor = "#f33";
 
-// loaded map was #737b7f and #333b3f
-
-/* global addBirdNameToMap birds currentMap */
 
 // eslint-disable-next-line
-function initCurrentMap() {
+export function initCurrentMap () {
 
-  prepareSVGstyles("SAMsvg");
+  prepareSVGstyles( "SAMsvg" );
 
-  map = document.getElementById("currentMap");
+  map = document.getElementById( "currentMap" );
 }
 
 //  TODO : (is this necessary? Straight to setSVGstyles()?)
 // eslint-disable-next-line
-function prepareSVGstyles(obj) {
+function prepareSVGstyles ( obj ) {
 
   // var svg = document.getElementById(obj);
   // // currentBirdMap
 
-  let currentBirdMap = document.getElementById("currentBirdMap");
+  let currentBirdMap = document.getElementById( "currentBirdMap" );
   // let Ecuador = currentBirdMap.querySelector("#Ecuador").nodeName;
 
   let svgDoc;
@@ -61,220 +62,219 @@ function prepareSVGstyles(obj) {
   // svgDoc = svg.contentDocument;
   // if (!svgDoc) svgDoc = svg.getSVGDocument();
 
-  for (var country in countries) {
+  for ( var country in countries ) {
 
     // var cc = svgDoc.getElementById(country);
-    var cc = currentBirdMap.querySelector("#" + country);
+    var cc = currentBirdMap?.querySelector( "#" + country );
 
-    if (!cc) continue;
+    if ( !cc ) continue;
 
-    setSVGstyles(cc);
+    setSVGstyles( cc );
   }
 }
 
 // eslint-disable-next-line
-function setSVGstyles(obj) {
+function setSVGstyles ( obj ) {
 
-  if (obj.nodeName === "path" || obj.nodeName === "circle") {
+  if ( obj.nodeName === "path" || obj.nodeName === "circle" ) {
 
     obj.style.transition = "fill 1s";
   }
 
-  else if (obj.parentNode.nodeName === "g") {
+  else if ( obj.parentNode.nodeName === "g" ) {
 
-    var paths = obj.querySelectorAll("path");
+    var paths = obj.querySelectorAll( "path" );
     var len = paths.length;
 
-    for (var i = 0; i < len; i++) {
-      paths[i].style.transition = "fill 1s";
+    for ( var i = 0; i < len; i++ ) {
+      paths[ i ].style.transition = "fill 1s";
     }
   }
 }
 
-function fillSAMmap(skipCountry) {
+export function fillSAMmap ( skipCountry ) {
 
   // var svg;
   // svg = currentMap.querySelector("#SAMsvg");
   // // var svgDoc = svg.contentDocument;
-  
+
   // svgDoc = svg.contentDocument;
   // if (!svgDoc) svgDoc = svg.getSVGDocument();
 
-  let currentBirdMap = document.getElementById("currentBirdMap");
+  let currentBirdMap = document.getElementById( "currentBirdMap" );
 
 
-  for (var country in countries) {
+  for ( var country in countries ) {
 
     // var cc = svgDoc.getElementById(country);
-    var cc = currentBirdMap.querySelector("#" + country);
+    var cc = currentBirdMap?.querySelector( "#" + country );
 
-    if (!cc || cc === skipCountry) continue;
-    newFillColor(cc, baseColor);
-    newStrokeColor(cc, baseStrokeColor);
+    if ( !cc || cc === skipCountry ) continue;
+    newFillColor( cc, baseColor );
+    newStrokeColor( cc, baseStrokeColor );
   }
-  addBirdNameToMap("");
+  addBirdNameToMap( "" );
 }
 
-function newFillColor(obj, newColor) {
+function newFillColor ( obj, newColor ) {
 
-  if (obj.nodeName === "path" || obj.nodeName === "circle") {
+  if ( obj.nodeName === "path" || obj.nodeName === "circle" ) {
     //  HACK : (why does this have to be hardcoded? And below.)
-    if (newColor === baseColor) {
+    if ( newColor === baseColor ) {
       // obj.style.fill = "#535B5F";
       obj.style.fill = "#8a8a7c";
     }
     else obj.style.fill = newColor;
 
-    if (newColor !== residentColor) obj.style.stroke = baseStrokeColor;
+    if ( newColor !== residentColor ) obj.style.stroke = baseStrokeColor;
   }
 
-  else if (obj.parentNode.nodeName === "g") {
+  else if ( obj.parentNode.nodeName === "g" ) {
 
-    var paths = obj.querySelectorAll("path");
+    var paths = obj.querySelectorAll( "path" );
 
     var len = paths.length;
-    for (var i = 0; i < len; i++) {
+    for ( var i = 0; i < len; i++ ) {
 
-      if (newColor === baseColor) {
+      if ( newColor === baseColor ) {
         // paths[i].style.fill = "#535B5F";
-        paths[i].style.fill = "#8a8a7c";
+        paths[ i ].style.fill = "#8a8a7c";
       }
-      else paths[i].style.fill = newColor;
+      else paths[ i ].style.fill = newColor;
 
-      if (newColor !== residentColor) paths[i].style.stroke = baseStrokeColor;
+      if ( newColor !== residentColor ) paths[ i ].style.stroke = baseStrokeColor;
     }
   }
 }
 
 // eslint-disable-next-line
-function selectedCountryFill(selectedCountry) {
+export function selectedCountryFill ( selectedCountry ) {
 
   // var svg = currentMap.querySelector("#SAMsvg");
   // // var svgDoc = svg.getSVGDocument();
   // // var svgDoc = svg.contentDocument;
-  
+
   // svgDoc = svg.contentDocument;
   // if (!svgDoc) svgDoc = svg.getSVGDocument();
 
   // var cc = svgDoc.getElementById(selectedCountry);
 
-  let currentBirdMap = document.getElementById("currentBirdMap");
-  let cc = currentBirdMap.querySelector("#" + selectedCountry);
+  let currentBirdMap = document.getElementById( "currentBirdMap" );
+  let cc = currentBirdMap?.querySelector( "#" + selectedCountry );
 
-  fillSAMmap(cc);
-  newFillColor(cc, selectedCountryFillColor);
-  newStrokeColor(cc, baseStrokeColor);
+  fillSAMmap( cc );
+  newFillColor( cc, selectedCountryFillColor );
+  newStrokeColor( cc, baseStrokeColor );
 }
 
-function newStrokeColor(obj, newColor) {
+function newStrokeColor ( obj, newColor ) {
 
   // TODO : (reduce the Falklands filter dropShadow if possible?)
-  if (obj.nodeName === "path" || obj.nodeName === "circle") {
+  if ( obj.nodeName === "path" || obj.nodeName === "circle" ) {
     obj.style.stroke = newColor;
   }
 
-  else if (obj.parentNode.nodeName === "g") {
+  else if ( obj.parentNode.nodeName === "g" ) {
 
-    var paths = obj.querySelectorAll("path");
+    var paths = obj.querySelectorAll( "path" );
 
     var len = paths.length;
-    for (var i = 0; i < len; i++) {
+    for ( var i = 0; i < len; i++ ) {
 
-      if (obj.id === "Falklands") {
-        paths[i].style.stroke = "#ddd";
+      if ( obj.id === "Falklands" ) {
+        paths[ i ].style.stroke = "#ddd";
       }
 
-      else paths[i].style.stroke = newColor;
+      else paths[ i ].style.stroke = newColor;
     }
   }
 }
 
-/* global  mapsCollection saveMapButton  currentMap */
 // eslint-disable-next-line
-function highlightSAMmap(index, current) {
+export function highlightSAMmap ( index, current ) {
 
-  let currentBirdMap = document.getElementById("currentBirdMap");
+  let currentBirdMap = document.getElementById( "currentBirdMap" );
 
   // TODO: 
   // if this bird is already highlighted = do nothing
   // if this bird is in the mapsCollection = set saveMapButton display to none
 
-  var cList = birds[index].split("-");  // cList = []
+  var cList = birds[ index ].split( "-" );  // cList = []
 
-  for (var country in countries) {
+  for ( var country in countries ) {
 
     // var cc = svgDoc.getElementById(country);
-    let cc = currentBirdMap.querySelector("#" + country);
+    let cc = currentBirdMap?.querySelector( "#" + country );
 
-    if (!cc) continue;
+    if ( !cc ) continue;
 
     // because the Falklands is the last country in the occurrence lists apparently split() is returning an extra character (newline?)
-    if (country === "Falklands") cList[countries[country]] = cList[countries[country]].trim();
+    if ( country === "Falklands" ) cList[ countries[ country ] ] = cList[ countries[ country ] ].trim();
 
-      // cList[countries["Ecuador"]] = 7, so 8th item in the cList
-    switch (cList[countries[country]]) {
+    // cList[countries["Ecuador"]] = 7, so 8th item in the cList
+    switch ( cList[ countries[ country ] ] ) {
 
-    case "X(e)":
+      case "X(e)":
 
-      newFillColor(cc, endemicColor);
-      newStrokeColor(cc, baseStrokeColor);
+        newFillColor( cc, endemicColor );
+        newStrokeColor( cc, baseStrokeColor );
         break;
-      
-    case "X(eb)":
 
-      newFillColor(cc, endemicBreederColor);
-      newStrokeColor(cc, baseStrokeColor);
-      break;
+      case "X(eb)":
 
-    case "X":
+        newFillColor( cc, endemicBreederColor );
+        newStrokeColor( cc, baseStrokeColor );
+        break;
 
-      newFillColor(cc, residentColor);
-      // newStrokeColor(cc, baseStrokeColor);
-      newStrokeColor(cc, darkerStrokeColor);
-      break;
+      case "X":
 
-    case "NB":
+        newFillColor( cc, residentColor );
+        // newStrokeColor(cc, baseStrokeColor);
+        newStrokeColor( cc, darkerStrokeColor );
+        break;
 
-      newFillColor(cc, nonBreederColor);
-      // newStrokeColor(cc, baseStrokeColor);
-      newStrokeColor(cc, darkerStrokeColor);
-      break;
+      case "NB":
 
-    case "V":
+        newFillColor( cc, nonBreederColor );
+        // newStrokeColor(cc, baseStrokeColor);
+        newStrokeColor( cc, darkerStrokeColor );
+        break;
 
-      newFillColor(cc, vagrantColor);
-      newStrokeColor(cc, darkerStrokeColor);
+      case "V":
 
-      break;
+        newFillColor( cc, vagrantColor );
+        newStrokeColor( cc, darkerStrokeColor );
 
-    case "U":
-      newFillColor(cc, unconfirmedColor);
-      // newStrokeColor(cc, darkerStrokeColor);
-      newStrokeColor(cc, highlightStrokeColor);
-      break;
+        break;
 
-    case "IN":
+      case "U":
+        newFillColor( cc, unconfirmedColor );
+        // newStrokeColor(cc, darkerStrokeColor);
+        newStrokeColor( cc, highlightStrokeColor );
+        break;
 
-      newFillColor(cc, introducedColor);
-      // newStrokeColor(cc, darkerStrokeColor);
-      newStrokeColor(cc, highlightStrokeColor);
-      break;
+      case "IN":
 
-    case "EX":
+        newFillColor( cc, introducedColor );
+        // newStrokeColor(cc, darkerStrokeColor);
+        newStrokeColor( cc, highlightStrokeColor );
+        break;
 
-      newFillColor(cc, extinctColor);
-      newStrokeColor(cc, baseStrokeColor);
-      break;
+      case "EX":
 
-    case "EX(e)":
+        newFillColor( cc, extinctColor );
+        newStrokeColor( cc, baseStrokeColor );
+        break;
 
-      newFillColor(cc, extinctColor);
-      newStrokeColor(cc, baseStrokeColor);
-      break;
+      case "EX(e)":
 
-    default:
-      newFillColor(cc, baseColor);
-      newStrokeColor(cc, baseStrokeColor);
+        newFillColor( cc, extinctColor );
+        newStrokeColor( cc, baseStrokeColor );
+        break;
+
+      default:
+        newFillColor( cc, baseColor );
+        newStrokeColor( cc, baseStrokeColor );
     }
   }
 
@@ -283,18 +283,18 @@ function highlightSAMmap(index, current) {
 }
 
 
-function alreadyInMapsCollection() {
+export function alreadyInMapsCollection () {
 
   const len = mapsCollection.children.length;
 
-  if (len > 0) {
+  if ( len > 0 ) {
 
-    var thisInstance = map.children[0];
+    var thisInstance = map.children[ 0 ];
     // var thisCommonName = thisInstance.children[0].children[0].innerText;
-    var thisSciName = thisInstance.children[0].children[2].innerText;
-    
-    var birdNameCollection = mapsCollection.getElementsByClassName("smallBirdText");
-    return Array.from(birdNameCollection).some(bird => bird.children[2].innerText === thisSciName);
+    var thisSciName = thisInstance.children[ 0 ].children[ 2 ].innerText;
+
+    var birdNameCollection = mapsCollection.getElementsByClassName( "smallBirdText" );
+    return Array.from( birdNameCollection ).some( bird => bird.children[ 2 ].innerText === thisSciName );
   }
 
   else {

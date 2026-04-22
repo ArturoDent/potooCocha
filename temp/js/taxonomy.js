@@ -1,48 +1,77 @@
 // "use strict";
+import { countries2Postals, currentCountry, searchSpecials } from "./main.js";
+import { map, highlightSAMmap, alreadyInMapsCollection } from "./SouthAmerica.js";
+import { mapsCollection, saveMapButton } from "./birdMapFactory.js";
+import { numFamiliesList, numSpeciesList } from "./numList.js";
+import { navigateToFamily } from "./familyMap.js";
 
-var lastQuery;
+import { searchRegexTree } from "./search/search_functions.js";
+import { specialSearch, getSearchSpecialsQuery } from "./search/search_entry.js";
+import { loadSearchResults, resetTaxPageHeight } from "./search/search_handleResults.js";
+
+
+export let lastQuery = "";
+
+export function setLastQuery ( q ) {
+  lastQuery = q;
+}
+
+export function getLastQuery () {
+  return lastQuery;
+}
+
+
 var lastSpecies;
 
 // var species;
-var families;
+// var families;
+export let families;
 var numFamilies;
 
 // eslint-disable-next-line
-var birds;
+export let birds;
 
 var searchCountryText;
 // var taxTreeArticleOpen = false;
 
 var taxPage;
-var taxPanel;
-var searchSpecials;
+// var taxPanel;
+// var searchSpecials;
 var resultsPanel;
-var searchResults;
-var searchResultsScroller;
-var taxPageScroller;
+export let searchResults;
+export let searchResultsScroller;
+export let taxPageScroller;
 
-var resultsPanelOpen = false;
+export let resultsPanelOpen = false;
 var printerButton;
-var closeOpenFamiliesButton;
-
-// var searchInput;
-// var searchCache = {};
-// var previousSearchResults;
+// var closeOpenFamiliesButton;
 
 var lastResultsSpecies;
-var lastIndex;
+export let lastIndex;
 
-var searchSlideUpWrapper;
+// var searchSlideUpWrapper;
 // var taxInstructionsButton;
-var searchInstructionsOpen = true;
+// var searchInstructionsOpen = true;
 
-let taxNodeByKey = new Map();
+export let taxNodeByKey = new Map();
+let taxonomyInitialized = false;
+
+// let observer;
+
+function ensureTaxonomyDomRefs () {
+  if ( !searchCountryText ) searchCountryText = document.getElementById( "searchCountryText" );
+  if ( !taxPage ) taxPage = document.getElementById( "taxPage" );
+  if ( !taxPageScroller ) taxPageScroller = document.getElementById( "taxPageScroller" );
+  if ( !searchResults ) searchResults = document.getElementById( "searchResults" );
+  if ( !searchResultsScroller ) searchResultsScroller = document.getElementById( "searchResultsScroller" );
+  if ( !resultsPanel ) resultsPanel = document.getElementById( "results-panel" );
+  if ( !printerButton ) printerButton = document.getElementById( "printerButton" );
+}
 
 
-/* global   currentMap  currentCountry   */
-
-// document.addEventListener("DOMContentLoaded", function () {
-window.addEventListener( "load", function () {
+export function initTaxonomy () {
+  if ( taxonomyInitialized ) return;
+  taxonomyInitialized = true;
 
   // searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
   // searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";
@@ -50,20 +79,20 @@ window.addEventListener( "load", function () {
   // taxInstructionsButton = document.querySelector(".taxInstructionsButton");
 
   printerButton = document.getElementById( "printerButton" );
-  // printerButton.addEventListener( "click", printSearchResults );
+  printerButton?.addEventListener( "click", printSearchResults );
 
-  closeOpenFamiliesButton = document.getElementById( "closeOpenFamiliesButton" );
-  // closeOpenFamiliesButton.addEventListener( "click", closeAllFamilies );
+  const closeOpenFamiliesButton = document.getElementById( "closeOpenFamiliesButton" );
+  closeOpenFamiliesButton?.addEventListener( "click", closeAllFamilies );
 
   searchCountryText = document.getElementById( "searchCountryText" );
 
-  searchInput = document.getElementById( "searchInput" );
-  searchSpecials = document.getElementById( "searchSpecials" );
+  // searchInput = document.getElementById( "searchInput" );
+  // searchSpecials = document.getElementById( "searchSpecials" );
 
   // searchInput.addEventListener("input", getQuery);
   // "change", "click", "textInput", "focusin"
 
-  // searchSpecials.addEventListener( "click", getSearchSpecialsQuery );
+  searchSpecials?.addEventListener( "click", getSearchSpecialsQuery );
   // searchSpecials.addEventListener( "keyup", getSearchSpecialsQuery );
 
   // taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
@@ -93,18 +122,11 @@ window.addEventListener( "load", function () {
     }
   }, false );
 
-
-  taxPanel = document.getElementById( "tax-panel" );
-
   // preloading the file occurrences.txt
   // getTEXT("../occurrences/occurrences.txt", loadOccurrences);
   getTEXT( "../occurrences/occurrences.txt", data => birds = data.split( "\n" ) );
 
-  var SAMTarget = document.getElementById( "SAM" );
-  var evt = new Event( "click", { "bubbles": true, "cancelable": false } );
-  SAMTarget?.dispatchEvent( evt );
-  toggleCountryMenuLayer();
-} );
+}
 
 // fetch() not supported by IE11
 // const response = await fetch('http://example.com/movies.json');
@@ -122,7 +144,7 @@ function getTEXT ( url, success ) {
   return xhr;
 }
 
-function getJSON ( url, success ) {
+export function getJSON ( url, success ) {
   var xhr = new XMLHttpRequest();
   xhr.open( 'GET', url, true );
   xhr.responseType = 'json';
@@ -192,20 +214,24 @@ function toggleFooterFocusable ( disable ) {
 // }
 
 // eslint-disable-next-line
-function loadCountryTaxonomy ( country ) {
+export function loadCountryTaxonomy ( country ) {
+  ensureTaxonomyDomRefs();
 
   // if (searchSpecials.classList.contains("grayed")) {
   //   enableSearchSpecials();
   //   closeOpenFamiliesButton.setAttribute("tabindex", "0");
   // }
 
+
   // lastQuery.slice(0, 24) to limit lastQuery length in the searchTerm flyout
-  if ( lastQuery ) {
-    // document.getElementById( "searchTerm" ).innerHTML = country + " : <span>" + lastQuery + "</span>";
-    let searchTermElement = document.getElementById( "searchTerm" ).innerHTML = country + " : <span>" + lastQuery + "</span>";
+  let searchTermElement = document.getElementById( "searchTerm" );
+  if ( searchTermElement ) {
+    if ( lastQuery ) {
+      searchTermElement.innerHTML = country + " : <span>" + lastQuery + "</span>";
+    }
+    else
+      searchTermElement.innerHTML = country + " : <span>" + "enter a search term</span>";
   }
-  else
-    document.getElementById( "searchTerm" ).innerHTML = country + " : <span>" + "enter a search term above</span>";
 
   if ( country !== "South America" ) {
     searchResults.classList.remove( "samTax" );
@@ -223,6 +249,8 @@ function loadCountryTaxonomy ( country ) {
   }
   else if ( country === "South America" ) {
     getJSON( "JSON/SouthAmerica/SouthAmerica.json", getCountryJSON );
+    searchResults = document.getElementById( "searchResults" );
+
     searchResults.classList.add( "samTax" );
 
     // <div id="searchSpecials">
@@ -241,8 +269,11 @@ function loadCountryTaxonomy ( country ) {
     // so unconfirmeds and vagrants aren't selectable if South America is chosen
     // searchSpecials.querySelector("div:nth-of-type(3)").classList.add("notAvailable");
     // searchSpecials.querySelector("div:nth-of-type(4)").classList.add("notAvailable");
-    searchSpecials.querySelector( '[data-special="unconfirmed"]' ).classList.add( "notAvailable" );
-    searchSpecials.querySelector( '[data-special="vagrant"]' ).classList.add( "notAvailable" );
+
+    // searchSpecials = document.getElementById( "searchSpecials" );
+
+    searchSpecials?.querySelector( '[data-special="unconfirmed"]' ).classList.add( "notAvailable" );
+    searchSpecials?.querySelector( '[data-special="vagrant"]' ).classList.add( "notAvailable" );
 
 
     // searchSpecials.classList.add("SAM");
@@ -265,11 +296,15 @@ function loadCountryTaxonomy ( country ) {
   var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
 
   if ( !lastQuery ) {
-    currentMap.querySelector( ".saveMapButton" ).style.display = "none";
-    document.querySelector( ".colorKey" ).style.opacity = "0.9";
+    // currentMap.querySelector( ".saveMapButton" ).style.display = "none";
+    map.querySelector( ".saveMapButton" ).style.display = "none";
+    /** @type {HTMLElement | null} */
+    const el = document.querySelector( ".colorKey" );
+    if ( el ) el.style.opacity = "0.9";
   }
   else if ( specials.test( lastQuery ) ) {
-    currentMap.querySelector( ".saveMapButton" ).style.display = "none";
+    // currentMap.querySelector( ".saveMapButton" ).style.display = "none";
+    map.querySelector( ".saveMapButton" ).style.display = "none";
   }
 
 
@@ -277,13 +312,48 @@ function loadCountryTaxonomy ( country ) {
   else if ( country === "Falklands" ) searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 
-  if ( country === "Falklands" )
-    document.querySelector( "#treeIntroText" ).innerHTML = "Falklands/Malvinas" + " &nbsp; : &nbsp; " + numFamiliesList[ country ] + " families, " + numSpeciesList[ country ] + " species";
-  else document.querySelector( "#treeIntroText" ).innerHTML = country + " &nbsp; : &nbsp; " + numFamiliesList[ country ] + " families, " + numSpeciesList[ country ] + " species";
+  const treeIntroTextElement = document.querySelector( "#treeIntroText" );
+
+  if ( treeIntroTextElement ) {
+    if ( country === "Falklands" )
+      treeIntroTextElement.innerHTML = "Falklands/Malvinas" + " : " + numFamiliesList[ country ] + " families, " + numSpeciesList[ country ] + " species";
+    else treeIntroTextElement.innerHTML = country + " : " + numFamiliesList[ country ] + " families, " + numSpeciesList[ country ] + " species";
+  }
+
+  // initStickyHeaders();
 }
 
+
+function initTaxPageStickyHeaders () {
+
+  const scrollContainer = document.querySelector( '#taxPageScroller' );
+
+  const observer = new IntersectionObserver(
+    ( [ e ] ) => {
+      console.log( "Intersection changed:", e.intersectionRatio ); // Debug log
+      e.target.classList.toggle( "sticky", e.intersectionRatio < 1 );
+    },
+    {
+      root: scrollContainer,
+      threshold: [ 1 ]
+    }
+  );
+
+  const headers = document.querySelectorAll( '.fTitle' );
+  // console.log( `Found ${ headers.length } headers to observe.` );
+
+  headers.forEach( header => {
+    observer.observe( header );
+  } );
+}
+
+// Call this function inside your search/load logic 
+// right after you set .innerHTML or append the list elements.
+
+
 // eslint-disable-next-line no-unused-vars
-function toggleSearchResultsPanel () {
+export function toggleSearchResultsPanel () {
+  ensureTaxonomyDomRefs();
 
   // resultsPanel.classList.toggle("resultsPanelBoolean");
 
@@ -358,6 +428,7 @@ function toggleSearchResultsPanel () {
 // }
 
 function buildTaxTree ( thisCountryFamilies, country ) {
+  ensureTaxonomyDomRefs();
 
   // TODO: why building this here instead of using the *SACC.html file??
 
@@ -408,19 +479,33 @@ function buildTaxTree ( thisCountryFamilies, country ) {
   resetTaxPageHeight();
 
   indexTaxTree();
+  initTaxPageStickyHeaders();
 }
 
 
 function indexTaxTree () {
   taxNodeByKey.clear();
 
-  document.querySelectorAll( "#tree li[data-i]" ).forEach( li => {
+  // @ts-check
+  /** @type {NodeListOf<HTMLLIElement>} */
+  const byI = document.querySelectorAll( "#tree li[data-i]" );
+  byI.forEach( li => {
     taxNodeByKey.set( `bird:${ li.dataset.i }`, li );
   } );
 
-  document.querySelectorAll( "#tree li.family[data-family], #tree li.familyOpen[data-family]" ).forEach( li => {
+  /** @type {NodeListOf<HTMLLIElement>} */
+  const byFamily = document.querySelectorAll( "#tree li.family[data-family], #tree li.familyOpen[data-family]" );
+  byFamily.forEach( li => {
     taxNodeByKey.set( `family:${ li.dataset.family }`, li );
   } );
+
+  // document.querySelectorAll( "#tree li[data-i]" ).forEach( li => {
+  //   taxNodeByKey.set( `bird:${ li.dataset.i }`, li );
+  // } );
+
+  // document.querySelectorAll( "#tree li.family[data-family], #tree li.familyOpen[data-family]" ).forEach( li => {
+  //   taxNodeByKey.set( `family:${ li.dataset.family }`, li );
+  // } );
 }
 
 
@@ -429,8 +514,10 @@ function getCountryJSON ( data ) {
   families = data.birds.families;
   numFamilies = families.length;
 
+
+  let results;
+
   if ( lastQuery ) {
-    var results = {};
     // TODO: endemic breeder|unconfirmed
     var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
     if ( specials.test( lastQuery ) ) results = specialSearch( families, lastQuery );
@@ -444,13 +531,11 @@ function getCountryJSON ( data ) {
   buildTaxTree( families, countries2Postals[ currentCountry ] );
 }
 
-/* global   currentMap  currentCountry  familyMap */
-
 
 function gotoSACCLink ( e ) {
 
   const familySciName = e.target.closest( "li[data-family]" ).dataset.family;
-  const birdFullName = e.target.closest( 'li[data-i]' )?.innerText || "";
+  const birdFullName = e.target.closest( "li[data-i]" )?.innerText || "";
 
   navigateToFamily( familySciName, birdFullName );
 
@@ -462,6 +547,7 @@ function gotoSACCLink ( e ) {
 
 // <ul id="searchResults"></ul>
 function gotoMatch ( e ) {
+  ensureTaxonomyDomRefs();
 
   // e.target === 'Mergus octosetaceus' or 'Brazilian Merganser'
 
@@ -484,7 +570,8 @@ function gotoMatch ( e ) {
   // else return;  // clicked was null so clicked on scrollBar or outside the searchResults
 
   if ( !clicked ) return;
-  if ( clicked.className !== 'family-container' && clicked.className !== 'bird' ) return;
+  // if ( clicked.className !== 'family' && clicked.className !== 'bird' ) return;
+  if ( !clicked.classList.contains( 'family' ) && !clicked.classList.contains( 'bird' ) ) return;
 
   // eText = "Horned ScreamerAnhima cornuta"
   // clicked.children[1].innerText = "Anhima cornuta"
@@ -494,6 +581,7 @@ function gotoMatch ( e ) {
   // but last species was a family; lastSpecies.className === 'fTitle'
 
   if ( lastSpecies?.className !== 'fTitle' ) {
+    let sciNameSpan;
     if ( sciNameSpan = map.querySelector( "#currentBirdName span:last-of-type" ) ) {
       const mapSciName = sciNameSpan.innerText;
       if ( mapSciName === clicked.querySelector( "span:last-of-type" ).innerText ) {
@@ -518,7 +606,7 @@ function gotoMatch ( e ) {
   const birdNode = taxNodeByKey.get( `bird:${ clicked.dataset.i }` );
   const familyNode = taxNodeByKey.get( `family:${ familySciName }` );
 
-  if ( clicked.className === "bird" ) {
+  if ( clicked.classList.contains( "bird" ) ) {
 
     const familyUList = familyNode?.querySelector( ":scope > ul.birds" );
     if ( !familyNode || !familyUList || !birdNode ) return;
@@ -568,7 +656,7 @@ function gotoMatch ( e ) {
       saveMapButton.style.display = "block";
   }
 
-  else if ( clicked.className === "family-container" ) {
+  else if ( clicked.classList.contains( "family" ) ) {
 
     if ( lastResultsSpecies ) {
       lastResultsSpecies.classList.remove( "active" );
@@ -587,28 +675,32 @@ function gotoMatch ( e ) {
     } );
 
     familyNode.firstChild.classList.add( "active" );
-    lastSpecies = clicked.firstChild;  // remove active from lastSpecies before this
+    // lastSpecies = clicked.firstChild;  // remove active from lastSpecies before this
+    lastSpecies = clicked;  // remove active from lastSpecies before this
     lastSpecies.classList.add( "active" );
     lastResultsSpecies = familyNode.firstChild;
   }
 }
 
-function addBirdNameToMap ( name ) {
+export function addBirdNameToMap ( name ) {
 
   var temp = "";
 
-  if ( name ) {
-    temp = "<span>" + name.firstChild.textContent + "</span><br/><span>" + name.lastChild.textContent + "</span>";
-    document.getElementById( "currentBirdName" ).innerHTML = temp;
-  }
-  else {
-    document.getElementById( "currentBirdName" ).innerHTML = temp;
+  const currentBirdNameElement = document.getElementById( "currentBirdName" );
+  if ( currentBirdNameElement ) {
+    if ( name ) {
+      temp = "<span>" + name.firstChild.textContent + "</span><br/><span>" + name.lastChild.textContent + "</span>";
+      currentBirdNameElement.innerHTML = temp;
+    }
+    else {
+      currentBirdNameElement.innerHTML = temp;
+    }
   }
 }
 
-/* global highlightSAMmap */
 
 function toggleFamilyOpen ( event ) {
+  ensureTaxonomyDomRefs();
 
   if ( event.ctrlKey || event.metaKey ) {
     gotoSACCLink( event );
@@ -625,6 +717,7 @@ function toggleFamilyOpen ( event ) {
   var familyUList;
   var familyHeader;
   var speciesTarget;
+  const treeIntroTextElement = document.querySelector( "#treeIntroText" );
 
   if ( event.target.closest( "ul.birds" ) ) speciesTarget = event.target.closest( "ul.birds li" );
   else {
@@ -666,7 +759,8 @@ function toggleFamilyOpen ( event ) {
     var scientificFamily = familyHeader.firstChild.children[ 1 ].textContent;
     if ( !scientificFamily ) scientificFamily = familyHeader.firstChild.children[ 0 ].textContent;
 
-    document.querySelector( "#treeIntroText" ).innerHTML = currentCountry + "  &nbsp; : &nbsp; " + scientificFamily + " has " + familyUList.children.length + " species";
+    if ( treeIntroTextElement )
+      treeIntroTextElement.innerHTML = currentCountry + " : " + scientificFamily + " has " + familyUList.children.length + " species";
   }
 
   else if ( familyUList ) {    // was open
@@ -678,7 +772,9 @@ function toggleFamilyOpen ( event ) {
     if ( reset.length ) {
       reset[ 0 ].classList.remove( "active" );
     }
-    document.querySelector( "#treeIntroText" ).innerHTML = currentCountry + "   &nbsp; : &nbsp; " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species";
+
+    if ( treeIntroTextElement )
+      treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species";
   }
 
   //   clicked on a species in the taxTree
@@ -705,7 +801,8 @@ function toggleFamilyOpen ( event ) {
     lastIndex = Number( speciesTarget.dataset.i );
     highlightSAMmap( lastIndex, "currentMap" );
 
-    document.querySelector( "#treeIntroText" ).innerHTML = currentCountry + "   &nbsp; : &nbsp; " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species *";
+    if ( treeIntroTextElement )
+      treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species *";
 
     if ( mapsCollection.getElementsByClassName( "smallBird" ).length === 5 || alreadyInMapsCollection() ) {
       saveMapButton.style.display = "none";
@@ -718,6 +815,9 @@ function toggleFamilyOpen ( event ) {
 }
 
 function closeAllFamilies () {
+  ensureTaxonomyDomRefs();
+
+  const treeIntroTextElement = document.querySelector( "#treeIntroText" );
 
   for ( const node of taxNodeByKey.values() ) {
     if ( node.matches( "li.familyOpen" ) ) {
@@ -745,7 +845,8 @@ function closeAllFamilies () {
   // }
 
   // **** reset families and species of country
-  document.querySelector( "#treeIntroText" ).innerHTML = currentCountry + "   &nbsp; : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species *";
+  if ( treeIntroTextElement )
+    treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species *";
 }
 
 function printSearchResults ( evt ) {
@@ -763,125 +864,137 @@ function printSearchResults ( evt ) {
   // var css = "<style>";
   // css += "</style>";
 
+  //   let divId = "searchResults";
+
+  // var content = '<ul class="print-results">' + document.getElementById(divId).innerHTML + "</ul>";
+
+  // var html = '<html><head><title></title><head>';
+
+  // var css = "<style>";
+  // css += ".print-results { list-style-type: none; margin: 0; padding: 0 0 0 40px; }";
+  // css += "h3 { margin: 0 0 3ch 0; text-align: center; padding-left: 0; }";
+  // css += ".family, .familyOpen { margin: 2ch 0 0.5ch 10%; list-style-type: disc; }";
+  // css += ".birds, .bird { list-style-type: none; margin-left: 10%; padding-left: 0; }";
+  // css += ".fsc { position: absolute; left: 60%; }";
+  // css += ".bird>span { padding-left: 10px;}";
+  // css += ".bird span:last-child { position: absolute; left: 60%; }";
+  // css += "</style>";
+  // html += css;
+
+  // html += '</head><body>';
+
+
   var css =
-    `        <style>
-            h3 {
-                position: relative;
-                top: 20px;
-                margin: 0 0 3.5ch 0;
-                text-align: center;
-                padding-left: 0;
-            }
+    `<style>
+      h3 {
+        position: relative;
+        top: 20px;
+        margin: 0 0 3.5ch 0;
+        text-align: center;
+        padding-left: 0;
+      }
 
-            #searchResults {
-                position: relative;
-                padding: 20px 0 20px 0;
-                list-style-type: none;
-                font-size: 1rem;
-            }
+      #searchResults {
+        position: relative;
+        padding: 20px 0 20px 0;
+        list-style-type: none;
+        font-size: 1rem;
+      }
 
-            #searchResults span:not(.fsc):last-child {
-                position: absolute;
-                left: calc(56% + 2ch);
-            }
+      #searchResults span:not(.fsc):last-child {
+        position: absolute;
+        left: calc(56% + 2ch);
+      }
 
-            #searchResults span:not(.fsc):first-child {
-                position: relative;
-                left: 16%;
-            }
+      #searchResults span:not(.fsc):first-child {
+        position: relative;
+        left: 10%;
+      }
 
-            .fsc {
-            display: inline-block;
-                position: absolute;
-                /* top: 0; */
-                left: 56%;
-                font-weight: bold;
-                font-style: normal;
-            }
+      .fsc {
+        display: inline-block;
+        position: absolute;
+        left: 56%;
+        font-weight: bold;
+        font-style: normal;
+      }
 
-            .fco {
-            display: inline-block;
-                position: absolute;
-                left: 20%;
-                font-weight: bold;
-            }
+      .fco {
+        display: inline-block;
+        position: absolute;
+        left: 20%;
+        font-weight: bold;
+      }
 
-            .endemic::before {
-                content: "e";
-                position: relative;
-                left: -0.53rem;
-                font-size: 0.8rem;
-            }
+      .endemic::before {
+        content: "e";
+        position: relative;
+        left: -0.53rem;
+        font-size: 0.8rem;
+      }
 
-            .endemic-breeder::before {
-                content: "*";
-                position: relative;
-                left: -0.53rem;
-                font-size: 0.8rem;
-            }
+      .endemic-breeder::before {
+        content: "*";
+        position: relative;
+        left: -0.53rem;
+        font-size: 0.8rem;
+      }
 
-            .extinct::before {
-                content: "x";
-                position: relative;
-                left: -0.53rem;
-                font-size: 0.8rem;
-            }
+      .extinct::before {
+        content: "x";
+        position: relative;
+        left: -0.53rem;
+        font-size: 0.8rem;
+      }
 
-            .u::before {
-                content: "u";
-                position: relative;
-                left: -0.53rem;
-                font-size: 0.8rem;
-            }
+      .u::before {
+        content: "u";
+        position: relative;
+        left: -0.53rem;
+        font-size: 0.8rem;
+      }
 
-            .va::before {
-                content: "v";
-                position: relative;
-                left: -0.53rem;
-                font-size: 0.8rem;
-            }
+      .va::before {
+        content: "v";
+        position: relative;
+        left: -0.53rem;
+        font-size: 0.8rem;
+      }
 
-            .family-header {
-                position: relative;
-                font-weight: bold;
-                padding: 1px 0 1px 0;
-            }
+      .family {
+        position: relative;
+        font-weight: bold;
+        // padding: 1px 0 1px 0;
+        margin-top: 2ch;
+      }
 
-            .bird-list {
-                position: relative;
-                top: -13px;
-                margin-bottom: 5px;
-                padding-left: 2ch;
-                list-style: none;
-            }
+      li.bird {
+        padding: 2px 0 2px 2ch;
+      }
 
-            li.bird {
-                padding: 2px 0 2px 0;
-            }
+      li.bird span:first-child {
+        display: inline-block;
+        position: relative;
+        left: 16%;
+      }
+          
+      .bird span:last-child { display: inline-block; }
+          
+        /* 1. Prevent a single bird row from being sliced horizontally */
+      .bird {
+        display: block;
+        width: 100%;
+        break-inside: avoid;
+        page-break-inside: avoid; /* For older browser support */
+      }
 
-            li.bird span:first-child {
-            display: inline-block;
-                position: relative;
-                left: 16%;
-            }
-                
-            .bird span:last-child { display: inline-block; }
-                
-             /* 1. Prevent a single bird row from being sliced horizontally */
-            .bird {
-            display: block;
-            width: 100%;
-              break-inside: avoid;
-              page-break-inside: avoid; /* For older browser support */
-            }
+        /* 2. Prevent a Family Header from being separated from its first bird */
+      .family {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
 
-              /* 2. Prevent a Family Header from being separated from its first bird */
-            .family-header {
-              break-after: avoid;
-              page-break-after: avoid;
-            }
-
-        </style>`;
+    </style>`;
 
   var html = '<html><head><title></title><head>';
   html += css;
