@@ -33,9 +33,17 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  
+  padding: 10px 15px;
   z-index: 1000;
-  padding: 20px;
+  
+  display: block;             /* Ensures it behaves as a standard box */
+  box-sizing: border-box;    /* Includes padding in the width calculation */
+  
+  width: max-content;
+  max-width: 64vw;          /* Prevents it from getting too skinny or too wide */
+  overflow: hidden;          /* Finally kills that scrollbar */
+  
+  text-align: left;
   color: white;
   text-shadow: 0 0.077rem rgba(0, 0, 0, 0.5);
   
@@ -48,9 +56,9 @@
   transform: translate(-50%, -50%) scale(0.9);
   
   transition: 
-    opacity 0.3s ease, 
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-    display 0.3s allow-discrete; /* Essential for native dialogs */
+    opacity 0.5s ease, 
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    display 0.5s allow-discrete; /* Essential for native dialogs */
 }
 
 /* Target the dialog specifically when it is open */
@@ -61,7 +69,7 @@
   /* This tells the browser what the "start" state was for the animation */
   @starting-style {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.5);
   }
 }
 
@@ -72,11 +80,33 @@
 }
 
 #instructionsDialog[open]::backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   
   @starting-style {
     background-color: rgba(0, 0, 0, 0);
   }
+}
+
+/* 1. Reset the main list to bring bullets inside the padding */
+#instructionsDialog ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; /* Key: Moves bullets into the text area */
+}
+
+/* 2. Space out the main instructions */
+#instructionsDialog ul > li {
+  /* margin-bottom: 0.3rem; */
+  font-weight: bold;
+}
+
+/* 3. Style the nested SACC location list */
+#instructionsDialog ul ul {
+  list-style-position: inside;
+  list-style-type: decimal;
+  margin-left: 2rem;        /* Indent the sub-list */
+  /* margin-top: 0.5rem; */
+  font-weight: normal;       /* Make sub-points less "loud" */
 }
 
 #openInstructions {
@@ -88,7 +118,6 @@
   cursor: pointer;
   transition: all 2s;
   
-  
   border: 0.077rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.23rem;
   background-color: var(--panel-color);
@@ -96,9 +125,10 @@
 }
 
 #closeInstructions {
-  margin-top: 50px;
   padding: 2px 10px;
   font-size: 1.5rem;
+  display: block;
+  margin: 20px auto 0 auto; /* Centers the button horizontally */
   color: var(--panel-flyout-font-color);
   cursor: pointer;
   transition: all 2s;
@@ -108,12 +138,6 @@
   background-color: var(--panel-color);
   box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.7), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.7), 0 0 0.15rem rgba(0, 0, 0, 0.7);
 }
-
-/* ::backdrop {
-  background-color: white;
-  opacity: 0.6;
-} */
-
 
 #searchInput {
   display: inline-block;
@@ -208,7 +232,7 @@
   height: auto;
   margin-top: 4vh;
   margin-bottom: 4vh;
-  padding: 0 0 1.5ch 0;
+  padding: 0 0 2ch 0;
   z-index: 0;
   border: none;
   border-radius: 0 0 20px 0;
@@ -323,7 +347,7 @@
 }
 
 #searchResults {
-  padding: 0 0 1ch 0;
+  padding: 0;
   list-style-type: none;
   font-size: 0.9rem;
   cursor: pointer;
@@ -512,8 +536,12 @@
 #tree .familyOpen {
   position: relative;
   width: 100%;
-  padding: 0 0 0.46rem 0;
+  padding: 0 0 0.18rem 0;
   cursor: pointer;
+}
+
+#tree > li:last-child.familyOpen {
+  padding-bottom: 0;
 }
 
 /*target : family common name only*/
@@ -565,6 +593,13 @@ li.familyOpen .fTitle.sticky {
   padding: 0;
   font-size: 0.9rem;
   line-height: 1rem;
+}
+
+#tree > li:last-child.familyOpen ul,
+#tree > li:last-child.familyOpen ul.birds,
+#searchResults > li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 

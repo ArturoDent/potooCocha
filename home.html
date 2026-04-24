@@ -291,9 +291,20 @@
         <button id="openInstructions" command="show-modal" commandfor="instructionsDialog">Instructions</button>
 
         <dialog id="instructionsDialog" closedby="any">
-          <p>Type part of a word like "xantho" or "potoo".</p>
-          <p>Select an item in the search results or the taxonomic tree.</p>
-          <p>Control-click an item to open its SACC page location.</p>
+          <ul>
+            <li>Choose a country - South America loads at start. Click the "SA" button to change.</li>
+            <li>Type part of a word like "xantho" or "potoo" into the search query box.</li>
+            <li>You don't need to add accents, those names will still be found.</li>
+            <li>You don't need to capitalize.</li>
+            <li>Typing ALL of a family name, like 'Rheas' or 'Rheidae' will show all its species.</li>
+            <li>Select an item to show it on the map and show its position in the taxonomy.</li>
+            <li>Select an item in the taxonomic tree to show where it occurs on the map.</li>
+            <li>Control/Meta-click an item in the search results or taxonomy tree </li>
+            <ul>
+              <li> to open its SACC page location in another tab; or </li>
+              <li> double-click to open and go to that bird or family in its SACC location.</li>
+            </ul>
+          </ul>
           <button id="closeInstructions" commandfor="instructionsDialog" command="close">Close</button>
         </dialog>
         </br>
