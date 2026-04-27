@@ -30,6 +30,36 @@ html += css;
 
 html += '</head><body>';
 
+GULLSLARIDAE
+Gray GullLeucophaeus modestus
+Olrog's GullLarus atlanticus
+PENGUINSSPHENISCIDAE
+Galapagos PenguinSpheniscus mendiculus
+ALBATROSSESDIOMEDEIDAE
+Waved AlbatrossPhoebastria irrorata
+SHEARWATERSPROCELLARIIDAE
+Masatierra PetrelPterodroma defilippiana
+Stejneger's PetrelPterodroma longirostris
+Galapagos PetrelPterodroma phaeopygia
+Juan Fernandez PetrelPterodroma externa
+Pink-footed ShearwaterArdenna creatopus
+Galapagos ShearwaterPuffinus subalaris
+TYRANT FLYCATCHERSTYRANNIDAE
+Dinelli's DoraditoPseudocolopteryx dinelliana
+Straneck's TyrannuletSerpophaga griseicapilla
+Hudson's Black-TyrantKnipolegus hudsoni
+Black-crowned MonjitaNeoxolmis coronatus
+Lesser Shrike-TyrantAgriornis murinus
+MOCKINGBIRDSMIMIDAE
+White-banded MockingbirdMimus triurus
+PIPITS and WAGTAILSMOTACILLIDAE
+Pampas PipitAnthus chacoensis
+SPARROWSPASSERELLIDAE
+Chaco SparrowRhynchospiza strigiceps
+TANAGERSTHRAUPIDAE
+Tamarugo ConebillConirostrum tamarugense
+
+
 
   // < !--build:js js / app.min.js-- >
   // <script type="module" src="src/js/main.js"></script>

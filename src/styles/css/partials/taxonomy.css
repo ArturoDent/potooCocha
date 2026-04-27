@@ -39,9 +39,13 @@
   display: block;             /* Ensures it behaves as a standard box */
   box-sizing: border-box;    /* Includes padding in the width calculation */
   
-  width: max-content;
-  max-width: 64vw;          /* Prevents it from getting too skinny or too wide */
   overflow: hidden;          /* Finally kills that scrollbar */
+  
+  /* --- THE FIX --- */
+  width: 90%;                /* Occupy most of the screen on mobile */
+  max-width: 840px;          /* Look like a proper dialog on desktop */
+  min-width: 500px;          /* Prevent it from getting "skinny" */
+  /* ---------------- */
   
   text-align: left;
   color: white;
@@ -65,12 +69,6 @@
 #instructionsDialog[open] {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-
-  /* This tells the browser what the "start" state was for the animation */
-  @starting-style {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-  }
 }
 
 /* Optional: Smoothly fade the backdrop (the dark area behind the dialog) */
@@ -81,22 +79,24 @@
 
 #instructionsDialog[open]::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
-  
-  @starting-style {
-    background-color: rgba(0, 0, 0, 0);
-  }
 }
 
 /* 1. Reset the main list to bring bullets inside the padding */
-#instructionsDialog ul {
+ /* Key: Moves bullets into the text area */
+/* #instructionsDialog ul {
   margin: 0;
   padding: 0;
-  list-style-position: inside; /* Key: Moves bullets into the text area */
+  list-style-position: inside;
+} */
+
+#instructionsDialog ul {
+  margin: 0;
+  padding-left: 1rem;      /* Gives room for bullets to sit naturally */
+  list-style-position: outside; 
 }
 
 /* 2. Space out the main instructions */
 #instructionsDialog ul > li {
-  /* margin-bottom: 0.3rem; */
   font-weight: bold;
 }
 
@@ -105,7 +105,6 @@
   list-style-position: inside;
   list-style-type: decimal;
   margin-left: 2rem;        /* Indent the sub-list */
-  /* margin-top: 0.5rem; */
   font-weight: normal;       /* Make sub-points less "loud" */
 }
 
@@ -233,6 +232,7 @@
   margin-top: 4vh;
   margin-bottom: 4vh;
   padding: 0 0 2ch 0;
+  /* user-select: text; */
   z-index: 0;
   border: none;
   border-radius: 0 0 20px 0;

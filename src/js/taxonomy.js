@@ -73,11 +73,6 @@ export function initTaxonomy () {
   if ( taxonomyInitialized ) return;
   taxonomyInitialized = true;
 
-  // searchSlideUpWrapper = document.querySelector("#taxonomyArticle > div.slideUpWrapper");
-  // searchSlideUpWrapper.style.height = searchSlideUpWrapper.clientHeight + "px";
-
-  // taxInstructionsButton = document.querySelector(".taxInstructionsButton");
-
   printerButton = document.getElementById( "printerButton" );
   printerButton?.addEventListener( "click", printSearchResults );
 
@@ -222,7 +217,6 @@ export function loadCountryTaxonomy ( country ) {
   //   closeOpenFamiliesButton.setAttribute("tabindex", "0");
   // }
 
-
   // lastQuery.slice(0, 24) to limit lastQuery length in the searchTerm flyout
   let searchTermElement = document.getElementById( "searchTerm" );
   if ( searchTermElement ) {
@@ -275,7 +269,6 @@ export function loadCountryTaxonomy ( country ) {
     searchSpecials?.querySelector( '[data-special="unconfirmed"]' ).classList.add( "notAvailable" );
     searchSpecials?.querySelector( '[data-special="vagrant"]' ).classList.add( "notAvailable" );
 
-
     // searchSpecials.classList.add("SAM");
     taxPage.classList.add( "samTax" );
   }
@@ -292,7 +285,6 @@ export function loadCountryTaxonomy ( country ) {
     searchSpecials.querySelector( '[data-special="vagrant"]' ).classList.remove( "notAvailable" );
   }
 
-  // TODO: endemic breeder|unconfirmed ?
   var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
 
   if ( !lastQuery ) {
@@ -306,7 +298,6 @@ export function loadCountryTaxonomy ( country ) {
     // currentMap.querySelector( ".saveMapButton" ).style.display = "none";
     map.querySelector( ".saveMapButton" ).style.display = "none";
   }
-
 
   if ( country === "South America" ) searchCountryText.innerHTML = "South America";
   else if ( country === "Falklands" ) searchCountryText.innerHTML = "the Falkland Islands";
@@ -330,7 +321,7 @@ function initTaxPageStickyHeaders () {
 
   const observer = new IntersectionObserver(
     ( [ e ] ) => {
-      console.log( "Intersection changed:", e.intersectionRatio ); // Debug log
+      // console.log( "Intersection changed:", e.intersectionRatio ); // Debug log
       e.target.classList.toggle( "sticky", e.intersectionRatio < 1 );
     },
     {

@@ -11,23 +11,23 @@ import { searchRegexTree, searchExtinctOrEndemicSAM, searchCountrySpecials } fro
 var results; // {numSpecies: numSpecies, list: results}
 
 /** @type {HTMLInputElement | null} */
-const searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
+// const searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
 
 var html2json = {
   "vagrant": "V", "unconfirmed": "U", "endemic": "X(e)",
   "extinct": "EX", "endemic-breeder": "X(eb)"
 };  // note 'extinct` is an array: 2 values to search for EX(e)
 
-// document.addEventListener( "DOMContentLoaded", function () {
-window.addEventListener( "load", function () {
-  searchInput?.addEventListener( "input", getQuery );
-} );
+// move this into taxonomy.js
+// window.addEventListener( "load", function () {
+//   searchInput?.addEventListener( "input", getQuery );
+// } );
 
 //  ------------------------------------------------------------------------------------------------------------  //
 
 //  Caller :  ("#searchInput").on ("input change click textInput focusin", getQuery);    keyup removed
 // eslint-disable-next-line no-unused-vars
-function getQuery () {
+export function getQuery () {
 
   // úáóíç are not used by SACC, and will be swapped later for 'uaoic'
   var badIndex = searchInput?.value.search( /[^"a-zñãúáóíç'\s-]/i );

@@ -330,7 +330,7 @@ function initTaxPageStickyHeaders () {
 
   const observer = new IntersectionObserver(
     ( [ e ] ) => {
-      console.log( "Intersection changed:", e.intersectionRatio ); // Debug log
+      // console.log( "Intersection changed:", e.intersectionRatio ); // Debug log
       e.target.classList.toggle( "sticky", e.intersectionRatio < 1 );
     },
     {

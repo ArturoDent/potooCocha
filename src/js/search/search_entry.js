@@ -1,17 +1,18 @@
 // "use strict";
-import { currentCountry, countries2Postals } from "../main.js";
+import { currentCountry, countries2Postals, searchInput } from "../main.js";
 import {
   searchResults, toggleSearchResultsPanel, resultsPanelOpen, families, setLastQuery
 } from "../taxonomy.js";
 import { loadSearchResults, resetSearchResultsHeight } from "./search_handleResults.js";
 import { searchRegexTree, searchExtinctOrEndemicSAM, searchCountrySpecials } from "./search_functions.js";
+import { selectedCountryFill } from "../SouthAmerica.js";
 
 
 
 var results; // {numSpecies: numSpecies, list: results}
 
-/** @type {HTMLInputElement | null} */
-const searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
+// /** @type {HTMLInputElement | null} */
+// const searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
 
 var html2json = {
   "vagrant": "V", "unconfirmed": "U", "endemic": "X(e)",
@@ -19,15 +20,15 @@ var html2json = {
 };  // note 'extinct` is an array: 2 values to search for EX(e)
 
 // document.addEventListener( "DOMContentLoaded", function () {
-window.addEventListener( "load", function () {
-  searchInput?.addEventListener( "input", getQuery );
-} );
+// window.addEventListener( "load", function () {
+//   searchInput?.addEventListener( "input", getQuery );
+// } );
 
 //  ------------------------------------------------------------------------------------------------------------  //
 
 //  Caller :  ("#searchInput").on ("input change click textInput focusin", getQuery);    keyup removed
 // eslint-disable-next-line no-unused-vars
-function getQuery () {
+export function getQuery () {
 
   // úáóíç are not used by SACC, and will be swapped later for 'uaoic'
   var badIndex = searchInput?.value.search( /[^"a-zñãúáóíç'\s-]/i );
@@ -105,6 +106,7 @@ export function getSearchSpecialsQuery ( event ) {
 
   // lastQuery = special;
   setLastQuery( special );
+  selectedCountryFill( currentCountry, special );
   loadSearchResults( specialSearch( families, special ) );
 }
 

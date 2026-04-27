@@ -165,46 +165,6 @@ function searchAllQuery ( families, query, country ) {
   return { numSpecies: numSpecies, list: results };
 }
 
-// function searchAllQuery ( families, query, country ) {
-//   var regex = RegExp( query, "i" );
-//   var numSpecies = 0;
-//   var finalResults = "";
-
-//   families.forEach( function ( family ) {
-//     var familyAdded = false;
-
-//     // Check if the Family name itself matches the search
-//     var familyMatch = regex.test( family.Family ) || regex.test( family.FamilyCommon );
-
-//     family.genera.forEach( function ( genus ) {
-//       genus.spp.forEach( function ( bird ) {
-//         // Check if the individual bird matches
-//         var birdMatch = regex.test( genus.Genus.concat( " ", bird.species ) ) || regex.test( bird.name );
-
-//         // If EITHER the family matched OR the specific bird matched
-//         if ( familyMatch || birdMatch ) {
-//           if ( !familyAdded ) {
-//             finalResults += buildFamily( { FamilyScientific: family.Family, FamilyCommon: family.FamilyCommon } );
-//             familyAdded = true;
-//           }
-//           finalResults += buildBird( {
-//             family: family.Family,
-//             index: bird.index,
-//             special: json2html[ bird[ country ] ],
-//             name: bird.name,
-//             genus: genus.Genus,
-//             spp: bird.species
-//           } );
-
-//           numSpecies++;
-//         }
-//       } );
-//     } );
-//   } );
-
-//   return { numSpecies: numSpecies, list: finalResults };
-// }
-
 /* <li class="family"><span class="fco">FINCHES</span><span class="fsc">FRINGILLIDAE</span></li> */
 
 // <li data-i="817" class="bird"><span class="va">Cape Petrel</span><span>Daption capense</span></li>
@@ -212,15 +172,10 @@ function searchAllQuery ( families, query, country ) {
 // <li data-i="628" class="bird"><span class="extinct">American Coot</span><span>Fulica americana</span></li>
 // <li data-i="733" class="bird"><span class="endemic">Lava Gull</span><span>Leucophaeus fuliginosus</span></li>
 
-// <li data-i="510" class="bird"><span>Western Emerald</span><span>Chlorostilbon melanorhynchus</span></li>
-// <li data-i="2793" class="bird"><span class="intr">House Sparrow</span><span>Passer domesticus</span></li>
-// <li data-i="160" class="bird"><span class="nb">Chilean Flamingo</span><span>Phoenicopterus chilensis</span></li>
-
 // ------------------------------------------------------------------------------------------------------ //
 
 // for countries (not SAM): unconfirmed, vagrant, extinct and endemic
 
-// eslint-disable-next-line no-unused-vars
 export function searchCountrySpecials ( families, special, country ) {
 
   var numSpecies = 0;

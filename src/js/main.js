@@ -6,7 +6,7 @@ import "./familyMap.js";
 import "./numList.js";
 import * as tax from "./taxonomy.js";
 
-import "./search/search_entry.js";
+import { getQuery } from "./search/search_entry.js";
 import "./search/search_handleQuery.js";
 import "./search/search_functions.js";
 import "./search/search_handleResults.js";
@@ -35,6 +35,10 @@ var showEndemicBreeders;
 export let currentCountry = "South America";
 // export let currentCountry = "";
 export let searchSpecials;
+
+/** @type {HTMLInputElement | null} */
+export let searchInput;
+
 var previousHighlightedCountryNode;  //  a node
 var checklistAuthorsPanel;
 var AuthorsAbridged;
@@ -73,6 +77,10 @@ window.addEventListener( "load", initApp );
 function initApp () {
   if ( appInitialized ) return;
   appInitialized = true;
+
+  /** @type {HTMLInputElement | null} */
+  searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
+  searchInput?.addEventListener( "input", getQuery );
 
   searchSpecials = document.getElementById( "searchSpecials" );
 
@@ -309,6 +317,12 @@ function setCountry ( evt ) {
   else countryButton.innerHTML = countries2Postals[ currentCountry ];
 
   setChecklistCountryAuthors( currentCountry );
+
+  selectedCountryFill( currentCountry );
+  // if ( currentCountry === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
+  // else if ( currentCountry !== "South America" ) selectedCountryFill( currentCountry );
+  // else fillSAMmap( "" );  // called only when currentCountry = South America
+
   tax.loadCountryTaxonomy( currentCountry );
 }
 
@@ -319,9 +333,9 @@ function setChecklistCountryAuthors ( country ) {
     checklistFlyoutText.innerHTML = "Make a checklist for the " + country + " Islands";
   else checklistFlyoutText.innerHTML = "Make a checklist for " + country;
 
-  if ( country === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
-  else if ( country !== "South America" ) selectedCountryFill( country );
-  else fillSAMmap( "" );  // when is this called ?
+  // if ( country === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
+  // else if ( country !== "South America" ) selectedCountryFill( country );
+  // else fillSAMmap( "" );  // when is this called ?
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if ( AuthorsAbridged ) checklistAuthorsPanel.innerHTML = AuthorsAbridged[ country ];
