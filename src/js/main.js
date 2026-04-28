@@ -1,6 +1,6 @@
 // "use strict";
 
-import { selectedCountryFill, initCurrentMap, fillSAMmap } from "./SouthAmerica.js";
+import { selectedCountryFill, initCurrentMap } from "./SouthAmerica.js";
 
 import "./familyMap.js";
 import "./numList.js";
@@ -12,16 +12,8 @@ import "./search/search_functions.js";
 import "./search/search_handleResults.js";
 
 import { initBirdMapFactory } from "./birdMapFactory.js";
-
-
-
-// import * as Family from "./familyMap.js";
-// export const familyMap = { /* ... */ };
-// import { familyMap } from "./familyMap.js";
-
-// load when needed, after some other condition
-// const { familyMap } = await import("./familyMap.js");
-
+import { QueryHistory } from "./queryHistory.js";
+import { initSearchUI } from "./suggestions.js";
 
 
 var sampleTable;
@@ -38,6 +30,9 @@ export let searchSpecials;
 
 /** @type {HTMLInputElement | null} */
 export let searchInput;
+// let suggestionsBox;
+const history = new QueryHistory();
+let addTimer = null;
 
 var previousHighlightedCountryNode;  //  a node
 var checklistAuthorsPanel;
@@ -81,15 +76,13 @@ function initApp () {
   /** @type {HTMLInputElement | null} */
   searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
   searchInput?.addEventListener( "input", getQuery );
+  // suggestionsBox = /** @type {HTMLElement | null} */ ( document.getElementById( "suggestions" ) );
 
   searchSpecials = document.getElementById( "searchSpecials" );
 
   countryMenuLayer = document.getElementById( "countryMenuLayer" );
-
   countryButton = document.getElementById( "countryButton" );
   countryButton?.addEventListener( "click", toggleCountryMenuLayer );
-
-  // countryButton.addEventListener('click', e => { e.data })
 
   numDaysButton = document.getElementById( "numDays" );
   numDaysButton?.addEventListener( "click", setNumDays );
@@ -148,7 +141,6 @@ function initApp () {
 
   tax.loadCountryTaxonomy( "South America" );
 
-
   tax.getJSON( "../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data );
 
   const dialog = document.querySelector( "dialog" );
@@ -163,6 +155,32 @@ function initApp () {
   // mailLink = document.getElementById("mailLink");
   // mailLink.addEventListener("click", sendEmail);
 }
+
+document.addEventListener( "DOMContentLoaded", () => {
+  const input = document.getElementById( "searchInput" );
+  const suggestionsBox = document.getElementById( "suggestions" );
+
+  if ( !( input instanceof HTMLInputElement ) ) {
+    console.warn( "initSearchUI: #searchInput not found or not an <input>" );
+    return;
+  }
+  if ( !( suggestionsBox instanceof HTMLElement ) ) {
+    console.warn( "initSearchUI: #suggestions not found or not an HTMLElement" );
+    return;
+  }
+
+  initSearchUI( {
+    input,
+    suggestionsBox,
+    runSearch,
+    fetchLiveResults,
+    config: {
+      minLength: 2,
+      historySaveDebounceMs: 400,
+      historySaveKey: "potoo_history"
+    }
+  } );
+} );
 
 // window.addEventListener("load", function () {
 //   updateActivityData("start");

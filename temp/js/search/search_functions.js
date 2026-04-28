@@ -13,7 +13,6 @@ var json2html = {
 
 //  ------------------------------------------------------------------------------------------------------------  //
 
-// eslint-disable-next-line no-unused-vars
 export function searchRegexTree ( families, query, country, modifyBoolean ) {
 
 

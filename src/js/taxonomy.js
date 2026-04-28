@@ -81,16 +81,7 @@ export function initTaxonomy () {
 
   searchCountryText = document.getElementById( "searchCountryText" );
 
-  // searchInput = document.getElementById( "searchInput" );
-  // searchSpecials = document.getElementById( "searchSpecials" );
-
-  // searchInput.addEventListener("input", getQuery);
-  // "change", "click", "textInput", "focusin"
-
   searchSpecials?.addEventListener( "click", getSearchSpecialsQuery );
-  // searchSpecials.addEventListener( "keyup", getSearchSpecialsQuery );
-
-  // taxInstructionsButton.addEventListener("click", toggleSearchInstructions);
 
   taxPage = document.getElementById( "taxPage" );
   taxPageScroller = document.getElementById( "taxPageScroller" );

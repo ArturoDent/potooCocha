@@ -1,10 +1,7 @@
 "use strict";
-import { birds, addBirdNameToMap } from "./taxonomy.js";
+import { birds, addBirdNameToMap, lastQuery } from "./taxonomy.js";
 import { mapsCollection } from "./birdMapFactory.js";
 
-
-
-// eslint-disable-next-line no-unused-vars
 export let map;
 
 var countries = {
@@ -19,27 +16,29 @@ var countries = {
 // var endemicColor = "#d73027";
 var endemicColor = "#f00";
 var endemicBreederColor = "url(#pattern-endemic-breeder)";
-
 var extinctColor = "#000";
 var residentColor = "#fd712f";
-
 // var nonBreederColor = "url(#pattern-horizStripes)";
 var nonBreederColor = "#00f";
-
 var vagrantColor = "#0f0";
 var unconfirmedColor = "#ddd";
 var introducedColor = "#fee090";
 
+const specialsToFillColor = {
+  "endemic": endemicColor,
+  "endemic-breeder": endemicBreederColor,
+  "extinct": extinctColor,
+  "unconfirmed": unconfirmedColor,
+  "vagrant": vagrantColor
+};
+
 var baseColor = "#8a8a7c";
-// var baseStrokeColor = "#bbb";
-// var baseStrokeColor = "#333";
 var baseStrokeColor = "#eee";
 var highlightStrokeColor = "#6a7377";
 var darkerStrokeColor = "#333";
 var selectedCountryFillColor = "#f33";
 
 
-// eslint-disable-next-line
 export function initCurrentMap () {
 
   prepareSVGstyles( "SAMsvg" );
@@ -147,23 +146,21 @@ function newFillColor ( obj, newColor ) {
   }
 }
 
-// eslint-disable-next-line
-export function selectedCountryFill ( selectedCountry ) {
+// pass in searchSpecial and use that to color the country
+export function selectedCountryFill ( selectedCountry, special = "" ) {
 
-  // var svg = currentMap.querySelector("#SAMsvg");
-  // // var svgDoc = svg.getSVGDocument();
-  // // var svgDoc = svg.contentDocument;
-
-  // svgDoc = svg.contentDocument;
-  // if (!svgDoc) svgDoc = svg.getSVGDocument();
-
-  // var cc = svgDoc.getElementById(selectedCountry);
+  if ( selectedCountry === "French Guiana" ) selectedCountry = "FrenchGuiana";
+  if ( selectedCountry === "South America" ) {  // called only when currentCountry = South America
+    fillSAMmap( "" );
+    return;
+  }
 
   let currentBirdMap = document.getElementById( "currentBirdMap" );
   let cc = currentBirdMap?.querySelector( "#" + selectedCountry );
+  let fillColor = special ? specialsToFillColor[ special ] : specialsToFillColor[ lastQuery ];
 
   fillSAMmap( cc );
-  newFillColor( cc, selectedCountryFillColor );
+  newFillColor( cc, fillColor );
   newStrokeColor( cc, baseStrokeColor );
 }
 
@@ -194,10 +191,6 @@ function newStrokeColor ( obj, newColor ) {
 export function highlightSAMmap ( index, current ) {
 
   let currentBirdMap = document.getElementById( "currentBirdMap" );
-
-  // TODO: 
-  // if this bird is already highlighted = do nothing
-  // if this bird is in the mapsCollection = set saveMapButton display to none
 
   var cList = birds[ index ].split( "-" );  // cList = []
 

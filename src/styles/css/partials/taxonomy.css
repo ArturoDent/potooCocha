@@ -163,6 +163,36 @@
   color: var(--panel-flyout-font-color);
 }
 
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 240px;
+  overflow-y: auto;
+  display: none;
+  z-index: 20;
+}
+
+.suggestion {
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.suggestion:hover {
+  background: #eee;
+}
+
+.suggestion .icon {
+  opacity: 0.6;
+}
+
 #searchSpecials {
   position: absolute;
   height: fit-content;

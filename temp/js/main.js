@@ -1,27 +1,19 @@
 // "use strict";
 
-import { selectedCountryFill, initCurrentMap, fillSAMmap } from "./SouthAmerica.js";
+import { selectedCountryFill, initCurrentMap } from "./SouthAmerica.js";
 
 import "./familyMap.js";
 import "./numList.js";
 import * as tax from "./taxonomy.js";
 
-import "./search/search_entry.js";
+import { getQuery } from "./search/search_entry.js";
 import "./search/search_handleQuery.js";
 import "./search/search_functions.js";
 import "./search/search_handleResults.js";
 
 import { initBirdMapFactory } from "./birdMapFactory.js";
-
-
-
-// import * as Family from "./familyMap.js";
-// export const familyMap = { /* ... */ };
-// import { familyMap } from "./familyMap.js";
-
-// load when needed, after some other condition
-// const { familyMap } = await import("./familyMap.js");
-
+import { QueryHistory } from "./queryHistory.js";
+import { initSearchUI } from "./suggestions.js";
 
 
 var sampleTable;
@@ -35,6 +27,13 @@ var showEndemicBreeders;
 export let currentCountry = "South America";
 // export let currentCountry = "";
 export let searchSpecials;
+
+/** @type {HTMLInputElement | null} */
+export let searchInput;
+// let suggestionsBox;
+const history = new QueryHistory();
+let addTimer = null;
+
 var previousHighlightedCountryNode;  //  a node
 var checklistAuthorsPanel;
 var AuthorsAbridged;
@@ -74,14 +73,16 @@ function initApp () {
   if ( appInitialized ) return;
   appInitialized = true;
 
+  /** @type {HTMLInputElement | null} */
+  searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
+  searchInput?.addEventListener( "input", getQuery );
+  // suggestionsBox = /** @type {HTMLElement | null} */ ( document.getElementById( "suggestions" ) );
+
   searchSpecials = document.getElementById( "searchSpecials" );
 
   countryMenuLayer = document.getElementById( "countryMenuLayer" );
-
   countryButton = document.getElementById( "countryButton" );
   countryButton?.addEventListener( "click", toggleCountryMenuLayer );
-
-  // countryButton.addEventListener('click', e => { e.data })
 
   numDaysButton = document.getElementById( "numDays" );
   numDaysButton?.addEventListener( "click", setNumDays );
@@ -140,7 +141,6 @@ function initApp () {
 
   tax.loadCountryTaxonomy( "South America" );
 
-
   tax.getJSON( "../Authors/AuthorsAbridged.json", data => AuthorsAbridged = data );
 
   const dialog = document.querySelector( "dialog" );
@@ -155,6 +155,32 @@ function initApp () {
   // mailLink = document.getElementById("mailLink");
   // mailLink.addEventListener("click", sendEmail);
 }
+
+document.addEventListener( "DOMContentLoaded", () => {
+  const input = document.getElementById( "searchInput" );
+  const suggestionsBox = document.getElementById( "suggestions" );
+
+  if ( !( input instanceof HTMLInputElement ) ) {
+    console.warn( "initSearchUI: #searchInput not found or not an <input>" );
+    return;
+  }
+  if ( !( suggestionsBox instanceof HTMLElement ) ) {
+    console.warn( "initSearchUI: #suggestions not found or not an HTMLElement" );
+    return;
+  }
+
+  initSearchUI( {
+    input,
+    suggestionsBox,
+    runSearch,
+    fetchLiveResults,
+    config: {
+      minLength: 2,
+      historySaveDebounceMs: 400,
+      historySaveKey: "potoo_history"
+    }
+  } );
+} );
 
 // window.addEventListener("load", function () {
 //   updateActivityData("start");
@@ -309,6 +335,12 @@ function setCountry ( evt ) {
   else countryButton.innerHTML = countries2Postals[ currentCountry ];
 
   setChecklistCountryAuthors( currentCountry );
+
+  selectedCountryFill( currentCountry );
+  // if ( currentCountry === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
+  // else if ( currentCountry !== "South America" ) selectedCountryFill( currentCountry );
+  // else fillSAMmap( "" );  // called only when currentCountry = South America
+
   tax.loadCountryTaxonomy( currentCountry );
 }
 
@@ -319,9 +351,9 @@ function setChecklistCountryAuthors ( country ) {
     checklistFlyoutText.innerHTML = "Make a checklist for the " + country + " Islands";
   else checklistFlyoutText.innerHTML = "Make a checklist for " + country;
 
-  if ( country === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
-  else if ( country !== "South America" ) selectedCountryFill( country );
-  else fillSAMmap( "" );  // when is this called ?
+  // if ( country === "French Guiana" ) selectedCountryFill( "FrenchGuiana" );
+  // else if ( country !== "South America" ) selectedCountryFill( country );
+  // else fillSAMmap( "" );  // when is this called ?
 
   // check because AuthorsAbridged hasn't been downloaded yet
   if ( AuthorsAbridged ) checklistAuthorsPanel.innerHTML = AuthorsAbridged[ country ];

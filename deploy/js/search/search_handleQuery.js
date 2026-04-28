@@ -2,9 +2,6 @@
 import { setLastQuery } from "../taxonomy.js";
 
 
-//  Caller :  ("#searchInput").on ("input", getQuery);    keyup removed
-// function modifyQuery(term) {
-// eslint-disable-next-line no-unused-vars
 export function modifyQuery ( term ) {
 
   var searcFormContents = document.querySelector( ".searchForm_contents" );
