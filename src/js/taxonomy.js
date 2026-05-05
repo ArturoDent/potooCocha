@@ -343,22 +343,22 @@ function initTaxPageStickyHeaders () {
 
 
 // eslint-disable-next-line no-unused-vars
-export function toggleSearchResultsPanel () {
-  ensureTaxonomyDomRefs();
+// export function toggleSearchResultsPanel () {
+//   ensureTaxonomyDomRefs();
 
-  // resultsPanel.classList.toggle("resultsPanelBoolean");
+//   // resultsPanel.classList.toggle("resultsPanelBoolean");
 
-  if ( !resultsPanelOpen ) {      // results-panel was not open
-    // moveTaxPanel("searchResultsOpening");
-    printerButton.setAttribute( "tabindex", "0" );
-  }
-  else {                        // results-panel was open
-    // moveTaxPanel("searchResultsClosing");
-    printerButton.setAttribute( "tabindex", "-1" );
-  }
+//   if ( !resultsPanelOpen ) {      // results-panel was not open
+//     // moveTaxPanel("searchResultsOpening");
+//     printerButton.setAttribute( "tabindex", "0" );
+//   }
+//   else {                        // results-panel was open
+//     // moveTaxPanel("searchResultsClosing");
+//     printerButton.setAttribute( "tabindex", "-1" );
+//   }
 
-  resultsPanelOpen = !resultsPanelOpen;
-}
+//   resultsPanelOpen = !resultsPanelOpen;
+// }
 
 // function moveTaxPanel(whatIsOpening) {
 

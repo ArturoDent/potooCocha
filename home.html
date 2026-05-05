@@ -299,11 +299,13 @@
             <li>Typing ALL of a family name, like 'Rheas' or 'Rheidae' will show all its species.</li>
             <li>Select an item to show it on the map and show its position in the taxonomy.</li>
             <li>Select an item in the taxonomic tree to show where it occurs on the map.</li>
-            <li>Control/Meta-click an item in the search results or taxonomy tree </li>
+            <li>Control/Meta-click an item in the search results or taxonomy tree.</li>
             <ul>
               <li> to open its SACC page location in another tab; or </li>
               <li> double-click to open and go to that bird or family in its SACC location.</li>
             </ul>
+            <li>Use the up and down arrows in the Search input to cycle through its history.</li>
+            <li>Delete any query history item using select and Delete or Control/Meta-Delete.</li>
           </ul>
           <button id="closeInstructions" commandfor="instructionsDialog" command="close">Close</button>
         </dialog>
@@ -325,7 +327,7 @@
           <span class="searchGroup">
             <label for="searchInput">search &nbsp;: &nbsp; </label>
             <input name="searchField" id="searchInput" size="20" type="text" autocomplete="off" autocorrect="off"
-              spellcheck="false" tabindex="0" list="input-search-terms">
+              spellcheck="false" tabindex="0" list="input-search-terms" placeholder="Up/Down for history">
             <svg class="icon icon-mag-glass">
               <use xlink:href="#icon-mag-glass"></use>
             </svg>

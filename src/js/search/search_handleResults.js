@@ -1,10 +1,12 @@
 // "use strict";
 import { currentCountry } from "../main.js";
 
-import {
-  searchResults, searchResultsScroller, toggleSearchResultsPanel,
-  taxPageScroller, lastQuery, resultsPanelOpen,
-} from "../taxonomy.js";
+// import {
+//   searchResults, searchResultsScroller, toggleSearchResultsPanel,
+//   taxPageScroller, lastQuery, resultsPanelOpen,
+// } from "../taxonomy.js";
+
+import { searchResults, searchResultsScroller, taxPageScroller, lastQuery } from "../taxonomy.js";
 
 
 
@@ -65,7 +67,7 @@ export function loadSearchResults ( results ) {
     searchResults.innerHTML = "<li> &nbsp; &nbsp; no matches found</li><li></li><li></li>";
 
     resetSearchResultsHeight();
-    if ( !resultsPanelOpen ) toggleSearchResultsPanel();
+    // if ( !resultsPanelOpen ) toggleSearchResultsPanel();
 
     // updateActivityData("search", originalQuery);
     return;
@@ -78,7 +80,7 @@ export function loadSearchResults ( results ) {
 
 
   resetSearchResultsHeight();
-  if ( !resultsPanelOpen ) toggleSearchResultsPanel();
+  // if ( !resultsPanelOpen ) toggleSearchResultsPanel();
 }
 
 // function initSearchResultsStickyHeaders () {

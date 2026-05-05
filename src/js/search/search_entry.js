@@ -1,42 +1,44 @@
 // "use strict";
 import { currentCountry, countries2Postals, searchInput } from "../main.js";
 import {
-  searchResults, toggleSearchResultsPanel, resultsPanelOpen, families, setLastQuery
+  searchResults, families, setLastQuery
 } from "../taxonomy.js";
 import { loadSearchResults, resetSearchResultsHeight } from "./search_handleResults.js";
 import { searchRegexTree, searchExtinctOrEndemicSAM, searchCountrySpecials } from "./search_functions.js";
 import { selectedCountryFill } from "../SouthAmerica.js";
-
-
+import {
+  clearPendingSearchQuery,
+  clearSearchQueryHistoryTimer,
+  configureSearchQueryHistory,
+  debounceRememberSearchQuery
+} from "./search_queryHistory.js";
 
 var results; // {numSpecies: numSpecies, list: results}
 
-// /** @type {HTMLInputElement | null} */
-// const searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
-
+// don't need 'resident', 'introduced', 'non-Breeder': html2json only used for searchSpecials
 var html2json = {
   "vagrant": "V", "unconfirmed": "U", "endemic": "X(e)",
   "extinct": "EX", "endemic-breeder": "X(eb)"
 };  // note 'extinct` is an array: 2 values to search for EX(e)
 
-// document.addEventListener( "DOMContentLoaded", function () {
-// window.addEventListener( "load", function () {
-//   searchInput?.addEventListener( "input", getQuery );
-// } );
-
-//  ------------------------------------------------------------------------------------------------------------  //
+configureSearchQueryHistory( {
+  runQuery: getQuery,
+  specialQueries: Object.keys( html2json )
+} );
 
 //  Caller :  ("#searchInput").on ("input change click textInput focusin", getQuery);    keyup removed
 // eslint-disable-next-line no-unused-vars
 export function getQuery () {
+  clearSearchQueryHistoryTimer();
 
   // úáóíç are not used by SACC, and will be swapped later for 'uaoic'
   var badIndex = searchInput?.value.search( /[^"a-zñãúáóíç'\s-]/i );
 
   if ( badIndex !== -1 ) {
+    clearPendingSearchQuery();
     searchResults.innerHTML = "<li> &nbsp; &nbsp; character not allowed</li><li></li><li></li>";
     resetSearchResultsHeight();
-    if ( !resultsPanelOpen ) toggleSearchResultsPanel();
+    // if ( !resultsPanelOpen ) toggleSearchResultsPanel();
     return;
   }
 
@@ -50,6 +52,7 @@ export function getQuery () {
 
   // wait for at least two characters
   if ( searchInput instanceof HTMLInputElement && searchInput.value.length < 2 ) {
+    debounceRememberSearchQuery( searchInput.value );
     return;
   }
 
@@ -64,6 +67,7 @@ export function getQuery () {
   // 'true': will run the query through handleQuery() to cleanse, etc.
   results = searchRegexTree( families, searchInput?.value, countries2Postals[ currentCountry ], true );
   loadSearchResults( results );
+  if ( searchInput instanceof HTMLInputElement ) debounceRememberSearchQuery( searchInput.value );
 }
 
 //  ------------------------------------------------------------------------------------------------------------  //
