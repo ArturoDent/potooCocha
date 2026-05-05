@@ -7,13 +7,12 @@ import "./numList.js";
 import * as tax from "./taxonomy.js";
 
 import { getQuery } from "./search/search_entry.js";
+import { handleSearchQueryHistory } from "./search/search_queryHistory.js";
 import "./search/search_handleQuery.js";
 import "./search/search_functions.js";
 import "./search/search_handleResults.js";
 
 import { initBirdMapFactory } from "./birdMapFactory.js";
-import { QueryHistory } from "./queryHistory.js";
-import { initSearchUI } from "./suggestions.js";
 
 
 var sampleTable;
@@ -30,9 +29,7 @@ export let searchSpecials;
 
 /** @type {HTMLInputElement | null} */
 export let searchInput;
-// let suggestionsBox;
-const history = new QueryHistory();
-let addTimer = null;
+var searchForm;
 
 var previousHighlightedCountryNode;  //  a node
 var checklistAuthorsPanel;
@@ -76,7 +73,13 @@ function initApp () {
   /** @type {HTMLInputElement | null} */
   searchInput = /** @type {HTMLInputElement | null} */ ( document.getElementById( "searchInput" ) );
   searchInput?.addEventListener( "input", getQuery );
-  // suggestionsBox = /** @type {HTMLElement | null} */ ( document.getElementById( "suggestions" ) );
+  searchInput?.addEventListener( "input", toggleSearchInputPlaceholder );
+  searchInput?.addEventListener( "focus", toggleSearchInputPlaceholder );
+  searchInput?.addEventListener( "blur", toggleSearchInputPlaceholder );
+  searchInput?.addEventListener( "keydown", handleSearchQueryHistory );
+
+  searchForm = document.getElementById( "searchForm" );
+  searchForm?.addEventListener( "submit", preventSearchFormSubmit );
 
   searchSpecials = document.getElementById( "searchSpecials" );
 
@@ -156,31 +159,20 @@ function initApp () {
   // mailLink.addEventListener("click", sendEmail);
 }
 
-document.addEventListener( "DOMContentLoaded", () => {
-  const input = document.getElementById( "searchInput" );
-  const suggestionsBox = document.getElementById( "suggestions" );
+function toggleSearchInputPlaceholder ( event ) {
+  const input = event.target;
+  if ( !( input instanceof HTMLInputElement ) ) return;
 
-  if ( !( input instanceof HTMLInputElement ) ) {
-    console.warn( "initSearchUI: #searchInput not found or not an <input>" );
-    return;
-  }
-  if ( !( suggestionsBox instanceof HTMLElement ) ) {
-    console.warn( "initSearchUI: #suggestions not found or not an HTMLElement" );
-    return;
-  }
+  input.classList.toggle( "hidePlaceholder", event.type === "focus" && input.value.length === 0 );
 
-  initSearchUI( {
-    input,
-    suggestionsBox,
-    runSearch,
-    fetchLiveResults,
-    config: {
-      minLength: 2,
-      historySaveDebounceMs: 400,
-      historySaveKey: "potoo_history"
-    }
-  } );
-} );
+  if ( event.type === "input" && input.value.length === 0 ) {
+    input.classList.remove( "hidePlaceholder" );
+  }
+}
+
+function preventSearchFormSubmit ( event ) {
+  event.preventDefault();
+}
 
 // window.addEventListener("load", function () {
 //   updateActivityData("start");
