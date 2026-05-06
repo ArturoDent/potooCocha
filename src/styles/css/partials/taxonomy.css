@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /*  ------------------------------   taxonomy panel   ------------------------------------------  */
 #searchForm {
+  --search-query-shift: 0ch;
+
   position: relative;
   left: 8vw;
   width: 80%;
@@ -12,21 +14,12 @@
   transition: all 850ms ease-in-out;
 }
 
-.searchForm_contents {
-  position: relative;
-  width: 100%;
-  height: auto;
-  left: 0;
-  margin: 0;
-  pointer-events: auto;
-  transition: all 2s;
-}
-
 #searchForm span.searchGroup {
   position: relative;
   margin: 1.92rem 0 2.31rem 0;
-  left: 22%;
+  left: calc(22% + var(--search-query-shift));
   opacity: 1;
+  transition: left 2s;
 }
 
 #instructionsDialog {
@@ -169,36 +162,6 @@
 
 #searchInput.hidePlaceholder::placeholder {
   opacity: 0;
-}
-
-.suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  max-height: 240px;
-  overflow-y: auto;
-  display: none;
-  z-index: 20;
-}
-
-.suggestion {
-  padding: 6px 10px;
-  cursor: pointer;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-
-.suggestion:hover {
-  background: #eee;
-}
-
-.suggestion .icon {
-  opacity: 0.6;
 }
 
 #searchSpecials {

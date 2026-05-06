@@ -2,6 +2,8 @@
   position: relative;
   width: 90%;
   margin: 10rem 0 0 0;
+  padding: 20px;
+  
   order: 4;
   overflow: visible;
 }
@@ -9,29 +11,46 @@
 #checklistArticle .flyoutPanel {
   position: relative;
   top: -1.6rem;
-  left: 2.5%;
+  left: 10%;
   width: auto;
+  /* width: fit-content; */
   height: auto;
   padding: 0.8ch 5% 1.5ch 0;
-  margin-top: 1.5rem;
-  text-align: center;
+  /* margin-top: 1.5rem; */
+  
+  margin: 0 auto;   /* Centers the box and adds bottom spacing */
+  text-align: center; 
   letter-spacing: 0;
 }
 
 #checklistAuthorsPanel {
+  /* opacity: 0; */
   position: relative;
   height: auto;
-  width: 100%;
-  top: 0;
+  /* width: 100%; */
+  /* width: 120%; */
+  width: calc(120% - 0.073rem);
+  /* top: 0; */
+  top: 0.073rem;
   left: 0;
-  padding: 1ch 2ch 0 3ch;
+  /* left: 0.69rem; */
+  padding: 1ch 2ch 1ch 3ch;
+  margin: 1ch auto 2ch auto;
   font-variant: small-caps;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  /* color: var(--sample-table-text-color); */
+  color: white;
+  text-shadow: 0.055rem 0.055rem rgb(0, 0, 0);
   text-align: center;
-  text-shadow: none;
+  letter-spacing: 0.12em;
   line-height: 1.1rem;
-  background-color: var(--sample-table-bg-color);
-  transition: opacity 550ms 400ms;
+  /* background-color: var(--sample-table-bg-color); */
+  background-color: rgba(0, 0, 0, 0);
+  /* transition: opacity 550ms 400ms; */
+  
+  /* border-radius: 0.23rem; */
+  /* box-shadow: 0.69rem 0.69rem #666, 0.46rem 0.46rem var(--sample-table-bg-color); */
+  /* z-index: 1; */
 }
 
 #checklistOptions.panel {

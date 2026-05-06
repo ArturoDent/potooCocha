@@ -54,11 +54,11 @@ export function getQuery () {
     return;
   }
 
-  let searcFormContents = document.querySelector( ".searchForm_contents" );
+  let searchForm = document.getElementById( "searchForm" );
   // // keep a minimum of 20 ch's width in input field and add 1 ch width for every query.length > 8
   if ( searchInput instanceof HTMLInputElement && searchInput.value.length > 6 ) {
-    if ( searcFormContents instanceof HTMLElement )
-      searcFormContents.style.left = "-" + ( searchInput.value.length - 6 ) / 5 + "ch";
+    if ( searchForm instanceof HTMLElement )
+      searchForm.style.setProperty( "--search-query-shift", "-" + ( searchInput.value.length - 6 ) / 5 + "ch" );
     searchInput.size = 20 + ( searchInput.value.length - 6 );
   }
 

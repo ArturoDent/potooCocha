@@ -34,13 +34,11 @@ export let birds;
 var searchCountryText;
 // var taxTreeArticleOpen = false;
 
-var taxPage;
+export let taxPage;
 // var taxPanel;
 // var searchSpecials;
 var resultsPanel;
 export let searchResults;
-export let searchResultsScroller;
-export let taxPageScroller;
 
 export let resultsPanelOpen = false;
 var printerButton;
@@ -61,9 +59,7 @@ let taxonomyInitialized = false;
 function ensureTaxonomyDomRefs () {
   if ( !searchCountryText ) searchCountryText = document.getElementById( "searchCountryText" );
   if ( !taxPage ) taxPage = document.getElementById( "taxPage" );
-  if ( !taxPageScroller ) taxPageScroller = document.getElementById( "taxPageScroller" );
   if ( !searchResults ) searchResults = document.getElementById( "searchResults" );
-  if ( !searchResultsScroller ) searchResultsScroller = document.getElementById( "searchResultsScroller" );
   if ( !resultsPanel ) resultsPanel = document.getElementById( "results-panel" );
   if ( !printerButton ) printerButton = document.getElementById( "printerButton" );
 }
@@ -84,10 +80,8 @@ export function initTaxonomy () {
   searchSpecials?.addEventListener( "click", getSearchSpecialsQuery );
 
   taxPage = document.getElementById( "taxPage" );
-  taxPageScroller = document.getElementById( "taxPageScroller" );
 
   searchResults = document.getElementById( "searchResults" );
-  searchResultsScroller = document.getElementById( "searchResultsScroller" );
   resultsPanel = document.getElementById( "results-panel" );
 
   searchResults?.addEventListener( "click", gotoMatch, false );
@@ -308,7 +302,7 @@ export function loadCountryTaxonomy ( country ) {
 
 function initTaxPageStickyHeaders () {
 
-  const scrollContainer = document.querySelector( '#taxPageScroller' );
+  const scrollContainer = document.querySelector( '#taxPage' );
 
   const observer = new IntersectionObserver(
     ( [ e ] ) => {
@@ -334,22 +328,22 @@ function initTaxPageStickyHeaders () {
 
 
 // eslint-disable-next-line no-unused-vars
-export function toggleSearchResultsPanel () {
-  ensureTaxonomyDomRefs();
+// export function toggleSearchResultsPanel () {
+//   ensureTaxonomyDomRefs();
 
-  // resultsPanel.classList.toggle("resultsPanelBoolean");
+//   // resultsPanel.classList.toggle("resultsPanelBoolean");
 
-  if ( !resultsPanelOpen ) {      // results-panel was not open
-    // moveTaxPanel("searchResultsOpening");
-    printerButton.setAttribute( "tabindex", "0" );
-  }
-  else {                        // results-panel was open
-    // moveTaxPanel("searchResultsClosing");
-    printerButton.setAttribute( "tabindex", "-1" );
-  }
+//   if ( !resultsPanelOpen ) {      // results-panel was not open
+//     // moveTaxPanel("searchResultsOpening");
+//     printerButton.setAttribute( "tabindex", "0" );
+//   }
+//   else {                        // results-panel was open
+//     // moveTaxPanel("searchResultsClosing");
+//     printerButton.setAttribute( "tabindex", "-1" );
+//   }
 
-  resultsPanelOpen = !resultsPanelOpen;
-}
+//   resultsPanelOpen = !resultsPanelOpen;
+// }
 
 // function moveTaxPanel(whatIsOpening) {
 
@@ -608,11 +602,11 @@ function gotoMatch ( e ) {
 
     const top =
       birdNode.getBoundingClientRect().top -
-      taxPageScroller.getBoundingClientRect().top +
-      taxPageScroller.scrollTop -
+      taxPage.getBoundingClientRect().top +
+      taxPage.scrollTop -
       60;     // offset
 
-    taxPageScroller.scroll( {
+    taxPage.scroll( {
       top,
       behavior: "smooth"
     } );
@@ -647,11 +641,11 @@ function gotoMatch ( e ) {
 
     const top =
       familyNode.getBoundingClientRect().top -
-      taxPageScroller.getBoundingClientRect().top +
-      taxPageScroller.scrollTop -
+      taxPage.getBoundingClientRect().top +
+      taxPage.scrollTop -
       30;
 
-    taxPageScroller.scroll( {
+    taxPage.scroll( {
       top,
       behavior: "smooth"
     } );

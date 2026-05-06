@@ -2,11 +2,11 @@
 import { currentCountry } from "../main.js";
 
 // import {
-//   searchResults, searchResultsScroller, toggleSearchResultsPanel,
-//   taxPageScroller, lastQuery, resultsPanelOpen,
+//   searchResults, toggleSearchResultsPanel,
+//   taxPage, lastQuery, resultsPanelOpen,
 // } from "../taxonomy.js";
 
-import { searchResults, searchResultsScroller, taxPageScroller, lastQuery } from "../taxonomy.js";
+import { searchResults, taxPage, lastQuery } from "../taxonomy.js";
 
 
 
@@ -14,28 +14,27 @@ import { searchResults, searchResultsScroller, taxPageScroller, lastQuery } from
 export function resetSearchResultsHeight () {
 
   searchResults.style.height = "auto";
-  searchResultsScroller.style.height = "auto";
 
   if ( searchResults.scrollHeight >= 300 ) {
-    searchResultsScroller.style.height = "25rem";
-    searchResultsScroller.style.overflowY = "auto";
+    searchResults.style.height = "25rem";
+    searchResults.style.overflowY = "auto";
   }
   else {
     // 25px added due to Chrome-only bug,
     //   it makes the searchResults height too short, even two species do not fit w/o scrolling
-    // searchResultsScroller.style.height = searchResults.scrollHeight + 25 + "px";
-    searchResultsScroller.style.height = searchResults.scrollHeight + 2 + "px";
-    searchResultsScroller.style.overflowY = "hidden";
+    // searchResults.style.height = searchResults.scrollHeight + 25 + "px";
+    searchResults.style.height = searchResults.scrollHeight + 2 + "px";
+    searchResults.style.overflowY = "hidden";
   }
 
-  searchResultsScroller.scrollTop = 0;
+  searchResults.scrollTop = 0;
 }
 
 // eslint-disable-next-line no-unused-vars
 export function resetTaxPageHeight () {
 
-  taxPageScroller.style.height = "74vh";
-  taxPageScroller.scrollTop = 0;
+  taxPage.style.height = "74vh";
+  taxPage.scrollTop = 0;
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -86,7 +85,7 @@ export function loadSearchResults ( results ) {
 // function initSearchResultsStickyHeaders () {
 
 //   // Make sure this matches the container that has the scrollbar
-//   const resultsContainer = document.querySelector( '#searchResultsScroller' );
+//   const resultsContainer = document.querySelector( '#searchResults' );
 
 //   const observer = new IntersectionObserver(
 //     ( [ e ] ) => {

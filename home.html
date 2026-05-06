@@ -310,11 +310,6 @@
           <button id="closeInstructions" commandfor="instructionsDialog" command="close">Close</button>
         </dialog>
         </br>
-
-        <!-- Type part of a word like "xantho" or "potoo".<br> -->
-        <!-- Select an item in the search results or the taxonomic tree.<br> -->
-        <!-- Control-click an item to open its SACC page location.<br> -->
-
         * indicates an <a
           href="https://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm#:~:text=X%28eb%29%20%3D%20Endemic%20breeders"
           target="_blank" rel="noopener noreferrer">endemic breeder</a>.
@@ -323,16 +318,14 @@
 
       <form id="searchForm" class="panel">
 
-        <div class="searchForm_contents">
-          <span class="searchGroup">
-            <label for="searchInput">search &nbsp;: &nbsp; </label>
-            <input name="searchField" id="searchInput" size="20" type="text" autocomplete="off" autocorrect="off"
-              spellcheck="false" tabindex="0" list="input-search-terms" placeholder="Up/Down for history">
-            <svg class="icon icon-mag-glass">
-              <use xlink:href="#icon-mag-glass"></use>
-            </svg>
-          </span>
-        </div>
+        <span class="searchGroup">
+          <label for="searchInput">search &nbsp;: &nbsp; </label>
+          <input name="searchField" id="searchInput" size="20" type="text" autocomplete="off" autocorrect="off"
+            spellcheck="false" tabindex="0" list="input-search-terms" placeholder="Up/Down for history">
+          <svg class="icon icon-mag-glass">
+            <use xlink:href="#icon-mag-glass"></use>
+          </svg>
+        </span>
 
         <div id="searchSpecials">
           <div class="searchSpecialWrapper" data-special="extinct"><span class="specialLabel"
@@ -351,74 +344,36 @@
 
       </form>
 
-      <!-- <article class="panel" id="results-panel">
-
-        <div id="countrySearch" class="flyoutPanel">
-          <span id="searchTerm"></span>
-        </div>
-        <div class="scroll-shell search-scroll-shell">
-          <div id="searchResultsScroller" class="scroll-pane">
-            <ul id="searchResults" contenteditable="false">
-              <li> &nbsp; &nbsp; search results will appear here...</li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-
-        <button id="printerButton" type="button" aria-label="Print these search results" tabindex="-1">
-          <img src="./images/printer.png" height:32 width:32 alt="printer icon">
-        </button>
-
-      </article> -->
-
-      <!-- <article class="panel" id="tax-panel">
-
-        <div id="treeIntroText" class="flyoutPanel topFlyoutPanel">&nbsp; numFamilies Families, numSpecies species</div>
-        <div class="scroll-shell tax-scroll-shell">
-          <div id="taxPageScroller" class="scroll-pane">
-            <div id="taxPage" contenteditable="false"></div>
-          </div>
-        </div>
-        <button id="closeOpenFamiliesButton" type="button" aria-label="Close Open Families" tabindex="-1">▲</button>
-      </article> -->
-
       <article class="panel" id="results-panel">
 
         <div id="countrySearch" class="flyoutPanel">
           <span id="searchTerm"></span>
         </div>
-
-        <div id="suggestions" class="suggestions"></div>
-
-        <div id="searchResultsScroller" class="scroll-pane search-scroll-shell">
-          <ul id="searchResults" contenteditable="false">
-            <li> &nbsp; &nbsp; search results will appear here...</li>
-          </ul>
-        </div>
-
+        <ul id="searchResults" class="scroll-pane search-scroll-shell" contenteditable="false">
+          <li> &nbsp; &nbsp; search results will appear here...</li>
+        </ul>
         <button id="printerButton" type="button" aria-label="Print these search results">
           <img src="./images/printer.png" height="32" width="32" alt="printer icon">
         </button>
       </article>
 
       <article class="panel" id="tax-panel">
+
         <div id="treeIntroText" class="flyoutPanel topFlyoutPanel">
           &nbsp; numFamilies Families, numSpecies species
         </div>
-
-        <div id="taxPageScroller" class="scroll-pane tax-scroll-shell">
-          <div id="taxPage" contenteditable="false"></div>
-        </div>
-
+        <div id="taxPage" class="scroll-pane tax-scroll-shell" contenteditable="false"></div>
         <button id="closeOpenFamiliesButton" type="button" aria-label="Close Open Families">▲</button>
       </article>
 
       <article id="checklistArticle">
 
         <h1 class="checklistTitle">CHECKLISTS</h1>
-        <div class="flyoutPanel"><span id="checklistFlyoutText">Make checklists for any country in South
-            America</span></div>
+
+        <div class="flyoutPanel">
+          <span id="checklistFlyoutText">Make checklists for any country in South America</span>
+        </div>
+
         <div class="tableWrapper">
           <table id="sampleTable" spellcheck="false" contenteditable="false" tabindex="-1">
             <thead>
@@ -513,9 +468,9 @@
             </tbody>
             <tfoot></tfoot>
           </table>
-
-          <div id="checklistAuthorsPanel"></div>
         </div>
+
+        <div id="checklistAuthorsPanel"></div>
 
 
         <div id="checklistOptions" class="panel">

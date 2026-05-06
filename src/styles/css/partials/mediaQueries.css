@@ -18,7 +18,7 @@
     left: 7%;
   }
   #searchForm span.searchGroup {
-    left: 15%;
+    left: calc(15% + var(--search-query-shift));
   }
   #searchSpecials {
     top: -9.9ch;

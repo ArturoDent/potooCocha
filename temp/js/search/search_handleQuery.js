@@ -4,7 +4,7 @@ import { setLastQuery } from "../taxonomy.js";
 
 export function modifyQuery ( term ) {
 
-  var searcFormContents = document.querySelector( ".searchForm_contents" );
+  var searchForm = document.getElementById( "searchForm" );
   // keep a minimum of 20 ch's width in input field and add 1 ch width for every query.length > 8
 
   term = term.trimStart();
@@ -12,8 +12,8 @@ export function modifyQuery ( term ) {
   if ( term.length < 2 ) return;
 
   if ( term.length > 6 ) {
-    if ( searcFormContents instanceof HTMLElement )
-      searcFormContents.style.left = "-" + ( term.length - 6 ) / 5 + "ch";
+    if ( searchForm instanceof HTMLElement )
+      searchForm.style.setProperty( "--search-query-shift", "-" + ( term.length - 6 ) / 5 + "ch" );
 
     const searchInput = document.getElementById( "searchInput" );
     if ( searchInput instanceof HTMLInputElement )
