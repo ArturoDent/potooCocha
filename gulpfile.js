@@ -53,15 +53,12 @@ const paths = {
     deploy: "./deploy/JSON"
   },
   css: {
-    // src: "./src/styles/css/styles.css",
     src: "./src/css/styles.css",
-    // watch: "./src/styles/css/**/*.css",
     watch: "./src/css/**/*.css",
     deploy: "./deploy/css"
   },
   printCSS: {
-    // src: "./src/printCSS/printSearchResults.css",
-    src: "./src/css/printCSS/printSearchResults.css",
+    src: "./printCSS/printSearchResults.css",
     deploy: "./deploy/printCSS"
   },
   php: {
