@@ -30,14 +30,12 @@ export function resetSearchResultsHeight () {
   searchResults.scrollTop = 0;
 }
 
-// eslint-disable-next-line no-unused-vars
 export function resetTaxPageHeight () {
 
   taxPage.style.height = "74vh";
   taxPage.scrollTop = 0;
 }
 
-// eslint-disable-next-line no-unused-vars
 export function loadSearchResults ( results ) {
 
   var term = lastQuery;

@@ -24,7 +24,6 @@ export function searchRegexTree ( families, query, country, modifyBoolean ) {
 
 // ------------------------------------------------------------------------------------------------------ //
 
-// eslint-disable-next-line no-unused-vars
 export function searchExtinctOrEndemicSAM ( families, special ) {
 
   //  country === "SAM"

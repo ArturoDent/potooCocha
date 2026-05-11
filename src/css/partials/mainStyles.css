@@ -143,28 +143,6 @@ article {
   width: calc(100% - 4ch);
 }
 
-/*   -------------------   Footer   ----------------------------   */
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 2.5ch 0 1ch 0;
-  padding: 0 8ch 0 0;
-}
-
-footer a {
-  padding: 0.077rem 0.5rem 0.15rem 0.5rem;
-  text-decoration: none;
-  border: solid 0.077rem transparent;
-  border-bottom: solid 0.077rem #bbb;
-}
-
-footer a:hover, footer a:focus {
-  outline: none;
-  border: solid 0.077rem #bbb;
-  transition: all 350ms;
-}
-
 #mailLink {
   cursor: pointer;
 }

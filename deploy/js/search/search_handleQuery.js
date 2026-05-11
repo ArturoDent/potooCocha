@@ -59,14 +59,12 @@ export function modifyQuery ( term ) {
   // term = term.replace(/^\s+|\s+$/g, ""); // strip trailing and leading whitespaces
   // term = term.trimEnd();
 
-  // lastQuery = term;
   setLastQuery( term );
   return term;
 }
 
 //  ---------------------------------------------------------------------------------------------------------  //
 
-// eslint-disable-next-line no-unused-vars
 function escapeRegExp ( string ) {
   return string.replace( /[.*+?^@#!+=_${}()|[\]\\]/g, "\\$&" ); // $& means the whole matched string
 }

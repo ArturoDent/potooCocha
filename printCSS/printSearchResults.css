@@ -1,0 +1,106 @@
+h3 {
+  position: relative;
+  top: 0;
+  margin: 0 0 2.5ch 0;
+  text-align: center;
+  padding-left: 0;
+}
+
+#searchResults {
+  position: relative;
+  padding: 0 0 10px 0;
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+#searchResults span:not(.fsc):last-child {
+  position: absolute;
+  left: calc(56% + 2ch);
+}
+
+#searchResults span:not(.fsc):first-child {
+  position: relative;
+  left: 10%;
+}
+
+.fsc {
+  display: inline-block;
+  position: absolute;
+  left: 56%;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fco {
+  display: inline-block;
+  position: absolute;
+  left: 20%;
+  font-weight: bold;
+}
+
+.endemic::before {
+  content: "e";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.endemic-breeder::before {
+  content: "*";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.extinct::before {
+  content: "x";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.u::before {
+  content: "u";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.va::before {
+  content: "v";
+  position: relative;
+  left: -0.53rem;
+  font-size: 0.8rem;
+}
+
+.family {
+  position: relative;
+  font-weight: bold;
+  margin-top: 2ch;
+}
+
+li.bird {
+  padding: 2px 0 2px 2ch;
+}
+
+li.bird span:first-child {
+  display: inline-block;
+  position: relative;
+  left: 16%;
+}
+    
+.bird span:last-child { display: inline-block; }
+    
+  /* 1. Prevent a single bird row from being sliced horizontally */
+.bird {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  page-break-inside: avoid; /* For older browser support */
+}
+
+  /* 2. Prevent a Family Header from being separated from its first bird */
+.family {
+  break-after: avoid;
+  page-break-after: avoid;
+}

@@ -46,16 +46,9 @@ export function initCurrentMap () {
   map = document.getElementById( "currentMap" );
 }
 
-//  TODO : (is this necessary? Straight to setSVGstyles()?)
-// eslint-disable-next-line
 function prepareSVGstyles ( obj ) {
 
-  // var svg = document.getElementById(obj);
-  // // currentBirdMap
-
   let currentBirdMap = document.getElementById( "currentBirdMap" );
-  // let Ecuador = currentBirdMap.querySelector("#Ecuador").nodeName;
-
   let svgDoc;
 
   // svgDoc = svg.contentDocument;
@@ -72,7 +65,6 @@ function prepareSVGstyles ( obj ) {
   }
 }
 
-// eslint-disable-next-line
 function setSVGstyles ( obj ) {
 
   if ( obj.nodeName === "path" || obj.nodeName === "circle" ) {
@@ -187,7 +179,6 @@ function newStrokeColor ( obj, newColor ) {
   }
 }
 
-// eslint-disable-next-line
 export function highlightSAMmap ( index, current ) {
 
   let currentBirdMap = document.getElementById( "currentBirdMap" );

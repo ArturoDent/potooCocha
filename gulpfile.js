@@ -30,7 +30,7 @@ function serve ( done ) {        // serve:    ./home.html
 const paths = {
   html: {
     src: "home.html",
-    temp: "./temp",
+    // temp: "./temp",
     deploy: "./deploy"
   },
   citations: {
@@ -53,23 +53,23 @@ const paths = {
     deploy: "./deploy/JSON"
   },
   css: {
-    src: "./src/styles/css/styles.css",
-    watch: "./src/styles/css/**/*.css",
+    // src: "./src/styles/css/styles.css",
+    src: "./src/css/styles.css",
+    // watch: "./src/styles/css/**/*.css",
+    watch: "./src/css/**/*.css",
     deploy: "./deploy/css"
   },
   printCSS: {
-    src: "./src/printCSS/printSearchResults.css",
-    temp: "./temp/css",
+    // src: "./src/printCSS/printSearchResults.css",
+    src: "./src/css/printCSS/printSearchResults.css",
     deploy: "./deploy/printCSS"
   },
   php: {
     src: "./src/php/**/*.php",
-    // temp: "./temp/js",
     deploy: "./deploy/php"
   },
   js: {
     src: "./src/js/**/*.js",
-    temp: "./temp/js",
     deploy: "./deploy/js"
   },
   svg: {
@@ -106,34 +106,34 @@ function reloadJS () {
     .pipe( reload( { stream: true } ) );
 }
 
-function moveJStoTemp () {
-  return gulp.src( paths.js.src )
-    .pipe( gulp.dest( paths.js.temp ) );
-}
+// function moveJStoTemp () {
+//   return gulp.src( paths.js.src )
+//     .pipe( gulp.dest( paths.js.temp ) );
+// }
 
-function movePrintCSStoTemp () {
-  return gulp.src( paths.printCSS.src )
-    .pipe( gulp.dest( paths.printCSS.temp ) );
-}
+// function movePrintCSStoTemp () {
+//   return gulp.src( paths.printCSS.src )
+//     .pipe( gulp.dest( paths.printCSS.temp ) );
+// }
 
-const scriptOrder = [
-  "./temp/js/main.js",
-  "./temp/js/SouthAmerica.js",
-  "./temp/js/familyMap.js",
+// const scriptOrder = [
+//   "./temp/js/main.js",
+//   "./temp/js/SouthAmerica.js",
+//   "./temp/js/familyMap.js",
 
-  // "./temp/js/main.js",
+//   // "./temp/js/main.js",
 
-  "./temp/js/numList.js",
+//   "./temp/js/numList.js",
 
-  "./temp/js/search/search_entry.js",
-  "./temp/js/search/search_handleQuery.js",
-  "./temp/js/search/search_functions.js",
-  "./temp/js/search/search_handleResults.js",
+//   "./temp/js/search/search_entry.js",
+//   "./temp/js/search/search_handleQuery.js",
+//   "./temp/js/search/search_functions.js",
+//   "./temp/js/search/search_handleResults.js",
 
-  "./temp/js/taxonomy.js",
+//   "./temp/js/taxonomy.js",
 
-  "./temp/js/birdMapFactory.js"
-];
+//   "./temp/js/birdMapFactory.js"
+// ];
 
 
 const fs = require( 'node:fs/promises' );
@@ -237,10 +237,10 @@ function processCSS () {
 }
 
 
-// function processPrintCSS() {
-//   return gulp.src(paths.css.src)
-//     .pipe(gulp.dest(paths.printCSS.deploy));
-// }
+function copyPrintCSS () {
+  return gulp.src( paths.printCSS.src )
+    .pipe( gulp.dest( paths.printCSS.deploy ) );
+}
 
 function copyPHP () {
   return gulp.src( paths.php.src )
@@ -413,12 +413,13 @@ exports.movePHP = gulp.series( copyPHP );
 
 exports.watch = gulp.series( watch );
 
-exports.production = gulp.series( moveJStoTemp, processJS );
+// exports.production = gulp.series( moveJStoTemp, processJS );
 
-// TODO : (include php and logFileRequests.txt) movePrintCSStoTemp? not used anymore - keep as backup?
-exports.build = gulp.series( processHTML, processCSS, moveJStoTemp, processJS,
+// TODO : (include php and logFileRequests.txt)
+// exports.build = gulp.series( processHTML, processCSS, moveJStoTemp, processJS,
+exports.build = gulp.series( processHTML, processCSS, processJS,
   copyPHP, copySVG, copyFLAGS, copyIMAGES, copyCitations, copyAuthors,
-  copyOccurrences, copyCountries, copyJSON );  // movePrintCSStoTemp
+  copyOccurrences, copyCountries, copyJSON, copyPrintCSS );  // processPrintCSS
 
 exports.getSACC = gulp.series( getBuildSACC_Data, getBuildSACC_Countries, getBuildSACC_JSON, getBuildSACC_NumLists );
 

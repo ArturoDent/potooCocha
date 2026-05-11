@@ -51,7 +51,6 @@ let appInitialized = false;
 
 // var mailLink;
 // var upLoadData = new FormData();
-// eslint-disable-next-line no-unused-vars
 // var activityData = [];
 
 export const countries2Postals = {
@@ -496,7 +495,6 @@ function openChecklistPage () {
   window.open( "./php/makePDF.php" + vars + "", "_blank" );
 }
 
-// eslint-disable-next-line no-unused-vars
 function uploadDownloads () {
 
   if ( !navigator.sendBeacon ) {

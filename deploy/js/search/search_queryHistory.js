@@ -1,7 +1,7 @@
 // "use strict";
 import { searchInput } from "../main.js";
 
-const SEARCH_QUERY_HISTORY_DEBOUNCE_MS = 500;
+const SEARCH_QUERY_HISTORY_DEBOUNCE_MS = 500;  // TODO: consider increasing this
 const SEARCH_QUERY_HISTORY_MAX = 50;
 const searchQueryHistory = [];
 let searchQueryHistoryIndex = 0;
@@ -10,7 +10,7 @@ let searchQueryHistoryEditingIndex = -1;
 let pendingSearchQuery;
 let searchQueryHistoryTimer;
 let navigatingSearchQueryHistory = false;
-let runSearchQuery = function () {};
+let runSearchQuery = function () { };
 let searchSpecialQueries = [];
 
 export function configureSearchQueryHistory ( options ) {
