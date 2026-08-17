@@ -1,4 +1,7 @@
-export const numFamiliesList = {
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
+
+export let numFamiliesList = {
 
   "Argentina": 88, "Aruba": 53, "Bolivia": 81, "Brazil": 95, "Chile": 69,
   "Colombia": 94, "Curaçao": 50, "Ecuador": 93, "French Guiana": 84,
@@ -6,12 +9,12 @@ export const numFamiliesList = {
   "Uruguay": 74, "Venezuela": 90, "Bonaire": 47, "Falklands": 51, "South America": 106
 };
 
-export const numSpeciesList = {
+export let numSpeciesList = {
 
   "Argentina": 1052, "Aruba": 245, "Bolivia": 1409, "Brazil": 1867, "Chile": 526,
-  "Colombia": 1915, "Curaçao": 217, "Ecuador": 1683, "French Guiana": 737,
-  "Guyana": 828, "Paraguay": 694, "Peru": 1905, "Suriname": 746, "Trinidad": 490,
-  "Uruguay": 500, "Venezuela": 1414, "Bonaire": 209, "Falklands": 220, "South America": 3514
+  "Colombia": 1915, "Curaçao": 217, "Ecuador": 1682, "French Guiana": 737,
+  "Guyana": 828, "Paraguay": 694, "Peru": 1905, "Suriname": 747, "Trinidad": 490,
+  "Uruguay": 500, "Venezuela": 1414, "Bonaire": 209, "Falklands": 220, "South America": 3513
 };
 
 // numSpecies does not include unconfirmeds, from http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm

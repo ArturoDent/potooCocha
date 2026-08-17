@@ -383,7 +383,19 @@ async function uploadDeployDirectory ( config, label ) {
   try {
     await client.connect( getSftpConnectionConfig( config ) );
     console.log( `Uploading ${ deployRoot } to ${ label } at /` );
-    await client.uploadDir( deployRoot, '/', { useFastput: false } );
+
+    const entries = await fs.readdir( deployRoot, { withFileTypes: true } );
+    for ( const entry of entries ) {
+      const src = path.join( deployRoot, entry.name );
+      const dst = `/${ entry.name }`;
+
+      if ( entry.isDirectory() ) {
+        await client.uploadDir( src, dst, { useFastput: false } );
+      } else {
+        await client.put( src, dst );
+      }
+      console.log( `  Uploaded ${ src } to ${ label } at ${ dst }` );
+    }
   } finally {
     await client.end().catch( () => undefined );
   }

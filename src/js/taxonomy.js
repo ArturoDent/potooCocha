@@ -1,20 +1,20 @@
 // "use strict";
-import { countries2Postals, currentCountry, searchSpecials } from "./main.js";
-import { map, highlightSAMmap, alreadyInMapsCollection } from "./SouthAmerica.js";
-import { mapsCollection, saveMapButton } from "./birdMapFactory.js";
-import { numFamiliesList, numSpeciesList } from "./numList.js";
-import { navigateToFamily } from "./familyMap.js";
+import {countries2Postals, currentCountry, searchSpecials} from "./main.js";
+import {map, highlightSAMmap, alreadyInMapsCollection} from "./SouthAmerica.js";
+import {mapsCollection, saveMapButton} from "./birdMapFactory.js";
+import {numFamiliesList, numSpeciesList} from "./numList.js";
+import {navigateToFamily} from "./familyMap.js";
 
-import { searchRegexTree } from "./search/search_functions.js";
-import { specialSearch, getSearchSpecialsQuery } from "./search/search_entry.js";
-import { loadSearchResults, resetTaxPageHeight } from "./search/search_handleResults.js";
+import {searchRegexTree} from "./search/search_functions.js";
+import {specialSearch, getSearchSpecialsQuery} from "./search/search_entry.js";
+import {loadSearchResults, resetTaxPageHeight} from "./search/search_handleResults.js";
 
 
 export let lastQuery = "";
-export function setLastQuery ( q ) {
+export function setLastQuery(q) {
   lastQuery = q;
 }
-export function getLastQuery () {
+export function getLastQuery() {
   return lastQuery;
 }
 
@@ -37,53 +37,53 @@ export let taxNodeByKey = new Map();
 let taxonomyInitialized = false;
 
 
-function ensureTaxonomyDomRefs () {
-  if ( !searchCountryText ) searchCountryText = document.getElementById( "searchCountryText" );
-  if ( !taxPage ) taxPage = document.getElementById( "taxPage" );
-  if ( !searchResults ) searchResults = document.getElementById( "searchResults" );
-  if ( !resultsPanel ) resultsPanel = document.getElementById( "results-panel" );
-  if ( !printerButton ) printerButton = document.getElementById( "printerButton" );
+function ensureTaxonomyDomRefs() {
+  if (!searchCountryText) searchCountryText = document.getElementById("searchCountryText");
+  if (!taxPage) taxPage = document.getElementById("taxPage");
+  if (!searchResults) searchResults = document.getElementById("searchResults");
+  if (!resultsPanel) resultsPanel = document.getElementById("results-panel");
+  if (!printerButton) printerButton = document.getElementById("printerButton");
 }
 
 // export async function initTaxonomy () { necessary for printSearchResults() ??
 
-export function initTaxonomy () {
-  if ( taxonomyInitialized ) return;
+export function initTaxonomy() {
+  if (taxonomyInitialized) return;
   taxonomyInitialized = true;
 
-  printerButton = document.getElementById( "printerButton" );
-  printerButton?.addEventListener( "click", printSearchResults );
+  printerButton = document.getElementById("printerButton");
+  printerButton?.addEventListener("click", printSearchResults);
 
-  const closeOpenFamiliesButton = document.getElementById( "closeOpenFamiliesButton" );
-  closeOpenFamiliesButton?.addEventListener( "click", closeAllFamilies );
+  const closeOpenFamiliesButton = document.getElementById("closeOpenFamiliesButton");
+  closeOpenFamiliesButton?.addEventListener("click", closeAllFamilies);
 
-  searchCountryText = document.getElementById( "searchCountryText" );
-  searchSpecials?.addEventListener( "click", getSearchSpecialsQuery );
-  taxPage = document.getElementById( "taxPage" );
+  searchCountryText = document.getElementById("searchCountryText");
+  searchSpecials?.addEventListener("click", getSearchSpecialsQuery);
+  taxPage = document.getElementById("taxPage");
 
-  searchResults = document.getElementById( "searchResults" );
-  resultsPanel = document.getElementById( "results-panel" );
+  searchResults = document.getElementById("searchResults");
+  resultsPanel = document.getElementById("results-panel");
 
-  searchResults?.addEventListener( "click", gotoMatch, false );
-  searchResults?.addEventListener( "dblclick", gotoSACCLink, false );
+  searchResults?.addEventListener("click", gotoMatch, false);
+  searchResults?.addEventListener("dblclick", gotoSACCLink, false);
   // searchResults.addEventListener("auxclick", gotoSACCLink, false);
-  searchResults?.addEventListener( "keydown", ( e ) => {
-    if ( e.key === "Enter" ) {
-      gotoSACCLink( e );
+  searchResults?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      gotoSACCLink(e);
     }
-  }, false );
+  }, false);
 
-  taxPage?.addEventListener( "click", toggleFamilyOpen );
-  taxPage?.addEventListener( "dblclick", gotoSACCLink, false );
+  taxPage?.addEventListener("click", toggleFamilyOpen);
+  taxPage?.addEventListener("dblclick", gotoSACCLink, false);
   // taxPage.addEventListener("auxclick", gotoSACCLink, false);
-  taxPage?.addEventListener( "keyup", ( e ) => {
-    if ( e.key === "Enter" ) {
-      gotoSACCLink( e );
+  taxPage?.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+      gotoSACCLink(e);
     }
-  }, false );
+  }, false);
 
   // preloading the file occurrences.txt
-  getTEXT( "../occurrences/occurrences.txt", data => birds = data.split( "\n" ) );
+  getTEXT("../occurrences/occurrences.txt", data => birds = data.split("\n"));
 
 }
 
@@ -92,127 +92,127 @@ export function initTaxonomy () {
 // const myJson = await response.json();
 // console.log(JSON.stringify(myJson));
 
-function getTEXT ( url, success ) {
+function getTEXT(url, success) {
   var xhr = new XMLHttpRequest();
-  xhr.open( "GET", url );
+  xhr.open("GET", url);
   xhr.onreadystatechange = function () {
-    if ( xhr.readyState > 3 && xhr.status === 200 ) success( xhr.responseText );
+    if (xhr.readyState > 3 && xhr.status === 200) success(xhr.responseText);
   };
-  xhr.setRequestHeader( "X-Requested-With", "XMLHttpRequest" );
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.send();
   return xhr;
 }
 
-export function getJSON ( url, success ) {
+export function getJSON(url, success) {
   var xhr = new XMLHttpRequest();
-  xhr.open( 'GET', url, true );
+  xhr.open('GET', url, true);
   xhr.responseType = 'json';
   xhr.onload = function () {
     var status = xhr.status;
-    if ( status === 200 ) {
-      success( xhr.response );
+    if (status === 200) {
+      success(xhr.response);
     }
     else {
-      throw new Error( "getJSON failed : " + xhr.response );
+      throw new Error("getJSON failed : " + xhr.response);
     }
   };
   xhr.send();
 }
 
-export function loadCountryTaxonomy ( country ) {
+export function loadCountryTaxonomy(country) {
   ensureTaxonomyDomRefs();
 
   // lastQuery.slice(0, 24) to limit lastQuery length in the searchTerm flyout
-  let searchTermElement = document.getElementById( "searchTerm" );
-  if ( searchTermElement ) {
-    if ( lastQuery ) {
+  let searchTermElement = document.getElementById("searchTerm");
+  if (searchTermElement) {
+    if (lastQuery) {
       searchTermElement.innerHTML = country + " : <span>" + lastQuery + "</span>";
     }
     else
       searchTermElement.innerHTML = country + " : <span>" + "enter a search term</span>";
   }
 
-  if ( country !== "South America" ) {
-    searchResults.classList.remove( "samTax" );
-    taxPage.classList.remove( "samTax" );
+  if (country !== "South America") {
+    searchResults.classList.remove("samTax");
+    taxPage.classList.remove("samTax");
   }
 
   //  -----------------------------------------------------------------------------------------------
 
-  if ( country === "French Guiana" ) {
-    getJSON( "JSON/FrenchGuiana/FrenchGuiana.json", getCountryJSON );
+  if (country === "French Guiana") {
+    getJSON("JSON/FrenchGuiana/FrenchGuiana.json", getCountryJSON);
   }
   // because Curaçao is accented here but not in filenames
-  else if ( country === "Curaçao" ) {
-    getJSON( "JSON/Curacao/Curacao.json", getCountryJSON );
+  else if (country === "Curaçao") {
+    getJSON("JSON/Curacao/Curacao.json", getCountryJSON);
   }
-  else if ( country === "South America" ) {
-    getJSON( "JSON/SouthAmerica/SouthAmerica.json", getCountryJSON );
-    searchResults = document.getElementById( "searchResults" );
+  else if (country === "South America") {
+    getJSON("JSON/SouthAmerica/SouthAmerica.json", getCountryJSON);
+    searchResults = document.getElementById("searchResults");
 
-    searchResults.classList.add( "samTax" );
+    searchResults.classList.add("samTax");
 
     // so unconfirmeds and vagrants aren't selectable if South America is chosen
-    searchSpecials?.querySelector( '[data-special="unconfirmed"]' ).classList.add( "notAvailable" );
-    searchSpecials?.querySelector( '[data-special="vagrant"]' ).classList.add( "notAvailable" );
+    searchSpecials?.querySelector('[data-special="unconfirmed"]').classList.add("notAvailable");
+    searchSpecials?.querySelector('[data-special="vagrant"]').classList.add("notAvailable");
 
-    taxPage.classList.add( "samTax" );
+    taxPage.classList.add("samTax");
   }
-  else if ( country ) {
-    getJSON( "JSON/" + country + "/" + country + ".json", getCountryJSON );
+  else if (country) {
+    getJSON("JSON/" + country + "/" + country + ".json", getCountryJSON);
   }
 
   //  -----------------------------------------------------------------------------------------------
 
-  if ( country !== "South America" ) {
-    searchSpecials.querySelector( '[data-special="unconfirmed"]' ).classList.remove( "notAvailable" );
-    searchSpecials.querySelector( '[data-special="vagrant"]' ).classList.remove( "notAvailable" );
+  if (country !== "South America") {
+    searchSpecials.querySelector('[data-special="unconfirmed"]').classList.remove("notAvailable");
+    searchSpecials.querySelector('[data-special="vagrant"]').classList.remove("notAvailable");
   }
 
   var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
 
-  if ( !lastQuery ) {
-    map.querySelector( ".saveMapButton" ).style.display = "none";
+  if (!lastQuery) {
+    map.querySelector(".saveMapButton").style.display = "none";
     /** @type {HTMLElement | null} */
-    const el = document.querySelector( ".colorKey" );
-    if ( el ) el.style.opacity = "0.9";
+    const el = document.querySelector(".colorKey");
+    if (el) el.style.opacity = "0.9";
   }
-  else if ( specials.test( lastQuery ) ) {
-    map.querySelector( ".saveMapButton" ).style.display = "none";
+  else if (specials.test(lastQuery)) {
+    map.querySelector(".saveMapButton").style.display = "none";
   }
 
-  if ( country === "South America" ) searchCountryText.innerHTML = "South America";
-  else if ( country === "Falklands" ) searchCountryText.innerHTML = "the Falkland Islands";
+  if (country === "South America") searchCountryText.innerHTML = "South America";
+  else if (country === "Falklands") searchCountryText.innerHTML = "the Falkland Islands";
   else searchCountryText.innerHTML = country;
 
-  const treeIntroTextElement = document.querySelector( "#treeIntroText" );
+  const treeIntroTextElement = document.querySelector("#treeIntroText");
 
-  if ( treeIntroTextElement ) {
-    if ( country === "Falklands" )
-      treeIntroTextElement.innerHTML = "Falklands/Malvinas" + " : " + numFamiliesList[ country ] + " families, " + numSpeciesList[ country ] + " species";
-    else treeIntroTextElement.innerHTML = country + " : " + numFamiliesList[ country ] + " families, " + numSpeciesList[ country ] + " species";
+  if (treeIntroTextElement) {
+    if (country === "Falklands")
+      treeIntroTextElement.innerHTML = "Falklands/Malvinas" + " : " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
+    else treeIntroTextElement.innerHTML = country + " : " + numFamiliesList[country] + " families, " + numSpeciesList[country] + " species";
   }
 }
 
 
-function initTaxPageStickyHeaders () {
+function initTaxPageStickyHeaders() {
 
-  const scrollContainer = document.querySelector( '#taxPage' );
+  const scrollContainer = document.querySelector('#taxPage');
 
   const observer = new IntersectionObserver(
-    ( [ e ] ) => {
-      e.target.classList.toggle( "sticky", e.intersectionRatio < 1 );
+    ([e]) => {
+      e.target.classList.toggle("sticky", e.intersectionRatio < 1);
     },
     {
       root: scrollContainer,
-      threshold: [ 1 ]
+      threshold: [1]
     }
   );
 
-  const headers = document.querySelectorAll( '.fTitle' );
-  headers.forEach( header => {
-    observer.observe( header );
-  } );
+  const headers = document.querySelectorAll('.fTitle');
+  headers.forEach(header => {
+    observer.observe(header);
+  });
 }
 
 // function getCountryHTML(data) {
@@ -224,7 +224,7 @@ function initTaxPageStickyHeaders () {
 
 // }
 
-function buildTaxTree ( thisCountryFamilies, country ) {
+function buildTaxTree(thisCountryFamilies, country) {
   ensureTaxonomyDomRefs();
 
   // TODO: why building this here instead of using the *SACC.html file??
@@ -237,33 +237,33 @@ function buildTaxTree ( thisCountryFamilies, country ) {
 
   var results = `<ul id="tree">\n\n`;
 
-  thisCountryFamilies.forEach( function ( family ) {    // forEach is okay, there will be no `break`s
+  thisCountryFamilies.forEach(function (family) {    // forEach is okay, there will be no `break`s
 
     //   <li class="family"><span class="fTitle"><span class="fco">FLAMINGOS</span><span class="fsc">PHOENICOPTERIDAE</span></span>
     //      <ul class="birds"></ul>
 
-    results += `<li class="family" data-family="${ family.Family }"><span class="fTitle" tabindex="0"><span class="fco">${ family.FamilyCommon }</span>`;
-    results += `<span class="fsc">${ family.Family }</span></span>\n`;
+    results += `<li class="family" data-family="${family.Family}"><span class="fTitle" tabindex="0"><span class="fco">${family.FamilyCommon}</span>`;
+    results += `<span class="fsc">${family.Family}</span></span>\n`;
     results += `  <ul class="birds">\n\n`;
 
-    family.genera.forEach( function ( genus ) {
+    family.genera.forEach(function (genus) {
 
-      genus.spp.forEach( function ( bird ) {
+      genus.spp.forEach(function (bird) {
 
         // <li data-i="160"><span>Chilean Flamingo</span><span>Phoenicopterus chilensis</span></li>
         // <li data-i="162"><span class="nb">Andean Flamingo</span><span>Phoenicoparrus andinus</span></li>
 
-        occ = bird[ country ];
-        if ( occ && occ !== "X" )
-          results += `  <li data-i="${ bird.index }" tabindex="0"><span class="${ json2html[ bird[ country ] ] }">${ bird.name }</span>`;
+        occ = bird[country];
+        if (occ && occ !== "X")
+          results += `  <li data-i="${bird.index}" tabindex="0"><span class="${json2html[bird[country]]}">${bird.name}</span>`;
         else
-          results += `  <li data-i="${ bird.index }" tabindex="0"><span>${ bird.name }</span>`;
+          results += `  <li data-i="${bird.index}" tabindex="0"><span>${bird.name}</span>`;
 
-        results += `<span>${ genus.Genus } ${ bird.species }</span></li>\n`;
-      } );
-    } );
+        results += `<span>${genus.Genus} ${bird.species}</span></li>\n`;
+      });
+    });
     results += `  </ul></li>\n\n`;
-  } );
+  });
 
   results += `</ul>\n`;
 
@@ -279,49 +279,49 @@ function buildTaxTree ( thisCountryFamilies, country ) {
 }
 
 
-function indexTaxTree () {
+function indexTaxTree() {
   taxNodeByKey.clear();
 
   /** @type {NodeListOf<HTMLLIElement>} */
-  const byI = document.querySelectorAll( "#tree li[data-i]" );
-  byI.forEach( li => {
-    taxNodeByKey.set( `bird:${ li.dataset.i }`, li );
-  } );
+  const byI = document.querySelectorAll("#tree li[data-i]");
+  byI.forEach(li => {
+    taxNodeByKey.set(`bird:${li.dataset.i}`, li);
+  });
 
   /** @type {NodeListOf<HTMLLIElement>} */
-  const byFamily = document.querySelectorAll( "#tree li.family[data-family], #tree li.familyOpen[data-family]" );
-  byFamily.forEach( li => {
-    taxNodeByKey.set( `family:${ li.dataset.family }`, li );
-  } );
+  const byFamily = document.querySelectorAll("#tree li.family[data-family], #tree li.familyOpen[data-family]");
+  byFamily.forEach(li => {
+    taxNodeByKey.set(`family:${li.dataset.family}`, li);
+  });
 }
 
 
-function getCountryJSON ( data ) {
+function getCountryJSON(data) {
 
   families = data.birds.families;
   numFamilies = families.length;
 
   let results;
 
-  if ( lastQuery ) {
+  if (lastQuery) {
     var specials = /extinct|endemic|unconfirmed|vagrant|endemic-breeder/;
-    if ( specials.test( lastQuery ) ) results = specialSearch( families, lastQuery );
+    if (specials.test(lastQuery)) results = specialSearch(families, lastQuery);
     // false will avoid modifyQuery()  sanitize, add accents, etc. - has already been done on the lastQuery
-    else results = searchRegexTree( families, lastQuery, countries2Postals[ currentCountry ] ), false;
+    else results = searchRegexTree(families, lastQuery, countries2Postals[currentCountry]), false;
 
-    loadSearchResults( results );
+    loadSearchResults(results);
   }
 
-  buildTaxTree( families, countries2Postals[ currentCountry ] );
+  buildTaxTree(families, countries2Postals[currentCountry]);
 }
 
 
-function gotoSACCLink ( e ) {
+function gotoSACCLink(e) {
 
-  const familySciName = e.target.closest( "li[data-family]" ).dataset.family;
-  const birdFullName = e.target.closest( "li[data-i]" )?.innerText || "";
+  const familySciName = e.target.closest("li[data-family]").dataset.family;
+  const birdFullName = e.target.closest("li[data-i]")?.innerText || "";
 
-  navigateToFamily( familySciName, birdFullName );
+  navigateToFamily(familySciName, birdFullName);
 
   e.preventDefault();
   e.stopImmediatePropagation();
@@ -329,28 +329,28 @@ function gotoSACCLink ( e ) {
 
 
 // <ul id="searchResults"></ul>
-function gotoMatch ( e ) {
+function gotoMatch(e) {
   ensureTaxonomyDomRefs();
 
   // e.target === 'Mergus octosetaceus' or 'Brazilian Merganser'
 
-  if ( e.ctrlKey || e.metaKey ) {
-    gotoSACCLink( e );
+  if (e.ctrlKey || e.metaKey) {
+    gotoSACCLink(e);
     return;
   }
 
-  if ( lastSpecies && lastSpecies.classList.contains( "active" ) ) {
-    lastSpecies.classList.remove( "active" );
+  if (lastSpecies && lastSpecies.classList.contains("active")) {
+    lastSpecies.classList.remove("active");
   }
 
   // <li class="family"><span class="fco">HUMMINGBIRDS</span><span class="fsc">TROCHILIDAE</span></li>
   // <li data-i="316" class="bird"><span>Fiery Topaz</span><span>Topaza pyra</span></li>
 
   var ev = e || window.event;  // TODO: window.event for IE8-  TODO: simplify with ??=
-  var clicked = ev.target.closest( "li" );  // works
+  var clicked = ev.target.closest("li");  // works
 
-  if ( !clicked ) return;
-  if ( !clicked.classList.contains( 'family' ) && !clicked.classList.contains( 'bird' ) ) return;
+  if (!clicked) return;
+  if (!clicked.classList.contains('family') && !clicked.classList.contains('bird')) return;
 
   // eText = "Horned ScreamerAnhima cornuta"
   // clicked.children[1].innerText = "Anhima cornuta"
@@ -359,18 +359,18 @@ function gotoMatch ( e ) {
   // map already shows the bird selected in results or taxTree
   // but last species was a family; lastSpecies.className === 'fTitle'
 
-  if ( lastSpecies?.className !== 'fTitle' ) {
+  if (lastSpecies?.className !== 'fTitle') {
     let sciNameSpan;
-    if ( sciNameSpan = map.querySelector( "#currentBirdName span:last-of-type" ) ) {
+    if (sciNameSpan = map.querySelector("#currentBirdName span:last-of-type")) {
       const mapSciName = sciNameSpan.innerText;
-      if ( mapSciName === clicked.querySelector( "span:last-of-type" ).innerText ) {
+      if (mapSciName === clicked.querySelector("span:last-of-type").innerText) {
 
-        clicked.classList.add( "active" );
-        const birdNode = taxNodeByKey.get( `bird:${ clicked.dataset.i }` );
-        birdNode.classList.add( "active" );
+        clicked.classList.add("active");
+        const birdNode = taxNodeByKey.get(`bird:${clicked.dataset.i}`);
+        birdNode.classList.add("active");
         lastSpecies = birdNode;
-        if ( lastResultsSpecies && lastResultsSpecies !== clicked ) {
-          lastResultsSpecies.classList.remove( "active" );
+        if (lastResultsSpecies && lastResultsSpecies !== clicked) {
+          lastResultsSpecies.classList.remove("active");
         }
         lastResultsSpecies = clicked;
         return;
@@ -381,18 +381,18 @@ function gotoMatch ( e ) {
   let familySciName = clicked.dataset.family;
 
   // TODO: get full nodes from ...SACC.html
-  const birdNode = taxNodeByKey.get( `bird:${ clicked.dataset.i }` );
-  const familyNode = taxNodeByKey.get( `family:${ familySciName }` );
+  const birdNode = taxNodeByKey.get(`bird:${clicked.dataset.i}`);
+  const familyNode = taxNodeByKey.get(`family:${familySciName}`);
 
-  if ( clicked.classList.contains( "bird" ) ) {
+  if (clicked.classList.contains("bird")) {
 
-    const familyUList = familyNode?.querySelector( ":scope > ul.birds" );
-    if ( !familyNode || !familyUList || !birdNode ) return;
+    const familyUList = familyNode?.querySelector(":scope > ul.birds");
+    if (!familyNode || !familyUList || !birdNode) return;
 
-    if ( !familyUList.classList.contains( "open" ) ) {
-      familyUList.classList.add( "open" );
-      familyNode.classList.remove( "family" );
-      familyNode.classList.add( "familyOpen" );
+    if (!familyUList.classList.contains("open")) {
+      familyUList.classList.add("open");
+      familyNode.classList.remove("family");
+      familyNode.classList.add("familyOpen");
     }
 
     // can't offset down easily for some reason with scroll-margin-top on '.active' elements
@@ -408,36 +408,36 @@ function gotoMatch ( e ) {
       taxPage.scrollTop -
       60;     // offset
 
-    taxPage.scroll( {
+    taxPage.scroll({
       top,
       behavior: "smooth"
-    } );
+    });
 
-    birdNode.classList.add( "active" );
+    birdNode.classList.add("active");
 
     lastSpecies = birdNode;
-    lastIndex = Number( clicked.dataset.i );
+    lastIndex = Number(clicked.dataset.i);
 
-    if ( lastResultsSpecies && lastResultsSpecies !== clicked ) {
-      lastResultsSpecies.classList.remove( "active" );
+    if (lastResultsSpecies && lastResultsSpecies !== clicked) {
+      lastResultsSpecies.classList.remove("active");
     }
-    clicked.classList.add( "active" );
+    clicked.classList.add("active");
     lastResultsSpecies = clicked;  // not birdNode which is a taxTree node, clicked is in the resultsPanel
-    addBirdNameToMap( clicked );
+    addBirdNameToMap(clicked);
 
-    highlightSAMmap( lastIndex, "currentMap" );
+    highlightSAMmap(lastIndex, "currentMap");
 
-    if ( mapsCollection.getElementsByClassName( "smallBird" ).length === 5 || alreadyInMapsCollection() ) {
+    if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
       saveMapButton.style.display = "none";
     }
     else
       saveMapButton.style.display = "block";
   }
 
-  else if ( clicked.classList.contains( "family" ) ) {
+  else if (clicked.classList.contains("family")) {
 
-    if ( lastResultsSpecies ) {
-      lastResultsSpecies.classList.remove( "active" );
+    if (lastResultsSpecies) {
+      lastResultsSpecies.classList.remove("active");
       lastResultsSpecies = null;
     }
 
@@ -447,25 +447,25 @@ function gotoMatch ( e ) {
       taxPage.scrollTop -
       30;
 
-    taxPage.scroll( {
+    taxPage.scroll({
       top,
       behavior: "smooth"
-    } );
+    });
 
-    familyNode.firstChild.classList.add( "active" );
+    familyNode.firstChild.classList.add("active");
     lastSpecies = clicked;  // remove active from lastSpecies before this
-    lastSpecies.classList.add( "active" );
+    lastSpecies.classList.add("active");
     lastResultsSpecies = familyNode.firstChild;
   }
 }
 
-export function addBirdNameToMap ( name ) {
+export function addBirdNameToMap(name) {
 
   var temp = "";
 
-  const currentBirdNameElement = document.getElementById( "currentBirdName" );
-  if ( currentBirdNameElement ) {
-    if ( name ) {
+  const currentBirdNameElement = document.getElementById("currentBirdName");
+  if (currentBirdNameElement) {
+    if (name) {
       temp = "<span>" + name.firstChild.textContent + "</span><br/><span>" + name.lastChild.textContent + "</span>";
       currentBirdNameElement.innerHTML = temp;
     }
@@ -475,31 +475,31 @@ export function addBirdNameToMap ( name ) {
   }
 }
 
-function toggleFamilyOpen ( event ) {
+function toggleFamilyOpen(event) {
 
   ensureTaxonomyDomRefs();
 
-  if ( event.ctrlKey || event.metaKey ) {
-    gotoSACCLink( event );
+  if (event.ctrlKey || event.metaKey) {
+    gotoSACCLink(event);
     return;
   }
 
-  if ( event.target.id === "taxPage" ) return;
+  if (event.target.id === "taxPage") return;
 
   // taxPage is not open yet
-  if ( !numFamilies ) return;
+  if (!numFamilies) return;
 
   event = event || window.event;  // TODO: window.event for IE8-  TODO: use ??= instead
 
   var familyUList;
   var familyHeader;
   var speciesTarget;
-  const treeIntroTextElement = document.querySelector( "#treeIntroText" );
+  const treeIntroTextElement = document.querySelector("#treeIntroText");
 
-  if ( event.target.closest( "ul.birds" ) ) speciesTarget = event.target.closest( "ul.birds li" );
+  if (event.target.closest("ul.birds")) speciesTarget = event.target.closest("ul.birds li");
   else {
-    familyHeader = event.target.closest( "li.family, li.familyOpen" );
-    familyUList = familyHeader.childNodes[ 1 ].nextSibling;
+    familyHeader = event.target.closest("li.family, li.familyOpen");
+    familyUList = familyHeader.childNodes[1].nextSibling;
     // want familyUList to == <ul class="birds [open]"> to toggle display
   }
 
@@ -511,9 +511,9 @@ function toggleFamilyOpen ( event ) {
   //         <li data-i="1"><span>Lesser Rhea</span><span>Rhea pennata</span></li>
   //      </ul></li>
 
-  if ( familyUList && !familyUList.classList.contains( "open" ) ) {  // not open
+  if (familyUList && !familyUList.classList.contains("open")) {  // not open
 
-    familyUList.classList.add( "open" );
+    familyUList.classList.add("open");
 
     familyHeader.className = "familyOpen";
 
@@ -522,66 +522,66 @@ function toggleFamilyOpen ( event ) {
 
     var taxPageHeight = taxPage.getBoundingClientRect().height;
 
-    if ( familyUList.offsetTop - taxPage.scrollTop > taxPageHeight - 24 ) {
+    if (familyUList.offsetTop - taxPage.scrollTop > taxPageHeight - 24) {
 
       //  will the entire family fit in taxPage ?
 
-      if ( familyHeader.clientHeight > taxPageHeight )
+      if (familyHeader.clientHeight > taxPageHeight)
         taxPage.scrollTop = familyHeader.offsetTop;
 
       else
         taxPage.scrollTop += familyUList.lastElementChild.offsetTop + familyUList.lastElementChild.clientHeight;
     }
     //  show family and numSpecies in that family
-    var scientificFamily = familyHeader.firstChild.children[ 1 ].textContent;
-    if ( !scientificFamily ) scientificFamily = familyHeader.firstChild.children[ 0 ].textContent;
+    var scientificFamily = familyHeader.firstChild.children[1].textContent;
+    if (!scientificFamily) scientificFamily = familyHeader.firstChild.children[0].textContent;
 
-    if ( treeIntroTextElement )
+    if (treeIntroTextElement)
       treeIntroTextElement.innerHTML = currentCountry + " : " + scientificFamily + " has " + familyUList.children.length + " species";
   }
 
-  else if ( familyUList ) {    // was open
-    familyUList.classList.remove( "open" );
+  else if (familyUList) {    // was open
+    familyUList.classList.remove("open");
     familyHeader.className = "family";
 
-    var reset = familyHeader.querySelectorAll( ".active" );
+    var reset = familyHeader.querySelectorAll(".active");
 
-    if ( reset.length ) {
-      reset[ 0 ].classList.remove( "active" );
+    if (reset.length) {
+      reset[0].classList.remove("active");
     }
 
-    if ( treeIntroTextElement )
-      treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species";
+    if (treeIntroTextElement)
+      treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species";
   }
 
   //   clicked on a species in the taxTree
-  if ( !familyUList ) {
+  if (!familyUList) {
 
     //    <ul class="birds open">
     //      <li data-i="2692"><span>Tepui Wren</div><div>Troglodytes rufulus</span></li>
 
-    speciesTarget.classList.add( "active" );
+    speciesTarget.classList.add("active");
 
-    if ( speciesTarget !== lastSpecies ) {
+    if (speciesTarget !== lastSpecies) {
 
-      if ( lastSpecies && lastSpecies.classList.contains( "active" ) ) {
-        lastSpecies.classList.remove( "active" );
+      if (lastSpecies && lastSpecies.classList.contains("active")) {
+        lastSpecies.classList.remove("active");
       }
     }
 
     lastSpecies = speciesTarget;
-    if ( lastResultsSpecies ) lastResultsSpecies.classList.remove( "active" );
+    if (lastResultsSpecies) lastResultsSpecies.classList.remove("active");
     lastResultsSpecies = null;
 
-    addBirdNameToMap( speciesTarget );
+    addBirdNameToMap(speciesTarget);
 
-    lastIndex = Number( speciesTarget.dataset.i );
-    highlightSAMmap( lastIndex, "currentMap" );
+    lastIndex = Number(speciesTarget.dataset.i);
+    highlightSAMmap(lastIndex, "currentMap");
 
-    if ( treeIntroTextElement )
-      treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species *";
+    if (treeIntroTextElement)
+      treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
 
-    if ( mapsCollection.getElementsByClassName( "smallBird" ).length === 5 || alreadyInMapsCollection() ) {
+    if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
       saveMapButton.style.display = "none";
     }
     else
@@ -591,46 +591,46 @@ function toggleFamilyOpen ( event ) {
   taxPage.style.zIndex = 5;
 }
 
-function closeAllFamilies () {
+function closeAllFamilies() {
   ensureTaxonomyDomRefs();
 
-  const treeIntroTextElement = document.querySelector( "#treeIntroText" );
+  const treeIntroTextElement = document.querySelector("#treeIntroText");
 
-  for ( const node of taxNodeByKey.values() ) {
-    if ( node.matches( "li.familyOpen" ) ) {
+  for (const node of taxNodeByKey.values()) {
+    if (node.matches("li.familyOpen")) {
 
-      const familyUList = node?.querySelector( ":scope > ul.birds" );
+      const familyUList = node?.querySelector(":scope > ul.birds");
 
-      familyUList.classList.remove( "open" );
-      familyUList.classList.add( "closed" );
+      familyUList.classList.remove("open");
+      familyUList.classList.add("closed");
 
-      node.classList.add( "family" );
-      node.classList.remove( "familyOpen" );
+      node.classList.add("family");
+      node.classList.remove("familyOpen");
     }
   }
 
   // **** reset families and species of country
-  if ( treeIntroTextElement )
-    treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[ currentCountry ] + " families, " + numSpeciesList[ currentCountry ] + " species *";
+  if (treeIntroTextElement)
+    treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
 }
 
-async function printSearchResults ( evt ) {
+async function printSearchResults(evt) {
 
   // if no search results do nothing
-  var numSpecies = document.getElementsByClassName( "bird" ).length;
-  if ( !numSpecies ) return;
+  var numSpecies = document.getElementsByClassName("bird").length;
+  if (!numSpecies) return;
 
   let divId = "searchResults";
-  var content = document.getElementById( divId )?.innerHTML;
+  var content = document.getElementById(divId)?.innerHTML;
 
   // OPTION 1:
   try {
     // 1. Fetch the CSS file content
-    const response = await fetch( '/printCSS/printSearchResults.css' );
+    const response = await fetch('/printCSS/printSearchResults.css');
     const cssContent = await response.text();
 
     // 2. Wrap it in style tags
-    var css = `<style>${ cssContent }</style>`;
+    var css = `<style>${cssContent}</style>`;
 
     var html = '<html><head><title>Search Print Results</title>';
     html += css;
@@ -639,28 +639,28 @@ async function printSearchResults ( evt ) {
     // ... continue with your window.open / document.write logic
     // `normalize lastQuery (remove accented regex's):: South America : 's(a|ã)o' 2 species
     //          'm(a|ã)r(a|ã)(n|ñ)o(n|ñ)'
-    var normalizedQuery = lastQuery.replace( /\(a\|ã\)/gi, "a" ).replace( /\(n\|ñ\)/gi, "n" );
+    var normalizedQuery = lastQuery.replace(/\(a\|ã\)/gi, "a").replace(/\(n\|ñ\)/gi, "n");
 
     html += '<h3>' + currentCountry + ' : &nbsp;\'' + normalizedQuery + '\'  &nbsp;&nbsp;' + numSpecies + ' species</h3>';
     html += "<div id='searchResults'>";
     html += content;
     html += "</div>";
 
-    html += "<br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;26&nbsp;March&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
+    html += "<br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;13&nbsp;August&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
     html += '</body></html>';
 
-    var iframe = document.createElement( "iframe" );
-    document.body.appendChild( iframe );
+    var iframe = document.createElement("iframe");
+    document.body.appendChild(iframe);
     iframe.srcdoc = html;
 
-    setTimeout( function () {
+    setTimeout(function () {
       iframe.contentWindow?.print();
       iframe.remove();
-    }, 250 );
+    }, 250);
 
     return true;
-  } catch ( err ) {
-    console.error( "Failed to load CSS:", err );
+  } catch (err) {
+    console.error("Failed to load CSS:", err);
   }
 
   // OPTION 2:

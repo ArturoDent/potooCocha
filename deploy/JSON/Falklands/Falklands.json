@@ -1,7 +1,7 @@
 {
 	"source": "South American Checklist Committee",
 	"sourceURL": "http://www.museum.lsu.edu/~Remsen/SACCBaseline.htm",
-	"version": "April 8, 2026",
+	"version": "February 25, 2026",
 	"birds": {
 		"families": [
 			{
@@ -841,7 +841,7 @@
 			},
 			{
 				"Family": "ROSTRATULIDAE",
-				"FamilyCommon": "PAINTED-SNIPE",
+				"FamilyCommon": "PAINTED-SNIPES",
 				"genera": [
 					{
 						"Genus": "Nycticryphes",
@@ -899,7 +899,7 @@
 			},
 			{
 				"Family": "LARIDAE",
-				"FamilyCommon": "GULLS",
+				"FamilyCommon": "GULLS and TERNS",
 				"genera": [
 					{
 						"Genus": "Anous",
@@ -1877,7 +1877,7 @@
 			},
 			{
 				"Family": "PSITTACIDAE",
-				"FamilyCommon": "PARROTS",
+				"FamilyCommon": "NEW WORLD and AFRICAN PARROTS",
 				"genera": [
 					{
 						"Genus": "Enicognathus",
@@ -2141,7 +2141,7 @@
 						"spp": [
 							{
 								"species": "cyanoleuca",
-								"index": 2720,
+								"index": 2719,
 								"name": "Blue-and-white Swallow",
 								"FK": "V"
 							}
@@ -2152,7 +2152,7 @@
 						"spp": [
 							{
 								"species": "fucata",
-								"index": 2722,
+								"index": 2721,
 								"name": "Tawny-headed Swallow",
 								"FK": "U"
 							}
@@ -2163,7 +2163,7 @@
 						"spp": [
 							{
 								"species": "ruficollis",
-								"index": 2728,
+								"index": 2727,
 								"name": "Southern Rough-winged Swallow",
 								"FK": "V"
 							}
@@ -2174,25 +2174,25 @@
 						"spp": [
 							{
 								"species": "tapera",
-								"index": 2729,
+								"index": 2728,
 								"name": "Brown-chested Martin",
 								"FK": "U"
 							},
 							{
 								"species": "subis",
-								"index": 2730,
+								"index": 2729,
 								"name": "Purple Martin",
 								"FK": "V"
 							},
 							{
 								"species": "chalybea",
-								"index": 2733,
+								"index": 2732,
 								"name": "Gray-breasted Martin",
 								"FK": "V"
 							},
 							{
 								"species": "elegans",
-								"index": 2734,
+								"index": 2733,
 								"name": "Southern Martin",
 								"FK": "V"
 							}
@@ -2203,13 +2203,13 @@
 						"spp": [
 							{
 								"species": "leucorrhoa",
-								"index": 2740,
+								"index": 2739,
 								"name": "White-rumped Swallow",
 								"FK": "U"
 							},
 							{
 								"species": "leucopyga",
-								"index": 2741,
+								"index": 2740,
 								"name": "Chilean Swallow",
 								"FK": "NB"
 							}
@@ -2220,7 +2220,7 @@
 						"spp": [
 							{
 								"species": "riparia",
-								"index": 2742,
+								"index": 2741,
 								"name": "Bank Swallow",
 								"FK": "V"
 							}
@@ -2231,7 +2231,7 @@
 						"spp": [
 							{
 								"species": "rustica",
-								"index": 2743,
+								"index": 2742,
 								"name": "Barn Swallow",
 								"FK": "NB"
 							}
@@ -2242,7 +2242,7 @@
 						"spp": [
 							{
 								"species": "pyrrhonota",
-								"index": 2744,
+								"index": 2743,
 								"name": "Cliff Swallow",
 								"FK": "V"
 							}
@@ -2259,13 +2259,13 @@
 						"spp": [
 							{
 								"species": "musculus",
-								"index": 2752,
+								"index": 2751,
 								"name": "Southern House Wren",
 								"FK": "V"
 							},
 							{
 								"species": "cobbi",
-								"index": 2753,
+								"index": 2752,
 								"name": "Cobb's Wren",
 								"FK": "X(e)"
 							}
@@ -2276,7 +2276,7 @@
 						"spp": [
 							{
 								"species": "platensis",
-								"index": 2758,
+								"index": 2757,
 								"name": "Grass Wren",
 								"FK": "X"
 							}
@@ -2293,7 +2293,7 @@
 						"spp": [
 							{
 								"species": "mustelina",
-								"index": 2823,
+								"index": 2822,
 								"name": "Wood Thrush",
 								"FK": "V"
 							}
@@ -2304,13 +2304,13 @@
 						"spp": [
 							{
 								"species": "falcklandii",
-								"index": 2828,
+								"index": 2827,
 								"name": "Austral Thrush",
 								"FK": "X"
 							},
 							{
 								"species": "amaurochalinus",
-								"index": 2843,
+								"index": 2842,
 								"name": "Creamy-bellied Thrush",
 								"FK": "V"
 							}
@@ -2327,13 +2327,13 @@
 						"spp": [
 							{
 								"species": "patagonicus",
-								"index": 2862,
+								"index": 2861,
 								"name": "Patagonian Mockingbird",
 								"FK": "V"
 							},
 							{
 								"species": "triurus",
-								"index": 2864,
+								"index": 2863,
 								"name": "White-banded Mockingbird",
 								"FK": "V"
 							}
@@ -2350,7 +2350,7 @@
 						"spp": [
 							{
 								"species": "vulgaris",
-								"index": 2873,
+								"index": 2872,
 								"name": "European Starling",
 								"FK": "V"
 							}
@@ -2367,7 +2367,7 @@
 						"spp": [
 							{
 								"species": "domesticus",
-								"index": 2879,
+								"index": 2878,
 								"name": "House Sparrow",
 								"FK": "IN"
 							}
@@ -2384,7 +2384,7 @@
 						"spp": [
 							{
 								"species": "correndera",
-								"index": 2886,
+								"index": 2885,
 								"name": "Correndera Pipit",
 								"FK": "X"
 							}
@@ -2401,7 +2401,7 @@
 						"spp": [
 							{
 								"species": "barbatus",
-								"index": 2902,
+								"index": 2901,
 								"name": "Black-chinned Siskin",
 								"FK": "X"
 							}
@@ -2418,7 +2418,7 @@
 						"spp": [
 							{
 								"species": "humeralis",
-								"index": 2938,
+								"index": 2937,
 								"name": "Grassland Sparrow",
 								"FK": "U"
 							}
@@ -2429,7 +2429,7 @@
 						"spp": [
 							{
 								"species": "capensis",
-								"index": 2962,
+								"index": 2961,
 								"name": "Rufous-collared Sparrow",
 								"FK": "V"
 							}
@@ -2446,7 +2446,7 @@
 						"spp": [
 							{
 								"species": "loyca",
-								"index": 2998,
+								"index": 2997,
 								"name": "Long-tailed Meadowlark",
 								"FK": "X"
 							}
@@ -2457,7 +2457,7 @@
 						"spp": [
 							{
 								"species": "bonariensis",
-								"index": 3034,
+								"index": 3033,
 								"name": "Shiny Cowbird",
 								"FK": "V"
 							}
@@ -2468,7 +2468,7 @@
 						"spp": [
 							{
 								"species": "thilius",
-								"index": 3052,
+								"index": 3051,
 								"name": "Yellow-winged Blackbird",
 								"FK": "V"
 							}
@@ -2485,13 +2485,13 @@
 						"spp": [
 							{
 								"species": "ruticilla",
-								"index": 3074,
+								"index": 3073,
 								"name": "American Redstart",
 								"FK": "V"
 							},
 							{
 								"species": "pitiayumi",
-								"index": 3078,
+								"index": 3077,
 								"name": "Tropical Parula",
 								"FK": "V"
 							}
@@ -2508,13 +2508,13 @@
 						"spp": [
 							{
 								"species": "lebruni",
-								"index": 3194,
+								"index": 3193,
 								"name": "Patagonian Yellow-Finch",
 								"FK": "U"
 							},
 							{
 								"species": "luteola",
-								"index": 3197,
+								"index": 3196,
 								"name": "Grassland Yellow-Finch",
 								"FK": "V"
 							}
@@ -2525,7 +2525,7 @@
 						"spp": [
 							{
 								"species": "patagonicus",
-								"index": 3203,
+								"index": 3202,
 								"name": "Patagonian Sierra Finch",
 								"FK": "V"
 							}
@@ -2536,7 +2536,7 @@
 						"spp": [
 							{
 								"species": "fruticeti",
-								"index": 3206,
+								"index": 3205,
 								"name": "Mourning Sierra Finch",
 								"FK": "V"
 							}
@@ -2547,13 +2547,13 @@
 						"spp": [
 							{
 								"species": "melanodera",
-								"index": 3214,
+								"index": 3213,
 								"name": "White-bridled Finch",
 								"FK": "X"
 							},
 							{
 								"species": "xanthogramma",
-								"index": 3215,
+								"index": 3214,
 								"name": "Yellow-bridled Finch",
 								"FK": "EX"
 							}
@@ -2564,7 +2564,7 @@
 						"spp": [
 							{
 								"species": "caerulescens",
-								"index": 3312,
+								"index": 3311,
 								"name": "Double-collared Seedeater",
 								"FK": "V"
 							}
@@ -2575,7 +2575,7 @@
 						"spp": [
 							{
 								"species": "diuca",
-								"index": 3419,
+								"index": 3418,
 								"name": "Diuca Finch",
 								"FK": "V"
 							}

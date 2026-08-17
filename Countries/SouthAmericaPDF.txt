@@ -753,7 +753,7 @@ SEEDSNIPES,THINOCORIDAE
 ,,Least Seedsnipe,T. rumicivorus
 JACANAS,JACANIDAE
 ,,Wattled Jacana,Jacana jacana
-PAINTED-SNIPE,ROSTRATULIDAE
+PAINTED-SNIPES,ROSTRATULIDAE
 ,,South American Painted-snipe,Nycticryphes semicollaris
 PRATINCOLES,GLAREOLIDAE
 ,,Collared Pratincole,Glareola pratincola
@@ -765,7 +765,7 @@ SKUAS,STERCORARIIDAE
 5,,Pomarine Jaeger,S. pomarinus
 ,,Parasitic Jaeger,S. parasiticus
 ,,Long-tailed Jaeger,S. longicaudus
-GULLS,LARIDAE
+GULLS and TERNS,LARIDAE
 ,,Brown Noddy,Anous stolidus
 ,,Black Noddy,A. minutus
 ,,Gray Noddy,A. albivitta
@@ -1378,7 +1378,7 @@ FALCONS,FALCONIDAE
 ,,Peregrine Falcon,F. peregrinus
 OLD WORLD PARROTS,PSITTACULIDAE
 ,,Rose-ringed Parakeet,Psittacula krameri
-PARROTS,PSITTACIDAE
+NEW WORLD and AFRICAN PARROTS,PSITTACIDAE
 ,,Lilac-tailed Parrotlet,Touit batavicus
 ,,Scarlet-shouldered Parrotlet,T. huetii
 ,,Blue-fronted Parrotlet,T. dilectissimus
@@ -2553,11 +2553,11 @@ TYRANT FLYCATCHERS,TYRANNIDAE
 ,,Ashy-headed Tyrannulet,Tyranniscus cinereiceps
 ,,Black-capped Tyrannulet,T. nigrocapillus
 ,,Tawny-rumped Tyrannulet,T. uropygialis
-190,,Venezuelan Beardless-Tyrannulet,Camptostoma pusillum
+190,,Pacific Beardless-Tyrannulet,Camptostoma sclateri
+,,Venezuelan Beardless-Tyrannulet,C. pusillum
 ,endemic,Cauca Beardless-Tyrannulet,C. caucae
-,,Pacific Beardless-Tyrannulet,C. sclateri
 ,,Amazonian Beardless-Tyrannulet,C. napaeum
-,,Southern Beardless-Tyrannulet,C. obsoletum
+,,Southeastern Beardless-Tyrannulet,C. obsoletum
 195,,Brown-capped Tyrannulet,Ornithion brunneicapillus
 ,,White-lored Tyrannulet,O. inerme
 ,,Mouse-colored Tyrannulet,Nesotriccus murinus
@@ -2762,10 +2762,10 @@ VIREOS,VIREONIDAE
 10,,Lemon-chested Greenlet,H. thoracicus
 ,,Yellow-browed Shrike-Vireo,Vireolanius eximius
 ,,Slaty-capped Shrike-Vireo,V. leucotis
-,,Northern Tawny-crowned Greenlet,Tunchiornis ochraceiceps
-,,Western Tawny-crowned Greenlet,T. ferrugineifrons
-15,,Guianan Tawny-crowned Greenlet,T. luteifrons
-,endemic,Para Tawny-crowned Greenlet,T. rubrifrons
+,,Ochre-crowned Brownlet,Tunchiornis ochraceiceps
+,,Rufous-fronted Brownlet,T. ferrugineifrons
+15,,Guianan Brownlet,T. luteifrons
+,endemic,Para Brownlet,T. rubrifrons
 ,,Lesser Greenlet,Pachysylvia decurtata
 ,,Dusky-capped Greenlet,P. hypoxantha
 ,,Buff-cheeked Greenlet,P. muscicapina
@@ -2776,11 +2776,10 @@ VIREOS,VIREONIDAE
 ,,Choco Vireo,V. masteri
 25,,Tepui Vireo,V. sclateri
 ,,Philadelphia Vireo,V. philadelphicus
-,,Warbling Vireo,V. gilvus
 ,,Brown-capped Vireo,V. leucophrys
 ,,Red-eyed Vireo,V. olivaceus
-30,,Chivi Vireo,V. chivi
-,endemic,Noronha Vireo,V. gracilirostris
+,,Chivi Vireo,V. chivi
+30,endemic,Noronha Vireo,V. gracilirostris
 ,,Yellow-green Vireo,V. flavoviridis
 ,,Black-whiskered Vireo,V. altiloquus
 JAYS,CORVIDAE
@@ -2817,7 +2816,7 @@ SWALLOWS,HIRUNDINIDAE
 ,,Cuban Martin,P. cryptoleuca
 ,,Gray-breasted Martin,P. chalybea
 15,,Southern Martin,P. elegans
-,,Peruvian Martin,P. murphyi
+,endemic-breeder,Peruvian Martin,P. murphyi
 ,endemic,Galapagos Martin,P. modesta
 ,,Tree Swallow,Tachycineta bicolor
 ,,Tumbes Swallow,T. stolzmanni
@@ -3215,16 +3214,16 @@ WOOD-WARBLERS,PARULIDAE
 55,endemic,Gray-headed Warbler,B. griseiceps
 ,,Canada Warbler,Cardellina canadensis
 ,,Wilson's Warbler,C. pusilla
-,,Slate-throated Redstart,Myioborus miniatus
-,,Brown-capped Redstart,M. brunniceps
-60,endemic,Yellow-crowned Redstart,M. flavivertex
-,endemic,White-fronted Redstart,M. albifrons
-,,Golden-fronted Redstart,M. ornatus
-,,Spectacled Redstart,M. melanocephalus
-,endemic,Paria Redstart,M. pariae
-65,endemic,White-faced Redstart,M. albifacies
-,endemic,Saffron-breasted Redstart,M. cardonai
-,,Tepui Redstart,M. castaneocapilla
+,,Slate-throated Whitestart,Myioborus miniatus
+,,Brown-capped Whitestart,M. brunniceps
+60,endemic,Yellow-crowned Whitestart,M. flavivertex
+,endemic,White-fronted Whitestart,M. albifrons
+,,Golden-fronted Whitestart,M. ornatus
+,,Spectacled Whitestart,M. melanocephalus
+,endemic,Paria Whitestart,M. pariae
+65,endemic,White-faced Whitestart,M. albifacies
+,endemic,Saffron-breasted Whitestart,M. cardonai
+,,Tepui Whitestart,M. castaneocapilla
 MITROSPINGIDS,MITROSPINGIDAE
 ,,Dusky-faced Tanager,Mitrospingus cassinii
 ,,Olive-backed Tanager,M. oleagineus
