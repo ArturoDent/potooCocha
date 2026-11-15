@@ -646,7 +646,7 @@ async function printSearchResults(evt) {
     html += content;
     html += "</div>";
 
-    html += "<br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;13&nbsp;August&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
+    html += "<br>Mark Pearman, Juan Freile, Jhonathan Miranda, and Van Remsen (coordinators). Country lists. &nbsp;13&nbsp;October&nbsp;2026. A classification of the bird species of South America. American Ornithological Society. http://www.museum.lsu.edu/~Remsen/SACCCountryLists.htm";
     html += '</body></html>';
 
     var iframe = document.createElement("iframe");

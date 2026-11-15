@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
 
-export let numFamiliesList = {
+export const numFamiliesList = {
 
   "Argentina": 88, "Aruba": 53, "Bolivia": 81, "Brazil": 95, "Chile": 69,
   "Colombia": 94, "Curaçao": 50, "Ecuador": 93, "French Guiana": 84,
@@ -9,11 +9,11 @@ export let numFamiliesList = {
   "Uruguay": 74, "Venezuela": 90, "Bonaire": 47, "Falklands": 51, "South America": 106
 };
 
-export let numSpeciesList = {
+export const numSpeciesList = {
 
-  "Argentina": 1052, "Aruba": 245, "Bolivia": 1409, "Brazil": 1867, "Chile": 526,
-  "Colombia": 1915, "Curaçao": 217, "Ecuador": 1682, "French Guiana": 737,
-  "Guyana": 828, "Paraguay": 694, "Peru": 1905, "Suriname": 747, "Trinidad": 490,
+  "Argentina": 1052, "Aruba": 245, "Bolivia": 1410, "Brazil": 1867, "Chile": 526,
+  "Colombia": 1916, "Curaçao": 217, "Ecuador": 1682, "French Guiana": 737,
+  "Guyana": 828, "Paraguay": 694, "Peru": 1906, "Suriname": 747, "Trinidad": 489,
   "Uruguay": 500, "Venezuela": 1414, "Bonaire": 209, "Falklands": 220, "South America": 3513
 };
 
