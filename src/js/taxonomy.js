@@ -1,7 +1,7 @@
 // "use strict";
 import {countries2Postals, currentCountry, searchSpecials} from "./main.js";
 import {map, highlightSAMmap, alreadyInMapsCollection} from "./SouthAmerica.js";
-import {mapsCollection, saveMapButton} from "./birdMapFactory.js";
+import {mapsCollection, saveMapButton, maxKeptMaps} from "./birdMapFactory.js";
 import {numFamiliesList, numSpeciesList} from "./numList.js";
 import {navigateToFamily} from "./familyMap.js";
 
@@ -427,7 +427,7 @@ function gotoMatch(e) {
 
     highlightSAMmap(lastIndex, "currentMap");
 
-    if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
+    if (mapsCollection.getElementsByClassName("smallBird").length >= maxKeptMaps() || alreadyInMapsCollection()) {
       saveMapButton.style.display = "none";
     }
     else
@@ -581,7 +581,7 @@ function toggleFamilyOpen(event) {
     if (treeIntroTextElement)
       treeIntroTextElement.innerHTML = currentCountry + " : " + numFamiliesList[currentCountry] + " families, " + numSpeciesList[currentCountry] + " species *";
 
-    if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
+    if (mapsCollection.getElementsByClassName("smallBird").length >= maxKeptMaps() || alreadyInMapsCollection()) {
       saveMapButton.style.display = "none";
     }
     else

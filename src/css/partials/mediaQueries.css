@@ -51,6 +51,22 @@
     top: 2.1rem;
     transform: scale(0.85);
   }
+
+  /* the circle is 2.2rem and shrinks with the root font, but the image is a fixed
+     32px pinned to its top-left, so it spilled out down and right: center it and
+     size it in rem, at the same ~95% of the circle that it is on desktop */
+  #printerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  #printerButton img {
+    display: block;
+    flex: none;
+    width: 2.1rem;
+    height: 2.1rem;
+  }
 }
 
 /* landscape tablets and landscape phones: pull the map (and its color key) in from the
@@ -109,6 +125,12 @@
   #printerButton::before {
     display: none;
   }
+
+  /* the sample table has a 37rem minimum width, wider than its white box from here
+     down; scroll it sideways inside the box, as the phone tier does */
+  .tableWrapper {
+    overflow-x: auto;
+  }
 }
 
 @media screen and (max-width: 900px) and (orientation: portrait) {
@@ -126,6 +148,100 @@
     top: 85%;
     left: 20%;
     width: 100%;
+  }
+}
+
+/* portrait tablets only (phones keep the chips inside their full-width form): the filters
+   leave the search form and sit just above the map's bird name, centered over the map.
+   Fixed, like the map, so the two stay together while the page scrolls. */
+@media screen and (min-width: 701px) and (max-width: 900px) and (orientation: portrait) {
+  /* The search input's center sits at about 9.5vh + 237px at the top of the page
+     (measured; within 3px across 740-900px wide and 1000-1200px tall). The two rows
+     of chips (about 50px) are centered on it, and the map starts below the chips and
+     the bird name. Both are fixed, so this lines up when the page is scrolled to the top. */
+  #currentMap {
+    top: calc(9.5vh + 314px);
+    left: calc(67vw + 40px);
+  }
+  /* the map moved 40px right; keep the key where the <= 900px portrait rule puts it
+     on screen (20% in from the map), since 40px further right runs off the screen */
+  #currentMap .colorKey {
+    left: calc(20% - 40px);
+  }
+  /* halve the gaps above and below the search results (103px and 82px at 768 x 1024;
+     the column is flex, so these margins add rather than collapse) */
+  #searchForm {
+    margin-bottom: 3vh;
+  }
+  #results-panel {
+    margin-bottom: 0;
+  }
+
+  #searchSpecials {
+    position: fixed;
+    top: calc(9.5vh + 212px);
+    left: calc(67vw - 60px);
+    right: 1rem;
+    width: auto;
+    padding: 0;
+    z-index: 5;
+  }
+  #searchForm {
+    padding-bottom: 0.4rem;
+  }
+}
+
+/* kept maps drawer on tablets (either way up) and landscape phones: at most 4 maps here
+   (maxKeptMaps() in birdMapFactory.js, whose media query must match this one), in
+   equal slots of a centered row, each caption as wide as its slot plus the gap, so
+   names fit in 2 lines (98.2% of all names at 768px wide). birdMapFactory.js sets an
+   inline vw offset per map for the desktop row, which would push the maps off the
+   right edge, hence the !important */
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  #mapsCollection {
+    /* map drawing height; its width is 0.547 of this */
+    --thin-h: 25vw;
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+    /* top padding: room for the few names that still need 3 lines */
+    padding: 0.6rem 2vw 1rem 2vw;
+  }
+  #mapsCollection.namesOnlySeen {
+    transform: translateY(-3.8rem);
+  }
+  /* repeated after the rule above, which would otherwise win while both classes are set */
+  #mapsCollection.namesOnlySeen.open {
+    transform: translateY(-93%);
+  }
+  .smallBird {
+    flex: 0 1 22.5vw;
+    min-width: 0;
+    left: 0 !important;
+    text-align: center;
+  }
+  [id^=thin] {
+    height: var(--thin-h);
+  }
+  /* the map is centered in its slot here, not at the slot's left edge as on desktop;
+     this keeps the delete icon just overlapping the map's left edge, as it does there */
+  .smallBird .deleteMapButton {
+    left: calc((22.5vw - 0.547 * var(--thin-h)) / 2 - 1.56vw);
+  }
+  /* anchored at the bottom, so a 3rd line grows up into the padding, not over the map */
+  .smallBirdText {
+    top: auto;
+    bottom: calc(100% - 0.7rem);
+    left: -0.75vw;
+    width: calc(100% + 1.5vw);
+  }
+}
+
+/* landscape screens are short: cap the drawer maps by height so the open drawer
+   leaves some of the page in view */
+@media screen and (min-width: 701px) and (max-width: 1024px) and (orientation: landscape) {
+  #mapsCollection {
+    --thin-h: min(25vw, 50vh);
   }
 }
 
@@ -321,6 +437,11 @@
   #countrySearch.closed {
     min-height: 0;
     padding: 0;
+  }
+  @media (orientation: portrait) {
+    .flyoutPanel {
+      font-size: calc(1rem - 2px);
+    }
   }
   #treeIntroText.topFlyoutPanel {
     position: relative;

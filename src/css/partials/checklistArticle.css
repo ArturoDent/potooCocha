@@ -115,6 +115,10 @@
 }
 
 #days {
+  /* when the row is a fraction of a pixel too narrow, flexbox squeezed this label
+     and the ":" wrapped below its underline (tablet portrait); let the circles give instead */
+  flex-shrink: 0;
+  white-space: nowrap;
   position: relative;
   top: 0.62rem;
   height: 1.55rem;
@@ -135,7 +139,8 @@
   margin-right: 0.19rem;
   padding: 1ch 0 0 0;
   color: #454647;
-  font-size: 1.1rem;
+  /* the circle is 4ch square, so it shrinks along with this */
+  font-size: calc(1.1rem - 2px);
   text-align: center;
   text-decoration: none;
   text-shadow: 0.077rem 0.077rem 0.23rem rgba(0, 0, 0, 0.1);
@@ -145,6 +150,16 @@
   transform: scale(1);
   cursor: pointer;
   transition: transform 300ms;
+}
+
+/* true vertical centering of the digit: trim the line box to the cap height (digits
+   in Verdana are cap height), then split the rest of the 4ch circle evenly above it.
+   Browsers without text-box keep the 1ch padding-top approximation above. */
+@supports (text-box: trim-both cap alphabetic) {
+  #numDays > a {
+    text-box: trim-both cap alphabetic;
+    padding-top: calc((4ch - 1cap) / 2);
+  }
 }
 
 #numDays > a:nth-of-type(2n) {

@@ -177,6 +177,12 @@
   transform: scale(0.9);
 }
 
+/* above the map drawing, which comes later in the markup and would otherwise take the
+   click wherever the two overlap (all of the icon, on portrait tablets) */
+#mapsCollection .deleteMapButton {
+  z-index: 1;
+}
+
 .deleteMapButton:focus-within .tooltip {
   outline: none;
 }
