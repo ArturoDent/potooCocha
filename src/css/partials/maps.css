@@ -130,6 +130,11 @@
   width: auto;
 }
 
+/* the map is only a closable sheet on phones, see mediaQueries.css */
+#closeMapButton {
+  display: none;
+}
+
 #currentMap.shiftUp {
   transform: translateY(-15vh);
 }

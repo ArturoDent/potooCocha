@@ -183,6 +183,9 @@ export function highlightSAMmap ( index, current ) {
 
   let currentBirdMap = document.getElementById( "currentBirdMap" );
 
+  // on phones the map is a slide-up sheet (see mediaQueries.css); this class has no effect at wider widths
+  if ( current === "currentMap" ) map?.classList.add( "sheetOpen" );
+
   var cList = birds[ index ].split( "-" );  // cList = []
 
   for ( var country in countries ) {

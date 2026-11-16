@@ -20,6 +20,11 @@ export function initBirdMapFactory () {
   saveMapButton?.addEventListener("click", saveCurrentMap);
   mapsCollection = document.getElementById("mapsCollection");
 
+  // phones only: the map is a slide-up sheet, opened in highlightSAMmap()
+  document.getElementById("closeMapButton")?.addEventListener("click", () => {
+    map.classList.remove("sheetOpen");
+  });
+
   // deleteAllMapsButton = document.getElementById("deleteAllMapsButton");
 
   // deleteAllMapsButton.addEventListener("click", deleteAllMaps);

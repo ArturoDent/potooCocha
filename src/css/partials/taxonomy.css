@@ -104,7 +104,9 @@
 }
 
 #openInstructions {
-  margin: 10px 0 10px 0;
+  /* the gap above used to be a blank <br> line (one .searchWord line-height) plus a
+     10px margin; the <br> is hidden below and this margin is that total less 25px */
+  margin: calc(1.8rem - 15px) 0 10px 0;
   padding: 2px 10px;
   font-size: 1.2rem;
   color: var(--panel-flyout-font-color);
@@ -116,6 +118,11 @@
   border-radius: 0.23rem;
   background-color: var(--panel-color);
   box-shadow: -0.015rem 0 0.015rem rgba(255, 255, 255, 0.7), 0 -0.02rem 0.02rem rgba(255, 255, 255, 0.7), 0 0 0.15rem rgba(0, 0, 0, 0.7);
+}
+
+/* the blank line between the intro sentence and the Instructions button */
+.searchWord > br:first-of-type {
+  display: none;
 }
 
 #closeInstructions {
@@ -170,7 +177,8 @@
   width: min-content;
   top: -2ch;
   left: 102%;
-  font-size: 0.85rem;
+  /* the boxes are sized in ch, so they shrink along with the text */
+  font-size: calc(0.85rem - 2px);
   letter-spacing: 0.09rem;
   text-shadow: 0.077rem 0.077rem 0.077rem rgba(0, 0, 0, 0.5);
   pointer-events: auto;
@@ -371,6 +379,12 @@
 
 #searchResults li.family:not(:first-child) {
   margin-top: 0.6rem;
+}
+
+/* family names, in both the search results and the taxonomy tree:
+   two pixels smaller than the list they sit in */
+.fco, .fsc {
+  font-size: calc(1em - 2px);
 }
 
 .fsc {

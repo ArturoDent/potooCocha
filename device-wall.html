@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device wall - potoococha</title>
+  <style>
+    body { margin: 0; padding: 12px 16px 40px; font: 14px/1.4 Segoe UI, Arial, sans-serif; color: #eee; background: #2b2b2b; }
+    header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 14px; }
+    h1 { margin: 0; font-size: 16px; }
+    label { display: inline-flex; align-items: center; gap: 6px; }
+    input[type=text] { width: 22em; padding: 3px 6px; }
+    button, select { padding: 3px 10px; }
+    #wall { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; }
+    .device h2 { margin: 0 0 6px; font-size: 13px; font-weight: 600; }
+    .device h2 span { font-weight: 400; color: #aaa; }
+    .frameBox { overflow: hidden; border: 1px solid #777; background: #000; }
+    iframe { display: block; border: 0; transform-origin: 0 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Device wall</h1>
+    <label>URL <input id="url" type="text" value="http://localhost:3000/home.html"></label>
+    <label>Scale
+      <select id="scale">
+        <option value="1">100%</option>
+        <option value="0.75" selected>75%</option>
+        <option value="0.5">50%</option>
+      </select>
+    </label>
+    <button id="reload" type="button">Reload all</button>
+    <span>Each frame is a real viewport of that size, so the media queries apply exactly. Touch is not emulated.</span>
+  </header>
+
+  <div id="wall"></div>
+
+  <script>
+    var DEVICES = [
+      { name: "Phone", w: 390, h: 844, tier: "phone tier (<= 700)" },
+      { name: "Small phone", w: 320, h: 568, tier: "phone tier (<= 700)" },
+      { name: "Tablet portrait", w: 768, h: 1024, tier: "<= 900 tier" },
+      { name: "Phone landscape", w: 844, h: 390, tier: "<= 900 tier" },
+      { name: "Tablet landscape", w: 1024, h: 768, tier: "<= 1024 tier" },
+      { name: "Desktop", w: 1440, h: 900, tier: "desktop" }
+    ];
+
+    var wall = document.getElementById("wall");
+    var urlInput = document.getElementById("url");
+    var scaleSelect = document.getElementById("scale");
+
+    function build() {
+      var scale = Number(scaleSelect.value);
+      wall.textContent = "";
+
+      DEVICES.forEach(function (d) {
+        var device = document.createElement("div");
+        device.className = "device";
+
+        var title = document.createElement("h2");
+        title.textContent = d.name + " ";
+        var dims = document.createElement("span");
+        dims.textContent = d.w + " x " + d.h + " - " + d.tier;
+        title.appendChild(dims);
+
+        var box = document.createElement("div");
+        box.className = "frameBox";
+        box.style.width = (d.w * scale) + "px";
+        box.style.height = (d.h * scale) + "px";
+
+        var frame = document.createElement("iframe");
+        frame.width = d.w;
+        frame.height = d.h;
+        frame.style.transform = "scale(" + scale + ")";
+        frame.src = urlInput.value;
+
+        box.appendChild(frame);
+        device.appendChild(title);
+        device.appendChild(box);
+        wall.appendChild(device);
+      });
+    }
+
+    document.getElementById("reload").addEventListener("click", build);
+    scaleSelect.addEventListener("change", build);
+    urlInput.addEventListener("change", build);
+    build();
+  </script>
+
+</body>
+</html>
