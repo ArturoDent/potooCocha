@@ -12,6 +12,15 @@ export let mapsCollection;
 var currentID = 0;
 let birdMapFactoryInitialized = false;
 
+// how many maps the drawer holds: 4 on tablets and landscape phones, where 5 leave
+// too little room for their captions (this query must match the kept-maps drawer
+// block in mediaQueries.css)
+const fourMapDrawer = window.matchMedia("(min-width: 701px) and (max-width: 1024px)");
+
+export function maxKeptMaps() {
+  return fourMapDrawer.matches ? 4 : 5;
+}
+
 export function initBirdMapFactory () {
   if ( birdMapFactoryInitialized ) return;
   birdMapFactoryInitialized = true;
@@ -80,13 +89,20 @@ function deleteMap(evt)  {
   repositionChildMaps(len - 1);
 
   // TODO: make this into a function since it is done 3 times at least
-  if (mapsCollection.getElementsByClassName("smallBird").length === 5 || alreadyInMapsCollection()) {
+  if (mapsCollection.getElementsByClassName("smallBird").length >= maxKeptMaps() || alreadyInMapsCollection()) {
     saveMapButton.style.display = "none";
   }
-  else 
+  else
     saveMapButton.style.display = "block";
 
-  if (len === 1) revealMapsCollection();
+  // that was the last map: close the drawer and hide its empty name strip too
+  // (undoes what saveCurrentMap() sets up when the first map is kept)
+  if (len === 1) {
+    revealMapsCollection();
+    mapsCollection.classList.remove("namesOnlySeen");
+    mapsCollection.removeEventListener("click", revealMapsCollection);
+    numDaysButton.classList.remove("mapCollectionShowing");
+  }
 
 }
 
@@ -96,7 +112,7 @@ function deleteMap(evt)  {
 function saveCurrentMap()  {
 
   var len = mapsCollection.getElementsByClassName("smallBird").length;
-  if (len === 5) return;
+  if (len >= maxKeptMaps()) return;
 
   var thisInstance = map.children[0];
   // thisInstance.children[0].children[0].innerText = "Horned Screamer"
