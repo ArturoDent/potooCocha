@@ -1,7 +1,14 @@
 #mapsCollection {
   position: fixed;
-  top: 100vh;
-  width: 100vw;
+  /* pinned to the bottom edge of the screen and pushed down out of view by its own
+     height, rather than placed at top: 100vh (or 100dvh): on Android tablets those
+     units do not match the visible height, which put the name strip too low or too high */
+  bottom: 0;
+  transform: translateY(100%);
+  /* edge to edge by pinning both sides, not width: 100vw, which fell about 50px
+     short on an Android tablet (same unit mismatch as above) */
+  left: 0;
+  right: 0;
   height: auto;
   background-color: var(--map-collection-color);
   box-shadow: 0 -0.6px 0.6px rgba(0, 0, 0, 0.2);
@@ -19,12 +26,14 @@
   background-color: var(--map-collection-color-dark-20);
 } */
 
+/* only the top 3.2rem (the bird names) showing */
 #mapsCollection.namesOnlySeen {
-  transform: translateY(-3.2rem);
+  transform: translateY(calc(100% - 3.2rem));
 }
 
+/* 93% showing, as before */
 #mapsCollection.open {
-  transform: translateY(-93%);
+  transform: translateY(7%);
 }
 
 .smallBird {

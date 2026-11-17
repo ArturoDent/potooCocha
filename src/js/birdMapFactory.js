@@ -12,12 +12,14 @@ export let mapsCollection;
 var currentID = 0;
 let birdMapFactoryInitialized = false;
 
-// how many maps the drawer holds: 4 on tablets and landscape phones, where 5 leave
-// too little room for their captions (this query must match the kept-maps drawer
-// block in mediaQueries.css)
+// how many maps the drawer holds: 3 on landscape phones and 4 on tablets, where 5
+// leave too little room for their captions (these queries must match the kept-maps
+// drawer blocks in mediaQueries.css)
+const threeMapDrawer = window.matchMedia("(min-width: 701px) and (max-width: 900px) and (orientation: landscape)");
 const fourMapDrawer = window.matchMedia("(min-width: 701px) and (max-width: 1024px)");
 
 export function maxKeptMaps() {
+  if (threeMapDrawer.matches) return 3;
   return fourMapDrawer.matches ? 4 : 5;
 }
 

@@ -15,7 +15,14 @@
   }
   #mainContent {
     left: 5.5vw;
+    width: calc(100% - 5.5vw);
     margin: 8vh 0 0 0;
+  }
+  /* slide to just left of the open country menu instead of a fixed 70vw, which lands
+     on top of the menu at these widths: the menu's left edge is 97vw - 15.6rem (3vw
+     from the right, 22ch wide), and the button plus its two arrows needs 9.9rem */
+  #countryButton.slideLeft {
+    transform: translateX(calc(97vw - 25.5rem));
   }
   .articles {
     width: 51vw;
@@ -159,8 +166,12 @@
      (measured; within 3px across 740-900px wide and 1000-1200px tall). The two rows
      of chips (about 50px) are centered on it, and the map starts below the chips and
      the bird name. Both are fixed, so this lines up when the page is scrolled to the top. */
+  /* opening the kept-maps drawer adds .shiftUp, which lifts the map 15vh; not here */
+  #currentMap.shiftUp {
+    transform: none;
+  }
   #currentMap {
-    top: calc(9.5vh + 314px);
+    top: calc(9.5vh + 139px);
     left: calc(67vw + 40px);
   }
   /* the map moved 40px right; keep the key where the <= 900px portrait rule puts it
@@ -170,24 +181,33 @@
   }
   /* halve the gaps above and below the search results (103px and 82px at 768 x 1024;
      the column is flex, so these margins add rather than collapse) */
-  #searchForm {
-    margin-bottom: 3vh;
-  }
   #results-panel {
     margin-bottom: 0;
   }
 
+  /* the filters sit as a single chip row tight under the search form (they are inside
+     it in the markup, so this hangs them just past its bottom edge); tighter chips so
+     all five fit the form's width; the form's bottom margin makes room for the row */
   #searchSpecials {
-    position: fixed;
-    top: calc(9.5vh + 212px);
-    left: calc(67vw - 60px);
-    right: 1rem;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
     width: auto;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
     padding: 0;
-    z-index: 5;
+    /* the row is about 44 x its font size wide and the form about 52.5vw: below 768px
+       wide, shrink the chips a little so the row never gets wider than the form */
+    font-size: min(calc(0.85rem - 2px), 1.18vw);
+  }
+  .searchSpecialWrapper {
+    padding: 0.15rem 0.7ch 0.4rem 0.7ch;
+    white-space: nowrap;
   }
   #searchForm {
     padding-bottom: 0.4rem;
+    margin-bottom: calc(3vh + 30px);
   }
 }
 
@@ -201,6 +221,8 @@
   #mapsCollection {
     /* map drawing height; its width is 0.547 of this */
     --thin-h: 25vw;
+    /* each map's slot; 30vw on landscape phones, which hold 3 maps */
+    --slot: 22.5vw;
     display: flex;
     justify-content: center;
     gap: 1.5vw;
@@ -208,14 +230,14 @@
     padding: 0.6rem 2vw 1rem 2vw;
   }
   #mapsCollection.namesOnlySeen {
-    transform: translateY(-3.8rem);
+    transform: translateY(calc(100% - 3.8rem));
   }
   /* repeated after the rule above, which would otherwise win while both classes are set */
   #mapsCollection.namesOnlySeen.open {
-    transform: translateY(-93%);
+    transform: translateY(7%);
   }
   .smallBird {
-    flex: 0 1 22.5vw;
+    flex: 0 1 var(--slot);
     min-width: 0;
     left: 0 !important;
     text-align: center;
@@ -226,7 +248,7 @@
   /* the map is centered in its slot here, not at the slot's left edge as on desktop;
      this keeps the delete icon just overlapping the map's left edge, as it does there */
   .smallBird .deleteMapButton {
-    left: calc((22.5vw - 0.547 * var(--thin-h)) / 2 - 1.56vw);
+    left: calc((var(--slot) - 0.547 * var(--thin-h)) / 2 - 1.56vw);
   }
   /* anchored at the bottom, so a 3rd line grows up into the padding, not over the map */
   .smallBirdText {
@@ -276,20 +298,112 @@
   }
 
   /* the screen is short, so 50vh makes a very small map: 15% bigger, a smaller
-     color key to balance it, and both 40px right of the other landscape sizes */
+     color key to balance it, and both 10px left of the other landscape sizes */
+  /* as the page scrolls and the banner leaves the screen, the map (and key) rise into
+     the space it leaves: 50px over the first 50px of scrolling, then stay. Animates
+     translate, not transform, so it adds to the drawer's .shiftUp lift. Browsers
+     without scroll-driven animations just keep the map where it is. */
+  @supports (animation-timeline: scroll()) {
+    #currentMap {
+      animation: mapRiseOnScroll linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0px 50px;
+    }
+    @keyframes mapRiseOnScroll {
+      to {
+        translate: 0 -50px;
+      }
+    }
+  }
+  /* ...and fade out as the checklist's sample table (its white box) scrolls into view,
+     gone once the box is fully on screen, back again as it leaves at the bottom when
+     scrolling up; it stays hidden further down the page. The box's view timeline is
+     shared through body (timeline-scope), since the map is not inside it. Repeats the
+     rise above, because setting animation replaces the whole list. */
+  @supports (animation-timeline: scroll()) and (timeline-scope: --a) {
+    body {
+      timeline-scope: --sampleTableBox;
+    }
+    .tableWrapper {
+      view-timeline: --sampleTableBox block;
+    }
+    #currentMap {
+      animation: mapRiseOnScroll linear both, mapFadeAtSampleTable linear both;
+      animation-timeline: scroll(root), --sampleTableBox;
+      animation-range: 0px 50px, entry 0% entry 100%;
+    }
+    @keyframes mapFadeAtSampleTable {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  /* the map drawing starts about 5.4% of its height (66vh) below its box, which left
+     ~16px of empty space under the bird name: the map and key move up by that, less
+     3px (--map-lift), and the name moves back down by the same, so it stays put */
   #currentMap {
-    left: calc(71vw + 5px);
+    --map-lift: calc(3.56vh - 1px);
+    /* the color key flush with the right edge of the screen: it starts 71% across the
+       map's box (whose width is 0.547 x its 66vh height, so 25.6vh in) and is 119px wide */
+    left: calc(100% - 25.6vh - 119px);
+    /* any higher and the bird name above the map runs into the title banner */
+    top: calc(28vh - 15px - var(--map-lift));
+  }
+  /* height follows the text, so equal padding centers the title vertically */
+  /* kept maps drawer: 10px less of it showing when closed, and half the space above
+     the bird names (about 14px down to 7px), which centers them in the shorter strip */
+  #mapsCollection {
+    padding-top: calc(0.6rem - 7px);
+    /* 3 maps here (maxKeptMaps() in birdMapFactory.js), so wider slots and captions */
+    --slot: 30vw;
+  }
+  #mapsCollection.namesOnlySeen {
+    transform: translateY(calc(100% - 3.8rem + 10px));
+  }
+  /* repeated after the rule above, which would otherwise win while both classes are set */
+  #mapsCollection.namesOnlySeen.open {
+    transform: translateY(7%);
+  }
+  #titleBanner {
+    font-size: calc(2.5rem - 6px);
+    height: auto;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .titleBanner_spacer {
+    font-size: calc(1.5rem - 1px);
+  }
+  /* 2px smaller on every side, 10px left of where it was, and centered on the banner
+     (which starts at 4vh and is 47px tall here; the button is 54.5px tall) */
+  #countryButton {
+    font-size: calc(1.7rem - 4px);
+    width: calc(5.3rem - 4px);
+    height: calc(4.5rem - 4px);
+    top: calc(4vh - 4px);
+    margin-left: -8px;
   }
   #SAMsvg {
     height: 66vh;
   }
-  /* sits above the map instead of over it; right-aligned and ending short of the
-     map's right side, because the fixed country button is directly above that part */
+  /* opening the kept-maps drawer lifts the map 15vh (.shiftUp); the bird name moves
+     down by the same amount at the same speed, so it stays where it is, below the banner */
+  #currentMap .birdName {
+    transition: translate 500ms;
+    /* drawn above the map, which rises under it */
+    z-index: 1;
+  }
+  #currentMap.shiftUp .birdName {
+    translate: 0 15vh;
+  }
+  /* sits above the map instead of over it, right-aligned to end 6px left of the fixed
+     country button (left edge at 87vw - 8px), so it clears the button even after the
+     map rises on scroll. The map box's right edge is at 100vw + 10.5vh - 119px. */
   #currentMap .birdName {
     top: auto;
-    bottom: 100%;
+    bottom: calc(100% - var(--map-lift));
     left: auto;
-    right: 25%;
+    right: calc(13vw + 10.5vh - 100px);
     width: max-content;
     font-size: calc(0.95rem - 2px);
     line-height: 1.15rem;
@@ -376,6 +490,7 @@
 
   #mainContent {
     left: 0;
+    width: auto;
     margin: 1rem 0 0 0;
     padding: 0 0.75rem;
   }

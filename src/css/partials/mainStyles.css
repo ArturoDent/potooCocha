@@ -52,6 +52,9 @@ a:visited {
 #mainContent {
   position: relative;
   left: 7vw;
+  /* narrower by the shift, or its right edge sticks out past the screen, which makes
+     the page wider than the screen (and Android zoom out to fit it) */
+  width: calc(100% - 7vw);
   margin: 8vh 0 0 0;
 }
 
